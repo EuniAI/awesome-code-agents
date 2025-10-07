@@ -212,16 +212,10 @@ We welcome contributions! Please:
 2. Place items in the right category & order by **reverse-chronology**.  
 3. Include badges for GitHub stars, arXiv, website if available.
 
----
-
-## 🤝 Contributor
-
-We warmly welcome contributions to NaturalCC! Your involvement is essential for keeping NaturalCC innovative and accessible. 
-
 We're grateful to all our amazing contributors who have made this project what it is today!
 
 <a href="https://github.com/EuniAI/awesome-code-agents/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=EuniAI/awesome-code-agents&r="  width="800px"/>
+  <img src="https://contrib.rocks/image?repo=EuniAI/awesome-code-agents&r="  width="80px"/>
 </a>
 
 If you have any questions or encounter issues, please feel free to reach out. For quick queries, you can also check our `Issues` page for common questions and solutions.
