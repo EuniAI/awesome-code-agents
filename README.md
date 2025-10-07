@@ -214,6 +214,20 @@ We welcome contributions! Please:
 
 ---
 
+## 🤝 Contributor
+
+We warmly welcome contributions to NaturalCC! Your involvement is essential for keeping NaturalCC innovative and accessible. 
+
+We're grateful to all our amazing contributors who have made this project what it is today!
+
+<a href="https://github.com/EuniAI/awesome-code-agents/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=EuniAI/awesome-code-agents&r="  width="800px"/>
+</a>
+
+If you have any questions or encounter issues, please feel free to reach out. For quick queries, you can also check our `Issues` page for common questions and solutions.
+
+---
+
 ## 🌟 Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=EuniAI/awesome-code-agents&type=Date)](https://www.star-history.com/#EuniAI/awesome-code-agents&Date)
 
