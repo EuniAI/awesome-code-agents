@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🧠 Awesome Code Agents</h1>
+  <h1>🤖 Awesome Code Agents</h1>
 
   <!-- Badges -->
   <a href="https://awesome.re">
@@ -14,38 +14,41 @@
 </div>
 
 <!-- Optional teaser -->
+<!--
 <p align="center">
   <img src="assets/teaser.png" width="520px"/>
 </p>
+-->
 <p align="center">
   A curated list of <b>products, benchmarks, and research papers</b> on <b>Code Agents</b>.
 </p>
 
 ---
 
-**Quick Navigation**  
-[🚀 Products & Tools](#-products--tools) · 
-[📊 Leaderboards & Benchmarks](#-leaderboards--benchmarks) · 
-[📚 Papers](#-papers) → 
-[Surveys](#-surveys) · 
-[Environments](#-environment-building) · 
-[Issue Reproduction](#-issue-reproduction) · 
-[Issue Localization](#-issue-localization) · 
-[Issue Resolution](#-issue-resolution) · 
-[Q&A](#-qa) · 
-[PR & Review](#-pr--review) · 
-[Feature Development](#-feature-development) · 
-[Git Management](#-git-management) · 
-[Performance Optimization](#-performance-optimization) · 
-[Website Generation](#-website-generation) · 
-[Post-Training](#-post-training) · 
-[Test-time Scaling](#-test-time-scaling) · 
-[Multimodal](#-multimodal) · 
-[Data Synthesis](#-data-synthesis) · 
-[Empirical Studies](#-empirical-studies)  
-[🤝 Contributing](#-contributing) · 
-[🌟 Star History](#-star-history) · 
-[🙏 Acknowledgements](#-acknowledgements)
+## Quick Navigation
+
+- [🚀 Products & Tools](#-products--tools)
+- [📊 Leaderboards & Benchmarks](#-leaderboards--benchmarks)
+- [📚 Papers](#-papers)
+  * [Surveys](#-surveys)
+  * [Environment Building](#-environment-building)
+  * [Issue Reproduction](#-issue-reproduction)
+  * [Issue Localization](#-issue-localization)
+  * [Issue Resolution](#-issue-resolution)
+  * [Q&A](#-qa)
+  * [PR & Review](#-pr--review)
+  * [Feature Development](#-feature-development)
+  * [Git Management](#-git-management)
+  * [Performance Optimization](#-performance-optimization)
+  * [Website Generation](#-website-generation)
+  * [Post-Training](#-post-training)
+  * [Test-time Scaling](#-test-time-scaling)
+  * [Multimodal](#-multimodal)
+  * [Data Synthesis](#-data-synthesis)
+  * [Empirical Studies](#-empirical-studies)  
+- [🤝 Contributing](#-contributing)
+- [🌟 Star History](#-star-history)
+- [🙏 Acknowledgements](#-acknowledgements)
 
 ---
 
