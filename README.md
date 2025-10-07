@@ -56,6 +56,7 @@
 > Open-source systems, frameworks, and real-world developer assistants.
 
 - **OpenHands** [![Star](https://img.shields.io/github/stars/All-Hands-AI/OpenHands?style=social&label=Star)](https://github.com/All-Hands-AI/OpenHands) · [Website](https://all-hands.dev)
+- **Prometheus** [![Star](https://img.shields.io/github/stars/EuniAI/Prometheus?style=social&label=Star)](https://github.com/EuniAI/Prometheus) · [Website](https://euni.ai/)
 - **Aider** [![Star](https://img.shields.io/github/stars/paul-gauthier/aider?style=social&label=Star)](https://github.com/paul-gauthier/aider)
 - **AutoCodeRover** 
 - **KAT-Coder**
@@ -124,6 +125,7 @@
 
 - SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering
 - AutoCodeRover: Autonomous Program Improvement
+- Prometheus: Unified Knowledge Graphs for Issue Resolution in Multilingual Codebases
 - debug-gym: A Text-Based Environment for Interactive Debugging
 - SemAgent: A Semantics-Aware Program Repair Agent
 - CodeR: Issue Resolving with Multi-Agent and Task Graphs
