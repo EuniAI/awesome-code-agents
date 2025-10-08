@@ -181,6 +181,7 @@
 
 - Training Software Engineering Agents and Verifiers with SWE-Gym
 - SEAlign: Alignment Training for Software Engineering Agent
+- Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards
 
 ### ⚖ Test-time Scaling
 > Chain-of-thought, self-reflection, scaling strategies during inference.  
