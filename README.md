@@ -58,10 +58,13 @@
 - **OpenHands** [![Star](https://img.shields.io/github/stars/All-Hands-AI/OpenHands?style=social&label=Star)](https://github.com/All-Hands-AI/OpenHands) · [Website](https://all-hands.dev)
 - **Prometheus** [![Star](https://img.shields.io/github/stars/EuniAI/Prometheus?style=social&label=Star)](https://github.com/EuniAI/Prometheus) · [Website](https://euni.ai/)
 - **Aider** [![Star](https://img.shields.io/github/stars/paul-gauthier/aider?style=social&label=Star)](https://github.com/paul-gauthier/aider)
-- **AutoCodeRover** 
+- **AutoCodeRover**
+- **Jules** · [Website](https://jules.google/)
+- **OpenCode** · [Website](https://opencode.ai/)
 - **KAT-Coder**
-- **Kiro**
+- **Kiro** · [Website](https://kiro.dev/)
 - **Droids**
+- **Essential** · [Website](https://www.essential.com/)
 
 ---
 
