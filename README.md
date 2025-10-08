@@ -173,7 +173,8 @@
 - WebGen-Bench: Evaluating LLMs on Generating Interactive and Functional Websites from Scratch
 - ScreenCoder: Advancing Visual-to-Code Generation for Front-End Automation via Modular Multimodal Agents
 
-### Machine Learning Engineering
+### 👩‍💻 Machine Learning Engineering
+> Autonomous agents across end-to-end ML workflows.
 
 - **MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering.** _Jun Shern Chan, Neil Chowdhury, Oliver Jaffe, James Aung, Dane Sherburn, Evan Mays, Giulio Starace, Kevin Liu, Leon Maksin, Tejal Patwardhan, Lilian Weng, Aleksander Mądry._ ICLR 2025.<br>[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.07095) [![GitHub Stars](https://img.shields.io/github/stars/openai/mle-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/mle-bench)
 
