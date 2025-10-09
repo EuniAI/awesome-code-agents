@@ -126,7 +126,7 @@
 ### 🛠 Issue Resolution
 > Automated bug fixing, patch generation, repair techniques.
 
-- SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering
+- **SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering.** _John Yang, Carlos E. Jimenez, Alexander Wettig, Kilian Lieret, Shunyu Yao, Karthik Narasimhan, Ofir Press._ ICLR 2025.<br>[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2405.15793) [![GitHub Stars](https://img.shields.io/github/stars/SWE-agent/SWE-agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SWE-agent/SWE-agent)
 - AutoCodeRover: Autonomous Program Improvement
 - Prometheus: Unified Knowledge Graphs for Issue Resolution in Multilingual Codebases
 - debug-gym: A Text-Based Environment for Interactive Debugging
