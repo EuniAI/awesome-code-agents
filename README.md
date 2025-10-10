@@ -81,6 +81,7 @@
 - SWE-MERA: A Dynamic Benchmark for Agenticly Evaluating Large Language Models on Software Engineering Tasks
 - OmniGIRL: A Multilingual and Multimodal Benchmark for GitHub Issue Resolution
 - SPICE: An Automated SWE-Bench Labeling Pipeline for Issue Clarity, Test Coverage, and Effort Estimation
+- **SWE-SQL** [Leadboard](https://bird-critic.github.io/) <br>[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.18951) [![GitHub Stars](https://img.shields.io/github/stars/bird-bench/BIRD-CRITIC-1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/bird-bench/BIRD-CRITIC-1)
 - **Terminal-Bench** — command-line reasoning & execution benchmark.  
 - **OSWorld / WebArena** — realistic environments for agent evaluation.  
 
