@@ -1,0 +1,7 @@
+- title: "Prometheus: Unified Knowledge Graphs for Issue Resolution in Multilingual Codebases"
+  authors: "Zimin Chen, Yue Pan, Siyu Lu, Jiayi Xu, Claire Le Goues, Martin Monperrus, He Ye"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.19942"
+    github: "https://github.com/EuniAI/Prometheus"
+    website: "https://euni.ai/"

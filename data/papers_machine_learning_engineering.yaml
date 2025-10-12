@@ -1,0 +1,7 @@
+- title: "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering"
+  authors: "Jun Shern Chan, Neil Chowdhury, Oliver Jaffe, James Aung, Dane Sherburn, Evan Mays, Giulio Starace, Kevin Liu, Leon Maksin, Tejal Patwardhan, Lilian Weng, Aleksander Mądry"
+  venue: "ICLR 2025"
+  links:
+    paper: "https://arxiv.org/abs/2410.07095"
+    github: "https://github.com/openai/mle-bench"
+    website: "https://openai.com/index/mle-bench/"

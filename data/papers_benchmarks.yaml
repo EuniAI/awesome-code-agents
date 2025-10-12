@@ -1,0 +1,63 @@
+- title: "Terminal-Bench: A Benchmark for AI Agents in Terminal Environments"
+  authors: "The Terminal-Bench Team"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/laude-institute/terminal-bench"
+    website: "https://www.tbench.ai/"
+
+- title: "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?"
+  authors: "Xiang Deng, Jeff Da, Edwin Pan, Yannis Yiming He, Charles Ide, Kanak Garg, Niklas Lauffer, Andrew Park, Nitin Pasari, Chetan Rane, Karmini Sampath, Maya Krishnan, Srivatsa Kundurthy, Sean Hendryx, Zifan Wang, Chen Bo Calvin Zhang, Noah Jacobson, Bing Liu, Brad Kenstler"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.16941"
+    github: "https://github.com/scaleapi/SWE-bench_Pro-os"
+    website: "https://scale.com/leaderboard/swe_bench_pro_public"
+
+- title: "SWE-SQL: Illuminating LLM Pathways to Solve User SQL Issues in Real-World Applications"
+  authors: "Jinyang Li, Xiaolong Li, Ge Qu, Per Jacobsson, Bowen Qin, Binyuan Hui, Shuzheng Si, Nan Huo, Xiaohan Xu, Yue Zhang, Ziwei Tang, Yuanshuai Li, Florensia Widjaja, Xintong Zhu, Feige Zhou, Yongfeng Huang, Yannis Papakonstantinou, Fatma Ozcan, Chenhao Ma, Reynold Cheng"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.18951"
+    github: "https://github.com/bird-bench/BIRD-CRITIC-1"
+    website: "https://bird-critic.github.io/"
+
+- title: "SWE-bench Goes Live!"
+  authors: "Linghao Zhang, Shilin He, Chaoyun Zhang, Yu Kang, Bowen Li, Chengxing Xie, Junhao Wang, Maoquan Wang, Yufan Huang, Shengyu Fu, Elsie Nallipogu, Qingwei Lin, Yingnong Dang, Saravan Rajmohan, Dongmei Zhang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.23419"
+    github: "https://github.com/microsoft/SWE-bench-Live"
+    website: "https://swe-bench-live.github.io/"
+
+- title: "SWE-MERA: A Dynamic Benchmark for Agenticly Evaluating Large Language Models on Software Engineering Tasks"
+  authors: "Pavel Adamenko, Mikhail Ivanov, Aidar Valeev, Rodion Levichev, Pavel Zadorozhny, Ivan Lopatin, Dmitry Babayev, Alena Fenogenova, Valentin Malykh"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.11059"
+    github: "https://github.com/MERA-Evaluation/repotest"
+    website: "https://mera-evaluation.github.io/demo-swe-mera/"
+
+- title: "SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?"
+  authors: "Samuel Miserendino, Michele Wang, Tejal Patwardhan, Johannes Heidecke"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.12115"
+    github: "https://github.com/openai/frontier-evals/tree/main/project/swelancer"
+    website: "https://openai.com/index/swe-lancer/"
+
+- title: "OmniGIRL: A Multilingual and Multimodal Benchmark for GitHub Issue Resolution"
+  authors: "Lianghong Guo, Wei Tao, Runhan Jiang, Yanlin Wang, Jiachi Chen, Xilin Liu, Yuchi Ma, Mingzhi Mao, Hongyu Zhang, Zibin Zheng"
+  venue: "ISSTA 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.04606"
+    github: "https://github.com/DeepSoftwareAnalytics/OmniGIRL"
+    website: "https://deepsoftwareanalytics.github.io/omnigirl_leaderboard.html"
+
+- title: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+  authors: "Carlos E. Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir Press, Karthik Narasimhan"
+  venue: "ICLR 2024"
+  links:
+    paper: "https://arxiv.org/abs/2310.06770"
+    github: "https://github.com/SWE-bench/SWE-bench"
+    website: "https://www.swebench.com/"

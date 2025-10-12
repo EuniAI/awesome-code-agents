@@ -1,0 +1,7 @@
+- title: "SPICE: An Automated SWE-Bench Labeling Pipeline for Issue Clarity, Test Coverage, and Effort Estimation"
+  authors: "Gustavo A. Oliva, Gopi Krishnan Rajbahadur, Aaditya Bhatia, Haoxiang Zhang, Yihao Chen, Zhilong Chen, Arthur Leung, Dayi Lin, Boyuan Chen, Ahmed E. Hassan"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.09108"
+    github: ""
+    website: ""

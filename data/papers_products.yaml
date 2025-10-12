@@ -1,0 +1,7 @@
+- title: "OpenHands: An Open Platform for AI Software Developers as Generalist Agents"
+  authors: "Xingyao Wang, Boxuan Li, Yufan Song, Frank F. Xu, Xiangru Tang, Mingchen Zhuge, Jiayi Pan, Yueqi Song, Bowen Li, Jaskirat Singh, Hoang H. Tran, Fuqiang Li, Ren Ma, Mingzhang Zheng, Bill Qian, Yanjun Shao, Niklas Muennighoff, Yizhe Zhang, Binyuan Hui, Junyang Lin, Robert Brennan, Hao Peng, Heng Ji, Graham Neubig"
+  venue: "Accepted at ICLR 2025 (preprint arXiv 2024)"
+  links:
+    paper: "https://arxiv.org/abs/2407.16741"
+    github: "https://github.com/All-Hands-AI/OpenHands"
+    website: ""
