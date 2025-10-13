@@ -41,7 +41,7 @@ def badge_website(url: str) -> str:
             # label = parsed.netloc
             domain = parsed.netloc.lower()
             domain = re.sub(r"^www\.", "", domain)
-            domain = re.sub(r"\.(com|org|net|co|gov|edu|github)(\.[a-z]{2})?$", "", domain)
+            domain = re.sub(r"\.(com|org|net|co|gov|edu|github|dev)(\.[a-z]{2})?$", "", domain)
             label = domain
         label = label.replace("_", "-").upper()
         return (

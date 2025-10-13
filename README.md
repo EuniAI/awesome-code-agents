@@ -53,19 +53,57 @@
 ---
 
 ## 🚀 Products & Tools
-> Open-source systems, frameworks, and real-world developer assistants.
+> Open-source agentic systems, frameworks, and real-world developer assistants.
 
-- **OpenHands** [![Star](https://img.shields.io/github/stars/All-Hands-AI/OpenHands?style=social&label=Star)](https://github.com/All-Hands-AI/OpenHands) · [Website](https://all-hands.dev)
-- **Prometheus** [![Star](https://img.shields.io/github/stars/EuniAI/Prometheus?style=social&label=Star)](https://github.com/EuniAI/Prometheus) · [Website](https://euni.ai/)
-- **Aider** [![Star](https://img.shields.io/github/stars/paul-gauthier/aider?style=social&label=Star)](https://github.com/paul-gauthier/aider)
-- **AutoCodeRover**
-- **Jules** · [Website](https://jules.google/)
-- **OpenCode** · [Website](https://opencode.ai/)
-- **KAT-Coder**
-- **Kiro** · [Website](https://kiro.dev/)
-- **Droids**
-- **Essential** · [Website](https://www.essential.com/)
+<!-- START PAPERS:products -->
+- **Claude Code.**  
+  _Anthropic._ 2025.  
+  [![GitHub Stars](https://img.shields.io/github/stars/anthropics/claude-code?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/anthropics/claude-code) [![Website](https://img.shields.io/website?url=https://claude.com/product/claude-code&up_message=CLAUDE-CODE&up_color=blue&down_message=CLAUDE-CODE&down_color=blue&style=for-the-badge)](https://claude.com/product/claude-code)
 
+- **Codex.**  
+  _OpenAI._ 2025.  
+  [![GitHub Stars](https://img.shields.io/github/stars/openai/codex?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/codex) [![Website](https://img.shields.io/website?url=https://openai.com/codex/&up_message=CODEX&up_color=blue&down_message=CODEX&down_color=blue&style=for-the-badge)](https://openai.com/codex/)
+
+- **OpenHands.**  
+  _All Hands AI._ 2024.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2407.16741) [![GitHub Stars](https://img.shields.io/github/stars/All-Hands-AI/OpenHands?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/All-Hands-AI/OpenHands) [![Website](https://img.shields.io/website?url=https://www.all-hands.dev/&up_message=ALL-HANDS&up_color=blue&down_message=ALL-HANDS&down_color=blue&style=for-the-badge)](https://www.all-hands.dev/)
+
+- **Aider.**  
+  _Aider AI._ 2025.  
+  [![GitHub Stars](https://img.shields.io/github/stars/Aider-AI/aider?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Aider-AI/aider) [![Website](https://img.shields.io/website?url=https://aider.chat/&up_message=AIDER.CHAT&up_color=blue&down_message=AIDER.CHAT&down_color=blue&style=for-the-badge)](https://aider.chat/)
+
+- **Prometheus.**  
+  _EuniAI._ 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.19942) [![GitHub Stars](https://img.shields.io/github/stars/EuniAI/Prometheus?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/EuniAI/Prometheus) [![Website](https://img.shields.io/website?url=https://euni.ai/&up_message=EUNI.AI&up_color=blue&down_message=EUNI.AI&down_color=blue&style=for-the-badge)](https://euni.ai/)
+
+- **AutoCodeRover.**  
+  _National University of Singapore (product now acquired by Sonar)._ 2024.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2404.05427) [![GitHub Stars](https://img.shields.io/github/stars/AutoCodeRoverSG/auto-code-rover?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/AutoCodeRoverSG/auto-code-rover) [![Website](https://img.shields.io/website?url=https://autocoderover.dev/&up_message=AUTOCODEROVER&up_color=blue&down_message=AUTOCODEROVER&down_color=blue&style=for-the-badge)](https://autocoderover.dev/)
+
+- **OpenCode.**  
+  _SST._ 2025.  
+  [![GitHub Stars](https://img.shields.io/github/stars/sst/opencode?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/sst/opencode) [![Website](https://img.shields.io/website?url=https://opencode.ai/&up_message=OPENCODE.AI&up_color=blue&down_message=OPENCODE.AI&down_color=blue&style=for-the-badge)](https://opencode.ai/)
+
+- **Jules.**  
+  _Google._ 2025.  
+  [![Website](https://img.shields.io/website?url=https://jules.google/&up_message=JULES.GOOGLE&up_color=blue&down_message=JULES.GOOGLE&down_color=blue&style=for-the-badge)](https://jules.google/)
+
+- **Droids.**  
+  _Factory._ 2025.  
+  [![Website](https://img.shields.io/website?url=https://factory.ai/&up_message=FACTORY.AI&up_color=blue&down_message=FACTORY.AI&down_color=blue&style=for-the-badge)](https://factory.ai/)
+
+- **KAT-Coder.**  
+  _Kwaipilot / Kuaishou._ 2025.  
+  [![Website](https://img.shields.io/website?url=https://kwaipilot.github.io/KAT-Coder/&up_message=KAT-CODER&up_color=blue&down_message=KAT-CODER&down_color=blue&style=for-the-badge)](https://kwaipilot.github.io/KAT-Coder/)
+
+- **Kiro.**  
+  _AWS._ 2025.  
+  [![GitHub Stars](https://img.shields.io/github/stars/kirodotdev/Kiro?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/kirodotdev/Kiro) [![Website](https://img.shields.io/website?url=https://kiro.dev/&up_message=KIRO&up_color=blue&down_message=KIRO&down_color=blue&style=for-the-badge)](https://kiro.dev/)
+
+- **Essential.**  
+  _Nothing._ 2025.  
+  [![Website](https://img.shields.io/website?url=https://www.essential.com/&up_message=ESSENTIAL&up_color=blue&down_message=ESSENTIAL&down_color=blue&style=for-the-badge)](https://www.essential.com/)
+<!-- END PAPERS:products -->
 ---
 
 ## 📊 Benchmarks & Leaderboards
@@ -151,6 +189,14 @@
 - **Prometheus: Unified Knowledge Graphs for Issue Resolution in Multilingual Codebases.**  
   _Zimin Chen, Yue Pan, Siyu Lu, Jiayi Xu, Claire Le Goues, Martin Monperrus, He Ye._ arXiv 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.19942) [![GitHub Stars](https://img.shields.io/github/stars/EuniAI/Prometheus?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/EuniAI/Prometheus) [![Website](https://img.shields.io/website?url=https://euni.ai/&up_message=EUNI.AI&up_color=blue&down_message=EUNI.AI&down_color=blue&style=for-the-badge)](https://euni.ai/)
+
+- **OpenHands: An Open Platform for AI Software Developers as Generalist Agents.**  
+  _Xingyao Wang, Boxuan Li, Yufan Song, Frank F. Xu, Xiangru Tang, Mingchen Zhuge, Jiayi Pan, Yueqi Song, Bowen Li, Jaskirat Singh, Hoang H. Tran, Fuqiang Li, Ren Ma, Mingzhang Zheng, Bill Qian, Yanjun Shao, Niklas Muennighoff, Yizhe Zhang, Binyuan Hui, Junyang Lin, Robert Brennan, Hao Peng, Heng Ji, Graham Neubig._ ICLR 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2407.16741) [![GitHub Stars](https://img.shields.io/github/stars/All-Hands-AI/OpenHands?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/All-Hands-AI/OpenHands) [![Website](https://img.shields.io/website?url=https://www.all-hands.dev/&up_message=ALL-HANDS&up_color=blue&down_message=ALL-HANDS&down_color=blue&style=for-the-badge)](https://www.all-hands.dev/)
+
+- **AutoCodeRover: Autonomous Program Improvement.**  
+  _Yuntong Zhang, Haifeng Ruan, Zhiyu Fan, Abhik Roychoudhury._ ISSTA 2024.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2404.05427) [![GitHub Stars](https://img.shields.io/github/stars/AutoCodeRoverSG/auto-code-rover?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/AutoCodeRoverSG/auto-code-rover) [![Website](https://img.shields.io/website?url=https://autocoderover.dev/&up_message=AUTOCODEROVER&up_color=blue&down_message=AUTOCODEROVER&down_color=blue&style=for-the-badge)](https://autocoderover.dev/)
 <!-- END PAPERS:issue_resolution -->
 
 - **SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering.** _John Yang, Carlos E. Jimenez, Alexander Wettig, Kilian Lieret, Shunyu Yao, Karthik Narasimhan, Ofir Press._ NeurIPS 2024.<br>[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2405.15793) [![GitHub Stars](https://img.shields.io/github/stars/SWE-agent/SWE-agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SWE-agent/SWE-agent)

@@ -5,3 +5,19 @@
     paper: "https://arxiv.org/abs/2507.19942"
     github: "https://github.com/EuniAI/Prometheus"
     website: "https://euni.ai/"
+
+- title: "OpenHands: An Open Platform for AI Software Developers as Generalist Agents"
+  authors: "Xingyao Wang, Boxuan Li, Yufan Song, Frank F. Xu, Xiangru Tang, Mingchen Zhuge, Jiayi Pan, Yueqi Song, Bowen Li, Jaskirat Singh, Hoang H. Tran, Fuqiang Li, Ren Ma, Mingzhang Zheng, Bill Qian, Yanjun Shao, Niklas Muennighoff, Yizhe Zhang, Binyuan Hui, Junyang Lin, Robert Brennan, Hao Peng, Heng Ji, Graham Neubig"
+  venue: "ICLR 2025"
+  links:
+    paper: "https://arxiv.org/abs/2407.16741"
+    github: "https://github.com/All-Hands-AI/OpenHands"
+    website: "https://www.all-hands.dev/"
+
+- title: "AutoCodeRover: Autonomous Program Improvement"
+  authors: "Yuntong Zhang, Haifeng Ruan, Zhiyu Fan, Abhik Roychoudhury"
+  venue: "ISSTA 2024"
+  links:
+    paper: "https://arxiv.org/abs/2404.05427"
+    github: "https://github.com/AutoCodeRoverSG/auto-code-rover"  
+    website: "https://autocoderover.dev/"
