@@ -1,0 +1,7 @@
+- title: "FEA-Bench: A Benchmark for Evaluating Repository-Level Code Generation for Feature Implementation"
+  authors: "Wei Li, Xin Zhang, Zhongxin Guo, Shaoguang Mao, Wen Luo, Guangyue Peng, Yangyu Huang, Houfeng Wang, Scarlett Li"
+  venue: "ACL 2025"  
+  links:
+    paper: "https://arxiv.org/abs/2503.06680"
+    github: "https://github.com/microsoft/FEA-Bench"
+    website: "https://gmago-leway.github.io/fea-bench.github.io/"

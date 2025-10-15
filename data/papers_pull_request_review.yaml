@@ -1,0 +1,15 @@
+- title: "PReview: A Benchmark Dataset for Pull Request Outcomes and Quality Analysis"
+  authors: "Anonymous Authors"
+  venue: "2025"  
+  links:
+    paper: "https://openreview.net/forum?id=cdwp8BXTVV"
+    github: ""  
+    website: ""
+
+- title: "PR-Agent: An AI-Powered Tool for Automated Pull Request Analysis, Feedback, Suggestions and More!"
+  authors: "Qodo"
+  venue: "2024"
+  links:
+    paper: ""
+    github: "https://github.com/qodo-ai/pr-agent"
+    website: "https://www.qodo.ai/"

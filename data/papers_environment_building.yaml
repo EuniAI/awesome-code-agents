@@ -1,0 +1,7 @@
+- title: "EnvBench: A Benchmark for Automated Environment Setup"
+  authors: "Aleksandra Eliseeva, Alexander Kovrigin, Ilia Kholkin, Egor Bogomolov, Yaroslav Zharov"
+  venue: "ICLR 2025 Workshop"
+  links:
+    paper: "https://arxiv.org/abs/2503.14443"
+    github: "https://github.com/JetBrains-Research/EnvBench"
+    website: "https://huggingface.co/datasets/JetBrains-Research/EnvBench"

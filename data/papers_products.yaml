@@ -54,6 +54,14 @@
     github: "https://github.com/SWE-agent/SWE-agent"
     website: "https://swe-agent.com/"
 
+- title: "PR-Agent & Qodo Merge"
+  authors: "Qodo"
+  venue: "2024"
+  links:
+    paper: ""
+    github: "https://github.com/qodo-ai/pr-agent"
+    website: "https://www.qodo.ai/"
+
 - title: "Lingma SWE-GPT"
   authors: "Tongyi / Alibaba"
   venue: "2025"

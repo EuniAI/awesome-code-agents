@@ -87,6 +87,10 @@
   _Princeton University._ 2024.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2405.15793) [![GitHub Stars](https://img.shields.io/github/stars/SWE-agent/SWE-agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SWE-agent/SWE-agent) [![Website](https://img.shields.io/website?url=https://swe-agent.com/&up_message=SWE-AGENT&up_color=blue&down_message=SWE-AGENT&down_color=blue&style=for-the-badge)](https://swe-agent.com/)
 
+- **PR-Agent & Qodo Merge.**  
+  _Qodo._ 2024.  
+  [![GitHub Stars](https://img.shields.io/github/stars/qodo-ai/pr-agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/qodo-ai/pr-agent) [![Website](https://img.shields.io/website?url=https://www.qodo.ai/&up_message=QODO.AI&up_color=blue&down_message=QODO.AI&down_color=blue&style=for-the-badge)](https://www.qodo.ai/)
+
 - **Lingma SWE-GPT.**  
   _Tongyi / Alibaba._ 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.00622) [![GitHub Stars](https://img.shields.io/github/stars/LingmaTongyi/Lingma-SWE-GPT?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/LingmaTongyi/Lingma-SWE-GPT)
@@ -137,9 +141,17 @@
   _Xiang Deng, Jeff Da, Edwin Pan, Yannis Yiming He, Charles Ide, Kanak Garg, Niklas Lauffer, Andrew Park, Nitin Pasari, Chetan Rane, Karmini Sampath, Maya Krishnan, Srivatsa Kundurthy, Sean Hendryx, Zifan Wang, Chen Bo Calvin Zhang, Noah Jacobson, Bing Liu, Brad Kenstler._ arXiv 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.16941) [![GitHub Stars](https://img.shields.io/github/stars/scaleapi/SWE-bench_Pro-os?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/scaleapi/SWE-bench_Pro-os) [![Website](https://img.shields.io/website?url=https://scale.com/leaderboard/swe_bench_pro_public&up_message=SWE-BENCH-PRO-PUBLIC&up_color=blue&down_message=SWE-BENCH-PRO-PUBLIC&down_color=blue&style=for-the-badge)](https://scale.com/leaderboard/swe_bench_pro_public)
 
+- **SWE-PolyBench: A multi-language benchmark for repository level evaluation of coding agents.**  
+  _Muhammad Shihab Rashid, Christian Bock, Yuan Zhuang, Alexander Buchholz, Tim Esler, Simon Valentin, Luca Franceschi, Martin Wistuba, Prabhu Teja Sivaprasad, Woo Jung Kim, Anoop Deoras, Giovanni Zappella, Laurent Callot._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.08703) [![GitHub Stars](https://img.shields.io/github/stars/amazon-science/SWE-PolyBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/amazon-science/SWE-PolyBench) [![Website](https://img.shields.io/website?url=https://amazon-science.github.io/SWE-PolyBench/&up_message=SWE-POLYBENCH&up_color=blue&down_message=SWE-POLYBENCH&down_color=blue&style=for-the-badge)](https://amazon-science.github.io/SWE-PolyBench/)
+
 - **SWE-SQL: Illuminating LLM Pathways to Solve User SQL Issues in Real-World Applications.**  
   _Jinyang Li, Xiaolong Li, Ge Qu, Per Jacobsson, Bowen Qin, Binyuan Hui, Shuzheng Si, Nan Huo, Xiaohan Xu, Yue Zhang, Ziwei Tang, Yuanshuai Li, Florensia Widjaja, Xintong Zhu, Feige Zhou, Yongfeng Huang, Yannis Papakonstantinou, Fatma Ozcan, Chenhao Ma, Reynold Cheng._ arXiv 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.18951) [![GitHub Stars](https://img.shields.io/github/stars/bird-bench/BIRD-CRITIC-1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/bird-bench/BIRD-CRITIC-1) [![Website](https://img.shields.io/website?url=https://bird-critic.github.io/&up_message=BIRD-CRITIC&up_color=blue&down_message=BIRD-CRITIC&down_color=blue&style=for-the-badge)](https://bird-critic.github.io/)
+
+- **Multi-SWE-bench: A Multilingual Benchmark for Issue Resolving.**  
+  _Daoguang Zan, Zhirong Huang, Wei Liu, Hanwu Chen, Linhao Zhang, Shulin Xin, Lu Chen, Qi Liu, Xiaojian Zhong, Aoyan Li, Siyao Liu, Yongsheng Xiao, Liangqiang Chen, Yuyu Zhang, Jing Su, Tianyu Liu, Rui Long, Kai Shen, Liang Xiang._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.02605) [![GitHub Stars](https://img.shields.io/github/stars/multi-swe-bench/multi-swe-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/multi-swe-bench/multi-swe-bench) [![Website](https://img.shields.io/website?url=https://multi-swe-bench.github.io/&up_message=MULTI-SWE-BENCH&up_color=blue&down_message=MULTI-SWE-BENCH&down_color=blue&style=for-the-badge)](https://multi-swe-bench.github.io/)
 
 - **SWE-bench Goes Live!**  
   _Linghao Zhang, Shilin He, Chaoyun Zhang, Yu Kang, Bowen Li, Chengxing Xie, Junhao Wang, Maoquan Wang, Yufan Huang, Shengyu Fu, Elsie Nallipogu, Qingwei Lin, Yingnong Dang, Saravan Rajmohan, Dongmei Zhang._ arXiv 2025.  
@@ -152,6 +164,18 @@
 - **SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?**  
   _Samuel Miserendino, Michele Wang, Tejal Patwardhan, Johannes Heidecke._ ICML 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.12115) [![GitHub Stars](https://img.shields.io/github/stars/openai/frontier-evals?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/frontier-evals/tree/main/project/swelancer) [![Website](https://img.shields.io/website?url=https://openai.com/index/swe-lancer/&up_message=SWE-LANCER&up_color=blue&down_message=SWE-LANCER&down_color=blue&style=for-the-badge)](https://openai.com/index/swe-lancer/)
+
+- **CVE-Bench: A Benchmark for AI Agents’ Ability to Exploit Real-World Web Application Vulnerabilities.**  
+  _Yuxuan Zhu, Antony Kellermann, Dylan Bowman, Philip Li, Akul Gupta, Adarsh Danda, Richard Fang, Conner Jensen, Eric Ihli, Jason Benn, Jet Geronimo, Avi Dhir, Sudhit Rao, Kaicheng Yu, Twm Stone, Daniel Kang._ ICML 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.17332) [![GitHub Stars](https://img.shields.io/github/stars/uiuc-kang-lab/cve-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/uiuc-kang-lab/cve-bench)
+
+- **CVE-Bench: Benchmarking LLM-based Software Engineering Agent’s Ability to Repair Real-World CVE Vulnerabilities.**  
+  _Peiran Wang, Xiaogeng Liu, Chaowei Xiao._ NAACL 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2025.naacl-long.212/)
+
+- **EnvBench: A Benchmark for Automated Environment Setup.**  
+  _Aleksandra Eliseeva, Alexander Kovrigin, Ilia Kholkin, Egor Bogomolov, Yaroslav Zharov._ ICLR 2025 Workshop.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.14443) [![GitHub Stars](https://img.shields.io/github/stars/JetBrains-Research/EnvBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/JetBrains-Research/EnvBench) [![Website](https://img.shields.io/website?url=https://huggingface.co/datasets/JetBrains-Research/EnvBench&up_message=ENVBENCH&up_color=blue&down_message=ENVBENCH&down_color=blue&style=for-the-badge)](https://huggingface.co/datasets/JetBrains-Research/EnvBench)
 
 - **OmniGIRL: A Multilingual and Multimodal Benchmark for GitHub Issue Resolution.**  
   _Lianghong Guo, Wei Tao, Runhan Jiang, Yanlin Wang, Jiachi Chen, Xilin Liu, Yuchi Ma, Mingzhi Mao, Hongyu Zhang, Zibin Zheng._ ISSTA 2025.  
@@ -168,6 +192,13 @@
 > 
 
 ### 🔎 Surveys
+> 
+
+<!-- START PAPERS:surveys -->
+- **The Rise of AI Teammates in Software Engineering (SE) 3.0: How Autonomous Coding Agents Are Reshaping Software Engineering.**  
+  _Hao Li, Haoxiang Zhang, Ahmed E. Hassan._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.15003) [![GitHub Stars](https://img.shields.io/github/stars/SAILResearch/AI_Teammates_in_SE3?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SAILResearch/AI_Teammates_in_SE3)
+<!-- END PAPERS:surveys -->
 
 - Agents in Software Engineering: Survey, Landscape, and Vision
 - **OS Agents Survey** (Dec 2024) — survey on MLLM-based OS/IDE agents.  
@@ -177,12 +208,17 @@
 ### 🏗 Environment Building
 > Papers describing new environments, IDE sandboxes, benchmarks, or agent playgrounds.
 
+<!-- START PAPERS:environment_building -->
+- **EnvBench: A Benchmark for Automated Environment Setup.**  
+  _Aleksandra Eliseeva, Alexander Kovrigin, Ilia Kholkin, Egor Bogomolov, Yaroslav Zharov._ ICLR 2025 Workshop.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.14443) [![GitHub Stars](https://img.shields.io/github/stars/JetBrains-Research/EnvBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/JetBrains-Research/EnvBench) [![Website](https://img.shields.io/website?url=https://huggingface.co/datasets/JetBrains-Research/EnvBench&up_message=ENVBENCH&up_color=blue&down_message=ENVBENCH&down_color=blue&style=for-the-badge)](https://huggingface.co/datasets/JetBrains-Research/EnvBench)
+<!-- END PAPERS:environment_building -->
+
 - R2E: Turning any Github Repository into a Programming Agent Environment
 - R2E-Gym: Procedural Environment Generation and Hybrid Verifiers for Scaling Open-Weights SWE Agents
 - RepoST: Scalable Repository-Level Coding Environment Construction with Sandbox Testing
 - You Name It, I Run It: An LLM Agent to Execute Tests of Arbitrary Projects
 - Automated Benchmark Generation for Repository-Level Coding Tasks
-- EnvBench: A Benchmark for Automated Environment Setup
 - Treefix: Enabling Execution with a Tree of Prefixes
 - CompileAgent: Automated Real-World Repo-Level Compilation with Tool-Integrated LLM-based Agent System
 - AutoDev: Automated AI-Driven Development
@@ -210,6 +246,10 @@
 - **Prometheus: Unified Knowledge Graphs for Issue Resolution in Multilingual Codebases.**  
   _Zimin Chen, Yue Pan, Siyu Lu, Jiayi Xu, Claire Le Goues, Martin Monperrus, He Ye._ arXiv 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.19942) [![GitHub Stars](https://img.shields.io/github/stars/EuniAI/Prometheus?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/EuniAI/Prometheus) [![Website](https://img.shields.io/website?url=https://euni.ai/&up_message=EUNI.AI&up_color=blue&down_message=EUNI.AI&down_color=blue&style=for-the-badge)](https://euni.ai/)
+
+- **Saving SWE-Bench: A Benchmark Mutation Approach for Realistic Agent Evaluation.**  
+  _Spandan Garg, Ben Steenhoek, Yufan Huang._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.08996)
 
 - **SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution.**  
   _Yuxiang Wei, Olivier Duchenne, Jade Copet, Quentin Carbonneaux, Lingming Zhang, Daniel Fried, Gabriel Synnaeve, Rishabh Singh, Sida I. Wang._ NeurIPS 2025.  
@@ -265,11 +305,27 @@
 
 - SWE-QA: Can Language Models Answer Repository-level Code Questions?
 
-### 🔍 PR & Review
+### 🔍 Pull Request Review
 > Automated pull request creation, review assistance, linting, refactoring.  
+
+<!-- START PAPERS:pull_request_review -->
+- **PReview: A Benchmark Dataset for Pull Request Outcomes and Quality Analysis.**  
+  _Anonymous Authors._ 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://openreview.net/forum?id=cdwp8BXTVV)
+
+- **PR-Agent: An AI-Powered Tool for Automated Pull Request Analysis, Feedback, Suggestions and More!**  
+  _Qodo._ 2024.  
+  [![GitHub Stars](https://img.shields.io/github/stars/qodo-ai/pr-agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/qodo-ai/pr-agent) [![Website](https://img.shields.io/website?url=https://www.qodo.ai/&up_message=QODO.AI&up_color=blue&down_message=QODO.AI&down_color=blue&style=for-the-badge)](https://www.qodo.ai/)
+<!-- END PAPERS:pull_request_review -->
 
 ### ✨ Feature Development
 > Studies on agent-driven feature extension, repo-level edits.
+
+<!-- START PAPERS:feature_development -->
+- **FEA-Bench: A Benchmark for Evaluating Repository-Level Code Generation for Feature Implementation.**  
+  _Wei Li, Xin Zhang, Zhongxin Guo, Shaoguang Mao, Wen Luo, Guangyue Peng, Yangyu Huang, Houfeng Wang, Scarlett Li._ ACL 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.06680) [![GitHub Stars](https://img.shields.io/github/stars/microsoft/FEA-Bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/microsoft/FEA-Bench) [![Website](https://img.shields.io/website?url=https://gmago-leway.github.io/fea-bench.github.io/&up_message=FEA-BENCH.GITHUB.IO&up_color=blue&down_message=FEA-BENCH.GITHUB.IO&down_color=blue&style=for-the-badge)](https://gmago-leway.github.io/fea-bench.github.io/)
+<!-- END PAPERS:feature_development -->
 
 - SWE-Dev: Evaluating and Training Autonomous Feature-Driven Software Development
 - NoCode-bench: A Benchmark for Evaluating Natural Language-Driven Feature Addition

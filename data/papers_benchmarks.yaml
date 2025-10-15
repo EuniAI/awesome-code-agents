@@ -14,6 +14,14 @@
     github: "https://github.com/scaleapi/SWE-bench_Pro-os"
     website: "https://scale.com/leaderboard/swe_bench_pro_public"
 
+- title: "SWE-PolyBench: A multi-language benchmark for repository level evaluation of coding agents"
+  authors: "Muhammad Shihab Rashid, Christian Bock, Yuan Zhuang, Alexander Buchholz, Tim Esler, Simon Valentin, Luca Franceschi, Martin Wistuba, Prabhu Teja Sivaprasad, Woo Jung Kim, Anoop Deoras, Giovanni Zappella, Laurent Callot"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2504.08703"
+    github: "https://github.com/amazon-science/SWE-PolyBench"
+    website: "https://amazon-science.github.io/SWE-PolyBench/"
+
 - title: "SWE-SQL: Illuminating LLM Pathways to Solve User SQL Issues in Real-World Applications"
   authors: "Jinyang Li, Xiaolong Li, Ge Qu, Per Jacobsson, Bowen Qin, Binyuan Hui, Shuzheng Si, Nan Huo, Xiaohan Xu, Yue Zhang, Ziwei Tang, Yuanshuai Li, Florensia Widjaja, Xintong Zhu, Feige Zhou, Yongfeng Huang, Yannis Papakonstantinou, Fatma Ozcan, Chenhao Ma, Reynold Cheng"
   venue: "arXiv 2025"
@@ -21,6 +29,14 @@
     paper: "https://arxiv.org/abs/2506.18951"
     github: "https://github.com/bird-bench/BIRD-CRITIC-1"
     website: "https://bird-critic.github.io/"
+
+- title: "Multi-SWE-bench: A Multilingual Benchmark for Issue Resolving"
+  authors: "Daoguang Zan, Zhirong Huang, Wei Liu, Hanwu Chen, Linhao Zhang, Shulin Xin, Lu Chen, Qi Liu, Xiaojian Zhong, Aoyan Li, Siyao Liu, Yongsheng Xiao, Liangqiang Chen, Yuyu Zhang, Jing Su, Tianyu Liu, Rui Long, Kai Shen, Liang Xiang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2504.02605"
+    github: "https://github.com/multi-swe-bench/multi-swe-bench"
+    website: "https://multi-swe-bench.github.io/"
 
 - title: "SWE-bench Goes Live!"
   authors: "Linghao Zhang, Shilin He, Chaoyun Zhang, Yu Kang, Bowen Li, Chengxing Xie, Junhao Wang, Maoquan Wang, Yufan Huang, Shengyu Fu, Elsie Nallipogu, Qingwei Lin, Yingnong Dang, Saravan Rajmohan, Dongmei Zhang"
@@ -45,6 +61,30 @@
     paper: "https://arxiv.org/abs/2502.12115"
     github: "https://github.com/openai/frontier-evals/tree/main/project/swelancer"
     website: "https://openai.com/index/swe-lancer/"
+
+- title: "CVE-Bench: A Benchmark for AI Agents’ Ability to Exploit Real-World Web Application Vulnerabilities"
+  authors: "Yuxuan Zhu, Antony Kellermann, Dylan Bowman, Philip Li, Akul Gupta, Adarsh Danda, Richard Fang, Conner Jensen, Eric Ihli, Jason Benn, Jet Geronimo, Avi Dhir, Sudhit Rao, Kaicheng Yu, Twm Stone, Daniel Kang"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.17332"
+    github: "https://github.com/uiuc-kang-lab/cve-bench"
+    website: ""
+
+- title: "CVE-Bench: Benchmarking LLM-based Software Engineering Agent’s Ability to Repair Real-World CVE Vulnerabilities"
+  authors: "Peiran Wang, Xiaogeng Liu, Chaowei Xiao"
+  venue: "NAACL 2025"
+  links:
+    paper: "https://aclanthology.org/2025.naacl-long.212/"
+    github: ""
+    website: ""
+
+- title: "EnvBench: A Benchmark for Automated Environment Setup"
+  authors: "Aleksandra Eliseeva, Alexander Kovrigin, Ilia Kholkin, Egor Bogomolov, Yaroslav Zharov"
+  venue: "ICLR 2025 Workshop"
+  links:
+    paper: "https://arxiv.org/abs/2503.14443"
+    github: "https://github.com/JetBrains-Research/EnvBench"
+    website: "https://huggingface.co/datasets/JetBrains-Research/EnvBench"
 
 - title: "OmniGIRL: A Multilingual and Multimodal Benchmark for GitHub Issue Resolution"
   authors: "Lianghong Guo, Wei Tao, Runhan Jiang, Yanlin Wang, Jiachi Chen, Xilin Liu, Yuchi Ma, Mingzhi Mao, Hongyu Zhang, Zibin Zheng"

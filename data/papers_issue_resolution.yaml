@@ -6,6 +6,14 @@
     github: "https://github.com/EuniAI/Prometheus"
     website: "https://euni.ai/"
 
+- title: "Saving SWE-Bench: A Benchmark Mutation Approach for Realistic Agent Evaluation"
+  authors: "Spandan Garg, Ben Steenhoek, Yufan Huang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.08996"
+    github: ""
+    website: ""
+
 - title: "SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution"
   authors: "Yuxiang Wei, Olivier Duchenne, Jade Copet, Quentin Carbonneaux, Lingming Zhang, Daniel Fried, Gabriel Synnaeve, Rishabh Singh, Sida I. Wang"
   venue: "NeurIPS 2025"
