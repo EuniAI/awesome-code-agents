@@ -14,6 +14,14 @@
     github: "https://github.com/openai/codex"
     website: "https://openai.com/codex/"
 
+- title: "Devin"
+  authors: "Cognition AI"
+  venue: "2024"
+  links:
+    paper: ""
+    github: ""
+    website: "https://devin.ai/"
+
 - title: "OpenHands"
   authors: "All Hands AI"
   venue: "2024"
@@ -37,6 +45,30 @@
     paper: "https://arxiv.org/abs/2507.19942"
     github: "https://github.com/EuniAI/Prometheus"
     website: "https://euni.ai/"
+
+- title: "SWE-agent"
+  authors: "Princeton University"
+  venue: "2024"
+  links:
+    paper: "https://arxiv.org/abs/2405.15793"
+    github: "https://github.com/SWE-agent/SWE-agent"
+    website: "https://swe-agent.com/"
+
+- title: "Lingma SWE-GPT"
+  authors: "Tongyi / Alibaba"
+  venue: "2025"
+  links:
+    paper: "https://arxiv.org/abs/2411.00622"
+    github: "https://github.com/LingmaTongyi/Lingma-SWE-GPT"
+    website: ""
+
+- title: "Agentless"
+  authors: "University of Illinois Urbana-Champaign"
+  venue: "2024"
+  links:
+    paper: "https://arxiv.org/abs/2407.01489"
+    github: "https://github.com/OpenAutoCoder/Agentless"
+    website: ""
 
 - title: "AutoCodeRover"
   authors: "National University of Singapore (product now acquired by Sonar)"

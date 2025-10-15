@@ -6,6 +6,38 @@
     github: "https://github.com/EuniAI/Prometheus"
     website: "https://euni.ai/"
 
+- title: "SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution"
+  authors: "Yuxiang Wei, Olivier Duchenne, Jade Copet, Quentin Carbonneaux, Lingming Zhang, Daniel Fried, Gabriel Synnaeve, Rishabh Singh, Sida I. Wang"
+  venue: "NeurIPS 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.18449"
+    github: "https://github.com/facebookresearch/swe-rl"
+    website: ""
+
+- title: "Training Software Engineering Agents and Verifiers with SWE-Gym"
+  authors: "Jiayi Pan, Xingyao Wang, Graham Neubig, Navdeep Jaitly, Heng Ji, Alane Suhr, Yizhe Zhang"
+  venue: "ICML 2025"  
+  links:
+    paper: "https://arxiv.org/abs/2412.21139"
+    github: "https://github.com/SWE-Gym/SWE-Gym"
+    website: ""
+
+- title: "SWE-GPT: A Process-Centric Language Model for Automated Software Improvement"
+  authors: "Yingwei Ma, Rongyu Cao, Yongchang Cao, Yue Zhang, Jue Chen, Yibo Liu, Yuchen Liu, Binhua Li, Fei Huang, Yongbin Li"
+  venue: "ISSTA 2025"
+  links:
+    paper: "https://arxiv.org/abs/2411.00622"
+    github: "https://github.com/LingmaTongyi/Lingma-SWE-GPT"
+    website: ""
+
+- title: "SWE-Fixer: Training Open-Source LLMs for Effective and Efficient GitHub Issue Resolution"
+  authors: "Chengxing Xie, Bowen Li, Chang Gao, He Du, Wai Lam, Difan Zou, Kai Chen"
+  venue: "ACL 2025 Findings"
+  links:
+    paper: "https://arxiv.org/abs/2501.05040"
+    github: "https://github.com/InternLM/SWE-Fixer"
+    website: ""
+
 - title: "OpenHands: An Open Platform for AI Software Developers as Generalist Agents"
   authors: "Xingyao Wang, Boxuan Li, Yufan Song, Frank F. Xu, Xiangru Tang, Mingchen Zhuge, Jiayi Pan, Yueqi Song, Bowen Li, Jaskirat Singh, Hoang H. Tran, Fuqiang Li, Ren Ma, Mingzhang Zheng, Bill Qian, Yanjun Shao, Niklas Muennighoff, Yizhe Zhang, Binyuan Hui, Junyang Lin, Robert Brennan, Hao Peng, Heng Ji, Graham Neubig"
   venue: "ICLR 2025"
@@ -14,6 +46,14 @@
     github: "https://github.com/All-Hands-AI/OpenHands"
     website: "https://www.all-hands.dev/"
 
+- title: "Agentless: Demystifying LLM-based Software Engineering Agents"
+  authors: "Chunqiu Steven Xia, Yinlin Deng, Soren Dunn, Lingming Zhang"
+  venue: "FSE 2025"
+  links:
+    paper: "https://arxiv.org/abs/2407.01489"
+    github: "https://github.com/OpenAutoCoder/Agentless"
+    website: ""
+
 - title: "AutoCodeRover: Autonomous Program Improvement"
   authors: "Yuntong Zhang, Haifeng Ruan, Zhiyu Fan, Abhik Roychoudhury"
   venue: "ISSTA 2024"
@@ -21,3 +61,11 @@
     paper: "https://arxiv.org/abs/2404.05427"
     github: "https://github.com/AutoCodeRoverSG/auto-code-rover"  
     website: "https://autocoderover.dev/"
+
+- title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+  authors: "John Yang, Carlos E. Jimenez, Alexander Wettig, Kilian Lieret, Shunyu Yao, Karthik R. Narasimhan, Ofir Press"
+  venue: "NeurIPS 2024"
+  links:
+    paper: "https://arxiv.org/abs/2405.15793"
+    github: "https://github.com/SWE-agent/SWE-agent"
+    website: "https://swe-agent.com/"

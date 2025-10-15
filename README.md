@@ -28,24 +28,27 @@
 ## Quick Navigation
 
 - [🚀 Products & Tools](#-products--tools)
-- [📊 Leaderboards & Benchmarks](#-leaderboards--benchmarks)
+- [📊 Benchmarks & Leaderboards](#-benchmarks--leaderboards)
 - [📚 Papers](#-papers)
-  * [Surveys](#-surveys)
-  * [Environment Building](#-environment-building)
-  * [Issue Reproduction](#-issue-reproduction)
-  * [Issue Localization](#-issue-localization)
-  * [Issue Resolution](#-issue-resolution)
-  * [Q&A](#-qa)
-  * [PR & Review](#-pr--review)
-  * [Feature Development](#-feature-development)
-  * [Git Management](#-git-management)
-  * [Performance Optimization](#-performance-optimization)
-  * [Website Generation](#-website-generation)
-  * [Post-Training](#-post-training)
-  * [Test-time Scaling](#-test-time-scaling)
-  * [Multimodal](#-multimodal)
-  * [Data Synthesis](#-data-synthesis)
-  * [Empirical Studies](#-empirical-studies)  
+  * [🔎 Surveys](#-surveys)
+  * [🏗 Environment Building](#-environment-building)
+  * [🔁 Issue Reproduction](#-issue-reproduction)
+  * [🎯 Issue Localization](#-issue-localization)
+  * [🛠 Issue Resolution](#-issue-resolution)
+  * [❓ Q&A](#-qa)
+  * [🔍 PR & Review](#-pr--review)
+  * [✨ Feature Development](#-feature-development)
+  * [🔄 Git Management](#-git-management)
+  * [⚡ Performance Optimization](#-performance-optimization)
+  * [🌐 Website Generation](#-website-generation)
+  * [👩‍💻 Machine Learning Engineering](#-machine-learning-engineering)
+  * [SQL Issue Resolution](#sql-issue-resolution)
+  * [🕹️ Unified Agents](#-unified-agents)
+  * [🎓 Post-Training](#-post-training)
+  * [⚖ Test-time Scaling](#-test-time-scaling)
+  * [🖼 Multimodal](#-multimodal)
+  * [🧬 Data Synthesis](#-data-synthesis)
+  * [📊 Empirical Studies](#-empirical-studies)  
 - [🤝 Contributing](#-contributing)
 - [🌟 Star History](#-star-history)
 - [🙏 Acknowledgements](#-acknowledgements)
@@ -53,7 +56,7 @@
 ---
 
 ## 🚀 Products & Tools
-> Open-source agentic systems, frameworks, and real-world developer assistants.
+> Leading agentic systems, frameworks, and platforms for automated software development.
 
 <!-- START PAPERS:products -->
 - **Claude Code.**  
@@ -63,6 +66,10 @@
 - **Codex.**  
   _OpenAI._ 2025.  
   [![GitHub Stars](https://img.shields.io/github/stars/openai/codex?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/codex) [![Website](https://img.shields.io/website?url=https://openai.com/codex/&up_message=CODEX&up_color=blue&down_message=CODEX&down_color=blue&style=for-the-badge)](https://openai.com/codex/)
+
+- **Devin.**  
+  _Cognition AI._ 2024.  
+  [![Website](https://img.shields.io/website?url=https://devin.ai/&up_message=DEVIN.AI&up_color=blue&down_message=DEVIN.AI&down_color=blue&style=for-the-badge)](https://devin.ai/)
 
 - **OpenHands.**  
   _All Hands AI._ 2024.  
@@ -75,6 +82,18 @@
 - **Prometheus.**  
   _EuniAI._ 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.19942) [![GitHub Stars](https://img.shields.io/github/stars/EuniAI/Prometheus?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/EuniAI/Prometheus) [![Website](https://img.shields.io/website?url=https://euni.ai/&up_message=EUNI.AI&up_color=blue&down_message=EUNI.AI&down_color=blue&style=for-the-badge)](https://euni.ai/)
+
+- **SWE-agent.**  
+  _Princeton University._ 2024.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2405.15793) [![GitHub Stars](https://img.shields.io/github/stars/SWE-agent/SWE-agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SWE-agent/SWE-agent) [![Website](https://img.shields.io/website?url=https://swe-agent.com/&up_message=SWE-AGENT&up_color=blue&down_message=SWE-AGENT&down_color=blue&style=for-the-badge)](https://swe-agent.com/)
+
+- **Lingma SWE-GPT.**  
+  _Tongyi / Alibaba._ 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.00622) [![GitHub Stars](https://img.shields.io/github/stars/LingmaTongyi/Lingma-SWE-GPT?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/LingmaTongyi/Lingma-SWE-GPT)
+
+- **Agentless.**  
+  _University of Illinois Urbana-Champaign._ 2024.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2407.01489) [![GitHub Stars](https://img.shields.io/github/stars/OpenAutoCoder/Agentless?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenAutoCoder/Agentless)
 
 - **AutoCodeRover.**  
   _National University of Singapore (product now acquired by Sonar)._ 2024.  
@@ -107,7 +126,7 @@
 ---
 
 ## 📊 Benchmarks & Leaderboards
-> Standardized evaluation suites for SWE agents.
+> Standardized evaluation suites for code agents.
 
 <!-- START PAPERS:benchmarks -->
 - **Terminal-Bench: A Benchmark for AI Agents in Terminal Environments.**  
@@ -146,6 +165,8 @@
 ---
 
 ## 📚 Papers
+> 
+
 ### 🔎 Surveys
 
 - Agents in Software Engineering: Survey, Landscape, and Vision
@@ -190,17 +211,41 @@
   _Zimin Chen, Yue Pan, Siyu Lu, Jiayi Xu, Claire Le Goues, Martin Monperrus, He Ye._ arXiv 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.19942) [![GitHub Stars](https://img.shields.io/github/stars/EuniAI/Prometheus?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/EuniAI/Prometheus) [![Website](https://img.shields.io/website?url=https://euni.ai/&up_message=EUNI.AI&up_color=blue&down_message=EUNI.AI&down_color=blue&style=for-the-badge)](https://euni.ai/)
 
+- **SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution.**  
+  _Yuxiang Wei, Olivier Duchenne, Jade Copet, Quentin Carbonneaux, Lingming Zhang, Daniel Fried, Gabriel Synnaeve, Rishabh Singh, Sida I. Wang._ NeurIPS 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.18449) [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/swe-rl?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/swe-rl)
+
+- **Training Software Engineering Agents and Verifiers with SWE-Gym.**  
+  _Jiayi Pan, Xingyao Wang, Graham Neubig, Navdeep Jaitly, Heng Ji, Alane Suhr, Yizhe Zhang._ ICML 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.21139) [![GitHub Stars](https://img.shields.io/github/stars/SWE-Gym/SWE-Gym?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SWE-Gym/SWE-Gym)
+
+- **SWE-GPT: A Process-Centric Language Model for Automated Software Improvement.**  
+  _Yingwei Ma, Rongyu Cao, Yongchang Cao, Yue Zhang, Jue Chen, Yibo Liu, Yuchen Liu, Binhua Li, Fei Huang, Yongbin Li._ ISSTA 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.00622) [![GitHub Stars](https://img.shields.io/github/stars/LingmaTongyi/Lingma-SWE-GPT?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/LingmaTongyi/Lingma-SWE-GPT)
+
+- **SWE-Fixer: Training Open-Source LLMs for Effective and Efficient GitHub Issue Resolution.**  
+  _Chengxing Xie, Bowen Li, Chang Gao, He Du, Wai Lam, Difan Zou, Kai Chen._ ACL 2025 Findings.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.05040) [![GitHub Stars](https://img.shields.io/github/stars/InternLM/SWE-Fixer?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/InternLM/SWE-Fixer)
+
 - **OpenHands: An Open Platform for AI Software Developers as Generalist Agents.**  
   _Xingyao Wang, Boxuan Li, Yufan Song, Frank F. Xu, Xiangru Tang, Mingchen Zhuge, Jiayi Pan, Yueqi Song, Bowen Li, Jaskirat Singh, Hoang H. Tran, Fuqiang Li, Ren Ma, Mingzhang Zheng, Bill Qian, Yanjun Shao, Niklas Muennighoff, Yizhe Zhang, Binyuan Hui, Junyang Lin, Robert Brennan, Hao Peng, Heng Ji, Graham Neubig._ ICLR 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2407.16741) [![GitHub Stars](https://img.shields.io/github/stars/All-Hands-AI/OpenHands?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/All-Hands-AI/OpenHands) [![Website](https://img.shields.io/website?url=https://www.all-hands.dev/&up_message=ALL-HANDS&up_color=blue&down_message=ALL-HANDS&down_color=blue&style=for-the-badge)](https://www.all-hands.dev/)
 
+- **Agentless: Demystifying LLM-based Software Engineering Agents.**  
+  _Chunqiu Steven Xia, Yinlin Deng, Soren Dunn, Lingming Zhang._ FSE 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2407.01489) [![GitHub Stars](https://img.shields.io/github/stars/OpenAutoCoder/Agentless?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenAutoCoder/Agentless)
+
 - **AutoCodeRover: Autonomous Program Improvement.**  
   _Yuntong Zhang, Haifeng Ruan, Zhiyu Fan, Abhik Roychoudhury._ ISSTA 2024.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2404.05427) [![GitHub Stars](https://img.shields.io/github/stars/AutoCodeRoverSG/auto-code-rover?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/AutoCodeRoverSG/auto-code-rover) [![Website](https://img.shields.io/website?url=https://autocoderover.dev/&up_message=AUTOCODEROVER&up_color=blue&down_message=AUTOCODEROVER&down_color=blue&style=for-the-badge)](https://autocoderover.dev/)
+
+- **SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering.**  
+  _John Yang, Carlos E. Jimenez, Alexander Wettig, Kilian Lieret, Shunyu Yao, Karthik R. Narasimhan, Ofir Press._ NeurIPS 2024.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2405.15793) [![GitHub Stars](https://img.shields.io/github/stars/SWE-agent/SWE-agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SWE-agent/SWE-agent) [![Website](https://img.shields.io/website?url=https://swe-agent.com/&up_message=SWE-AGENT&up_color=blue&down_message=SWE-AGENT&down_color=blue&style=for-the-badge)](https://swe-agent.com/)
 <!-- END PAPERS:issue_resolution -->
 
 - **SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering.** _John Yang, Carlos E. Jimenez, Alexander Wettig, Kilian Lieret, Shunyu Yao, Karthik Narasimhan, Ofir Press._ NeurIPS 2024.<br>[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2405.15793) [![GitHub Stars](https://img.shields.io/github/stars/SWE-agent/SWE-agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SWE-agent/SWE-agent)
-- **AutoCodeRover: Autonomous Program Improvement.**  _Yuntong Zhang, Haifeng Ruan, Zhiyu Fan, Abhik Roychoudhury._ ISSTA 2024.<br>[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2404.05427) [![GitHub Stars](https://img.shields.io/github/stars/AutoCodeRoverSG/auto-code-rover?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/AutoCodeRoverSG/auto-code-rover)
+
 - debug-gym: A Text-Based Environment for Interactive Debugging
 - SemAgent: A Semantics-Aware Program Repair Agent
 - CodeR: Issue Resolving with Multi-Agent and Task Graphs
