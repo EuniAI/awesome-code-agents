@@ -1,0 +1,7 @@
+- title: "Issue Localization via LLM-Driven Iterative Code Graph Searching"
+  authors: "Zhonghao Jiang, Xiaoxue Ren, Meng Yan, Wei Jiang, Yong Li, Zhongxin Liu"
+  venue: "ASE 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.22424"
+    github: "https://github.com/ZhonghaoJiang/CoSIL"
+    website: ""

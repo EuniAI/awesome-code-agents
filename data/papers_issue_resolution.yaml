@@ -6,11 +6,67 @@
     github: "https://github.com/EuniAI/Prometheus"
     website: "https://euni.ai/"
 
+- title: "Terminal-Bench: A Benchmark for AI Agents in Terminal Environments"
+  authors: "The Terminal-Bench Team"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/laude-institute/terminal-bench"
+    website: "https://www.tbench.ai/"
+
+- title: "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?"
+  authors: "Xiang Deng, Jeff Da, Edwin Pan, Yannis Yiming He, Charles Ide, Kanak Garg, Niklas Lauffer, Andrew Park, Nitin Pasari, Chetan Rane, Karmini Sampath, Maya Krishnan, Srivatsa Kundurthy, Sean Hendryx, Zifan Wang, Chen Bo Calvin Zhang, Noah Jacobson, Bing Liu, Brad Kenstler"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.16941"
+    github: "https://github.com/scaleapi/SWE-bench_Pro-os"
+    website: "https://scale.com/leaderboard/swe_bench_pro_public"
+
+- title: "SWE-PolyBench: A multi-language benchmark for repository level evaluation of coding agents"
+  authors: "Muhammad Shihab Rashid, Christian Bock, Yuan Zhuang, Alexander Buchholz, Tim Esler, Simon Valentin, Luca Franceschi, Martin Wistuba, Prabhu Teja Sivaprasad, Woo Jung Kim, Anoop Deoras, Giovanni Zappella, Laurent Callot"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2504.08703"
+    github: "https://github.com/amazon-science/SWE-PolyBench"
+    website: "https://amazon-science.github.io/SWE-PolyBench/"
+
+- title: "Multi-SWE-bench: A Multilingual Benchmark for Issue Resolving"
+  authors: "Daoguang Zan, Zhirong Huang, Wei Liu, Hanwu Chen, Linhao Zhang, Shulin Xin, Lu Chen, Qi Liu, Xiaojian Zhong, Aoyan Li, Siyao Liu, Yongsheng Xiao, Liangqiang Chen, Yuyu Zhang, Jing Su, Tianyu Liu, Rui Long, Kai Shen, Liang Xiang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2504.02605"
+    github: "https://github.com/multi-swe-bench/multi-swe-bench"
+    website: "https://multi-swe-bench.github.io/"
+
+- title: "SWE-Effi: Re-Evaluating Software AI Agent System Effectiveness Under Resource Constraints"
+  authors: "Zhiyu Fan, Kirill Vasilevski, Dayi Lin, Boyuan Chen, Yihao Chen, Zhiqing Zhong, Jie M. Zhang, Pinjia He, Ahmed E. Hassan"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.09853"
+    github: "https://centre-for-software-excellence.github.io/SWE-Effi/"  
+    website: "https://github.com/Centre-for-Software-Excellence/SWE-Effi"
+
 - title: "Saving SWE-Bench: A Benchmark Mutation Approach for Realistic Agent Evaluation"
   authors: "Spandan Garg, Ben Steenhoek, Yufan Huang"
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2510.08996"
+    github: ""
+    website: ""
+
+- title: "SWE-MERA: A Dynamic Benchmark for Agenticly Evaluating Large Language Models on Software Engineering Tasks"
+  authors: "Pavel Adamenko, Mikhail Ivanov, Aidar Valeev, Rodion Levichev, Pavel Zadorozhny, Ivan Lopatin, Dmitry Babayev, Alena Fenogenova, Valentin Malykh"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.11059"
+    github: "https://github.com/MERA-Evaluation/repotest"
+    website: "https://mera-evaluation.github.io/demo-swe-mera/"
+
+- title: "Auto-SWE-Bench: A Framework for the Scalable Generation of Software Engineering Benchmark from Open-Source Repositories"
+  authors: "Anonymous Authors"
+  venue: "2025"
+  links:
+    paper: "https://openreview.net/forum?id=Gxw1EDSm9S"
     github: ""
     website: ""
 
@@ -22,6 +78,14 @@
     github: "https://github.com/facebookresearch/swe-rl"
     website: ""
 
+- title: "SWE-bench Goes Live!"
+  authors: "Linghao Zhang, Shilin He, Chaoyun Zhang, Yu Kang, Bowen Li, Chengxing Xie, Junhao Wang, Maoquan Wang, Yufan Huang, Shengyu Fu, Elsie Nallipogu, Qingwei Lin, Yingnong Dang, Saravan Rajmohan, Dongmei Zhang"
+  venue: "NeurIPS 2025 Datasets & Benchmarks Track"
+  links:
+    paper: "https://arxiv.org/abs/2505.23419"
+    github: "https://github.com/microsoft/SWE-bench-Live"
+    website: "https://swe-bench-live.github.io/"
+
 - title: "Training Software Engineering Agents and Verifiers with SWE-Gym"
   authors: "Jiayi Pan, Xingyao Wang, Graham Neubig, Navdeep Jaitly, Heng Ji, Alane Suhr, Yizhe Zhang"
   venue: "ICML 2025"  
@@ -29,6 +93,14 @@
     paper: "https://arxiv.org/abs/2412.21139"
     github: "https://github.com/SWE-Gym/SWE-Gym"
     website: ""
+
+- title: "SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?"
+  authors: "Samuel Miserendino, Michele Wang, Tejal Patwardhan, Johannes Heidecke"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.12115"
+    github: "https://github.com/openai/frontier-evals/tree/main/project/swelancer"
+    website: "https://openai.com/index/swe-lancer/"
 
 - title: "SWE-GPT: A Process-Centric Language Model for Automated Software Improvement"
   authors: "Yingwei Ma, Rongyu Cao, Yongchang Cao, Yue Zhang, Jue Chen, Yibo Liu, Yuchen Liu, Binhua Li, Fei Huang, Yongbin Li"
@@ -62,6 +134,14 @@
     github: "https://github.com/OpenAutoCoder/Agentless"
     website: ""
 
+- title: "OmniGIRL: A Multilingual and Multimodal Benchmark for GitHub Issue Resolution"
+  authors: "Lianghong Guo, Wei Tao, Runhan Jiang, Yanlin Wang, Jiachi Chen, Xilin Liu, Yuchi Ma, Mingzhi Mao, Hongyu Zhang, Zibin Zheng"
+  venue: "ISSTA 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.04606"
+    github: "https://github.com/DeepSoftwareAnalytics/OmniGIRL"
+    website: "https://deepsoftwareanalytics.github.io/omnigirl_leaderboard.html"
+
 - title: "AutoCodeRover: Autonomous Program Improvement"
   authors: "Yuntong Zhang, Haifeng Ruan, Zhiyu Fan, Abhik Roychoudhury"
   venue: "ISSTA 2024"
@@ -77,3 +157,11 @@
     paper: "https://arxiv.org/abs/2405.15793"
     github: "https://github.com/SWE-agent/SWE-agent"
     website: "https://swe-agent.com/"
+
+- title: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+  authors: "Carlos E. Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir Press, Karthik Narasimhan"
+  venue: "ICLR 2024"
+  links:
+    paper: "https://arxiv.org/abs/2310.06770"
+    github: "https://github.com/SWE-bench/SWE-bench"
+    website: "https://www.swebench.com/"

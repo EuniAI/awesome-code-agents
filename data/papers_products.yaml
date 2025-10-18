@@ -14,6 +14,14 @@
     github: "https://github.com/openai/codex"
     website: "https://openai.com/codex/"
 
+- title: "Lovable"
+  authors: "Lovable"
+  venue: "2024"
+  links:
+    paper: ""
+    github: ""
+    website: "https://lovable.dev/"
+
 - title: "Devin"
   authors: "Cognition AI"
   venue: "2024"
@@ -53,6 +61,14 @@
     paper: "https://arxiv.org/abs/2405.15793"
     github: "https://github.com/SWE-agent/SWE-agent"
     website: "https://swe-agent.com/"
+
+- title: "Open Lovable"
+  authors: "Firecrawl"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/firecrawl/open-lovable"
+    website: "https://open-lovable.com/"
 
 - title: "PR-Agent & Qodo Merge"
   authors: "Qodo"
@@ -134,3 +150,10 @@
     github: ""
     website: "https://www.essential.com/"
 
+- title: "Anything"
+  authors: "Anything"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://www.createanything.com/"

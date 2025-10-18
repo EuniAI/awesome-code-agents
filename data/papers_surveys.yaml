@@ -1,7 +1,31 @@
+- title: "A Comprehensive Survey on Benchmarks and Solutions in Software Engineering of LLM-Empowered Agentic System"
+  authors: "Jiale Guo, Suizhi Huang, Mei Li, Dong Huang, Xingsheng Chen, Regina Zhang, Zhijiang Guo, Han Yu, Siu-Ming Yiu, Christian Jensen, Pietro Lio, Kwok-Yan Lam"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.09721"
+    github: "https://github.com/lisaGuojl/LLM-Agent-SE-Survey"
+    website: ""
+
+- title: "How Does LLM Reasoning Work for Code? A Survey and a Call to Action"
+  authors: "Ira Ceka, Saurabh Pujar, Irene Manotas, Gail Kaiser, Baishakhi Ray, Shyam Ramji"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.13932"
+    github: ""
+    website: ""
+
 - title: "The Rise of AI Teammates in Software Engineering (SE) 3.0: How Autonomous Coding Agents Are Reshaping Software Engineering"
   authors: "Hao Li, Haoxiang Zhang, Ahmed E. Hassan"
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2507.15003"
     github: "https://github.com/SAILResearch/AI_Teammates_in_SE3"
+    website: ""
+
+- title: "Agentic Software Engineering: Foundational Pillars and a Research Roadmap"
+  authors: "Ahmed E. Hassan, Hao Li, Dayi Lin, Bram Adams, Tse-Hsun Chen, Yutaro Kashiwa, Dong Qiu"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.06216"
+    github: ""
     website: ""

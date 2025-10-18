@@ -1,3 +1,11 @@
+- title: "SWE-Mirror: Scaling Issue-Resolving Datasets by Mirroring Issues Across Repositories"
+  authors: "Junhao Wang, Daoguang Zan, Shulin Xin, Siyao Liu, Yurong Wu, Kai Shen"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.08724"
+    github: ""
+    website: ""
+
 - title: "SPICE: An Automated SWE-Bench Labeling Pipeline for Issue Clarity, Test Coverage, and Effort Estimation"
   authors: "Gustavo A. Oliva, Gopi Krishnan Rajbahadur, Aaditya Bhatia, Haoxiang Zhang, Yihao Chen, Zhilong Chen, Arthur Leung, Dayi Lin, Boyuan Chen, Ahmed E. Hassan"
   venue: "arXiv 2025"
@@ -5,3 +13,19 @@
     paper: "https://arxiv.org/abs/2507.09108"
     github: ""
     website: ""
+
+- title: "RepoForge: Training a SOTA Fast-thinking SWE Agent with an End-to-End Data Curation Pipeline Synergizing SFT and RL at Scale"
+  authors: "Zhilong Chen, Chengzong Zhao, Boyuan Chen, Dayi Lin, Yihao Chen, Arthur Leung, Gopi Krishnan Rajbahadur, Gustavo Oliva, Haoxiang Zhang, Aadi Bhatia, Kim Kisub, Kirill Vasilevski, Youssef Esseddiq, Yanruo Yang, Ahmed Hassan"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.01550"
+    github: ""
+    website: "https://centre-for-software-excellence.github.io/docs/blog/repoforge"
+
+- title: "MCTS-Refined CoT: High-Quality Fine-Tuning Data for LLM-Based Repository Issue Resolution"
+  authors: "Yibo Wang, Zhihao Peng, Ying Wang, Zhao Wei, Hai Yu, Zhiliang Zhu"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.12728"
+    github: ""
+    website: "https://mcts-refine.github.io/"

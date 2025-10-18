@@ -38,13 +38,29 @@
     github: "https://github.com/multi-swe-bench/multi-swe-bench"
     website: "https://multi-swe-bench.github.io/"
 
-- title: "SWE-bench Goes Live!"
-  authors: "Linghao Zhang, Shilin He, Chaoyun Zhang, Yu Kang, Bowen Li, Chengxing Xie, Junhao Wang, Maoquan Wang, Yufan Huang, Shengyu Fu, Elsie Nallipogu, Qingwei Lin, Yingnong Dang, Saravan Rajmohan, Dongmei Zhang"
+- title: "SWE-Effi: Re-Evaluating Software AI Agent System Effectiveness Under Resource Constraints"
+  authors: "Zhiyu Fan, Kirill Vasilevski, Dayi Lin, Boyuan Chen, Yihao Chen, Zhiqing Zhong, Jie M. Zhang, Pinjia He, Ahmed E. Hassan"
   venue: "arXiv 2025"
   links:
-    paper: "https://arxiv.org/abs/2505.23419"
-    github: "https://github.com/microsoft/SWE-bench-Live"
-    website: "https://swe-bench-live.github.io/"
+    paper: "https://arxiv.org/abs/2509.09853"
+    github: "https://centre-for-software-excellence.github.io/SWE-Effi/"  
+    website: "https://github.com/Centre-for-Software-Excellence/SWE-Effi"
+
+- title: "SEC-bench: Automated Benchmarking of LLM Agents on Real-World Software Security Tasks"
+  authors: "Hwiwon Lee, Ziqi Zhang, Hanxiao Lu, Lingming Zhang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.11791"
+    github: "https://github.com/SEC-bench/SEC-bench"
+    website: "https://sec-bench.github.io/"
+
+- title: "SecureAgentBench: Benchmarking Secure Code Generation under Realistic Vulnerability Scenarios"
+  authors: "Junkai Chen, Huihui Huang, Yunbo Lyu, Junwen An, Jieke Shi, Chengran Yang, Ting Zhang, Haoye Tian, Yikun Li, Zhenhao Li, Xin Zhou, Xing Hu, David Lo"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.22097"
+    github: "https://github.com/iCSawyer/SecureAgentBench"
+    website: ""
 
 - title: "SWE-MERA: A Dynamic Benchmark for Agenticly Evaluating Large Language Models on Software Engineering Tasks"
   authors: "Pavel Adamenko, Mikhail Ivanov, Aidar Valeev, Rodion Levichev, Pavel Zadorozhny, Ivan Lopatin, Dmitry Babayev, Alena Fenogenova, Valentin Malykh"
@@ -53,6 +69,22 @@
     paper: "https://arxiv.org/abs/2507.11059"
     github: "https://github.com/MERA-Evaluation/repotest"
     website: "https://mera-evaluation.github.io/demo-swe-mera/"
+
+- title: "Auto-SWE-Bench: A Framework for the Scalable Generation of Software Engineering Benchmark from Open-Source Repositories"
+  authors: "Anonymous Authors"
+  venue: "2025"
+  links:
+    paper: "https://openreview.net/forum?id=Gxw1EDSm9S"
+    github: ""
+    website: ""
+
+- title: "SWE-bench Goes Live!"
+  authors: "Linghao Zhang, Shilin He, Chaoyun Zhang, Yu Kang, Bowen Li, Chengxing Xie, Junhao Wang, Maoquan Wang, Yufan Huang, Shengyu Fu, Elsie Nallipogu, Qingwei Lin, Yingnong Dang, Saravan Rajmohan, Dongmei Zhang"
+  venue: "NeurIPS 2025 Datasets & Benchmarks Track"
+  links:
+    paper: "https://arxiv.org/abs/2505.23419"
+    github: "https://github.com/microsoft/SWE-bench-Live"
+    website: "https://swe-bench-live.github.io/"
 
 - title: "SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?"
   authors: "Samuel Miserendino, Michele Wang, Tejal Patwardhan, Johannes Heidecke"

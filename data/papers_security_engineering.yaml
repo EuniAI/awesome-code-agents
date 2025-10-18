@@ -1,0 +1,31 @@
+- title: "SEC-bench: Automated Benchmarking of LLM Agents on Real-World Software Security Tasks"
+  authors: "Hwiwon Lee, Ziqi Zhang, Hanxiao Lu, Lingming Zhang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.11791"
+    github: "https://github.com/SEC-bench/SEC-bench"
+    website: "https://sec-bench.github.io/"
+
+- title: "SecureAgentBench: Benchmarking Secure Code Generation under Realistic Vulnerability Scenarios"
+  authors: "Junkai Chen, Huihui Huang, Yunbo Lyu, Junwen An, Jieke Shi, Chengran Yang, Ting Zhang, Haoye Tian, Yikun Li, Zhenhao Li, Xin Zhou, Xing Hu, David Lo"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.22097"
+    github: "https://github.com/iCSawyer/SecureAgentBench"
+    website: ""
+
+- title: "CVE-Bench: A Benchmark for AI Agents’ Ability to Exploit Real-World Web Application Vulnerabilities"
+  authors: "Yuxuan Zhu, Antony Kellermann, Dylan Bowman, Philip Li, Akul Gupta, Adarsh Danda, Richard Fang, Conner Jensen, Eric Ihli, Jason Benn, Jet Geronimo, Avi Dhir, Sudhit Rao, Kaicheng Yu, Twm Stone, Daniel Kang"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.17332"
+    github: "https://github.com/uiuc-kang-lab/cve-bench"
+    website: ""
+
+- title: "CVE-Bench: Benchmarking LLM-based Software Engineering Agent’s Ability to Repair Real-World CVE Vulnerabilities"
+  authors: "Peiran Wang, Xiaogeng Liu, Chaowei Xiao"
+  venue: "NAACL 2025"
+  links:
+    paper: "https://aclanthology.org/2025.naacl-long.212/"
+    github: ""
+    website: ""
