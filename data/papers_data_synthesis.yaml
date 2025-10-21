@@ -29,3 +29,27 @@
     paper: "https://arxiv.org/abs/2506.12728"
     github: ""
     website: "https://mcts-refine.github.io/"
+
+- title: "SWE-smith: Scaling Data for Software Engineering Agents"
+  authors: "John Yang, Kilian Lieret, Carlos E. Jimenez, Alexander Wettig, Kabir Khandpur, Yanzhe Zhang, Binyuan Hui, Ofir Press, Ludwig Schmidt, Diyi Yang"
+  venue: "NeurIPS 2025 Datasets & Benchmarks Track"
+  links:
+    paper: "https://arxiv.org/abs/2504.21798"
+    github: "https://github.com/SWE-bench/SWE-smith"
+    website: "https://swesmith.com/"
+
+- title: "Training Software Engineering Agents and Verifiers with SWE-Gym"
+  authors: "Jiayi Pan, Xingyao Wang, Graham Neubig, Navdeep Jaitly, Heng Ji, Alane Suhr, Yizhe Zhang"
+  venue: "ICML 2025"  
+  links:
+    paper: "https://arxiv.org/abs/2412.21139"
+    github: "https://github.com/SWE-Gym/SWE-Gym"
+    website: ""
+
+- title: "Automated Benchmark Generation for Repository-Level Coding Tasks"
+  authors: "Konstantinos Vergopoulos, Mark Niklas Müller, Martin Vechev"
+  venue: "ICML 2025"
+  links:
+    paper: "https://openreview.net/forum?id=qnE2m3pIAb"
+    github: ""
+    website: ""

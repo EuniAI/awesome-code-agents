@@ -1,0 +1,15 @@
+- title: "WebGen-Agent: Enhancing Interactive Website Generation with Multi-Level Feedback and Step-Level Reinforcement Learning"
+  authors: "Zimu Lu, Houxing Ren, Yunqiao Yang, Ke Wang, Zhuofan Zong, Junting Pan, Mingjie Zhan, Hongsheng Li"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.22644"
+    github: "https://github.com/mnluzimu/WebGen-Agent"
+    website: ""
+
+- title: "WebGen-Bench: Evaluating LLMs on Generating Interactive and Functional Websites from Scratch"
+  authors: "Zimu Lu, Yunqiao Yang, Houxing Ren, Haotian Hou, Han Xiao, Ke Wang, Weikang Shi, Aojun Zhou, Mingjie Zhan, Hongsheng Li"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.03733"
+    github: "https://github.com/mnluzimu/WebGen-Bench"
+    website: ""

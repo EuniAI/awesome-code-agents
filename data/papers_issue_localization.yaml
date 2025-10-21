@@ -1,3 +1,11 @@
+- title: "Improving Code Localization with Repository Memory"
+  authors: "Boshi Wang, Weijian Xu, Yunsheng Li, Mei Gao, Yujia Xie, Huan Sun, Dongdong Chen"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.01003"
+    github: ""
+    website: ""
+
 - title: "Issue Localization via LLM-Driven Iterative Code Graph Searching"
   authors: "Zhonghao Jiang, Xiaoxue Ren, Meng Yan, Wei Jiang, Yong Li, Zhongxin Liu"
   venue: "ASE 2025"

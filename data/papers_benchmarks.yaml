@@ -38,6 +38,30 @@
     github: "https://github.com/multi-swe-bench/multi-swe-bench"
     website: "https://multi-swe-bench.github.io/"
 
+- title: "SWE-Perf: Can Language Models Optimize Code Performance on Real-World Repositories?"
+  authors: "Xinyi He, Qian Liu, Mingzhe Du, Lin Yan, Zhijie Fan, Yiming Huang, Zejian Yuan, Zejun Ma"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.12415"
+    github: "https://github.com/swe-perf/swe-perf"
+    website: "https://swe-perf.github.io"
+
+- title: "SWE-rebench: An Automated Pipeline for Task Collection and Decontaminated Evaluation of Software Engineering Agents"
+  authors: "Ibragim Badertdinov, Alexander Golubev, Maksim Nekrashevich, Anton Shevtsov, Simon Karasik, Andrei Andriushchenko, Maria Trofimova, Daria Litvintseva, Boris Yangel"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.20411"
+    github: ""
+    website: "https://swe-rebench.com"
+
+- title: "SWE-Bench+: Enhanced Coding Benchmark for LLMs"
+  authors: "Reem Aleithan, Haoran Xue, Mohammad Mahdi Mohajer, Elijah Nnorom, Gias Uddin, Song Wang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://openreview.net/forum?id=R40rS2afQ3"
+    github: ""
+    website: ""
+
 - title: "SWE-Effi: Re-Evaluating Software AI Agent System Effectiveness Under Resource Constraints"
   authors: "Zhiyu Fan, Kirill Vasilevski, Dayi Lin, Boyuan Chen, Yihao Chen, Zhiqing Zhong, Jie M. Zhang, Pinjia He, Ahmed E. Hassan"
   venue: "arXiv 2025"
@@ -94,6 +118,14 @@
     github: "https://github.com/openai/frontier-evals/tree/main/project/swelancer"
     website: "https://openai.com/index/swe-lancer/"
 
+- title: "Automated Benchmark Generation for Repository-Level Coding Tasks"
+  authors: "Konstantinos Vergopoulos, Mark Niklas Müller, Martin Vechev"
+  venue: "ICML 2025"
+  links:
+    paper: "https://openreview.net/forum?id=qnE2m3pIAb"
+    github: ""
+    website: ""
+
 - title: "CVE-Bench: A Benchmark for AI Agents’ Ability to Exploit Real-World Web Application Vulnerabilities"
   authors: "Yuxuan Zhu, Antony Kellermann, Dylan Bowman, Philip Li, Akul Gupta, Adarsh Danda, Richard Fang, Conner Jensen, Eric Ihli, Jason Benn, Jet Geronimo, Avi Dhir, Sudhit Rao, Kaicheng Yu, Twm Stone, Daniel Kang"
   venue: "ICML 2025"
@@ -109,6 +141,14 @@
     paper: "https://aclanthology.org/2025.naacl-long.212/"
     github: ""
     website: ""
+
+- title: "On the Impacts of Contexts on Repository-Level Code Generation"
+  authors: "Nam Le Hai, Dung Manh Nguyen, Nghi D. Q. Bui"
+  venue: "NAACL 2025 Findings"
+  links:
+    paper: "https://aclanthology.org/2025.findings-naacl.82/"
+    github: "https://github.com/FSoft-AI4Code/RepoExec"
+    website: "https://fsoft-ai4code.github.io/repoexec/"
 
 - title: "EnvBench: A Benchmark for Automated Environment Setup"
   authors: "Aleksandra Eliseeva, Alexander Kovrigin, Ilia Kholkin, Egor Bogomolov, Yaroslav Zharov"

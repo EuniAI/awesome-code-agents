@@ -1,0 +1,39 @@
+- title: "HyperAgent: Generalist Software Engineering Agents to Solve Coding Tasks at Scale"
+  authors: "Huy Nhat Phan, Tien N. Nguyen, Phong X. Nguyen, Nghi D. Q. Bui"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2409.16299"
+    github: "https://github.com/FSoft-AI4Code/HyperAgent"
+    website: ""
+
+- title: "On the Impacts of Contexts on Repository-Level Code Generation"
+  authors: "Nam Le Hai, Dung Manh Nguyen, Nghi D. Q. Bui"
+  venue: "NAACL 2025 Findings"
+  links:
+    paper: "https://aclanthology.org/2025.findings-naacl.82/"
+    github: "https://github.com/FSoft-AI4Code/RepoExec"
+    website: "https://fsoft-ai4code.github.io/repoexec/"
+
+- title: "AgileCoder: Dynamic Collaborative Agents for Software Development based on Agile Methodology"
+  authors: "Minh Huynh Nguyen, Thang Chau Phan, Phong X. Nguyen, Nghi D. Q. Bui"
+  venue: "FORGE 2025"
+  links:
+    paper: "https://arxiv.org/abs/2406.11912"
+    github: "https://github.com/FSoft-AI4Code/AgileCoder"
+    website: "https://fsoft-ai4code.github.io/agilecoder/"
+
+- title: "A Pair Programming Framework for Code Generation via Multi-Plan Exploration and Feedback-Driven Refinement"
+  authors: "Huan Zhang, Wei Cheng, Yuhan Wu, Wei Hu"
+  venue: "ASE 2024"
+  links:
+    paper: "https://arxiv.org/abs/2409.05001"
+    github: "https://github.com/nju-websoft/PairCoder"
+    website: ""
+
+- title: "CodeTree: Agent‐guided Tree Search for Code Generation with Large Language Models"
+  authors: "Jierui Li, Hung Le, Yingbo Zhou, Caiming Xiong, Silvio Savarese, Doyen Sahoo"
+  venue: "arXiv 2024"
+  links:
+    paper: "https://arxiv.org/abs/2411.04329"
+    github: "https://github.com/SalesforceAIResearch/CodeTree"
+    website: ""
