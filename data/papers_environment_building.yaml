@@ -1,3 +1,11 @@
+- title: "Repo2Run: Automated Building Executable Environment for Code Repository at Scale"
+  authors: "Ruida Hu, Chao Peng, Xinchen Wang, Junjielong Xu, Cuiyun Gao"
+  venue: "NeurIPS 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.13681"
+    github: "https://github.com/bytedance/Repo2Run"
+    website: ""
+
 - title: "EnvBench: A Benchmark for Automated Environment Setup"
   authors: "Aleksandra Eliseeva, Alexander Kovrigin, Ilia Kholkin, Egor Bogomolov, Yaroslav Zharov"
   venue: "ICLR 2025 Workshop"

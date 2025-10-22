@@ -13,3 +13,35 @@
     paper: "https://arxiv.org/abs/2505.03733"
     github: "https://github.com/mnluzimu/WebGen-Bench"
     website: ""
+
+- title: "UXAgent: An LLM Agent-Based Usability Testing Framework for Web Design"
+  authors: "Yuxuan Lu, Bingsheng Yao, Hansu Gu, Jing Huang, Jessie Wang, Yang Li, Jiri Gesi, Qi He, Toby Jia-Jun Li, Dakuo Wang"
+  venue: "CHI EA 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.12561"
+    github: "https://github.com/neuhai/UXAgent"
+    website: ""
+
+- title: "Multi-Agent Collaboration via Evolving Orchestration"
+  authors: "Yufan Dang, Chen Qian, Xueheng Luo, Jingru Fan, Zihao Xie, Ruijie Shi, Weize Chen, Cheng Yang, Xiaoyin Che, Ye Tian, Xuantang Xiong, Lei Han, Zhiyuan Liu, Maosong Sun"
+  venue: "NeurIPS 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.19591"
+    github: "https://github.com/OpenBMB/ChatDev/tree/puppeteer"
+    website: ""
+
+- title: "Scaling Large Language Model-based Multi-Agent Collaboration"
+  authors: "Chen Qian, Zihao Xie, YiFei Wang, Wei Liu, Kunlun Zhu, Hanchen Xia, Yufan Dang, Zhuoyun Du, Weize Chen, Cheng Yang, Zhiyuan Liu, Maosong Sun"
+  venue: "ICLR 2025"
+  links:
+    paper: "https://arxiv.org/abs/2406.07155"
+    github: "https://github.com/OpenBMB/ChatDev/tree/macnet"
+    website: ""
+
+- title: "ChatDev: Communicative Agents for Software Development"
+  authors: "Chen Qian, Wei Liu, Hongzhang Liu, Nuo Chen, Yufan Dang, Jiahao Li, Cheng Yang, Weize Chen, Yusheng Su, Xin Cong, Juyuan Xu, Dahai Li, Zhiyuan Liu, Maosong Sun"
+  venue: "ACL 2024"
+  links:
+    paper: "https://aclanthology.org/2024.acl-long.810/"
+    github: "https://github.com/OpenBMB/ChatDev"
+    website: "https://chatdev.modelbest.cn/"

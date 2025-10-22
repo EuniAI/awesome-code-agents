@@ -46,6 +46,22 @@
     github: "https://github.com/ExpeRepair/ExpeRepair"
     website: ""
 
+- title: "R2E-Gym: Procedural Environments and Hybrid Verifiers for Scaling Open-Weights SWE Agents"
+  authors: "Naman Jain, Jaskirat Singh, Manish Shetty, Liang Zheng, Koushik Sen, Ion Stoica"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2504.07164"
+    github: "https://github.com/R2E-Gym/R2E-Gym"
+    website: "https://r2e-gym.github.io/"
+
+- title: "Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards"
+  authors: "Jeff Da, Clinton Wang, Xiang Deng, Yuntao Ma, Nikhil Barhate, Sean Hendryx"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.11425"
+    github: ""
+    website: ""
+
 - title: "Co-PatcheR: Collaborative Software Patching with Component(s)-specific Small Reasoning Models"
   authors: "Yuheng Tang, Hongwei Li, Kaijie Zhu, Michael Yang, Yangruibo Ding, Wenbo Guo"
   venue: "arXiv 2025"
@@ -158,6 +174,14 @@
     github: "https://github.com/SWE-Gym/SWE-Gym"
     website: ""
 
+- title: "Guided Search Strategies in Non-Serializable Environments with Applications to Software Engineering Agents"
+  authors: "Karina Zainullina, Alexander Golubev, Maria Trofimova, Sergei Polezhaev, Ibragim Badertdinov, Daria Litvintseva, Simon Karasik, Filipp Fisin, Sergei Skvortsov, Maksim Nekrashevich, Anton Shevtsov, Boris Yangel"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.13652"
+    github: ""
+    website: ""
+
 - title: "SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?"
   authors: "Samuel Miserendino, Michele Wang, Tejal Patwardhan, Johannes Heidecke"
   venue: "ICML 2025"
@@ -180,6 +204,14 @@
   links:
     paper: "https://arxiv.org/abs/2411.00622"
     github: "https://github.com/LingmaTongyi/Lingma-SWE-GPT"
+    website: ""
+
+- title: "DARS: Dynamic Action Re-Sampling to Enhance Coding Agent Performance by Adaptive Tree Traversal"
+  authors: "Vaibhav Aggarwal, Ojasv Kamal, Abhinav Japesh, Zhijing Jin, Bernhard Schölkopf"
+  venue: "ACL 2025"
+  links:
+    paper: "https://aclanthology.org/2025.acl-long.973/"
+    github: "https://github.com/vaibhavagg303/DARS-Agent"
     website: ""
 
 - title: "SWE-Fixer: Training Open-Source LLMs for Effective and Efficient GitHub Issue Resolution"

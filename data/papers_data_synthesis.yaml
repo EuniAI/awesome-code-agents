@@ -1,3 +1,11 @@
+- title: "R2E-Gym: Procedural Environments and Hybrid Verifiers for Scaling Open-Weights SWE Agents"
+  authors: "Naman Jain, Jaskirat Singh, Manish Shetty, Liang Zheng, Koushik Sen, Ion Stoica"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2504.07164"
+    github: "https://github.com/R2E-Gym/R2E-Gym"
+    website: "https://r2e-gym.github.io/"
+
 - title: "SWE-Mirror: Scaling Issue-Resolving Datasets by Mirroring Issues Across Repositories"
   authors: "Junhao Wang, Daoguang Zan, Shulin Xin, Siyao Liu, Yurong Wu, Kai Shen"
   venue: "arXiv 2025"

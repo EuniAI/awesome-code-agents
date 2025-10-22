@@ -1,0 +1,15 @@
+- title: "Coding Agents with Multimodal Browsing are Generalist Problem Solvers"
+  authors: "Aditya Bharat Soni, Boxuan Li, Xingyao Wang, Valerie Chen, Graham Neubig"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.03011"
+    github: "https://github.com/adityasoni9998/OpenHands-Versa"
+    website: ""
+
+- title: "CodeV: Issue Resolving with Visual Data"
+  authors: "Linhao Zhang, Daoguang Zan, Quanshun Yang, Zhirong Huang, Dong Chen, Bo Shen, Tianyu Liu, Yongshun Gong, Huang Pengjie, Xudong Lu, Guangtai Liang, Lizhen Cui, Qianxiang Wang"
+  venue: "ACL 2025 Findings"
+  links:
+    paper: "https://aclanthology.org/2025.findings-acl.384/"
+    github: "https://github.com/luolin101/CodeV"
+    website: ""

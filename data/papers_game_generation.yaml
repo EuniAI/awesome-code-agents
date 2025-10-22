@@ -1,0 +1,7 @@
+- title: "Game-RL: Synthesizing Multimodal Verifiable Game Data to Boost VLMs' General Reasoning"
+  authors: "Jingqi Tong, Jixin Tang, Hangcheng Li, Yurong Mou, Ming Zhang, Jun Zhao, Yanbo Wen, Fan Song, Jiahao Zhan, Yuyang Lu, Chaoran Tao, Zhiyuan Guo, Jizhou Yu, Tianhao Cheng, Zhiheng Xi, Changhao Jiang, Zhangyue Yin, Yining Zheng, Weifeng Ge, Guanhua Chen, Tao Gui, Xipeng Qiu, Qi Zhang, Xuanjing Huang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.13886"
+    github: "https://github.com/tongjingqi/Game-RL"
+    website: ""

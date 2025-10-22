@@ -1,3 +1,11 @@
+- title: "ResearchCodeAgent: An LLM Multi-Agent System for Automated Codification of Research Methodologies"
+  authors: "Shubham Gandhi, Dhruv Shah, Manasi Patwardhan, Lovekesh Vig, Gautam Shroff"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2504.20117"
+    github: ""
+    website: ""
+
 - title: "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering"
   authors: "Jun Shern Chan, Neil Chowdhury, Oliver Jaffe, James Aung, Dane Sherburn, Evan Mays, Giulio Starace, Kevin Liu, Leon Maksin, Tejal Patwardhan, Lilian Weng, Aleksander Mądry"
   venue: "ICLR 2025"

@@ -1,9 +1,33 @@
+- title: "EvoAgentX: An Automated Framework for Evolving Agentic Workflows"
+  authors: "Yingxu Wang, Siwei Liu, Jinyuan Fang, Zaiqiao Meng"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.03616"
+    github: "https://github.com/EvoAgentX/EvoAgentX"
+    website: "https://evoagentx.github.io/EvoAgentX/"
+
+- title: "SEW: Self-Evolving Agentic Workflows for Automated Code Generation"
+  authors: "Siwei Liu, Jinyuan Fang, Han Zhou, Yingxu Wang, Zaiqiao Meng"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.18646"
+    github: "https://github.com/EvoAgentX/EvoAgentX"
+    website: "https://evoagentx.github.io/EvoAgentX/"
+
 - title: "HyperAgent: Generalist Software Engineering Agents to Solve Coding Tasks at Scale"
   authors: "Huy Nhat Phan, Tien N. Nguyen, Phong X. Nguyen, Nghi D. Q. Bui"
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2409.16299"
     github: "https://github.com/FSoft-AI4Code/HyperAgent"
+    website: ""
+
+- title: "Verbal Process Supervision Elicits Better Coding Agents"
+  authors: "Hao-Yuan Chen, Cheng-Pong Huang, Jui-Ming Yao"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.18494"
+    github: ""
     website: ""
 
 - title: "On the Impacts of Contexts on Repository-Level Code Generation"
@@ -14,6 +38,22 @@
     github: "https://github.com/FSoft-AI4Code/RepoExec"
     website: "https://fsoft-ai4code.github.io/repoexec/"
 
+- title: "CodeSIM: Multi-Agent Code Generation and Problem Solving through Simulation-Driven Planning and Debugging"
+  authors: "Md. Ashraful Islam, Mohammed Eunus Ali, Md Rizwan Parvez"
+  venue: "NAACL 2025 Findings"
+  links:
+    paper: "https://aclanthology.org/2025.findings-naacl.82/"
+    github: "https://github.com/kagnlp/CodeGenerator"
+    website: "https://kagnlp.github.io/codesim.github.io/"
+
+- title: "ProjectEval: A Benchmark for Programming Agents Automated Evaluation on Project-Level Code Generation"
+  authors: "Kaiyuan Liu, Youcheng Pan, Yang Xiang, Daojing He, Jing Li, Yexing Du, Tianrun Gao"
+  venue: "ACL 2025 Findings"
+  links:
+    paper: "https://aclanthology.org/2025.findings-acl.1036/"
+    github: "https://github.com/RyanLoil/ProjectEval/"
+    website: ""
+
 - title: "AgileCoder: Dynamic Collaborative Agents for Software Development based on Agile Methodology"
   authors: "Minh Huynh Nguyen, Thang Chau Phan, Phong X. Nguyen, Nghi D. Q. Bui"
   venue: "FORGE 2025"
@@ -21,6 +61,46 @@
     paper: "https://arxiv.org/abs/2406.11912"
     github: "https://github.com/FSoft-AI4Code/AgileCoder"
     website: "https://fsoft-ai4code.github.io/agilecoder/"
+
+- title: "CodeVisionary: An Agent-based Framework for Evaluating Large Language Models in Code Generation"
+  authors: "Xinchen Wang, Pengfei Gao, Chao Peng, Ruida Hu, Cuiyun Gao"
+  venue: "ASE 2025"
+  links:
+    paper: "https://arxiv.org/abs/2504.13472"
+    github: "https://github.com/Eshe0922/CodeVisionary"
+    website: ""
+
+- title: "Multi-Agent Collaboration via Evolving Orchestration"
+  authors: "Yufan Dang, Chen Qian, Xueheng Luo, Jingru Fan, Zihao Xie, Ruijie Shi, Weize Chen, Cheng Yang, Xiaoyin Che, Ye Tian, Xuantang Xiong, Lei Han, Zhiyuan Liu, Maosong Sun"
+  venue: "NeurIPS 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.19591"
+    github: "https://github.com/OpenBMB/ChatDev/tree/puppeteer"
+    website: ""
+
+- title: "Scaling Large Language Model-based Multi-Agent Collaboration"
+  authors: "Chen Qian, Zihao Xie, YiFei Wang, Wei Liu, Kunlun Zhu, Hanchen Xia, Yufan Dang, Zhuoyun Du, Weize Chen, Cheng Yang, Zhiyuan Liu, Maosong Sun"
+  venue: "ICLR 2025"
+  links:
+    paper: "https://arxiv.org/abs/2406.07155"
+    github: "https://github.com/OpenBMB/ChatDev/tree/macnet"
+    website: ""
+
+- title: "ChatDev: Communicative Agents for Software Development"
+  authors: "Chen Qian, Wei Liu, Hongzhang Liu, Nuo Chen, Yufan Dang, Jiahao Li, Cheng Yang, Weize Chen, Yusheng Su, Xin Cong, Juyuan Xu, Dahai Li, Zhiyuan Liu, Maosong Sun"
+  venue: "ACL 2024"
+  links:
+    paper: "https://aclanthology.org/2024.acl-long.810/"
+    github: "https://github.com/OpenBMB/ChatDev"
+    website: "https://chatdev.modelbest.cn/"
+
+- title: "MapCoder: Multi-Agent Code Generation for Competitive Problem Solving"
+  authors: "Md. Ashraful Islam, Mohammed Eunus Ali, Md Rizwan Parvez"
+  venue: "ACL 2024"
+  links:
+    paper: "https://aclanthology.org/2024.acl-long.269/"
+    github: "https://github.com/Md-Ashraful-Pramanik/MapCoder"
+    website: "https://md-ashraful-pramanik.github.io/mapcoder.github.io/"
 
 - title: "A Pair Programming Framework for Code Generation via Multi-Plan Exploration and Feedback-Driven Refinement"
   authors: "Huan Zhang, Wei Cheng, Yuhan Wu, Wei Hu"

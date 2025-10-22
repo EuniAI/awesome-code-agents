@@ -1,16 +1,67 @@
 <div align="center">
-  <h1>🤖 Awesome Code Agents</h1>
+  <img src="./docs/static/images/icon.jpg" alt="Prometheus Logo" width="160">
+  <h1 style="border-bottom: none;">
+    <b><a href="https://euni.ai/" target="_blank">🤖 Awesome Code Agents</a></b><br>
+    Towards AI-Powered Software 3.0
+  </h1>
+
+  <p align="center">
+    <strong>A curated list of <b>products, benchmarks, and research papers</b> on <b>autonomous code agents</b>.</strong><br>
+    <em>Beyond coding — they're redefining how software changes the world.</em>
+  </p>
+
+  <!-- 🌍 Project Links -->
+  <p align="center">
+    <a href="https://euni.ai/"><b>Website</b></a> •
+    <a href="https://x.com/Euni_AI"><b>X/Twitter</b></a> •
+    <a href="https://www.linkedin.com/company/euni-ai/"><b>LinkedIn</b></a> •
+    <a href="https://discord.gg/jDG4wqkKZj"><b>Discord</b></a> •
+    <a href="https://www.reddit.com/r/EuniAI"><b>Reddit</b></a> •
+    <a href="https://github.com/EuniAI/awesome-code-agents"><b>GitHub</b></a>
+  </p>
 
   <!-- Badges -->
-  <a href="https://awesome.re">
-    <img src="https://awesome.re/badge.svg" alt="Awesome">
-  </a>
-  <a href="https://img.shields.io/badge/PRs-Welcome-red">
-    <img src="https://img.shields.io/badge/PRs-Welcome-red" alt="PRs Welcome">
-  </a>
-  <a href="https://img.shields.io/github/last-commit/EuniAI/awesome-code-agents?color=green">
-    <img src="https://img.shields.io/github/last-commit/EuniAI/awesome-code-agents?color=green" alt="Last Commit">
-  </a>
+  <p align="center">
+    <a href="https://github.com/EuniAI/awesome-code-agents/stargazers">
+      <img src="https://img.shields.io/github/stars/EuniAI/awesome-code-agents?style=for-the-badge&color=yellow" alt="Stars">
+    </a>
+    <a href="https://github.com/EuniAI/awesome-code-agents/forks">
+      <img src="https://img.shields.io/github/forks/EuniAI/awesome-code-agents?style=for-the-badge&color=blue" alt="Forks">
+    </a>
+    <a href="https://opensource.org/licenses/Apache-2.0">
+      <img src="https://img.shields.io/badge/license-Apache--2.0-green?style=for-the-badge" alt="License: Apache 2.0">
+    </a>
+    <a href="https://www.arxiv.org/abs/2507.19942">
+      <img src="https://img.shields.io/badge/Paper-arXiv-red?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv Paper">
+    </a>
+    <a href="https://github.com/EuniAI/awesome-code-agents/graphs/contributors">
+      <img src="https://img.shields.io/github/contributors/EuniAI/awesome-code-agents?style=for-the-badge&color=orange" alt="Contributors">
+    </a>
+  </p>
+
+  <p align="center">
+    <a href="https://awesome.re">
+      <img src="https://awesome.re/badge.svg" alt="Awesome">
+    </a>
+    <a href="https://github.com/EuniAI/awesome-code-agents" target="_blank">
+      <img src="https://img.shields.io/github/commit-activity/m/EuniAI/awesome-code-agents?label=Commits&color=brightgreen&style=flat" alt="Commit Activity">
+    </a>
+    <a href="https://github.com/EuniAI/awesome-code-agents/forks" target="_blank">
+      <img src="https://img.shields.io/github/forks/EuniAI/awesome-code-agents.svg?style=flat&color=blue&label=Forks" alt="Forks">
+    </a>
+    <a href="https://github.com/EuniAI/awesome-code-agents/issues" target="_blank">
+      <img alt="Issues Closed" src="https://img.shields.io/github/issues-search?query=repo%3AEuniAI%2Fawesome-code-agents%20is%3Aclosed&label=Issues%20Closed&labelColor=%237d89b0&color=%235d6b98&style=flat">
+    </a>
+    <a href="https://github.com/EuniAI/awesome-code-agents/discussions" target="_blank">
+      <img alt="Discussion Posts" src="https://img.shields.io/github/discussions/EuniAI/awesome-code-agents?label=Discussions&labelColor=%239b8afb&color=%237a5af8&style=flat">
+    </a>
+    <a href="https://img.shields.io/badge/PRs-Welcome-red">
+      <img src="https://img.shields.io/badge/PRs-Welcome-red" alt="PRs Welcome">
+    </a>
+    <a href="https://img.shields.io/github/last-commit/EuniAI/awesome-code-agents?color=green">
+      <img src="https://img.shields.io/github/last-commit/EuniAI/awesome-code-agents?color=green" alt="Last Commit">
+    </a>
+  </p>
 </div>
 
 <!-- Optional teaser -->
@@ -19,9 +70,9 @@
   <img src="assets/teaser.png" width="520px"/>
 </p>
 -->
-<p align="center">
+<!-- <p align="center">
   A curated list of <b>products, benchmarks, and research papers</b> on <b>Code Agents</b>.
-</p>
+</p> -->
 
 ---
 
@@ -201,6 +252,14 @@
   _Linghao Zhang, Shilin He, Chaoyun Zhang, Yu Kang, Bowen Li, Chengxing Xie, Junhao Wang, Maoquan Wang, Yufan Huang, Shengyu Fu, Elsie Nallipogu, Qingwei Lin, Yingnong Dang, Saravan Rajmohan, Dongmei Zhang._ NeurIPS 2025 Datasets & Benchmarks Track.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.23419) [![GitHub Stars](https://img.shields.io/github/stars/microsoft/SWE-bench-Live?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/microsoft/SWE-bench-Live) [![Website](https://img.shields.io/website?url=https://swe-bench-live.github.io/&up_message=SWE-BENCH-LIVE&up_color=blue&down_message=SWE-BENCH-LIVE&down_color=blue&style=for-the-badge)](https://swe-bench-live.github.io/)
 
+- **IR3D-Bench: Evaluating Vision-Language Model Scene Understanding as Agentic Inverse Rendering.**  
+  _Parker Liu, Chenxin Li, Zhengxin Li, Yipeng Wu, Wuyang Li, Zhiqin Yang, Zhenyuan Zhang, Yunlong Lin, Sirui Han, Brandon Y. Feng._ NeurIPS 2025 Datasets and Benchmarks Track.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.23329) [![GitHub Stars](https://img.shields.io/github/stars/LiuHengyu321/IR3D-Bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/LiuHengyu321/IR3D-Bench) [![Website](https://img.shields.io/website?url=https://ir3d-bench.github.io/&up_message=IR3D-BENCH&up_color=blue&down_message=IR3D-BENCH&down_color=blue&style=for-the-badge)](https://ir3d-bench.github.io/)
+
+- **SyncMind: Measuring Agent Out-of-Sync Recovery in Collaborative Software Engineering.**  
+  _Xuehang Guo, Xingyao Wang, Yangyi Chen, Sha Li, Chi Han, Manling Li, Heng Ji._ ICML 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.06994) [![GitHub Stars](https://img.shields.io/github/stars/xhguo7/SyncMind?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/xhguo7/SyncMind) [![Website](https://img.shields.io/website?url=https://xhguo7.github.io/SyncMind/&up_message=SYNCMIND&up_color=blue&down_message=SYNCMIND&down_color=blue&style=for-the-badge)](https://xhguo7.github.io/SyncMind/)
+
 - **SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?**  
   _Samuel Miserendino, Michele Wang, Tejal Patwardhan, Johannes Heidecke._ ICML 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.12115) [![GitHub Stars](https://img.shields.io/github/stars/openai/frontier-evals?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/frontier-evals/tree/main/project/swelancer) [![Website](https://img.shields.io/website?url=https://openai.com/index/swe-lancer/&up_message=SWE-LANCER&up_color=blue&down_message=SWE-LANCER&down_color=blue&style=for-the-badge)](https://openai.com/index/swe-lancer/)
@@ -247,9 +306,17 @@
   _Jiale Guo, Suizhi Huang, Mei Li, Dong Huang, Xingsheng Chen, Regina Zhang, Zhijiang Guo, Han Yu, Siu-Ming Yiu, Christian Jensen, Pietro Lio, Kwok-Yan Lam._ arXiv 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.09721) [![GitHub Stars](https://img.shields.io/github/stars/lisaGuojl/LLM-Agent-SE-Survey?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/lisaGuojl/LLM-Agent-SE-Survey)
 
+- **A Survey on Code Generation with LLM-based Agents.**  
+  _Yihong Dong, Xue Jiang, Jiaru Qian, Tian Wang, Kechi Zhang, Zhi Jin, Ge Li._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.00083) [![GitHub Stars](https://img.shields.io/github/stars/JiaruQian/awesome-llm-based-agent4code?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/JiaruQian/awesome-llm-based-agent4code)
+
 - **How Does LLM Reasoning Work for Code? A Survey and a Call to Action.**  
   _Ira Ceka, Saurabh Pujar, Irene Manotas, Gail Kaiser, Baishakhi Ray, Shyam Ramji._ arXiv 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.13932)
+
+- **Vibe Coding vs. Agentic Coding: Fundamentals and Practical Implications of Agentic AI.**  
+  _Ranjan Sapkota, Konstantinos I. Roumeliotis, Manoj Karkee._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.19443)
 
 - **The Rise of AI Teammates in Software Engineering (SE) 3.0: How Autonomous Coding Agents Are Reshaping Software Engineering.**  
   _Hao Li, Haoxiang Zhang, Ahmed E. Hassan._ arXiv 2025.  
@@ -270,7 +337,7 @@
 
 <!-- START PAPERS:foundation_models -->
 - **CWM: An Open-Weights LLM for Research on Code Generation with World Models.**  
-  _Jade Copet, Zhilin Li, Zhou Yao, Xianglong Li, Zeng Liu, Zhaokuan Lu, Shanlin Xu, Seungnam Kim, Guangyao Wang, …._ arXiv 2025.  
+  _FAIR CodeGen team, Jade Copet, Quentin Carbonneaux, Gal Cohen, Jonas Gehring, Jacob Kahn, Jannik Kossen, Felix Kreuk, Emily McMilin, Michel Meyer, Yuxiang Wei, David Zhang, Kunhao Zheng, Jordi Armengol-Estapé, Pedram Bashiri, Maximilian Beck, Pierre Chambon, Abhishek Charnalia, Chris Cummins, Juliette Decugis, Zacharias V. Fisches, François Fleuret, Fabian Gloeckle, Alex Gu, Michael Hassid, Daniel Haziza, Badr Youbi Idrissi, Christian Keller, Rahul Kindi, Hugh Leather, Gallil Maimon, Aram Markosyan, Francisco Massa, Pierre-Emmanuel Mazaré, Vegard Mella, Naila Murray, Keyur Muzumdar, Peter O'Hearn, Matteo Pagliardini, Dmitrii Pedchenko, Tal Remez, Volker Seeker, Marco Selvi, Oren Sultan, Sida Wang, Luca Wehrstedt, Ori Yoran, Lingming Zhang, Taco Cohen, Yossi Adi, Gabriel Synnaeve._ arXiv 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.02387) [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/cwm?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/cwm)
 
 - **Devstral: Fine-tuning Language Models for Coding Agent Applications.**  
@@ -307,6 +374,14 @@
 - **EXPEREPAIR: Dual-Memory Enhanced LLM-based Repository-Level Program Repair.**  
   _Fangwen Mu, Junjie Wang, Lin Shi, Song Wang, Shoubin Li, Qing Wang._ arXiv 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.10484) [![GitHub Stars](https://img.shields.io/github/stars/ExpeRepair/ExpeRepair?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ExpeRepair/ExpeRepair)
+
+- **R2E-Gym: Procedural Environments and Hybrid Verifiers for Scaling Open-Weights SWE Agents.**  
+  _Naman Jain, Jaskirat Singh, Manish Shetty, Liang Zheng, Koushik Sen, Ion Stoica._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.07164) [![GitHub Stars](https://img.shields.io/github/stars/R2E-Gym/R2E-Gym?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/R2E-Gym/R2E-Gym) [![Website](https://img.shields.io/website?url=https://r2e-gym.github.io/&up_message=R2E-GYM&up_color=blue&down_message=R2E-GYM&down_color=blue&style=for-the-badge)](https://r2e-gym.github.io/)
+
+- **Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards.**  
+  _Jeff Da, Clinton Wang, Xiang Deng, Yuntao Ma, Nikhil Barhate, Sean Hendryx._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.11425)
 
 - **Co-PatcheR: Collaborative Software Patching with Component(s)-specific Small Reasoning Models.**  
   _Yuheng Tang, Hongwei Li, Kaijie Zhu, Michael Yang, Yangruibo Ding, Wenbo Guo._ arXiv 2025.  
@@ -364,6 +439,10 @@
   _Jiayi Pan, Xingyao Wang, Graham Neubig, Navdeep Jaitly, Heng Ji, Alane Suhr, Yizhe Zhang._ ICML 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.21139) [![GitHub Stars](https://img.shields.io/github/stars/SWE-Gym/SWE-Gym?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SWE-Gym/SWE-Gym)
 
+- **Guided Search Strategies in Non-Serializable Environments with Applications to Software Engineering Agents.**  
+  _Karina Zainullina, Alexander Golubev, Maria Trofimova, Sergei Polezhaev, Ibragim Badertdinov, Daria Litvintseva, Simon Karasik, Filipp Fisin, Sergei Skvortsov, Maksim Nekrashevich, Anton Shevtsov, Boris Yangel._ ICML 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.13652)
+
 - **SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?**  
   _Samuel Miserendino, Michele Wang, Tejal Patwardhan, Johannes Heidecke._ ICML 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.12115) [![GitHub Stars](https://img.shields.io/github/stars/openai/frontier-evals?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/frontier-evals/tree/main/project/swelancer) [![Website](https://img.shields.io/website?url=https://openai.com/index/swe-lancer/&up_message=SWE-LANCER&up_color=blue&down_message=SWE-LANCER&down_color=blue&style=for-the-badge)](https://openai.com/index/swe-lancer/)
@@ -375,6 +454,10 @@
 - **SWE-GPT: A Process-Centric Language Model for Automated Software Improvement.**  
   _Yingwei Ma, Rongyu Cao, Yongchang Cao, Yue Zhang, Jue Chen, Yibo Liu, Yuchen Liu, Binhua Li, Fei Huang, Yongbin Li._ ISSTA 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.00622) [![GitHub Stars](https://img.shields.io/github/stars/LingmaTongyi/Lingma-SWE-GPT?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/LingmaTongyi/Lingma-SWE-GPT)
+
+- **DARS: Dynamic Action Re-Sampling to Enhance Coding Agent Performance by Adaptive Tree Traversal.**  
+  _Vaibhav Aggarwal, Ojasv Kamal, Abhinav Japesh, Zhijing Jin, Bernhard Schölkopf._ ACL 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2025.acl-long.973/) [![GitHub Stars](https://img.shields.io/github/stars/vaibhavagg303/DARS-Agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/vaibhavagg303/DARS-Agent)
 
 - **SWE-Fixer: Training Open-Source LLMs for Effective and Efficient GitHub Issue Resolution.**  
   _Chengxing Xie, Bowen Li, Chang Gao, He Du, Wai Lam, Difan Zou, Kai Chen._ ACL 2025 Findings.  
@@ -428,6 +511,11 @@
 - Trae Agent: An LLM-based Agent for Software Engineering with Test-time Scaling
 - SoRFT: Issue Resolving with Subtask-oriented Reinforced Fine-Tuning
 - Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning
+- Training Software Engineering Agents and Verifiers with SWE-Gym
+- SEAlign: Alignment Training for Software Engineering Agent
+- Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards
+- SWE-Search: Enhancing Software Agents with Monte Carlo Tree Search and Iterative Refinement
+- Thinking Longer, Not Larger: Enhancing Software Engineering Agents via Scaling Test-Time Compute
 
 ---
 
@@ -446,17 +534,57 @@
 > AI agents that autonomously generate, scaffold, and synthesize code at the repository level, leveraging external tools and APIs to create new modules, build complete projects, and construct large-scale codebases.
 
 <!-- START PAPERS:code_generation -->
+- **EvoAgentX: An Automated Framework for Evolving Agentic Workflows.**  
+  _Yingxu Wang, Siwei Liu, Jinyuan Fang, Zaiqiao Meng._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.03616) [![GitHub Stars](https://img.shields.io/github/stars/EvoAgentX/EvoAgentX?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/EvoAgentX/EvoAgentX) [![Website](https://img.shields.io/website?url=https://evoagentx.github.io/EvoAgentX/&up_message=EVOAGENTX&up_color=blue&down_message=EVOAGENTX&down_color=blue&style=for-the-badge)](https://evoagentx.github.io/EvoAgentX/)
+
+- **SEW: Self-Evolving Agentic Workflows for Automated Code Generation.**  
+  _Siwei Liu, Jinyuan Fang, Han Zhou, Yingxu Wang, Zaiqiao Meng._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.18646) [![GitHub Stars](https://img.shields.io/github/stars/EvoAgentX/EvoAgentX?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/EvoAgentX/EvoAgentX) [![Website](https://img.shields.io/website?url=https://evoagentx.github.io/EvoAgentX/&up_message=EVOAGENTX&up_color=blue&down_message=EVOAGENTX&down_color=blue&style=for-the-badge)](https://evoagentx.github.io/EvoAgentX/)
+
 - **HyperAgent: Generalist Software Engineering Agents to Solve Coding Tasks at Scale.**  
   _Huy Nhat Phan, Tien N. Nguyen, Phong X. Nguyen, Nghi D. Q. Bui._ arXiv 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2409.16299) [![GitHub Stars](https://img.shields.io/github/stars/FSoft-AI4Code/HyperAgent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/FSoft-AI4Code/HyperAgent)
+
+- **Verbal Process Supervision Elicits Better Coding Agents.**  
+  _Hao-Yuan Chen, Cheng-Pong Huang, Jui-Ming Yao._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.18494)
 
 - **On the Impacts of Contexts on Repository-Level Code Generation.**  
   _Nam Le Hai, Dung Manh Nguyen, Nghi D. Q. Bui._ NAACL 2025 Findings.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2025.findings-naacl.82/) [![GitHub Stars](https://img.shields.io/github/stars/FSoft-AI4Code/RepoExec?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/FSoft-AI4Code/RepoExec) [![Website](https://img.shields.io/website?url=https://fsoft-ai4code.github.io/repoexec/&up_message=REPOEXEC&up_color=blue&down_message=REPOEXEC&down_color=blue&style=for-the-badge)](https://fsoft-ai4code.github.io/repoexec/)
 
+- **CodeSIM: Multi-Agent Code Generation and Problem Solving through Simulation-Driven Planning and Debugging.**  
+  _Md. Ashraful Islam, Mohammed Eunus Ali, Md Rizwan Parvez._ NAACL 2025 Findings.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2025.findings-naacl.82/) [![GitHub Stars](https://img.shields.io/github/stars/kagnlp/CodeGenerator?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/kagnlp/CodeGenerator) [![Website](https://img.shields.io/website?url=https://kagnlp.github.io/codesim.github.io/&up_message=CODESIM.GITHUB.IO&up_color=blue&down_message=CODESIM.GITHUB.IO&down_color=blue&style=for-the-badge)](https://kagnlp.github.io/codesim.github.io/)
+
+- **ProjectEval: A Benchmark for Programming Agents Automated Evaluation on Project-Level Code Generation.**  
+  _Kaiyuan Liu, Youcheng Pan, Yang Xiang, Daojing He, Jing Li, Yexing Du, Tianrun Gao._ ACL 2025 Findings.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2025.findings-acl.1036/) [![GitHub Stars](https://img.shields.io/github/stars/RyanLoil/ProjectEval?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/RyanLoil/ProjectEval/)
+
 - **AgileCoder: Dynamic Collaborative Agents for Software Development based on Agile Methodology.**  
   _Minh Huynh Nguyen, Thang Chau Phan, Phong X. Nguyen, Nghi D. Q. Bui._ FORGE 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.11912) [![GitHub Stars](https://img.shields.io/github/stars/FSoft-AI4Code/AgileCoder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/FSoft-AI4Code/AgileCoder) [![Website](https://img.shields.io/website?url=https://fsoft-ai4code.github.io/agilecoder/&up_message=AGILECODER&up_color=blue&down_message=AGILECODER&down_color=blue&style=for-the-badge)](https://fsoft-ai4code.github.io/agilecoder/)
+
+- **CodeVisionary: An Agent-based Framework for Evaluating Large Language Models in Code Generation.**  
+  _Xinchen Wang, Pengfei Gao, Chao Peng, Ruida Hu, Cuiyun Gao._ ASE 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.13472) [![GitHub Stars](https://img.shields.io/github/stars/Eshe0922/CodeVisionary?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Eshe0922/CodeVisionary)
+
+- **Multi-Agent Collaboration via Evolving Orchestration.**  
+  _Yufan Dang, Chen Qian, Xueheng Luo, Jingru Fan, Zihao Xie, Ruijie Shi, Weize Chen, Cheng Yang, Xiaoyin Che, Ye Tian, Xuantang Xiong, Lei Han, Zhiyuan Liu, Maosong Sun._ NeurIPS 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.19591) [![GitHub Stars](https://img.shields.io/github/stars/OpenBMB/ChatDev?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenBMB/ChatDev/tree/puppeteer)
+
+- **Scaling Large Language Model-based Multi-Agent Collaboration.**  
+  _Chen Qian, Zihao Xie, YiFei Wang, Wei Liu, Kunlun Zhu, Hanchen Xia, Yufan Dang, Zhuoyun Du, Weize Chen, Cheng Yang, Zhiyuan Liu, Maosong Sun._ ICLR 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.07155) [![GitHub Stars](https://img.shields.io/github/stars/OpenBMB/ChatDev?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenBMB/ChatDev/tree/macnet)
+
+- **ChatDev: Communicative Agents for Software Development.**  
+  _Chen Qian, Wei Liu, Hongzhang Liu, Nuo Chen, Yufan Dang, Jiahao Li, Cheng Yang, Weize Chen, Yusheng Su, Xin Cong, Juyuan Xu, Dahai Li, Zhiyuan Liu, Maosong Sun._ ACL 2024.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2024.acl-long.810/) [![GitHub Stars](https://img.shields.io/github/stars/OpenBMB/ChatDev?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenBMB/ChatDev) [![Website](https://img.shields.io/website?url=https://chatdev.modelbest.cn/&up_message=CHATDEV.MODELBEST.CN&up_color=blue&down_message=CHATDEV.MODELBEST.CN&down_color=blue&style=for-the-badge)](https://chatdev.modelbest.cn/)
+
+- **MapCoder: Multi-Agent Code Generation for Competitive Problem Solving.**  
+  _Md. Ashraful Islam, Mohammed Eunus Ali, Md Rizwan Parvez._ ACL 2024.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2024.acl-long.269/) [![GitHub Stars](https://img.shields.io/github/stars/Md-Ashraful-Pramanik/MapCoder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Md-Ashraful-Pramanik/MapCoder) [![Website](https://img.shields.io/website?url=https://md-ashraful-pramanik.github.io/mapcoder.github.io/&up_message=MAPCODER.GITHUB.IO&up_color=blue&down_message=MAPCODER.GITHUB.IO&down_color=blue&style=for-the-badge)](https://md-ashraful-pramanik.github.io/mapcoder.github.io/)
 
 - **A Pair Programming Framework for Code Generation via Multi-Plan Exploration and Feedback-Driven Refinement.**  
   _Huan Zhang, Wei Cheng, Yuhan Wu, Wei Hu._ ASE 2024.  
@@ -473,6 +601,10 @@
 > Papers describing new environments, IDE sandboxes, benchmarks, or agent playgrounds.
 
 <!-- START PAPERS:environment_building -->
+- **Repo2Run: Automated Building Executable Environment for Code Repository at Scale.**  
+  _Ruida Hu, Chao Peng, Xinchen Wang, Junjielong Xu, Cuiyun Gao._ NeurIPS 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.13681) [![GitHub Stars](https://img.shields.io/github/stars/bytedance/Repo2Run?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/bytedance/Repo2Run)
+
 - **EnvBench: A Benchmark for Automated Environment Setup.**  
   _Aleksandra Eliseeva, Alexander Kovrigin, Ilia Kholkin, Egor Bogomolov, Yaroslav Zharov._ ICLR 2025 Workshop.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.14443) [![GitHub Stars](https://img.shields.io/github/stars/JetBrains-Research/EnvBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/JetBrains-Research/EnvBench) [![Website](https://img.shields.io/website?url=https://huggingface.co/datasets/JetBrains-Research/EnvBench&up_message=ENVBENCH&up_color=blue&down_message=ENVBENCH&down_color=blue&style=for-the-badge)](https://huggingface.co/datasets/JetBrains-Research/EnvBench)
@@ -510,6 +642,10 @@
 - **Improving Code Localization with Repository Memory.**  
   _Boshi Wang, Weijian Xu, Yunsheng Li, Mei Gao, Yujia Xie, Huan Sun, Dongdong Chen._ arXiv 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.01003)
+
+- **LocAgent: Graph-Guided LLM Agents for Code Localization.**  
+  _Zhaoling Chen, Robert Tang, Gangda Deng, Fang Wu, Jialong Wu, Zhiwei Jiang, Viktor Prasanna, Arman Cohan, Xingyao Wang._ ACL 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2025.acl-long.426/) [![GitHub Stars](https://img.shields.io/github/stars/gersteinlab/LocAgent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/gersteinlab/LocAgent)
 
 - **Issue Localization via LLM-Driven Iterative Code Graph Searching.**  
   _Zhonghao Jiang, Xiaoxue Ren, Meng Yan, Wei Jiang, Yong Li, Zhongxin Liu._ ASE 2025.  
@@ -568,14 +704,6 @@
 
 ---
 
-### 🌐 Website Generation
-> Code agents that generate or maintain websites/frontends.
-
-- WebGen-Bench: Evaluating LLMs on Generating Interactive and Functional Websites from Scratch
-- ScreenCoder: Advancing Visual-to-Code Generation for Front-End Automation via Modular Multimodal Agents
-
----
-
 ### 🧪 Agentic Fuzzing
 > Autonomous agents for automated software testing through intelligent fuzzing techniques.
 
@@ -591,6 +719,10 @@
 > Autonomous agents across end-to-end ML workflows.
 
 <!-- START PAPERS:machine_learning_engineering -->
+- **ResearchCodeAgent: An LLM Multi-Agent System for Automated Codification of Research Methodologies.**  
+  _Shubham Gandhi, Dhruv Shah, Manasi Patwardhan, Lovekesh Vig, Gautam Shroff._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.20117)
+
 - **MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering.**  
   _Jun Shern Chan, Neil Chowdhury, Oliver Jaffe, James Aung, Dane Sherburn, Evan Mays, Giulio Starace, Kevin Liu, Leon Maksin, Tejal Patwardhan, Lilian Weng, Aleksander Mądry._ ICLR 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.07095) [![GitHub Stars](https://img.shields.io/github/stars/openai/mle-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/mle-bench) [![Website](https://img.shields.io/website?url=https://openai.com/index/mle-bench/&up_message=MLE-BENCH&up_color=blue&down_message=MLE-BENCH&down_color=blue&style=for-the-badge)](https://openai.com/index/mle-bench/)
@@ -613,7 +745,21 @@
 > Studies on agentic vulnerability detection, patching, and secure coding.
 
 <!-- START PAPERS:software_security_engineering -->
+- **SEC-bench: Automated Benchmarking of LLM Agents on Real-World Software Security Tasks.**  
+  _Hwiwon Lee, Ziqi Zhang, Hanxiao Lu, Lingming Zhang._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.11791) [![GitHub Stars](https://img.shields.io/github/stars/SEC-bench/SEC-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SEC-bench/SEC-bench) [![Website](https://img.shields.io/website?url=https://sec-bench.github.io/&up_message=SEC-BENCH&up_color=blue&down_message=SEC-BENCH&down_color=blue&style=for-the-badge)](https://sec-bench.github.io/)
 
+- **SecureAgentBench: Benchmarking Secure Code Generation under Realistic Vulnerability Scenarios.**  
+  _Junkai Chen, Huihui Huang, Yunbo Lyu, Junwen An, Jieke Shi, Chengran Yang, Ting Zhang, Haoye Tian, Yikun Li, Zhenhao Li, Xin Zhou, Xing Hu, David Lo._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.22097) [![GitHub Stars](https://img.shields.io/github/stars/iCSawyer/SecureAgentBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/iCSawyer/SecureAgentBench)
+
+- **CVE-Bench: A Benchmark for AI Agents’ Ability to Exploit Real-World Web Application Vulnerabilities.**  
+  _Yuxuan Zhu, Antony Kellermann, Dylan Bowman, Philip Li, Akul Gupta, Adarsh Danda, Richard Fang, Conner Jensen, Eric Ihli, Jason Benn, Jet Geronimo, Avi Dhir, Sudhit Rao, Kaicheng Yu, Twm Stone, Daniel Kang._ ICML 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.17332) [![GitHub Stars](https://img.shields.io/github/stars/uiuc-kang-lab/cve-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/uiuc-kang-lab/cve-bench)
+
+- **CVE-Bench: Benchmarking LLM-based Software Engineering Agent’s Ability to Repair Real-World CVE Vulnerabilities.**  
+  _Peiran Wang, Xiaogeng Liu, Chaowei Xiao._ NAACL 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2025.naacl-long.212/)
 <!-- END PAPERS:software_security_engineering -->
 
 ---
@@ -625,6 +771,10 @@
 - **SWE-SQL: Illuminating LLM Pathways to Solve User SQL Issues in Real-World Applications.**  
   _Jinyang Li, Xiaolong Li, Ge Qu, Per Jacobsson, Bowen Qin, Binyuan Hui, Shuzheng Si, Nan Huo, Xiaohan Xu, Yue Zhang, Ziwei Tang, Yuanshuai Li, Florensia Widjaja, Xintong Zhu, Feige Zhou, Yongfeng Huang, Yannis Papakonstantinou, Fatma Ozcan, Chenhao Ma, Reynold Cheng._ arXiv 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.18951) [![GitHub Stars](https://img.shields.io/github/stars/bird-bench/BIRD-CRITIC-1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/bird-bench/BIRD-CRITIC-1) [![Website](https://img.shields.io/website?url=https://bird-critic.github.io/&up_message=BIRD-CRITIC&up_color=blue&down_message=BIRD-CRITIC&down_color=blue&style=for-the-badge)](https://bird-critic.github.io/)
+
+- **GateLens: A Reasoning-Enhanced LLM Agent for Automotive Software Release Analytics.**  
+  _Arsham Gholamzadeh Khoee, Shuai Wang, Yinan Yu, Robert Feldt, Dhasarathy Parthasarathy._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.21735)
 <!-- END PAPERS:sql_engineering -->
 
 ---
@@ -634,25 +784,19 @@
 
 ---
 
-### 🎓 Post-Training
-> Instruction tuning, alignment, reinforcement learning for SWE agents.
-
-- Training Software Engineering Agents and Verifiers with SWE-Gym
-- SEAlign: Alignment Training for Software Engineering Agent
-- Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards
-
----
-
-### ⚖ Test-time Scaling
-> Chain-of-thought, self-reflection, scaling strategies during inference.  
-
-- SWE-Search: Enhancing Software Agents with Monte Carlo Tree Search and Iterative Refinement
-- Thinking Longer, Not Larger: Enhancing Software Engineering Agents via Scaling Test-Time Compute
-
----
-
-### 🖼 Multimodal
+### 🖼 Multimodal Coding
 > Agents that leverage images/screenshots/GUI for coding tasks.
+
+<!-- START PAPERS:multimodal_coding -->
+- **Coding Agents with Multimodal Browsing are Generalist Problem Solvers.**  
+  _Aditya Bharat Soni, Boxuan Li, Xingyao Wang, Valerie Chen, Graham Neubig._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.03011) [![GitHub Stars](https://img.shields.io/github/stars/adityasoni9998/OpenHands-Versa?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/adityasoni9998/OpenHands-Versa)
+
+- **CodeV: Issue Resolving with Visual Data.**  
+  _Linhao Zhang, Daoguang Zan, Quanshun Yang, Zhirong Huang, Dong Chen, Bo Shen, Tianyu Liu, Yongshun Gong, Huang Pengjie, Xudong Lu, Guangtai Liang, Lizhen Cui, Qianxiang Wang._ ACL 2025 Findings.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2025.findings-acl.384/) [![GitHub Stars](https://img.shields.io/github/stars/luolin101/CodeV?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/luolin101/CodeV)
+<!-- END PAPERS:multimodal_coding -->
+
 
 - Seeing is Fixing: Cross-Modal Reasoning with Multimodal LLMs for Visual Software Issue Fixing
 
@@ -661,10 +805,172 @@
 ### 🧬 Data Synthesis
 > Synthetic data generation for code tasks, self-play, augmentation.
 
+<!-- START PAPERS:data_synthesis -->
+- **R2E-Gym: Procedural Environments and Hybrid Verifiers for Scaling Open-Weights SWE Agents.**  
+  _Naman Jain, Jaskirat Singh, Manish Shetty, Liang Zheng, Koushik Sen, Ion Stoica._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.07164) [![GitHub Stars](https://img.shields.io/github/stars/R2E-Gym/R2E-Gym?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/R2E-Gym/R2E-Gym) [![Website](https://img.shields.io/website?url=https://r2e-gym.github.io/&up_message=R2E-GYM&up_color=blue&down_message=R2E-GYM&down_color=blue&style=for-the-badge)](https://r2e-gym.github.io/)
+
+- **SWE-Mirror: Scaling Issue-Resolving Datasets by Mirroring Issues Across Repositories.**  
+  _Junhao Wang, Daoguang Zan, Shulin Xin, Siyao Liu, Yurong Wu, Kai Shen._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.08724)
+
+- **SPICE: An Automated SWE-Bench Labeling Pipeline for Issue Clarity, Test Coverage, and Effort Estimation.**  
+  _Gustavo A. Oliva, Gopi Krishnan Rajbahadur, Aaditya Bhatia, Haoxiang Zhang, Yihao Chen, Zhilong Chen, Arthur Leung, Dayi Lin, Boyuan Chen, Ahmed E. Hassan._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.09108)
+
+- **RepoForge: Training a SOTA Fast-thinking SWE Agent with an End-to-End Data Curation Pipeline Synergizing SFT and RL at Scale.**  
+  _Zhilong Chen, Chengzong Zhao, Boyuan Chen, Dayi Lin, Yihao Chen, Arthur Leung, Gopi Krishnan Rajbahadur, Gustavo Oliva, Haoxiang Zhang, Aadi Bhatia, Kim Kisub, Kirill Vasilevski, Youssef Esseddiq, Yanruo Yang, Ahmed Hassan._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.01550) [![Website](https://img.shields.io/website?url=https://centre-for-software-excellence.github.io/docs/blog/repoforge&up_message=REPOFORGE&up_color=blue&down_message=REPOFORGE&down_color=blue&style=for-the-badge)](https://centre-for-software-excellence.github.io/docs/blog/repoforge)
+
+- **MCTS-Refined CoT: High-Quality Fine-Tuning Data for LLM-Based Repository Issue Resolution.**  
+  _Yibo Wang, Zhihao Peng, Ying Wang, Zhao Wei, Hai Yu, Zhiliang Zhu._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.12728) [![Website](https://img.shields.io/website?url=https://mcts-refine.github.io/&up_message=MCTS-REFINE&up_color=blue&down_message=MCTS-REFINE&down_color=blue&style=for-the-badge)](https://mcts-refine.github.io/)
+
+- **SWE-smith: Scaling Data for Software Engineering Agents.**  
+  _John Yang, Kilian Lieret, Carlos E. Jimenez, Alexander Wettig, Kabir Khandpur, Yanzhe Zhang, Binyuan Hui, Ofir Press, Ludwig Schmidt, Diyi Yang._ NeurIPS 2025 Datasets & Benchmarks Track.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.21798) [![GitHub Stars](https://img.shields.io/github/stars/SWE-bench/SWE-smith?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SWE-bench/SWE-smith) [![Website](https://img.shields.io/website?url=https://swesmith.com/&up_message=SWESMITH&up_color=blue&down_message=SWESMITH&down_color=blue&style=for-the-badge)](https://swesmith.com/)
+
+- **Training Software Engineering Agents and Verifiers with SWE-Gym.**  
+  _Jiayi Pan, Xingyao Wang, Graham Neubig, Navdeep Jaitly, Heng Ji, Alane Suhr, Yizhe Zhang._ ICML 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.21139) [![GitHub Stars](https://img.shields.io/github/stars/SWE-Gym/SWE-Gym?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SWE-Gym/SWE-Gym)
+
+- **Automated Benchmark Generation for Repository-Level Coding Tasks.**  
+  _Konstantinos Vergopoulos, Mark Niklas Müller, Martin Vechev._ ICML 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://openreview.net/forum?id=qnE2m3pIAb)
+<!-- END PAPERS:data_synthesis -->
+
 - MCTS-Refined CoT: High-Quality Fine-Tuning Data for LLM-Based Repository Issue Resolution
 - SWE-Flow: Synthesizing Software Engineering Data in a Test-Driven Manner
 - SWE-Factory: Your Automated Factory for Issue Resolution Training Data and Evaluation Benchmarks
 - SPICE: An Automated SWE-Bench Labeling Pipeline for Issue Clarity, Test Coverage, and Effort Estimation
+
+
+---
+
+### 🌐 Website Generation
+> Code agents that generate or maintain websites/frontends.
+
+<!-- START PAPERS:website_generation -->
+- **WebGen-Agent: Enhancing Interactive Website Generation with Multi-Level Feedback and Step-Level Reinforcement Learning.**  
+  _Zimu Lu, Houxing Ren, Yunqiao Yang, Ke Wang, Zhuofan Zong, Junting Pan, Mingjie Zhan, Hongsheng Li._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.22644) [![GitHub Stars](https://img.shields.io/github/stars/mnluzimu/WebGen-Agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/mnluzimu/WebGen-Agent)
+
+- **WebGen-Bench: Evaluating LLMs on Generating Interactive and Functional Websites from Scratch.**  
+  _Zimu Lu, Yunqiao Yang, Houxing Ren, Haotian Hou, Han Xiao, Ke Wang, Weikang Shi, Aojun Zhou, Mingjie Zhan, Hongsheng Li._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.03733) [![GitHub Stars](https://img.shields.io/github/stars/mnluzimu/WebGen-Bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/mnluzimu/WebGen-Bench)
+
+- **UXAgent: An LLM Agent-Based Usability Testing Framework for Web Design.**  
+  _Yuxuan Lu, Bingsheng Yao, Hansu Gu, Jing Huang, Jessie Wang, Yang Li, Jiri Gesi, Qi He, Toby Jia-Jun Li, Dakuo Wang._ CHI EA 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.12561) [![GitHub Stars](https://img.shields.io/github/stars/neuhai/UXAgent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/neuhai/UXAgent)
+
+- **Multi-Agent Collaboration via Evolving Orchestration.**  
+  _Yufan Dang, Chen Qian, Xueheng Luo, Jingru Fan, Zihao Xie, Ruijie Shi, Weize Chen, Cheng Yang, Xiaoyin Che, Ye Tian, Xuantang Xiong, Lei Han, Zhiyuan Liu, Maosong Sun._ NeurIPS 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.19591) [![GitHub Stars](https://img.shields.io/github/stars/OpenBMB/ChatDev?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenBMB/ChatDev/tree/puppeteer)
+
+- **Scaling Large Language Model-based Multi-Agent Collaboration.**  
+  _Chen Qian, Zihao Xie, YiFei Wang, Wei Liu, Kunlun Zhu, Hanchen Xia, Yufan Dang, Zhuoyun Du, Weize Chen, Cheng Yang, Zhiyuan Liu, Maosong Sun._ ICLR 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.07155) [![GitHub Stars](https://img.shields.io/github/stars/OpenBMB/ChatDev?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenBMB/ChatDev/tree/macnet)
+
+- **ChatDev: Communicative Agents for Software Development.**  
+  _Chen Qian, Wei Liu, Hongzhang Liu, Nuo Chen, Yufan Dang, Jiahao Li, Cheng Yang, Weize Chen, Yusheng Su, Xin Cong, Juyuan Xu, Dahai Li, Zhiyuan Liu, Maosong Sun._ ACL 2024.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2024.acl-long.810/) [![GitHub Stars](https://img.shields.io/github/stars/OpenBMB/ChatDev?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenBMB/ChatDev) [![Website](https://img.shields.io/website?url=https://chatdev.modelbest.cn/&up_message=CHATDEV.MODELBEST.CN&up_color=blue&down_message=CHATDEV.MODELBEST.CN&down_color=blue&style=for-the-badge)](https://chatdev.modelbest.cn/)
+<!-- END PAPERS:website_generation -->
+
+
+- WebGen-Bench: Evaluating LLMs on Generating Interactive and Functional Websites from Scratch
+- ScreenCoder: Advancing Visual-to-Code Generation for Front-End Automation via Modular Multimodal Agents
+
+---
+
+### 🌀 Animation Generation
+> Agents that automate the creation or manipulation of animations, including video, GIFs, or interactive visual content, using code-based workflows.
+
+<!-- START PAPERS:animation_generation -->
+- **LogoMotion: Visually-Grounded Code Synthesis for Creating and Editing Animation.**  
+  _Vivian Liu, Rubaiat Habib Kazi, Li-Yi Wei, Matthew Fisher, Timothy Langlois, Seth Walker, Lydia Chilton._ CHI 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2405.07065)
+<!-- END PAPERS:animation_generation -->
+
+---
+
+### 🧊 3D Object Design
+> Agents that generate and render 3D models or scenes through code automation, enabling creative design workflows.
+
+<!-- START PAPERS:3d_object_design -->
+- **IR3D-Bench: Evaluating Vision-Language Model Scene Understanding as Agentic Inverse Rendering.**  
+  _Parker Liu, Chenxin Li, Zhengxin Li, Yipeng Wu, Wuyang Li, Zhiqin Yang, Zhenyuan Zhang, Yunlong Lin, Sirui Han, Brandon Y. Feng._ NeurIPS 2025 Datasets and Benchmarks Track.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.23329) [![GitHub Stars](https://img.shields.io/github/stars/LiuHengyu321/IR3D-Bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/LiuHengyu321/IR3D-Bench) [![Website](https://img.shields.io/website?url=https://ir3d-bench.github.io/&up_message=IR3D-BENCH&up_color=blue&down_message=IR3D-BENCH&down_color=blue&style=for-the-badge)](https://ir3d-bench.github.io/)
+
+- **3D-GPT: Procedural 3D Modeling with Large Language Models.**  
+  _Chunyi Sun, Junlin Han, Weijian Deng, Xinlong Wang, Zishan Qin, Stephen Gould._ 3DV 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://ieeexplore.ieee.org/document/11125634) [![GitHub Stars](https://img.shields.io/github/stars/Chuny1/3DGPT?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Chuny1/3DGPT) [![Website](https://img.shields.io/website?url=https://chuny1.github.io/3DGPT/3dgpt.html&up_message=3DGPT&up_color=blue&down_message=3DGPT&down_color=blue&style=for-the-badge)](https://chuny1.github.io/3DGPT/3dgpt.html)
+
+- **SceneGenAgent: Precise Industrial Scene Generation with Coding Agent.**  
+  _Xiao Xia, Dan Zhang, Zibo Liao, Zhenyu Hou, Tianrui Sun, Jing Li, Ling Fu, Yuxiao Dong._ ACL 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2025.acl-long.873/) [![GitHub Stars](https://img.shields.io/github/stars/THUDM/SceneGenAgent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/THUDM/SceneGenAgent)
+
+- **SceneCraft: An LLM Agent for Synthesizing 3D Scene as Blender Code.**  
+  _Ziniu Hu, Ahmet Iscen, Aashi Jain, Thomas Kipf, Yisong Yue, David A. Ross, Cordelia Schmid, Alireza Fathi._ ICML 2024.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://dl.acm.org/doi/abs/10.5555/3692070.3692846)
+<!-- END PAPERS:3d_object_design -->
+
+---
+
+### 🎮 Game Generation
+> Agents designed to autonomously create, modify, or enhance games by generating code, assets, or logic.
+
+
+<!-- START PAPERS:game_generation -->
+- **Game-RL: Synthesizing Multimodal Verifiable Game Data to Boost VLMs' General Reasoning.**  
+  _Jingqi Tong, Jixin Tang, Hangcheng Li, Yurong Mou, Ming Zhang, Jun Zhao, Yanbo Wen, Fan Song, Jiahao Zhan, Yuyang Lu, Chaoran Tao, Zhiyuan Guo, Jizhou Yu, Tianhao Cheng, Zhiheng Xi, Changhao Jiang, Zhangyue Yin, Yining Zheng, Weifeng Ge, Guanhua Chen, Tao Gui, Xipeng Qiu, Qi Zhang, Xuanjing Huang._ arXiv 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.13886) [![GitHub Stars](https://img.shields.io/github/stars/tongjingqi/Game-RL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/tongjingqi/Game-RL)
+<!-- END PAPERS:game_generation -->
+
+
+---
+
+### 🌐 Code-Executing Web Agents
+> Autonomous agents that generate and execute code to interact with web applications and browsers.
+
+
+<!-- START PAPERS:code_executing_web -->
+- **Tree-of-Code: A Self-Growing Tree Framework for End-to-End Code Generation and Execution in Complex Tasks.**  
+  _Ziyi Ni, Yifan Li, Ning Yang, Dou Shen, Pin Lyu, Daxiang Dong._ ACL 2025 Findings.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2025.findings-acl.509/)
+
+- **Executable Code Actions Elicit Better LLM Agents.**  
+  _Xingyao Wang, Yangyi Chen, Lifan Yuan, Yizhe Zhang, Yunzhu Li, Hao Peng, Heng Ji._ ICML 2024.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2402.01030) [![GitHub Stars](https://img.shields.io/github/stars/xingyaoww/code-act?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/xingyaoww/code-act)
+<!-- END PAPERS:code_executing_web -->
+
+
+Executable Code Actions Elicit Better LLM Agents
+Tree-of-Code: A Self-Growing Tree Framework for End-to-End Code Generation and Execution in Complex Tasks
+
+
+### Code-Executing Embodied Agents
+> Agents that interact with physical or simulated environments by executing code for embodied tasks including reasoning, navigation, and manipulation.
+
+<!-- START PAPERS:code_executing_embodied -->
+- **Visual Agentic AI for Spatial Reasoning with a Dynamic API.**  
+  _Damiano Marsili, Rohun Agrawal, Yisong Yue, Georgia Gkioxari._ CVPR 2025.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://openaccess.thecvf.com/content/CVPR2025/html/Marsili_Visual_Agentic_AI_for_Spatial_Reasoning_with_a_Dynamic_API_CVPR_2025_paper.html) [![GitHub Stars](https://img.shields.io/github/stars/damianomarsili/VADAR?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/damianomarsili/VADAR) [![Website](https://img.shields.io/website?url=https://glab-caltech.github.io/vadar/&up_message=VADAR&up_color=blue&down_message=VADAR&down_color=blue&style=for-the-badge)](https://glab-caltech.github.io/vadar/)
+
+- **IR3D-Bench: Evaluating Vision-Language Model Scene Understanding as Agentic Inverse Rendering.**  
+  _Parker Liu, Chenxin Li, Zhengxin Li, Yipeng Wu, Wuyang Li, Zhiqin Yang, Zhenyuan Zhang, Yunlong Lin, Sirui Han, Brandon Y. Feng._ NeurIPS 2025 Datasets and Benchmarks Track.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.23329) [![GitHub Stars](https://img.shields.io/github/stars/LiuHengyu321/IR3D-Bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/LiuHengyu321/IR3D-Bench) [![Website](https://img.shields.io/website?url=https://ir3d-bench.github.io/&up_message=IR3D-BENCH&up_color=blue&down_message=IR3D-BENCH&down_color=blue&style=for-the-badge)](https://ir3d-bench.github.io/)
+<!-- END PAPERS:code_executing_embodied -->
+
+Chain-of-Modality: Learning Manipulation Programs from Multimodal Human Videos with Vision-Language-Models
+RoboCodeX:Multimodal Code Generation for Robotic Behavior Synthesis
+RoboScript: Code Generation for Free-Form Manipulation Tasks across Real and Simulation
+- **Code as Policies**, *Code as Policies: Language Model Programs for Embodied Control*, 2022.09, ICRA 2023. [[📄 Paper](https://arxiv.org/abs/2209.07753)] [[🌍 Website](https://code-as-policies.github.io)] [[💻 Code](https://github.com/google-research/google-research/tree/master/code_as_policies)]
+- **ProgPrompt**, *ProgPrompt: Generating Situated Robot Task Plans using Large Language Models*, 2022.09, ICRA 2023. [[📄 Paper](https://arxiv.org/abs/2209.11302)] [[🌍 Website](https://progprompt.github.io)] [[💻 Code](https://github.com/NVlabs/progprompt-vh)]
+- **ChatGPT for Robotics**, *ChatGPT for Robotics: Design Principles and Model Abilities*, 2023.02, IEEE Access 2024. [[📄 Paper](https://arxiv.org/abs/2306.17582)] [[🌍 Website](https://www.microsoft.com/en-us/research/articles/chatgpt-for-robotics/)] [[💻 Code](https://github.com/microsoft/PromptCraft-Robotics)]
+- **Text2Motion**, *Text2Motion: From Natural Language Instructions to Feasible Plans*, 2023.03, ICRL 2023. [[📄 Paper](https://arxiv.org/abs/2303.12153)] [[🌍 Website](https://sites.google.com/stanford.edu/text2motion)]
+- **Instruct2Act**, *Instruct2Act: Mapping Multi-modality Instructions to Robotic Actions with Large Language Model*, 2023.05. [[📄 Paper](https://arxiv.org/abs/2305.11176)] [[💻 Code](https://github.com/OpenGVLab/Instruct2Act)]
+- **RoboScript**, *RoboScript: Code Generation for Free-Form Manipulation Tasks across Real and Simulation*, 2024.02. [[📄 Paper](https://arxiv.org/abs/2402.14623)]
+- **RoboCodeX**, *RoboCodeX: Multimodal Code Generation for Robotic Behavior Synthesis*, 2024.02, ICML 2024. [[📄 Paper](https://arxiv.org/abs/2402.16117)] [[🌍 Website](https://sites.google.com/view/robocodexplus)] [[💻 Code](https://github.com/RoboCodeX-source/RoboCodeX_code)]
 
 ---
 
@@ -700,3 +1006,10 @@ If you have any questions or encounter issues, please feel free to reach out. Fo
 
 ## 🙏 Acknowledgements
 - Thanks to all contributors and the research community.
+- We would also like to thank the maintainers of many inspiring awesome agent repositories, including:  
+  - [LLM-Agents-Papers](https://github.com/AGI-Edgerunners/LLM-Agents-Papers)
+  - [Awesome-Self-Evolving-Agents](https://github.com/EvoAgentX/Awesome-Self-Evolving-Agents)
+  - [Self-Evolving-Agents](https://github.com/CharlesQ9/Self-Evolving-Agents)
+  - [Awesome-VLA-Papers](https://github.com/Psi-Robot/Awesome-VLA-Papers)
+  - [Awesome-Multimodal-LLM-for-Code](https://github.com/xjywhu/Awesome-Multimodal-LLM-for-Code)
+  - [awesome-llm-based-agent4code](https://github.com/JiaruQian/awesome-llm-based-agent4code)

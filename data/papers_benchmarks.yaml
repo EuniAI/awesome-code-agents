@@ -110,6 +110,22 @@
     github: "https://github.com/microsoft/SWE-bench-Live"
     website: "https://swe-bench-live.github.io/"
 
+- title: "IR3D-Bench: Evaluating Vision-Language Model Scene Understanding as Agentic Inverse Rendering"
+  authors: "Parker Liu, Chenxin Li, Zhengxin Li, Yipeng Wu, Wuyang Li, Zhiqin Yang, Zhenyuan Zhang, Yunlong Lin, Sirui Han, Brandon Y. Feng"
+  venue: "NeurIPS 2025 Datasets and Benchmarks Track"
+  links:
+    paper: "https://arxiv.org/abs/2506.23329"
+    github: "https://github.com/LiuHengyu321/IR3D-Bench"
+    website: "https://ir3d-bench.github.io/"
+
+- title: "SyncMind: Measuring Agent Out-of-Sync Recovery in Collaborative Software Engineering"
+  authors: "Xuehang Guo, Xingyao Wang, Yangyi Chen, Sha Li, Chi Han, Manling Li, Heng Ji"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.06994"
+    github: "https://github.com/xhguo7/SyncMind"
+    website: "https://xhguo7.github.io/SyncMind/"
+
 - title: "SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?"
   authors: "Samuel Miserendino, Michele Wang, Tejal Patwardhan, Johannes Heidecke"
   venue: "ICML 2025"

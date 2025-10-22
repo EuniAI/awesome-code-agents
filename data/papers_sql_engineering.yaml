@@ -5,3 +5,11 @@
     paper: "https://arxiv.org/abs/2506.18951"
     github: "https://github.com/bird-bench/BIRD-CRITIC-1"
     website: "https://bird-critic.github.io/"
+
+- title: "GateLens: A Reasoning-Enhanced LLM Agent for Automotive Software Release Analytics"
+  authors: "Arsham Gholamzadeh Khoee, Shuai Wang, Yinan Yu, Robert Feldt, Dhasarathy Parthasarathy"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.21735"
+    github: ""
+    website: ""

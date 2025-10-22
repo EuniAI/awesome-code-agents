@@ -1,0 +1,15 @@
+- title: "Visual Agentic AI for Spatial Reasoning with a Dynamic API"
+  authors: "Damiano Marsili, Rohun Agrawal, Yisong Yue, Georgia Gkioxari"
+  venue: "CVPR 2025"
+  links:
+    paper: "https://openaccess.thecvf.com/content/CVPR2025/html/Marsili_Visual_Agentic_AI_for_Spatial_Reasoning_with_a_Dynamic_API_CVPR_2025_paper.html"
+    github: "https://github.com/damianomarsili/VADAR"
+    website: "https://glab-caltech.github.io/vadar/"
+
+- title: "IR3D-Bench: Evaluating Vision-Language Model Scene Understanding as Agentic Inverse Rendering"
+  authors: "Parker Liu, Chenxin Li, Zhengxin Li, Yipeng Wu, Wuyang Li, Zhiqin Yang, Zhenyuan Zhang, Yunlong Lin, Sirui Han, Brandon Y. Feng"
+  venue: "NeurIPS 2025 Datasets and Benchmarks Track"
+  links:
+    paper: "https://arxiv.org/abs/2506.23329"
+    github: "https://github.com/LiuHengyu321/IR3D-Bench"
+    website: "https://ir3d-bench.github.io/"

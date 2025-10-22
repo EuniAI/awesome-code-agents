@@ -1,0 +1,15 @@
+- title: "Tree-of-Code: A Self-Growing Tree Framework for End-to-End Code Generation and Execution in Complex Tasks"
+  authors: "Ziyi Ni, Yifan Li, Ning Yang, Dou Shen, Pin Lyu, Daxiang Dong"
+  venue: "ACL 2025 Findings"
+  links:
+    paper: "https://aclanthology.org/2025.findings-acl.509/"
+    github: ""
+    website: ""
+
+- title: "Executable Code Actions Elicit Better LLM Agents"
+  authors: "Xingyao Wang, Yangyi Chen, Lifan Yuan, Yizhe Zhang, Yunzhu Li, Hao Peng, Heng Ji"
+  venue: "ICML 2024"
+  links:
+    paper: "https://arxiv.org/abs/2402.01030"
+    github: "https://github.com/xingyaoww/code-act"
+    website: ""

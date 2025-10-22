@@ -6,11 +6,27 @@
     github: "https://github.com/lisaGuojl/LLM-Agent-SE-Survey"
     website: ""
 
+- title: "A Survey on Code Generation with LLM-based Agents"
+  authors: "Yihong Dong, Xue Jiang, Jiaru Qian, Tian Wang, Kechi Zhang, Zhi Jin, Ge Li"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.00083"
+    github: "https://github.com/JiaruQian/awesome-llm-based-agent4code"
+    website: ""
+
 - title: "How Does LLM Reasoning Work for Code? A Survey and a Call to Action"
   authors: "Ira Ceka, Saurabh Pujar, Irene Manotas, Gail Kaiser, Baishakhi Ray, Shyam Ramji"
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2506.13932"
+    github: ""
+    website: ""
+
+- title: "Vibe Coding vs. Agentic Coding: Fundamentals and Practical Implications of Agentic AI"
+  authors: "Ranjan Sapkota, Konstantinos I. Roumeliotis, Manoj Karkee"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.19443"
     github: ""
     website: ""
 

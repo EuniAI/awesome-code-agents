@@ -1,0 +1,31 @@
+- title: "IR3D-Bench: Evaluating Vision-Language Model Scene Understanding as Agentic Inverse Rendering"
+  authors: "Parker Liu, Chenxin Li, Zhengxin Li, Yipeng Wu, Wuyang Li, Zhiqin Yang, Zhenyuan Zhang, Yunlong Lin, Sirui Han, Brandon Y. Feng"
+  venue: "NeurIPS 2025 Datasets and Benchmarks Track"
+  links:
+    paper: "https://arxiv.org/abs/2506.23329"
+    github: "https://github.com/LiuHengyu321/IR3D-Bench"
+    website: "https://ir3d-bench.github.io/"
+
+- title: "3D-GPT: Procedural 3D Modeling with Large Language Models"
+  authors: "Chunyi Sun, Junlin Han, Weijian Deng, Xinlong Wang, Zishan Qin, Stephen Gould"
+  venue: "3DV 2025"
+  links:
+    paper: "https://ieeexplore.ieee.org/document/11125634"
+    github: "https://github.com/Chuny1/3DGPT"
+    website: "https://chuny1.github.io/3DGPT/3dgpt.html"
+
+- title: "SceneGenAgent: Precise Industrial Scene Generation with Coding Agent"
+  authors: "Xiao Xia, Dan Zhang, Zibo Liao, Zhenyu Hou, Tianrui Sun, Jing Li, Ling Fu, Yuxiao Dong"
+  venue: "ACL 2025"
+  links:
+    paper: "https://aclanthology.org/2025.acl-long.873/"
+    github: "https://github.com/THUDM/SceneGenAgent"
+    website: ""
+
+- title: "SceneCraft: An LLM Agent for Synthesizing 3D Scene as Blender Code"
+  authors: "Ziniu Hu, Ahmet Iscen, Aashi Jain, Thomas Kipf, Yisong Yue, David A. Ross, Cordelia Schmid, Alireza Fathi"
+  venue: "ICML 2024"
+  links:
+    paper: "https://dl.acm.org/doi/abs/10.5555/3692070.3692846"
+    github: ""
+    website: ""

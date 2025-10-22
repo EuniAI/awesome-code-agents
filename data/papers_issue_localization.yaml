@@ -6,6 +6,14 @@
     github: ""
     website: ""
 
+- title: "LocAgent: Graph-Guided LLM Agents for Code Localization"
+  authors: "Zhaoling Chen, Robert Tang, Gangda Deng, Fang Wu, Jialong Wu, Zhiwei Jiang, Viktor Prasanna, Arman Cohan, Xingyao Wang"
+  venue: "ACL 2025"
+  links:
+    paper: "https://aclanthology.org/2025.acl-long.426/"
+    github: "https://github.com/gersteinlab/LocAgent"
+    website: ""
+
 - title: "Issue Localization via LLM-Driven Iterative Code Graph Searching"
   authors: "Zhonghao Jiang, Xiaoxue Ren, Meng Yan, Wei Jiang, Yong Li, Zhongxin Liu"
   venue: "ASE 2025"
