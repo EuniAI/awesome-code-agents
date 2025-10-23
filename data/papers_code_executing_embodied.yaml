@@ -6,6 +6,22 @@
     github: "https://github.com/damianomarsili/VADAR"
     website: "https://glab-caltech.github.io/vadar/"
 
+- title: "Code-as-Monitor: Constraint-aware Visual Programming for Reactive and Proactive Robotic Failure Detection"
+  authors: "Enshen Zhou, Qi Su, Cheng Chi, Zhizheng Zhang, Zhongyuan Wang, Tiejun Huang, Lu Sheng, He Wang"
+  venue: "CVPR 2025"
+  links:
+    paper: "https://arxiv.org/abs/2412.04455"
+    github: ""
+    website: "https://zhoues.github.io/Code-as-Monitor/"
+
+- title: "GRS: Generating Robotic Simulation Tasks from Real-World Images"
+  authors: "Alex Zook, Fan-Yun Sun, Josef Spjut, Valts Blukis, Stan Birchfield, Jonathan Tremblay"
+  venue: "CVPR 2025"
+  links:
+    paper: "https://openaccess.thecvf.com/content/CVPR2025W/CV2/html/Zook_GRS_Generating_Robotic_Simulation_Tasks_from_Real-World_Images_CVPRW_2025_paper.html"
+    github: ""
+    website: ""
+
 - title: "IR3D-Bench: Evaluating Vision-Language Model Scene Understanding as Agentic Inverse Rendering"
   authors: "Parker Liu, Chenxin Li, Zhengxin Li, Yipeng Wu, Wuyang Li, Zhiqin Yang, Zhenyuan Zhang, Yunlong Lin, Sirui Han, Brandon Y. Feng"
   venue: "NeurIPS 2025 Datasets and Benchmarks Track"
@@ -13,3 +29,43 @@
     paper: "https://arxiv.org/abs/2506.23329"
     github: "https://github.com/LiuHengyu321/IR3D-Bench"
     website: "https://ir3d-bench.github.io/"
+
+- title: "WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment"
+  authors: "Hao Tang, Darren Yan Key, Kevin Ellis"
+  venue: "NeurIPS 2024"
+  links:
+    paper: "https://openreview.net/forum?id=QGJSXMhVaL"
+    github: "https://github.com/haotang1995/WorldCoder"
+    website: "https://haotang1995.github.io/projects/worldcoder"
+
+- title: "RoboScript: Code Generation for Free-Form Manipulation Tasks across Real and Simulation"
+  authors: "Junting Chen, Yao Mu, Qiaojun Yu, Tianming Wei, Silang Wu, Zhecheng Yuan, Zhixuan Liang, Chao Yang, Kaipeng Zhang, Wenqi Shao, Yu Qiao, Huazhe Xu, Mingyu Ding, Ping Luo"
+  venue: "arXiv 2024"
+  links:
+    paper: "https://arxiv.org/abs/2402.14623"
+    github: ""
+    website: ""
+
+- title: "ChatGPT for Robotics: Design Principles and Model Abilities"
+  authors: "Sai Vemprala, Rogerio Bonatti, Arthur Bucker, Ashish Kapoor"
+  venue: "arXiv 2023"
+  links:
+    paper: "https://arxiv.org/abs/2306.17582"
+    github: "https://github.com/microsoft/PromptCraft-Robotics"
+    website: "https://www.microsoft.com/en-us/research/articles/chatgpt-for-robotics/"
+
+- title: "ProgPrompt: Generating Situated Robot Task Plans using Large Language Models"
+  authors: "Ishika Singh, Valts Blukis, Arsalan Mousavian, Ankit Goyal, Danfei Xu, Jonathan Tremblay, Dieter Fox, Jesse Thomason, Animesh Garg"
+  venue: "ICRA 2023"
+  links:
+    paper: "https://arxiv.org/abs/2209.11302"
+    github: "https://github.com/NVlabs/progprompt-vh"
+    website: "https://progprompt.github.io/"
+
+- title: "Code as Policies: Language Model Programs for Embodied Control"
+  authors: "Jacky Liang, Wenlong Huang, Fei Xia, Peng Xu, Karol Hausman, Brian Ichter, Pete Florence, Andy Zeng"
+  venue: "ICRA 2023"
+  links:
+    paper: "https://arxiv.org/abs/2209.07753"
+    github: "https://github.com/google-research/google-research/tree/master/code_as_policies"
+    website: "https://code-as-policies.github.io/"

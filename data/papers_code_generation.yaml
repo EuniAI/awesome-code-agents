@@ -14,6 +14,14 @@
     github: "https://github.com/EvoAgentX/EvoAgentX"
     website: "https://evoagentx.github.io/EvoAgentX/"
 
+- title: "Co-Saving: Resource Aware Multi-Agent Collaboration for Software Development"
+  authors: "Rennai Qiu, Chen Qian, Ran Li, Yufan Dang, Weize Chen, Cheng Yang, Yingli Zhang, Ye Tian, Xuantang Xiong, Lei Han, Zhiyuan Liu, Maosong Sun"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.21898"
+    github: ""
+    website: ""
+
 - title: "HyperAgent: Generalist Software Engineering Agents to Solve Coding Tasks at Scale"
   authors: "Huy Nhat Phan, Tien N. Nguyen, Phong X. Nguyen, Nghi D. Q. Bui"
   venue: "arXiv 2025"
@@ -78,12 +86,44 @@
     github: "https://github.com/OpenBMB/ChatDev/tree/puppeteer"
     website: ""
 
+- title: "Multi-Agent Collaboration via Cross-Team Orchestration"
+  authors: "Zhuoyun Du, Chen Qian, Wei Liu, Zihao Xie, YiFei Wang, Rennai Qiu, Yufan Dang, Weize Chen, Cheng Yang, Ye Tian, Xuantang Xiong, Lei Han"
+  venue: "ACL 2025 Findings"
+  links:
+    paper: "https://arxiv.org/abs/2406.08979"
+    github: "https://github.com/OpenBMB/ChatDev/tree/macnet"
+    website: ""
+
 - title: "Scaling Large Language Model-based Multi-Agent Collaboration"
   authors: "Chen Qian, Zihao Xie, YiFei Wang, Wei Liu, Kunlun Zhu, Hanchen Xia, Yufan Dang, Zhuoyun Du, Weize Chen, Cheng Yang, Zhiyuan Liu, Maosong Sun"
   venue: "ICLR 2025"
   links:
     paper: "https://arxiv.org/abs/2406.07155"
     github: "https://github.com/OpenBMB/ChatDev/tree/macnet"
+    website: ""
+
+- title: "AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors"
+  authors: "Weize Chen, Yusheng Su, Jingwei Zuo, Cheng Yang, Chenfei Yuan, Chi-Min Chan, Heyang Yu, Yaxi Lu, Yi-Hsin Hung, Chen Qian, Yujia Qin, Xin Cong, Ruobing Xie, Zhiyuan Liu, Maosong Sun, Jie Zhou"
+  venue: "ICLR 2024"
+  links:
+    paper: "https://openreview.net/forum?id=EHg5GDnyq1"
+    github: "https://github.com/OpenBMB/AgentVerse"
+    website: ""
+
+- title: "RepoAgent: An LLM-Powered Open-Source Framework for Repository-level Code Documentation Generation"
+  authors: "Qinyu Luo, Yining Ye, Shihao Liang, Zhong Zhang, Yujia Qin, Yaxi Lu, Yesai Wu, Xin Cong, Yankai Lin, Yingli Zhang, Xiaoyin Che, Zhiyuan Liu, Maosong Sun"
+  venue: "EMNLP 2024 Demo"
+  links:
+    paper: "https://aclanthology.org/2024.emnlp-demo.46/"
+    github: "https://github.com/OpenBMB/RepoAgent"
+    website: ""
+
+- title: "Experiential Co-Learning of Sof tware-Developing Agents"
+  authors: "Chen Qian, Yufan Dang, Jiahao Li, Wei Liu, Zihao Xie, YiFei Wang, Weize Chen, Cheng Yang, Xin Cong, Xiaoyin Che, Zhiyuan Liu, Maosong Sun"
+  venue: "ACL 2024"
+  links:
+    paper: "https://aclanthology.org/2024.acl-long.305/"
+    github: "https://github.com/OpenBMB/ChatDev"
     website: ""
 
 - title: "ChatDev: Communicative Agents for Software Development"
@@ -110,10 +150,34 @@
     github: "https://github.com/nju-websoft/PairCoder"
     website: ""
 
+- title: "Iterative Experience Refinement of Software-Developing Agents"
+  authors: "Chen Qian, Jiahao Li, Yufan Dang, Wei Liu, YiFei Wang, Zihao Xie, Weize Chen, Cheng Yang, Yingli Zhang, Zhiyuan Liu, Maosong Sun"
+  venue: "arXiv 2024"
+  links:
+    paper: "https://arxiv.org/abs/2405.04219"
+    github: ""
+    website: ""
+
 - title: "CodeTree: Agent‐guided Tree Search for Code Generation with Large Language Models"
   authors: "Jierui Li, Hung Le, Yingbo Zhou, Caiming Xiong, Silvio Savarese, Doyen Sahoo"
   venue: "arXiv 2024"
   links:
     paper: "https://arxiv.org/abs/2411.04329"
     github: "https://github.com/SalesforceAIResearch/CodeTree"
+    website: ""
+
+- title: "AgentCoder: Multi-Agent-based Code Generation with Iterative Testing and Optimisation"
+  authors: "Dong Huang, Jie M.Zhang, Michael Luck, Qingwen Bu, Yuhao Qing, Heming Cui"
+  venue: "arXiv 2024"
+  links:
+    paper: "https://arxiv.org/abs/2312.13010"
+    github: "https://github.com/huangd1999/AgentCoder"
+    website: ""
+
+- title: "Self-Organized Agents: A LLM Multi-Agent Framework toward Ultra Large-Scale Code Generation and Optimization"
+  authors: "Yoichi Ishibashi, Yoshimasa Nishimura"
+  venue: "arXiv 2024"
+  links:
+    paper: "https://arxiv.org/abs/2404.02183"
+    github: "https://github.com/tsukushiAI/self-organized-agent"
     website: ""

@@ -14,6 +14,14 @@
     github: "https://github.com/iCSawyer/SecureAgentBench"
     website: ""
 
+- title: "Towards Exception Safety Code Generation with Intermediate Representation Agents Framework"
+  authors: "Xuanming Zhang, Yuxuan Chen, Yuan Yuan, Minlie Huang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2410.06949"
+    github: ""
+    website: ""
+
 - title: "CVE-Bench: A Benchmark for AI Agents’ Ability to Exploit Real-World Web Application Vulnerabilities"
   authors: "Yuxuan Zhu, Antony Kellermann, Dylan Bowman, Philip Li, Akul Gupta, Adarsh Danda, Richard Fang, Conner Jensen, Eric Ihli, Jason Benn, Jet Geronimo, Avi Dhir, Sudhit Rao, Kaicheng Yu, Twm Stone, Daniel Kang"
   venue: "ICML 2025"

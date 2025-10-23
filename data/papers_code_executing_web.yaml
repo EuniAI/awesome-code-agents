@@ -13,3 +13,11 @@
     paper: "https://arxiv.org/abs/2402.01030"
     github: "https://github.com/xingyaoww/code-act"
     website: ""
+
+- title: "AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents"
+  authors: "Harsh Trivedi, Tushar Khot, Mareike Hartmann, Ruskin Manku, Vinty Dong, Edward Li, Shashank Gupta, Ashish Sabharwal, Niranjan Balasubramanian"
+  venue: "ACL 2024"
+  links:
+    paper: "https://aclanthology.org/2024.acl-long.850/"
+    github: "https://github.com/stonybrooknlp/appworld"
+    website: "https://appworld.dev/"

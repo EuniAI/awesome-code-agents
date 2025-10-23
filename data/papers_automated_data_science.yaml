@@ -5,3 +5,11 @@
     paper: "https://arxiv.org/abs/2506.10974"
     github: "https://github.com/innovatingAI/AutoMind"
     website: "https://innovatingai.github.io/"
+
+- title: "DA-Code: Agent Data Science Code Generation Benchmark for Large Language Models"
+  authors: "Yiming Huang, Jianwen Luo, Yan Yu, Yitong Zhang, Fangyu Lei, Yifan Wei, Shizhu He, Lifu Huang, Xiao Liu, Jun Zhao, Kang Liu"
+  venue: "EMNLP 2024"
+  links:
+    paper: "https://aclanthology.org/2024.emnlp-main.748/"
+    github: "https://github.com/yiyihum/da-code"
+    website: "https://da-code-bench.github.io/"

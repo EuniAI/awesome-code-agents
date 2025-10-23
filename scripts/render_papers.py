@@ -14,6 +14,73 @@ BLOCK_RE = re.compile(
     re.DOTALL
 )
 
+def to_title_case(text: str) -> str:
+    """Title-case the string while preserving acronyms and internal caps.
+
+    Rules:
+    - Capitalize first and last words, and any word following a colon.
+    - Lowercase minor words (articles, conjunctions, prepositions) unless first/last/after colon.
+    - Preserve words with internal capitalization (e.g., ShapeLib), all-caps acronyms, and words with digits (e.g., 3D, GPT-4).
+    - For hyphenated words, capitalize each component using the same rules.
+    """
+    text = text.strip()
+    if not text:
+        return text
+
+    tokens = re.split(r"(\s+)", text)
+    word_indices = [i for i, t in enumerate(tokens) if not t.isspace()]
+    if not word_indices:
+        return text
+    first_idx = word_indices[0]
+    last_idx = word_indices[-1]
+
+    def preserve_original(word: str) -> bool:
+        # Preserve internal caps, acronyms, or digits
+        if any(ch.isdigit() for ch in word):
+            return True
+        # Internal capitalization (CamelCase) or all caps with length>1
+        letters = re.sub(r"[^A-Za-z]", "", word)
+        if len(letters) > 1 and word.isupper():
+            return True
+        if re.search(r"[A-Z].*[A-Z]", word):
+            return True
+        return False
+
+    def cap_word(word: str, force_cap: bool) -> str:
+        if not word:
+            return word
+        if preserve_original(word):
+            return word
+        base = word.lower()
+        return base[:1].upper() + base[1:]
+
+    out = []
+    capitalize_next = True  # first word
+    for i, tok in enumerate(tokens):
+        if tok.isspace():
+            out.append(tok)
+            continue
+        is_first = (i == first_idx)
+        is_last = (i == last_idx)
+        force_cap = capitalize_next or is_first or is_last
+
+        # Handle hyphenated compounds
+        parts = re.split(r"(-)", tok)
+        new_parts = []
+        for j, part in enumerate(parts):
+            if part == "-":
+                new_parts.append(part)
+                continue
+            # Always capitalize parts after hyphen per common title-case style
+            part_force = force_cap or j > 0
+            new_parts.append(cap_word(part, part_force))
+        new_tok = "".join(new_parts)
+        out.append(new_tok)
+
+        capitalize_next = tok.endswith(":")
+
+    return "".join(out)
+
 def repo_slug(github_url: str) -> str:
     if not github_url:
         return ""
@@ -57,6 +124,7 @@ def badge_website(url: str) -> str:
         return f"[![Website](https://img.shields.io/website?url={url}&up_message=Website&up_color=blue&down_message=Website&down_color=blue&style=for-the-badge)]({url})"
 
 def render_entry(e: dict) -> str:
+    # title = to_title_case(e.get("title", "").rstrip("."))
     title = e.get("title", "").rstrip(".")
     authors = e.get("authors", "")
     venue = e.get("venue", "")

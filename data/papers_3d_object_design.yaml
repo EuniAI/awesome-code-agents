@@ -1,3 +1,67 @@
+- title: "Agentic Design of Compositional Machines"
+  authors: "Wenqian Zhang, Weiyang Liu, Zhen Liu"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.14980"
+    github: "https://github.com/Godheritage/BesiegeField"
+    website: "https://besiegefield.github.io/"
+
+- title: "Imperative vs. Declarative Programming Paradigms for Open-Universe Scene Generation"
+  authors: "Maxim Gumin, Do Heon Han, Seung Jean Yoo, Aditya Ganeshan, R. Kenny Jones, Rio Aguina-Kang, Stewart Morris, Daniel Ritchie"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2504.05482"
+    github: ""
+    website: ""
+
+- title: "HSM: Hierarchical Scene Motifs for Multi-Scale Indoor Scene Generation"
+  authors: "Hou In Derek Pun, Hou In Ivan Tam, Austin T. Wang, Xiaoliang Huo, Angel X. Chang, Manolis Savva"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.16848"
+    github: "https://github.com/3dlg-hcvc/hsm"
+    website: "https://3dlg-hcvc.github.io/hsm/"
+
+- title: "MeshCoder: LLM-Powered Structured Mesh Code Generation from Point Clouds"
+  authors: "Bingquan Dai, Li Ray Luo, Qihong Tang, Jie Wang, Xinyu Lian, Hao Xu, Minghan Qin, Xudong Xu, Bo Dai, Haoqian Wang, Zhaoyang Lyu, Jiangmiao Pang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.14879"
+    github: "https://github.com/InternRobotics/MeshCoder"
+    website: "https://daibingquan.github.io/MeshCoder/"
+
+- title: "MetaGen: A DSL, Database, and Benchmark for VLM-Assisted Metamaterial Generation"
+  authors: "Liane Makatura, Benjamin Jones, Siyuan Bian, Wojciech Matusik"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.17568"
+    github: ""
+    website: ""
+
+- title: "ShapeLib: Designing a Library of Programmatic 3D Shape Abstractions with Large Language Models"
+  authors: "R. Kenny Jones, Paul Guerrero, Niloy J. Mitra, Daniel Ritchie"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.08884"
+    github: ""
+    website: ""
+
+- title: "The Scene Language: Representing Scenes with Programs, Words, and Embeddings"
+  authors: "Yunzhi Zhang, Zizhang Li, Matt Zhou, Shangzhe Wu, Jiajun Wu"
+  venue: "CVPR 2025"
+  links:
+    paper: "https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_The_Scene_Language_Representing_Scenes_with_Programs_Words_and_Embeddings_CVPR_2025_paper.html"
+    github: "https://github.com/zzyunzhi/scene-language"
+    website: "https://ai.stanford.edu/~yzzhang/projects/scene-language/"
+
+- title: "BlenderGym: Benchmarking Foundational Model Systems for Graphics Editing"
+  authors: "Yunqi Gu, Ian Huang, Jihyeon Je, Guandao Yang, Leonidas Guiba"
+  venue: "CVPR 2025"
+  links:
+    paper: "https://openaccess.thecvf.com/content/CVPR2025/html/Gu_BlenderGym_Benchmarking_Foundational_Model_Systems_for_Graphics_Editing_CVPR_2025_paper.html"
+    github: "https://github.com/richard-guyunqi/BlenderGym-Open"
+    website: "https://blendergym.github.io/"
+
 - title: "IR3D-Bench: Evaluating Vision-Language Model Scene Understanding as Agentic Inverse Rendering"
   authors: "Parker Liu, Chenxin Li, Zhengxin Li, Yipeng Wu, Wuyang Li, Zhiqin Yang, Zhenyuan Zhang, Yunlong Lin, Sirui Han, Brandon Y. Feng"
   venue: "NeurIPS 2025 Datasets and Benchmarks Track"
@@ -5,6 +69,14 @@
     paper: "https://arxiv.org/abs/2506.23329"
     github: "https://github.com/LiuHengyu321/IR3D-Bench"
     website: "https://ir3d-bench.github.io/"
+
+- title: "SceneMotifCoder: Example-driven Visual Program Learning for Generating 3D Object Arrangements"
+  authors: "Hou In Ivan Tam, Hou In Derek Pun, Austin T. Wang, Angel X. Chang, Manolis Savva"
+  venue: "3DV 2025"
+  links:
+    paper: "https://arxiv.org/abs/2408.02211"
+    github: "https://github.com/3dlg-hcvc/smc"
+    website: "https://3dlg-hcvc.github.io/smc/"
 
 - title: "3D-GPT: Procedural 3D Modeling with Large Language Models"
   authors: "Chunyi Sun, Junlin Han, Weijian Deng, Xinlong Wang, Zishan Qin, Stephen Gould"
@@ -27,5 +99,13 @@
   venue: "ICML 2024"
   links:
     paper: "https://dl.acm.org/doi/abs/10.5555/3692070.3692846"
+    github: ""
+    website: ""
+
+- title: "Open-Universe Indoor Scene Generation using LLM Program Synthesis and Uncurated Object Databases"
+  authors: "Rio Aguina-Kang, Maxim Gumin, Do Heon Han, Stewart Morris, Seung Jean Yoo, Aditya Ganeshan, R. Kenny Jones, Qiuhong Anna Wei, Kailiang Fu, Daniel Ritchie"
+  venue: "arXiv 2024"
+  links:
+    paper: "https://arxiv.org/abs/2403.09675"
     github: ""
     website: ""

@@ -1,0 +1,7 @@
+- title: "Chat2SVG: Vector Graphics Generation with Large Language Models and Image Diffusion Models"
+  authors: "Ronghuan Wu, Wanchao Su, Jing Liao"
+  venue: "CVPR 2025"
+  links:
+    paper: "https://openaccess.thecvf.com/content/CVPR2025/html/Wu_Chat2SVG_Vector_Graphics_Generation_with_Large_Language_Models_and_Image_CVPR_2025_paper.html"
+    github: "https://github.com/kingnobro/chat2svg"
+    website: "https://chat2svg.github.io/"
