@@ -61,3 +61,11 @@
     paper: "https://openreview.net/forum?id=qnE2m3pIAb"
     github: ""
     website: ""
+
+- title: "AgentGen: Enhancing Planning Abilities for Large Language Model based Agent via Environment and Task Generation"
+  authors: "Mengkang Hu, Pu Zhao, Can Xu, Qingfeng Sun, Jianguang Lou, Qingwei Lin, Ping Luo, Saravan Rajmohan"
+  venue: "KDD 2025"
+  links:
+    paper: "https://dl.acm.org/doi/abs/10.1145/3690624.3709321"
+    github: "https://github.com/Aaron617/AgentGen"
+    website: "https://agent-gen.github.io/"

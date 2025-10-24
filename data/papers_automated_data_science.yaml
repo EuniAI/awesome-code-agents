@@ -1,3 +1,19 @@
+- title: "DeepAnalyze: Agentic Large Language Models for Autonomous Data Science"
+  authors: "Shaolei Zhang, Ju Fan, Meihao Fan, Guoliang Li, Xiaoyong Du"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.16872"
+    github: "https://github.com/ruc-datalab/DeepAnalyze"
+    website: "https://ruc-deepanalyze.github.io/"
+
+- title: "WebDS: An End-to-End Benchmark for Web-based Data Science"
+  authors: "Ethan Hsu, Hong Meng Yam, Ines Bouissou, Aaron Murali John, Raj Thota, Josh Koe, Vivek Sarath Putta, G K Dharesan, Alexander Spangher, Shikhar Murty, Tenghao Huang, Christopher D. Manning"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.01222"
+    github: ""
+    website: ""
+
 - title: "AutoMind: Adaptive Knowledgeable Agent for Automated Data Science"
   authors: "Yixin Ou, Yujie Luo, Jingsheng Zheng, Lanning Wei, Zhuoyun Yu, Shuofei Qiao, Jintian Zhang, Da Zheng, Yuren Mao, Yunjun Gao, Huajun Chen, Ningyu Zhang"
   venue: "arXiv 2025"

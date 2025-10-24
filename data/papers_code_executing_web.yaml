@@ -1,3 +1,19 @@
+- title: "SkillWeaver: Web Agents can Self-Improve by Discovering and Honing Skills"
+  authors: "Boyuan Zheng, Michael Y. Fatemi, Xiaolong Jin, Zora Zhiruo Wang, Apurva Gandhi, Yueqi Song, Yu Gu, Jayanth Srinivasa, Gaowen Liu, Graham Neubig, Yu Su"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2504.07079"
+    github: "https://github.com/OSU-NLP-Group/SkillWeaver"
+    website: "https://osu-nlp-group.github.io/SkillWeaver/"
+
+- title: "WebDS: An End-to-End Benchmark for Web-based Data Science"
+  authors: "Ethan Hsu, Hong Meng Yam, Ines Bouissou, Aaron Murali John, Raj Thota, Josh Koe, Vivek Sarath Putta, G K Dharesan, Alexander Spangher, Shikhar Murty, Tenghao Huang, Christopher D. Manning"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.01222"
+    github: ""
+    website: ""
+
 - title: "Tree-of-Code: A Self-Growing Tree Framework for End-to-End Code Generation and Execution in Complex Tasks"
   authors: "Ziyi Ni, Yifan Li, Ning Yang, Dou Shen, Pin Lyu, Daxiang Dong"
   venue: "ACL 2025 Findings"

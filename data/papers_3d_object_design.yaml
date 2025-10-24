@@ -14,6 +14,14 @@
     github: ""
     website: ""
 
+- title: "Learning Object Placement Programs for Indoor Scene Synthesis with Iterative Self Training"
+  authors: "Adrian Chang, Kai Wang, Yuanbo Li, Manolis Savva, Angel X. Chang, Daniel Ritchie"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://www.arxiv.org/abs/2503.04496"
+    github: ""
+    website: ""
+
 - title: "HSM: Hierarchical Scene Motifs for Multi-Scale Indoor Scene Generation"
   authors: "Hou In Derek Pun, Hou In Ivan Tam, Austin T. Wang, Xiaoliang Huo, Angel X. Chang, Manolis Savva"
   venue: "arXiv 2025"
@@ -62,6 +70,14 @@
     github: "https://github.com/richard-guyunqi/BlenderGym-Open"
     website: "https://blendergym.github.io/"
 
+- title: "CAD-Editor: A Locate-then-Infill Framework with Automated Training Data Synthesis for Text-Based CAD Editing"
+  authors: "Yu Yuan, Shizhao Sun, Qi Liu, Jiang Bian"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.03997"
+    github: "https://github.com/microsoft/CAD-Editor"
+    website: "https://cad-editor.github.io/"
+
 - title: "IR3D-Bench: Evaluating Vision-Language Model Scene Understanding as Agentic Inverse Rendering"
   authors: "Parker Liu, Chenxin Li, Zhengxin Li, Yipeng Wu, Wuyang Li, Zhiqin Yang, Zhenyuan Zhang, Yunlong Lin, Sirui Han, Brandon Y. Feng"
   venue: "NeurIPS 2025 Datasets and Benchmarks Track"
@@ -93,6 +109,14 @@
     paper: "https://aclanthology.org/2025.acl-long.873/"
     github: "https://github.com/THUDM/SceneGenAgent"
     website: ""
+
+- title: "CADTalk: An Algorithm and Benchmark for Semantic Commenting of CAD Programs"
+  authors: "Haocheng Yuan, Jing Xu, Hao Pan, Adrien Bousseau, Niloy J. Mitra, Changjian Li"
+  venue: "CVPR 2024"
+  links:
+    paper: "https://openaccess.thecvf.com/content/CVPR2024/html/Yuan_CADTalk_An_Algorithm_and_Benchmark_for_Semantic_Commenting_of_CAD_CVPR_2024_paper.html"
+    github: "https://github.com/YYYYYHC/CADTalk"
+    website: "https://enigma-li.github.io/CADTalk/"
 
 - title: "SceneCraft: An LLM Agent for Synthesizing 3D Scene as Blender Code"
   authors: "Ziniu Hu, Ahmet Iscen, Aashi Jain, Thomas Kipf, Yisong Yue, David A. Ross, Cordelia Schmid, Alireza Fathi"

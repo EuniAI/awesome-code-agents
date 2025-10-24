@@ -78,6 +78,30 @@
     github: "https://github.com/qodo-ai/pr-agent"
     website: "https://www.qodo.ai/"
 
+- title: "Serena"
+  authors: "Oraios AI"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/oraios/serena"
+    website: "https://oraios-ai.de/"
+
+- title: "Zen MCP"
+  authors: "Beehive Innovations"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/BeehiveInnovations/zen-mcp-server"
+    website: "https://www.busymac.com/"
+
+- title: "Context7 MCP"
+  authors: "Upstash"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/upstash/context7"
+    website: "https://upstash.com/"
+
 - title: "Lingma SWE-GPT"
   authors: "Tongyi / Alibaba"
   venue: "2025"

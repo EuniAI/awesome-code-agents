@@ -1,0 +1,15 @@
+- title: "Plot2Code: A Comprehensive Benchmark for Evaluating Multi-modal Large Language Models in Code Generation from Scientific Plots"
+  authors: "Chengyue Wu, Yixiao Ge, Qiushan Guo, Jiahao Wang, Zhixuan Liang, Zeyu Lu, Ying Shan, Ping Luo"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2405.07990"
+    github: "https://github.com/TencentARC/Plot2Code"
+    website: "https://huggingface.co/datasets/TencentARC/Plot2Code"
+
+- title: "Chart-CoCa: Self-Improving Chart Understanding of Vision LMs via Code-Driven Synthesis and Candidate-Conditioned Answering"
+  authors: "Gongyao Jiang, Qiong Luo"
+  venue: "CIKM 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.11975"
+    github: ""
+    website: ""

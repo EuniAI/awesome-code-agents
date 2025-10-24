@@ -22,6 +22,14 @@
     github: "https://github.com/amazon-science/SWE-PolyBench"
     website: "https://amazon-science.github.io/SWE-PolyBench/"
 
+- title: "MORSE-500: A Programmatically Controllable Video Benchmark to Stress-Test Multimodal Reasoning"
+  authors: "Zikui Cai, Andrew Wang, Anirudh Satheesh, Ankit Nakhawa, Hyunwoo Jae, Keenan Powell, Minghui Liu, Neel Jay, Sungbin Oh, Xiyao Wang, Yongyuan Liang, Tom Goldstein, Furong Huang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.05523"
+    github: "https://github.com/morse-benchmark/morse-500"
+    website: "https://morse-500.github.io/"
+
 - title: "SWE-SQL: Illuminating LLM Pathways to Solve User SQL Issues in Real-World Applications"
   authors: "Jinyang Li, Xiaolong Li, Ge Qu, Per Jacobsson, Bowen Qin, Binyuan Hui, Shuzheng Si, Nan Huo, Xiaohan Xu, Yue Zhang, Ziwei Tang, Yuanshuai Li, Florensia Widjaja, Xintong Zhu, Feige Zhou, Yongfeng Huang, Yannis Papakonstantinou, Fatma Ozcan, Chenhao Ma, Reynold Cheng"
   venue: "arXiv 2025"
@@ -46,6 +54,30 @@
     github: "https://github.com/swe-perf/swe-perf"
     website: "https://swe-perf.github.io"
 
+- title: "MetaGen: A DSL, Database, and Benchmark for VLM-Assisted Metamaterial Generation"
+  authors: "Liane Makatura, Benjamin Jones, Siyuan Bian, Wojciech Matusik"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.17568"
+    github: ""
+    website: ""
+
+- title: "WebDS: An End-to-End Benchmark for Web-based Data Science"
+  authors: "Ethan Hsu, Hong Meng Yam, Ines Bouissou, Aaron Murali John, Raj Thota, Josh Koe, Vivek Sarath Putta, G K Dharesan, Alexander Spangher, Shikhar Murty, Tenghao Huang, Christopher D. Manning"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.01222"
+    github: ""
+    website: ""
+
+- title: "Plot2Code: A Comprehensive Benchmark for Evaluating Multi-modal Large Language Models in Code Generation from Scientific Plots"
+  authors: "Chengyue Wu, Yixiao Ge, Qiushan Guo, Jiahao Wang, Zhixuan Liang, Zeyu Lu, Ying Shan, Ping Luo"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2405.07990"
+    github: "https://github.com/TencentARC/Plot2Code"
+    website: "https://huggingface.co/datasets/TencentARC/Plot2Code"
+
 - title: "SWE-rebench: An Automated Pipeline for Task Collection and Decontaminated Evaluation of Software Engineering Agents"
   authors: "Ibragim Badertdinov, Alexander Golubev, Maksim Nekrashevich, Anton Shevtsov, Simon Karasik, Andrei Andriushchenko, Maria Trofimova, Daria Litvintseva, Boris Yangel"
   venue: "arXiv 2025"
@@ -69,6 +101,14 @@
     paper: "https://arxiv.org/abs/2509.09853"
     github: "https://centre-for-software-excellence.github.io/SWE-Effi/"  
     website: "https://github.com/Centre-for-Software-Excellence/SWE-Effi"
+
+- title: "PReview: A Benchmark Dataset for Pull Request Outcomes and Quality Analysis"
+  authors: "Anonymous Authors"
+  venue: "2025"  
+  links:
+    paper: "https://openreview.net/forum?id=cdwp8BXTVV"
+    github: ""  
+    website: ""
 
 - title: "SEC-bench: Automated Benchmarking of LLM Agents on Real-World Software Security Tasks"
   authors: "Hwiwon Lee, Ziqi Zhang, Hanxiao Lu, Lingming Zhang"
@@ -118,6 +158,14 @@
     github: "https://github.com/LiuHengyu321/IR3D-Bench"
     website: "https://ir3d-bench.github.io/"
 
+- title: "BlenderGym: Benchmarking Foundational Model Systems for Graphics Editing"
+  authors: "Yunqi Gu, Ian Huang, Jihyeon Je, Guandao Yang, Leonidas Guiba"
+  venue: "CVPR 2025"
+  links:
+    paper: "https://openaccess.thecvf.com/content/CVPR2025/html/Gu_BlenderGym_Benchmarking_Foundational_Model_Systems_for_Graphics_Editing_CVPR_2025_paper.html"
+    github: "https://github.com/richard-guyunqi/BlenderGym-Open"
+    website: "https://blendergym.github.io/"
+
 - title: "SyncMind: Measuring Agent Out-of-Sync Recovery in Collaborative Software Engineering"
   authors: "Xuehang Guo, Xingyao Wang, Yangyi Chen, Sha Li, Chi Han, Manling Li, Heng Ji"
   venue: "ICML 2025"
@@ -150,6 +198,14 @@
     github: "https://github.com/uiuc-kang-lab/cve-bench"
     website: ""
 
+- title: "WebMMU: A Benchmark for Multimodal Multilingual Website Understanding and Code Generation"
+  authors: "Rabiul Awal, Mahsa Massoud, Aarash Feizi, Zichao Li, Suyuchen Wang, Christopher Pal, Aishwarya Agrawal, David Vazquez, Siva Reddy, Juan A. Rodriguez, Perouz Taslakian, Spandana Gella, Sai Rajeswar"
+  venue: "EMNLP 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.16763"
+    github: ""
+    website: "https://webmmu-paper.github.io/"
+
 - title: "CVE-Bench: Benchmarking LLM-based Software Engineering Agent’s Ability to Repair Real-World CVE Vulnerabilities"
   authors: "Peiran Wang, Xiaogeng Liu, Chaowei Xiao"
   venue: "NAACL 2025"
@@ -165,6 +221,22 @@
     paper: "https://aclanthology.org/2025.findings-naacl.82/"
     github: "https://github.com/FSoft-AI4Code/RepoExec"
     website: "https://fsoft-ai4code.github.io/repoexec/"
+
+- title: "FEA-Bench: A Benchmark for Evaluating Repository-Level Code Generation for Feature Implementation"
+  authors: "Wei Li, Xin Zhang, Zhongxin Guo, Shaoguang Mao, Wen Luo, Guangyue Peng, Yangyu Huang, Houfeng Wang, Scarlett Li"
+  venue: "ACL 2025"  
+  links:
+    paper: "https://arxiv.org/abs/2503.06680"
+    github: "https://github.com/microsoft/FEA-Bench"
+    website: "https://gmago-leway.github.io/fea-bench.github.io/"
+
+- title: "ProjectEval: A Benchmark for Programming Agents Automated Evaluation on Project-Level Code Generation"
+  authors: "Kaiyuan Liu, Youcheng Pan, Yang Xiang, Daojing He, Jing Li, Yexing Du, Tianrun Gao"
+  venue: "ACL 2025 Findings"
+  links:
+    paper: "https://aclanthology.org/2025.findings-acl.1036/"
+    github: "https://github.com/RyanLoil/ProjectEval/"
+    website: ""
 
 - title: "EnvBench: A Benchmark for Automated Environment Setup"
   authors: "Aleksandra Eliseeva, Alexander Kovrigin, Ilia Kholkin, Egor Bogomolov, Yaroslav Zharov"
@@ -189,3 +261,19 @@
     paper: "https://arxiv.org/abs/2310.06770"
     github: "https://github.com/SWE-bench/SWE-bench"
     website: "https://www.swebench.com/"
+
+- title: "CADTalk: An Algorithm and Benchmark for Semantic Commenting of CAD Programs"
+  authors: "Haocheng Yuan, Jing Xu, Hao Pan, Adrien Bousseau, Niloy J. Mitra, Changjian Li"
+  venue: "CVPR 2024"
+  links:
+    paper: "https://openaccess.thecvf.com/content/CVPR2024/html/Yuan_CADTalk_An_Algorithm_and_Benchmark_for_Semantic_Commenting_of_CAD_CVPR_2024_paper.html"
+    github: "https://github.com/YYYYYHC/CADTalk"
+    website: "https://enigma-li.github.io/CADTalk/"
+
+- title: "DA-Code: Agent Data Science Code Generation Benchmark for Large Language Models"
+  authors: "Yiming Huang, Jianwen Luo, Yan Yu, Yitong Zhang, Fangyu Lei, Yifan Wei, Shizhu He, Lifu Huang, Xiao Liu, Jun Zhao, Kang Liu"
+  venue: "EMNLP 2024"
+  links:
+    paper: "https://aclanthology.org/2024.emnlp-main.748/"
+    github: "https://github.com/yiyihum/da-code"
+    website: "https://da-code-bench.github.io/"

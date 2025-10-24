@@ -1,3 +1,11 @@
+- title: "Improving Cursor Tab with online RL"
+  authors: "Jacob Jackson, Phillip Kravtsov, Shomil Jain"
+  venue: "2025"
+  links:
+    paper: "https://cursor.com/blog/tab-rl"
+    github: ""
+    website: ""
+
 - title: "EvoAgentX: An Automated Framework for Evolving Agentic Workflows"
   authors: "Yingxu Wang, Siwei Liu, Jinyuan Fang, Zaiqiao Meng"
   venue: "arXiv 2025"
@@ -101,6 +109,14 @@
     paper: "https://arxiv.org/abs/2406.07155"
     github: "https://github.com/OpenBMB/ChatDev/tree/macnet"
     website: ""
+
+- title: "Commit0: Library Generation from Scratch"
+  authors: "Wenting Zhao, Nan Jiang, Celine Lee, Justin T Chiu, Claire Cardie, Matthias Gallé, Alexander M Rush"
+  venue: "ICLR 2025"
+  links:
+    paper: "https://openreview.net/forum?id=MMwaQEVsAg"
+    github: "https://github.com/commit-0/commit0"
+    website: "https://commit-0.github.io/"
 
 - title: "AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors"
   authors: "Weize Chen, Yusheng Su, Jingwei Zuo, Cheng Yang, Chenfei Yuan, Chi-Min Chan, Heyang Yu, Yaxi Lu, Yi-Hsin Hung, Chen Qian, Yujia Qin, Xin Cong, Ruobing Xie, Zhiyuan Liu, Maosong Sun, Jie Zhou"
