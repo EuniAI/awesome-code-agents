@@ -6,6 +6,22 @@
     github: "https://github.com/TencentARC/Plot2Code"
     website: "https://huggingface.co/datasets/TencentARC/Plot2Code"
 
+- title: "OpusAnimation: Code-Based Dynamic Chart Generation"
+  authors: "Bozheng Li, Miao Yang, Zhenhan Chen, Jiawang Cao, Mushui Liu, Yi Lu, Yongliang Wu, Bin Zhang, Yangguang Ji, Licheng Tang, Jay Wu, Wenbo Zhu"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.03341"
+    github: ""
+    website: ""
+
+- title: "From Charts to Code: A Hierarchical Benchmark for Multimodal Models"
+  authors: "Jiahao Tang, Henry Hengyuan Zhao, Lijian Wu, Yifei Tao, Dongxing Mao, Yang Wan, Jingru Tan, Min Zeng, Min Li, Alex Jinpeng Wang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.17932"
+    github: ""
+    website: ""
+
 - title: "Chart-CoCa: Self-Improving Chart Understanding of Vision LMs via Code-Driven Synthesis and Candidate-Conditioned Answering"
   authors: "Gongyao Jiang, Qiong Luo"
   venue: "CIKM 2025"

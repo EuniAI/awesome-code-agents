@@ -14,6 +14,14 @@
     github: ""
     website: ""
 
+- title: "Inducing Programmatic Skills for Agentic Tasks"
+  authors: "Zora Zhiruo Wang, Apurva Gandhi, Graham Neubig, Daniel Fried"
+  venue: "COLM 2025"
+  links:
+    paper: "https://arxiv.org/abs/2504.06821"
+    github: "https://github.com/zorazrw/agent-skill-induction"
+    website: ""
+
 - title: "Tree-of-Code: A Self-Growing Tree Framework for End-to-End Code Generation and Execution in Complex Tasks"
   authors: "Ziyi Ni, Yifan Li, Ning Yang, Dou Shen, Pin Lyu, Daxiang Dong"
   venue: "ACL 2025 Findings"
@@ -37,3 +45,11 @@
     paper: "https://aclanthology.org/2024.acl-long.850/"
     github: "https://github.com/stonybrooknlp/appworld"
     website: "https://appworld.dev/"
+
+- title: "APIGen: Automated PIpeline for Generating Verifiable and Diverse Function-Calling Datasets"
+  authors: "Zuxin Liu, Thai Hoang, Jianguo Zhang, Ming Zhu, Tian Lan, Shirley Kokane, Juntao Tan, Weiran Yao, Zhiwei Liu, Yihao Feng, Rithesh Murthy, Liangwei Yang, Silvio Savarese, Juan Carlos Niebles, Huan Wang, Shelby Heinecke, Caiming Xiong"
+  venue: "NeurIPS 2024 Datasets and Benchmarks Track"
+  links:
+    paper: "https://proceedings.neurips.cc/paper_files/paper/2024/hash/61cce86d180b1184949e58939c4f983d-Abstract-Datasets_and_Benchmarks_Track.html"
+    github: ""
+    website: "https://apigen-pipeline.github.io/"

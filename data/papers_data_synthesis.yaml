@@ -6,6 +6,22 @@
     github: "https://github.com/R2E-Gym/R2E-Gym"
     website: "https://r2e-gym.github.io/"
 
+- title: "SWE-Factory: Your Automated Factory for Issue Resolution Training Data and Evaluation Benchmarks"
+  authors: "Lianghong Guo, Yanlin Wang, Caihua Li, Pengyu Yang, Jiachi Chen, Wei Tao, Yingtian Zou, Duyu Tang, Zibin Zheng"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.10954"
+    github: "https://github.com/DeepSoftwareAnalytics/swe-factory"
+    website: ""
+
+- title: "SWE-Synth: Synthesizing Verifiable Bug-Fix Data to Enable Large Language Models in Resolving Real-World Bugs"
+  authors: "Minh V.T. Pham, Huy N. Phan, Hoang N. Phan, Cuong Le Chi, Tien N. Nguyen, Nghi D. Q. Bui"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2504.14757"
+    github: "https://github.com/FSoft-AI4Code/SWE-Synth"
+    website: ""
+
 - title: "SWE-Mirror: Scaling Issue-Resolving Datasets by Mirroring Issues Across Repositories"
   authors: "Junhao Wang, Daoguang Zan, Shulin Xin, Siyao Liu, Yurong Wu, Kai Shen"
   venue: "arXiv 2025"
@@ -48,10 +64,18 @@
 
 - title: "Training Software Engineering Agents and Verifiers with SWE-Gym"
   authors: "Jiayi Pan, Xingyao Wang, Graham Neubig, Navdeep Jaitly, Heng Ji, Alane Suhr, Yizhe Zhang"
-  venue: "ICML 2025"  
+  venue: "ICML 2025"
   links:
     paper: "https://arxiv.org/abs/2412.21139"
     github: "https://github.com/SWE-Gym/SWE-Gym"
+    website: ""
+
+- title: "SWE-Flow: Synthesizing Software Engineering Data in a Test-Driven Manner"
+  authors: "Lei Zhang, Jiaxi Yang, Min Yang, Jian Yang, Mouxiang Chen, Jiajun Zhang, Zeyu Cui, Binyuan Hui, Junyang Lin"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.09003"
+    github: "https://github.com/Hambaobao/SWE-Flow"
     website: ""
 
 - title: "Automated Benchmark Generation for Repository-Level Coding Tasks"
@@ -69,3 +93,11 @@
     paper: "https://dl.acm.org/doi/abs/10.1145/3690624.3709321"
     github: "https://github.com/Aaron617/AgentGen"
     website: "https://agent-gen.github.io/"
+
+- title: "APIGen: Automated PIpeline for Generating Verifiable and Diverse Function-Calling Datasets"
+  authors: "Zuxin Liu, Thai Hoang, Jianguo Zhang, Ming Zhu, Tian Lan, Shirley Kokane, Juntao Tan, Weiran Yao, Zhiwei Liu, Yihao Feng, Rithesh Murthy, Liangwei Yang, Silvio Savarese, Juan Carlos Niebles, Huan Wang, Shelby Heinecke, Caiming Xiong"
+  venue: "NeurIPS 2024 Datasets and Benchmarks Track"
+  links:
+    paper: "https://proceedings.neurips.cc/paper_files/paper/2024/hash/61cce86d180b1184949e58939c4f983d-Abstract-Datasets_and_Benchmarks_Track.html"
+    github: ""
+    website: "https://apigen-pipeline.github.io/"

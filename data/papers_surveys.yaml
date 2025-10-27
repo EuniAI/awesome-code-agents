@@ -1,3 +1,11 @@
+- title: "A Survey of Vibe Coding with Large Language Models"
+  authors: "Yuyao Ge, Lingrui Mei, Zenghao Duan, Tianhao Li, Yujia Zheng, Yiwei Wang, Lexin Wang, Jiayu Yao, Tianyu Liu, Yujun Cai, Baolong Bi, Fangda Guo, Jiafeng Guo, Shenghua Liu, Xueqi Cheng"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.12399"
+    github: "https://github.com/YuyaoGe/Awesome-Vibe-Coding"
+    website: ""
+
 - title: "A Comprehensive Survey on Benchmarks and Solutions in Software Engineering of LLM-Empowered Agentic System"
   authors: "Jiale Guo, Suizhi Huang, Mei Li, Dong Huang, Xingsheng Chen, Regina Zhang, Zhijiang Guo, Han Yu, Siu-Ming Yiu, Christian Jensen, Pietro Lio, Kwok-Yan Lam"
   venue: "arXiv 2025"
@@ -14,6 +22,22 @@
     github: "https://github.com/JiaruQian/awesome-llm-based-agent4code"
     website: ""
 
+- title: "LLM-Based Data Science Agents: A Survey of Capabilities, Challenges, and Future Directions"
+  authors: "Mizanur Rahman, Amran Bhuiyan, Mohammed Saidul Islam, Md Tahmid Rahman Laskar, Ridwan Mahbub, Ahmed Masry, Shafiq Joty, Enamul Hoque"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.04023"
+    github: ""
+    website: ""
+
+- title: "Large Language Model Agent: A Survey on Methodology, Applications and Challenges"
+  authors: "Junyu Luo, Weizhi Zhang, Ye Yuan, Yusheng Zhao, Junwei Yang, Yiyang Gu, Bohan Wu, Binqi Chen, Ziyue Qiao, Qingqing Long, Rongcheng Tu, Xiao Luo, Wei Ju, Zhiping Xiao, Yifan Wang, Meng Xiao, Chenwu Liu, Jingyang Yuan, Shichang Zhang, Yiqiao Jin, Fan Zhang, Xian Wu, Hanqing Zhao, Dacheng Tao, Philip S. Yu, Ming Zhang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.21460"
+    github: "https://github.com/luo-junyu/Awesome-Agent-Papers"
+    website: ""
+
 - title: "How Does LLM Reasoning Work for Code? A Survey and a Call to Action"
   authors: "Ira Ceka, Saurabh Pujar, Irene Manotas, Gail Kaiser, Baishakhi Ray, Shyam Ramji"
   venue: "arXiv 2025"
@@ -27,6 +51,14 @@
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2505.19443"
+    github: ""
+    website: ""
+
+- title: "Develop AI Agents for System Engineering in Factorio"
+  authors: "Neel Kant"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.01492"
     github: ""
     website: ""
 

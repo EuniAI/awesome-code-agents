@@ -1,3 +1,51 @@
+# - title: "OpenSCAD"
+#   authors: "OpenSCAD"
+#   venue: "2025"
+#   links:
+#     paper: ""
+#     github: "https://github.com/openscad/openscad"
+#     website: "https://openscad.org/"
+
+# - title: "ScadLM: Open source agentic AI CAD generation built on OpenSCAD"
+#   authors: "Krish Shah"
+#   venue: "2025"
+#   links:
+#     paper: ""
+#     github: "https://github.com/KrishKrosh/ScadLM"
+#     website: ""
+
+# - title: "FlowsCAD: AI-Driven Iterative OpenSCAD Design with Claude Code"
+#   authors: "Dexmac"
+#   venue: "2025"
+#   links:
+#     paper: ""
+#     github: "https://github.com/dexmac221/FlowsCad"
+#     website: ""
+
+# - title: "OpenSCAD MCP Server"
+#   authors: "jhacksman"
+#   venue: "2025"
+#   links:
+#     paper: ""
+#     github: "https://github.com/jhacksman/OpenSCAD-MCP-Server"
+#     website: ""
+
+- title: "From Idea to CAD: A Language Model-Driven Multi-Agent System for Collaborative Design"
+  authors: "Felix Ocker, Stefan Menzel, Ahmed Sadik, Thiago Rios"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.04417"
+    github: ""
+    website: ""
+
+- title: "CADDesigner: Conceptual Design of CAD Models Based on General-Purpose Agent"
+  authors: "Jingzhe Ni, Xiaolong Yin, Xingyu Lu, Xintong Li, Ji Wei, Ruofeng Tong, Min Tang, Peng Du"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.01031"
+    github: ""
+    website: ""
+
 - title: "Agentic Design of Compositional Machines"
   authors: "Wenqian Zhang, Weiyang Liu, Zhen Liu"
   venue: "arXiv 2025"
@@ -51,6 +99,22 @@
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2502.08884"
+    github: ""
+    website: ""
+
+- title: "Generating CAD Code with Vision-Language Models for 3D Designs"
+  authors: "Kamel Alrashedy, Pradyumna Tambwekar, Zulfiqar Haider Zaidi, Megan Langwasser, Wei Xu, Matthew Gombolay"
+  venue: "ICLR 2025"
+  links:
+    paper: "https://openreview.net/forum?id=BLWaTeucYX"
+    github: "https://github.com/Kamel773/CAD_Code_Generation"
+    website: ""
+
+- title: "CAD-Llama: Leveraging Large Language Models for Computer-Aided Design Parametric 3D Model Generation"
+  authors: "Jiahao Li, Weijian Ma, Xueyang Li, Yunzhong Lou, Guichun Zhou, Xiangdong Zhou"
+  venue: "CVPR 2025"
+  links:
+    paper: "https://openaccess.thecvf.com/content/CVPR2025/html/Li_CAD-Llama_Leveraging_Large_Language_Models_for_Computer-Aided_Design_Parametric_3D_CVPR_2025_paper.html"
     github: ""
     website: ""
 
@@ -131,5 +195,13 @@
   venue: "arXiv 2024"
   links:
     paper: "https://arxiv.org/abs/2403.09675"
+    github: ""
+    website: ""
+
+- title: "How Can Large Language Models Help Humans in Design and Manufacturing?"
+  authors: "Liane Makatura, Michael Foshey, Bohan Wang, Felix HähnLein, Pingchuan Ma, Bolei Deng, Megan Tjandrasuwita, Andrew Spielberg, Crystal Elaine Owens, Peter Yichen Chen, Allan Zhao, Amy Zhu, Wil J Norton, Edward Gu, Joshua Jacob, Yifei Li, Adriana Schulz, Wojciech Matusik"
+  venue: "arXiv 2023"
+  links:
+    paper: "https://arxiv.org/abs/2307.14377"
     github: ""
     website: ""

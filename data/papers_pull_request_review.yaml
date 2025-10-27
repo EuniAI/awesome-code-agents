@@ -1,9 +1,17 @@
+- title: "Benchmarking and Studying the LLM-based Code Review"
+  authors: "Zhengran Zeng, Ruikai Shi, Keke Han, Yixin Li, Kaicheng Sun, Yidong Wang, Zhuohao Yu, Rui Xie, Wei Ye, Shikun Zhang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.01494"
+    github: ""
+    website: ""
+
 - title: "PReview: A Benchmark Dataset for Pull Request Outcomes and Quality Analysis"
   authors: "Anonymous Authors"
-  venue: "2025"  
+  venue: "2025"
   links:
     paper: "https://openreview.net/forum?id=cdwp8BXTVV"
-    github: ""  
+    github: ""
     website: ""
 
 - title: "PR-Agent: An AI-Powered Tool for Automated Pull Request Analysis, Feedback, Suggestions and More!"

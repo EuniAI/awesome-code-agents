@@ -22,6 +22,14 @@
     github: "https://github.com/amazon-science/SWE-PolyBench"
     website: "https://amazon-science.github.io/SWE-PolyBench/"
 
+- title: "Programming with Pixels: Can Computer-Use Agents do Software Engineering?"
+  authors: "Pranjal Aggarwal, Sean Welleck"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.18525"
+    github: "https://github.com/ProgrammingwithPixels/PwP"
+    website: "https://programmingwithpixels.com/"
+
 - title: "MORSE-500: A Programmatically Controllable Video Benchmark to Stress-Test Multimodal Reasoning"
   authors: "Zikui Cai, Andrew Wang, Anirudh Satheesh, Ankit Nakhawa, Hyunwoo Jae, Keenan Powell, Minghui Liu, Neel Jay, Sungbin Oh, Xiyao Wang, Yongyuan Liang, Tom Goldstein, Furong Huang"
   venue: "arXiv 2025"
@@ -46,6 +54,14 @@
     github: "https://github.com/multi-swe-bench/multi-swe-bench"
     website: "https://multi-swe-bench.github.io/"
 
+- title: "GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leveraging"
+  authors: "Ziyi Ni, Huacan Wang, Shuo Zhang, Shuo Lu, Ziyang He, Wang You, Zhenheng Tang, Yuntao Du, Bill Sun, Hongzhang Liu, Sen Hu, Ronghao Chen, Bo Li, Xin Li, Chen Hu, Binxing Jiao, Daxin Jiang, Pin Lyu"
+  venue: "arxiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.18993"
+    github: "https://github.com/QuantaAlpha/GitTaskBench"
+    website: "https://gittaskbench.github.io/"
+
 - title: "SWE-Perf: Can Language Models Optimize Code Performance on Real-World Repositories?"
   authors: "Xinyi He, Qian Liu, Mingzhe Du, Lin Yan, Zhijie Fan, Yiming Huang, Zejian Yuan, Zejun Ma"
   venue: "arXiv 2025"
@@ -61,6 +77,14 @@
     paper: "https://arxiv.org/abs/2508.17568"
     github: ""
     website: ""
+
+- title: "Is Your Automated Software Engineer Trustworthy?"
+  authors: "Noble Saji Mathews, Meiyappan Nagappan"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.17812"
+    github: "https://github.com/uw-swag/BouncerBench"
+    website: "https://bouncerbench.com/"
 
 - title: "WebDS: An End-to-End Benchmark for Web-based Data Science"
   authors: "Ethan Hsu, Hong Meng Yam, Ines Bouissou, Aaron Murali John, Raj Thota, Josh Koe, Vivek Sarath Putta, G K Dharesan, Alexander Spangher, Shikhar Murty, Tenghao Huang, Christopher D. Manning"
@@ -99,15 +123,15 @@
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2509.09853"
-    github: "https://centre-for-software-excellence.github.io/SWE-Effi/"  
+    github: "https://centre-for-software-excellence.github.io/SWE-Effi/"
     website: "https://github.com/Centre-for-Software-Excellence/SWE-Effi"
 
 - title: "PReview: A Benchmark Dataset for Pull Request Outcomes and Quality Analysis"
   authors: "Anonymous Authors"
-  venue: "2025"  
+  venue: "2025"
   links:
     paper: "https://openreview.net/forum?id=cdwp8BXTVV"
-    github: ""  
+    github: ""
     website: ""
 
 - title: "SEC-bench: Automated Benchmarking of LLM Agents on Real-World Software Security Tasks"
@@ -140,6 +164,14 @@
   links:
     paper: "https://openreview.net/forum?id=Gxw1EDSm9S"
     github: ""
+    website: ""
+
+- title: "Can Agents Fix Agent Issues?"
+  authors: "Alfin Wijaya Rahardja, Junwei Liu, Weitong Chen, Zhenpeng Chen, Yiling Lou"
+  venue: "NeurIPS 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.20749"
+    github: "https://github.com/alfin06/AgentIssue-Bench"
     website: ""
 
 - title: "SWE-bench Goes Live!"
@@ -224,7 +256,7 @@
 
 - title: "FEA-Bench: A Benchmark for Evaluating Repository-Level Code Generation for Feature Implementation"
   authors: "Wei Li, Xin Zhang, Zhongxin Guo, Shaoguang Mao, Wen Luo, Guangyue Peng, Yangyu Huang, Houfeng Wang, Scarlett Li"
-  venue: "ACL 2025"  
+  venue: "ACL 2025"
   links:
     paper: "https://arxiv.org/abs/2503.06680"
     github: "https://github.com/microsoft/FEA-Bench"
@@ -261,6 +293,14 @@
     paper: "https://arxiv.org/abs/2310.06770"
     github: "https://github.com/SWE-bench/SWE-bench"
     website: "https://www.swebench.com/"
+
+- title: "RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems"
+  authors: "Tianyang Liu, Canwen Xu, Julian McAuley"
+  venue: "ICLR 2024"
+  links:
+    paper: "https://openreview.net/forum?id=pPjZIOuQuF"
+    github: "https://github.com/Leolty/repobench"
+    website: ""
 
 - title: "CADTalk: An Algorithm and Benchmark for Semantic Commenting of CAD Programs"
   authors: "Haocheng Yuan, Jing Xu, Hao Pan, Adrien Bousseau, Niloy J. Mitra, Changjian Li"

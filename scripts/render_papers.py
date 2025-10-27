@@ -120,13 +120,35 @@ def badge_website(url: str) -> str:
             f"&down_color=blue"
             f"&style=for-the-badge)]({url})"
         )
-    except Exception as e:
+    except Exception:
         return f"[![Website](https://img.shields.io/website?url={url}&up_message=Website&up_color=blue&down_message=Website&down_color=blue&style=for-the-badge)]({url})"
+
+def format_authors(authors_field) -> str:
+    """Format authors string with 'et al.' if there are more than 10 authors.
+
+    Accepts either a comma-separated string or a list of author names.
+    """
+    if not authors_field:
+        return ""
+    if isinstance(authors_field, list):
+        names = [str(a).strip() for a in authors_field if str(a).strip()]
+    else:
+        # Assume comma-separated names in a string
+        names = [s.strip() for s in str(authors_field).split(",") if s.strip()]
+
+    if len(names) > 10:
+        display = ", ".join(names[:10]) + ", et al."
+    else:
+        display = ", ".join(names)
+
+    return display
 
 def render_entry(e: dict) -> str:
     # title = to_title_case(e.get("title", "").rstrip("."))
     title = e.get("title", "").rstrip(".")
-    authors = e.get("authors", "")
+    # authors = e.get("authors", "")
+    authors_raw = e.get("authors", "")
+    authors = format_authors(authors_raw)
     venue = e.get("venue", "")
     links = e.get("links", {}) or {}
     paper = links.get("paper", "")
@@ -137,7 +159,10 @@ def render_entry(e: dict) -> str:
 
     lines = []
     lines.append(f"- **{title}**  " if title[-1] in "?!" else f"- **{title}.**  ")
-    lines.append(f"  _{authors}._ {venue}.  ")
+    # lines.append(f"  _{authors}._ {venue}.  ")
+    # Avoid double periods if authors already end with '.' (e.g., 'et al.')
+    authors_clean = authors.rstrip(" .")
+    lines.append(f"  _{authors_clean}._ {venue}.  ")
     if badges:
         lines.append(f"  {badges}")
     return "\n".join(lines)

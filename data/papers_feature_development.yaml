@@ -1,7 +1,23 @@
+- title: "NoCode-bench: A Benchmark for Evaluating Natural Language-Driven Feature Addition"
+  authors: "Le Deng, Zhonghao Jiang, Jialun Cao, Michael Pradel, Zhongxin Liu"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.18130"
+    github: ""
+    website: ""
+
 - title: "FEA-Bench: A Benchmark for Evaluating Repository-Level Code Generation for Feature Implementation"
   authors: "Wei Li, Xin Zhang, Zhongxin Guo, Shaoguang Mao, Wen Luo, Guangyue Peng, Yangyu Huang, Houfeng Wang, Scarlett Li"
-  venue: "ACL 2025"  
+  venue: "ACL 2025"
   links:
     paper: "https://arxiv.org/abs/2503.06680"
     github: "https://github.com/microsoft/FEA-Bench"
     website: "https://gmago-leway.github.io/fea-bench.github.io/"
+
+- title: "SWE-Dev: Building Software Engineering Agents with Training and Inference Scaling"
+  authors: "Haoran Wang, Zhenyu Hou, Yao Wei, Jie Tang, Yuxiao Dong"
+  venue: "ACL 2025 Findings"
+  links:
+    paper: "https://arxiv.org/abs/2506.07636"
+    github: "https://github.com/THUDM/SWE-Dev"
+    website: ""

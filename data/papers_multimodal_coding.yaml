@@ -1,3 +1,11 @@
+- title: "Seeing is Fixing: Cross-Modal Reasoning with Multimodal LLMs for Visual Software Issue Fixing"
+  authors: "Kai Huang, Jian Zhang, Xiaofei Xie, Chunyang Chen"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.16136"
+    github: ""
+    website: ""
+
 - title: "Coding Agents with Multimodal Browsing are Generalist Problem Solvers"
   authors: "Aditya Bharat Soni, Boxuan Li, Xingyao Wang, Valerie Chen, Graham Neubig"
   venue: "arXiv 2025"
@@ -5,6 +13,22 @@
     paper: "https://arxiv.org/abs/2506.03011"
     github: "https://github.com/adityasoni9998/OpenHands-Versa"
     website: ""
+
+- title: "GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leveraging"
+  authors: "Ziyi Ni, Huacan Wang, Shuo Zhang, Shuo Lu, Ziyang He, Wang You, Zhenheng Tang, Yuntao Du, Bill Sun, Hongzhang Liu, Sen Hu, Ronghao Chen, Bo Li, Xin Li, Chen Hu, Binxing Jiao, Daxin Jiang, Pin Lyu"
+  venue: "arxiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.18993"
+    github: "https://github.com/QuantaAlpha/GitTaskBench"
+    website: "https://gittaskbench.github.io/"
+
+- title: "SWE-bench Multimodal: Do AI Systems Generalize to Visual Software Domains?"
+  authors: "John Yang, Carlos E Jimenez, Alex L Zhang, Kilian Lieret, Joyce Yang, Xindi Wu, Ori Press, Niklas Muennighoff, Gabriel Synnaeve, Karthik R Narasimhan, Diyi Yang, Sida Wang, Ofir Press"
+  venue: "ICLR 2025"
+  links:
+    paper: "https://openreview.net/forum?id=riTiq3i21b"
+    github: "https://github.com/SWE-bench/SWE-bench"
+    website: "https://www.swebench.com/multimodal.html"
 
 - title: "CodeV: Issue Resolving with Visual Data"
   authors: "Linhao Zhang, Daoguang Zan, Quanshun Yang, Zhirong Huang, Dong Chen, Bo Shen, Tianyu Liu, Yongshun Gong, Huang Pengjie, Xudong Lu, Guangtai Liang, Lizhen Cui, Qianxiang Wang"

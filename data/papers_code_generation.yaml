@@ -1,3 +1,19 @@
+- title: "SimdBench: Benchmarking Large Language Models for SIMD-Intrinsic Code Generation"
+  authors: "Yibo He, Shuoran Zhao, Jiaming Huang, Yingjie Fu, Hao Yu, Cunjian Huang, Tao Xie"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.15224"
+    github: ""
+    website: ""
+
+- title: "DesignBench: A Comprehensive Benchmark for MLLM-based Front-end Code Generation"
+  authors: "Jingyu Xiao, Ming Wang, Man Ho Lam, Yuxuan Wan, Junliang Liu, Yintong Huo, Michael R. Lyu"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.06251"
+    github: ""
+    website: ""
+
 - title: "Improving Cursor Tab with online RL"
   authors: "Jacob Jackson, Phillip Kravtsov, Shomil Jain"
   venue: "2025"
@@ -45,6 +61,14 @@
     paper: "https://arxiv.org/abs/2503.18494"
     github: ""
     website: ""
+
+- title: "KernelBench: Can LLMs Write Efficient GPU Kernels?"
+  authors: "Anne Ouyang, Simon Guo, Simran Arora, Alex L. Zhang, William Hu, Christopher Ré, Azalia Mirhoseini"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.10517"
+    github: "https://github.com/ScalingIntelligence/KernelBench"
+    website: "https://scalingintelligence.stanford.edu/blogs/kernelbench/"
 
 - title: "On the Impacts of Contexts on Repository-Level Code Generation"
   authors: "Nam Le Hai, Dung Manh Nguyen, Nghi D. Q. Bui"
@@ -124,6 +148,14 @@
   links:
     paper: "https://openreview.net/forum?id=EHg5GDnyq1"
     github: "https://github.com/OpenBMB/AgentVerse"
+    website: ""
+
+- title: "RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems"
+  authors: "Tianyang Liu, Canwen Xu, Julian McAuley"
+  venue: "ICLR 2024"
+  links:
+    paper: "https://openreview.net/forum?id=pPjZIOuQuF"
+    github: "https://github.com/Leolty/repobench"
     website: ""
 
 - title: "RepoAgent: An LLM-Powered Open-Source Framework for Repository-level Code Documentation Generation"

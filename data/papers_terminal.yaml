@@ -1,3 +1,12 @@
+- title: "Terminus: A research-preview agent for consistently evaluating the abilities of language models to power autonomous agents in the terminal"
+  authors: "Mike Merrill, Alex Shaw"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/laude-institute/terminal-bench"
+    website: "https://www.tbench.ai/terminus"
+
+
 - title: "Terminal-Bench: A Benchmark for AI Agents in Terminal Environments"
   authors: "The Terminal-Bench Team"
   venue: "2025"

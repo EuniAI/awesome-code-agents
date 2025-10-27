@@ -14,6 +14,14 @@
     github: "https://github.com/mnluzimu/WebGen-Bench"
     website: ""
 
+- title: "Interaction2Code: Benchmarking MLLM-based Interactive Webpage Code Generation from Interactive Prototyping"
+  authors: "Jingyu Xiao, Yuxuan Wan, Yintong Huo, Zixin Wang, Xinyi Xu, Wenxuan Wang, Zhiyao Xu, Yuhang Wang, Michael R. Lyu"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2411.03292"
+    github: ""
+    website: ""
+
 - title: "WebMMU: A Benchmark for Multimodal Multilingual Website Understanding and Code Generation"
   authors: "Rabiul Awal, Mahsa Massoud, Aarash Feizi, Zichao Li, Suyuchen Wang, Christopher Pal, Aishwarya Agrawal, David Vazquez, Siva Reddy, Juan A. Rodriguez, Perouz Taslakian, Spandana Gella, Sai Rajeswar"
   venue: "EMNLP 2025"

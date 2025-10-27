@@ -1,3 +1,59 @@
+- title: "Reinforcement Learning for Machine Learning Engineering Agents"
+  authors: "Sherry Yang, Joy He-Yueya, Percy Liang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.01684"
+    github: ""
+    website: ""
+
+- title: "MLE-Smith: Scaling MLE Tasks with Automated Multi-Agent Pipeline"
+  authors: "Rushi Qiang, Yuchen Zhuang, Anikait Singh, Percy Liang, Chao Zhang, Sherry Yang, Bo Dai"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.07307"
+    github: ""
+    website: ""
+
+- title: "AIDE: AI-Driven Exploration in the Space of Code"
+  authors: "Zhengyao Jiang, Dominik Schmidt, Dhruv Srikanth, Dixing Xu, Ian Kaplan, Deniss Jacenko, Yuxiang Wu"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.13138"
+    github: "https://github.com/WecoAI/aideml"
+    website: "https://www.weco.ai/"
+
+- title: "Towards Community-Driven Agents for Machine Learning Engineering"
+  authors: "Sijie Li, Weiwei Sun, Shanda Li, Ameet Talwalkar, Yiming Yang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.20640"
+    github: "https://github.com/comind-ml/CoMind"
+    website: ""
+
+- title: "ML-Agent: Reinforcing LLM Agents for Autonomous Machine Learning Engineering"
+  authors: "Zexi Liu, Jingyi Chai, Xinyu Zhu, Shuo Tang, Rui Ye, Bo Zhang, Lei Bai, Siheng Chen"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.23723"
+    github: "https://github.com/MASWorks/ML-Agent"
+    website: ""
+
+- title: "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering"
+  authors: "Jun Shern Chan, Neil Chowdhury, Oliver Jaffe, James Aung, Dane Sherburn, Evan Mays, Giulio Starace, Kevin Liu, Leon Maksin, Tejal Patwardhan, Lilian Weng, Aleksander Mądry"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2410.07095"
+    github: "https://github.com/openai/mle-bench"
+    website: "https://openai.com/index/mle-bench/"
+
+- title: "MLE-STAR: Machine Learning Engineering Agent via Search and Targeted Refinement"
+  authors: "Jaehyun Nam, Jinsung Yoon, Jiefeng Chen, Jinwoo Shin, Sercan Ö. Arık, Tomas Pfister"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.15692"
+    github: "https://github.com/jaehyun513/MLE-STAR"
+    website: ""
+
 - title: "ResearchCodeAgent: An LLM Multi-Agent System for Automated Codification of Research Methodologies"
   authors: "Shubham Gandhi, Dhruv Shah, Manasi Patwardhan, Lovekesh Vig, Gautam Shroff"
   venue: "arXiv 2025"
@@ -6,6 +62,22 @@
     github: ""
     website: ""
 
+- title: "MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research"
+  authors: "Hui Chen, Miao Xiong, Yujie Lu, Wei Han, Ailin Deng, Yufei He, Jiaying Wu, Yibo Li, Yue Liu, Bryan Hooi"
+  venue: "NeurIPS 2025 Datasets & Benchmarks Track"
+  links:
+    paper: "https://arxiv.org/abs/2505.19955"
+    github: ""
+    website: ""
+
+- title: "RepoMaster: Autonomous Exploration and Understanding of GitHub Repositories for Complex Task Solving"
+  authors: "Huacan Wang, Ziyi Ni, Shuo Zhang, Shuo Lu, Sen Hu, Ziyang He, Chen Hu, Jiaye Lin, Yifu Guo, Ronghao Chen, Xin Li, Daxin Jiang, Yuntao Du, Pin Lyu"
+  venue: "NeurIPS 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.21577"
+    github: "https://github.com/QuantaAlpha/RepoMaster"
+    website: "https://quantaalpha.com/"
+
 - title: "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering"
   authors: "Jun Shern Chan, Neil Chowdhury, Oliver Jaffe, James Aung, Dane Sherburn, Evan Mays, Giulio Starace, Kevin Liu, Leon Maksin, Tejal Patwardhan, Lilian Weng, Aleksander Mądry"
   venue: "ICLR 2025"
@@ -13,3 +85,19 @@
     paper: "https://arxiv.org/abs/2410.07095"
     github: "https://github.com/openai/mle-bench"
     website: "https://openai.com/index/mle-bench/"
+
+- title: "ML-Bench: Evaluating Large Language Models and Agents for Machine Learning Tasks on Repository-Level Code"
+  authors: "Xiangru Tang, Yuliang Liu, Zefan Cai, Daniel Shao, Junjie Lu, Yichi Zhang, Zexuan Deng, Helan Hu, Kaikai An, Ruijun Huang, Shuzheng Si, Chen Sheng, Haozhe Zhao, Liang Chen, Tianyu Liu, Yujia Qin, Wangchunshu Zhou, Yilun Zhao, Zhiwei Jiang, Baobao Chang, Arman Cohan, Mark Gerstein"
+  venue: "ICLR 2025 Workshop"
+  links:
+    paper: "https://arxiv.org/abs/2311.09835"
+    github: "https://github.com/gersteinlab/ML-bench"
+    website: "https://ml-bench.github.io/"
+
+- title: "MLE-Agent: Your Intelligent Companion for Seamless AI Engineering and Research"
+  authors: "Huaizheng Zhang, Yizheng Huang, Lei Zhang"
+  venue: "2024"
+  links:
+    paper: ""
+    github: "https://github.com/MLSysOps/MLE-agent"
+    website: ""

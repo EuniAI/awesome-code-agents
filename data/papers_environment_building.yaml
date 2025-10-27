@@ -1,3 +1,11 @@
+- title: "DI-BENCH: Benchmarking Large Language Models on Dependency Inference with Testable Repositories at Scale"
+  authors: "Linghao Zhang, Junhao Wang, Shilin He, Chaoyun Zhang, Yu Kang, Bowen Li, Jiaheng Wen, Chengxing Xie, Maoquan Wang, Yufan Huang, Elsie Nallipogu, Qingwei Lin, Yingnong Dang, Saravan Rajmohan, Dongmei Zhang, Qi Zhang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2501.13699"
+    github: ""
+    website: ""
+
 - title: "Repo2Run: Automated Building Executable Environment for Code Repository at Scale"
   authors: "Ruida Hu, Chao Peng, Xinchen Wang, Junjielong Xu, Cuiyun Gao"
   venue: "NeurIPS 2025"

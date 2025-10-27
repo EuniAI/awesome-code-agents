@@ -1,0 +1,23 @@
+- title: "Agentic Bug Reproduction for Effective Automated Program Repair at Google"
+  authors: "Runxiang Cheng, Michele Tufano, Jürgen Cito, José Cambronero, Pat Rondon, Renyao Wei, Aaron Sun, Satish Chandra"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.01821"
+    github: ""
+    website: ""
+
+- title: "LLMs as Continuous Learners: Improving the Reproduction of Defective Code in Software Issues"
+  authors: "Yalan Lin, Yingwei Ma, Rongyu Cao, Binhua Li, Fei Huang, Xiaodong Gu, Yongbin Li"
+  venue: "arXiv 2024"
+  links:
+    paper: "https://arxiv.org/abs/2411.13941"
+    github: ""
+    website: ""
+
+- title: "TDD-Bench Verified: Can LLMs Generate Tests for Issues Before They Get Resolved?"
+  authors: "Toufique Ahmed, Martin Hirzel, Rangeet Pan, Avraham Shinnar, Saurabh Sinha"
+  venue: "arXiv 2024"
+  links:
+    paper: "https://arxiv.org/abs/2412.02883"
+    github: ""
+    website: ""

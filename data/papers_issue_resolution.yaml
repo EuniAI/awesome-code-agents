@@ -46,6 +46,22 @@
     github: "https://github.com/ExpeRepair/ExpeRepair"
     website: ""
 
+- title: "Thinking Longer, Not Larger: Enhancing Software Engineering Agents via Scaling Test-Time Compute"
+  authors: "Yingwei Ma, Yongbin Li, Yihong Dong, Xue Jiang, Rongyu Cao, Jue Chen, Fei Huang, Binhua Li"
+  venue: "arxiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.23803"
+    github: "https://github.com/yingweima2022/SWE-Reasoner"
+    website: ""
+
+- title: "debug-gym: A Text-Based Environment for Interactive Debugging"
+  authors: "Xingdi Yuan, Morgane M Moss, Charbel El Feghali, Chinmay Singh, Darya Moldavskaya, Drew MacPhee, Lucas Caccia, Matheus Pereira, Minseon Kim, Alessandro Sordoni, Marc-Alexandre Côté"
+  venue: "arxiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.21557"
+    github: "https://github.com/microsoft/debug-gym"
+    website: "https://microsoft.github.io/debug-gym/"
+
 - title: "R2E-Gym: Procedural Environments and Hybrid Verifiers for Scaling Open-Weights SWE Agents"
   authors: "Naman Jain, Jaskirat Singh, Manish Shetty, Liang Zheng, Koushik Sen, Ion Stoica"
   venue: "arXiv 2025"
@@ -54,11 +70,67 @@
     github: "https://github.com/R2E-Gym/R2E-Gym"
     website: "https://r2e-gym.github.io/"
 
+- title: "SWE-Factory: Your Automated Factory for Issue Resolution Training Data and Evaluation Benchmarks"
+  authors: "Lianghong Guo, Yanlin Wang, Caihua Li, Pengyu Yang, Jiachi Chen, Wei Tao, Yingtian Zou, Duyu Tang, Zibin Zheng"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.10954"
+    github: "https://github.com/DeepSoftwareAnalytics/swe-factory"
+    website: ""
+
+- title: "Kimi-Dev: Agentless Training as Skill Prior for SWE-Agents"
+  authors: "Zonghan Yang, Shengjie Wang, Kelin Fu, Wenyang He, Weimin Xiong, Yibo Liu, Yibo Miao, Bofei Gao, Yejie Wang, Yingwei Ma, Yanhao Li, Yue Liu, Zhenxing Hu, Kaitai Zhang, Shuyi Wang, Huarong Chen, Flood Sung, Yang Liu, Yang Gao, Zhilin Yang, Tianyu Liu"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.23045"
+    github: ""
+    website: ""
+
+- title: "Lingxi: Repository-Level Issue Resolution Framework Enhanced by Procedural Knowledge Guided Scaling"
+  authors: "Xu Yang, Jiayuan Zhou, Michael Pacheco, Wenhan Zhu, Pengfei He, Shaowei Wang, Kui Liu, Ruiqi Pan"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.11838"
+    github: "https://github.com/lingxi-agent/Lingxi"
+    website: ""
+
+- title: "SWE-Synth: Synthesizing Verifiable Bug-Fix Data to Enable Large Language Models in Resolving Real-World Bugs"
+  authors: "Minh V.T. Pham, Huy N. Phan, Hoang N. Phan, Cuong Le Chi, Tien N. Nguyen, Nghi D. Q. Bui"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2504.14757"
+    github: "https://github.com/FSoft-AI4Code/SWE-Synth"
+    website: ""
+
+- title: "SWE-Bench-CL: Continual Learning for Coding Agents"
+  authors: "Thomas Joshi, Shayan Chowdhury, Fatih Uysal"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.00014"
+    github: "https://github.com/thomasjoshi/agents-never-forget/"
+    website: ""
+
+- title: "A Self-Improving Coding Agent"
+  authors: "Maxime Robeyns, Martin Szummer, Laurence Aitchison"
+  venue: "arxiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2504.15228"
+    github: "https://github.com/MaximeRobeyns/self_improving_coding_agent"
+    website: ""
+
 - title: "Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards"
   authors: "Jeff Da, Clinton Wang, Xiang Deng, Yuntao Ma, Nikhil Barhate, Sean Hendryx"
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2506.11425"
+    github: ""
+    website: ""
+
+- title: "Training Long-Context, Multi-Turn Software Engineering Agents with Reinforcement Learning"
+  authors: "Alexander Golubev, Maria Trofimova, Sergei Polezhaev, Ibragim Badertdinov, Maksim Nekrashevich, Anton Shevtsov, Simon Karasik, Sergey Abramov, Andrei Andriushchenko, Filipp Fisin, Sergei Skvortsov, Boris Yangel"
+  venue: "arxiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.03501"
     github: ""
     website: ""
 
@@ -83,8 +155,24 @@
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2509.09853"
-    github: "https://centre-for-software-excellence.github.io/SWE-Effi/"  
+    github: "https://centre-for-software-excellence.github.io/SWE-Effi/"
     website: "https://github.com/Centre-for-Software-Excellence/SWE-Effi"
+
+- title: "Enhancing repository-level software repair via repository-aware knowledge graphs"
+  authors: "Boyang Yang, Jiadong Ren, Shunfu Jin, Yang Liu, Feng Liu, Bach Le, Haoye Tian"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.21710"
+    github: "https://github.com/GLEAM-Lab/KGCompass"
+    website: ""
+
+- title: "SemAgent: A Semantics Aware Program Repair Agent"
+  authors: "Anvith Pabba, Alex Mathai, Anindya Chakraborty, Baishakhi Ray"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.16650"
+    github: ""
+    website: ""
 
 - title: "HyperAgent: Generalist Software Engineering Agents to Solve Coding Tasks at Scale"
   authors: "Huy Nhat Phan, Tien N. Nguyen, Phong X. Nguyen, Nghi D. Q. Bui"
@@ -142,6 +230,30 @@
     github: ""
     website: ""
 
+- title: "Can Agents Fix Agent Issues?"
+  authors: "Alfin Wijaya Rahardja, Junwei Liu, Weitong Chen, Zhenpeng Chen, Yiling Lou"
+  venue: "NeurIPS 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.20749"
+    github: "https://github.com/alfin06/AgentIssue-Bench"
+    website: ""
+
+- title: "RepoMaster: Autonomous Exploration and Understanding of GitHub Repositories for Complex Task Solving"
+  authors: "Huacan Wang, Ziyi Ni, Shuo Zhang, Shuo Lu, Sen Hu, Ziyang He, Chen Hu, Jiaye Lin, Yifu Guo, Ronghao Chen, Xin Li, Daxin Jiang, Yuntao Du, Pin Lyu"
+  venue: "NeurIPS 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.21577"
+    github: "https://github.com/QuantaAlpha/RepoMaster"
+    website: "https://quantaalpha.com/"
+
+- title: "SE-Agent: Self-Evolution Trajectory Optimization in Multi-Step Reasoning with LLM-Based Agents"
+  authors: "Jiaye Lin, Yifu Guo, Yuzhen Han, Sen Hu, Ziyi Ni, Licheng Wang, Mingguang Chen, Hongzhang Liu, Ronghao Chen, Yangfan He, Daxin Jiang, Binxing Jiao, Chen Hu, Huacan Wang"
+  venue: "NeurIPS 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.02085"
+    github: "https://github.com/JARVIS-Xs/SE-Agent"
+    website: "https://quantaalpha.com/"
+
 - title: "SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution"
   authors: "Yuxiang Wei, Olivier Duchenne, Jade Copet, Quentin Carbonneaux, Lingming Zhang, Daniel Fried, Gabriel Synnaeve, Rishabh Singh, Sida I. Wang"
   venue: "NeurIPS 2025"
@@ -168,10 +280,18 @@
 
 - title: "Training Software Engineering Agents and Verifiers with SWE-Gym"
   authors: "Jiayi Pan, Xingyao Wang, Graham Neubig, Navdeep Jaitly, Heng Ji, Alane Suhr, Yizhe Zhang"
-  venue: "ICML 2025"  
+  venue: "ICML 2025"
   links:
     paper: "https://arxiv.org/abs/2412.21139"
     github: "https://github.com/SWE-Gym/SWE-Gym"
+    website: ""
+
+- title: "SWE-Flow: Synthesizing Software Engineering Data in a Test-Driven Manner"
+  authors: "Lei Zhang, Jiaxi Yang, Min Yang, Jian Yang, Mouxiang Chen, Jiajun Zhang, Zeyu Cui, Binyuan Hui, Junyang Lin"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.09003"
+    github: "https://github.com/Hambaobao/SWE-Flow"
     website: ""
 
 - title: "Guided Search Strategies in Non-Serializable Environments with Applications to Software Engineering Agents"
@@ -254,12 +374,20 @@
     github: "https://github.com/DeepSoftwareAnalytics/OmniGIRL"
     website: "https://deepsoftwareanalytics.github.io/omnigirl_leaderboard.html"
 
+- title: "Boosting Open-Source LLMs for Program Repair via Reasoning Transfer and LLM-Guided Reinforcement Learning"
+  authors: "Xunzhu Tang, Jacques Klein, Tegawendé F. Bissyandé"
+  venue: "TOSEM 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.03921"
+    github: ""
+    website: ""
+
 - title: "AutoCodeRover: Autonomous Program Improvement"
   authors: "Yuntong Zhang, Haifeng Ruan, Zhiyu Fan, Abhik Roychoudhury"
   venue: "ISSTA 2024"
   links:
     paper: "https://arxiv.org/abs/2404.05427"
-    github: "https://github.com/AutoCodeRoverSG/auto-code-rover"  
+    github: "https://github.com/AutoCodeRoverSG/auto-code-rover"
     website: "https://autocoderover.dev/"
 
 - title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
