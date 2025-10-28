@@ -1,0 +1,43 @@
+name: Update papers badge
+
+on:
+  push:
+    paths:
+      - 'data/*.yaml'
+      - 'scripts/update_papers_badge.py'
+      - 'README.md'
+      - '.github/workflows/update-papers-badge.yml'
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate papers badge and update README summary
+        run: |
+          python3 scripts/update_papers_badge.py
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: update papers count badge & summary'
+          file_pattern: |
+            README.md
+            docs/static/badges/papers.svg
+            docs/static/badges/papers.json

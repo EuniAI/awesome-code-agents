@@ -6,6 +6,14 @@
     github: "https://github.com/anthropics/claude-code"
     website: "https://claude.com/product/claude-code"
 
+- title: "Cursor"
+  authors: "Cursor"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/cursor/cursor"
+    website: "https://cursor.com/"
+
 - title: "Codex"
   authors: "OpenAI"
   venue: "2025"
@@ -29,6 +37,118 @@
     paper: ""
     github: ""
     website: "https://devin.ai/"
+
+- title: "Replit"
+  authors: "Replit"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://replit.com/"
+
+- title: "Bolt.new"
+  authors: "StackBlitz"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/stackblitz/bolt.new"
+    website: "https://bolt.new/"
+
+- title: "GitHub Copilot"
+  authors: "GitHub"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://github.com/copilot"
+
+- title: "Grok Studio"
+  authors: "xAI"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://grok.com/"
+
+- title: "Stitch"
+  authors: "Google"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://stitch.withgoogle.com/"
+
+- title: "v0"
+  authors: "Vercel"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://v0.app/"
+
+- title: "Windsurf"
+  authors: "Windsurf (product now acquired by Cognition AI)"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://windsurf.com/"
+
+- title: "Rork"
+  authors: "Rork"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://rork.com/"
+
+- title: "Clark"
+  authors: "Superblocks"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://www.superblocks.com/clark"
+
+- title: "Augment Code"
+  authors: "Augment"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/augmentcode/augment-swebench-agent"
+    website: "https://www.augmentcode.com/"
+
+- title: "Mocha"
+  authors: "Mocha"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://getmocha.com/"
+
+- title: "Vitara"
+  authors: "Vitara.AI"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://vitara.ai/"
+
+- title: "a0.dev"
+  authors: "a0.dev"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://a0.dev/"
+
+- title: "Canva AI Code Generator"
+  authors: "Canva"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://www.canva.com/ai-code-generator/"
 
 - title: "OpenHands"
   authors: "All Hands AI"
@@ -101,6 +221,46 @@
     paper: ""
     github: "https://github.com/upstash/context7"
     website: "https://upstash.com/"
+
+- title: "Trae AI"
+  authors: "ByteDance"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/bytedance/trae-agent"
+    website: "https://www.trae.ai/"
+
+- title: "Cline"
+  authors: "Cline"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/cline/cline"
+    website: "https://cline.bot/"
+
+- title: "Continue"
+  authors: "Continue Dev"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/continuedev/continue"
+    website: "https://docs.continue.dev/"
+
+- title: "Databutton"
+  authors: "Databutton"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://databutton.com/"
+
+- title: "Base44"
+  authors: "Base44"
+  venue: "2025"
+  links:
+    paper: ""
+    github: ""
+    website: "https://base44.com/"
 
 - title: "Lingma SWE-GPT"
   authors: "Tongyi / Alibaba"

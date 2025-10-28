@@ -6,6 +6,14 @@
     github: ""
     website: ""
 
+- title: "Tool-integrated Reinforcement Learning for Repo Deep Search"
+  authors: "Zexiong Ma, Chao Peng, Qunhong Zeng, Pengfei Gao, Yanzhen Zou, Bing Xie"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.03012"
+    github: ""
+    website: ""
+
 - title: "LocAgent: Graph-Guided LLM Agents for Code Localization"
   authors: "Zhaoling Chen, Robert Tang, Gangda Deng, Fang Wu, Jialong Wu, Zhiwei Jiang, Viktor Prasanna, Arman Cohan, Xingyao Wang"
   venue: "ACL 2025"

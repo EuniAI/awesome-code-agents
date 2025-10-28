@@ -1,0 +1,7 @@
+- title: "SWE-Perf: Can Language Models Optimize Code Performance on Real-World Repositories?"
+  authors: "Xinyi He, Qian Liu, Mingzhe Du, Lin Yan, Zhijie Fan, Yiming Huang, Zejian Yuan, Zejun Ma"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.12415"
+    github: "https://github.com/SWE-Perf/SWE-Perf"
+    website: "https://swe-perf.github.io/"

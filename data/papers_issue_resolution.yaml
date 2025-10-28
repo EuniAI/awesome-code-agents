@@ -46,6 +46,14 @@
     github: "https://github.com/ExpeRepair/ExpeRepair"
     website: ""
 
+- title: "SWE-Exp: Experience-Driven Software Issue Resolution"
+  authors: "Silin Chen, Shaoxin Lin, Xiaodong Gu, Yuling Shi, Heng Lian, Longfei Yun, Dong Chen, Weiguo Sun, Lin Cao, Qianxiang Wang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.23361"
+    github: "https://github.com/YerbaPage/SWE-Exp"
+    website: ""
+
 - title: "Thinking Longer, Not Larger: Enhancing Software Engineering Agents via Scaling Test-Time Compute"
   authors: "Yingwei Ma, Yongbin Li, Yihong Dong, Xue Jiang, Rongyu Cao, Jue Chen, Fei Huang, Binhua Li"
   venue: "arxiv 2025"
@@ -70,6 +78,14 @@
     github: "https://github.com/R2E-Gym/R2E-Gym"
     website: "https://r2e-gym.github.io/"
 
+- title: "SWE-Debate: Competitive Multi-Agent Debate for Software Issue Resolution"
+  authors: "Han Li, Yuling Shi, Shaoxin Lin, Xiaodong Gu, Heng Lian, Xin Wang, Yantao Jia, Tao Huang, Qianxiang Wang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.23348"
+    github: "https://github.com/YerbaPage/SWE-Debate"
+    website: ""
+
 - title: "SWE-Factory: Your Automated Factory for Issue Resolution Training Data and Evaluation Benchmarks"
   authors: "Lianghong Guo, Yanlin Wang, Caihua Li, Pengyu Yang, Jiachi Chen, Wei Tao, Yingtian Zou, Duyu Tang, Zibin Zheng"
   venue: "arXiv 2025"
@@ -86,12 +102,36 @@
     github: ""
     website: ""
 
+- title: "SWE-Search: Enhancing Software Agents with Monte Carlo Tree Search and Iterative Refinement"
+  authors: "Antonis Antoniades, Albert Örwall, Kexun Zhang, Yuxi Xie, Anirudh Goyal, William Wang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2410.20285"
+    github: "https://github.com/aorwall/moatless-tree-search"
+    website: ""
+
+- title: "SEAlign: Alignment Training for Software Engineering Agent"
+  authors: "Kechi Zhang, Huangzhao Zhang, Ge Li, Jinliang You, Jia Li, Yunfei Zhao, Zhi Jin"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.18455"
+    github: ""
+    website: ""
+
 - title: "Lingxi: Repository-Level Issue Resolution Framework Enhanced by Procedural Knowledge Guided Scaling"
   authors: "Xu Yang, Jiayuan Zhou, Michael Pacheco, Wenhan Zhu, Pengfei He, Shaowei Wang, Kui Liu, Ruiqi Pan"
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2510.11838"
     github: "https://github.com/lingxi-agent/Lingxi"
+    website: ""
+
+- title: "Code Graph Model (CGM): A Graph-Integrated Large Language Model for Repository-Level Software Engineering Tasks"
+  authors: "Hongyuan Tao, Ying Zhang, Zhenhao Tang, Hongen Peng, Xukun Zhu, Bingchang Liu, Yingguang Yang, Ziyin Zhang, Zhaogui Xu, Haipeng Zhang, Linchao Zhu, Rui Wang, Hang Yu, Jianguo Li, Peng Di"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.16901"
+    github: ""
     website: ""
 
 - title: "SWE-Synth: Synthesizing Verifiable Bug-Fix Data to Enable Large Language Models in Resolving Real-World Bugs"
@@ -254,6 +294,14 @@
     github: "https://github.com/JARVIS-Xs/SE-Agent"
     website: "https://quantaalpha.com/"
 
+- title: "Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning"
+  authors: "Yinjie Wang, Ling Yang, Ye Tian, Ke Shen, Mengdi Wang"
+  venue: "NeurIPS 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.03136"
+    github: "https://github.com/Gen-Verse/CURE"
+    website: ""
+
 - title: "SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution"
   authors: "Yuxiang Wei, Olivier Duchenne, Jade Copet, Quentin Carbonneaux, Lingming Zhang, Daniel Fried, Gabriel Synnaeve, Rishabh Singh, Sida I. Wang"
   venue: "NeurIPS 2025"
@@ -348,6 +396,14 @@
   links:
     paper: "https://aclanthology.org/2025.acl-long.973/"
     github: "https://github.com/vaibhavagg303/DARS-Agent"
+    website: ""
+
+- title: "SoRFT: Issue Resolving with Subtask-oriented Reinforced Fine-Tuning"
+  authors: "Zexiong Ma, Chao Peng, Pengfei Gao, Xiangxin Meng, Yanzhen Zou, Bing Xie"
+  venue: "ACL 2025"
+  links:
+    paper: "https://aclanthology.org/2025.acl-long.559/"
+    github: ""
     website: ""
 
 - title: "SWE-Fixer: Training Open-Source LLMs for Effective and Efficient GitHub Issue Resolution"

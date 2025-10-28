@@ -77,3 +77,19 @@
     paper: "https://arxiv.org/abs/2509.06216"
     github: ""
     website: ""
+
+- title: "OS Agents: A Survey on MLLM-based Agents for General Computing Devices Use"
+  authors: "Xueyu Hu, Tao Xiong, Biao Yi, Zishu Wei, Ruixuan Xiao, Yurun Chen, Jiasheng Ye, Meiling Tao, Xiangxin Zhou, Ziyu Zhao, Yuhuai Li, Shengze Xu, Shenzhi Wang, Xinchen Xu, Shuofei Qiao, Zhaokai Wang, Kun Kuang, Tieyong Zeng, Liang Wang, Jiwei Li, Yuchen Eleanor Jiang, Wangchunshu Zhou, Guoyin Wang, Keting Yin, Zhou Zhao, Hongxia Yang, Fan Wu, Shengyu Zhang, Fei Wu"
+  venue: "ACL 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.04482"
+    github: "https://github.com/OS-Agent-Survey/OS-Agent-Survey"
+    website: ""
+
+- title: "Agents in software engineering: survey, landscape, and vision"
+  authors: "Yanlin Wang, Wanjun Zhong, Yanxian Huang, Ensheng Shi, Min Yang, Jiachi Chen, Hui Li, Yuchi Ma, Qianxiang Wang, Zibin Zheng"
+  venue: "Automated Software Engineering, Springer, 2025"
+  links:
+    paper: "https://link.springer.com/article/10.1007/s10515-025-00544-2"
+    github: ""
+    website: ""

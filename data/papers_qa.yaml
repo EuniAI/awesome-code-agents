@@ -1,0 +1,23 @@
+- title: "SWE-QA: Can Language Models Answer Repository-level Code Questions?"
+  authors: "Weihan Peng, Yuling Shi, Yuhang Wang, Xinyun Zhang, Beijun Shen, Xiaodong Gu"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.14635"
+    github: "https://github.com/peng-weihan/SWE-QA-Bench"
+    website: ""
+
+- title: "Benchmarking Long-Context Language Models on Long Code Understanding"
+  authors: "Jia Li, Xuyuan Guo, Lei Li, Kechi Zhang, Ge Li, Jia Li, Zhengwei Tao, Fang Liu, Chongyang Tao, Yuqi Zhu, Zhi Jin"
+  venue: "ACL 2025"
+  links:
+    paper: "https://aclanthology.org/2025.acl-long.1324/"
+    github: ""
+    website: ""
+
+- title: "On Improving Repository-Level Code QA for Large Language Models"
+  authors: "Jan Strich, Florian Schneider, Irina Nikishina, Chris Biemann"
+  venue: "ACL 2024 Workshop"
+  links:
+    paper: "https://aclanthology.org/2024.acl-srw.28/"
+    github: ""
+    website: ""

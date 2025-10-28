@@ -14,6 +14,14 @@
     github: "https://github.com/mnluzimu/WebGen-Bench"
     website: ""
 
+- title: "ScreenCoder: Advancing Visual-to-Code Generation for Front-End Automation via Modular Multimodal Agents"
+  authors: "Yilei Jiang, Yaozhi Zheng, Yuxuan Wan, Jiaming Han, Qunzhong Wang, Michael R. Lyu, Xiangyu Yue"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.22827"
+    github: "https://github.com/leigest519/ScreenCoder"
+    website: ""
+
 - title: "Interaction2Code: Benchmarking MLLM-based Interactive Webpage Code Generation from Interactive Prototyping"
   authors: "Jingyu Xiao, Yuxuan Wan, Yintong Huo, Zixin Wang, Xinyi Xu, Wenxuan Wang, Zhiyao Xu, Yuhang Wang, Michael R. Lyu"
   venue: "arXiv 2025"

@@ -1,3 +1,11 @@
+- title: "Issue2Test: Generating Reproducing Test Cases from Issue Reports"
+  authors: "Noor Nashid, Islem Bouzenia, Michael Pradel, Ali Mesbah"
+  venue: "arxiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.16320"
+    github: ""
+    website: ""
+
 - title: "Agentic Bug Reproduction for Effective Automated Program Repair at Google"
   authors: "Runxiang Cheng, Michele Tufano, Jürgen Cito, José Cambronero, Pat Rondon, Renyao Wei, Aaron Sun, Satish Chandra"
   venue: "arXiv 2025"

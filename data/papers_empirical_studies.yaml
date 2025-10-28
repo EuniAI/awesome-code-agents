@@ -6,6 +6,14 @@
     github: ""
     website: ""
 
+- title: "Understanding Software Engineering Agents Through the Lens of Traceability: An Empirical Study"
+  authors: "Ira Ceka, Saurabh Pujar, Shyam Ramji, Luca Buratti, Gail Kaiser, Baishakhi Ray"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.08311"
+    github: ""
+    website: ""
+
 - title: "Assessing and Advancing Benchmarks for Evaluating Large Language Models in Software Engineering Tasks"
   authors: "Xing Hu, Feifei Niu, Junkai Chen, Xin Zhou, Junwei Zhang, Junda He, Xin Xia, David Lo"
   venue: "arXiv 2025"
@@ -51,6 +59,30 @@
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2507.09089"
+    github: ""
+    website: ""
+
+- title: "Understanding Software Engineering Agents: A Study of Thought-Action-Result Trajectories"
+  authors: "Islem Bouzenia, Michael Pradel"
+  venue: "ASE 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.18824"
+    github: ""
+    website: ""
+
+- title: "Prompting Large Language Models to Tackle the Full Software Development Lifecycle: A Case Study"
+  authors: "Bowen Li, Wenhan Wu, Ziwei Tang, Lin Shi, John Yang, Jinyang Li, Shunyu Yao, Chen Qian, Binyuan Hui, Qicheng Zhang, Zhiyin Yu, He Du, Ping Yang, Dahua Lin, Chao Peng, Kai Chen"
+  venue: "COLING 2025"
+  links:
+    paper: "https://aclanthology.org/2025.coling-main.502/"
+    github: ""
+    website: ""
+
+- title: "Can LLMs Replace Manual Annotation of Software Engineering Artifacts?"
+  authors: "Toufique Ahmed, Premkumar Devanbu, Christoph Treude, Michael Pradel"
+  venue: "MSR 2025"
+  links:
+    paper: "https://ieeexplore.ieee.org/document/11025652"
     github: ""
     website: ""
 
