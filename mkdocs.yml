@@ -5,6 +5,23 @@ repo_name: EuniAI/awesome-code-agents
 repo_url: https://github.com/EuniAI/awesome-code-agents
 theme:
   name: material
+  logo: static/images/icon.jpg
+  favicon: static/images/icon.jpg
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.sections
@@ -15,6 +32,9 @@ theme:
     - search.highlight
   icon:
     repo: fontawesome/brands/github
+
+extra_css:
+  - static/stylesheets/euni-style.css
 
 plugins:
   - search

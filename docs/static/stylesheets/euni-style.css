@@ -1,0 +1,20 @@
+/* ---- EuniAI Pink-Violet Visual Theme ---- */
+
+/* Base background and font */
+:root {
+  --md-default-bg-color: #0a0a0d;
+  --md-primary-fg-color: #ff8ad4; /* EuniAI pink highlight */
+  --md-accent-fg-color: #c084fc;  /* violet accent */
+  --md-code-bg-color: #14141a;
+  --md-typeset-color: #f3f4f6;    /* main text */
+  --md-typeset-a-color: #ff9cdc;  /* link pink */
+  --md-footer-bg-color: #0f0f13;
+  --md-footer-fg-color: #bfbfcc;
+  --md-default-fg-color--light: #e5e7eb;
+}
+
+/* Header gradient (pink → violet → blue) */
+.md-header {
+  background: linear-gradient(90deg, #ff7ac3 0%, #b266ff 50%, #6f9fff 100%);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+}
