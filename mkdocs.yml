@@ -1,0 +1,45 @@
+site_name: Awesome Code Agents
+site_description: Curated list of agentic code tools, frameworks, papers, and resources.
+site_url: https://euniai.github.io/awesome-code-agents/
+repo_name: EuniAI/awesome-code-agents
+repo_url: https://github.com/EuniAI/awesome-code-agents
+edit_uri: edit/main/
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.tracking
+    - content.action.edit
+    - content.code.copy
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+  icon:
+    repo: fontawesome/brands/github
+  language: zh
+
+plugins:
+  - search
+  - include-markdown
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.extra
+
+nav:
+  - Home: index.md
+  - About: about.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/EuniAI
+      name: EuniAI on GitHub
