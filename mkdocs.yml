@@ -15,7 +15,6 @@ theme:
     - search.highlight
   icon:
     repo: fontawesome/brands/github
-  language: zh
 
 plugins:
   - search
