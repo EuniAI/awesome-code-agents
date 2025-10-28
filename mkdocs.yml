@@ -3,14 +3,12 @@ site_description: Curated list of agentic code tools, frameworks, papers, and re
 site_url: https://euniai.github.io/awesome-code-agents/
 repo_name: EuniAI/awesome-code-agents
 repo_url: https://github.com/EuniAI/awesome-code-agents
-edit_uri: edit/main/
 theme:
   name: material
   features:
     - navigation.instant
     - navigation.sections
     - navigation.tracking
-    - content.action.edit
     - content.code.copy
     - toc.integrate
     - search.suggest
