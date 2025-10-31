@@ -93,3 +93,11 @@
     paper: "https://link.springer.com/article/10.1007/s10515-025-00544-2"
     github: ""
     website: ""
+
+- title: "Large Language Model-Based Agents for Software Engineering: A Survey"
+  authors: "Junwei Liu, Kaixin Wang, Yixuan Chen, Xin Peng, Zhenpeng Chen, Lingming Zhang, Yiling Lou"
+  venue: "arXiv 2024"
+  links:
+    paper: "https://arxiv.org/abs/2409.02977"
+    github: ""
+    website: ""

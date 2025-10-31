@@ -46,6 +46,14 @@
     github: ""
     website: ""
 
+- title: "Think Like an Engineer: A Neuro-Symbolic Collaboration Agent for Generative Software Requirements Elicitation and Self-Review"
+  authors: "Sai Zhang, Zhenchang Xing, Jieshan Chen, Dehai Zhao, Zizhong Zhu, Xiaowang Zhang, Zhiyong Feng, Xiaohong Li"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.14969"
+    github: ""
+    website: ""
+
 - title: "HyperAgent: Generalist Software Engineering Agents to Solve Coding Tasks at Scale"
   authors: "Huy Nhat Phan, Tien N. Nguyen, Phong X. Nguyen, Nghi D. Q. Bui"
   venue: "arXiv 2025"

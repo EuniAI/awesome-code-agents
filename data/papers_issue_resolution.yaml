@@ -418,7 +418,7 @@
   authors: "Chunqiu Steven Xia, Yinlin Deng, Soren Dunn, Lingming Zhang"
   venue: "FSE 2025"
   links:
-    paper: "https://arxiv.org/abs/2407.01489"
+    paper: "https://dl.acm.org/doi/10.1145/3715754"
     github: "https://github.com/OpenAutoCoder/Agentless"
     website: ""
 

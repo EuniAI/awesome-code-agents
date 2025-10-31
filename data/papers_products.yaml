@@ -94,6 +94,14 @@
     github: ""
     website: "https://windsurf.com/"
 
+- title: "Spec Kit"
+  authors: "GitHub"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/github/spec-kit"
+    website: ""
+
 - title: "Rork"
   authors: "Rork"
   venue: "2025"

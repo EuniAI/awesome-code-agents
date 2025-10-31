@@ -62,6 +62,14 @@
     github: ""
     website: ""
 
+- title: "Is Multi-Agent Debate (MAD) the Silver Bullet? An Empirical Analysis of MAD in Code Summarization and Translation"
+  authors: "Jina Chun, Qihong Chen, Jiawei Li, Iftekhar Ahmed"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.12029"
+    github: ""
+    website: ""
+
 - title: "Understanding Software Engineering Agents: A Study of Thought-Action-Result Trajectories"
   authors: "Islem Bouzenia, Michael Pradel"
   venue: "ASE 2025"

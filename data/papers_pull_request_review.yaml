@@ -6,6 +6,14 @@
     github: ""
     website: ""
 
+- title: "Armchair"
+  authors: "Armchair"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/armchr/armchr"
+    website: ""
+
 - title: "PReview: A Benchmark Dataset for Pull Request Outcomes and Quality Analysis"
   authors: "Anonymous Authors"
   venue: "2025"
