@@ -30,6 +30,30 @@
     github: ""
     website: ""
 
+- title: "DesignBench: A Comprehensive Benchmark for MLLM-based Front-end Code Generation"
+  authors: "Jingyu Xiao, Ming Wang, Man Ho Lam, Yuxuan Wan, Junliang Liu, Yintong Huo, Michael R. Lyu"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.06251"
+    github: ""
+    website: ""
+
+- title: "DesignCoder: Hierarchy-Aware and Self-Correcting UI Code Generation with Large Language Models"
+  authors: "Yunnong Chen, Shixian Ding, YingYing Zhang, Wenkai Chen, Jinzhou Du, Lingyun Sun, Liuqing Chen"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://www.arxiv.org/abs/2506.13663"
+    github: ""
+    website: ""
+
+- title: "LLM-Based UI2Code Automation Guided by UI Layout Information"
+  authors: "Fan Wu, Cuiyun Gao, Shuqing Li, Xin-Cheng Wen, Qing Liao"
+  venue: "ISSTA 2025"
+  links:
+    paper: "https://arxiv.org/abs/2506.10376"
+    github: ""
+    website: ""
+
 - title: "WebMMU: A Benchmark for Multimodal Multilingual Website Understanding and Code Generation"
   authors: "Rabiul Awal, Mahsa Massoud, Aarash Feizi, Zichao Li, Suyuchen Wang, Christopher Pal, Aishwarya Agrawal, David Vazquez, Siva Reddy, Juan A. Rodriguez, Perouz Taslakian, Spandana Gella, Sai Rajeswar"
   venue: "EMNLP 2025"

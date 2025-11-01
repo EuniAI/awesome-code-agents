@@ -46,6 +46,14 @@
     github: "https://github.com/LiuHengyu321/IR3D-Bench"
     website: "https://ir3d-bench.github.io/"
 
+- title: "Scaling Text-Rich Image Understanding via Code-Guided Synthetic Multimodal Data Generation"
+  authors: "Yue Yang, Ajay Patel, Matt Deitke, Tanmay Gupta, Luca Weihs, Andrew Head, Mark Yatskar, Chris Callison-Burch, Ranjay Krishna, Aniruddha Kembhavi, Christopher Clark"
+  venue: "ACL 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.14846"
+    github: ""
+    website: ""
+
 - title: "WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment"
   authors: "Hao Tang, Darren Yan Key, Kevin Ellis"
   venue: "NeurIPS 2024"
@@ -93,6 +101,30 @@
     paper: "https://arxiv.org/abs/2209.07753"
     github: "https://github.com/google-research/google-research/tree/master/code_as_policies"
     website: "https://code-as-policies.github.io/"
+
+- title: "Visual Programming: Compositional visual reasoning without training"
+  authors: "Tanmay Gupta, Aniruddha Kembhavi"
+  venue: "CVPR 2023"
+  links:
+    paper: "https://arxiv.org/abs/2211.11559"
+    github: ""
+    website: ""
+
+- title: "ViperGPT: Visual Inference via Python Execution for Reasoning"
+  authors: "Dídac Surís, Sachit Menon, Carl Vondrick"
+  venue: "ICCV 2023"
+  links:
+    paper: "https://arxiv.org/abs/2303.08128"
+    github: ""
+    website: ""
+
+- title: "ViStruct: Visual Structural Knowledge Extraction via Curriculum Guided Code-Vision Representation"
+  authors: "Yangyi Chen, Xingyao Wang, Manling Li, Derek Hoiem, Heng Ji"
+  venue: "EMNLP 2023"
+  links:
+    paper: "https://arxiv.org/abs/2311.13258"
+    github: ""
+    website: ""
 
 - title: "Instruct2Act: Mapping Multi-modality Instructions to Robotic Actions with Large Language Model"
   authors: "Siyuan Huang, Zhengkai Jiang, Hao Dong, Yu Qiao, Peng Gao, Hongsheng Li"

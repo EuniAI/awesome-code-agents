@@ -29,3 +29,27 @@
     paper: ""
     github: "https://github.com/qodo-ai/pr-agent"
     website: "https://www.qodo.ai/"
+
+- title: "CodeAgent: Autonomous Communicative Agents for Code Review"
+  authors: "Xunzhu Tang, Kisub Kim, Yewei Song, Cedric Lothritz, Bei Li, Saad Ezzini, Haoye Tian, Jacques Klein, Tegawendé F. Bissyandé"
+  venue: "EMNLP 2024"
+  links:
+    paper: "https://aclanthology.org/2024.emnlp-main.632/"
+    github: ""
+    website: ""
+
+- title: "Automating Code Review Activities by Large-Scale Pre-training"
+  authors: "Zhiyu Li, Shuai Lu, Daya Guo, Nan Duan, Shailesh Jannu, Grant Jenks, Deep Majumder, Jared Green, Alexey Svyatkovskiy, Shengyu Fu, Neel Sundaresan"
+  venue: "FSE 2022"
+  links:
+    paper: "https://arxiv.org/abs/2203.09095"
+    github: ""
+    website: ""
+
+- title: "Can We Benchmark Code Review Studies? A Systematic Mapping Study of Methodology, Dataset, and Metric"
+  authors: "Dong Wang, Yuki Ueda, Raula Gaikovina Kula, Takashi Ishio, Kenichi Matsumoto"
+  venue: "Journal of Systems and Software, 2021, Elsevier"
+  links:
+    paper: "https://www.sciencedirect.com/science/article/abs/pii/S0164121221001060"
+    github: ""
+    website: ""

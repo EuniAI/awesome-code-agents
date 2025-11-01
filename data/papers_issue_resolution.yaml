@@ -142,6 +142,14 @@
     github: "https://github.com/FSoft-AI4Code/SWE-Synth"
     website: ""
 
+- title: "ComBench: Compilation Error Repair Benchmark Platform"
+  authors: "Anonymous"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/conference-submit/ComBench"
+    website: ""
+
 - title: "SWE-Bench-CL: Continual Learning for Coding Agents"
   authors: "Thomas Joshi, Shayan Chowdhury, Fatih Uysal"
   venue: "arXiv 2025"
@@ -396,6 +404,14 @@
   links:
     paper: "https://aclanthology.org/2025.acl-long.973/"
     github: "https://github.com/vaibhavagg303/DARS-Agent"
+    website: ""
+
+- title: "CompileAgent: Automated Real-World Repo-Level Compilation with Tool-Integrated LLM-based Agent System"
+  authors: "Li Hu, Guoqiang Chen, Xiuwei Shang, Shaoyin Cheng, Benlong Wu, LiGangyang LiGangyang, Xu Zhu, Weiming Zhang, Nenghai Yu"
+  venue: "ACL 2025"
+  links:
+    paper: "https://aclanthology.org/2025.acl-long.103/"
+    github: "https://github.com/Ch3nYe/AutoCompiler"
     website: ""
 
 - title: "SoRFT: Issue Resolving with Subtask-oriented Reinforced Fine-Tuning"

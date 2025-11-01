@@ -6,11 +6,11 @@
     github: ""
     website: ""
 
-- title: "DesignBench: A Comprehensive Benchmark for MLLM-based Front-end Code Generation"
-  authors: "Jingyu Xiao, Ming Wang, Man Ho Lam, Yuxuan Wan, Junliang Liu, Yintong Huo, Michael R. Lyu"
+- title: "MutaGReP: Execution-Free Repository-Grounded Plan Search for Code-Use"
+  authors: "Zaid Khan, Ali Farhadi, Ranjay Krishna, Luca Weihs, Mohit Bansal, Tanmay Gupta"
   venue: "arXiv 2025"
   links:
-    paper: "https://arxiv.org/abs/2506.06251"
+    paper: "https://arxiv.org/abs/2502.15872"
     github: ""
     website: ""
 

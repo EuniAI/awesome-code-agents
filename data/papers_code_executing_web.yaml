@@ -61,3 +61,11 @@
     paper: "https://proceedings.neurips.cc/paper_files/paper/2024/hash/61cce86d180b1184949e58939c4f983d-Abstract-Datasets_and_Benchmarks_Track.html"
     github: ""
     website: "https://apigen-pipeline.github.io/"
+
+- title: "If LLM Is the Wizard, Then Code Is the Wand: A Survey on How Code Empowers Large Language Models to Serve as Intelligent Agents"
+  authors: "Ke Yang, Jiateng Liu, John Wu, Chaoqi Yang, Yi R. Fung, Sha Li, Zixuan Huang, Xu Cao, Xingyao Wang, Yiquan Wang, Heng Ji, Chengxiang Zhai"
+  venue: "ICLR 2024 Workshop"
+  links:
+    paper: "https://arxiv.org/abs/2401.00812"
+    github: ""
+    website: ""
