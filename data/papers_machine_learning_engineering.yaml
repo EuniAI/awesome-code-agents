@@ -1,3 +1,11 @@
+- title: "DeepCode: Open Agentic Coding"
+  authors: "Data Intelligence Lab@HKU"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/HKUDS/DeepCode"
+    website: ""
+
 - title: "Reinforcement Learning for Machine Learning Engineering Agents"
   authors: "Sherry Yang, Joy He-Yueya, Percy Liang"
   venue: "arXiv 2025"

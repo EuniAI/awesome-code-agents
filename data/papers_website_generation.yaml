@@ -46,12 +46,20 @@
     github: ""
     website: ""
 
-- title: "LLM-Based UI2Code Automation Guided by UI Layout Information"
+- title: "MLLM-Based UI2Code Automation Guided by UI Layout Information"
   authors: "Fan Wu, Cuiyun Gao, Shuqing Li, Xin-Cheng Wen, Qing Liao"
   venue: "ISSTA 2025"
   links:
     paper: "https://arxiv.org/abs/2506.10376"
     github: ""
+    website: ""
+
+- title: "Design2Code: Benchmarking Multimodal Code Generation for Automated Front-End Engineering"
+  authors: "Chenglei Si, Yanzhe Zhang, Ryan Li, Zhengyuan Yang, Ruibo Liu, Diyi Yang"
+  venue: "NAACL 2025"
+  links:
+    paper: "https://arxiv.org/abs/2403.03163"
+    github: "https://github.com/NoviScl/Design2Code"
     website: ""
 
 - title: "WebMMU: A Benchmark for Multimodal Multilingual Website Understanding and Code Generation"

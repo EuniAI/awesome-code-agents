@@ -1,3 +1,11 @@
+- title: "OSWorld-MCP: Benchmarking MCP Tool Invocation In Computer-Use Agents"
+  authors: "Hongrui Jia, Jitong Liao, Xi Zhang, Haiyang Xu, Tianbao Xie, Chaoya Jiang, Ming Yan, Si Liu, Wei Ye, Fei Huang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.24563"
+    github: ""
+    website: ""
+
 - title: "Browser Use: The AI browser agent"
   authors: "Browser Use"
   venue: "2025"

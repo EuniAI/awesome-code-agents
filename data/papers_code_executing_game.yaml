@@ -1,0 +1,31 @@
+- title: "Game-TARS: Pretrained Foundation Models for Scalable Generalist Multimodal Game Agents"
+  authors: "Zihao Wang, Xujing Li, Yining Ye, Junjie Fang, Haoming Wang, Longxiang Liu, Shihao Liang, Junting Lu, Zhiyong Wu, Jiazhan Feng, Wanjun Zhong, Zili Li, Yu Wang, Yu Miao, Bo Zhou, Yuanfan Li, Hao Wang, Zhongkai Zhao, Faming Wu, Zhengxuan Jiang, Weihao Tan, Heyuan Yao, Shi Yan, Xiangyang Li, Yitao Liang, Yujia Qin, Guang Shi"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.23691"
+    github: ""
+    website: ""
+
+- title: "One Life to Learn: Inferring Symbolic World Models for Stochastic Environments from Unguided Exploration"
+  authors: "Zaid Khan, Archiki Prasad, Elias Stengel-Eskin, Jaemin Cho, Mohit Bansal"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.12088"
+    github: ""
+    website: ""
+
+- title: "PoE-World: Compositional World Modeling with Products of Programmatic Experts"
+  authors: "Wasu Top Piriyakulkij, Yichao Liang, Hao Tang, Adrian Weller, Marta Kryven, Kevin Ellis"
+  venue: "arxiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.10819"
+    github: ""
+    website: ""
+
+- title: "WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment"
+  authors: "Hao Tang, Darren Yan Key, Kevin Ellis"
+  venue: "NeurIPS 2024"
+  links:
+    paper: "https://openreview.net/forum?id=QGJSXMhVaL"
+    github: "https://github.com/haotang1995/WorldCoder"
+    website: "https://haotang1995.github.io/projects/worldcoder"

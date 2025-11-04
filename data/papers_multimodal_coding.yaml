@@ -1,3 +1,11 @@
+- title: "JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intelligence"
+  authors: "Qiushi Sun, Jingyang Gong, Yang Liu, Qiaosheng Chen, Lei Li, Kai Chen, Qipeng Guo, Ben Kao, Fei Yuan"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2510.23538"
+    github: "https://github.com/InternLM/JanusCoder"
+    website: ""
+
 - title: "Seeing is Fixing: Cross-Modal Reasoning with Multimodal LLMs for Visual Software Issue Fixing"
   authors: "Kai Huang, Jian Zhang, Xiaofei Xie, Chunyang Chen"
   venue: "arXiv 2025"
@@ -36,4 +44,12 @@
   links:
     paper: "https://aclanthology.org/2025.findings-acl.384/"
     github: "https://github.com/luolin101/CodeV"
+    website: ""
+
+- title: "MMCode: Benchmarking Multimodal Large Language Models for Code Generation with Visually Rich Programming Problems"
+  authors: "Kaixin Li, Yuchen Tian, Qisheng Hu, Ziyang Luo, Zhiyong Huang, Jing Ma"
+  venue: "EMNLP 2024 Findings"
+  links:
+    paper: "https://aclanthology.org/2024.findings-emnlp.42/"
+    github: ""
     website: ""

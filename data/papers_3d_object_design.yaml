@@ -102,6 +102,14 @@
     github: ""
     website: ""
 
+- title: "VLMaterial: Procedural Material Generation with Large Vision-Language Models"
+  authors: "Beichen Li, Rundi Wu, Armando Solar-Lezama, Changxi Zheng, Liang Shi, Bernd Bickel, Wojciech Matusik"
+  venue: "ICLR 2025"
+  links:
+    paper: "https://arxiv.org/abs/2501.18623"
+    github: "https://github.com/mit-gfx/VLMaterial"
+    website: ""
+
 - title: "Generating CAD Code with Vision-Language Models for 3D Designs"
   authors: "Kamel Alrashedy, Pradyumna Tambwekar, Zulfiqar Haider Zaidi, Megan Langwasser, Wei Xu, Matthew Gombolay"
   venue: "ICLR 2025"

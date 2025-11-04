@@ -38,6 +38,14 @@
     github: ""
     website: ""
 
+- title: "Can Large Language Models Understand Symbolic Graphics Programs?"
+  authors: "Zeju Qiu, Weiyang Liu, Haiwen Feng, Zhen Liu, Tim Z. Xiao, Katherine M. Collins, Joshua B. Tenenbaum, Adrian Weller, Michael J. Black, Bernhard Schölkopf"
+  venue: "ICLR 2025"
+  links:
+    paper: "https://arxiv.org/abs/2408.08313"
+    github: "https://github.com/sgp-bench/sgp-bench"
+    website: "https://sgp-bench.github.io/"
+
 - title: "IR3D-Bench: Evaluating Vision-Language Model Scene Understanding as Agentic Inverse Rendering"
   authors: "Parker Liu, Chenxin Li, Zhengxin Li, Yipeng Wu, Wuyang Li, Zhiqin Yang, Zhenyuan Zhang, Yunlong Lin, Sirui Han, Brandon Y. Feng"
   venue: "NeurIPS 2025 Datasets and Benchmarks Track"
@@ -53,14 +61,6 @@
     paper: "https://arxiv.org/abs/2502.14846"
     github: ""
     website: ""
-
-- title: "WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment"
-  authors: "Hao Tang, Darren Yan Key, Kevin Ellis"
-  venue: "NeurIPS 2024"
-  links:
-    paper: "https://openreview.net/forum?id=QGJSXMhVaL"
-    github: "https://github.com/haotang1995/WorldCoder"
-    website: "https://haotang1995.github.io/projects/worldcoder"
 
 - title: "RoboCodeX: Multimodal Code Generation for Robotic Behavior Synthesis"
   authors: "Yao Mu, Junting Chen, Qinglong Zhang, Shoufa Chen, Qiaojun Yu, Chongjian Ge, Runjian Chen, Zhixuan Liang, Mengkang Hu, Chaofan Tao, Peize Sun, Haibao Yu, Chao Yang, Wenqi Shao, Wenhai Wang, Jifeng Dai, Yu Qiao, Mingyu Ding, Ping Luo"
