@@ -46,6 +46,14 @@
     github: "https://github.com/sgp-bench/sgp-bench"
     website: "https://sgp-bench.github.io/"
 
+- title: "Endowing Visual Reprogramming with Adversarial Robustness"
+  authors: "Shengjie Zhou, Xin Cheng, Haiyang Xu, Ming Yan, Tao Xiang, Feng Liu, Lei Feng"
+  venue: "ICLR 2025"
+  links:
+    paper: "https://openreview.net/forum?id=OuLgaHEmzi"
+    github: ""
+    website: ""
+
 - title: "IR3D-Bench: Evaluating Vision-Language Model Scene Understanding as Agentic Inverse Rendering"
   authors: "Parker Liu, Chenxin Li, Zhengxin Li, Yipeng Wu, Wuyang Li, Zhiqin Yang, Zhenyuan Zhang, Yunlong Lin, Sirui Han, Brandon Y. Feng"
   venue: "NeurIPS 2025 Datasets and Benchmarks Track"
@@ -62,6 +70,14 @@
     github: ""
     website: ""
 
+- title: "RoboScript: Code Generation for Free-Form Manipulation Tasks across Real and Simulation"
+  authors: "Junting Chen, Yao Mu, Qiaojun Yu, Tianming Wei, Silang Wu, Zhecheng Yuan, Zhixuan Liang, Chao Yang, Kaipeng Zhang, Wenqi Shao, Yu Qiao, Huazhe Xu, Mingyu Ding, Ping Luo"
+  venue: "arXiv 2024"
+  links:
+    paper: "https://arxiv.org/abs/2402.14623"
+    github: ""
+    website: ""
+
 - title: "RoboCodeX: Multimodal Code Generation for Robotic Behavior Synthesis"
   authors: "Yao Mu, Junting Chen, Qinglong Zhang, Shoufa Chen, Qiaojun Yu, Chongjian Ge, Runjian Chen, Zhixuan Liang, Mengkang Hu, Chaofan Tao, Peize Sun, Haibao Yu, Chao Yang, Wenqi Shao, Wenhai Wang, Jifeng Dai, Yu Qiao, Mingyu Ding, Ping Luo"
   venue: "ICML 2024"
@@ -70,13 +86,29 @@
     github: "https://github.com/RoboCodeX-source/RoboCodeX_code"
     website: "https://sites.google.com/view/robocodexplus"
 
-- title: "RoboScript: Code Generation for Free-Form Manipulation Tasks across Real and Simulation"
-  authors: "Junting Chen, Yao Mu, Qiaojun Yu, Tianming Wei, Silang Wu, Zhecheng Yuan, Zhixuan Liang, Chao Yang, Kaipeng Zhang, Wenqi Shao, Yu Qiao, Huazhe Xu, Mingyu Ding, Ping Luo"
-  venue: "arXiv 2024"
+- title: "Visual Program Distillation: Distilling Tools and Programmatic Reasoning into Vision-Language Models"
+  authors: "Yushi Hu, Otilia Stretcu, Chun-Ta Lu, Krishnamurthy Viswanathan, Kenji Hata, Enming Luo, Ranjay Krishna, Ariel Fuxman"
+  venue: "CVPR 2024"
   links:
-    paper: "https://arxiv.org/abs/2402.14623"
+    paper: "https://arxiv.org/abs/2312.03052"
     github: ""
+    website: "https://visual-program-distillation.github.io/"
+
+- title: "Recursive Visual Programming"
+  authors: "Jiaxin Ge, Sanjay Subramanian, Baifeng Shi, Roei Herzig, Trevor Darrell"
+  venue: "ECCV 2024"
+  links:
+    paper: "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05917.pdf"
+    github: "https://github.com/para-lost/RVP"
     website: ""
+
+- title: "Video Question Answering with Procedural Programs"
+  authors: "Rohan Choudhury, Koichiro Niinuma, Kris Kitani, Laszlo Jeni"
+  venue: "ECCV 2024"
+  links:
+    paper: "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05543.pdf"
+    github: ""
+    website: "https://rccchoudhury.github.io/proviq2023/"
 
 - title: "ChatGPT for Robotics: Design Principles and Model Abilities"
   authors: "Sai Vemprala, Rogerio Bonatti, Arthur Bucker, Ashish Kapoor"
@@ -124,6 +156,14 @@
   links:
     paper: "https://arxiv.org/abs/2311.13258"
     github: ""
+    website: ""
+
+- title: "Modular Visual Question Answering via Code Generation"
+  authors: "Sanjay Subramanian, Medhini Narasimhan, Kushal Khangaonkar, Kevin Yang, Arsha Nagrani, Cordelia Schmid, Andy Zeng, Trevor Darrell, Dan Klein"
+  venue: "ACL 2023 Short Papers"
+  links:
+    paper: "https://aclanthology.org/2023.acl-short.65/"
+    github: "https://github.com/sanjayss34/codevqa"
     website: ""
 
 - title: "Instruct2Act: Mapping Multi-modality Instructions to Robotic Actions with Large Language Model"

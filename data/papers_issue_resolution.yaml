@@ -38,6 +38,14 @@
     github: ""
     website: "https://swe-rebench.com"
 
+- title: "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
+  authors: "Siru Ouyang, Jun Yan, I-Hung Hsu, Yanfei Chen, Ke Jiang, Zifeng Wang, Rujun Han, Long T. Le, Samira Daruki, Xiangru Tang, Vishy Tirumalashetty, George Lee, Mahsan Rofouei, Hangfei Lin, Jiawei Han, Chen-Yu Lee, Tomas Pfister"
+  venue: "arxiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.25140"
+    github: ""
+    website: ""
+
 - title: "EXPEREPAIR: Dual-Memory Enhanced LLM-based Repository-Level Program Repair"
   authors: "Fangwen Mu, Junjie Wang, Lin Shi, Song Wang, Shoubin Li, Qing Wang"
   venue: "arXiv 2025"
@@ -182,14 +190,6 @@
     github: ""
     website: ""
 
-- title: "Co-PatcheR: Collaborative Software Patching with Component(s)-specific Small Reasoning Models"
-  authors: "Yuheng Tang, Hongwei Li, Kaijie Zhu, Michael Yang, Yangruibo Ding, Wenbo Guo"
-  venue: "arXiv 2025"
-  links:
-    paper: "https://arxiv.org/abs/2505.18955"
-    github: "https://github.com/ucsb-mlsec/Co-PatcheR"
-    website: ""
-
 - title: "SWE-Mirror: Scaling Issue-Resolving Datasets by Mirroring Issues Across Repositories"
   authors: "Junhao Wang, Daoguang Zan, Shulin Xin, Siyao Liu, Yurong Wu, Kai Shen"
   venue: "arXiv 2025"
@@ -205,6 +205,14 @@
     paper: "https://arxiv.org/abs/2509.09853"
     github: "https://centre-for-software-excellence.github.io/SWE-Effi/"
     website: "https://github.com/Centre-for-Software-Excellence/SWE-Effi"
+
+- title: "Learn-by-interact: A Data-Centric Framework for Self-Adaptive Agents in Realistic Environments"
+  authors: "Hongjin Su, Ruoxi Sun, Jinsung Yoon, Pengcheng Yin, Tao Yu, Sercan Ö. Arık"
+  venue: "arxiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2501.10893"
+    github: ""
+    website: ""
 
 - title: "Enhancing repository-level software repair via repository-aware knowledge graphs"
   authors: "Boyang Yang, Jiadong Ren, Shunfu Jin, Yang Liu, Feng Liu, Bach Le, Haoye Tian"
@@ -276,6 +284,14 @@
   links:
     paper: "https://arxiv.org/abs/2505.20749"
     github: "https://github.com/alfin06/AgentIssue-Bench"
+    website: ""
+
+- title: "Co-PatcheR: Collaborative Software Patching with Component(s)-specific Small Reasoning Models"
+  authors: "Yuheng Tang, Hongwei Li, Kaijie Zhu, Michael Yang, Yangruibo Ding, Wenbo Guo"
+  venue: "NeurIPS 2025"
+  links:
+    paper: "https://arxiv.org/abs/2505.18955"
+    github: "https://github.com/ucsb-mlsec/Co-PatcheR"
     website: ""
 
 - title: "RepoMaster: Autonomous Exploration and Understanding of GitHub Repositories for Complex Task Solving"
@@ -501,3 +517,11 @@
     paper: "https://arxiv.org/abs/2406.01304"
     github: "https://github.com/NL2Code/CodeR"
     website: ""
+
+- title: "MarsCode Agent: AI-native Automated Bug Fixing"
+  authors: "Yizhou Liu, Pengfei Gao, Xinchen Wang, Jie Liu, Yexuan Shi, Zhao Zhang, Chao Peng"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2409.00899"
+    github: ""
+    website: "https://se-research.bytedance.com/"

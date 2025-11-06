@@ -6,6 +6,14 @@
     github: ""
     website: ""
 
+- title: "LLM-based Agents for Automated Bug Fixing: How Far Are We?"
+  authors: "Xiangxin Meng, Zexiong Ma, Pengfei Gao, Chao Peng"
+  venue: "ICSE 2026"
+  links:
+    paper: "https://arxiv.org/abs/2411.10213"
+    github: "https://github.com/ResearchOpenRepos/bug_fixing_agent_empirical_study"
+    website: ""
+
 - title: "Understanding Software Engineering Agents Through the Lens of Traceability: An Empirical Study"
   authors: "Ira Ceka, Saurabh Pujar, Shyam Ramji, Luca Buratti, Gail Kaiser, Baishakhi Ray"
   venue: "arXiv 2025"
