@@ -5,3 +5,11 @@
     paper: "https://arxiv.org/abs/2509.16187"
     github: ""
     website: ""
+
+- title: "What a diff makes: automating code migration with large language models"
+  authors: "Katherine A. Rosenfeld, Cliff C. Kerr, Jessica Lundin"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2511.00160"
+    github: ""
+    website: ""

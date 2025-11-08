@@ -56,7 +56,7 @@
 
 - title: "GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leveraging"
   authors: "Ziyi Ni, Huacan Wang, Shuo Zhang, Shuo Lu, Ziyang He, Wang You, Zhenheng Tang, Yuntao Du, Bill Sun, Hongzhang Liu, Sen Hu, Ronghao Chen, Bo Li, Xin Li, Chen Hu, Binxing Jiao, Daxin Jiang, Pin Lyu"
-  venue: "arxiv 2025"
+  venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2508.18993"
     github: "https://github.com/QuantaAlpha/GitTaskBench"

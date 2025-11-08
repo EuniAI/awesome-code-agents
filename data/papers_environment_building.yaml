@@ -22,6 +22,14 @@
     github: "https://github.com/R2E-Gym/R2E-Gym"
     website: "https://r2e-gym.github.io/"
 
+- title: "Can Language Models Go Beyond Coding? Assessing the Capability of Language Models to Build Real-World Systems"
+  authors: "Chenyu Zhao, Shenglin Zhang, Zeshun Huang, Weilin Jin, Yongqian Sun, Dan Pei, Chaoyun Zhang, Qingwei Lin, Chetan Bansal, Saravan Rajmohan, Minghua Ma"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2511.00780"
+    github: ""
+    website: ""
+
 - title: "Repo2Run: Automated Building Executable Environment for Code Repository at Scale"
   authors: "Ruida Hu, Chao Peng, Xinchen Wang, Junjielong Xu, Cuiyun Gao"
   venue: "NeurIPS 2025"

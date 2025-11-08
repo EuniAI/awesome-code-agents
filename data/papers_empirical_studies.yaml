@@ -14,6 +14,22 @@
     github: "https://github.com/ResearchOpenRepos/bug_fixing_agent_empirical_study"
     website: ""
 
+- title: "Understanding Code Agent Behaviour: An Empirical Study of Success and Failure Trajectories"
+  authors: "Oorja Majgaonkar, Zhiwei Fei, Xiang Li, Federica Sarro, He Ye"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2511.00197"
+    github: ""
+    website: ""
+
+- title: "A Comprehensive Empirical Evaluation of Agent Frameworks on Code-centric Software Engineering Tasks"
+  authors: "Zhuowen Yin, Cuifeng Gao, Chunsong Fan, Wenzhang Yang, Yinxing Xue, Lijun Zhang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2511.00872"
+    github: ""
+    website: ""
+
 - title: "Understanding Software Engineering Agents Through the Lens of Traceability: An Empirical Study"
   authors: "Ira Ceka, Saurabh Pujar, Shyam Ramji, Luca Buratti, Gail Kaiser, Baishakhi Ray"
   venue: "arXiv 2025"

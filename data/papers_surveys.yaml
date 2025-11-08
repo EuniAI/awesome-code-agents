@@ -46,6 +46,14 @@
     github: ""
     website: ""
 
+- title: "Position: Vibe Coding Needs Vibe Reasoning: Improving Vibe Coding with Formal Verification"
+  authors: "Jacqueline Mitchell, Yasser Shaaban"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2511.00202"
+    github: ""
+    website: ""
+
 - title: "Vibe Coding vs. Agentic Coding: Fundamentals and Practical Implications of Agentic AI"
   authors: "Ranjan Sapkota, Konstantinos I. Roumeliotis, Manoj Karkee"
   venue: "arXiv 2025"
@@ -60,14 +68,6 @@
   links:
     paper: "https://arxiv.org/abs/2502.01492"
     github: ""
-    website: ""
-
-- title: "The Rise of AI Teammates in Software Engineering (SE) 3.0: How Autonomous Coding Agents Are Reshaping Software Engineering"
-  authors: "Hao Li, Haoxiang Zhang, Ahmed E. Hassan"
-  venue: "arXiv 2025"
-  links:
-    paper: "https://arxiv.org/abs/2507.15003"
-    github: "https://github.com/SAILResearch/AI_Teammates_in_SE3"
     website: ""
 
 - title: "Agentic Software Engineering: Foundational Pillars and a Research Roadmap"

@@ -22,6 +22,14 @@
     github: ""
     website: ""
 
+- title: "PerfDojo: Automated ML Library Generation for Heterogeneous Architectures"
+  authors: "Andrei Ivanov, Siyuan Shen, Gioele Gottardo, Marcin Chrapek, Afif Boudaoud, Timo Schneider, Luca Benini, Torsten Hoefler"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2511.03586"
+    github: ""
+    website: ""
+
 - title: "AIDE: AI-Driven Exploration in the Space of Code"
   authors: "Zhengyao Jiang, Dominik Schmidt, Dhruv Srikanth, Dixing Xu, Ian Kaplan, Deniss Jacenko, Yuxiang Wu"
   venue: "arXiv 2025"

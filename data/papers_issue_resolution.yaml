@@ -40,7 +40,7 @@
 
 - title: "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
   authors: "Siru Ouyang, Jun Yan, I-Hung Hsu, Yanfei Chen, Ke Jiang, Zifeng Wang, Rujun Han, Long T. Le, Samira Daruki, Xiangru Tang, Vishy Tirumalashetty, George Lee, Mahsan Rofouei, Hangfei Lin, Jiawei Han, Chen-Yu Lee, Tomas Pfister"
-  venue: "arxiv 2025"
+  venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2509.25140"
     github: ""
@@ -64,7 +64,7 @@
 
 - title: "Thinking Longer, Not Larger: Enhancing Software Engineering Agents via Scaling Test-Time Compute"
   authors: "Yingwei Ma, Yongbin Li, Yihong Dong, Xue Jiang, Rongyu Cao, Jue Chen, Fei Huang, Binhua Li"
-  venue: "arxiv 2025"
+  venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2503.23803"
     github: "https://github.com/yingweima2022/SWE-Reasoner"
@@ -72,7 +72,7 @@
 
 - title: "debug-gym: A Text-Based Environment for Interactive Debugging"
   authors: "Xingdi Yuan, Morgane M Moss, Charbel El Feghali, Chinmay Singh, Darya Moldavskaya, Drew MacPhee, Lucas Caccia, Matheus Pereira, Minseon Kim, Alessandro Sordoni, Marc-Alexandre Côté"
-  venue: "arxiv 2025"
+  venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2503.21557"
     github: "https://github.com/microsoft/debug-gym"
@@ -85,6 +85,14 @@
     paper: "https://arxiv.org/abs/2504.07164"
     github: "https://github.com/R2E-Gym/R2E-Gym"
     website: "https://r2e-gym.github.io/"
+
+- title: "HAFixAgent: History-Aware Automated Program Repair Agent"
+  authors: "Yu Shi, Hao Li, Bram Adams, Ahmed E. Hassan"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2511.01047"
+    github: ""
+    website: ""
 
 - title: "SWE-Debate: Competitive Multi-Agent Debate for Software Issue Resolution"
   authors: "Han Li, Yuling Shi, Shaoxin Lin, Xiaodong Gu, Heng Lian, Xin Wang, Yantao Jia, Tao Huang, Qianxiang Wang"
@@ -168,7 +176,7 @@
 
 - title: "A Self-Improving Coding Agent"
   authors: "Maxime Robeyns, Martin Szummer, Laurence Aitchison"
-  venue: "arxiv 2025"
+  venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2504.15228"
     github: "https://github.com/MaximeRobeyns/self_improving_coding_agent"
@@ -184,7 +192,7 @@
 
 - title: "Training Long-Context, Multi-Turn Software Engineering Agents with Reinforcement Learning"
   authors: "Alexander Golubev, Maria Trofimova, Sergei Polezhaev, Ibragim Badertdinov, Maksim Nekrashevich, Anton Shevtsov, Simon Karasik, Sergey Abramov, Andrei Andriushchenko, Filipp Fisin, Sergei Skvortsov, Boris Yangel"
-  venue: "arxiv 2025"
+  venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2508.03501"
     github: ""
@@ -208,7 +216,7 @@
 
 - title: "Learn-by-interact: A Data-Centric Framework for Self-Adaptive Agents in Realistic Environments"
   authors: "Hongjin Su, Ruoxi Sun, Jinsung Yoon, Pengcheng Yin, Tao Yu, Sercan Ö. Arık"
-  venue: "arxiv 2025"
+  venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2501.10893"
     github: ""
