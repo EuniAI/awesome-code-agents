@@ -1,3 +1,11 @@
+- title: "RPG: A Repository Planning Graph for Unified and Scalable Codebase Generation"
+  authors: "Jane Luo, Xin Zhang, Steven Liu, Jie Wu, Jianfeng Liu, Yiming Huang, Yangyu Huang, Chengyu Yin, Ying Xin, Yuefeng Zhan, Hao Sun, Qi Chen, Scarlett Li, Mao Yang"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.16198"
+    github: ""
+    website: ""
+
 - title: "SimdBench: Benchmarking Large Language Models for SIMD-Intrinsic Code Generation"
   authors: "Yibo He, Shuoran Zhao, Jiaming Huang, Yingjie Fu, Hao Yu, Cunjian Huang, Tao Xie"
   venue: "arXiv 2025"
@@ -174,7 +182,7 @@
     github: "https://github.com/OpenBMB/RepoAgent"
     website: ""
 
-- title: "Experiential Co-Learning of Sof tware-Developing Agents"
+- title: "Experiential Co-Learning of Software-Developing Agents"
   authors: "Chen Qian, Yufan Dang, Jiahao Li, Wei Liu, Zihao Xie, YiFei Wang, Weize Chen, Cheng Yang, Xin Cong, Xiaoyin Che, Zhiyuan Liu, Maosong Sun"
   venue: "ACL 2024"
   links:

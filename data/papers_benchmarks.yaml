@@ -14,6 +14,14 @@
     github: "https://github.com/scaleapi/SWE-bench_Pro-os"
     website: "https://scale.com/leaderboard/swe_bench_pro_public"
 
+- title: "SWE-Compass: Towards Unified Evaluation of Agentic Coding Abilities for Large Language Models"
+  authors: "Jingxuan Xu, Ken Deng, Weihao Li, Songwei Yu, Huaixi Tang, Haoyang Huang, Zhiyi Lai, Zizheng Zhan, Yanan Wu, Chenchen Zhang, Kepeng Lei, Yifan Yao, Xinping Lei, Wenqiang Zhu, Zongxian Feng, Han Li, Junqi Xiong, Dailin Li, Zuchen Gao, Kun Wu, Wen Xiang, Ziqi Zhan, Yuanxing Zhang, Wuxuan Gong, Ziyuan Gao, Guanxiang Wang, Yirong Xue, Mengtong Li, Mengfei Xie, Xiaojiang Zhang, Jinghui Wang, Wenhao Zhuang, Zheng Lin, Huiming Wang, Zhaoxiang Zhang, Yuqun Zhang, Haotian Zhang, Bin Chen, Jiaheng Liu"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2511.05459"
+    github: ""
+    website: ""
+
 - title: "SWE-PolyBench: A multi-language benchmark for repository level evaluation of coding agents"
   authors: "Muhammad Shihab Rashid, Christian Bock, Yuan Zhuang, Alexander Buchholz, Tim Esler, Simon Valentin, Luca Franceschi, Martin Wistuba, Prabhu Teja Sivaprasad, Woo Jung Kim, Anoop Deoras, Giovanni Zappella, Laurent Callot"
   venue: "arXiv 2025"

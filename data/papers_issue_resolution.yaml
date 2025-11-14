@@ -6,6 +6,22 @@
     github: "https://github.com/EuniAI/Prometheus"
     website: "https://euni.ai/"
 
+- title: "SWE-Compass: Towards Unified Evaluation of Agentic Coding Abilities for Large Language Models"
+  authors: "Jingxuan Xu, Ken Deng, Weihao Li, Songwei Yu, Huaixi Tang, Haoyang Huang, Zhiyi Lai, Zizheng Zhan, Yanan Wu, Chenchen Zhang, Kepeng Lei, Yifan Yao, Xinping Lei, Wenqiang Zhu, Zongxian Feng, Han Li, Junqi Xiong, Dailin Li, Zuchen Gao, Kun Wu, Wen Xiang, Ziqi Zhan, Yuanxing Zhang, Wuxuan Gong, Ziyuan Gao, Guanxiang Wang, Yirong Xue, Mengtong Li, Mengfei Xie, Xiaojiang Zhang, Jinghui Wang, Wenhao Zhuang, Zheng Lin, Huiming Wang, Zhaoxiang Zhang, Yuqun Zhang, Haotian Zhang, Bin Chen, Jiaheng Liu"
+  venue: "arXiv 2025/11"
+  links:
+    paper: "https://arxiv.org/abs/2511.05459"
+    github: ""
+    website: ""
+
+- title: "SWE-Sharp-Bench: A Reproducible Benchmark for C# Software Engineering Tasks"
+  authors: "Sanket Mhatre, Yasharth Bajpai, Sumit Gulwani, Emerson Murphy-Hill, Gustavo Soares"
+  venue: "arXiv 2025/11"
+  links:
+    paper: "https://arxiv.org/abs/2511.02352"
+    github: "https://github.com/microsoft/prose/tree/main/misc/SWE-Sharp-Bench"
+    website: ""
+
 - title: "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?"
   authors: "Xiang Deng, Jeff Da, Edwin Pan, Yannis Yiming He, Charles Ide, Kanak Garg, Niklas Lauffer, Andrew Park, Nitin Pasari, Chetan Rane, Karmini Sampath, Maya Krishnan, Srivatsa Kundurthy, Sean Hendryx, Zifan Wang, Chen Bo Calvin Zhang, Noah Jacobson, Bing Liu, Brad Kenstler"
   venue: "arXiv 2025"
@@ -37,6 +53,14 @@
     paper: "https://arxiv.org/abs/2505.20411"
     github: ""
     website: "https://swe-rebench.com"
+
+- title: "Trae Agent: An LLM-based Agent for Software Engineering with Test-time Scaling"
+  authors: "Trae Research Team: Pengfei Gao, Zhao Tian, Xiangxin Meng, Xinchen Wang, Ruida Hu, Yuanan Xiao, Yizhou Liu, Zhao Zhang, Junjie Chen, Cuiyun Gao, Yun Lin, Yingfei Xiong, Chao Peng, Xia Liu"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2507.23370"
+    github: "https://github.com/bytedance/trae-agent"
+    website: "https://www.trae.ai/"
 
 - title: "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
   authors: "Siru Ouyang, Jun Yan, I-Hung Hsu, Yanfei Chen, Ke Jiang, Zifeng Wang, Rujun Han, Long T. Le, Samira Daruki, Xiangru Tang, Vishy Tirumalashetty, George Lee, Mahsan Rofouei, Hangfei Lin, Jiawei Han, Chen-Yu Lee, Tomas Pfister"

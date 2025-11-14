@@ -6,6 +6,14 @@
     github: ""
     website: ""
 
+- title: "Exploring and Unleashing the Power of Large Language Models in CI/CD Configuration Translation"
+  authors: "Chong Wang, Chen Zhang, Jiajun Wu, Wunan Guo, Jianfeng Qu, Yewen Tian, Yang Liu"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2511.01316"
+    github: ""
+    website: ""
+
 - title: "What a diff makes: automating code migration with large language models"
   authors: "Katherine A. Rosenfeld, Cliff C. Kerr, Jessica Lundin"
   venue: "arXiv 2025"

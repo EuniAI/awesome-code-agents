@@ -1,3 +1,11 @@
+- title: "EvoDev: An Iterative Feature-Driven Framework for End-to-End Software Development with LLM-based Agents"
+  authors: "Junwei Liu, Chen Xu, Chong Wang, Tong Bai, Weitong Chen, Kaseng Wong, Yiling Lou, Xin Peng"
+  venue: "arXiv 2025/11"
+  links:
+    paper: "https://arxiv.org/abs/2511.02399"
+    github: ""
+    website: ""
+
 - title: "NoCode-bench: A Benchmark for Evaluating Natural Language-Driven Feature Addition"
   authors: "Le Deng, Zhonghao Jiang, Jialun Cao, Michael Pradel, Zhongxin Liu"
   venue: "arXiv 2025"
