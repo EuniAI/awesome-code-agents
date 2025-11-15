@@ -1,3 +1,11 @@
+- title: "InteractScience: Programmatic and Visually-Grounded Evaluation of Interactive Scientific Demonstration Code Generation"
+  authors: "Qiaosheng Chen, Yang Liu, Lei Li, Kai Chen, Qipeng Guo, Gong Cheng, Fei Yuan"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2510.09724"
+    github: "https://github.com/open-compass/InteractScience"
+    website: ""
+
 - title: "WebGen-Agent: Enhancing Interactive Website Generation with Multi-Level Feedback and Step-Level Reinforcement Learning"
   authors: "Zimu Lu, Houxing Ren, Yunqiao Yang, Ke Wang, Zhuofan Zong, Junting Pan, Mingjie Zhan, Hongsheng Li"
   venue: "arXiv 2025"

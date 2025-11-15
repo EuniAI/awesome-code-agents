@@ -1,3 +1,21 @@
+- title: "Lost in Code Generation: Reimagining the Role of Software Models in AI-driven Software Engineering"
+  authors: "Jürgen Cito, Dominik Bork"
+  venue: "arXiv 2025/11"
+  links:
+    paper: "https://arxiv.org/abs/2511.02475"
+    github: ""
+    website: ""
+  tags: "Position Paper"
+
+- title: "Towards Realistic Project-Level Code Generation via Multi-Agent Collaboration and Semantic Architecture Modeling"
+  authors: "Qianhui Zhao, Li Zhang, Fang Liu, Junhang Cheng, Chengru Wu, Junchen Ai, Qiaoyuanhe Meng, Lichen Zhang, Xiaoli Lian, Shubin Song, Yuanping Guo"
+  venue: "arXiv 2025/11"
+  links:
+    paper: "https://arxiv.org/abs/2511.03404"
+    github: "https://github.com/whisperzqh/ProjectGen"
+    website: ""
+  tags: "Benchmark & Dataset"
+
 - title: "RPG: A Repository Planning Graph for Unified and Scalable Codebase Generation"
   authors: "Jane Luo, Xin Zhang, Steven Liu, Jie Wu, Jianfeng Liu, Yiming Huang, Yangyu Huang, Chengyu Yin, Ying Xin, Yuefeng Zhan, Hao Sun, Qi Chen, Scarlett Li, Mao Yang"
   venue: "arXiv 2025"

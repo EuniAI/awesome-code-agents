@@ -5,3 +5,12 @@
     paper: "https://arxiv.org/abs/2505.13886"
     github: "https://github.com/tongjingqi/Game-RL"
     website: ""
+
+- title: "Agents in the Sandbox: End-to-End Crash Bug Reproduction for Minecraft"
+  authors: "Eray Yapağcı, Yavuz Alp Sencer Öztürk, Eray Tüzün"
+  venue: "ASE 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.20036"
+    github: "https://github.com/erayyap/bugcraft"
+    website: "https://bugcraft2025.github.io/"
+  tags: "Benchmark & Dataset"

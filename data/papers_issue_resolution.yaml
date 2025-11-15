@@ -6,6 +6,14 @@
     github: "https://github.com/EuniAI/Prometheus"
     website: "https://euni.ai/"
 
+- title: "The OpenHands Software Agent SDK: A Composable and Extensible Foundation for Production Agents"
+  authors: "Xingyao Wang, Simon Rosenberg, Juan Michelini, Calvin Smith, Hoang Tran, Engel Nyst, Rohit Malhotra, Xuhui Zhou, Valerie Chen, Robert Brennan, Graham Neubig"
+  venue: "arXiv 2025/11"
+  links:
+    paper: "https://arxiv.org/abs/2511.03690"
+    github: "https://github.com/OpenHands/software-agent-sdk"
+    website: ""
+
 - title: "SWE-Compass: Towards Unified Evaluation of Agentic Coding Abilities for Large Language Models"
   authors: "Jingxuan Xu, Ken Deng, Weihao Li, Songwei Yu, Huaixi Tang, Haoyang Huang, Zhiyi Lai, Zizheng Zhan, Yanan Wu, Chenchen Zhang, Kepeng Lei, Yifan Yao, Xinping Lei, Wenqiang Zhu, Zongxian Feng, Han Li, Junqi Xiong, Dailin Li, Zuchen Gao, Kun Wu, Wen Xiang, Ziqi Zhan, Yuanxing Zhang, Wuxuan Gong, Ziyuan Gao, Guanxiang Wang, Yirong Xue, Mengtong Li, Mengfei Xie, Xiaojiang Zhang, Jinghui Wang, Wenhao Zhuang, Zheng Lin, Huiming Wang, Zhaoxiang Zhang, Yuqun Zhang, Haotian Zhang, Bin Chen, Jiaheng Liu"
   venue: "arXiv 2025/11"
@@ -20,6 +28,22 @@
   links:
     paper: "https://arxiv.org/abs/2511.02352"
     github: "https://github.com/microsoft/prose/tree/main/misc/SWE-Sharp-Bench"
+    website: ""
+
+- title: "U2F: Encouraging SWE-Agent to Seize Novelty without Losing Feasibility"
+  authors: "Wencheng Ye, Yan Liu"
+  venue: "arXiv 2025/11"
+  links:
+    paper: "https://arxiv.org/abs/2511.03517"
+    github: ""
+    website: ""
+
+- title: "Enhancing repository-level software repair via repository-aware knowledge graphs"
+  authors: "Boyang Yang, Jiadong Ren, Shunfu Jin, Yang Liu, Feng Liu, Bach Le, Haoye Tian"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2503.21710"
+    github: "https://github.com/GLEAM-Lab/KGCompass"
     website: ""
 
 - title: "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?"

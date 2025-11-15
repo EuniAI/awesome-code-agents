@@ -1,3 +1,11 @@
+# - title: "Uncovering Code Insights: Leveraging GitHub Artifacts for Deeper Code Understanding"
+#   authors: "Ziv Nevo, Orna Raz, Karen Yorav"
+#   venue: "AISM 2025"
+#   links:
+#     paper: "https://arxiv.org/abs/2511.03549"
+#     github: ""
+#     website: ""
+
 - title: "SWE-QA: Can Language Models Answer Repository-level Code Questions?"
   authors: "Weihan Peng, Yuling Shi, Yuhang Wang, Xinyun Zhang, Beijun Shen, Xiaodong Gu"
   venue: "arXiv 2025"

@@ -6,11 +6,27 @@
     github: ""
     website: ""
 
+- title: "Leveraging Large Language Model for Information Retrieval-based Bug Localization"
+  authors: "Moumita Asad, Rafed Muhammad Yasir, Sam Malek"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2508.00253"
+    github: ""
+    website: ""
+
 - title: "Tool-integrated Reinforcement Learning for Repo Deep Search"
   authors: "Zexiong Ma, Chao Peng, Qunhong Zeng, Pengfei Gao, Yanzhen Zou, Bing Xie"
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2508.03012"
+    github: ""
+    website: ""
+
+- title: "Bridging Bug Localization and Issue Fixing: A Hierarchical Localization Framework Leveraging Large Language Models"
+  authors: "Jianming Chang, Xin Zhou, Lulu Wang, David Lo, Bixin Li"
+  venue: "arXiv 2025/02"
+  links:
+    paper: "https://arxiv.org/abs/2502.15292"
     github: ""
     website: ""
 

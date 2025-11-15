@@ -14,6 +14,15 @@
     github: ""
     website: ""
 
+- title: "Agents in the Sandbox: End-to-End Crash Bug Reproduction for Minecraft"
+  authors: "Eray Yapağcı, Yavuz Alp Sencer Öztürk, Eray Tüzün"
+  venue: "ASE 2025"
+  links:
+    paper: "https://arxiv.org/abs/2503.20036"
+    github: "https://github.com/erayyap/bugcraft"
+    website: "https://bugcraft2025.github.io/"
+  tags: "Benchmark & Dataset"
+
 - title: "LLMs as Continuous Learners: Improving the Reproduction of Defective Code in Software Issues"
   authors: "Yalan Lin, Yingwei Ma, Rongyu Cao, Binhua Li, Fei Huang, Xiaodong Gu, Yongbin Li"
   venue: "arXiv 2024"
@@ -29,3 +38,11 @@
     paper: "https://arxiv.org/abs/2412.02883"
     github: ""
     website: ""
+
+- title: "SWT-Bench: Testing and Validating Real-World Bug-Fixes with Code Agents"
+  authors: "Niels Mündler, Mark Niklas Müller, Jingxuan He, Martin Vechev"
+  venue: "NeurIPS 2024"
+  links:
+    paper: "https://arxiv.org/abs/2406.12952"
+    github: "https://github.com/logic-star-ai/swt-bench"
+    website: "https://swtbench.com/?results=verified"
