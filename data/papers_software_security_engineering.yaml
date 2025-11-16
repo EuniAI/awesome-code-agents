@@ -1,3 +1,11 @@
+- title: "SecRepoBench: Benchmarking Code Agents for Secure Code Completion in Real-World Repositories"
+  authors: "Chihao Shen, Connor Dilgren, Purva Chiniya, Luke Griffith, Yu Ding, Yizheng Chen"
+  venue: "arXiv 2025/11"
+  links:
+    paper: "https://arxiv.org/abs/2504.21205"
+    github: ""
+    website: ""
+
 - title: "SEC-bench: Automated Benchmarking of LLM Agents on Real-World Software Security Tasks"
   authors: "Hwiwon Lee, Ziqi Zhang, Hanxiao Lu, Lingming Zhang"
   venue: "arXiv 2025"

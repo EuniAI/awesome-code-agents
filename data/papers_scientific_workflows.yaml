@@ -1,0 +1,8 @@
+- title: "ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic Scientific Workflows"
+  authors: "Qiushi Sun, Zhoumianze Liu, Chang Ma, Zichen Ding, Fangzhi Xu, Zhangyue Yin, Haiteng Zhao, Zhenyu Wu, Kanzhi Cheng, Zhaoyang Liu, Jianing Wang, Qintong Li, Xiangru Tang, Tianbao Xie, Xiachong Feng, Xiang Li, Ben Kao, Wenhai Wang, Biqing Qi, Lingpeng Kong, Zhiyong Wu"
+  venue: "arXiv 2025/06"
+  links:
+    paper: "https://arxiv.org/abs/2505.19897"
+    github: "https://github.com/OS-Copilot/ScienceBoard"
+    website: "https://qiushisun.github.io/ScienceBoard-Home/"
+  tags: "Benchmark & Dataset"

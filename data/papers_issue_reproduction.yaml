@@ -1,17 +1,57 @@
 - title: "Issue2Test: Generating Reproducing Test Cases from Issue Reports"
   authors: "Noor Nashid, Islem Bouzenia, Michael Pradel, Ali Mesbah"
-  venue: "arXiv 2025"
+  venue: "arXiv 2025/10"
   links:
     paper: "https://arxiv.org/abs/2503.16320"
     github: ""
     website: ""
 
+- title: "Execution-Feedback Driven Test Generation from SWE Issues"
+  authors: "Toufique Ahmed, Jatin Ganhotra, Avraham Shinnar, Martin Hirzel"
+  venue: "arXiv 2025/08"
+  links:
+    paper: "https://arxiv.org/abs/2508.06365"
+    github: ""
+    website: ""
+
+- title: "Benchmarking LLMs for Unit Test Generation from Real-World Functions"
+  authors: "Dong Huang, Jie M. Zhang, Mark Harman, Qianru Zhang, Mingzhe Du, See-Kiong Ng"
+  venue: "arXiv 2025/08"
+  links:
+    paper: "https://arxiv.org/abs/2508.00408"
+    github: ""
+    website: ""
+
+- title: "AssertFlip: Reproducing Bugs via Inversion of LLM-Generated Passing Tests"
+  authors: "Lara Khatib, Noble Saji Mathews, Meiyappan Nagappan"
+  venue: "arXiv 2025/07"
+  links:
+    paper: "https://arxiv.org/abs/2507.17542"
+    github: ""
+    website: ""
+
 - title: "Agentic Bug Reproduction for Effective Automated Program Repair at Google"
   authors: "Runxiang Cheng, Michele Tufano, Jürgen Cito, José Cambronero, Pat Rondon, Renyao Wei, Aaron Sun, Satish Chandra"
-  venue: "arXiv 2025"
+  venue: "arXiv 2025/05"
   links:
     paper: "https://arxiv.org/abs/2502.01821"
     github: ""
+    website: ""
+
+- title: "Can LLM Generate Regression Tests for Software Commits?"
+  authors: "Jing Liu, Seongmin Lee, Eleonora Losiouk, Marcel Böhme"
+  venue: "arXiv 2025/01"
+  links:
+    paper: "https://arxiv.org/abs/2501.11086"
+    github: ""
+    website: ""
+
+- title: "Otter: Generating Tests from Issues to Validate SWE Patches"
+  authors: "Toufique Ahmed, Jatin Ganhotra, Rangeet Pan, Avraham Shinnar, Saurabh Sinha, Martin Hirzel"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.05368"
+    github: "https://github.com/IBM/TDD-Bench-Verified"
     website: ""
 
 - title: "Agents in the Sandbox: End-to-End Crash Bug Reproduction for Minecraft"
@@ -23,6 +63,31 @@
     website: "https://bugcraft2025.github.io/"
   tags: "Benchmark & Dataset"
 
+- title: "Automated Generation of Issue-Reproducing Tests by Combining LLMs and Search-Based Testing"
+  authors: "Konstantinos Kitsios, Marco Castelluccio, Alberto Bacchelli"
+  venue: "ASE 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.01616"
+    github: "https://github.com/kitsiosk/blast"
+    website: ""
+
+- title: "AEGIS: An Agent-based Framework for General Bug Reproduction from Issue Descriptions"
+  authors: "Xinchen Wang, Pengfei Gao, Xiangxin Meng, Chao Peng, Ruida Hu, Yun Lin, Cuiyun Gao"
+  venue: "FSE 2025 Industry Papers"
+  links:
+    paper: "https://arxiv.org/abs/2411.18015"
+    github: ""
+    website: ""
+
+- title: "An Empirical Study on Leveraging Images in Automated Bug Report Reproduction"
+  authors: "Dingbang Wang, Zhaoxu Zhang, Sidong Feng, William G. J. Halfond, Tingting Yu"
+  venue: "MSR 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.15099"
+    github: ""
+    website: ""
+  tags: "Empirical Study"
+
 - title: "LLMs as Continuous Learners: Improving the Reproduction of Defective Code in Software Issues"
   authors: "Yalan Lin, Yingwei Ma, Rongyu Cao, Binhua Li, Fei Huang, Xiaodong Gu, Yongbin Li"
   venue: "arXiv 2024"
@@ -33,9 +98,17 @@
 
 - title: "TDD-Bench Verified: Can LLMs Generate Tests for Issues Before They Get Resolved?"
   authors: "Toufique Ahmed, Martin Hirzel, Rangeet Pan, Avraham Shinnar, Saurabh Sinha"
-  venue: "arXiv 2024"
+  venue: "arXiv 2024/12"
   links:
     paper: "https://arxiv.org/abs/2412.02883"
+    github: "https://github.com/IBM/TDD-Bench-Verified"
+    website: ""
+
+- title: "Evaluating Diverse Large Language Models for Automatic and General Bug Reproduction"
+  authors: "Sungmin Kang, Juyeon Yoon, Nargiz Askarbekkyzy, Shin Yoo"
+  venue: "IEEE Transactions on Software Engineering 2024"
+  links:
+    paper: "https://ieeexplore.ieee.org/document/10664637"
     github: ""
     website: ""
 
@@ -46,3 +119,11 @@
     paper: "https://arxiv.org/abs/2406.12952"
     github: "https://github.com/logic-star-ai/swt-bench"
     website: "https://swtbench.com/?results=verified"
+
+- title: "Large Language Models are Few-shot Testers: Exploring LLM-based General Bug Reproduction"
+  authors: "Sungmin Kang, Juyeon Yoon, Shin Yoo"
+  venue: "ICSE 2023"
+  links:
+    paper: "https://arxiv.org/abs/2209.11515"
+    github: ""
+    website: ""

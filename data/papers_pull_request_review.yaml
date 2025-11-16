@@ -6,6 +6,15 @@
     github: ""
     website: ""
 
+- title: "On the Use of Agentic Coding: An Empirical Study of Pull Requests on GitHub"
+  authors: "Miku Watanabe, Hao Li, Yutaro Kashiwa, Brittany Reid, Hajimu Iida, Ahmed E. Hassan"
+  venue: "arXiv 2025/09"
+  links:
+    paper: "https://arxiv.org/abs/2509.14745"
+    github: ""
+    website: ""
+  tags: "Empirical Study"
+
 - title: "The Rise of AI Teammates in Software Engineering (SE) 3.0: How Autonomous Coding Agents Are Reshaping Software Engineering"
   authors: "Hao Li, Haoxiang Zhang, Ahmed E. Hassan"
   venue: "arXiv 2025"

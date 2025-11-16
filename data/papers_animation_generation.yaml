@@ -1,3 +1,12 @@
+- title: "JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intelligence"
+  authors: "Qiushi Sun, Jingyang Gong, Yang Liu, Qiaosheng Chen, Lei Li, Kai Chen, Qipeng Guo, Ben Kao, Fei Yuan"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2510.23538"
+    github: "https://github.com/InternLM/JanusCoder"
+    website: ""
+  tags: "Benchmark & Dataset"
+
 - title: "LogoMotion: Visually-Grounded Code Synthesis for Creating and Editing Animation"
   authors: "Vivian Liu, Rubaiat Habib Kazi, Li-Yi Wei, Matthew Fisher, Timothy Langlois, Seth Walker, Lydia Chilton"
   venue: "CHI 2025"

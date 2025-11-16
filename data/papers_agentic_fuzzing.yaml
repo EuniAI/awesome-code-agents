@@ -1,3 +1,11 @@
+- title: "Intention-Driven Generation of Project-Specific Test Cases"
+  authors: "Binhang Qi, Yun Lin, Xinyi Weng, Yuhuan Huang, Chenyan Liu, Hailong Sun, Zhi Jin, Jin Song Dong"
+  venue: "arXiv 2025/09"
+  links:
+    paper: "https://arxiv.org/abs/2507.20619"
+    github: ""
+    website: ""
+
 - title: "Locus: Agentic Predicate Synthesis for Directed Fuzzing"
   authors: "Jie Zhu, Chihao Shen, Ziyang Li, Jiahao Yu, Yizheng Chen, Kexin Pei"
   venue: "arXiv 2025"

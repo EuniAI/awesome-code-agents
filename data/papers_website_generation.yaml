@@ -1,3 +1,12 @@
+- title: "JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intelligence"
+  authors: "Qiushi Sun, Jingyang Gong, Yang Liu, Qiaosheng Chen, Lei Li, Kai Chen, Qipeng Guo, Ben Kao, Fei Yuan"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2510.23538"
+    github: "https://github.com/InternLM/JanusCoder"
+    website: ""
+  tags: "Benchmark & Dataset"
+
 - title: "InteractScience: Programmatic and Visually-Grounded Evaluation of Interactive Scientific Demonstration Code Generation"
   authors: "Qiaosheng Chen, Yang Liu, Lei Li, Kai Chen, Qipeng Guo, Gong Cheng, Fei Yuan"
   venue: "arXiv 2025/10"

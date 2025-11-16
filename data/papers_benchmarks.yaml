@@ -86,14 +86,6 @@
     github: ""
     website: ""
 
-- title: "Is Your Automated Software Engineer Trustworthy?"
-  authors: "Noble Saji Mathews, Meiyappan Nagappan"
-  venue: "arXiv 2025"
-  links:
-    paper: "https://arxiv.org/abs/2506.17812"
-    github: "https://github.com/uw-swag/BouncerBench"
-    website: "https://bouncerbench.com/"
-
 - title: "WebDS: An End-to-End Benchmark for Web-based Data Science"
   authors: "Ethan Hsu, Hong Meng Yam, Ines Bouissou, Aaron Murali John, Raj Thota, Josh Koe, Vivek Sarath Putta, G K Dharesan, Alexander Spangher, Shikhar Murty, Tenghao Huang, Christopher D. Manning"
   venue: "arXiv 2025"

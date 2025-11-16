@@ -1,3 +1,12 @@
+- title: "JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intelligence"
+  authors: "Qiushi Sun, Jingyang Gong, Yang Liu, Qiaosheng Chen, Lei Li, Kai Chen, Qipeng Guo, Ben Kao, Fei Yuan"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2510.23538"
+    github: "https://github.com/InternLM/JanusCoder"
+    website: ""
+  tags: "Benchmark & Dataset"
+
 - title: "Plot2Code: A Comprehensive Benchmark for Evaluating Multi-modal Large Language Models in Code Generation from Scientific Plots"
   authors: "Chengyue Wu, Yixiao Ge, Qiushan Guo, Jiahao Wang, Zhixuan Liang, Zeyu Lu, Ying Shan, Ping Luo"
   venue: "arXiv 2025"
