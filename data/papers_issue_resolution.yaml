@@ -6,6 +6,14 @@
     github: "https://github.com/EuniAI/Prometheus"
     website: "https://euni.ai/"
 
+- title: "Live-SWE-agent: Can Software Engineering Agents Self-Evolve on the Fly?"
+  authors: "Chunqiu Steven Xia, Zhe Wang, Yan Yang, Yuxiang Wei, Lingming Zhang"
+  venue: "arXiv 2025/11"
+  links:
+    paper: "https://arxiv.org/abs/2511.13646"
+    github: "https://github.com/OpenAutoCoder/live-swe-agent"
+    website: ""
+
 - title: "The OpenHands Software Agent SDK: A Composable and Extensible Foundation for Production Agents"
   authors: "Xingyao Wang, Simon Rosenberg, Juan Michelini, Calvin Smith, Hoang Tran, Engel Nyst, Rohit Malhotra, Xuhui Zhou, Valerie Chen, Robert Brennan, Graham Neubig"
   venue: "arXiv 2025/11"
@@ -132,6 +140,22 @@
   links:
     paper: "https://arxiv.org/abs/2503.23803"
     github: "https://github.com/yingweima2022/SWE-Reasoner"
+    website: ""
+
+- title: "Satori-SWE: Evolutionary Test-Time Scaling for Sample-Efficient Software Engineering"
+  authors: "Guangtao Zeng, Maohao Shen, Delin Chen, Zhenting Qi, Subhro Das, Dan Gutfreund, David Cox, Gregory Wornell, Wei Lu, Zhang-Wei Hong, Chuang Gan"
+  venue: "arXiv 2025/05"
+  links:
+    paper: "https://arxiv.org/abs/2505.23604"
+    github: "https://github.com/satori-reasoning/Satori-SWE"
+    website: "https://satori-reasoning.github.io/"
+
+- title: "DARS: Dynamic Action Re-Sampling to Enhance Coding Agent Performance by Adaptive Tree Traversal"
+  authors: "Vaibhav Aggarwal, Ojasv Kamal, Abhinav Japesh, Zhijing Jin, Bernhard Schölkopf"
+  venue: "arXiv 2025/03"
+  links:
+    paper: "https://arxiv.org/abs/2503.14269"
+    github: ""
     website: ""
 
 - title: "debug-gym: A Text-Based Environment for Interactive Debugging"

@@ -1,3 +1,12 @@
+- title: "MigrationBench: Repository-Level Code Migration Benchmark from Java 8"
+  authors: "Linbo Liu, Xinle Liu, Qiang Zhou, Lin Chen, Yihan Liu, Hoan Nguyen, Behrooz Omidvar-Tehrani, Xi Shen, Jun Huan, Omer Tripp, Anoop Deoras"
+  venue: "arXiv 2025/05"
+  links:
+    paper: "https://arxiv.org/abs/2505.09569"
+    github: "https://github.com/amazon-science/MigrationBench"
+    website: "https://huggingface.co/collections/AmazonScience/migrationbench"
+  tags: "Benchmark & Dataset"
+
 - title: "MatchFixAgent: Language-Agnostic Autonomous Repository-Level Code Translation Validation and Repair"
   authors: "Ali Reza Ibrahimzada, Brandon Paulsen, Reyhaneh Jabbarvand, Joey Dodds, Daniel Kroening"
   venue: "arXiv 2025"
