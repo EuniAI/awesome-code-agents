@@ -90,7 +90,7 @@
 
 <!-- START PAPERS SUMMARY -->
 🔥 **We are actively tracking the frontier research of code agents.**<br>
-📚 *Currently collected:* **`423` papers and products** — *(Last update: 2025-11-25)*
+📚 *Currently collected:* **`423` papers and products** — *(Last update: 2025-11-26)*
 <!-- END PAPERS SUMMARY -->
 
 - [🚀 Products & Tools](#-products--tools)
