@@ -6,6 +6,14 @@
     github: ""
     website: ""
 
+- title: "UTBoost: Rigorous Evaluation of Coding Agents on SWE-Bench"
+  authors: "Boxi Yu, Yuxuan Zhu, Pinjia He, Daniel Kang"
+  venue: "arXiv 2025/06"
+  links:
+    paper: "https://arxiv.org/abs/2506.09289"
+    github: ""
+    website: ""
+
 - title: "Locus: Agentic Predicate Synthesis for Directed Fuzzing"
   authors: "Jie Zhu, Chihao Shen, Ziyang Li, Jiahao Yu, Yizheng Chen, Kexin Pei"
   venue: "arXiv 2025"

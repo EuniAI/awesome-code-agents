@@ -1,0 +1,31 @@
+- title: "SpecAgent: A Speculative Retrieval and Forecasting Agent for Code Completion"
+  authors: "George Ma, Anurag Koul, Qi Chen, Yawen Wu, Sachit Kuhar, Yu Yu, Aritra Sengupta, Varun Kumar, Murali Krishna Ramanathan"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2510.17925"
+    github: ""
+    website: ""
+
+- title: "Repoformer: Selective Retrieval for Repository-Level Code Completion"
+  authors: "Di Wu, Wasi Uddin Ahmad, Dejiao Zhang, Murali Krishna Ramanathan, Xiaofei Ma"
+  venue: "ICML 2024"
+  links:
+    paper: "https://arxiv.org/abs/2403.10059"
+    github: ""
+    website: ""
+
+- title: "Dataflow-Guided Retrieval Augmentation for Repository-Level Code Completion"
+  authors: "Wei Cheng, Yuhan Wu, Wei Hu"
+  venue: "ACL 2024"
+  links:
+    paper: "https://arxiv.org/abs/2405.19782"
+    github: ""
+    website: ""
+
+- title: "RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and Generation"
+  authors: "Fengji Zhang, Bei Chen, Yue Zhang, Jacky Keung, Jin Liu, Daoguang Zan, Yi Mao, Jian-Guang Lou, Weizhu Chen"
+  venue: "EMNLP 2023"
+  links:
+    paper: "https://arxiv.org/abs/2303.12570"
+    github: ""
+    website: ""

@@ -6,6 +6,14 @@
     github: ""
     website: ""
 
+- title: "When Old Meets New: Evaluating the Impact of Regression Tests on SWE Issue Resolution"
+  authors: "Yang Chen, Toufique Ahmed, Reyhaneh Jabbarvand, Martin Hirzel"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2510.18270"
+    github: ""
+    website: ""
+
 - title: "Execution-Feedback Driven Test Generation from SWE Issues"
   authors: "Toufique Ahmed, Jatin Ganhotra, Avraham Shinnar, Martin Hirzel"
   venue: "arXiv 2025/08"

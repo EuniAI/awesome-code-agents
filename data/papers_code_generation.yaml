@@ -16,6 +16,32 @@
     website: ""
   tags: "Benchmark & Dataset"
 
+- title: "Retrieval-Augmented Code Generation: A Survey with Focus on Repository-Level Approaches"
+  authors: "Yicheng Tao, Yao Qin, Yepang Liu"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2510.04905"
+    github: ""
+    website: ""
+  tags: "Survey"
+
+- title: "GRACE: Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion"
+  authors: "Xingliang Wang, Baoyi Wang, Chen Zhi, Junxiao Han, Xinkui Zhao, Jianwei Yin, Shuiguang Deng"
+  venue: "arXiv 2025/09"
+  links:
+    paper: "https://arxiv.org/abs/2509.05980"
+    github: ""
+    website: ""
+
+- title: "FullStack Bench: Evaluating LLMs as Full Stack Coders"
+  authors: "Bytedance-Seed-Foundation-Code-Team: Yao Cheng, Jianfeng Chen, Jie Chen, Li Chen, Liyu Chen, Wentao Chen, Zhengyu Chen, Shijie Geng, Aoyan Li, Bo Li, Bowen Li, Linyi Li, Boyi Liu, Jiaheng Liu, Kaibo Liu, Qi Liu, Shukai Liu, Siyao Liu, Tianyi Liu, Tingkai Liu, Yongfei Liu, Rui Long, Jing Mai, Guanghan Ning, Z.Y. Peng, Kai Shen, Jiahao Su, Jing Su, Tao Sun, Yifan Sun, Yunzhe Tao, Guoyin Wang, Siwei Wang, Xuwu Wang, Yite Wang, Zihan Wang, Jinxiang Xia, Liang Xiang, Xia Xiao, Yongsheng Xiao, Chenguang Xi, Shulin Xin, Jingjing Xu, Shikun Xu, Hongxia Yang, Jack Yang, Yingxiang Yang, Jianbo Yuan, Jun Zhang, Yufeng Zhang, Yuyu Zhang, Shen Zheng, He Zhu, Ming Zhu"
+  venue: "arXiv 2025/05"
+  links:
+    paper: "https://arxiv.org/abs/2412.00535"
+    github: "https://github.com/bytedance/FullStackBench"
+    website: ""
+  tags: "Benchmark & Dataset"
+
 - title: "RPG: A Repository Planning Graph for Unified and Scalable Codebase Generation"
   authors: "Jane Luo, Xin Zhang, Steven Liu, Jie Wu, Jianfeng Liu, Yiming Huang, Yangyu Huang, Chengyu Yin, Ying Xin, Yuefeng Zhan, Hao Sun, Qi Chen, Scarlett Li, Mao Yang"
   venue: "arXiv 2025"
@@ -63,6 +89,14 @@
     paper: "https://arxiv.org/abs/2505.18646"
     github: "https://github.com/EvoAgentX/EvoAgentX"
     website: "https://evoagentx.github.io/EvoAgentX/"
+
+- title: "Repository-level Code Search with Neural Retrieval Methods"
+  authors: "Siddharth Gandhi, Luyu Gao, Jamie Callan"
+  venue: "arXiv 2025/02"
+  links:
+    paper: "https://arxiv.org/abs/2502.07067"
+    github: ""
+    website: ""
 
 - title: "Co-Saving: Resource Aware Multi-Agent Collaboration for Software Development"
   authors: "Rennai Qiu, Chen Qian, Ran Li, Yufan Dang, Weize Chen, Cheng Yang, Yingli Zhang, Ye Tian, Xuantang Xiong, Lei Han, Zhiyuan Liu, Maosong Sun"
@@ -120,6 +154,14 @@
     github: "https://github.com/kagnlp/CodeGenerator"
     website: "https://kagnlp.github.io/codesim.github.io/"
 
+- title: "On the Impacts of Contexts on Repository-Level Code Generation"
+  authors: "Nam Le Hai, Dung Manh Nguyen, Nghi D. Q. Bui"
+  venue: "NAACL 2025 Findings"
+  links:
+    paper: "https://aclanthology.org/2025.findings-naacl.82/"
+    github: ""
+    website: ""
+
 - title: "ProjectEval: A Benchmark for Programming Agents Automated Evaluation on Project-Level Code Generation"
   authors: "Kaiyuan Liu, Youcheng Pan, Yang Xiang, Daojing He, Jing Li, Yexing Du, Tianrun Gao"
   venue: "ACL 2025 Findings"
@@ -176,60 +218,20 @@
     github: "https://github.com/commit-0/commit0"
     website: "https://commit-0.github.io/"
 
-- title: "AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors"
-  authors: "Weize Chen, Yusheng Su, Jingwei Zuo, Cheng Yang, Chenfei Yuan, Chi-Min Chan, Heyang Yu, Yaxi Lu, Yi-Hsin Hung, Chen Qian, Yujia Qin, Xin Cong, Ruobing Xie, Zhiyuan Liu, Maosong Sun, Jie Zhou"
-  venue: "ICLR 2024"
+- title: "RLCoder: Reinforcement Learning for Repository-Level Code Completion"
+  authors: "Yanlin Wang, Yanli Wang, Daya Guo, Jiachi Chen, Ruikai Zhang, Yuchi Ma, Zibin Zheng"
+  venue: "ICSE 2025"
   links:
-    paper: "https://openreview.net/forum?id=EHg5GDnyq1"
-    github: "https://github.com/OpenBMB/AgentVerse"
+    paper: "https://arxiv.org/abs/2407.19487"
+    github: ""
     website: ""
 
-- title: "RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems"
-  authors: "Tianyang Liu, Canwen Xu, Julian McAuley"
-  venue: "ICLR 2024"
+- title: "CATCODER: Repository-Level Code Generation with Relevant Code and Type Context"
+  authors: "Zhiyuan Pan, Xing Hu, Xin Xia, Xiaohu Yang"
+  venue: "TOSEM 2025"
   links:
-    paper: "https://openreview.net/forum?id=pPjZIOuQuF"
-    github: "https://github.com/Leolty/repobench"
-    website: ""
-
-- title: "RepoAgent: An LLM-Powered Open-Source Framework for Repository-level Code Documentation Generation"
-  authors: "Qinyu Luo, Yining Ye, Shihao Liang, Zhong Zhang, Yujia Qin, Yaxi Lu, Yesai Wu, Xin Cong, Yankai Lin, Yingli Zhang, Xiaoyin Che, Zhiyuan Liu, Maosong Sun"
-  venue: "EMNLP 2024 Demo"
-  links:
-    paper: "https://aclanthology.org/2024.emnlp-demo.46/"
-    github: "https://github.com/OpenBMB/RepoAgent"
-    website: ""
-
-- title: "Experiential Co-Learning of Software-Developing Agents"
-  authors: "Chen Qian, Yufan Dang, Jiahao Li, Wei Liu, Zihao Xie, YiFei Wang, Weize Chen, Cheng Yang, Xin Cong, Xiaoyin Che, Zhiyuan Liu, Maosong Sun"
-  venue: "ACL 2024"
-  links:
-    paper: "https://aclanthology.org/2024.acl-long.305/"
-    github: "https://github.com/OpenBMB/ChatDev"
-    website: ""
-
-- title: "ChatDev: Communicative Agents for Software Development"
-  authors: "Chen Qian, Wei Liu, Hongzhang Liu, Nuo Chen, Yufan Dang, Jiahao Li, Cheng Yang, Weize Chen, Yusheng Su, Xin Cong, Juyuan Xu, Dahai Li, Zhiyuan Liu, Maosong Sun"
-  venue: "ACL 2024"
-  links:
-    paper: "https://aclanthology.org/2024.acl-long.810/"
-    github: "https://github.com/OpenBMB/ChatDev"
-    website: "https://chatdev.modelbest.cn/"
-
-- title: "MapCoder: Multi-Agent Code Generation for Competitive Problem Solving"
-  authors: "Md. Ashraful Islam, Mohammed Eunus Ali, Md Rizwan Parvez"
-  venue: "ACL 2024"
-  links:
-    paper: "https://aclanthology.org/2024.acl-long.269/"
-    github: "https://github.com/Md-Ashraful-Pramanik/MapCoder"
-    website: "https://md-ashraful-pramanik.github.io/mapcoder.github.io/"
-
-- title: "A Pair Programming Framework for Code Generation via Multi-Plan Exploration and Feedback-Driven Refinement"
-  authors: "Huan Zhang, Wei Cheng, Yuhan Wu, Wei Hu"
-  venue: "ASE 2024"
-  links:
-    paper: "https://arxiv.org/abs/2409.05001"
-    github: "https://github.com/nju-websoft/PairCoder"
+    paper: "https://arxiv.org/abs/2406.03283"
+    github: ""
     website: ""
 
 - title: "Iterative Experience Refinement of Software-Developing Agents"
@@ -262,4 +264,132 @@
   links:
     paper: "https://arxiv.org/abs/2404.02183"
     github: "https://github.com/tsukushiAI/self-organized-agent"
+    website: ""
+
+- title: "GraphCoder: Enhancing Repository-Level Code Completion via Code Context Graph-based Retrieval and Language Model"
+  authors: "Wei Liu, Ailun Yu, Daoguang Zan, Bo Shen, Wei Zhang, Haiyan Zhao, Zhi Jin, Qianxiang Wang"
+  venue: "arXiv 2024"
+  links:
+    paper: "https://arxiv.org/abs/2406.07003"
+    github: ""
+    website: ""
+
+- title: "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework"
+  authors: "Sirui Hong, Mingchen Zhuge, Jiaqi Chen, Xiawu Zheng, Yuheng Cheng, Ceyao Zhang, Jinlin Wang, Zili Wang, Steven Ka Shing Yau, Zijuan Lin, Liyang Zhou, Chenyu Ran, Lingfeng Xiao, Chenglin Wu, Jürgen Schmidhuber"
+  venue: "ICLR 2024"
+  links:
+    paper: "https://arxiv.org/abs/2308.00352"
+    github: ""
+    website: ""
+
+- title: "RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems"
+  authors: "Tianyang Liu, Canwen Xu, Julian McAuley"
+  venue: "ICLR 2024"
+  links:
+    paper: "https://proceedings.iclr.cc/paper_files/paper/2024/file/d191ba4c8923ed8fd8935b7c98658b5f-Paper-Conference.pdf"
+    github: "https://github.com/Leolty/repobench"
+    website: ""
+
+- title: "AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors"
+  authors: "Weize Chen, Yusheng Su, Jingwei Zuo, Cheng Yang, Chenfei Yuan, Chi-Min Chan, Heyang Yu, Yaxi Lu, Yi-Hsin Hung, Chen Qian, Yujia Qin, Xin Cong, Ruobing Xie, Zhiyuan Liu, Maosong Sun, Jie Zhou"
+  venue: "ICLR 2024"
+  links:
+    paper: "https://openreview.net/forum?id=EHg5GDnyq1"
+    github: "https://github.com/OpenBMB/AgentVerse"
+    website: ""
+
+- title: "RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems"
+  authors: "Tianyang Liu, Canwen Xu, Julian McAuley"
+  venue: "ICLR 2024"
+  links:
+    paper: "https://openreview.net/forum?id=pPjZIOuQuF"
+    github: "https://github.com/Leolty/repobench"
+    website: ""
+
+- title: "RepoAgent: An LLM-Powered Open-Source Framework for Repository-level Code Documentation Generation"
+  authors: "Qinyu Luo, Yining Ye, Shihao Liang, Zhong Zhang, Yujia Qin, Yaxi Lu, Yesai Wu, Xin Cong, Yankai Lin, Yingli Zhang, Xiaoyin Che, Zhiyuan Liu, Maosong Sun"
+  venue: "EMNLP 2024 Demo"
+  links:
+    paper: "https://aclanthology.org/2024.emnlp-demo.46/"
+    github: "https://github.com/OpenBMB/RepoAgent"
+    website: ""
+
+- title: "CodeAgent: Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges"
+  authors: "Kechi Zhang, Jia Li, Ge Li, Xianjie Shi, Zhi Jin"
+  venue: "ACL 2024"
+  links:
+    paper: "https://arxiv.org/abs/2401.07339"
+    github: ""
+    website: ""
+
+- title: "Experiential Co-Learning of Software-Developing Agents"
+  authors: "Chen Qian, Yufan Dang, Jiahao Li, Wei Liu, Zihao Xie, YiFei Wang, Weize Chen, Cheng Yang, Xin Cong, Xiaoyin Che, Zhiyuan Liu, Maosong Sun"
+  venue: "ACL 2024"
+  links:
+    paper: "https://aclanthology.org/2024.acl-long.305/"
+    github: "https://github.com/OpenBMB/ChatDev"
+    website: ""
+
+- title: "ChatDev: Communicative Agents for Software Development"
+  authors: "Chen Qian, Wei Liu, Hongzhang Liu, Nuo Chen, Yufan Dang, Jiahao Li, Cheng Yang, Weize Chen, Yusheng Su, Xin Cong, Juyuan Xu, Dahai Li, Zhiyuan Liu, Maosong Sun"
+  venue: "ACL 2024"
+  links:
+    paper: "https://aclanthology.org/2024.acl-long.810/"
+    github: "https://github.com/OpenBMB/ChatDev"
+    website: "https://chatdev.modelbest.cn/"
+
+- title: "MapCoder: Multi-Agent Code Generation for Competitive Problem Solving"
+  authors: "Md. Ashraful Islam, Mohammed Eunus Ali, Md Rizwan Parvez"
+  venue: "ACL 2024"
+  links:
+    paper: "https://aclanthology.org/2024.acl-long.269/"
+    github: "https://github.com/Md-Ashraful-Pramanik/MapCoder"
+    website: "https://md-ashraful-pramanik.github.io/mapcoder.github.io/"
+
+- title: "Iterative Refinement of Project-Level Code Context for Precise Code Generation with Compiler Feedback"
+  authors: "Zhangqian Bi, Yao Wan, Zheng Wang, Hongyu Zhang, Batu Guan, Fangxin Lu, Zili Zhang, Yulei Sui, Hai Jin, Xuanhua Shi"
+  venue: "ACL 2024 Findings"
+  links:
+    paper: "https://aclanthology.org/2024.findings-acl.138/"
+    github: ""
+    website: ""
+
+- title: "A Pair Programming Framework for Code Generation via Multi-Plan Exploration and Feedback-Driven Refinement"
+  authors: "Huan Zhang, Wei Cheng, Yuhan Wu, Wei Hu"
+  venue: "ASE 2024"
+  links:
+    paper: "https://arxiv.org/abs/2409.05001"
+    github: "https://github.com/nju-websoft/PairCoder"
+    website: ""
+
+- title: "CodePlan: Repository-Level Coding using LLMs and Planning"
+  authors: "Ramakrishna Bairi, Atharv Sonwane, Aditya Kanade, Vageesh D. C., Arun Iyer, Suresh Parthasarathy, Sriram Rajamani, B. Ashok, Shashank Shet"
+  venue: "FSE 2024"
+  links:
+    paper: "https://dl.acm.org/doi/10.1145/3643757"
+    github: ""
+    website: ""
+
+- title: "A3-CodGen: A Repository-Level Code Generation Framework for Code Reuse With Local-Aware, Global-Aware, and Third-Party-Library-Aware"
+  authors: "Dianshu Liao, Shidong Pan, Xiaoyu Sun, Xiaoxue Ren, Qing Huang, Zhenchang Xing, Huan Jin, Qinying Li"
+  venue: "TSE 2024"
+  links:
+    paper: "https://www.computer.org/csdl/journal/ts/2024/12/10734067/21iLh4j0oG4"
+    github: ""
+    website: ""
+
+# - title: "RepoFusion: Training Code Models to Understand Your Repository"
+#   authors: "Disha Shrivastava, Denis Kocetkov, Harm de Vries, Dzmitry Bahdanau, Torsten Scholak"
+#   venue: "arXiv 2023"
+#   links:
+#     paper: "https://arxiv.org/abs/2306.10998"
+#     github: ""
+#     website: ""
+
+- title: "Monitor-Guided Decoding of Code LMs with Static Analysis of Repository Context"
+  authors: "Lakshya A Agrawal, Aditya Kanade, Navin Goyal, Shuvendu K. Lahiri, Sriram K. Rajamani"
+  venue: "NeurIPS 2023"
+  links:
+    paper: "https://neurips.cc/virtual/2023/poster/70362"
+    github: ""
     website: ""

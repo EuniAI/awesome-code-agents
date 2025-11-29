@@ -1,8 +1,16 @@
 - title: "Improving Code Localization with Repository Memory"
   authors: "Boshi Wang, Weijian Xu, Yunsheng Li, Mei Gao, Yujia Xie, Huan Sun, Dongdong Chen"
-  venue: "arXiv 2025"
+  venue: "arXiv 2025/10"
   links:
     paper: "https://arxiv.org/abs/2510.01003"
+    github: ""
+    website: ""
+
+- title: "Extracting Conceptual Knowledge to Locate Software Issues"
+  authors: "Ying Wang, Wenjun Mao, Chong Wang, Zhenhao Zhou, Yicheng Zhou, Wenyun Zhao, Yiling Lou, Xin Peng"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2509.21427"
     github: ""
     website: ""
 
@@ -14,19 +22,53 @@
     github: ""
     website: ""
 
+- title: "A Benchmark for Localizing Code and Non-Code Issues in Software Projects"
+  authors: "Zejun Zhang, Jian Wang, Qingyun Yang, Yifan Pan, Yi Tang, Yi Li, Zhenchang Xing, Tian Zhang, Xuandong Li, Guoan Zhang"
+  venue: "arXiv 2025/09"
+  links:
+    paper: "https://arxiv.org/abs/2509.25242"
+    github: ""
+    website: ""
+  tags: "Benchmark & Dataset"
+
 - title: "Tool-integrated Reinforcement Learning for Repo Deep Search"
   authors: "Zexiong Ma, Chao Peng, Qunhong Zeng, Pengfei Gao, Yanzhen Zou, Bing Xie"
-  venue: "arXiv 2025"
+  venue: "arXiv 2025/08"
   links:
     paper: "https://arxiv.org/abs/2508.03012"
     github: ""
     website: ""
+
+- title: "SweRank: Software Issue Localization with Code Ranking"
+  authors: "Revanth Gangi Reddy, Tarun Suresh, JaeHyeok Doo, Ye Liu, Xuan Phi Nguyen, Yingbo Zhou, Semih Yavuz, Caiming Xiong, Heng Ji, Shafiq Joty"
+  venue: "arXiv 2025/05"
+  links:
+    paper: "https://arxiv.org/abs/2505.07849"
+    github: "https://github.com/SalesforceAIResearch/SweRank"
+    website: ""
+
+- title: "Benchmarking and Enhancing LLM Agents in Localizing Linux Kernel Bugs"
+  authors: "Zhenhao Zhou, Zhuochen Huang, Yike He, Chong Wang, Jiajun Wang, Yijian Wu, Xin Peng, Yiling Lou"
+  venue: "arXiv 2025/05"
+  links:
+    paper: "https://arxiv.org/abs/2505.19489"
+    github: ""
+    website: ""
+  tags: "Benchmark & Dataset"
 
 - title: "Bridging Bug Localization and Issue Fixing: A Hierarchical Localization Framework Leveraging Large Language Models"
   authors: "Jianming Chang, Xin Zhou, Lulu Wang, David Lo, Bixin Li"
   venue: "arXiv 2025/02"
   links:
     paper: "https://arxiv.org/abs/2502.15292"
+    github: ""
+    website: ""
+
+- title: "OrcaLoca: An LLM Agent Framework for Software Issue Localization"
+  authors: "Zhongming Yu, Hejia Zhang, Yujie Zhao, Hanxian Huang, Matrix Yao, Ke Ding, Jishen Zhao"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.00350"
     github: ""
     website: ""
 

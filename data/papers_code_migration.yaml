@@ -1,3 +1,19 @@
+- title: "RustRepoTrans: Repository-level Code Translation Benchmark Targeting Rust"
+  authors: "Guangsheng Ou, Mingwei Liu, Yuxuan Chen, Yanlin Wang, Xin Peng, Zibin Zheng"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2411.13990"
+    github: ""
+    website: ""
+
+- title: "MatchFixAgent: Language-Agnostic Autonomous Repository-Level Code Translation Validation and Repair"
+  authors: "Ali Reza Ibrahimzada, Brandon Paulsen, Reyhaneh Jabbarvand, Joey Dodds, Daniel Kroening"
+  venue: "arXiv 2025/09"
+  links:
+    paper: "https://arxiv.org/abs/2509.16187"
+    github: ""
+    website: ""
+
 - title: "MigrationBench: Repository-Level Code Migration Benchmark from Java 8"
   authors: "Linbo Liu, Xinle Liu, Qiang Zhou, Lin Chen, Yihan Liu, Hoan Nguyen, Behrooz Omidvar-Tehrani, Xi Shen, Jun Huan, Omer Tripp, Anoop Deoras"
   venue: "arXiv 2025/05"
@@ -28,5 +44,13 @@
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2511.00160"
+    github: ""
+    website: ""
+
+- title: "AlphaTrans: A Neuro-Symbolic Compositional Approach for Repository-Level Code Translation and Validation"
+  authors: "Ali Reza Ibrahimzada, Kaiyao Ke, Mrigank Pawagi, Muhammad Salman Abid, Rangeet Pan, Saurabh Sinha, Reyhaneh Jabbarvand"
+  venue: "FSE 2025"
+  links:
+    paper: "https://arxiv.org/abs/2410.24117"
     github: ""
     website: ""

@@ -1,27 +1,3 @@
-- title: "Beyond Final Code: A Process-Oriented Error Analysis of Software Development Agents in Real-World GitHub Scenarios"
-  authors: "Zhi Chen, Wei Ma, Lingxiao Jiang"
-  venue: "ICSE 2026"
-  links:
-    paper: "https://arxiv.org/abs/2503.12374"
-    github: ""
-    website: ""
-
-- title: "LLM-based Agents for Automated Bug Fixing: How Far Are We?"
-  authors: "Xiangxin Meng, Zexiong Ma, Pengfei Gao, Chao Peng"
-  venue: "ICSE 2026"
-  links:
-    paper: "https://arxiv.org/abs/2411.10213"
-    github: "https://github.com/ResearchOpenRepos/bug_fixing_agent_empirical_study"
-    website: ""
-
-- title: "Understanding Code Agent Behaviour: An Empirical Study of Success and Failure Trajectories"
-  authors: "Oorja Majgaonkar, Zhiwei Fei, Xiang Li, Federica Sarro, He Ye"
-  venue: "arXiv 2025"
-  links:
-    paper: "https://arxiv.org/abs/2511.00197"
-    github: ""
-    website: ""
-
 - title: "A Comprehensive Empirical Evaluation of Agent Frameworks on Code-centric Software Engineering Tasks"
   authors: "Zhuowen Yin, Cuifeng Gao, Chunsong Fan, Wenzhang Yang, Yinxing Xue, Lijun Zhang"
   venue: "arXiv 2025"
@@ -125,3 +101,4 @@
     paper: "https://openreview.net/forum?id=RuLsq4LSZK"
     github: ""
     website: ""
+  tags: "Position Paper"

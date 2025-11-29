@@ -6,6 +6,24 @@
     github: "https://github.com/EuniAI/Prometheus"
     website: "https://euni.ai/"
 
+- title: "Beyond Final Code: A Process-Oriented Error Analysis of Software Development Agents in Real-World GitHub Scenarios"
+  authors: "Zhi Chen, Wei Ma, Lingxiao Jiang"
+  venue: "ICSE 2026"
+  links:
+    paper: "https://arxiv.org/abs/2503.12374"
+    github: ""
+    website: ""
+  tags: "Empirical Study"
+
+- title: "LLM-based Agents for Automated Bug Fixing: How Far Are We?"
+  authors: "Xiangxin Meng, Zexiong Ma, Pengfei Gao, Chao Peng"
+  venue: "ICSE 2026"
+  links:
+    paper: "https://arxiv.org/abs/2411.10213"
+    github: "https://github.com/ResearchOpenRepos/bug_fixing_agent_empirical_study"
+    website: ""
+  tags: "Empirical Study"
+
 - title: "Live-SWE-agent: Can Software Engineering Agents Self-Evolve on the Fly?"
   authors: "Chunqiu Steven Xia, Zhe Wang, Yan Yang, Yuxiang Wei, Lingming Zhang"
   venue: "arXiv 2025/11"
@@ -54,6 +72,14 @@
     github: "https://github.com/Infini-AI-Lab/FCV"
     website: "https://infini-ai-lab.github.io/FCV/"
 
+- title: "TDFlow: Agentic Workflows for Test Driven Software Engineering"
+  authors: "Kevin Han, Siddharth Maddikayala, Tim Knappe, Om Patel, Austen Liao, Amir Barati Farimani"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2510.23761"
+    github: ""
+    website: ""
+
 - title: "Enhancing repository-level software repair via repository-aware knowledge graphs"
   authors: "Boyang Yang, Jiadong Ren, Shunfu Jin, Yang Liu, Feng Liu, Bach Le, Haoye Tian"
   venue: "arXiv 2025/10"
@@ -61,6 +87,33 @@
     paper: "https://arxiv.org/abs/2503.21710"
     github: "https://github.com/GLEAM-Lab/KGCompass"
     website: ""
+
+- title: "Code Digital Twin: Empowering LLMs with Tacit Knowledge for Complex Software Development"
+  authors: "Xin Peng, Chong Wang"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2503.07967"
+    github: ""
+    website: ""
+  tags: "Position Paper"
+
+- title: "Understanding Code Agent Behaviour: An Empirical Study of Success and Failure Trajectories"
+  authors: "Oorja Majgaonkar, Zhiwei Fei, Xiang Li, Federica Sarro, He Ye"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2511.00197"
+    github: ""
+    website: ""
+  tags: "Empirical Study"
+
+- title: "An Empirical Study on Failures in Automated Issue Solving"
+  authors: "Simiao Liu, Fang Liu, Liehao Li, Xin Tan, Yinghao Zhu, Xiaoli Lian, Li Zhang"
+  venue: "arXiv 2025/09"
+  links:
+    paper: "https://arxiv.org/abs/2509.13941"
+    github: ""
+    website: ""
+  tags: "Empirical Study"
 
 - title: "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?"
   authors: "Xiang Deng, Jeff Da, Edwin Pan, Yannis Yiming He, Charles Ide, Kanak Garg, Niklas Lauffer, Andrew Park, Nitin Pasari, Chetan Rane, Karmini Sampath, Maya Krishnan, Srivatsa Kundurthy, Sean Hendryx, Zifan Wang, Chen Bo Calvin Zhang, Noah Jacobson, Bing Liu, Brad Kenstler"
@@ -470,6 +523,14 @@
     github: "https://github.com/openai/frontier-evals/tree/main/project/swelancer"
     website: "https://openai.com/index/swe-lancer/"
 
+- title: "PatchPilot: A Cost-Efficient Software Engineering Agent with Early Attempts on Formal Verification"
+  authors: "Hongwei Li, Yuheng Tang, Shiqi Wang, Wenbo Guo"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2502.02747"
+    github: "https://github.com/ucsb-mlsec/PatchPilot"
+    website: ""
+
 - title: "Automated Benchmark Generation for Repository-Level Coding Tasks"
   authors: "Konstantinos Vergopoulos, Mark Niklas Müller, Martin Vechev"
   venue: "ICML 2025"
@@ -485,6 +546,14 @@
     paper: "https://arxiv.org/abs/2407.16741"
     github: "https://github.com/All-Hands-AI/OpenHands"
     website: "https://www.all-hands.dev/"
+
+- title: "RepoGraph: Enhancing AI Software Engineering with Repository-level Code Graph"
+  authors: "Siru Ouyang, Wenhao Yu, Kaixin Ma, Zilin Xiao, Zhihan Zhang, Mengzhao Jia, Jiawei Han, Hongming Zhang, Dong Yu"
+  venue: "ICLR 2025"
+  links:
+    paper: "https://arxiv.org/abs/2410.14684"
+    github: "https://github.com/ozyyshr/RepoGraph"
+    website: ""
 
 - title: "Diversity Empowers Intelligence: Integrating Expertise of Software Engineering Agents"
   authors: "Kexun Zhang, Weiran Yao, Zuxin Liu, Yihao Feng, Zhiwei Liu, Rithesh R N, Tian Lan, Lei Li, Renze Lou, Jiacheng Xu, Bo Pang, Yingbo Zhou, Shelby Heinecke, Silvio Savarese, Huan Wang, Caiming Xiong"
@@ -563,6 +632,14 @@
   venue: "TOSEM 2025"
   links:
     paper: "https://arxiv.org/abs/2506.03921"
+    github: ""
+    website: ""
+
+- title: "Integrating Various Software Artifacts for Better LLM-based Bug Localization and Program Repair"
+  authors: "Qiong Feng, Xiaotian Ma, Jiayi Sheng, Ziyuan Feng, Wei Song, Peng Liang"
+  venue: "TOSEM 2025"
+  links:
+    paper: "https://dl.acm.org/doi/abs/10.1145/3770581"
     github: ""
     website: ""
 
