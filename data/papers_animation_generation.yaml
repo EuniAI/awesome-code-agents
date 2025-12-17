@@ -1,3 +1,11 @@
+- title: "Figma2Code: Automating Multimodal Design to Code in the Wild"
+  authors: "Anonymous Authors"
+  venue: "2025"
+  links:
+    paper: "https://openreview.net/forum?id=CaXZB6bI31"
+    github: ""
+    website: ""
+
 - title: "JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intelligence"
   authors: "Qiushi Sun, Jingyang Gong, Yang Liu, Qiaosheng Chen, Lei Li, Kai Chen, Qipeng Guo, Ben Kao, Fei Yuan"
   venue: "arXiv 2025/10"

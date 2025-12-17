@@ -7,12 +7,28 @@
     website: ""
   tags: "Benchmark & Dataset"
 
+- title: "Automatically Generating Web Applications from Requirements Via Multi-Agent Test-Driven Development"
+  authors: "Yuxuan Wan, Tingshuo Liang, Jiakai Xu, Jingyu Xiao, Yintong Huo, Michael R. Lyu"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2509.25297"
+    github: "https://github.com/yxwan123/TDDev"
+    website: ""
+
 - title: "InteractScience: Programmatic and Visually-Grounded Evaluation of Interactive Scientific Demonstration Code Generation"
   authors: "Qiaosheng Chen, Yang Liu, Lei Li, Kai Chen, Qipeng Guo, Gong Cheng, Fei Yuan"
   venue: "arXiv 2025/10"
   links:
     paper: "https://arxiv.org/abs/2510.09724"
     github: "https://github.com/open-compass/InteractScience"
+    website: ""
+
+- title: "EfficientUICoder: Efficient MLLM-based UI Code Generation via Input and Output Token Compression"
+  authors: "Jingyu Xiao, Zhongyi Zhang, Yuxuan Wan, Yintong Huo, Yang Liu, Michael R.Lyu"
+  venue: "arXiv 2025/09"
+  links:
+    paper: "https://arxiv.org/abs/2509.12159"
+    github: "https://github.com/WebPAI/EfficientUICoder"
     website: ""
 
 - title: "WebGen-Agent: Enhancing Interactive Website Generation with Multi-Level Feedback and Step-Level Reinforcement Learning"
@@ -44,8 +60,8 @@
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2411.03292"
-    github: ""
-    website: ""
+    github: "https://github.com/WebPAI/Interaction2Code"
+    website: "https://webpai.github.io/Interaction2Code/"
 
 - title: "DesignBench: A Comprehensive Benchmark for MLLM-based Front-end Code Generation"
   authors: "Jingyu Xiao, Ming Wang, Man Ho Lam, Yuxuan Wan, Junliang Liu, Yintong Huo, Michael R. Lyu"
@@ -60,6 +76,14 @@
   venue: "arXiv 2025"
   links:
     paper: "https://www.arxiv.org/abs/2506.13663"
+    github: ""
+    website: ""
+
+- title: "Divide-and-Conquer: Generating UI Code from Screenshots"
+  authors: "Yuxuan Wan, Chaozheng Wang, Yi Dong, Wenxuan Wang, Shuqing Li, Yintong Huo, Michael Lyu"
+  venue: "FSE 2025"
+  links:
+    paper: "https://dl.acm.org/doi/abs/10.1145/3729364"
     github: ""
     website: ""
 
@@ -93,4 +117,12 @@
   links:
     paper: "https://arxiv.org/abs/2502.12561"
     github: "https://github.com/neuhai/UXAgent"
+    website: ""
+
+- title: "MRWeb: An Exploration of Generating Multi-Page Resource-Aware Web Code from UI Designs"
+  authors: "Yuxuan Wan, Yi Dong, Jingyu Xiao, Yintong Huo, Wenxuan Wang, Michael R. Lyu"
+  venue: "arXiv 2024"
+  links:
+    paper: "https://arxiv.org/abs/2412.15310"
+    github: "https://github.com/WebPAI/MRWeb"
     website: ""

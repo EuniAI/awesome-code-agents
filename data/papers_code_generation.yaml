@@ -16,6 +16,14 @@
     website: ""
   tags: "Benchmark & Dataset"
 
+- title: "Smarter Together: Creating Agentic Communities of Practice through Shared Experiential Learning"
+  authors: "Valentin Tablan, Scott Taylor, Gabriel Hurtado, Kristoffer Bernhem, Anders Uhrenholt, Gabriele Farei, Karo Moilanen"
+  venue: "arXiv 2025/11"
+  links:
+    paper: "https://arxiv.org/abs/2511.08301"
+    github: ""
+    website: ""
+
 - title: "Retrieval-Augmented Code Generation: A Survey with Focus on Repository-Level Approaches"
   authors: "Yicheng Tao, Yao Qin, Yepang Liu"
   venue: "arXiv 2025/10"
@@ -31,6 +39,14 @@
   links:
     paper: "https://arxiv.org/abs/2509.05980"
     github: ""
+    website: ""
+
+- title: "Next Edit Prediction: Learning to Predict Code Edits from Context and Interaction History"
+  authors: "Ruofan Lu, Yintong Huo, Meng Zhang, Yichen Li, Michael R. Lyu"
+  venue: "arXiv 2025/09"
+  links:
+    paper: "https://arxiv.org/abs/2508.10074"
+    github: "https://github.com/lurf21/NextEditPrediction"
     website: ""
 
 - title: "FullStack Bench: Evaluating LLMs as Full Stack Coders"

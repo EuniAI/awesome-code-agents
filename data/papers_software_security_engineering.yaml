@@ -1,3 +1,11 @@
+- title: "VulnLLM-R: Specialized Reasoning LLM with Agent Scaffold for Vulnerability Detection"
+  authors: "Yuzhou Nie, Hongwei Li, Chengquan Guo, Ruizhe Jiang, Zhun Wang, Bo Li, Dawn Song, Wenbo Guo"
+  venue: "arXiv 2025/12"
+  links:
+    paper: "https://arxiv.org/abs/2512.07533"
+    github: ""
+    website: ""
+
 - title: "SecRepoBench: Benchmarking Code Agents for Secure Code Completion in Real-World Repositories"
   authors: "Chihao Shen, Connor Dilgren, Purva Chiniya, Luke Griffith, Yu Ding, Yizheng Chen"
   venue: "arXiv 2025/11"
@@ -35,6 +43,14 @@
   venue: "arXiv 2025"
   links:
     paper: "https://arxiv.org/abs/2410.06949"
+    github: ""
+    website: ""
+
+- title: "RepoAudit: An Autonomous LLM-Agent for Repository-Level Code Auditing"
+  authors: "Jinyao Guo, Chengpeng Wang, Xiangzhe Xu, Zian Su, Xiangyu Zhang"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2501.18160"
     github: ""
     website: ""
 

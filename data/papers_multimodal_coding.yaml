@@ -1,3 +1,11 @@
+- title: "VisCodex: Unified Multimodal Code Generation via Merging Vision and Coding Models"
+  authors: "Lingjie Jiang, Shaohan Huang, Xun Wu, Yixia Li, Dongdong Zhang, Furu Wei"
+  venue: "arXiv 2025/08"
+  links:
+    paper: "https://arxiv.org/abs/2508.09945"
+    github: ""
+    website: ""
+
 - title: "Seeing is Fixing: Cross-Modal Reasoning with Multimodal LLMs for Visual Software Issue Fixing"
   authors: "Kai Huang, Jian Zhang, Xiaofei Xie, Chunyang Chen"
   venue: "arXiv 2025"

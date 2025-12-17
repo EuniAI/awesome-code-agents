@@ -1,3 +1,11 @@
+- title: "We Got Claude to Fine-Tune an Open Source LLM"
+  authors: "Hugging Face"
+  venue: "2025/12"
+  links:
+    paper: "https://huggingface.co/blog/hf-skills-training"
+    github: ""
+    website: ""
+
 - title: "DeepCode: Open Agentic Coding"
   authors: "Data Intelligence Lab@HKU"
   venue: "2025"
