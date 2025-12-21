@@ -158,6 +158,14 @@
     github: "https://github.com/LiuHengyu321/IR3D-Bench"
     website: "https://ir3d-bench.github.io/"
 
+- title: "SceneGenAgent: Precise Industrial Scene Generation with Coding Agent"
+  authors: "Xiao Xia, Dan Zhang, Zibo Liao, Zhenyu Hou, Tianrui Sun, Jing Li, Ling Fu, Yuxiao Dong"
+  venue: "ACL 2025"
+  links:
+    paper: "https://aclanthology.org/2025.acl-long.873/"
+    github: ""
+    website: ""
+
 - title: "SceneMotifCoder: Example-driven Visual Program Learning for Generating 3D Object Arrangements"
   authors: "Hou In Ivan Tam, Hou In Derek Pun, Austin T. Wang, Angel X. Chang, Manolis Savva"
   venue: "3DV 2025"

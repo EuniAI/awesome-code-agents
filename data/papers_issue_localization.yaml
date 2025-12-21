@@ -47,6 +47,14 @@
     github: "https://github.com/SalesforceAIResearch/SweRank"
     website: ""
 
+- title: "RANGER: Repository-Level Agent for Graph-Enhanced Retrieval"
+  authors: "Pratik Shah, Rajat Ghosh, Aryan Singhal, Debojyoti Dutta"
+  venue: "arXiv 2025/09"
+  links:
+    paper: "https://arxiv.org/abs/2509.25257"
+    github: ""
+    website: ""
+
 - title: "Benchmarking and Enhancing LLM Agents in Localizing Linux Kernel Bugs"
   authors: "Zhenhao Zhou, Zhuochen Huang, Yike He, Chong Wang, Jiajun Wang, Yijian Wu, Xin Peng, Yiling Lou"
   venue: "arXiv 2025/05"

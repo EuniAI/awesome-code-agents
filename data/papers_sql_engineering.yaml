@@ -1,3 +1,11 @@
+# - title: "BAPPA: Benchmarking Agents, Plans, and Pipelines for Automated Text-to-SQL Generation"
+#   authors: "Fahim Ahmed, Md Mubtasim Ahasan, Jahir Sadik Monon, Muntasir Wahed, M Ashraful Amin, A K M Mahbubur Rahman, Amin Ahsan Ali"
+#   venue: "arXiv 2025/11"
+#   links:
+#     paper: "https://arxiv.org/abs/2511.04153"
+#     github: ""
+#     website: ""
+
 - title: "SWE-SQL: Illuminating LLM Pathways to Solve User SQL Issues in Real-World Applications"
   authors: "Jinyang Li, Xiaolong Li, Ge Qu, Per Jacobsson, Bowen Qin, Binyuan Hui, Shuzheng Si, Nan Huo, Xiaohan Xu, Yue Zhang, Ziwei Tang, Yuanshuai Li, Florensia Widjaja, Xintong Zhu, Feige Zhou, Yongfeng Huang, Yannis Papakonstantinou, Fatma Ozcan, Chenhao Ma, Reynold Cheng"
   venue: "arXiv 2025"

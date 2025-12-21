@@ -1,3 +1,12 @@
+- title: "Does AI-Assisted Coding Deliver? A Difference-in-Differences Study of Cursor's Impact on Software Projects"
+  authors: "Hao He, Courtney Miller, Shyam Agarwal, Christian Kästner, Bogdan Vasilescu"
+  venue: "arXiv 2025/11"
+  links:
+    paper: "https://arxiv.org/abs/2511.04427"
+    github: ""
+    website: ""
+  tags: "Empirical Study"
+
 - title: "Lost in Code Generation: Reimagining the Role of Software Models in AI-driven Software Engineering"
   authors: "Jürgen Cito, Dominik Bork"
   venue: "arXiv 2025/11"
@@ -138,13 +147,13 @@
     github: "https://github.com/FSoft-AI4Code/HyperAgent"
     website: ""
 
-- title: "Verbal Process Supervision Elicits Better Coding Agents"
-  authors: "Hao-Yuan Chen, Cheng-Pong Huang, Jui-Ming Yao"
-  venue: "arXiv 2025"
-  links:
-    paper: "https://arxiv.org/abs/2503.18494"
-    github: ""
-    website: ""
+# - title: "Verbal Process Supervision Elicits Better Coding Agents"
+#   authors: "Hao-Yuan Chen, Cheng-Pong Huang, Jui-Ming Yao"
+#   venue: "arXiv 2025"
+#   links:
+#     paper: "https://arxiv.org/abs/2503.18494"
+#     github: ""
+#     website: ""
 
 - title: "KernelBench: Can LLMs Write Efficient GPU Kernels?"
   authors: "Anne Ouyang, Simon Guo, Simran Arora, Alex L. Zhang, William Hu, Christopher Ré, Azalia Mirhoseini"
@@ -153,6 +162,14 @@
     paper: "https://arxiv.org/abs/2502.10517"
     github: "https://github.com/ScalingIntelligence/KernelBench"
     website: "https://scalingintelligence.stanford.edu/blogs/kernelbench/"
+
+- title: "EpiCoder: Encompassing Diversity and Complexity in Code Generation"
+  authors: "Yaoxiang Wang, Haoling Li, Xin Zhang, Jie Wu, Xiao Liu, Wenxiang Hu, Zhongxin Guo, Yangyu Huang, Ying Xin, Yujiu Yang, Jinsong Su, Qi Chen, Scarlett Li"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/abs/2501.04694"
+    github: ""
+    website: ""
 
 - title: "On the Impacts of Contexts on Repository-Level Code Generation"
   authors: "Nam Le Hai, Dung Manh Nguyen, Nghi D. Q. Bui"
@@ -258,7 +275,7 @@
     github: ""
     website: ""
 
-- title: "CodeTree: Agent‐guided Tree Search for Code Generation with Large Language Models"
+- title: "CodeTree: Agent-guided Tree Search for Code Generation with Large Language Models"
   authors: "Jierui Li, Hung Le, Yingbo Zhou, Caiming Xiong, Silvio Savarese, Doyen Sahoo"
   venue: "arXiv 2024"
   links:

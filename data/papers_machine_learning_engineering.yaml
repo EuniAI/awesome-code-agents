@@ -6,6 +6,14 @@
     github: ""
     website: ""
 
+- title: "ArchPilot: A Proxy-Guided Multi-Agent Approach for Machine Learning Engineering"
+  authors: "Zhuowen Yuan, Tao Liu, Yang Yang, Yang Wang, Feng Qi, Kaushik Rangadurai, Bo Li, Shuang Yang"
+  venue: "arXiv 2025/11"
+  links:
+    paper: "https://arxiv.org/abs/2511.03985"
+    github: ""
+    website: ""
+
 - title: "DeepCode: Open Agentic Coding"
   authors: "Data Intelligence Lab@HKU"
   venue: "2025"
