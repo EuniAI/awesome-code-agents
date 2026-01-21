@@ -6,6 +6,22 @@
     github: "https://github.com/EuniAI/Prometheus"
     website: "https://euni.ai/"
 
+- title: "SWE-Lego: Pushing the Limits of Supervised Fine-tuning for Software Issue Resolving"
+  authors: "Chaofan Tao, Jierun Chen, Yuxin Jiang, Kaiqi Kou, Shaowei Wang, Ruoyu Wang, Xiaohui Li, Sidi Yang, Yiming Du, Jianbo Dai, Zhiming Mao, Xinyu Wang, Lifeng Shang, Haoli Bai"
+  venue: "arXiv 2026/01"
+  links:
+    paper: "https://arxiv.org/abs/2601.01426"
+    github: "https://github.com/SWE-Lego/SWE-Lego"
+    website: ""
+
+- title: "Are \"Solved Issues\" in SWE-bench Really Solved Correctly? An Empirical Study"
+  authors: "You Wang, Michael Pradel, Zhongxin Liu"
+  venue: "ICSE 2026"
+  links:
+    paper: "https://arxiv.org/abs/2503.15223"
+    github: ""
+    website: ""
+
 - title: "Unified Software Engineering Agent as AI Software Engineer"
   authors: "Leonhard Applis, Yuntong Zhang, Shanchao Liang, Nan Jiang, Lin Tan, Abhik Roychoudhury"
   venue: "ICSE 2026"
@@ -31,6 +47,22 @@
     github: "https://github.com/ResearchOpenRepos/bug_fixing_agent_empirical_study"
     website: ""
   tags: "Empirical Study"
+
+- title: "Let It Flow: Agentic Crafting on Rock and Roll, Building the ROME Model within an Open Agentic Learning Ecosystem"
+  authors: "Weixun Wang, XiaoXiao Xu, Wanhe An, Fangwen Dai, Wei Gao, Yancheng He, Ju Huang, Qiang Ji, Hanqi Jin, Xiaoyang Li, Yang Li, Zhongwen Li, Shirong Lin, Jiashun Liu, Zenan Liu, Tao Luo, Dilxat Muhtar, Yuanbin Qu, Jiaqiang Shi, Qinghui Sun, Yingshui Tan, Hao Tang, Runze Wang, Yi Wang, Zhaoguo Wang, Yanan Wu, Shaopan Xiong, Binchen Xu, Xander Xu, Yuchi Xu, Qipeng Zhang, Xixia Zhang, Haizhou Zhao, Jie Zhao, Shuaibing Zhao, Baihui Zheng, Jianhui Zheng, Suhang Zheng, Yanni Zhu, Mengze Cai, Kerui Cao, Xitong Chen, Yue Dai, Lifan Du, Tao Feng, Tao He, Jin Hu, Yijie Hu, Ziyu Jiang, Cheng Li, Xiang Li, Jing Liang, Xin Lin, Chonghuan Liu, ZhenDong Liu, Zhiqiang Lv, Haodong Mi, Yanhu Mo, Junjia Ni, Shixin Pei, Jingyu Shen, XiaoShuai Song, Cecilia Wang, Chaofan Wang, Kangyu Wang, Pei Wang, Tao Wang, Wei Wang, Ke Xiao, Mingyu Xu, Tiange Xu, Nan Ya, Siran Yang, Jianan Ye, Yaxing Zang, Duo Zhang, Junbo Zhang, Boren Zheng, Wanxi Deng, Ling Pan, Lin Qu, Wenbo Su, Jiamang Wang, Wei Wang, Hu Wei, Minggang Wu, Cheng Yu, Bing Zhao, Zhicheng Zheng, Bo Zheng"
+  venue: "arXiv 2025/12"
+  links:
+    paper: "https://arxiv.org/abs/2512.24873"
+    github: ""
+    website: ""
+
+- title: "Toward Training Superintelligent Software Agents through Self-Play SWE-RL"
+  authors: "Yuxiang Wei, Zhiqing Sun, Emily McMilin, Jonas Gehring, David Zhang, Gabriel Synnaeve, Daniel Fried, Lingming Zhang, Sida Wang"
+  venue: "arXiv 2025/12"
+  links:
+    paper: "https://arxiv.org/abs/2512.18552"
+    github: ""
+    website: ""
 
 - title: "Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases"
   authors: "Zhaodong Wang, Zhenting Qi, Sherman Wong, Nathan Hu, Samuel Lin, Jun Ge, Erwin Gao, Wenlin Chen, Yilun Du, Minlan Yu, Ying Zhang"
@@ -71,6 +103,14 @@
     paper: "https://arxiv.org/abs/2511.00839"
     github: ""
     website: "https://codeclash.ai/"
+
+- title: "Introducing cline-bench: A Real-World, Open Source Benchmark for Agentic Coding"
+  authors: "Cline"
+  venue: "2025/11"
+  links:
+    paper: ""
+    github: "https://github.com/cline/cline-bench"
+    website: "https://cline.bot/blog/cline-bench-initiative"
 
 - title: "InfCode: Adversarial Iterative Refinement of Tests and Patches for Reliable Software Issue Resolution"
   authors: "KeFan Li, Mengfei Wang, Hengzhi Zhang, Zhichao Li, Yuan Yuan, Mu Li, Xiang Gao, Hailong Sun, Chunming Hu, Weifeng Lv"
@@ -151,6 +191,22 @@
   venue: "arXiv 2025/10"
   links:
     paper: "https://arxiv.org/abs/2510.26790"
+    github: ""
+    website: ""
+
+- title: " Abstain and Validate: A Dual-LLM Policy for Reducing Noise in Agentic Program Repair"
+  authors: "José Cambronero, Michele Tufano, Sherry Shi, Renyao Wei, Grant Uy, Runxiang Cheng, Chin-Jung Liu, Shiying Pan, Satish Chandra, Pat Rondon"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2510.03217"
+    github: ""
+    website: ""
+
+- title: "REFINE: Enhancing Program Repair Agents through Context-Aware Patch Refinement"
+  authors: "Anvith Pabba, Simin Chen, Alex Mathai, Anindya Chakraborty, Baishakhi Ray"
+  venue: "arXiv 2025/10"
+  links:
+    paper: "https://arxiv.org/abs/2510.03588"
     github: ""
     website: ""
 
@@ -252,14 +308,6 @@
     github: ""
     website: ""
 
-- title: "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?"
-  authors: "Xiang Deng, Jeff Da, Edwin Pan, Yannis Yiming He, Charles Ide, Kanak Garg, Niklas Lauffer, Andrew Park, Nitin Pasari, Chetan Rane, Karmini Sampath, Maya Krishnan, Srivatsa Kundurthy, Sean Hendryx, Zifan Wang, Chen Bo Calvin Zhang, Noah Jacobson, Bing Liu, Brad Kenstler"
-  venue: "arXiv 2025"
-  links:
-    paper: "https://arxiv.org/abs/2509.16941"
-    github: "https://github.com/scaleapi/SWE-bench_Pro-os"
-    website: "https://scale.com/leaderboard/swe_bench_pro_public"
-
 - title: "Is Your Automated Software Engineer Trustworthy?"
   authors: "Noble Saji Mathews, Meiyappan Nagappan"
   venue: "arXiv 2025/06"
@@ -267,6 +315,22 @@
     paper: "https://arxiv.org/abs/2506.17812"
     github: "https://github.com/uw-swag/BouncerBench"
     website: "https://bouncerbench.com/"
+
+- title: "Interactive Agents to Overcome Ambiguity in Software Engineering"
+  authors: "Sanidhya Vijayvargiya, Xuhui Zhou, Akhila Yerukola, Maarten Sap, Graham Neubig"
+  venue: "arXiv 2025/02"
+  links:
+    paper: "https://arxiv.org/abs/2502.13069"
+    github: ""
+    website: ""
+
+- title: "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?"
+  authors: "Xiang Deng, Jeff Da, Edwin Pan, Yannis Yiming He, Charles Ide, Kanak Garg, Niklas Lauffer, Andrew Park, Nitin Pasari, Chetan Rane, Karmini Sampath, Maya Krishnan, Srivatsa Kundurthy, Sean Hendryx, Zifan Wang, Chen Bo Calvin Zhang, Noah Jacobson, Bing Liu, Brad Kenstler"
+  venue: "arXiv 2025"
+  links:
+    paper: "https://arxiv.org/abs/2509.16941"
+    github: "https://github.com/scaleapi/SWE-bench_Pro-os"
+    website: "https://scale.com/leaderboard/swe_bench_pro_public"
 
 - title: "SWE-PolyBench: A multi-language benchmark for repository level evaluation of coding agents"
   authors: "Muhammad Shihab Rashid, Christian Bock, Yuan Zhuang, Alexander Buchholz, Tim Esler, Simon Valentin, Luca Franceschi, Martin Wistuba, Prabhu Teja Sivaprasad, Woo Jung Kim, Anoop Deoras, Giovanni Zappella, Laurent Callot"
@@ -361,6 +425,14 @@
   venue: "arXiv 2025/03"
   links:
     paper: "https://arxiv.org/abs/2503.14269"
+    github: ""
+    website: ""
+
+- title: "Large Language Model Critics for Execution-Free Evaluation of Code Changes"
+  authors: "Aashish Yadavally, Hoan Nguyen, Laurent Callot, Gauthier Guinet"
+  venue: "arXiv 2025/01"
+  links:
+    paper: "https://arxiv.org/abs/2501.16655"
     github: ""
     website: ""
 
@@ -692,6 +764,15 @@
     github: "https://github.com/openai/frontier-evals/tree/main/project/swelancer"
     website: "https://openai.com/index/swe-lancer/"
 
+- title: "Automated Benchmark Generation for Repository-Level Coding Tasks"
+  authors: "Konstantinos Vergopoulos, Mark Niklas Mueller, Martin Vechev"
+  venue: "ICML 2025"
+  links:
+    paper: "https://arxiv.org/pdf/2503.07701"
+    github: ""
+    website: ""
+
+
 - title: "PatchPilot: A Cost-Efficient Software Engineering Agent with Early Attempts on Formal Verification"
   authors: "Hongwei Li, Yuheng Tang, Shiqi Wang, Wenbo Guo"
   venue: "ICML 2025"
@@ -753,6 +834,14 @@
   venue: "ASE 2025"
   links:
     paper: "https://arxiv.org/abs/2506.18824"
+    github: ""
+    website: ""
+
+- title: "\"My productivity is boosted, but ...\" Demystifying Users' Perception on AI Coding Assistants"
+  authors: "Yunbo Lyu, Zhou Yang, Jieke Shi, Jianming Chang, Yue Liu, David Lo"
+  venue: "ASE 2025"
+  links:
+    paper: "https://arxiv.org/abs/2508.12285"
     github: ""
     website: ""
 
@@ -907,3 +996,11 @@
 #     paper: "https://arxiv.org/abs/2409.00899"
 #     github: ""
 #     website: "https://se-research.bytedance.com/"
+
+- title: "InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback"
+  authors: "John Yang, Akshara Prabhakar, Karthik Narasimhan, Shunyu Yao"
+  venue: "NeurIPS 2023 Datasets & Benchmarks Track"
+  links:
+    paper: "https://arxiv.org/abs/2306.14898"
+    github: "https://github.com/princeton-nlp/intercode"
+    website: "https://intercode-benchmark.github.io/"

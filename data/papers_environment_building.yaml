@@ -1,3 +1,11 @@
+- title: "Deploy-Master: Automating the Deployment of 50,000+ Agent-Ready Scientific Tools in One Day"
+  authors: "Yi Wang, Zhenting Huang, Zhaohan Ding, Ruoxue Liao, Yuan Huang, Xinzijian Liu, Jiajun Xie, Siheng Chen, Linfeng Zhang"
+  venue: "arXiv 2026/01"
+  links:
+    paper: "https://arxiv.org/abs/2601.03513"
+    github: ""
+    website: "https://www.bohrium.com/apps/deploy-master"
+
 - title: "DI-BENCH: Benchmarking Large Language Models on Dependency Inference with Testable Repositories at Scale"
   authors: "Linghao Zhang, Junhao Wang, Shilin He, Chaoyun Zhang, Yu Kang, Bowen Li, Jiaheng Wen, Chengxing Xie, Maoquan Wang, Yufan Huang, Elsie Nallipogu, Qingwei Lin, Yingnong Dang, Saravan Rajmohan, Dongmei Zhang, Qi Zhang"
   venue: "arXiv 2025"

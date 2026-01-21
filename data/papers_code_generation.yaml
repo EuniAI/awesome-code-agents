@@ -16,6 +16,15 @@
     website: ""
   tags: "Position Paper"
 
+- title: "SlopCodeBench: Community driven benchmark for measuring code erosion under iterative specification refinement"
+  authors: "Sprocket Lab"
+  venue: "2025"
+  links:
+    paper: ""
+    github: "https://github.com/SprocketLab/slop-code-bench"
+    website: "https://www.scbench.ai/"
+  tags: "Benchmark & Dataset"
+
 - title: "Towards Realistic Project-Level Code Generation via Multi-Agent Collaboration and Semantic Architecture Modeling"
   authors: "Qianhui Zhao, Li Zhang, Fang Liu, Junhang Cheng, Chengru Wu, Junchen Ai, Qiaoyuanhe Meng, Lichen Zhang, Xiaoli Lian, Shubin Song, Yuanping Guo"
   venue: "arXiv 2025/11"

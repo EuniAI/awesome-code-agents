@@ -1,3 +1,11 @@
+- title: "Can We Predict Before Executing Machine Learning Agents?"
+  authors: "Jingsheng Zheng, Jintian Zhang, Yujie Luo, Yuren Mao, Yunjun Gao, Lun Du, Huajun Chen, Ningyu Zhang"
+  venue: "arXiv 2026/01"
+  links:
+    paper: "https://arxiv.org/abs/2601.05930"
+    github: ""
+    website: ""
+
 - title: "We Got Claude to Fine-Tune an Open Source LLM"
   authors: "Hugging Face"
   venue: "2025/12"
@@ -11,6 +19,30 @@
   venue: "arXiv 2025/11"
   links:
     paper: "https://arxiv.org/abs/2511.03985"
+    github: ""
+    website: ""
+
+- title: "AI Research Agents for Machine Learning: Search, Exploration, and Generalization in MLE-bench"
+  authors: "Edan Toledo, Karen Hambardzumyan, Martin Josifoski, Rishi Hazra, Nicolas Baldwin, Alexis Audran-Reiss, Michael Kuchnik, Despoina Magka, Minqi Jiang, Alisia Maria Lupidi, Andrei Lupu, Roberta Raileanu, Kelvin Niu, Tatiana Shavrina, Jean-Christophe Gagnon-Audet, Michael Shvartsman, Shagun Sodhani, Alexander H. Miller, Abhishek Charnalia, Derek Dunfield, Carole-Jean Wu, Pontus Stenetorp, Nicola Cancedda, Jakob Nicolaus Foerster, Yoram Bachrach"
+  venue: "arXiv 2025/07"
+  links:
+    paper: "https://arxiv.org/abs/2507.02554"
+    github: "https://github.com/facebookresearch/aira-dojo"
+    website: ""
+
+- title: "The Automated LLM Speedrunning Benchmark: Reproducing NanoGPT Improvements"
+  authors: "Bingchen Zhao, Despoina Magka, Minqi Jiang, Xian Li, Roberta Raileanu, Tatiana Shavrina, Jean-Christophe Gagnon-Audet, Kelvin Niu, Shagun Sodhani, Michael Shvartsman, Andrei Lupu, Alisia Lupidi, Edan Toledo, Karen Hambardzumyan, Martin Josifoski, Thomas Foster, Lucia Cipolina-Kun, Abhishek Charnalia, Derek Dunfield, Alexander H. Miller, Oisin Mac Aodha, Jakob Foerster, Yoram Bachrach"
+  venue: "arXiv 2025/06"
+  links:
+    paper: "https://arxiv.org/abs/2506.22419"
+    github: ""
+    website: ""
+
+- title: "MLGym: A New Framework and Benchmark for Advancing AI Research Agents"
+  authors: "Deepak Nathani, Lovish Madaan, Nicholas Roberts, Nikolay Bashlykov, Ajay Menon, Vincent Moens, Amar Budhiraja, Despoina Magka, Vladislav Vorotilov, Gaurav Chaurasia, Dieuwke Hupkes, Ricardo Silveira Cabral, Tatiana Shavrina, Jakob Foerster, Yoram Bachrach, William Yang Wang, Roberta Raileanu"
+  venue: "arXiv 2025/02"
+  links:
+    paper: "https://arxiv.org/abs/2502.14499"
     github: ""
     website: ""
 
