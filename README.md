@@ -91,7 +91,7 @@
 <!-- START PAPERS SUMMARY -->
 🔥 **We are actively tracking the frontier research of code agents.**<br>
 🧹 *We periodically curate our collection, retaining only published papers and interesting arXiv preprints from the last six months.*<br>
-📚 *Currently collected:* **`515` papers** — *(Last update: 2026-03-04)*
+📚 *Currently collected:* **`515` papers** — *(Last update: 2026-03-05)*
 <!-- END PAPERS SUMMARY -->
 
 <!-- - [🚀 Products & Tools](#-products--tools)
