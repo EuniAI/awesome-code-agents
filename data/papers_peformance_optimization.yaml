@@ -1,3 +1,11 @@
+- title: "Controlled Self-Evolution for Algorithmic Code Optimization"
+  authors: "Tu Hu, Ronghao Chen, Shuo Zhang, Jianghao Yin, Mou Xiao Feng, Jingping Liu, Shaolei Zhang, Wenqi Jiang, Yuqi Fang, Sen Hu, Yi Xu, Huacan Wang"
+  venue: "arXiv 2026"
+  links:
+    paper: "https://arxiv.org/abs/2601.07348"
+    github: "https://github.com/QuantaAlpha/EvoControl"
+    website: ""
+
 - title: "SWE-Perf: Can Language Models Optimize Code Performance on Real-World Repositories?"
   authors: "Xinyi He, Qian Liu, Mingzhe Du, Lin Yan, Zhijie Fan, Yiming Huang, Zejian Yuan, Zejun Ma"
   venue: "arXiv 2025"
