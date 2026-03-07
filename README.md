@@ -1214,6 +1214,10 @@
 > Code profiling, optimization, memory & latency improvements.
 
 <!-- START PAPERS:peformance_optimization -->
+- **Controlled Self-Evolution for Algorithmic Code Optimization.**  
+  _Tu Hu, Ronghao Chen, Shuo Zhang, Jianghao Yin, Mou Xiao Feng, Jingping Liu, Shaolei Zhang, Wenqi Jiang, Yuqi Fang, Sen Hu, et al._ arXiv 2026.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.07348) [![GitHub Stars](https://img.shields.io/github/stars/QuantaAlpha/EvoControl?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/QuantaAlpha/EvoControl)
+
 - **SWE-Perf: Can Language Models Optimize Code Performance on Real-World Repositories?**  
   _Xinyi He, Qian Liu, Mingzhe Du, Lin Yan, Zhijie Fan, Yiming Huang, Zejian Yuan, Zejun Ma._ arXiv 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.12415) [![GitHub Stars](https://img.shields.io/github/stars/SWE-Perf/SWE-Perf?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SWE-Perf/SWE-Perf) [![Website](https://img.shields.io/website?url=https://swe-perf.github.io/&up_message=SWE-PERF&up_color=blue&down_message=SWE-PERF&down_color=blue&style=for-the-badge)](https://swe-perf.github.io/)
