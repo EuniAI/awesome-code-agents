@@ -698,6 +698,10 @@
 > AI agents that autonomously generate, scaffold, and synthesize code at the repository level, leveraging external tools and APIs to create new modules, build complete projects, and construct large-scale codebases.
 
 <!-- START PAPERS:code_generation -->
+- **Bernstein: Deterministic Python orchestrator that spawns parallel AI coding agents (Claude Code, Codex CLI, Gemini CLI), verifies output with tests, auto-commits clean code.**  
+  _chernistry._ 2025.  
+  [![GitHub Stars](https://img.shields.io/github/stars/chernistry/bernstein?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/chernistry/bernstein)
+
 - **Does AI-Assisted Coding Deliver? A Difference-in-Differences Study of Cursor's Impact on Software Projects.**  
   _Hao He, Courtney Miller, Shyam Agarwal, Christian Kästner, Bogdan Vasilescu._ arXiv 2025/11.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.04427)
