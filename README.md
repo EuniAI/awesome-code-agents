@@ -690,6 +690,10 @@
 - **Terminal-Bench: A Benchmark for AI Agents in Terminal Environments.**  
   _The Terminal-Bench Team._ 2025.  
   [![GitHub Stars](https://img.shields.io/github/stars/laude-institute/terminal-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/laude-institute/terminal-bench) [![Website](https://img.shields.io/website?url=https://www.tbench.ai/&up_message=TBENCH.AI&up_color=blue&down_message=TBENCH.AI&down_color=blue&style=for-the-badge)](https://www.tbench.ai/)
+
+- **Bernstein: Deterministic orchestrator — spawns parallel AI coding agents (Claude Code, Codex CLI, Gemini CLI), verifies with tests, auto-commits.**
+  _Chernistry._ 2025.
+  [![GitHub Stars](https://img.shields.io/github/stars/chernistry/bernstein?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/chernistry/bernstein)
 <!-- END PAPERS:terminal -->
 
 ---
