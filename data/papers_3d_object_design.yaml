@@ -30,6 +30,22 @@
 #     github: "https://github.com/jhacksman/OpenSCAD-MCP-Server"
 #     website: ""
 
+# - title: ""
+#   authors: ""
+#   venue: ""
+#   links:
+#     paper: ""
+#     github: ""
+#     website: ""
+
+- title: "Code-as-Room: Generating 3D Rooms from Top-Down View Images via Agentic Code Synthesis"
+  authors: "Yixuan Yang, Zhen Luo, Wanshui Gan, Jinkun Hao, Junru Lu, Jinghao Yan, Zhaoyang Lyu, Xudong Xu"
+  venue: "arXiv 2026"
+  links:
+    paper: "https://arxiv.org/abs/2605.18451"
+    github: "https://github.com/YxuanAr/Code-as-Room"
+    website: "https://code-as-room.github.io/"
+
 - title: "From Idea to CAD: A Language Model-Driven Multi-Agent System for Collaborative Design"
   authors: "Felix Ocker, Stefan Menzel, Ahmed Sadik, Thiago Rios"
   venue: "arXiv 2025"
