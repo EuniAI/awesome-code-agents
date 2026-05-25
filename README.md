@@ -683,13 +683,9 @@
 > AI agents that operate within terminal environments, executing shell commands, managing system operations, and automating command-line workflows through natural language interfaces and autonomous task execution.
 
 <!-- START PAPERS:terminal -->
-- **Terminus: A research-preview agent for consistently evaluating the abilities of language models to power autonomous agents in the terminal.**  
-  _Mike Merrill, Alex Shaw._ 2025.  
-  [![GitHub Stars](https://img.shields.io/github/stars/laude-institute/terminal-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/laude-institute/terminal-bench) [![Website](https://img.shields.io/website?url=https://www.tbench.ai/terminus&up_message=TERMINUS&up_color=blue&down_message=TERMINUS&down_color=blue&style=for-the-badge)](https://www.tbench.ai/terminus)
-
-- **Terminal-Bench: A Benchmark for AI Agents in Terminal Environments.**  
-  _The Terminal-Bench Team._ 2025.  
-  [![GitHub Stars](https://img.shields.io/github/stars/laude-institute/terminal-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/laude-institute/terminal-bench) [![Website](https://img.shields.io/website?url=https://www.tbench.ai/&up_message=TBENCH.AI&up_color=blue&down_message=TBENCH.AI&down_color=blue&style=for-the-badge)](https://www.tbench.ai/)
+- **Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces.**  
+  _Mike A. Merrill, Alexander G. Shaw, Nicholas Carlini, Boxuan Li, Harsh Raj, Ivan Bercovich, Lin Shi, Jeong Yeon Shin, Thomas Walshe, E. Kelly Buchanan, et al._ 2026.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.11868) [![GitHub Stars](https://img.shields.io/github/stars/harbor-framework/terminal-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/harbor-framework/terminal-bench) [![Website](https://img.shields.io/website?url=https://www.tbench.ai/&up_message=TBENCH.AI&up_color=blue&down_message=TBENCH.AI&down_color=blue&style=for-the-badge)](https://www.tbench.ai/)
 <!-- END PAPERS:terminal -->
 
 ---
@@ -1737,6 +1733,10 @@ This category covers Verilog/VHDL/RTL, FPGA kernels, and hardware–software co-
 > Agents that generate and render 3D models or scenes through code automation, enabling creative design workflows.
 
 <!-- START PAPERS:3d_object_design -->
+- **Code-as-Room: Generating 3D Rooms from Top-Down View Images via Agentic Code Synthesis.**  
+  _Yixuan Yang, Zhen Luo, Wanshui Gan, Jinkun Hao, Junru Lu, Jinghao Yan, Zhaoyang Lyu, Xudong Xu._ arXiv 2026.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.18451) [![GitHub Stars](https://img.shields.io/github/stars/YxuanAr/Code-as-Room?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/YxuanAr/Code-as-Room) [![Website](https://img.shields.io/website?url=https://code-as-room.github.io/&up_message=CODE-AS-ROOM&up_color=blue&down_message=CODE-AS-ROOM&down_color=blue&style=for-the-badge)](https://code-as-room.github.io/)
+
 - **From Idea to CAD: A Language Model-Driven Multi-Agent System for Collaborative Design.**  
   _Felix Ocker, Stefan Menzel, Ahmed Sadik, Thiago Rios._ arXiv 2025.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.04417)
