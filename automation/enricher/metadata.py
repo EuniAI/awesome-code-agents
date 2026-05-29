@@ -1,5 +1,5 @@
 """
-Metadata enricher — extracts venue from arXiv abstract/comments.
+Metadata enricher — extracts venue and GitHub links from arXiv abstracts.
 
 arXiv papers often include acceptance info in their abstract as phrases like:
   "Accepted at ICSE 2026"
@@ -7,7 +7,11 @@ arXiv papers often include acceptance info in their abstract as phrases like:
   "Published in ICML 2025"
   "Accepted to ACL 2026"
 
-If none found, we fall back to "arXiv YYYY/MM" derived from the submission date.
+Authors also frequently share code links in the abstract:
+  "Code is available at https://github.com/..."
+  "Our implementation: https://github.com/..."
+
+If no venue found, we fall back to "arXiv YYYY/MM" derived from the submission date.
 """
 
 from __future__ import annotations
@@ -17,6 +21,12 @@ import re
 from typing import Any
 
 logger = logging.getLogger(__name__)
+
+# Extract GitHub URLs from abstract text
+_GITHUB_RE = re.compile(
+    r"https?://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+",
+    re.IGNORECASE,
+)
 
 # Patterns to extract venue mentions from abstract text
 _VENUE_PATTERNS = [
@@ -57,15 +67,31 @@ def extract_venue(abstract: str, submitted: str) -> str:
     return "arXiv"
 
 
+def extract_github_url(abstract: str) -> str:
+    """Extract the first GitHub URL mentioned in the abstract, or ''."""
+    m = _GITHUB_RE.search(abstract)
+    return m.group(0).rstrip(".,;:)>\"'") if m else ""
+
+
 def enrich_papers(papers: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """
-    Fill in the `venue` field for papers that don't already have one.
+    Fill in `venue` and `links.github` for papers that don't already have them.
     Mutates in place and returns the list.
     """
     for p in papers:
-        if p.get("venue"):
-            continue
-        venue = extract_venue(p.get("abstract", ""), p.get("submitted", ""))
-        p["venue"] = venue
-        logger.debug("Venue for %s: %s", p.get("arxiv_id"), venue)
+        abstract = p.get("abstract", "")
+
+        # Venue
+        if not p.get("venue"):
+            venue = extract_venue(abstract, p.get("submitted", ""))
+            p["venue"] = venue
+            logger.debug("Venue for %s: %s", p.get("arxiv_id"), venue)
+
+        # GitHub link — fallback from abstract if Papers With Code didn't find one
+        if not p.get("links", {}).get("github"):
+            url = extract_github_url(abstract)
+            if url:
+                p.setdefault("links", {})["github"] = url
+                logger.info("  Abstract GitHub: %s → %s", p.get("arxiv_id"), url)
+
     return papers
