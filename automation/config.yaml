@@ -1,157 +1,136 @@
-# ─────────────────────────────────────────────
-#  Automation config for awesome-code-agents
-#  Edit this file to tune crawler / classifier
-# ─────────────────────────────────────────────
-
 repo:
-  owner: "EuniAI"
-  name: "awesome-code-agents"
-  reviewer: "Zhaoyang-Chu"       # Only this GitHub user's /approve /reject are respected
-
+  owner: EuniAI
+  name: awesome-code-agents
+  reviewer: Zhaoyang-Chu
 inbox:
-  issue_number: null             # Set automatically by `python main.py --mode=setup`
-
-# ── arXiv crawler ──────────────────────────────
+  issue_number: 4
 arxiv:
   categories:
-    - cs.SE    # Software Engineering (core)
-    - cs.AI    # Artificial Intelligence
-    - cs.LG    # Machine Learning
-    - cs.CL    # Computation and Language (LLMs)
-    - cs.CR    # Cryptography and Security
-    - cs.PL    # Programming Languages
-    - cs.CV    # Computer Vision (visual agents, 3D)
-    - cs.HC    # Human-Computer Interaction
-    - cs.DB    # Databases (SQL agents)
-    - cs.GR    # Graphics (SVG, animation, 3D)
-  backfill_days: 3               # Also fetch papers from N days ago (catch weekends/missed days)
-  max_results_per_category: 200  # Per category per day; will be filtered down by keywords
-
-  # A paper passes keyword filtering if its title OR abstract contains ANY of these phrases.
-  # Case-insensitive. Edit freely — this is your first line of noise reduction.
+  - cs.SE
+  - cs.AI
+  - cs.LG
+  - cs.CL
+  - cs.CR
+  - cs.PL
+  - cs.CV
+  - cs.HC
+  - cs.DB
+  - cs.GR
+  backfill_days: 3
+  max_results_per_category: 200
   keywords:
-    # Core "code agent" concepts
-    - "code agent"
-    - "coding agent"
-    - "software agent"
-    - "software engineering agent"
-    - "autonomous coding"
-    - "autonomous programming"
-    - "autonomous software"
-    - "automated software engineering"
-    - "automated program"
-    - "automated bug"
-    - "automated test"
-    - "automated code"
-    # Code tasks
-    - "code generation"
-    - "code synthesis"
-    - "code completion"
-    - "code repair"
-    - "code migration"
-    - "code refactor"
-    - "code review"
-    - "program synthesis"
-    - "program repair"
-    - "bug fix"
-    - "bug localiz"
-    - "fault localiz"
-    - "issue resolution"
-    - "issue fix"
-    - "patch generation"
-    - "pull request"
-    - "test generation"
-    - "test case generation"
-    - "fuzzing"
-    - "vulnerability"
-    # Benchmarks / evaluation
-    - "SWE-bench"
-    - "HumanEval"
-    - "MBPP"
-    - "LiveCodeBench"
-    - "code benchmark"
-    # Agentic frameworks relevant to code
-    - "LLM agent"
-    - "language model agent"
-    - "agentic"
-    - "tool use"
-    - "function call"
-    - "ReAct"
-    - "code-executing"
-    - "computer use"
-    - "web agent"
-    - "GUI agent"
-    # Research / specialized domains
-    - "SQL agent"
-    - "data science agent"
-    - "ML engineer"
-    - "hardware agent"
-    - "chip design"
-    - "RTL"
-    - "scientific workflow"
-    - "code LLM"
-    - "code model"
-    - "foundation model for code"
-    - "large language model for code"
-    - "multimodal code"
-
-# ── LLM classifier ─────────────────────────────
-# Credentials come from .env (LITELLM_BASE_URL, LITELLM_MODEL, LITELLM_API_KEY)
+  - code agent
+  - coding agent
+  - software agent
+  - software engineering agent
+  - autonomous coding
+  - autonomous programming
+  - autonomous software
+  - automated software engineering
+  - automated program
+  - automated bug
+  - automated test
+  - automated code
+  - code generation
+  - code synthesis
+  - code completion
+  - code repair
+  - code migration
+  - code refactor
+  - code review
+  - program synthesis
+  - program repair
+  - bug fix
+  - bug localiz
+  - fault localiz
+  - issue resolution
+  - issue fix
+  - patch generation
+  - pull request
+  - test generation
+  - test case generation
+  - fuzzing
+  - vulnerability
+  - SWE-bench
+  - HumanEval
+  - MBPP
+  - LiveCodeBench
+  - code benchmark
+  - LLM agent
+  - language model agent
+  - agentic
+  - tool use
+  - function call
+  - ReAct
+  - code-executing
+  - computer use
+  - web agent
+  - GUI agent
+  - SQL agent
+  - data science agent
+  - ML engineer
+  - hardware agent
+  - chip design
+  - RTL
+  - scientific workflow
+  - code LLM
+  - code model
+  - foundation model for code
+  - large language model for code
+  - multimodal code
 llm:
   temperature: 0.1
   max_tokens: 1024
-
-# ── Paper categories ───────────────────────────
-# Used by the classifier prompt. key = YAML filename suffix (data/papers_{key}.yaml)
 categories:
-  issue_resolution:           "Agents that autonomously fix bugs or resolve issues in real codebases (e.g. SWE-bench style)"
-  terminal:                   "Agents that operate terminal/CLI environments to accomplish tasks"
-  code_generation:            "General code generation, synthesis, or writing from specifications"
-  code_completion:            "Code completion, autocomplete, next-token/line prediction"
-  environment_building:       "Agents that set up dev environments, Docker, CI/CD pipelines"
-  issue_reproduction:         "Agents that reproduce reported software bugs"
-  issue_localization:         "Agents that localise or pinpoint root cause of bugs (fault localisation)"
-  qa:                         "Question answering about code or software repositories"
-  pull_request_review:        "Automated code review and pull request analysis"
-  feature_development:        "Agents that implement new features end-to-end"
-  git_management:             "Git operations: branching, merging, commit management"
-  performance_optimization:   "Code performance, efficiency, and runtime optimisation"
-  code_migration:             "Migrating code between languages, frameworks, or API versions"
-  software_refactoring:       "Code refactoring, clean-up, and technical debt reduction"
-  software_security_engineering: "Security vulnerability detection, patching, and hardening"
-  agentic_fuzzing:            "Fuzzing and fuzz testing driven by AI agents"
-  system_engineering:         "System-level agents (OS, kernel, distributed systems)"
-  sql_engineering:            "SQL query generation, database agents, text-to-SQL"
-  hardware_engineering:       "Hardware design, RTL/HDL generation, chip verification"
-  website_generation:         "Front-end UI, webpage, and website generation"
-  backend_generation:         "Backend service, REST API, and server-side code generation"
-  code_executing_web:         "Agents that execute code inside web browsers or web environments"
-  machine_learning_engineering: "ML pipeline automation, experiment management, training agents"
-  automated_data_science:     "Automated data analysis, feature engineering, and data science pipelines"
-  agentic_visualization:      "Agents that generate data visualisations or charts via code"
-  animation_generation:       "Animation, motion graphics, and dynamic visual generation via code"
-  svg_generation:             "SVG and vector graphic generation"
-  game_generation:            "Video game code generation"
-  code_executing_game:        "Agents that play games by executing/writing code"
-  3d_object_design:           "3D object, scene, and spatial design via code"
-  code_executing_embodied:    "Embodied/robotics agents that use code execution"
-  multimodal_coding:          "Multimodal agents combining vision and code (e.g. screenshot-to-code)"
-  foundation_models:          "Foundation / base models specifically designed or evaluated for code tasks"
-  benchmarks:                 "New benchmarks or datasets for evaluating code agents"
-  surveys:                    "Survey or review papers covering code agents broadly"
-  empirical_studies:          "Empirical studies analysing behaviour or performance of code agents"
-  data_synthesis:             "Synthetic data generation for training code agents"
-  scientific_workflows:       "Scientific computing workflow automation"
-
-# ── Tags ───────────────────────────────────────
-# Short keys used in YAML. Rendered as coloured badges in README.
+  issue_resolution: Agents that autonomously fix bugs or resolve issues in real codebases
+    (e.g. SWE-bench style)
+  terminal: Agents that operate terminal/CLI environments to accomplish tasks
+  code_generation: General code generation, synthesis, or writing from specifications
+  code_completion: Code completion, autocomplete, next-token/line prediction
+  environment_building: Agents that set up dev environments, Docker, CI/CD pipelines
+  issue_reproduction: Agents that reproduce reported software bugs
+  issue_localization: Agents that localise or pinpoint root cause of bugs (fault localisation)
+  qa: Question answering about code or software repositories
+  pull_request_review: Automated code review and pull request analysis
+  feature_development: Agents that implement new features end-to-end
+  git_management: 'Git operations: branching, merging, commit management'
+  performance_optimization: Code performance, efficiency, and runtime optimisation
+  code_migration: Migrating code between languages, frameworks, or API versions
+  software_refactoring: Code refactoring, clean-up, and technical debt reduction
+  software_security_engineering: Security vulnerability detection, patching, and hardening
+  agentic_fuzzing: Fuzzing and fuzz testing driven by AI agents
+  system_engineering: System-level agents (OS, kernel, distributed systems)
+  sql_engineering: SQL query generation, database agents, text-to-SQL
+  hardware_engineering: Hardware design, RTL/HDL generation, chip verification
+  website_generation: Front-end UI, webpage, and website generation
+  backend_generation: Backend service, REST API, and server-side code generation
+  code_executing_web: Agents that execute code inside web browsers or web environments
+  machine_learning_engineering: ML pipeline automation, experiment management, training
+    agents
+  automated_data_science: Automated data analysis, feature engineering, and data science
+    pipelines
+  agentic_visualization: Agents that generate data visualisations or charts via code
+  animation_generation: Animation, motion graphics, and dynamic visual generation
+    via code
+  svg_generation: SVG and vector graphic generation
+  game_generation: Video game code generation
+  code_executing_game: Agents that play games by executing/writing code
+  3d_object_design: 3D object, scene, and spatial design via code
+  code_executing_embodied: Embodied/robotics agents that use code execution
+  multimodal_coding: Multimodal agents combining vision and code (e.g. screenshot-to-code)
+  foundation_models: Foundation / base models specifically designed or evaluated for
+    code tasks
+  benchmarks: New benchmarks or datasets for evaluating code agents
+  surveys: Survey or review papers covering code agents broadly
+  empirical_studies: Empirical studies analysing behaviour or performance of code
+    agents
+  data_synthesis: Synthetic data generation for training code agents
+  scientific_workflows: Scientific computing workflow automation
 tags:
-  benchmark: "Introduces a benchmark or dataset"
-  survey:    "Survey or systematic review paper"
-  position:  "Position paper or opinion piece"
-  empirical: "Empirical study with experiments/measurements"
-
-# ── Schedule (informational — set actual cron externally) ─
+  benchmark: Introduces a benchmark or dataset
+  survey: Survey or systematic review paper
+  position: Position paper or opinion piece
+  empirical: Empirical study with experiments/measurements
 schedule:
-  daily_run_hint: "0 9 * * *"       # suggested cron for --mode=daily
-  finalize_run_hint: "0 * * * *"    # suggested cron for --mode=finalize
+  daily_run_hint: 0 9 * * *
+  finalize_run_hint: 0 * * * *
