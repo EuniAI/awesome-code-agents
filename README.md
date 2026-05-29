@@ -206,11 +206,11 @@
 
 - **Beyond Final Code: A Process-Oriented Error Analysis of Software Development Agents in Real-World GitHub Scenarios.**  
   _Zhi Chen, Wei Ma, Lingxiao Jiang._ ICSE 2026.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.12374)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.12374) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-808080?style=for-the-badge)
 
 - **LLM-based Agents for Automated Bug Fixing: How Far Are We?**  
   _Xiangxin Meng, Zexiong Ma, Pengfei Gao, Chao Peng._ ICSE 2026.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.10213) [![GitHub Stars](https://img.shields.io/github/stars/ResearchOpenRepos/bug_fixing_agent_empirical_study?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ResearchOpenRepos/bug_fixing_agent_empirical_study)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.10213) [![GitHub Stars](https://img.shields.io/github/stars/ResearchOpenRepos/bug_fixing_agent_empirical_study?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ResearchOpenRepos/bug_fixing_agent_empirical_study) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-808080?style=for-the-badge)
 
 - **Let It Flow: Agentic Crafting on Rock and Roll, Building the ROME Model within an Open Agentic Learning Ecosystem.**  
   _Weixun Wang, XiaoXiao Xu, Wanhe An, Fangwen Dai, Wei Gao, Yancheng He, Ju Huang, Qiang Ji, Hanqi Jin, Xiaoyang Li, et al._ arXiv 2025/12.  
@@ -254,7 +254,7 @@
 
 - **Understanding Code Agent Behaviour: An Empirical Study of Success and Failure Trajectories.**  
   _Oorja Majgaonkar, Zhiwei Fei, Xiang Li, Federica Sarro, He Ye._ arXiv 2025/11.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.00197)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.00197) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-808080?style=for-the-badge)
 
 - **SWE-Compass: Towards Unified Evaluation of Agentic Coding Abilities for Large Language Models.**  
   _Jingxuan Xu, Ken Deng, Weihao Li, Songwei Yu, Huaixi Tang, Haoyang Huang, Zhiyi Lai, Zizheng Zhan, Yanan Wu, Chenchen Zhang, et al._ arXiv 2025/11.  
@@ -262,7 +262,7 @@
 
 - **More with Less: An Empirical Study of Turn-Control Strategies for Efficient Coding Agents.**  
   _Pengfei Gao, Chao Peng._ arXiv 2025/11.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.16786)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.16786) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-808080?style=for-the-badge)
 
 - **SWE-Sharp-Bench: A Reproducible Benchmark for C# Software Engineering Tasks.**  
   _Sanket Mhatre, Yasharth Bajpai, Sumit Gulwani, Emerson Murphy-Hill, Gustavo Soares._ arXiv 2025/11.  
@@ -314,7 +314,7 @@
 
 - **Code Digital Twin: Empowering LLMs with Tacit Knowledge for Complex Software Development.**  
   _Xin Peng, Chong Wang._ arXiv 2025/10.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.07967)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.07967) ![Position Paper](https://img.shields.io/badge/Position_Paper-808080?style=for-the-badge)
 
 - **SIADAFIX: issue description response for adaptive program repair.**  
   _Xin Cao, Nan Yu._ arXiv 2025/10.  
@@ -326,7 +326,7 @@
 
 - **An Empirical Study on Failures in Automated Issue Solving.**  
   _Simiao Liu, Fang Liu, Liehao Li, Xin Tan, Yinghao Zhu, Xiaoli Lian, Li Zhang._ arXiv 2025/09.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.13941)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.13941) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-808080?style=for-the-badge)
 
 - **GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leveraging.**  
   _Ziyi Ni, Huacan Wang, Shuo Zhang, Shuo Lu, Ziyang He, Wang You, Zhenheng Tang, Yuntao Du, Bill Sun, Hongzhang Liu, et al._ arXiv 2025/09.  
@@ -696,19 +696,19 @@
 <!-- START PAPERS:code_generation -->
 - **Does AI-Assisted Coding Deliver? A Difference-in-Differences Study of Cursor's Impact on Software Projects.**  
   _Hao He, Courtney Miller, Shyam Agarwal, Christian Kästner, Bogdan Vasilescu._ arXiv 2025/11.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.04427)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.04427) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-808080?style=for-the-badge)
 
 - **Lost in Code Generation: Reimagining the Role of Software Models in AI-driven Software Engineering.**  
   _Jürgen Cito, Dominik Bork._ arXiv 2025/11.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.02475)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.02475) ![Position Paper](https://img.shields.io/badge/Position_Paper-808080?style=for-the-badge)
 
 - **SlopCodeBench: Community driven benchmark for measuring code erosion under iterative specification refinement.**  
   _Sprocket Lab._ 2025.  
-  [![GitHub Stars](https://img.shields.io/github/stars/SprocketLab/slop-code-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SprocketLab/slop-code-bench) [![Website](https://img.shields.io/website?url=https://www.scbench.ai/&up_message=SCBENCH.AI&up_color=blue&down_message=SCBENCH.AI&down_color=blue&style=for-the-badge)](https://www.scbench.ai/)
+  [![GitHub Stars](https://img.shields.io/github/stars/SprocketLab/slop-code-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SprocketLab/slop-code-bench) [![Website](https://img.shields.io/website?url=https://www.scbench.ai/&up_message=SCBENCH.AI&up_color=blue&down_message=SCBENCH.AI&down_color=blue&style=for-the-badge)](https://www.scbench.ai/) ![Benchmark   Dataset](https://img.shields.io/badge/Benchmark___Dataset-808080?style=for-the-badge)
 
 - **Towards Realistic Project-Level Code Generation via Multi-Agent Collaboration and Semantic Architecture Modeling.**  
   _Qianhui Zhao, Li Zhang, Fang Liu, Junhang Cheng, Chengru Wu, Junchen Ai, Qiaoyuanhe Meng, Lichen Zhang, Xiaoli Lian, Shubin Song, et al._ arXiv 2025/11.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.03404) [![GitHub Stars](https://img.shields.io/github/stars/whisperzqh/ProjectGen?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/whisperzqh/ProjectGen)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.03404) [![GitHub Stars](https://img.shields.io/github/stars/whisperzqh/ProjectGen?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/whisperzqh/ProjectGen) ![Benchmark   Dataset](https://img.shields.io/badge/Benchmark___Dataset-808080?style=for-the-badge)
 
 - **Smarter Together: Creating Agentic Communities of Practice through Shared Experiential Learning.**  
   _Valentin Tablan, Scott Taylor, Gabriel Hurtado, Kristoffer Bernhem, Anders Uhrenholt, Gabriele Farei, Karo Moilanen._ arXiv 2025/11.  
@@ -716,7 +716,7 @@
 
 - **Retrieval-Augmented Code Generation: A Survey with Focus on Repository-Level Approaches.**  
   _Yicheng Tao, Yao Qin, Yepang Liu._ arXiv 2025/10.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.04905)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.04905) ![Survey](https://img.shields.io/badge/Survey-2A9D8F?style=for-the-badge)
 
 - **GRACE: Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion.**  
   _Xingliang Wang, Baoyi Wang, Chen Zhi, Junxiao Han, Xinkui Zhao, Jianwei Yin, Shuiguang Deng._ arXiv 2025/09.  
@@ -728,7 +728,7 @@
 
 - **FullStack Bench: Evaluating LLMs as Full Stack Coders.**  
   _Bytedance-Seed-Foundation-Code-Team: Yao Cheng, Jianfeng Chen, Jie Chen, Li Chen, Liyu Chen, Wentao Chen, Zhengyu Chen, Shijie Geng, Aoyan Li, Bo Li, et al._ arXiv 2025/05.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.00535) [![GitHub Stars](https://img.shields.io/github/stars/bytedance/FullStackBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/bytedance/FullStackBench)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.00535) [![GitHub Stars](https://img.shields.io/github/stars/bytedance/FullStackBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/bytedance/FullStackBench) ![Benchmark   Dataset](https://img.shields.io/badge/Benchmark___Dataset-808080?style=for-the-badge)
 
 - **RPG: A Repository Planning Graph for Unified and Scalable Codebase Generation.**  
   _Jane Luo, Xin Zhang, Steven Liu, Jie Wu, Jianfeng Liu, Yiming Huang, Yangyu Huang, Chengyu Yin, Ying Xin, Yuefeng Zhan, et al._ arXiv 2025.  
@@ -1014,7 +1014,7 @@
 
 - **Agents in the Sandbox: End-to-End Crash Bug Reproduction for Minecraft.**  
   _Eray Yapağcı, Yavuz Alp Sencer Öztürk, Eray Tüzün._ ASE 2025.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.20036) [![GitHub Stars](https://img.shields.io/github/stars/erayyap/bugcraft?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/erayyap/bugcraft) [![Website](https://img.shields.io/website?url=https://bugcraft2025.github.io/&up_message=BUGCRAFT2025&up_color=blue&down_message=BUGCRAFT2025&down_color=blue&style=for-the-badge)](https://bugcraft2025.github.io/)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.20036) [![GitHub Stars](https://img.shields.io/github/stars/erayyap/bugcraft?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/erayyap/bugcraft) [![Website](https://img.shields.io/website?url=https://bugcraft2025.github.io/&up_message=BUGCRAFT2025&up_color=blue&down_message=BUGCRAFT2025&down_color=blue&style=for-the-badge)](https://bugcraft2025.github.io/) ![Benchmark   Dataset](https://img.shields.io/badge/Benchmark___Dataset-808080?style=for-the-badge)
 
 - **Automated Generation of Issue-Reproducing Tests by Combining LLMs and Search-Based Testing.**  
   _Konstantinos Kitsios, Marco Castelluccio, Alberto Bacchelli._ ASE 2025.  
@@ -1026,7 +1026,7 @@
 
 - **An Empirical Study on Leveraging Images in Automated Bug Report Reproduction.**  
   _Dingbang Wang, Zhaoxu Zhang, Sidong Feng, William G. J. Halfond, Tingting Yu._ MSR 2025.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.15099)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.15099) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-808080?style=for-the-badge)
 
 - **LLMs as Continuous Learners: Improving the Reproduction of Defective Code in Software Issues.**  
   _Yalan Lin, Yingwei Ma, Rongyu Cao, Binhua Li, Fei Huang, Xiaodong Gu, Yongbin Li._ arXiv 2024.  
@@ -1069,7 +1069,7 @@
 
 - **A Benchmark for Localizing Code and Non-Code Issues in Software Projects.**  
   _Zejun Zhang, Jian Wang, Qingyun Yang, Yifan Pan, Yi Tang, Yi Li, Zhenchang Xing, Tian Zhang, Xuandong Li, Guoan Zhang._ arXiv 2025/09.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.25242)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.25242) ![Benchmark   Dataset](https://img.shields.io/badge/Benchmark___Dataset-808080?style=for-the-badge)
 
 - **Tool-integrated Reinforcement Learning for Repo Deep Search.**  
   _Zexiong Ma, Chao Peng, Qunhong Zeng, Pengfei Gao, Yanzhen Zou, Bing Xie._ arXiv 2025/08.  
@@ -1085,7 +1085,7 @@
 
 - **Benchmarking and Enhancing LLM Agents in Localizing Linux Kernel Bugs.**  
   _Zhenhao Zhou, Zhuochen Huang, Yike He, Chong Wang, Jiajun Wang, Yijian Wu, Xin Peng, Yiling Lou._ arXiv 2025/05.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.19489)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.19489) ![Benchmark   Dataset](https://img.shields.io/badge/Benchmark___Dataset-808080?style=for-the-badge)
 
 - **Bridging Bug Localization and Issue Fixing: A Hierarchical Localization Framework Leveraging Large Language Models.**  
   _Jianming Chang, Xin Zhou, Lulu Wang, David Lo, Bixin Li._ arXiv 2025/02.  
@@ -1135,7 +1135,7 @@
 
 - **On the Use of Agentic Coding: An Empirical Study of Pull Requests on GitHub.**  
   _Miku Watanabe, Hao Li, Yutaro Kashiwa, Brittany Reid, Hajimu Iida, Ahmed E. Hassan._ arXiv 2025/09.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.14745)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.14745) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-808080?style=for-the-badge)
 
 - **The Rise of AI Teammates in Software Engineering (SE) 3.0: How Autonomous Coding Agents Are Reshaping Software Engineering.**  
   _Hao Li, Haoxiang Zhang, Ahmed E. Hassan._ arXiv 2025.  
@@ -1253,7 +1253,7 @@
 
 - **MigrationBench: Repository-Level Code Migration Benchmark from Java 8.**  
   _Linbo Liu, Xinle Liu, Qiang Zhou, Lin Chen, Yihan Liu, Hoan Nguyen, Behrooz Omidvar-Tehrani, Xi Shen, Jun Huan, Omer Tripp, et al._ arXiv 2025/05.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.09569) [![GitHub Stars](https://img.shields.io/github/stars/amazon-science/MigrationBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/amazon-science/MigrationBench) [![Website](https://img.shields.io/website?url=https://huggingface.co/collections/AmazonScience/migrationbench&up_message=MIGRATIONBENCH&up_color=blue&down_message=MIGRATIONBENCH&down_color=blue&style=for-the-badge)](https://huggingface.co/collections/AmazonScience/migrationbench)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.09569) [![GitHub Stars](https://img.shields.io/github/stars/amazon-science/MigrationBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/amazon-science/MigrationBench) [![Website](https://img.shields.io/website?url=https://huggingface.co/collections/AmazonScience/migrationbench&up_message=MIGRATIONBENCH&up_color=blue&down_message=MIGRATIONBENCH&down_color=blue&style=for-the-badge)](https://huggingface.co/collections/AmazonScience/migrationbench) ![Benchmark   Dataset](https://img.shields.io/badge/Benchmark___Dataset-808080?style=for-the-badge)
 
 - **MatchFixAgent: Language-Agnostic Autonomous Repository-Level Code Translation Validation and Repair.**  
   _Ali Reza Ibrahimzada, Brandon Paulsen, Reyhaneh Jabbarvand, Joey Dodds, Daniel Kroening._ arXiv 2025.  
@@ -1373,7 +1373,7 @@ This category covers Verilog/VHDL/RTL, FPGA kernels, and hardware–software co-
 <!-- START PAPERS:website_generation -->
 - **JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intelligence.**  
   _Qiushi Sun, Jingyang Gong, Yang Liu, Qiaosheng Chen, Lei Li, Kai Chen, Qipeng Guo, Ben Kao, Fei Yuan._ arXiv 2025/10.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.23538) [![GitHub Stars](https://img.shields.io/github/stars/InternLM/JanusCoder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/InternLM/JanusCoder)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.23538) [![GitHub Stars](https://img.shields.io/github/stars/InternLM/JanusCoder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/InternLM/JanusCoder) ![Benchmark   Dataset](https://img.shields.io/badge/Benchmark___Dataset-808080?style=for-the-badge)
 
 - **Automatically Generating Web Applications from Requirements Via Multi-Agent Test-Driven Development.**  
   _Yuxuan Wan, Tingshuo Liang, Jiakai Xu, Jingyu Xiao, Yintong Huo, Michael R. Lyu._ arXiv 2025/10.  
@@ -1444,7 +1444,7 @@ This category covers Verilog/VHDL/RTL, FPGA kernels, and hardware–software co-
 <!-- START PAPERS:backend_generation -->
 - **BaxBench: Can LLMs Generate Correct and Secure Backends?**  
   _Mark Vero, Niels Mündler, Victor Chibotaru, Veselin Raychev, Maximilian Baader, Nikola Jovanović, Jingxuan He, Martin Vechev._ ICML 2025.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.11844) [![GitHub Stars](https://img.shields.io/github/stars/logic-star-ai/baxbench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/logic-star-ai/baxbench) [![Website](https://img.shields.io/website?url=https://baxbench.com/&up_message=BAXBENCH&up_color=blue&down_message=BAXBENCH&down_color=blue&style=for-the-badge)](https://baxbench.com/)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.11844) [![GitHub Stars](https://img.shields.io/github/stars/logic-star-ai/baxbench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/logic-star-ai/baxbench) [![Website](https://img.shields.io/website?url=https://baxbench.com/&up_message=BAXBENCH&up_color=blue&down_message=BAXBENCH&down_color=blue&style=for-the-badge)](https://baxbench.com/) ![Benchmark   Dataset](https://img.shields.io/badge/Benchmark___Dataset-808080?style=for-the-badge)
 <!-- END PAPERS:backend_generation -->
 
 ---
@@ -1620,7 +1620,7 @@ This category covers Verilog/VHDL/RTL, FPGA kernels, and hardware–software co-
 <!-- START PAPERS:agentic_visualization -->
 - **JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intelligence.**  
   _Qiushi Sun, Jingyang Gong, Yang Liu, Qiaosheng Chen, Lei Li, Kai Chen, Qipeng Guo, Ben Kao, Fei Yuan._ arXiv 2025/10.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.23538) [![GitHub Stars](https://img.shields.io/github/stars/InternLM/JanusCoder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/InternLM/JanusCoder)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.23538) [![GitHub Stars](https://img.shields.io/github/stars/InternLM/JanusCoder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/InternLM/JanusCoder) ![Benchmark   Dataset](https://img.shields.io/badge/Benchmark___Dataset-808080?style=for-the-badge)
 
 - **Plot2Code: A Comprehensive Benchmark for Evaluating Multi-modal Large Language Models in Code Generation from Scientific Plots.**  
   _Chengyue Wu, Yixiao Ge, Qiushan Guo, Jiahao Wang, Zhixuan Liang, Zeyu Lu, Ying Shan, Ping Luo._ arXiv 2025.  
@@ -1647,7 +1647,7 @@ This category covers Verilog/VHDL/RTL, FPGA kernels, and hardware–software co-
 <!-- START PAPERS:scientific_workflows -->
 - **ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic Scientific Workflows.**  
   _Qiushi Sun, Zhoumianze Liu, Chang Ma, Zichen Ding, Fangzhi Xu, Zhangyue Yin, Haiteng Zhao, Zhenyu Wu, Kanzhi Cheng, Zhaoyang Liu, et al._ arXiv 2025/06.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.19897) [![GitHub Stars](https://img.shields.io/github/stars/OS-Copilot/ScienceBoard?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OS-Copilot/ScienceBoard) [![Website](https://img.shields.io/website?url=https://qiushisun.github.io/ScienceBoard-Home/&up_message=SCIENCEBOARD-HOME&up_color=blue&down_message=SCIENCEBOARD-HOME&down_color=blue&style=for-the-badge)](https://qiushisun.github.io/ScienceBoard-Home/)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.19897) [![GitHub Stars](https://img.shields.io/github/stars/OS-Copilot/ScienceBoard?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OS-Copilot/ScienceBoard) [![Website](https://img.shields.io/website?url=https://qiushisun.github.io/ScienceBoard-Home/&up_message=SCIENCEBOARD-HOME&up_color=blue&down_message=SCIENCEBOARD-HOME&down_color=blue&style=for-the-badge)](https://qiushisun.github.io/ScienceBoard-Home/) ![Benchmark   Dataset](https://img.shields.io/badge/Benchmark___Dataset-808080?style=for-the-badge)
 <!-- END PAPERS:scientific_workflows -->
 
 ---
@@ -1664,7 +1664,7 @@ This category covers Verilog/VHDL/RTL, FPGA kernels, and hardware–software co-
 
 - **JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intelligence.**  
   _Qiushi Sun, Jingyang Gong, Yang Liu, Qiaosheng Chen, Lei Li, Kai Chen, Qipeng Guo, Ben Kao, Fei Yuan._ arXiv 2025/10.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.23538) [![GitHub Stars](https://img.shields.io/github/stars/InternLM/JanusCoder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/InternLM/JanusCoder)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.23538) [![GitHub Stars](https://img.shields.io/github/stars/InternLM/JanusCoder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/InternLM/JanusCoder) ![Benchmark   Dataset](https://img.shields.io/badge/Benchmark___Dataset-808080?style=for-the-badge)
 
 - **LogoMotion: Visually-Grounded Code Synthesis for Creating and Editing Animation.**  
   _Vivian Liu, Rubaiat Habib Kazi, Li-Yi Wei, Matthew Fisher, Timothy Langlois, Seth Walker, Lydia Chilton._ CHI 2025.  
@@ -1700,7 +1700,7 @@ This category covers Verilog/VHDL/RTL, FPGA kernels, and hardware–software co-
 
 - **Agents in the Sandbox: End-to-End Crash Bug Reproduction for Minecraft.**  
   _Eray Yapağcı, Yavuz Alp Sencer Öztürk, Eray Tüzün._ ASE 2025.  
-  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.20036) [![GitHub Stars](https://img.shields.io/github/stars/erayyap/bugcraft?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/erayyap/bugcraft) [![Website](https://img.shields.io/website?url=https://bugcraft2025.github.io/&up_message=BUGCRAFT2025&up_color=blue&down_message=BUGCRAFT2025&down_color=blue&style=for-the-badge)](https://bugcraft2025.github.io/)
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.20036) [![GitHub Stars](https://img.shields.io/github/stars/erayyap/bugcraft?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/erayyap/bugcraft) [![Website](https://img.shields.io/website?url=https://bugcraft2025.github.io/&up_message=BUGCRAFT2025&up_color=blue&down_message=BUGCRAFT2025&down_color=blue&style=for-the-badge)](https://bugcraft2025.github.io/) ![Benchmark   Dataset](https://img.shields.io/badge/Benchmark___Dataset-808080?style=for-the-badge)
 <!-- END PAPERS:game_generation -->
 
 ---

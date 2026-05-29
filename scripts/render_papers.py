@@ -95,6 +95,26 @@ def badge_github(url: str) -> str:
     slug = repo_slug(url)
     return f"[![GitHub Stars](https://img.shields.io/github/stars/{slug}?style=for-the-badge&logo=github&label=GitHub&color=black)]({url})" if slug else ""
 
+# Tag badge styles: key → (url-safe label, hex color)
+TAG_STYLES: dict[str, tuple[str, str]] = {
+    "benchmark": ("Benchmark_%26_Dataset", "F4A261"),
+    "survey":    ("Survey",               "2A9D8F"),
+    "position":  ("Position_Paper",       "9B59B6"),
+    "empirical": ("Empirical_Study",      "4A90D9"),
+}
+
+def badge_tag(tag: str) -> str:
+    """Return a shields.io flat badge for a paper tag."""
+    key = tag.lower().strip()
+    if key in TAG_STYLES:
+        label, color = TAG_STYLES[key]
+    else:
+        # Unknown tag — render as gray with sanitised label
+        label = re.sub(r"[^A-Za-z0-9_]", "_", tag)
+        color = "808080"
+    display = label.replace("_", " ").replace("%26", "&")
+    return f"![{display}](https://img.shields.io/badge/{label}-{color}?style=for-the-badge)"
+
 def badge_website(url: str) -> str:
     if not url:
         return ""
@@ -155,11 +175,18 @@ def render_entry(e: dict) -> str:
     github = links.get("github", "")
     website = links.get("website", "")
 
-    badges = " ".join(x for x in [badge_paper(paper), badge_github(github), badge_website(website)] if x)
+    link_badges = " ".join(x for x in [badge_paper(paper), badge_github(github), badge_website(website)] if x)
+
+    # Tags: stored as list of short keys (benchmark / survey / position / empirical)
+    tags = e.get("tags") or []
+    if isinstance(tags, str):
+        tags = [t.strip() for t in tags.split(",") if t.strip()]
+    tag_badges = " ".join(badge_tag(t) for t in tags if t)
+
+    badges = " ".join(x for x in [link_badges, tag_badges] if x)
 
     lines = []
     lines.append(f"- **{title}**  " if title[-1] in "?!" else f"- **{title}.**  ")
-    # lines.append(f"  _{authors}._ {venue}.  ")
     # Avoid double periods if authors already end with '.' (e.g., 'et al.')
     authors_clean = authors.rstrip(" .")
     lines.append(f"  _{authors_clean}._ {venue}.  ")

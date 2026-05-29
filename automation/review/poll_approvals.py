@@ -1,0 +1,235 @@
+"""
+Polls pending GitHub Issues for /approve and /reject commands.
+
+Command syntax (case-insensitive, from the designated reviewer only):
+    /approve all
+    /approve 1,3,5
+    /reject 2
+    /approve 1,3 /reject 2
+    /edit 2 category=code_generation
+    /edit 2 venue=ICSE 2026
+    /triage 1 category=code_generation      (for unknown-category issues)
+
+After processing, the bot:
+    - Comments a summary of what was actioned
+    - Closes the issue when all items have been decided
+"""
+
+from __future__ import annotations
+
+import logging
+import re
+from typing import Any
+
+from automation.review import github as gh
+
+logger = logging.getLogger(__name__)
+
+# ── Command parsing ───────────────────────────────────────────────────────────
+
+_APPROVE_RE = re.compile(r"/approve\s+(all|\d[\d,\s]*)", re.IGNORECASE)
+_REJECT_RE  = re.compile(r"/reject\s+(all|\d[\d,\s]*)",  re.IGNORECASE)
+_EDIT_RE    = re.compile(r"/(?:edit|triage)\s+(\d+)\s+(\w+)=(.+?)(?=\s*/|$)", re.IGNORECASE)
+
+
+def _parse_indices(raw: str, total: int) -> set[int]:
+    """Parse '1,3,5' or 'all' into a set of 0-based indices."""
+    raw = raw.strip()
+    if raw.lower() == "all":
+        return set(range(total))
+    indices: set[int] = set()
+    for part in re.split(r"[\s,]+", raw):
+        part = part.strip()
+        if part.isdigit():
+            idx = int(part) - 1   # 1-based → 0-based
+            if 0 <= idx < total:
+                indices.add(idx)
+    return indices
+
+
+def parse_commands(
+    comment_body: str,
+    total_papers: int,
+) -> dict[str, Any]:
+    """
+    Parse a comment body into a commands dict:
+    {
+        "approve": {0, 2, ...},    # 0-based paper indices
+        "reject":  {1, ...},
+        "edits":   {0: {"category": "code_generation"}, ...},
+    }
+    """
+    approved: set[int] = set()
+    rejected: set[int] = set()
+    edits: dict[int, dict[str, str]] = {}
+
+    for m in _APPROVE_RE.finditer(comment_body):
+        approved |= _parse_indices(m.group(1), total_papers)
+
+    for m in _REJECT_RE.finditer(comment_body):
+        rejected |= _parse_indices(m.group(1), total_papers)
+
+    # Rejected takes precedence if same index appears in both
+    approved -= rejected
+
+    for m in _EDIT_RE.finditer(comment_body):
+        idx = int(m.group(1)) - 1   # 1-based → 0-based
+        field = m.group(2).strip().lower()
+        value = m.group(3).strip()
+        if 0 <= idx < total_papers:
+            edits.setdefault(idx, {})[field] = value
+
+    return {"approve": approved, "reject": rejected, "edits": edits}
+
+
+# ── Poll ──────────────────────────────────────────────────────────────────────
+
+def poll_issue(
+    issue_meta: dict[str, Any],
+    owner: str,
+    repo: str,
+    reviewer: str,
+    last_checked: str | None = None,
+) -> dict[str, Any]:
+    """
+    Poll a single issue for reviewer commands.
+
+    Returns an action dict:
+    {
+        "issue_number": int,
+        "approved_papers": [paper_dict, ...],   # with any edits applied
+        "rejected_ids":    [arxiv_id, ...],
+        "fully_resolved":  bool,
+        "new_last_checked": str,                # ISO timestamp of latest comment seen
+    }
+    """
+    issue_number = issue_meta["issue_number"]
+    papers = list(issue_meta.get("papers", []))   # shallow copy
+    total = len(papers)
+
+    if total == 0:
+        return {
+            "issue_number":  issue_number,
+            "approved_papers": [],
+            "rejected_ids":    [],
+            "fully_resolved":  True,
+            "new_last_checked": last_checked or "",
+        }
+
+    comments = gh.get_issue_comments(owner, repo, issue_number, since=last_checked)
+
+    # Track which indices have been decided (persisted in issue_meta["decided"])
+    decided: dict[int, str] = dict(issue_meta.get("decided", {}))  # idx → "approve"/"reject"
+    pending_edits: dict[int, dict[str, str]] = {}
+    latest_ts = last_checked or ""
+
+    for comment in comments:
+        author = comment.get("user", {}).get("login", "")
+        if author.lower() != reviewer.lower():
+            continue  # only trust the reviewer
+
+        body = comment.get("body", "")
+        ts   = comment.get("updated_at") or comment.get("created_at") or ""
+        if ts > latest_ts:
+            latest_ts = ts
+
+        cmds = parse_commands(body, total)
+
+        for idx in cmds["approve"]:
+            decided[idx] = "approve"
+        for idx in cmds["reject"]:
+            decided[idx] = "reject"
+        for idx, fields in cmds["edits"].items():
+            pending_edits.setdefault(idx, {}).update(fields)
+
+    # Apply edits to paper dicts
+    for idx, fields in pending_edits.items():
+        if 0 <= idx < total:
+            for field, value in fields.items():
+                if field in ("category", "venue", "tags"):
+                    if field == "tags":
+                        papers[idx]["tags"] = [t.strip() for t in value.split(",")]
+                    else:
+                        papers[idx][field] = value
+
+    approved_papers = [papers[i] for i in sorted(decided) if decided[i] == "approve"]
+    rejected_ids    = [papers[i].get("arxiv_id", "") for i in sorted(decided) if decided[i] == "reject"]
+    fully_resolved  = len(decided) == total
+
+    return {
+        "issue_number":    issue_number,
+        "approved_papers": approved_papers,
+        "rejected_ids":    rejected_ids,
+        "fully_resolved":  fully_resolved,
+        "new_last_checked": latest_ts,
+        "decided":         decided,
+    }
+
+
+def poll_all_pending(
+    pending_issues: list[dict[str, Any]],
+    owner: str,
+    repo: str,
+    reviewer: str,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """
+    Poll all pending issues.
+
+    Returns:
+        (approved_papers, updated_pending_issues)
+        - approved_papers: flat list of all approved paper dicts
+        - updated_pending_issues: issues not yet fully resolved (for state persistence)
+    """
+    all_approved: list[dict[str, Any]] = []
+    still_pending: list[dict[str, Any]] = []
+
+    for issue_meta in pending_issues:
+        result = poll_issue(
+            issue_meta, owner, repo, reviewer,
+            last_checked=issue_meta.get("last_checked"),
+        )
+
+        all_approved.extend(result["approved_papers"])
+
+        # Post a bot confirmation comment if anything changed
+        if result["approved_papers"] or result["rejected_ids"]:
+            _post_confirmation(owner, repo, issue_meta, result)
+
+        if result["fully_resolved"]:
+            gh.close_issue(owner, repo, issue_meta["issue_number"])
+            logger.info("Issue #%d fully resolved and closed", issue_meta["issue_number"])
+        else:
+            # Persist updated state
+            updated = dict(issue_meta)
+            updated["last_checked"] = result["new_last_checked"]
+            updated["decided"]      = result["decided"]
+            still_pending.append(updated)
+
+    return all_approved, still_pending
+
+
+def _post_confirmation(
+    owner: str,
+    repo: str,
+    issue_meta: dict[str, Any],
+    result: dict[str, Any],
+) -> None:
+    """Post a bot comment summarising what was approved/rejected this cycle."""
+    lines = ["**🤖 Pipeline update:**\n"]
+
+    if result["approved_papers"]:
+        lines.append(f"✅ **Approved {len(result['approved_papers'])} paper(s)** — will be added to the repo in the next finalize run.")
+        for p in result["approved_papers"]:
+            lines.append(f"  - {p.get('title', p.get('arxiv_id', ''))}")
+
+    if result["rejected_ids"]:
+        lines.append(f"\n❌ **Rejected {len(result['rejected_ids'])} paper(s)** — blacklisted.")
+
+    if result["fully_resolved"]:
+        lines.append("\n_All items decided — closing this issue._")
+
+    body = "\n".join(lines)
+    try:
+        gh.add_issue_comment(owner, repo, issue_meta["issue_number"], body)
+    except Exception as exc:
+        logger.warning("Could not post confirmation comment: %s", exc)

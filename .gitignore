@@ -119,3 +119,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+
+# Automation
+.env
+automation/state/processed.json
+automation/__pycache__/
+automation/**/__pycache__/
