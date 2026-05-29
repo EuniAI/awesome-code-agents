@@ -133,10 +133,6 @@ def run_daily() -> None:
         logger.info("Nothing new to process today.")
         return
 
-    # Mark as processed immediately so re-runs don't double-process
-    state_mgr.mark_processed(state, [p["arxiv_id"] for p in new_papers])
-    state_mgr.save(state)
-
     # ── 4. Enrich ───────────────────────────────────────────────────────────
     logger.info("=== Step 3: Enriching %d papers ===", len(new_papers))
     pwc.enrich_papers(new_papers)
@@ -151,6 +147,11 @@ def run_daily() -> None:
         temperature=cfg.get("llm", {}).get("temperature", 0.1),
     )
     logger.info("Relevant papers: %d / %d", len(relevant), len(new_papers))
+
+    # Mark as processed only after classification completes successfully.
+    # This way a mid-run crash won't permanently lose unclassified papers.
+    state_mgr.mark_processed(state, [p["arxiv_id"] for p in new_papers])
+    state_mgr.save(state)
 
     if not relevant:
         logger.info("No relevant papers found.")
@@ -251,9 +252,6 @@ def run_backfill(from_date: date, to_date: date) -> None:
         logger.info("Nothing new in this date range.")
         return
 
-    state_mgr.mark_processed(state, [p["arxiv_id"] for p in new_papers])
-    state_mgr.save(state)
-
     pwc.enrich_papers(new_papers)
     meta_enricher.enrich_papers(new_papers)
 
@@ -262,6 +260,9 @@ def run_backfill(from_date: date, to_date: date) -> None:
         categories=cfg["categories"],
         tags=cfg["tags"],
     )
+
+    state_mgr.mark_processed(state, [p["arxiv_id"] for p in new_papers])
+    state_mgr.save(state)
 
     if relevant:
         new_issues = create_review_issues(

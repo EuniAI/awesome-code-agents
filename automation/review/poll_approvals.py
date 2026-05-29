@@ -118,8 +118,9 @@ def poll_issue(
 
     comments = gh.get_issue_comments(owner, repo, issue_number, since=last_checked)
 
-    # Track which indices have been decided (persisted in issue_meta["decided"])
-    decided: dict[int, str] = dict(issue_meta.get("decided", {}))  # idx → "approve"/"reject"
+    # Track which indices have been decided (persisted in issue_meta["decided"]).
+    # JSON round-trips turn int keys into strings, so normalise to int here.
+    decided: dict[int, str] = {int(k): v for k, v in issue_meta.get("decided", {}).items()}
     pending_edits: dict[int, dict[str, str]] = {}
     latest_ts = last_checked or ""
 
@@ -186,7 +187,7 @@ def poll_all_pending(
     still_pending: list[dict[str, Any]] = []
 
     for issue_meta in pending_issues:
-        prev_decided: dict = issue_meta.get("decided", {})
+        prev_decided: dict[int, str] = {int(k): v for k, v in issue_meta.get("decided", {}).items()}
 
         result = poll_issue(
             issue_meta, owner, repo, reviewer,
