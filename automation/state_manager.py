@@ -17,7 +17,8 @@ Schema:
       "decided":      {"0": "approve"}     // persisted decisions (idx → action)
     },
     ...
-  ]
+  ],
+  "backfill_cursor": "2025-10-01"          // next historical date to backfill (null = done)
 }
 """
 
@@ -33,9 +34,10 @@ logger = logging.getLogger(__name__)
 _STATE_PATH = Path(__file__).parent / "state" / "processed.json"
 
 _DEFAULT: dict[str, Any] = {
-    "processed_ids":  [],
-    "rejected_ids":   [],
-    "pending_issues": [],
+    "processed_ids":   [],
+    "rejected_ids":    [],
+    "pending_issues":  [],
+    "backfill_cursor": None,   # ISO date string, e.g. "2025-10-01"; None = no backfill pending
 }
 
 

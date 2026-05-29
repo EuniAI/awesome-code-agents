@@ -169,6 +169,74 @@ def run_daily() -> None:
     state_mgr.save(state)
     logger.info("Daily run complete. Created %d review issue(s).", len(new_issues))
 
+    # ── 7. Incremental historical backfill ──────────────────────────────────
+    _run_incremental_backfill(cfg, state, owner, repo)
+
+
+def _run_incremental_backfill(cfg, state, owner: str, repo: str) -> None:
+    """
+    Each daily run, advance the historical backfill cursor by CHUNK_DAYS.
+    Backfill range: backfill_cursor → min(cursor + CHUNK_DAYS, yesterday).
+    Stops automatically once the cursor reaches today.
+    """
+    from automation.crawler.arxiv import fetch_date_range
+    from automation.enricher import papers_with_code as pwc
+    from automation.enricher import metadata as meta_enricher
+    from automation.classifier.llm import classify_papers
+    from automation.review.create_issues import create_review_issues
+
+    CHUNK_DAYS = 7  # days of history to process per daily run
+
+    cursor_str = state.get("backfill_cursor")
+    if cursor_str is None:
+        logger.info("No historical backfill configured (backfill_cursor not set).")
+        return
+
+    cursor = date.fromisoformat(cursor_str)
+    today  = date.today()
+
+    if cursor >= today:
+        logger.info("Historical backfill complete — cursor has reached today.")
+        state["backfill_cursor"] = None
+        state_mgr.save(state)
+        return
+
+    chunk_end = min(cursor + timedelta(days=CHUNK_DAYS - 1), today - timedelta(days=1))
+    logger.info("=== Historical backfill: %s → %s ===", cursor, chunk_end)
+
+    papers = fetch_date_range(
+        cursor, chunk_end,
+        cfg["arxiv"]["categories"],
+        cfg["arxiv"]["keywords"],
+        cfg["arxiv"]["max_results_per_category"],
+    )
+
+    processed_set = set(state["processed_ids"]) | set(state["rejected_ids"])
+    new_papers = [p for p in papers if p.get("arxiv_id") not in processed_set]
+    logger.info("Backfill new papers: %d", len(new_papers))
+
+    if new_papers:
+        pwc.enrich_papers(new_papers)
+        meta_enricher.enrich_papers(new_papers)
+        relevant = classify_papers(
+            new_papers,
+            categories=cfg["categories"],
+            tags=cfg["tags"],
+        )
+        state_mgr.mark_processed(state, [p["arxiv_id"] for p in new_papers])
+
+        if relevant:
+            batch_label = f"backfill:{cursor}..{chunk_end}"
+            new_issues = create_review_issues(relevant, owner, repo, batch_date=batch_label)
+            for issue_meta in new_issues:
+                state_mgr.add_pending_issue(state, issue_meta)
+            logger.info("Backfill created %d review issue(s).", len(new_issues))
+
+    # Advance cursor
+    state["backfill_cursor"] = str(chunk_end + timedelta(days=1))
+    state_mgr.save(state)
+    logger.info("Backfill cursor advanced to %s", state["backfill_cursor"])
+
 
 # ── Mode: finalize ────────────────────────────────────────────────────────────
 
