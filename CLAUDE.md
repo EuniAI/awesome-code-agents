@@ -1,5 +1,10 @@
 # Awesome Code Agents — Project Context
 
+## Working Preferences
+
+- **Always work directly on `main`**, no worktrees. The owner wants changes visible immediately without manual merging.
+- Commit and push after each logical change so nothing gets lost in a temporary branch.
+
 ## What This Project Is
 
 A curated list of research papers on autonomous code agents, maintained at [euni.ai](https://euni.ai).
