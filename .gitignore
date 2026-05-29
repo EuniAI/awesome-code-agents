@@ -125,3 +125,4 @@ Temporary Items
 automation/state/processed.json
 automation/__pycache__/
 automation/**/__pycache__/
+.claude/
