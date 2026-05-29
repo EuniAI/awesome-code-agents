@@ -171,41 +171,59 @@ def poll_all_pending(
     owner: str,
     repo: str,
     reviewer: str,
-) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+) -> tuple[list[dict[str, Any]], list[str], list[dict[str, Any]]]:
     """
     Poll all pending issues.
 
     Returns:
-        (approved_papers, updated_pending_issues)
-        - approved_papers: flat list of all approved paper dicts
+        (approved_papers, all_rejected_ids, updated_pending_issues)
+        - approved_papers: flat list of newly approved paper dicts
+        - all_rejected_ids: flat list of newly rejected arXiv IDs
         - updated_pending_issues: issues not yet fully resolved (for state persistence)
     """
     all_approved: list[dict[str, Any]] = []
+    all_rejected_ids: list[str] = []
     still_pending: list[dict[str, Any]] = []
 
     for issue_meta in pending_issues:
+        prev_decided: dict = issue_meta.get("decided", {})
+
         result = poll_issue(
             issue_meta, owner, repo, reviewer,
             last_checked=issue_meta.get("last_checked"),
         )
 
-        all_approved.extend(result["approved_papers"])
+        # Only surface decisions that are NEW since last poll
+        new_decided = {
+            k: v for k, v in result["decided"].items()
+            if k not in prev_decided
+        }
+        papers = list(issue_meta.get("papers", []))
 
-        # Post a bot confirmation comment if anything changed
-        if result["approved_papers"] or result["rejected_ids"]:
-            _post_confirmation(owner, repo, issue_meta, result)
+        newly_approved = [papers[i] for i in sorted(new_decided) if new_decided[i] == "approve"]
+        newly_rejected_ids = [papers[i].get("arxiv_id", "") for i in sorted(new_decided) if new_decided[i] == "reject"]
+
+        all_approved.extend(newly_approved)
+        all_rejected_ids.extend(rid for rid in newly_rejected_ids if rid)
+
+        # Post confirmation only when there are new decisions this cycle
+        if newly_approved or newly_rejected_ids:
+            _post_confirmation(owner, repo, issue_meta, {
+                "approved_papers": newly_approved,
+                "rejected_ids":    newly_rejected_ids,
+                "fully_resolved":  result["fully_resolved"],
+            })
 
         if result["fully_resolved"]:
             gh.close_issue(owner, repo, issue_meta["issue_number"])
             logger.info("Issue #%d fully resolved and closed", issue_meta["issue_number"])
         else:
-            # Persist updated state
             updated = dict(issue_meta)
             updated["last_checked"] = result["new_last_checked"]
             updated["decided"]      = result["decided"]
             still_pending.append(updated)
 
-    return all_approved, still_pending
+    return all_approved, all_rejected_ids, still_pending
 
 
 def _post_confirmation(

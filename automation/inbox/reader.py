@@ -3,9 +3,9 @@ Inbox reader — reads user-submitted arXiv links from a pinned GitHub Issue.
 
 Protocol:
   - User comments any text containing arXiv URLs on the inbox issue.
-  - This module finds comments without a ✅ reaction from the bot.
-  - For each such comment, extracts arXiv IDs, fetches paper metadata.
-  - After processing, adds a ✅ reaction to the comment so it won't be re-processed.
+  - Deduplication is handled via the pipeline state (processed_ids).
+  - For each unprocessed comment, extracts arXiv IDs, fetches paper metadata.
+  - After processing, adds a 👍 (+1) reaction as a visual acknowledgement.
 """
 
 from __future__ import annotations
@@ -38,16 +38,6 @@ def _extract_arxiv_ids(text: str) -> list[str]:
         if m.group(1) not in found_urls:
             ids.append(m.group(1))
     return list(dict.fromkeys(ids))   # deduplicate preserving order
-
-
-def _bot_has_reacted(comment: dict, owner: str, repo: str) -> bool:
-    """Check if the bot already added a ✅ reaction to this comment."""
-    reactions_url = comment.get("reactions", {}).get("url", "")
-    if not reactions_url:
-        return False
-    # The reactions count on the comment object gives us a quick check
-    total = comment.get("reactions", {}).get("total_count", 0)
-    return total > 0   # simple heuristic: if any reaction exists, assume bot did it
 
 
 def read_inbox(

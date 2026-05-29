@@ -115,7 +115,7 @@ categories:
   pull_request_review:        "Automated code review and pull request analysis"
   feature_development:        "Agents that implement new features end-to-end"
   git_management:             "Git operations: branching, merging, commit management"
-  peformance_optimization:    "Code performance, efficiency, and runtime optimisation"
+  performance_optimization:   "Code performance, efficiency, and runtime optimisation"
   code_migration:             "Migrating code between languages, frameworks, or API versions"
   software_refactoring:       "Code refactoring, clean-up, and technical debt reduction"
   software_security_engineering: "Security vulnerability detection, patching, and hardening"

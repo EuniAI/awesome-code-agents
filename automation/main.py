@@ -189,9 +189,14 @@ def run_finalize() -> None:
         return
 
     logger.info("=== Polling %d pending issue(s) ===", len(pending))
-    approved_papers, still_pending = poll_all_pending(pending, owner, repo, reviewer)
+    approved_papers, rejected_ids, still_pending = poll_all_pending(pending, owner, repo, reviewer)
 
     state_mgr.update_pending_issues(state, still_pending)
+
+    # Persist rejected IDs so they are never re-surfaced
+    if rejected_ids:
+        state_mgr.mark_rejected(state, rejected_ids)
+        logger.info("Blacklisted %d rejected paper(s)", len(rejected_ids))
 
     if not approved_papers:
         state_mgr.save(state)
@@ -201,13 +206,6 @@ def run_finalize() -> None:
     logger.info("=== Writing %d approved paper(s) to YAML ===", len(approved_papers))
     data_dir = _REPO_ROOT / "data"
     written = append_papers(approved_papers, data_dir)
-
-    # Mark rejected IDs
-    rejected = []
-    for issue_meta in pending:
-        # rejected_ids are present in poll result but we need to gather from all issues
-        pass
-    # (Rejection tracking happens inside poll_all_pending via state updates)
 
     state_mgr.save(state)
 

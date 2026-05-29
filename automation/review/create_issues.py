@@ -144,7 +144,7 @@ def create_review_issues(
             owner, repo, title, body,
             labels=["pending-review"] + list(source_labels),
         )
-        issue_number = issue["issue_number"] if "issue_number" in issue else issue.get("number")
+        issue_number = issue.get("number")
         logger.info("Created Issue #%s: %s", issue_number, title)
 
         created_issues.append({
