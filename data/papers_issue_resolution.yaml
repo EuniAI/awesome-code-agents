@@ -1,3 +1,60 @@
+- title: 'Position: Future Research and Challenges Remain Towards AI for Software Engineering'
+  authors: Alex Gu, Naman Jain, Wen-Ding Li, Manish Shetty, Kevin Ellis, Koushik Sen, Armando Solar-Lezama
+  venue: ICML 2025 Position Paper Track
+  tags:
+  - position
+  links:
+    paper: https://openreview.net/forum?id=RuLsq4LSZK
+    github: ''
+    website: ''
+- title: How can we assess human-agent interactions? Case studies in software agent design
+  authors: Valerie Chen, Rohit Malhotra, Xingyao Wang, Juan Michelini, Xuhui Zhou, Aditya Bharat Soni, Hoang H. Tran, Calvin
+    Smith, Ameet Talwalkar, Graham Neubig
+  venue: arXiv 2025
+  tags:
+  - empirical
+  links:
+    paper: https://arxiv.org/abs/2510.09801
+    github: ''
+    website: ''
+- title: Assessing and Advancing Benchmarks for Evaluating Large Language Models in Software Engineering Tasks
+  authors: Xing Hu, Feifei Niu, Junkai Chen, Xin Zhou, Junwei Zhang, Junda He, Xin Xia, David Lo
+  venue: arXiv 2025
+  tags:
+  - benchmark
+  - empirical
+  links:
+    paper: https://arxiv.org/abs/2505.08903
+    github: ''
+    website: ''
+- title: A Comprehensive Empirical Evaluation of Agent Frameworks on Code-centric Software Engineering Tasks
+  authors: Zhuowen Yin, Cuifeng Gao, Chunsong Fan, Wenzhang Yang, Yinxing Xue, Lijun Zhang
+  venue: arXiv 2025
+  tags:
+  - empirical
+  links:
+    paper: https://arxiv.org/abs/2511.00872
+    github: ''
+    website: ''
+- title: 'Large Language Model-Based Agents for Software Engineering: A Survey'
+  authors: Junwei Liu, Kaixin Wang, Yixuan Chen, Xin Peng, Zhenpeng Chen, Lingming Zhang, Yiling Lou
+  venue: arXiv 2024
+  tags:
+  - survey
+  links:
+    paper: https://arxiv.org/abs/2409.02977
+    github: ''
+    website: ''
+- title: A Comprehensive Survey on Benchmarks and Solutions in Software Engineering of LLM-Empowered Agentic System
+  authors: Jiale Guo, Suizhi Huang, Mei Li, Dong Huang, Xingsheng Chen, Regina Zhang, Zhijiang Guo, Han Yu, Siu-Ming Yiu,
+    Christian Jensen, Pietro Lio, Kwok-Yan Lam
+  venue: arXiv 2025
+  tags:
+  - survey
+  links:
+    paper: https://arxiv.org/abs/2510.09721
+    github: https://github.com/lisaGuojl/LLM-Agent-SE-Survey
+    website: ''
 - title: 'Agents in software engineering: survey, landscape, and vision'
   authors: Yanlin Wang, Wanjun Zhong, Yanxian Huang, Ensheng Shi, Min Yang, Jiachi Chen, Hui Li, Yuchi Ma, Qianxiang Wang,
     Zibin Zheng

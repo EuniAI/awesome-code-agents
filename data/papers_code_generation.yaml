@@ -1,3 +1,40 @@
+- title: Is Multi-Agent Debate (MAD) the Silver Bullet? An Empirical Analysis of MAD in Code Summarization and Translation
+  authors: Jina Chun, Qihong Chen, Jiawei Li, Iftekhar Ahmed
+  venue: arXiv 2025
+  tags:
+  - empirical
+  links:
+    paper: https://arxiv.org/abs/2503.12029
+    github: ''
+    website: ''
+- title: Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity
+  authors: Joel Becker, Nate Rush, Elizabeth Barnes, David Rein
+  venue: arXiv 2025
+  tags:
+  - empirical
+  links:
+    paper: https://arxiv.org/abs/2507.09089
+    github: ''
+    website: ''
+- title: Code with Me or for Me? How Increasing AI Automation Transforms Developer Workflows
+  authors: Valerie Chen, Ameet Talwalkar, Robert Brennan, Graham Neubig
+  venue: arXiv 2025
+  tags:
+  - empirical
+  links:
+    paper: https://arxiv.org/abs/2507.08149
+    github: ''
+    website: ''
+- title: Assessing and Advancing Benchmarks for Evaluating Large Language Models in Software Engineering Tasks
+  authors: Xing Hu, Feifei Niu, Junkai Chen, Xin Zhou, Junwei Zhang, Junda He, Xin Xia, David Lo
+  venue: arXiv 2025
+  tags:
+  - survey
+  - empirical
+  links:
+    paper: https://arxiv.org/abs/2505.08903
+    github: ''
+    website: ''
 - title: 'Vibe Checker: Aligning Code Evaluation with Human Preference'
   authors: Ming Zhong, Xiang Zhou, Ting-Yun Chang, Qingze Wang, Nan Xu, Xiance Si, Dan Garrette, Shyam Upadhyay, Jeremiah
     Liu, Jiawei Han, Benoit Schillings, Jiao Sun

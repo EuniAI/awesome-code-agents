@@ -1,0 +1,12 @@
+- title: 'OS Agents: A Survey on MLLM-based Agents for General Computing Devices Use'
+  authors: Xueyu Hu, Tao Xiong, Biao Yi, Zishu Wei, Ruixuan Xiao, Yurun Chen, Jiasheng Ye, Meiling Tao, Xiangxin Zhou, Ziyu
+    Zhao, Yuhuai Li, Shengze Xu, Shenzhi Wang, Xinchen Xu, Shuofei Qiao, Zhaokai Wang, Kun Kuang, Tieyong Zeng, Liang Wang,
+    Jiwei Li, Yuchen Eleanor Jiang, Wangchunshu Zhou, Guoyin Wang, Keting Yin, Zhou Zhao, Hongxia Yang, Fan Wu, Shengyu Zhang,
+    Fei Wu
+  venue: ACL 2025
+  tags:
+  - survey
+  links:
+    paper: https://arxiv.org/abs/2508.04482
+    github: https://github.com/OS-Agent-Survey/OS-Agent-Survey
+    website: ''

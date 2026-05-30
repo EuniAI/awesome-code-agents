@@ -84,9 +84,11 @@ Strict relevance rules — mark relevant=false if ANY of these apply:
 - The primary contribution is a general NLP/ML method that happens to be evaluated
   on a code dataset, but the method itself is not about code-executing agents.
 
-Mark relevant=true if the agent uses code execution or CLI as a primary action,
-regardless of the end task (software engineering, data analysis, science, games,
-embodied control via code, web tasks via code, etc.).
+Mark relevant=true if ANY of the following:
+- The agent uses code execution or CLI as a primary action (regardless of end task).
+- The paper surveys, systematically reviews, or empirically evaluates code/CLI agents.
+- The paper proposes a benchmark or dataset for evaluating code/CLI agents.
+- The paper studies the impact, behaviour, or limitations of AI coding tools/agents.
 
 Other rules:
 - Choose the SINGLE most specific functional category (e.g. code_generation,
