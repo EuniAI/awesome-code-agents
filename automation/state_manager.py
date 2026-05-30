@@ -38,6 +38,9 @@ _DEFAULT: dict[str, Any] = {
     "rejected_ids":    [],
     "pending_issues":  [],
     "backfill_cursor": None,   # ISO date string, e.g. "2025-10-01"; None = no backfill pending
+    "reject_feedback": [],     # [{arxiv_id, title, reason}, ...] — curator reject reasons
+    "learned_rules":   "",     # LLM-synthesised rules injected into classifier prompt
+    "rules_last_updated": "",  # ISO date when learned_rules was last generated
 }
 
 
@@ -86,3 +89,67 @@ def add_pending_issue(state: dict[str, Any], issue_meta: dict[str, Any]) -> None
 
 def update_pending_issues(state: dict[str, Any], updated: list[dict[str, Any]]) -> None:
     state["pending_issues"] = updated
+
+
+def add_reject_feedback(state: dict[str, Any], items: list[dict[str, Any]]) -> None:
+    """Append curator reject reasons for classifier learning."""
+    state.setdefault("reject_feedback", []).extend(items)
+
+
+def maybe_refresh_learned_rules(state: dict[str, Any], min_new_items: int = 10) -> str:
+    """
+    If enough new reject feedback has accumulated since the last refresh,
+    call the LLM to synthesise updated learned_rules and store them in state.
+    Returns the current learned_rules string.
+    """
+    import os
+    from datetime import date
+    from openai import OpenAI
+
+    feedback = state.get("reject_feedback", [])
+    last_updated = state.get("rules_last_updated", "")
+
+    # Count items added since last update
+    new_items = [f for f in feedback if f.get("date", "9999") >= last_updated] if last_updated else feedback
+    if len(new_items) < min_new_items:
+        return state.get("learned_rules", "")
+
+    logger.info("Refreshing learned_rules from %d reject feedback items…", len(feedback))
+
+    feedback_text = "\n".join(
+        f"- [{f.get('arxiv_id','')}] {f.get('title','')} | reason: {f.get('reason','(no reason given)')}"
+        for f in feedback[-100:]  # use last 100 at most
+    )
+
+    prompt = f"""You are helping curate "Awesome Code Agents", a list of papers about AI agents
+that work with source code (writing, fixing, reviewing, executing, or testing code).
+
+Below are papers the curator REJECTED and their reasons:
+{feedback_text}
+
+Based on these rejections, write 3-7 concise bullet-point rules to help the classifier
+avoid similar mistakes in the future. Be specific. Focus on patterns you see in the reasons.
+Format: a plain bulleted list, each item starting with "- ".
+Do not repeat the base rules (those already say: must involve source code, not general agents, etc.)
+Only add NEW nuances discovered from these rejections."""
+
+    try:
+        client = OpenAI(
+            base_url=os.environ.get("LITELLM_BASE_URL", "http://localhost:4000"),
+            api_key=os.environ.get("LITELLM_API_KEY", "anything"),
+        )
+        model = os.environ.get("LITELLM_MODEL", "gemini/gemini-2.5-flash")
+        resp = client.chat.completions.create(
+            model=model,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.3,
+            max_tokens=512,
+        )
+        rules = resp.choices[0].message.content.strip()
+        state["learned_rules"] = rules
+        state["rules_last_updated"] = str(date.today())
+        logger.info("Learned rules updated:\n%s", rules)
+    except Exception as exc:
+        logger.warning("Could not refresh learned_rules: %s", exc)
+
+    return state.get("learned_rules", "")

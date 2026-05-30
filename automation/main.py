@@ -140,11 +140,13 @@ def run_daily() -> None:
 
     # ── 5. Classify ─────────────────────────────────────────────────────────
     logger.info("=== Step 4: Classifying with LLM ===")
+    learned_rules = state_mgr.maybe_refresh_learned_rules(state)
     relevant = classify_papers(
         new_papers,
         categories=cfg["categories"],
         tags=cfg["tags"],
         temperature=cfg.get("llm", {}).get("temperature", 0.1),
+        learned_rules=learned_rules,
     )
     logger.info("Relevant papers: %d / %d", len(relevant), len(new_papers))
 
@@ -258,7 +260,9 @@ def run_finalize() -> None:
         return
 
     logger.info("=== Polling %d pending issue(s) ===", len(pending))
-    approved_papers, rejected_ids, still_pending = poll_all_pending(pending, owner, repo, reviewer)
+    approved_papers, rejected_ids, rejected_with_reasons, still_pending = poll_all_pending(
+        pending, owner, repo, reviewer
+    )
 
     state_mgr.update_pending_issues(state, still_pending)
 
@@ -266,6 +270,11 @@ def run_finalize() -> None:
     if rejected_ids:
         state_mgr.mark_rejected(state, rejected_ids)
         logger.info("Blacklisted %d rejected paper(s)", len(rejected_ids))
+
+    # Accumulate reject reasons for classifier learning
+    if rejected_with_reasons:
+        state_mgr.add_reject_feedback(state, rejected_with_reasons)
+        logger.info("Recorded %d reject reason(s) for classifier learning", len(rejected_with_reasons))
 
     if not approved_papers:
         state_mgr.save(state)

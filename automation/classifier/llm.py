@@ -33,17 +33,25 @@ def _make_client() -> OpenAI:
 # ── Prompt ────────────────────────────────────────────────────────────────────
 
 _SYSTEM_PROMPT = """\
-You are a research librarian specialising in AI code agents.
-Your job is to classify arXiv papers for the "Awesome Code Agents" repository,
-which tracks research on autonomous AI systems that write, fix, review, execute,
-or interact with code and software.
+You are a research librarian for "Awesome Code Agents" — a curated list focused
+EXCLUSIVELY on AI agents that work with CODE and SOFTWARE.
+
+The core criterion: the agent's PRIMARY task must involve writing, reading, fixing,
+reviewing, executing, or testing SOURCE CODE, or operating a terminal/CLI to
+accomplish software engineering tasks.
 
 Respond ONLY with valid JSON — no markdown fences, no prose.
 """
 
-def _build_user_prompt(paper: dict[str, Any], categories: dict[str, str], tags: dict[str, str]) -> str:
+def _build_user_prompt(
+    paper: dict[str, Any],
+    categories: dict[str, str],
+    tags: dict[str, str],
+    learned_rules: str = "",
+) -> str:
     cat_lines = "\n".join(f'  "{k}": "{v}"' for k, v in categories.items())
     tag_lines = "\n".join(f'  "{k}": "{v}"' for k, v in tags.items())
+    learned_section = f"\nAdditional rules learned from curator feedback:\n{learned_rules}\n" if learned_rules else ""
 
     return f"""\
 Paper to classify:
@@ -55,7 +63,7 @@ Available categories (key → description):
 
 Available tags (apply ALL that fit, or empty list):
 {{{tag_lines}}}
-
+{learned_section}
 Respond with this exact JSON schema:
 {{
   "relevant": true | false,
@@ -66,9 +74,20 @@ Respond with this exact JSON schema:
   "venue_hint": "<if the abstract explicitly mentions a conference/journal, state it; else empty string>"
 }}
 
-Rules:
-- Set "relevant" to false if the paper is NOT about AI/LLM agents that write, fix, test,
-  review, execute or otherwise interact with source code or software systems.
+Strict relevance rules — mark relevant=false if ANY of these apply:
+- The agent does NOT write, read, fix, review, execute, or test source code.
+- It is a general-purpose LLM agent, reasoning agent, or planning agent with no
+  specific code/software task (e.g. web browsing agents, QA chatbots, math agents).
+- It uses tools or APIs but the tools are NOT code/terminal related.
+- The primary contribution is a general NLP/ML method that happens to be evaluated
+  on a code dataset but is not specifically about code agents.
+- It is about robotic control, autonomous driving, game playing (unless the agent
+  literally writes/executes code to play the game).
+
+Mark relevant=true only if the paper's core contribution is an agent or system that
+directly operates on source code or software artefacts (files, repos, terminals, IDEs).
+
+Other rules:
 - Choose the SINGLE most specific category that fits. Never invent new categories.
 - Only set tags that genuinely apply. "benchmark" = introduces a new eval dataset/suite;
   "survey" = comprehensive literature review; "position" = opinion/vision paper;
@@ -87,6 +106,7 @@ def classify_paper(
     temperature: float = 0.1,
     max_tokens: int = 1024,
     retries: int = 3,
+    learned_rules: str = "",
 ) -> dict[str, Any]:
     """
     Classify a single paper. Returns a dict with keys:
@@ -98,7 +118,7 @@ def classify_paper(
 
     messages = [
         {"role": "system", "content": _SYSTEM_PROMPT},
-        {"role": "user",   "content": _build_user_prompt(paper, categories, tags)},
+        {"role": "user",   "content": _build_user_prompt(paper, categories, tags, learned_rules)},
     ]
 
     for attempt in range(1, retries + 1):
@@ -140,6 +160,7 @@ def classify_papers(
     tags: dict[str, str],
     model: str | None = None,
     temperature: float = 0.1,
+    learned_rules: str = "",
 ) -> list[dict[str, Any]]:
     """
     Classify a list of papers. Mutates each paper in place, adding:
@@ -153,7 +174,7 @@ def classify_papers(
 
     for i, paper in enumerate(papers, 1):
         logger.info("[%d/%d] Classifying: %s", i, len(papers), paper["title"][:80])
-        result = classify_paper(paper, categories, tags, model=model, temperature=temperature)
+        result = classify_paper(paper, categories, tags, model=model, temperature=temperature, learned_rules=learned_rules)
 
         paper["relevant"]   = result.get("relevant", False)
         paper["category"]   = result.get("category")
