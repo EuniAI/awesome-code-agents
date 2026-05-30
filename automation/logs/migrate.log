@@ -1,0 +1,283 @@
+2026-05-30 13:10:47,951 INFO     Non-deprecated existing papers: 370 urls, 419 titles
+2026-05-30 13:10:47,972 INFO     
+=== benchmarks (39 papers) ===
+2026-05-30 13:10:47,972 INFO       Fetching: Terminal-Bench: A Benchmark for AI Agents in Terminal Environments
+2026-05-30 13:10:52,374 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:10:52,410 INFO     Written to papers_terminal.yaml: Terminal-Bench: A Benchmark for AI Agents in Terminal Enviro
+2026-05-30 13:10:52,410 INFO       ✓ → terminal ['benchmark', 'empirical']
+2026-05-30 13:10:52,410 INFO       SKIP dup: SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering T
+2026-05-30 13:10:52,410 INFO       SKIP dup: SWE-Compass: Towards Unified Evaluation of Agentic Coding Abilities fo
+2026-05-30 13:10:52,410 INFO       SKIP dup: SWE-PolyBench: A multi-language benchmark for repository level evaluat
+2026-05-30 13:10:52,410 INFO       SKIP dup: Programming with Pixels: Can Computer-Use Agents do Software Engineeri
+2026-05-30 13:10:52,410 INFO       SKIP dup: MORSE-500: A Programmatically Controllable Video Benchmark to Stress-T
+2026-05-30 13:10:52,410 INFO       SKIP dup: SWE-SQL: Illuminating LLM Pathways to Solve User SQL Issues in Real-Wo
+2026-05-30 13:10:52,410 INFO       SKIP dup: Multi-SWE-bench: A Multilingual Benchmark for Issue Resolving
+2026-05-30 13:10:52,410 INFO       SKIP dup: SWE-Perf: Can Language Models Optimize Code Performance on Real-World 
+2026-05-30 13:10:52,410 INFO       SKIP dup: MetaGen: A DSL, Database, and Benchmark for VLM-Assisted Metamaterial 
+2026-05-30 13:10:52,410 INFO       SKIP dup: WebDS: An End-to-End Benchmark for Web-based Data Science
+2026-05-30 13:10:52,410 INFO       SKIP dup: Plot2Code: A Comprehensive Benchmark for Evaluating Multi-modal Large 
+2026-05-30 13:10:52,410 INFO       SKIP dup: SWE-rebench: An Automated Pipeline for Task Collection and Decontamina
+2026-05-30 13:10:52,410 INFO       Fetching: SWE-Bench+: Enhanced Coding Benchmark for LLMs
+2026-05-30 13:10:56,780 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:10:56,939 INFO     Written to papers_issue_resolution.yaml: SWE-Bench+: Enhanced Coding Benchmark for LLMs
+2026-05-30 13:10:56,939 INFO       ✓ → issue_resolution ['benchmark', 'empirical']
+2026-05-30 13:10:56,939 INFO       SKIP dup: SWE-Effi: Re-Evaluating Software AI Agent System Effectiveness Under R
+2026-05-30 13:10:56,939 INFO       SKIP dup: PReview: A Benchmark Dataset for Pull Request Outcomes and Quality Ana
+2026-05-30 13:10:56,939 INFO       SKIP dup: SEC-bench: Automated Benchmarking of LLM Agents on Real-World Software
+2026-05-30 13:10:56,939 INFO       SKIP dup: SecureAgentBench: Benchmarking Secure Code Generation under Realistic 
+2026-05-30 13:10:56,939 INFO       SKIP dup: SWE-MERA: A Dynamic Benchmark for Agenticly Evaluating Large Language 
+2026-05-30 13:10:56,939 INFO       SKIP dup: Auto-SWE-Bench: A Framework for the Scalable Generation of Software En
+2026-05-30 13:10:56,939 INFO       SKIP dup: Can Agents Fix Agent Issues?
+2026-05-30 13:10:56,940 INFO       SKIP dup: SWE-bench Goes Live!
+2026-05-30 13:10:56,940 INFO       SKIP dup: IR3D-Bench: Evaluating Vision-Language Model Scene Understanding as Ag
+2026-05-30 13:10:56,940 INFO       SKIP dup: BlenderGym: Benchmarking Foundational Model Systems for Graphics Editi
+2026-05-30 13:10:56,940 INFO       Fetching: SyncMind: Measuring Agent Out-of-Sync Recovery in Collaborative Softwa
+2026-05-30 13:10:56,940 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2502.06994&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:10:57,200 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:11:04,648 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:11:04,650 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:11:12,142 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:11:12,326 INFO     Written to papers_issue_resolution.yaml: SyncMind: Measuring Agent Out-of-Sync Recovery in Collaborat
+2026-05-30 13:11:12,326 INFO       ✓ → issue_resolution ['benchmark', 'empirical']
+2026-05-30 13:11:12,326 INFO       SKIP dup: SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelanc
+2026-05-30 13:11:12,326 INFO       SKIP dup: Automated Benchmark Generation for Repository-Level Coding Tasks
+2026-05-30 13:11:12,326 INFO       SKIP dup: CVE-Bench: A Benchmark for AI Agents’ Ability to Exploit Real-World We
+2026-05-30 13:11:12,326 INFO       SKIP dup: WebMMU: A Benchmark for Multimodal Multilingual Website Understanding 
+2026-05-30 13:11:12,326 INFO       SKIP dup: CVE-Bench: Benchmarking LLM-based Software Engineering Agent’s Ability
+2026-05-30 13:11:12,326 INFO       SKIP dup: On the Impacts of Contexts on Repository-Level Code Generation
+2026-05-30 13:11:12,326 INFO       SKIP dup: FEA-Bench: A Benchmark for Evaluating Repository-Level Code Generation
+2026-05-30 13:11:12,326 INFO       SKIP dup: ProjectEval: A Benchmark for Programming Agents Automated Evaluation o
+2026-05-30 13:11:12,326 INFO       SKIP dup: EnvBench: A Benchmark for Automated Environment Setup
+2026-05-30 13:11:12,326 INFO       SKIP dup: OmniGIRL: A Multilingual and Multimodal Benchmark for GitHub Issue Res
+2026-05-30 13:11:12,326 INFO       SKIP dup: SWE-bench: Can Language Models Resolve Real-World GitHub Issues?
+2026-05-30 13:11:12,326 INFO       SKIP dup: RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems
+2026-05-30 13:11:12,326 INFO       SKIP dup: CADTalk: An Algorithm and Benchmark for Semantic Commenting of CAD Pro
+2026-05-30 13:11:12,326 INFO       SKIP dup: DA-Code: Agent Data Science Code Generation Benchmark for Large Langua
+2026-05-30 13:11:12,333 INFO     
+=== surveys (13 papers) ===
+2026-05-30 13:11:12,333 INFO       Fetching: A Survey of Vibe Coding with Large Language Models
+2026-05-30 13:11:12,334 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2510.12399&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:11:12,556 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:11:18,259 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:11:18,337 INFO     Written to papers_code_generation.yaml: A Survey of Vibe Coding with Large Language Models
+2026-05-30 13:11:18,337 INFO       ✓ → code_generation ['survey']
+2026-05-30 13:11:18,337 INFO       Fetching: A Comprehensive Survey on Benchmarks and Solutions in Software Enginee
+2026-05-30 13:11:18,337 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2510.09721&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:11:18,522 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:11:24,823 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:11:24,824 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:11:33,701 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:11:33,702 WARNING  Attempt 2: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:11:44,441 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:11:44,442 WARNING  Attempt 3: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:11:44,443 ERROR    All 3 attempts failed for paper: 
+2026-05-30 13:11:44,443 INFO       SKIP not relevant: A Comprehensive Survey on Benchmarks and Solutions in Software Enginee
+2026-05-30 13:11:44,443 INFO       Fetching: A Survey on Code Generation with LLM-based Agents
+2026-05-30 13:11:44,444 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2508.00083&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:11:44,735 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:11:48,873 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:11:48,974 INFO     Written to papers_code_generation.yaml: A Survey on Code Generation with LLM-based Agents
+2026-05-30 13:11:48,974 INFO       ✓ → code_generation ['survey']
+2026-05-30 13:11:48,974 INFO       Fetching: LLM-Based Data Science Agents: A Survey of Capabilities, Challenges, a
+2026-05-30 13:11:48,974 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2510.04023&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:11:49,148 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:11:52,891 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:11:52,902 INFO     Written to papers_automated_data_science.yaml: LLM-Based Data Science Agents: A Survey of Capabilities, Cha
+2026-05-30 13:11:52,902 INFO       ✓ → automated_data_science ['survey']
+2026-05-30 13:11:52,902 INFO       Fetching: Large Language Model Agent: A Survey on Methodology, Applications and 
+2026-05-30 13:11:52,903 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2503.21460&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:11:53,113 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:11:59,618 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:11:59,619 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:12:08,091 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:12:08,092 WARNING  Attempt 2: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:12:18,777 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:12:18,778 WARNING  Attempt 3: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:12:18,778 ERROR    All 3 attempts failed for paper: 
+2026-05-30 13:12:18,778 INFO       SKIP not relevant: Large Language Model Agent: A Survey on Methodology, Applications and 
+2026-05-30 13:12:18,778 INFO       Fetching: How Does LLM Reasoning Work for Code? A Survey and a Call to Action
+2026-05-30 13:12:18,779 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2506.13932&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:12:19,006 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:12:25,605 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:12:25,606 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:12:34,700 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:12:34,701 WARNING  Attempt 2: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:12:47,109 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:12:47,275 INFO     Written to papers_issue_resolution.yaml: How Does LLM Reasoning Work for Code? A Survey and a Call to
+2026-05-30 13:12:47,275 INFO       ✓ → issue_resolution ['survey', 'position']
+2026-05-30 13:12:47,275 INFO       Fetching: Position: Vibe Coding Needs Vibe Reasoning: Improving Vibe Coding with
+2026-05-30 13:12:47,275 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2511.00202&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:12:47,488 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:12:52,332 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:12:52,395 INFO     Written to papers_code_generation.yaml: Position: Vibe Coding Needs Vibe Reasoning: Improving Vibe C
+2026-05-30 13:12:52,395 INFO       ✓ → code_generation ['position', 'survey']
+2026-05-30 13:12:52,396 INFO       Fetching: Vibe Coding vs. Agentic Coding: Fundamentals and Practical Implication
+2026-05-30 13:12:52,396 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2505.19443&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:12:52,609 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:12:56,877 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:12:56,948 INFO     Written to papers_code_generation.yaml: Vibe Coding vs. Agentic Coding: Fundamentals and Practical I
+2026-05-30 13:12:56,948 INFO       ✓ → code_generation ['survey', 'position']
+2026-05-30 13:12:56,948 INFO       Fetching: Develop AI Agents for System Engineering in Factorio
+2026-05-30 13:12:56,948 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2502.01492&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:12:57,142 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:13:04,077 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:13:04,078 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:13:14,003 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:13:14,005 WARNING  Attempt 2: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:13:23,486 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:13:23,499 INFO     Written to papers_code_executing_game.yaml: Develop AI Agents for System Engineering in Factorio
+2026-05-30 13:13:23,499 INFO       ✓ → code_executing_game ['position', 'survey']
+2026-05-30 13:13:23,499 INFO       Fetching: Agentic Software Engineering: Foundational Pillars and a Research Road
+2026-05-30 13:13:23,500 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2509.06216&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:13:23,714 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:13:29,435 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:13:29,593 INFO     Written to papers_issue_resolution.yaml: Agentic Software Engineering: Foundational Pillars and a Res
+2026-05-30 13:13:29,593 INFO       ✓ → issue_resolution ['survey', 'position']
+2026-05-30 13:13:29,593 INFO       Fetching: OS Agents: A Survey on MLLM-based Agents for General Computing Devices
+2026-05-30 13:13:29,593 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2508.04482&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:13:29,819 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:13:36,414 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:13:36,415 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:13:47,347 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:13:47,348 WARNING  Attempt 2: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:13:58,213 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:13:58,214 WARNING  Attempt 3: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:13:58,214 ERROR    All 3 attempts failed for paper: 
+2026-05-30 13:13:58,214 INFO       SKIP not relevant: OS Agents: A Survey on MLLM-based Agents for General Computing Devices
+2026-05-30 13:13:58,214 INFO       Fetching: Agents in software engineering: survey, landscape, and vision
+2026-05-30 13:14:03,851 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:14:04,067 INFO     Written to papers_issue_resolution.yaml: Agents in software engineering: survey, landscape, and visio
+2026-05-30 13:14:04,067 INFO       ✓ → issue_resolution ['survey', 'position']
+2026-05-30 13:14:04,067 INFO       Fetching: Large Language Model-Based Agents for Software Engineering: A Survey
+2026-05-30 13:14:04,067 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2409.02977&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:14:04,355 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:14:10,818 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:14:10,819 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:14:19,444 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:14:19,445 WARNING  Attempt 2: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:14:29,766 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:14:29,767 WARNING  Attempt 3: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:14:29,767 ERROR    All 3 attempts failed for paper: 
+2026-05-30 13:14:29,767 INFO       SKIP not relevant: Large Language Model-Based Agents for Software Engineering: A Survey
+2026-05-30 13:14:29,785 INFO     
+=== empirical_studies (13 papers) ===
+2026-05-30 13:14:29,785 INFO       Fetching: A Comprehensive Empirical Evaluation of Agent Frameworks on Code-centr
+2026-05-30 13:14:29,786 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2511.00872&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:14:34,722 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:14:41,983 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:14:41,984 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:14:50,542 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:14:50,543 WARNING  Attempt 2: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:15:00,834 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:15:00,835 WARNING  Attempt 3: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:15:00,836 ERROR    All 3 attempts failed for paper: 
+2026-05-30 13:15:00,836 INFO       SKIP not relevant: A Comprehensive Empirical Evaluation of Agent Frameworks on Code-centr
+2026-05-30 13:15:00,836 INFO       SKIP dup: Understanding Software Engineering Agents Through the Lens of Traceabi
+2026-05-30 13:15:00,836 INFO       Fetching: Assessing and Advancing Benchmarks for Evaluating Large Language Model
+2026-05-30 13:15:00,836 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2505.08903&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:15:12,047 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:15:19,808 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:15:19,809 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:15:28,049 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:15:28,050 WARNING  Attempt 2: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:15:38,601 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:15:38,603 WARNING  Attempt 3: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:15:38,603 ERROR    All 3 attempts failed for paper: 
+2026-05-30 13:15:38,603 INFO       SKIP not relevant: Assessing and Advancing Benchmarks for Evaluating Large Language Model
+2026-05-30 13:15:38,603 INFO       Fetching: Vibe Checker: Aligning Code Evaluation with Human Preference
+2026-05-30 13:15:38,604 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2510.07315&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:15:45,173 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:15:50,813 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:15:50,887 INFO     Written to papers_code_generation.yaml: Vibe Checker: Aligning Code Evaluation with Human Preference
+2026-05-30 13:15:50,887 INFO       ✓ → code_generation ['benchmark', 'empirical']
+2026-05-30 13:15:50,887 INFO       Fetching: Large Language Models for IT Automation Tasks: Are We There Yet?
+2026-05-30 13:15:50,888 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2505.20505&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:16:19,650 INFO     Got first page: 1 of 1 total results
+2026-05-30 13:16:26,135 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:16:26,136 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:16:32,550 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:16:32,588 INFO     Written to papers_environment_building.yaml: Large Language Models for IT Automation Tasks: Are We There 
+2026-05-30 13:16:32,589 INFO       ✓ → environment_building ['benchmark', 'empirical']
+2026-05-30 13:16:32,589 INFO       Fetching: Code with Me or for Me? How Increasing AI Automation Transforms Develo
+2026-05-30 13:16:32,589 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2507.08149&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:17:18,917 INFO     Sleeping: 2.999939 seconds
+2026-05-30 13:17:21,918 INFO     Requesting page (first: True, try: 1): https://export.arxiv.org/api/query?search_query=&id_list=2507.08149&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:18:03,210 INFO     Sleeping: 2.999966 seconds
+2026-05-30 13:18:06,211 INFO     Requesting page (first: True, try: 2): https://export.arxiv.org/api/query?search_query=&id_list=2507.08149&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:18:31,606 INFO     Sleeping: 2.999963 seconds
+2026-05-30 13:18:34,607 INFO     Requesting page (first: True, try: 3): https://export.arxiv.org/api/query?search_query=&id_list=2507.08149&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:18:34,731 WARNING  Failed to fetch arXiv paper 2507.08149: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2507.08149&sortBy=relevance&sortOrder=descending&start=0&max_results=100)
+2026-05-30 13:18:42,520 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:18:42,521 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:18:51,390 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:18:51,391 WARNING  Attempt 2: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:19:02,978 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:19:02,979 WARNING  Attempt 3: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:19:02,979 ERROR    All 3 attempts failed for paper: 
+2026-05-30 13:19:02,979 INFO       SKIP not relevant: Code with Me or for Me? How Increasing AI Automation Transforms Develo
+2026-05-30 13:19:02,980 INFO       Fetching: How can we assess human-agent interactions? Case studies in software a
+2026-05-30 13:19:02,980 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2510.09801&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:19:03,161 INFO     Sleeping: 2.999947 seconds
+2026-05-30 13:19:06,161 INFO     Requesting page (first: True, try: 1): https://export.arxiv.org/api/query?search_query=&id_list=2510.09801&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:19:06,267 INFO     Sleeping: 2.999969 seconds
+2026-05-30 13:19:09,268 INFO     Requesting page (first: True, try: 2): https://export.arxiv.org/api/query?search_query=&id_list=2510.09801&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:19:09,379 INFO     Sleeping: 2.999955 seconds
+2026-05-30 13:19:12,380 INFO     Requesting page (first: True, try: 3): https://export.arxiv.org/api/query?search_query=&id_list=2510.09801&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:19:27,933 WARNING  Failed to fetch arXiv paper 2510.09801: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2510.09801&sortBy=relevance&sortOrder=descending&start=0&max_results=100)
+2026-05-30 13:19:35,580 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:19:35,581 INFO       SKIP not relevant: How can we assess human-agent interactions? Case studies in software a
+2026-05-30 13:19:35,581 INFO       Fetching: Measuring the Impact of Early-2025 AI on Experienced Open-Source Devel
+2026-05-30 13:19:35,582 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2507.09089&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:19:35,796 INFO     Sleeping: 2.999964 seconds
+2026-05-30 13:19:38,796 INFO     Requesting page (first: True, try: 1): https://export.arxiv.org/api/query?search_query=&id_list=2507.09089&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:20:09,964 INFO     Sleeping: 2.999966 seconds
+2026-05-30 13:20:12,964 INFO     Requesting page (first: True, try: 2): https://export.arxiv.org/api/query?search_query=&id_list=2507.09089&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:20:13,081 INFO     Sleeping: 2.999975 seconds
+2026-05-30 13:20:16,082 INFO     Requesting page (first: True, try: 3): https://export.arxiv.org/api/query?search_query=&id_list=2507.09089&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:20:16,191 WARNING  Failed to fetch arXiv paper 2507.09089: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2507.09089&sortBy=relevance&sortOrder=descending&start=0&max_results=100)
+2026-05-30 13:20:22,941 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:20:22,942 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:20:31,941 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:20:31,942 WARNING  Attempt 2: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:20:42,975 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:20:42,977 WARNING  Attempt 3: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:20:42,977 ERROR    All 3 attempts failed for paper: 
+2026-05-30 13:20:42,977 INFO       SKIP not relevant: Measuring the Impact of Early-2025 AI on Experienced Open-Source Devel
+2026-05-30 13:20:42,977 INFO       Fetching: Is Multi-Agent Debate (MAD) the Silver Bullet? An Empirical Analysis o
+2026-05-30 13:20:42,977 INFO     Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=2503.12029&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:20:43,177 INFO     Sleeping: 2.999966 seconds
+2026-05-30 13:20:46,177 INFO     Requesting page (first: True, try: 1): https://export.arxiv.org/api/query?search_query=&id_list=2503.12029&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:21:01,853 INFO     Sleeping: 2.999961 seconds
+2026-05-30 13:21:04,853 INFO     Requesting page (first: True, try: 2): https://export.arxiv.org/api/query?search_query=&id_list=2503.12029&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:21:05,007 INFO     Sleeping: 2.999961 seconds
+2026-05-30 13:21:08,007 INFO     Requesting page (first: True, try: 3): https://export.arxiv.org/api/query?search_query=&id_list=2503.12029&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2026-05-30 13:21:08,152 WARNING  Failed to fetch arXiv paper 2503.12029: Page request resulted in HTTP 429 (https://export.arxiv.org/api/query?search_query=&id_list=2503.12029&sortBy=relevance&sortOrder=descending&start=0&max_results=100)
+2026-05-30 13:21:14,384 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:21:14,385 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:21:23,164 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:21:23,166 WARNING  Attempt 2: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:21:34,140 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:21:34,140 WARNING  Attempt 3: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:21:34,140 ERROR    All 3 attempts failed for paper: 
+2026-05-30 13:21:34,141 INFO       SKIP not relevant: Is Multi-Agent Debate (MAD) the Silver Bullet? An Empirical Analysis o
+2026-05-30 13:21:34,141 INFO       SKIP dup: Understanding Software Engineering Agents: A Study of Thought-Action-R
+2026-05-30 13:21:34,141 INFO       Fetching: Prompting Large Language Models to Tackle the Full Software Developmen
+2026-05-30 13:21:41,251 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:21:41,252 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:21:48,891 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:21:48,983 INFO     Written to papers_feature_development.yaml: Prompting Large Language Models to Tackle the Full Software 
+2026-05-30 13:21:48,983 INFO       ✓ → feature_development ['empirical']
+2026-05-30 13:21:48,983 INFO       Fetching: Can LLMs Replace Manual Annotation of Software Engineering Artifacts?
+2026-05-30 13:21:54,754 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:21:54,755 INFO       SKIP not relevant: Can LLMs Replace Manual Annotation of Software Engineering Artifacts?
+2026-05-30 13:21:54,755 INFO       Fetching: Position: Future Research and Challenges Remain Towards AI for Softwar
+2026-05-30 13:22:01,598 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:22:01,599 WARNING  Attempt 1: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:22:10,695 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:22:10,696 WARNING  Attempt 2: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:22:21,901 INFO     HTTP Request: POST http://localhost:4000/chat/completions "HTTP/1.1 200 OK"
+2026-05-30 13:22:21,902 WARNING  Attempt 3: LLM error: 'NoneType' object has no attribute 'strip'
+2026-05-30 13:22:21,902 ERROR    All 3 attempts failed for paper: 
+2026-05-30 13:22:21,902 INFO       SKIP not relevant: Position: Future Research and Challenges Remain Towards AI for Softwar
+2026-05-30 13:22:21,903 INFO     
+=== Result: migrated=15  dup=38  irrelevant=12 ===
