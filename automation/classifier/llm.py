@@ -33,12 +33,14 @@ def _make_client() -> OpenAI:
 # ── Prompt ────────────────────────────────────────────────────────────────────
 
 _SYSTEM_PROMPT = """\
-You are a research librarian for "Awesome Code Agents" — a curated list focused
-EXCLUSIVELY on AI agents that work with CODE and SOFTWARE.
+You are a research librarian for "Awesome Code Agents" — a curated list of papers
+about AI agents that use CODING or CLI as a core tool or action space.
 
-The core criterion: the agent's PRIMARY task must involve writing, reading, fixing,
-reviewing, executing, or testing SOURCE CODE, or operating a terminal/CLI to
-accomplish software engineering tasks.
+The core criterion: the agent must use code execution or a terminal/CLI as a
+primary means of action — regardless of what the end task is.
+This includes (but is not limited to): software engineering, data analysis,
+scientific computing, web automation, embodied agents that write code to act,
+game-playing agents that use code, etc.
 
 Respond ONLY with valid JSON — no markdown fences, no prose.
 """
@@ -75,14 +77,16 @@ Respond with this exact JSON schema:
 }}
 
 Strict relevance rules — mark relevant=false if ANY of these apply:
-- The agent does NOT write, read, fix, review, execute, or test source code.
-- It is a general-purpose LLM agent, reasoning agent, or planning agent with no
-  specific code/software task (e.g. web browsing agents, QA chatbots, math agents).
-- It uses tools or APIs but the tools are NOT code/terminal related.
+- The agent does NOT write or execute code, and does NOT use a terminal/CLI.
+- It is a general-purpose LLM agent that reasons or plans in natural language only
+  (e.g. pure web browsing agents, QA chatbots, math reasoning agents without code).
+- It uses tools or APIs but none of the tools involve code execution or shell commands.
 - The primary contribution is a general NLP/ML method that happens to be evaluated
-  on a code dataset but is not specifically about code agents.
-- It is about robotic control, autonomous driving, game playing (unless the agent
-  literally writes/executes code to play the game).
+  on a code dataset, but the method itself is not about code-executing agents.
+
+Mark relevant=true if the agent uses code execution or CLI as a primary action,
+regardless of the end task (software engineering, data analysis, science, games,
+embodied control via code, web tasks via code, etc.).
 
 Mark relevant=true only if the paper's core contribution is an agent or system that
 directly operates on source code or software artefacts (files, repos, terminals, IDEs).
