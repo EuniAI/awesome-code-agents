@@ -88,14 +88,16 @@ Mark relevant=true if the agent uses code execution or CLI as a primary action,
 regardless of the end task (software engineering, data analysis, science, games,
 embodied control via code, web tasks via code, etc.).
 
-Mark relevant=true only if the paper's core contribution is an agent or system that
-directly operates on source code or software artefacts (files, repos, terminals, IDEs).
-
 Other rules:
-- Choose the SINGLE most specific category that fits. Never invent new categories.
-- Only set tags that genuinely apply. "benchmark" = introduces a new eval dataset/suite;
-  "survey" = comprehensive literature review; "position" = opinion/vision paper;
-  "empirical" = primary contribution is empirical measurement/study.
+- Choose the SINGLE most specific functional category (e.g. code_generation,
+  issue_resolution, benchmarks are NOT valid categories — use tags instead).
+  Never invent new categories.
+- Tags are orthogonal to categories — apply ALL that fit:
+  "benchmark" = introduces a new benchmark/dataset (assign to the functional category
+    the benchmark evaluates, e.g. a bug-fixing benchmark → issue_resolution + benchmark tag);
+  "survey" = comprehensive literature review (assign to the most relevant functional category);
+  "empirical" = primary contribution is an empirical measurement study;
+  "position" = opinion or vision paper.
 - The summary must be self-contained and ≤ 60 words total.
 """
 

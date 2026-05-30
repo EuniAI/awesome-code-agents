@@ -120,10 +120,6 @@ categories:
   multimodal_coding: Multimodal agents combining vision and code (e.g. screenshot-to-code)
   foundation_models: Foundation / base models specifically designed or evaluated for
     code tasks
-  benchmarks: New benchmarks or datasets for evaluating code agents
-  surveys: Survey or review papers covering code agents broadly
-  empirical_studies: Empirical studies analysing behaviour or performance of code
-    agents
   data_synthesis: Synthetic data generation for training code agents
   scientific_workflows: Scientific computing workflow automation
 tags:
