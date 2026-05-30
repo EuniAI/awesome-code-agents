@@ -1,14 +1,3 @@
-- title: 'Large Language Model Agent: A Survey on Methodology, Applications and Challenges'
-  authors: Junyu Luo, Weizhi Zhang, Ye Yuan, Yusheng Zhao, Junwei Yang, Yiyang Gu, Bohan Wu, Binqi Chen, Ziyue Qiao, Qingqing
-    Long, Rongcheng Tu, Xiao Luo, Wei Ju, Zhiping Xiao, Yifan Wang, Meng Xiao, Chenwu Liu, Jingyang Yuan, Shichang Zhang,
-    Yiqiao Jin, Fan Zhang, Xian Wu, Hanqing Zhao, Dacheng Tao, Philip S. Yu, Ming Zhang
-  venue: arXiv 2025
-  tags:
-  - survey
-  links:
-    paper: https://arxiv.org/abs/2503.21460
-    github: https://github.com/luo-junyu/Awesome-Agent-Papers
-    website: ''
 - title: 'CWM: An Open-Weights LLM for Research on Code Generation with World Models'
   authors: FAIR CodeGen team, Jade Copet, Quentin Carbonneaux, Gal Cohen, Jonas Gehring, Jacob Kahn, Jannik Kossen, Felix
     Kreuk, Emily McMilin, Michel Meyer, Yuxiang Wei, David Zhang, Kunhao Zheng, Jordi Armengol-Estapé, Pedram Bashiri, Maximilian
