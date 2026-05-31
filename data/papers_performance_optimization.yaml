@@ -1,15 +1,27 @@
-- title: "Controlled Self-Evolution for Algorithmic Code Optimization"
-  authors: "Tu Hu, Ronghao Chen, Shuo Zhang, Jianghao Yin, Mou Xiao Feng, Jingping Liu, Shaolei Zhang, Wenqi Jiang, Yuqi Fang, Sen Hu, Yi Xu, Huacan Wang"
-  venue: "arXiv 2026"
+- title: 'HTAM: Hierarchical Transition-Attended Memory for Operator Optimization'
+  authors: Yining Zhang, Mingyang Yi, Chen Wang, Xuwen Xiang, Tianhe Jia, Zedong Dan, Chengqing Zong, Yue Wang
+  venue: arXiv 2026/05
+  summary: HTAM is a coarse-to-fine framework for LLM-based GPU operator optimization using a Hierarchical Transition Graph
+    to organize optimization strategies. It selects global directions and retrieves local strategies to guide the generation
+    of high-performance CUDA code, effectively balancing search space and actionable detail.
+  tags:
+  - empirical
   links:
-    paper: "https://arxiv.org/abs/2601.07348"
-    github: "https://github.com/QuantaAlpha/EvoControl"
-    website: ""
-
-- title: "SWE-Perf: Can Language Models Optimize Code Performance on Real-World Repositories?"
-  authors: "Xinyi He, Qian Liu, Mingzhe Du, Lin Yan, Zhijie Fan, Yiming Huang, Zejian Yuan, Zejun Ma"
-  venue: "arXiv 2025"
+    paper: https://arxiv.org/abs/2605.29734
+    github: ''
+    website: ''
+- title: Controlled Self-Evolution for Algorithmic Code Optimization
+  authors: Tu Hu, Ronghao Chen, Shuo Zhang, Jianghao Yin, Mou Xiao Feng, Jingping Liu, Shaolei Zhang, Wenqi Jiang, Yuqi Fang,
+    Sen Hu, Yi Xu, Huacan Wang
+  venue: arXiv 2026
   links:
-    paper: "https://arxiv.org/abs/2507.12415"
-    github: "https://github.com/SWE-Perf/SWE-Perf"
-    website: "https://swe-perf.github.io/"
+    paper: https://arxiv.org/abs/2601.07348
+    github: https://github.com/QuantaAlpha/EvoControl
+    website: ''
+- title: 'SWE-Perf: Can Language Models Optimize Code Performance on Real-World Repositories?'
+  authors: Xinyi He, Qian Liu, Mingzhe Du, Lin Yan, Zhijie Fan, Yiming Huang, Zejian Yuan, Zejun Ma
+  venue: arXiv 2025
+  links:
+    paper: https://arxiv.org/abs/2507.12415
+    github: https://github.com/SWE-Perf/SWE-Perf
+    website: https://swe-perf.github.io/

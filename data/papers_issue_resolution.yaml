@@ -1,3 +1,16 @@
+- title: Empowering Autonomous Debugging Agents with Efficient Dynamic Analysis
+  authors: Jiahong Xiang, Xiaoyang Xu, Xiaopan Chu, Hongliang Tian, Yuqun Zhang
+  venue: arXiv 2026/04
+  summary: The paper introduces the Agent-centric Debugging Interface (ADI), a function-level interaction paradigm designed
+    to provide LLM agents with efficient dynamic analysis feedback. By utilizing Frame Lifetime Traces and high-level navigational
+    commands, ADI enables agents to resolve complex software issues on the SWE-bench benchmark with significantly lower computational
+    costs.
+  tags:
+  - empirical
+  links:
+    paper: https://arxiv.org/abs/2604.24212
+    github: ''
+    website: ''
 - title: 'Position: Future Research and Challenges Remain Towards AI for Software Engineering'
   authors: Alex Gu, Naman Jain, Wen-Ding Li, Manish Shetty, Kevin Ellis, Koushik Sen, Armando Solar-Lezama
   venue: ICML 2025 Position Paper Track

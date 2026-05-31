@@ -1,80 +1,88 @@
-- title: "Benchmarking and Studying the LLM-based Code Review"
-  authors: "Zhengran Zeng, Ruikai Shi, Keke Han, Yixin Li, Kaicheng Sun, Yidong Wang, Zhuohao Yu, Rui Xie, Wei Ye, Shikun Zhang"
-  venue: "arXiv 2025"
+- title: 'Automating Low-Risk Code Review at Meta: RADAR, Risk Calibration, and Review Efficiency'
+  authors: Chris Adams, Arjun Singh Banga, Parveen Bansal, Souvik Bhattacharya, Rujin Cao, Pedro Canahuati, Nate Cook, Brian
+    Ellis, Prabhakar Goyal, Gurinder Grewal, Tianyu He, Matt Labunka, Alex Manners, David Molnar, Ging Cee Ng, Vishal Parekh,
+    Jiefu Pei, Frederic Sagnes, James Saindon, Will Shackleton, Sid Sidhu, Gursharan Singh, Karthik Chengayan Sridhar, Matt
+    Steiner, Pratibha Udmalpet, Sean Xia, Stacey Yan, Audris Mockus, Peter Rigby, Nachiappan Nagappan
+  venue: arXiv 2026/05
+  summary: Meta introduces RADAR, a multi-stage system that automates the review and landing of low-risk code changes using
+    LLMs and risk-scoring models. The study evaluates RADAR's impact on developer productivity and review latency through
+    an empirical analysis of over 535,000 diffs.
+  tags:
+  - empirical
   links:
-    paper: "https://arxiv.org/abs/2509.01494"
-    github: ""
-    website: ""
-
-- title: "On the Use of Agentic Coding: An Empirical Study of Pull Requests on GitHub"
-  authors: "Miku Watanabe, Hao Li, Yutaro Kashiwa, Brittany Reid, Hajimu Iida, Ahmed E. Hassan"
-  venue: "arXiv 2025/09"
+    paper: https://arxiv.org/abs/2605.30208
+    github: ''
+    website: ''
+- title: Benchmarking and Studying the LLM-based Code Review
+  authors: Zhengran Zeng, Ruikai Shi, Keke Han, Yixin Li, Kaicheng Sun, Yidong Wang, Zhuohao Yu, Rui Xie, Wei Ye, Shikun Zhang
+  venue: arXiv 2025
   links:
-    paper: "https://arxiv.org/abs/2509.14745"
-    github: ""
-    website: ""
-  tags: "Empirical Study"
-
-- title: "The Rise of AI Teammates in Software Engineering (SE) 3.0: How Autonomous Coding Agents Are Reshaping Software Engineering"
-  authors: "Hao Li, Haoxiang Zhang, Ahmed E. Hassan"
-  venue: "arXiv 2025"
+    paper: https://arxiv.org/abs/2509.01494
+    github: ''
+    website: ''
+- title: 'On the Use of Agentic Coding: An Empirical Study of Pull Requests on GitHub'
+  authors: Miku Watanabe, Hao Li, Yutaro Kashiwa, Brittany Reid, Hajimu Iida, Ahmed E. Hassan
+  venue: arXiv 2025/09
   links:
-    paper: "https://arxiv.org/abs/2507.15003"
-    github: "https://github.com/SAILResearch/AI_Teammates_in_SE3"
-    website: ""
-
-- title: "Issue-Oriented Agent-Based Framework for Automated Review Comment Generation"
-  authors: "Shuochuan Li, Dong Wang, Patanamon Thongtanunam, Zan Wang, Jiuqiao Yu, Junjie Chen"
-  venue: "arXiv 2025"
+    paper: https://arxiv.org/abs/2509.14745
+    github: ''
+    website: ''
+  tags: Empirical Study
+- title: 'The Rise of AI Teammates in Software Engineering (SE) 3.0: How Autonomous Coding Agents Are Reshaping Software Engineering'
+  authors: Hao Li, Haoxiang Zhang, Ahmed E. Hassan
+  venue: arXiv 2025
   links:
-    paper: "https://arxiv.org/abs/2511.00517"
-    github: ""
-    website: ""
-
-- title: "Armchair"
-  authors: "Armchair"
-  venue: "2025"
+    paper: https://arxiv.org/abs/2507.15003
+    github: https://github.com/SAILResearch/AI_Teammates_in_SE3
+    website: ''
+- title: Issue-Oriented Agent-Based Framework for Automated Review Comment Generation
+  authors: Shuochuan Li, Dong Wang, Patanamon Thongtanunam, Zan Wang, Jiuqiao Yu, Junjie Chen
+  venue: arXiv 2025
   links:
-    paper: ""
-    github: "https://github.com/armchr/armchr"
-    website: ""
-
-- title: "PReview: A Benchmark Dataset for Pull Request Outcomes and Quality Analysis"
-  authors: "Anonymous Authors"
-  venue: "2025"
+    paper: https://arxiv.org/abs/2511.00517
+    github: ''
+    website: ''
+- title: Armchair
+  authors: Armchair
+  venue: '2025'
   links:
-    paper: "https://openreview.net/forum?id=cdwp8BXTVV"
-    github: ""
-    website: ""
-
-- title: "PR-Agent: An AI-Powered Tool for Automated Pull Request Analysis, Feedback, Suggestions and More!"
-  authors: "Qodo"
-  venue: "2024"
+    paper: ''
+    github: https://github.com/armchr/armchr
+    website: ''
+- title: 'PReview: A Benchmark Dataset for Pull Request Outcomes and Quality Analysis'
+  authors: Anonymous Authors
+  venue: '2025'
   links:
-    paper: ""
-    github: "https://github.com/qodo-ai/pr-agent"
-    website: "https://www.qodo.ai/"
-
-- title: "CodeAgent: Autonomous Communicative Agents for Code Review"
-  authors: "Xunzhu Tang, Kisub Kim, Yewei Song, Cedric Lothritz, Bei Li, Saad Ezzini, Haoye Tian, Jacques Klein, Tegawendé F. Bissyandé"
-  venue: "EMNLP 2024"
+    paper: https://openreview.net/forum?id=cdwp8BXTVV
+    github: ''
+    website: ''
+- title: 'PR-Agent: An AI-Powered Tool for Automated Pull Request Analysis, Feedback, Suggestions and More!'
+  authors: Qodo
+  venue: '2024'
   links:
-    paper: "https://aclanthology.org/2024.emnlp-main.632/"
-    github: ""
-    website: ""
-
-- title: "Automating Code Review Activities by Large-Scale Pre-training"
-  authors: "Zhiyu Li, Shuai Lu, Daya Guo, Nan Duan, Shailesh Jannu, Grant Jenks, Deep Majumder, Jared Green, Alexey Svyatkovskiy, Shengyu Fu, Neel Sundaresan"
-  venue: "FSE 2022"
+    paper: ''
+    github: https://github.com/qodo-ai/pr-agent
+    website: https://www.qodo.ai/
+- title: 'CodeAgent: Autonomous Communicative Agents for Code Review'
+  authors: Xunzhu Tang, Kisub Kim, Yewei Song, Cedric Lothritz, Bei Li, Saad Ezzini, Haoye Tian, Jacques Klein, Tegawendé
+    F. Bissyandé
+  venue: EMNLP 2024
   links:
-    paper: "https://arxiv.org/abs/2203.09095"
-    github: ""
-    website: ""
-
-- title: "Can We Benchmark Code Review Studies? A Systematic Mapping Study of Methodology, Dataset, and Metric"
-  authors: "Dong Wang, Yuki Ueda, Raula Gaikovina Kula, Takashi Ishio, Kenichi Matsumoto"
-  venue: "Journal of Systems and Software, 2021, Elsevier"
+    paper: https://aclanthology.org/2024.emnlp-main.632/
+    github: ''
+    website: ''
+- title: Automating Code Review Activities by Large-Scale Pre-training
+  authors: Zhiyu Li, Shuai Lu, Daya Guo, Nan Duan, Shailesh Jannu, Grant Jenks, Deep Majumder, Jared Green, Alexey Svyatkovskiy,
+    Shengyu Fu, Neel Sundaresan
+  venue: FSE 2022
   links:
-    paper: "https://www.sciencedirect.com/science/article/abs/pii/S0164121221001060"
-    github: ""
-    website: ""
+    paper: https://arxiv.org/abs/2203.09095
+    github: ''
+    website: ''
+- title: Can We Benchmark Code Review Studies? A Systematic Mapping Study of Methodology, Dataset, and Metric
+  authors: Dong Wang, Yuki Ueda, Raula Gaikovina Kula, Takashi Ishio, Kenichi Matsumoto
+  venue: Journal of Systems and Software, 2021, Elsevier
+  links:
+    paper: https://www.sciencedirect.com/science/article/abs/pii/S0164121221001060
+    github: ''
+    website: ''
