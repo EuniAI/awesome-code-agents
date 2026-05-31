@@ -126,7 +126,21 @@ def run_daily() -> None:
     # ── 3. Merge + deduplicate ──────────────────────────────────────────────
     all_papers = raw_papers + inbox_papers
     processed_set = set(state["processed_ids"]) | set(state["rejected_ids"])
+
+    # Dedup 1: filter already processed
     new_papers = [p for p in all_papers if p.get("arxiv_id") not in processed_set]
+
+    # Dedup 2: within this batch, keep first occurrence by arxiv_id
+    # (arXiv crawl and inbox may contain the same paper)
+    seen: dict[str, bool] = {}
+    deduped = []
+    for p in new_papers:
+        aid = p.get("arxiv_id", "")
+        if aid and aid not in seen:
+            seen[aid] = True
+            deduped.append(p)
+    new_papers = deduped
+
     logger.info("After dedup: %d new papers to process", len(new_papers))
 
     if not new_papers:
