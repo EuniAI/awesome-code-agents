@@ -130,7 +130,8 @@ def run_daily() -> None:
     logger.info("After dedup: %d new papers to process", len(new_papers))
 
     if not new_papers:
-        logger.info("Nothing new to process today.")
+        logger.info("Nothing new to process today — running historical backfill instead.")
+        _run_incremental_backfill(cfg, state, owner, repo)
         return
 
     # ── 4. Enrich ───────────────────────────────────────────────────────────
