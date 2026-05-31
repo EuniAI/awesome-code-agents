@@ -298,7 +298,14 @@ def run_finalize() -> None:
 
     logger.info("=== Writing %d approved paper(s) to YAML ===", len(approved_papers))
     data_dir = _REPO_ROOT / "data"
-    written = append_papers(approved_papers, data_dir)
+    written, duplicate_ids = append_papers(approved_papers, data_dir)
+
+    # Papers detected as duplicates by yaml_writer were manually added before
+    # the pipeline started and have no arxiv_id in processed_ids yet.
+    # Mark them now so the pipeline never re-processes them.
+    if duplicate_ids:
+        state_mgr.mark_processed(state, duplicate_ids)
+        logger.info("Marked %d duplicate arxiv_id(s) as processed", len(duplicate_ids))
 
     state_mgr.save(state)
 
