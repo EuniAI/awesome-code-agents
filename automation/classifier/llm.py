@@ -94,12 +94,14 @@ Other rules:
 - Choose the SINGLE most specific functional category (e.g. code_generation,
   issue_resolution, benchmarks are NOT valid categories — use tags instead).
   Never invent new categories.
-- Tags are orthogonal to categories — apply ALL that fit:
-  "benchmark" = introduces a new benchmark/dataset (assign to the functional category
-    the benchmark evaluates, e.g. a bug-fixing benchmark → issue_resolution + benchmark tag);
-  "survey" = comprehensive literature review (assign to the most relevant functional category);
-  "empirical" = primary contribution is an empirical measurement study;
-  "position" = opinion or vision paper.
+- Tags are orthogonal to categories — apply ALL that fit, but be strict:
+  "benchmark" = the paper's PRIMARY contribution is a new benchmark/dataset, not just
+    a paper that uses or evaluates on a benchmark;
+  "survey" = comprehensive literature review of existing work;
+  "empirical" = the PRIMARY contribution is studying/measuring/analysing existing
+    systems — do NOT apply if the paper proposes a new method and includes experiments
+    to validate it (that is standard practice, not an empirical study);
+  "position" = opinion or vision paper without new experimental results.
 - The summary must be self-contained and ≤ 60 words total.
 """
 

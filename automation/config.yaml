@@ -123,10 +123,10 @@ categories:
   data_synthesis: Synthetic data generation for training code agents
   scientific_workflows: Scientific computing workflow automation
 tags:
-  benchmark: Introduces a benchmark or dataset
-  survey: Survey or systematic review paper
-  position: Position paper or opinion piece
-  empirical: Empirical study with experiments/measurements
+  benchmark: Introduces a new benchmark or dataset as the primary contribution
+  survey: Survey or systematic review paper covering existing work
+  position: Position paper or opinion piece without new experiments
+  empirical: Primary contribution is an empirical study measuring/analysing existing systems or agent behaviour — NOT papers that propose a new method and include experiments to validate it
 schedule:
   daily_run_hint: 0 9 * * *
   finalize_run_hint: 0 * * * *
