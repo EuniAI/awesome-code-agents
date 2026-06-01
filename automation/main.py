@@ -141,6 +141,19 @@ def run_daily() -> None:
             deduped.append(p)
     new_papers = deduped
 
+    # ── 3b. Add papers pending retry (LLM failed last time) ─────────────────
+    retry_ids = state_mgr.get_retry_ids(state)
+    if retry_ids:
+        logger.info("=== Retrying %d previously failed classification(s) ===", len(retry_ids))
+        already = {p["arxiv_id"] for p in new_papers}
+        from automation.crawler.arxiv import fetch_single_paper
+        for aid in retry_ids:
+            if aid not in already:
+                p = fetch_single_paper(aid)
+                if p:
+                    new_papers.append(p)
+                    already.add(aid)
+
     logger.info("After dedup: %d new papers to process", len(new_papers))
 
     if not new_papers:
@@ -156,18 +169,24 @@ def run_daily() -> None:
     # ── 5. Classify ─────────────────────────────────────────────────────────
     logger.info("=== Step 4: Classifying with LLM ===")
     learned_rules = state_mgr.maybe_refresh_learned_rules(state)
-    relevant = classify_papers(
+    relevant, failed_ids = classify_papers(
         new_papers,
         categories=cfg["categories"],
         tags=cfg["tags"],
         temperature=cfg.get("llm", {}).get("temperature", 0.1),
         learned_rules=learned_rules,
     )
-    logger.info("Relevant papers: %d / %d", len(relevant), len(new_papers))
+    logger.info("Relevant papers: %d / %d (failed: %d)", len(relevant), len(new_papers), len(failed_ids))
 
-    # Mark as processed only after classification completes successfully.
-    # This way a mid-run crash won't permanently lose unclassified papers.
-    state_mgr.mark_processed(state, [p["arxiv_id"] for p in new_papers])
+    # Mark successfully classified papers as processed (failed ones stay out)
+    succeeded_ids = [p["arxiv_id"] for p in new_papers if p.get("arxiv_id") not in failed_ids]
+    state_mgr.mark_processed(state, succeeded_ids)
+
+    # Track failures — give up after MAX_RETRIES, mark as processed to stop retrying
+    if failed_ids:
+        _, give_up_ids = state_mgr.add_failed_classifications(state, failed_ids)
+        if give_up_ids:
+            state_mgr.mark_processed(state, give_up_ids)
     state_mgr.save(state)
 
     if not relevant:

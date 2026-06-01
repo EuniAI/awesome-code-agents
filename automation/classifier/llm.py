@@ -155,12 +155,13 @@ def classify_paper(
 
     logger.error("All %d attempts failed for paper: %s", retries, paper.get("arxiv_id"))
     return {
-        "relevant":   False,
-        "reason":     "LLM classification failed after retries",
-        "category":   None,
-        "tags":       [],
-        "summary":    "",
-        "venue_hint": "",
+        "relevant":    False,
+        "reason":      "LLM classification failed after retries",
+        "llm_failed":  True,   # distinguishes LLM error from "genuinely not relevant"
+        "category":    None,
+        "tags":        [],
+        "summary":     "",
+        "venue_hint":  "",
     }
 
 
@@ -171,20 +172,32 @@ def classify_papers(
     model: str | None = None,
     temperature: float = 0.1,
     learned_rules: str = "",
-) -> list[dict[str, Any]]:
+) -> tuple[list[dict[str, Any]], list[str]]:
     """
     Classify a list of papers. Mutates each paper in place, adding:
       - paper["category"]  : str | None
       - paper["tags"]      : list[str]
       - paper["summary"]   : str
       - paper["relevant"]  : bool
-    Returns only the relevant papers.
+
+    Returns (relevant_papers, failed_arxiv_ids):
+      - relevant_papers: papers the LLM confirmed are relevant
+      - failed_arxiv_ids: papers where LLM call failed (should be retried later)
     """
     relevant: list[dict[str, Any]] = []
+    failed_ids: list[str] = []
 
     for i, paper in enumerate(papers, 1):
         logger.info("[%d/%d] Classifying: %s", i, len(papers), paper["title"][:80])
         result = classify_paper(paper, categories, tags, model=model, temperature=temperature, learned_rules=learned_rules)
+
+        if result.get("llm_failed"):
+            aid = paper.get("arxiv_id", "")
+            if aid:
+                failed_ids.append(aid)
+            logger.warning("  → LLM FAILED, will retry next run: %s", paper["title"][:60])
+            time.sleep(0.5)
+            continue
 
         paper["relevant"]   = result.get("relevant", False)
         paper["category"]   = result.get("category")
@@ -205,5 +218,6 @@ def classify_papers(
         # Small delay to avoid hammering the proxy
         time.sleep(0.5)
 
-    logger.info("Classified %d papers → %d relevant", len(papers), len(relevant))
-    return relevant
+    logger.info("Classified %d papers → %d relevant, %d failed",
+                len(papers), len(relevant), len(failed_ids))
+    return relevant, failed_ids

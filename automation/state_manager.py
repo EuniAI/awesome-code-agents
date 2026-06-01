@@ -41,6 +41,7 @@ _DEFAULT: dict[str, Any] = {
     "reject_feedback": [],     # [{arxiv_id, title, reason}, ...] — curator reject reasons
     "learned_rules":   "",     # LLM-synthesised rules injected into classifier prompt
     "rules_last_updated": "",  # ISO date when learned_rules was last generated
+    "retry_counts":    {},     # {arxiv_id: int} — LLM failure retry count
 }
 
 
@@ -89,6 +90,40 @@ def add_pending_issue(state: dict[str, Any], issue_meta: dict[str, Any]) -> None
 
 def update_pending_issues(state: dict[str, Any], updated: list[dict[str, Any]]) -> None:
     state["pending_issues"] = updated
+
+
+_MAX_RETRIES = 3
+
+
+def add_failed_classifications(state: dict[str, Any], arxiv_ids: list[str]) -> tuple[list[str], list[str]]:
+    """
+    Record LLM classification failures. Increment retry count for each ID.
+    Returns (retry_later, give_up):
+      - retry_later: IDs that haven't hit the retry limit yet (keep out of processed_ids)
+      - give_up: IDs that have failed too many times (mark as processed to stop retrying)
+    """
+    counts: dict[str, int] = state.setdefault("retry_counts", {})
+    retry_later: list[str] = []
+    give_up: list[str] = []
+
+    for aid in arxiv_ids:
+        counts[aid] = counts.get(aid, 0) + 1
+        if counts[aid] >= _MAX_RETRIES:
+            logger.warning("Giving up on %s after %d failed attempts", aid, counts[aid])
+            give_up.append(aid)
+        else:
+            logger.info("Will retry %s (attempt %d/%d)", aid, counts[aid], _MAX_RETRIES)
+            retry_later.append(aid)
+
+    return retry_later, give_up
+
+
+def get_retry_ids(state: dict[str, Any]) -> list[str]:
+    """Return IDs that failed classification and should be retried."""
+    counts: dict[str, int] = state.get("retry_counts", {})
+    processed = set(state.get("processed_ids", [])) | set(state.get("rejected_ids", []))
+    return [aid for aid, cnt in counts.items()
+            if cnt < _MAX_RETRIES and aid not in processed]
 
 
 def add_reject_feedback(state: dict[str, Any], items: list[dict[str, Any]]) -> None:
