@@ -1,23 +1,91 @@
-# - title: "BAPPA: Benchmarking Agents, Plans, and Pipelines for Automated Text-to-SQL Generation"
-#   authors: "Fahim Ahmed, Md Mubtasim Ahasan, Jahir Sadik Monon, Muntasir Wahed, M Ashraful Amin, A K M Mahbubur Rahman, Amin Ahsan Ali"
-#   venue: "arXiv 2025/11"
-#   links:
-#     paper: "https://arxiv.org/abs/2511.04153"
-#     github: ""
-#     website: ""
-
-- title: "SWE-SQL: Illuminating LLM Pathways to Solve User SQL Issues in Real-World Applications"
-  authors: "Jinyang Li, Xiaolong Li, Ge Qu, Per Jacobsson, Bowen Qin, Binyuan Hui, Shuzheng Si, Nan Huo, Xiaohan Xu, Yue Zhang, Ziwei Tang, Yuanshuai Li, Florensia Widjaja, Xintong Zhu, Feige Zhou, Yongfeng Huang, Yannis Papakonstantinou, Fatma Ozcan, Chenhao Ma, Reynold Cheng"
-  venue: "arXiv 2025"
+- title: 'Rethinking Agentic Workflows: Evaluating Inference-Based Test-Time Scaling Strategies in Text2SQL Tasks'
+  authors: Jiajing Guo, Kenil Patel, Jorge Piazentin Ono, Wenbin He, Liu Ren
+  venue: arXiv 2025/10
+  summary: This paper empirically evaluates six test-time scaling strategies for Text-to-SQL agentic workflows across various
+    large language models. The authors analyze the trade-offs between accuracy, latency, and token consumption, finding that
+    divide-and-conquer prompting and few-shot demonstrations consistently improve performance.
+  tags:
+  - empirical
   links:
-    paper: "https://arxiv.org/abs/2506.18951"
-    github: "https://github.com/bird-bench/BIRD-CRITIC-1"
-    website: "https://bird-critic.github.io/"
-
-- title: "GateLens: A Reasoning-Enhanced LLM Agent for Automotive Software Release Analytics"
-  authors: "Arsham Gholamzadeh Khoee, Shuai Wang, Yinan Yu, Robert Feldt, Dhasarathy Parthasarathy"
-  venue: "arXiv 2025"
+    paper: https://arxiv.org/abs/2510.10885
+    github: ''
+    website: ''
+- title: 'AGENTIQL: An Agent-Inspired Multi-Expert Framework for Text-to-SQL Generation'
+  authors: Omid Reza Heidari, Siobhan Reid, Yassine Yaakoubi
+  venue: arXiv 2025/10
+  summary: AGENTIQL is a multi-expert framework for text-to-SQL generation that decomposes complex questions into sub-queries
+    using specialized reasoning and coding agents. The system employs an adaptive router to balance efficiency and accuracy,
+    achieving high execution performance on the Spider benchmark using open-source models.
+  tags:
+  - empirical
   links:
-    paper: "https://arxiv.org/abs/2503.21735"
-    github: ""
-    website: ""
+    paper: https://arxiv.org/abs/2510.10661
+    github: ''
+    website: ''
+- title: 'MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training'
+  authors: Taicheng Guo, Hai Wang, ChaoChun Liu, Mohsen Golalikhani, Xin Chen, Xiangliang Zhang, Chandan K. Reddy
+  venue: arXiv 2025/10
+  summary: MTSQL-R1 is an agentic training framework that treats multi-turn Text-to-SQL as a Markov Decision Process involving
+    iterative execution and verification. The system utilizes database feedback and dialogue memory to refine queries, significantly
+    improving performance on long-horizon conversational semantic parsing tasks.
+  tags:
+  - empirical
+  links:
+    paper: https://arxiv.org/abs/2510.12831
+    github: ''
+    website: ''
+- title: 'Agent Bain vs. Agent McKinsey: A New Text-to-SQL Benchmark for the Business Domain'
+  authors: Yue Li, Ran Tao, Derek Hommel, Yusuf Denizay Dönder, Sungyong Chang, David Mimno, Unso Eun Seo Jo
+  venue: arXiv 2025/10
+  summary: The paper introduces CORGI, a benchmark for business-domain text-to-SQL tasks that requires complex reasoning for
+    descriptive, explanatory, predictive, and recommendational queries. It evaluates large language models on synthetic enterprise
+    databases, demonstrating that performance significantly decreases as question complexity and the need for multi-step agentic
+    intelligence increase.
+  tags:
+  - benchmark
+  - empirical
+  links:
+    paper: https://arxiv.org/abs/2510.07309
+    github: ''
+    website: ''
+- title: Agentic generative AI for media content discovery at the national football league
+  authors: Henry Wang, Md Sirajus Salekin, Jake Lee, Ross Claytor, Shinan Zhang, Michael Chi
+  venue: arXiv 2025/10
+  summary: The paper presents an agentic workflow that converts natural language queries into database commands for efficient
+    media content discovery at the NFL. It utilizes semantic caching to achieve high accuracy and significant reductions in
+    search latency for researchers and analysts.
+  tags:
+  - empirical
+  links:
+    paper: https://arxiv.org/abs/2510.07297
+    github: ''
+    website: ''
+- title: Towards Reliable Agentic Progressive Text-to-Visualization with Verification Rules
+  authors: Wenxin Xu, Chen Jason Zhang, Xiaoyong Wei, Haoyang Li, Hwanhee Kim, Yuanfeng Song, Raymond Chi-Wing Wong
+  venue: arXiv 2026/05
+  summary: The authors propose PMVisAgent, a multi-agent framework that uses a ReAct-style loop to progressively generate
+    and verify visualization query language code. They also introduce PMVisBench, a benchmark designed to evaluate iterative
+    text-to-visualization tasks through multi-turn dialogues and explicit rule constraints.
+  tags:
+  - benchmark
+  - empirical
+  links:
+    paper: https://arxiv.org/abs/2605.29692
+    github: https://github.com/wxxv/PMVis
+    website: ''
+- title: 'SWE-SQL: Illuminating LLM Pathways to Solve User SQL Issues in Real-World Applications'
+  authors: Jinyang Li, Xiaolong Li, Ge Qu, Per Jacobsson, Bowen Qin, Binyuan Hui, Shuzheng Si, Nan Huo, Xiaohan Xu, Yue Zhang,
+    Ziwei Tang, Yuanshuai Li, Florensia Widjaja, Xintong Zhu, Feige Zhou, Yongfeng Huang, Yannis Papakonstantinou, Fatma Ozcan,
+    Chenhao Ma, Reynold Cheng
+  venue: arXiv 2025
+  links:
+    paper: https://arxiv.org/abs/2506.18951
+    github: https://github.com/bird-bench/BIRD-CRITIC-1
+    website: https://bird-critic.github.io/
+- title: 'GateLens: A Reasoning-Enhanced LLM Agent for Automotive Software Release Analytics'
+  authors: Arsham Gholamzadeh Khoee, Shuai Wang, Yinan Yu, Robert Feldt, Dhasarathy Parthasarathy
+  venue: arXiv 2025
+  links:
+    paper: https://arxiv.org/abs/2503.21735
+    github: ''
+    website: ''

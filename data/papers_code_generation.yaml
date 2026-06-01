@@ -1,3 +1,20 @@
+- title: Code as Agent Harness
+  authors: Xuying Ning, Katherine Tieu, Dongqi Fu, Tianxin Wei, Zihao Li, Yuanchen Bei, Jiaru Zou, Mengting Ai, Zhining Liu,
+    Ting-Wei Li, Lingjie Chen, Yanjun Zhao, Ke Yang, Bingxuan Li, Cheng Qian, Gaotang Li, Xiao Lin, Zhichen Zeng, Ruizhong
+    Qiu, Sirui Chen, Yifan Sun, Xiyuan Yang, Ruida Wang, Rui Pan, Chenyuan Yang, Dylan Zhang, Liri Fang, Zikun Cui, Yang Cao,
+    Pan Chen, Dorothy Sun, Ren Chen, Mahesh Srinivasan, Nipun Mathur, Yinglong Xia, Hong Li, Hong Yan, Pan Lu, Lingming Zhang,
+    Tong Zhang, Hanghang Tong, Jingrui He
+  venue: arXiv 2026/05
+  summary: This paper introduces the 'code as agent harness' framework, conceptualizing code as the fundamental infrastructure
+    for agent reasoning, execution, and environment interaction. It systematically surveys the field across interface design,
+    operational mechanisms like planning and memory, and multi-agent coordination strategies.
+  tags:
+  - survey
+  - position
+  links:
+    paper: https://arxiv.org/abs/2605.18747
+    github: ''
+    website: ''
 - title: Is Multi-Agent Debate (MAD) the Silver Bullet? An Empirical Analysis of MAD in Code Summarization and Translation
   authors: Jina Chun, Qihong Chen, Jiawei Li, Iftekhar Ahmed
   venue: arXiv 2025

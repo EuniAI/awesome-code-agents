@@ -7,7 +7,10 @@ from __future__ import annotations
 
 import logging
 import subprocess
+import sys
 from pathlib import Path
+
+_PYTHON = sys.executable  # use the same interpreter that's running the pipeline
 
 logger = logging.getLogger(__name__)
 
@@ -41,11 +44,11 @@ def render_and_push(repo_root: Path, commit_message: str) -> bool:
 
     # Step 1: render README
     logger.info("Running render_papers.py…")
-    _run(["python", str(scripts / "render_papers.py")], cwd=repo_root)
+    _run([_PYTHON, str(scripts / "render_papers.py")], cwd=repo_root)
 
     # Step 2: update badge
     logger.info("Running update_papers_badge.py…")
-    _run(["python", str(scripts / "update_papers_badge.py")], cwd=repo_root)
+    _run([_PYTHON, str(scripts / "update_papers_badge.py")], cwd=repo_root)
 
     # Step 3: check for changes
     status = _run(["git", "status", "--porcelain"], cwd=repo_root, check=False)
