@@ -202,7 +202,7 @@ def _run_incremental_backfill(cfg, state, owner: str, repo: str) -> None:
     from automation.classifier.llm import classify_papers
     from automation.review.create_issues import create_review_issues
 
-    CHUNK_DAYS = 7  # days of history to process per daily run
+    CHUNK_DAYS = 1  # days of history to process per daily run
 
     cursor_str = state.get("backfill_cursor")
     if cursor_str is None:
