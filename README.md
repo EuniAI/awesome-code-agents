@@ -91,7 +91,7 @@
 <!-- START PAPERS SUMMARY -->
 🔥 **We are actively tracking the frontier research of code agents.**<br>
 🧹 *We periodically curate our collection, retaining only published papers and interesting arXiv preprints from the last six months.*<br>
-📚 *Currently collected:* **`494` papers** — *(Last update: 2026-06-01)*
+📚 *Currently collected:* **`498` papers** — *(Last update: 2026-06-02)*
 <!-- END PAPERS SUMMARY -->
 
 <!-- - [🚀 Products & Tools](#-products--tools)
@@ -1464,6 +1464,14 @@ This includes OS kernel code, runtime systems, device drivers, and system-level 
 >  Autonomous agents for solving SQL challenges in real-world database systems (_e.g_., query generation and optimization, issue resolution).
 
 <!-- START PAPERS:sql_engineering -->
+- **BADGER: Bridging Agentic and Deterministic Evaluation for Generative Enterprise Reasoning.**  
+  _Shannon Serrao, Soumitra Chatterjee, Dorina Strori, Abhishek Sharma, Nathan Miller._ arXiv 2026/06.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.02109) ![Benchmark & Dataset](https://img.shields.io/badge/Benchmark_%26_Dataset-F4A261?style=for-the-badge)
+
+- **Learning to Retrieve: Dual-Level Long-Term Memory for Text-to-SQL Agents.**  
+  _Yibo Wang, Nikki Lijing Kuang, Philip S. Yu, Zhewei Yao, Yuxiong He._ arXiv 2026/05.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.00547)
+
 - **Rethinking Agentic Workflows: Evaluating Inference-Based Test-Time Scaling Strategies in Text2SQL Tasks.**  
   _Jiajing Guo, Kenil Patel, Jorge Piazentin Ono, Wenbin He, Liu Ren._ arXiv 2025/10.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.10885) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge)
@@ -1517,6 +1525,10 @@ This category covers Verilog/VHDL/RTL, FPGA kernels, and hardware–software co-
 > Code agents for the automated creation and maintenance of web interfaces and front-end components.
 
 <!-- START PAPERS:website_generation -->
+- **I-WebGenBench : Evaluating Interactivity in LLM-Generated Scientific Web Applications.**  
+  _Dasen Dai, Biao Wu, Meng Fang, Shuoqi Li, Wenhao Wang._ arXiv 2026/05.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.00750) ![Benchmark & Dataset](https://img.shields.io/badge/Benchmark_%26_Dataset-F4A261?style=for-the-badge)
+
 - **ReLook: Vision-Grounded RL with a Multimodal LLM Critic for Agentic Web Coding.**  
   _Yuhang Li, Chenchen Zhang, Ruilin Lv, Ao Liu, Ken Deng, Yuanxing Zhang, Jiaheng Liu, Wiggin Zhou, Bo Zhou._ arXiv 2025/10.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.11498) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge)
@@ -1803,6 +1815,10 @@ This category covers Verilog/VHDL/RTL, FPGA kernels, and hardware–software co-
 > Agents designed to autonomously utilize specialized scientific software—such as simulation engines, data analysis suites, and visualization platforms—to automate and enhance domain-specific scientific workflows.
 
 <!-- START PAPERS:scientific_workflows -->
+- **MPMWorlds: Material-Point-Method Simulations for Inferring and Extrapolating Physical Dynamics.**  
+  _Žiga Kovačič, Kevin Ellis._ arXiv 2026/06.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.01538) ![Benchmark & Dataset](https://img.shields.io/badge/Benchmark_%26_Dataset-F4A261?style=for-the-badge) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge)
+
 - **ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic Scientific Workflows.**  
   _Qiushi Sun, Zhoumianze Liu, Chang Ma, Zichen Ding, Fangzhi Xu, Zhangyue Yin, Haiteng Zhao, Zhenyu Wu, Kanzhi Cheng, Zhaoyang Liu, et al._ arXiv 2025/06.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.19897) [![GitHub Stars](https://img.shields.io/github/stars/OS-Copilot/ScienceBoard?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OS-Copilot/ScienceBoard) [![Website](https://img.shields.io/website?url=https://qiushisun.github.io/ScienceBoard-Home/&up_message=SCIENCEBOARD-HOME&up_color=blue&down_message=SCIENCEBOARD-HOME&down_color=blue&style=for-the-badge)](https://qiushisun.github.io/ScienceBoard-Home/) ![Benchmark   Dataset](https://img.shields.io/badge/Benchmark___Dataset-808080?style=for-the-badge)

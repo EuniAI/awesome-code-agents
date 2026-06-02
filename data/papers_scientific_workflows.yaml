@@ -1,8 +1,23 @@
-- title: "ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic Scientific Workflows"
-  authors: "Qiushi Sun, Zhoumianze Liu, Chang Ma, Zichen Ding, Fangzhi Xu, Zhangyue Yin, Haiteng Zhao, Zhenyu Wu, Kanzhi Cheng, Zhaoyang Liu, Jianing Wang, Qintong Li, Xiangru Tang, Tianbao Xie, Xiachong Feng, Xiang Li, Ben Kao, Wenhai Wang, Biqing Qi, Lingpeng Kong, Zhiyong Wu"
-  venue: "arXiv 2025/06"
+- title: 'MPMWorlds: Material-Point-Method Simulations for Inferring and Extrapolating Physical Dynamics'
+  authors: Žiga Kovačič, Kevin Ellis
+  venue: arXiv 2026/06
+  summary: This paper introduces MPMWorlds, a dataset of physical simulations used to evaluate the ability of models to infer
+    and extrapolate dynamics from video. It compares code generation and video diffusion approaches, finding that code synthesis
+    provides superior physical stability and temporal consistency for long-term extrapolation.
+  tags:
+  - benchmark
+  - empirical
   links:
-    paper: "https://arxiv.org/abs/2505.19897"
-    github: "https://github.com/OS-Copilot/ScienceBoard"
-    website: "https://qiushisun.github.io/ScienceBoard-Home/"
-  tags: "Benchmark & Dataset"
+    paper: https://arxiv.org/abs/2606.01538
+    github: ''
+    website: ''
+- title: 'ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic Scientific Workflows'
+  authors: Qiushi Sun, Zhoumianze Liu, Chang Ma, Zichen Ding, Fangzhi Xu, Zhangyue Yin, Haiteng Zhao, Zhenyu Wu, Kanzhi Cheng,
+    Zhaoyang Liu, Jianing Wang, Qintong Li, Xiangru Tang, Tianbao Xie, Xiachong Feng, Xiang Li, Ben Kao, Wenhai Wang, Biqing
+    Qi, Lingpeng Kong, Zhiyong Wu
+  venue: arXiv 2025/06
+  links:
+    paper: https://arxiv.org/abs/2505.19897
+    github: https://github.com/OS-Copilot/ScienceBoard
+    website: https://qiushisun.github.io/ScienceBoard-Home/
+  tags: Benchmark & Dataset

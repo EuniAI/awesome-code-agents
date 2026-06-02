@@ -1,3 +1,15 @@
+- title: 'I-WebGenBench : Evaluating Interactivity in LLM-Generated Scientific Web Applications'
+  authors: Dasen Dai, Biao Wu, Meng Fang, Shuoqi Li, Wenhao Wang
+  venue: arXiv 2026/05
+  summary: The paper introduces I-WebGenBench, a benchmark for evaluating the generation of interactive web systems from scientific
+    papers. It also proposes PaperVoyager, a structured generation framework that models interaction logic to synthesize executable
+    web applications that allow users to manipulate inputs and observe dynamic behaviors.
+  tags:
+  - benchmark
+  links:
+    paper: https://arxiv.org/abs/2606.00750
+    github: ''
+    website: ''
 - title: 'ReLook: Vision-Grounded RL with a Multimodal LLM Critic for Agentic Web Coding'
   authors: Yuhang Li, Chenchen Zhang, Ruilin Lv, Ao Liu, Ken Deng, Yuanxing Zhang, Jiaheng Liu, Wiggin Zhou, Bo Zhou
   venue: arXiv 2025/10

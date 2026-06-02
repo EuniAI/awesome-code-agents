@@ -1,3 +1,25 @@
+- title: 'BADGER: Bridging Agentic and Deterministic Evaluation for Generative Enterprise Reasoning'
+  authors: Shannon Serrao, Soumitra Chatterjee, Dorina Strori, Abhishek Sharma, Nathan Miller
+  venue: arXiv 2026/06
+  summary: BADGER is a unified evaluation framework designed to assess enterprise-grade text-to-SQL systems and multi-step
+    agentic reasoning pipelines. It introduces a hybrid execution accuracy metric that combines LLM-based structural alignment
+    with deterministic scoring to handle complex SQL dialects and numeric tolerances.
+  tags:
+  - benchmark
+  links:
+    paper: https://arxiv.org/abs/2606.02109
+    github: ''
+    website: ''
+- title: 'Learning to Retrieve: Dual-Level Long-Term Memory for Text-to-SQL Agents'
+  authors: Yibo Wang, Nikki Lijing Kuang, Philip S. Yu, Zhewei Yao, Yuxiong He
+  venue: arXiv 2026/05
+  summary: MERIT is a dynamic multi-horizon memory retrieval framework for text-to-SQL agents that utilizes both episode-level
+    and turn-level memory. It employs reinforcement learning and a Process Reward Model to optimize retrieval policies for
+    global strategic guidance and local decision support during multi-turn database interactions.
+  links:
+    paper: https://arxiv.org/abs/2606.00547
+    github: ''
+    website: ''
 - title: 'Rethinking Agentic Workflows: Evaluating Inference-Based Test-Time Scaling Strategies in Text2SQL Tasks'
   authors: Jiajing Guo, Kenil Patel, Jorge Piazentin Ono, Wenbin He, Liu Ren
   venue: arXiv 2025/10
