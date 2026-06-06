@@ -254,12 +254,18 @@ def _run_incremental_backfill(cfg, state, owner: str, repo: str) -> None:
     if new_papers:
         pwc.enrich_papers(new_papers)
         meta_enricher.enrich_papers(new_papers)
-        relevant = classify_papers(
+        relevant, failed_ids = classify_papers(
             new_papers,
             categories=cfg["categories"],
             tags=cfg["tags"],
         )
-        state_mgr.mark_processed(state, [p["arxiv_id"] for p in new_papers])
+        # Mark successfully classified as processed; failed ones stay out for retry
+        succeeded_ids = [p["arxiv_id"] for p in new_papers if p.get("arxiv_id") not in failed_ids]
+        state_mgr.mark_processed(state, succeeded_ids)
+        if failed_ids:
+            _, give_up_ids = state_mgr.add_failed_classifications(state, failed_ids)
+            if give_up_ids:
+                state_mgr.mark_processed(state, give_up_ids)
 
         if relevant:
             batch_label = f"backfill:{cursor}..{chunk_end}"
