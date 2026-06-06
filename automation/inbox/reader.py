@@ -66,6 +66,12 @@ def read_inbox(
         # Check if all IDs in this comment are already processed
         new_ids = [aid for aid in arxiv_ids if aid not in processed_ids]
         if not new_ids:
+            # Already processed (e.g. auto-crawled before inbox was read) — just acknowledge
+            logger.info("Inbox: %s already processed, adding 👍 acknowledgement", arxiv_ids)
+            try:
+                gh.add_reaction(owner, repo, inbox_issue_number, comment_id, reaction="+1")
+            except Exception as exc:
+                logger.warning("Could not add reaction to comment %d: %s", comment_id, exc)
             continue
 
         # Fetch metadata for each new arXiv ID
@@ -81,7 +87,7 @@ def read_inbox(
             else:
                 logger.warning("Inbox: could not fetch %s", aid)
 
-        # Mark comment as processed with ✅ reaction
+        # Mark comment as processed with 👍 reaction
         if fetched_any:
             try:
                 gh.add_reaction(owner, repo, inbox_issue_number, comment_id, reaction="+1")
