@@ -32,41 +32,46 @@ def _run(cmd: list[str], cwd: Path, check: bool = True) -> subprocess.CompletedP
 
 def render_and_push(repo_root: Path, commit_message: str) -> bool:
     """
-    1. Run render_papers.py  (rebuild README blocks)
-    2. Run update_papers_badge.py (update paper count badge)
-    3. git add data/ README.md docs/
-    4. git commit --no-verify
-    5. git push
+    1. git pull --rebase  (sync with remote first)
+    2. Run render_papers.py  (rebuild README blocks)
+    3. Run update_papers_badge.py (update paper count badge)
+    4. git add data/ README.md docs/
+    5. git commit --no-verify
+    6. git push
 
     Returns True if a commit was made, False if nothing changed.
     """
     scripts = repo_root / "scripts"
 
-    # Step 1: render README
+    # Step 1: pull latest from remote before committing
+    logger.info("Pulling latest from origin…")
+    _run(["git", "pull", "--rebase"], cwd=repo_root)
+
+    # Step 2: render README
     logger.info("Running render_papers.py…")
     _run([_PYTHON, str(scripts / "render_papers.py")], cwd=repo_root)
 
-    # Step 2: update badge
+    # Step 3: update badge
     logger.info("Running update_papers_badge.py…")
     _run([_PYTHON, str(scripts / "update_papers_badge.py")], cwd=repo_root)
 
-    # Step 3: check for changes
+    # Step 4: check for changes
     status = _run(["git", "status", "--porcelain"], cwd=repo_root, check=False)
     if not status.stdout.strip():
         logger.info("Nothing to commit — working tree clean.")
         return False
 
-    # Step 4: stage relevant paths
+    # Step 5: stage relevant paths
     _run(["git", "add", "data/", "README.md", "docs/"], cwd=repo_root, check=False)
 
-    # Step 5: commit
+    # Step 6: commit
     logger.info("Committing: %s", commit_message)
     _run(
         ["git", "commit", "--no-verify", "-m", commit_message],
         cwd=repo_root,
     )
 
-    # Step 6: push
+    # Step 7: push
     logger.info("Pushing to origin…")
     _run(["git", "push"], cwd=repo_root)
 
