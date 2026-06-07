@@ -4,6 +4,7 @@
 
 - **Always work directly on `main`**, no worktrees. The owner wants changes visible immediately without manual merging.
 - Commit and push after each logical change so nothing gets lost in a temporary branch.
+- **Do NOT add `Co-Authored-By: Claude` to commit messages.** Commits should only show the owner's account.
 
 ## What This Project Is
 
