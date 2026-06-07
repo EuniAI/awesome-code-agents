@@ -12,10 +12,11 @@ from __future__ import annotations
 
 import logging
 import re
+import time
 from typing import Any
 
 from automation.review import github as gh
-from automation.crawler.arxiv import fetch_single_paper
+from automation.crawler.arxiv import fetch_single_paper, _REQUEST_DELAY
 
 logger = logging.getLogger(__name__)
 
@@ -86,6 +87,7 @@ def read_inbox(
                 fetched_any = True
             else:
                 logger.warning("Inbox: could not fetch %s", aid)
+            time.sleep(_REQUEST_DELAY)  # respect arXiv rate limit
 
         # Mark comment as processed with 👍 reaction
         if fetched_any:
