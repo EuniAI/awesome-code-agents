@@ -1,23 +1,31 @@
-- title: "Intention-Driven Generation of Project-Specific Test Cases"
-  authors: "Binhang Qi, Yun Lin, Xinyi Weng, Yuhuan Huang, Chenyan Liu, Hailong Sun, Zhi Jin, Jin Song Dong"
-  venue: "arXiv 2025/09"
+- title: 'Sakura: An Approach for Generating Complex Tests from Natural Language Test Descriptions'
+  authors: Tyler Stennett, Rangeet Pan, Bridget McGinn, Alessandro Orso, Saurabh Sinha
+  venue: arXiv 2026/05
+  summary: Sakura is a multi-agent framework that generates complex, multi-method test cases from natural language descriptions.
+    It employs specialized agents for code localization and composition, utilizing iterative execution feedback to refine
+    and ensure the correctness of the synthesized test code.
   links:
-    paper: "https://arxiv.org/abs/2507.20619"
-    github: ""
-    website: ""
-
-- title: "UTBoost: Rigorous Evaluation of Coding Agents on SWE-Bench"
-  authors: "Boxi Yu, Yuxuan Zhu, Pinjia He, Daniel Kang"
-  venue: "arXiv 2025/06"
+    paper: https://arxiv.org/abs/2606.00530
+    github: ''
+    website: ''
+- title: Intention-Driven Generation of Project-Specific Test Cases
+  authors: Binhang Qi, Yun Lin, Xinyi Weng, Yuhuan Huang, Chenyan Liu, Hailong Sun, Zhi Jin, Jin Song Dong
+  venue: arXiv 2025/09
   links:
-    paper: "https://arxiv.org/abs/2506.09289"
-    github: ""
-    website: ""
-
-- title: "Locus: Agentic Predicate Synthesis for Directed Fuzzing"
-  authors: "Jie Zhu, Chihao Shen, Ziyang Li, Jiahao Yu, Yizheng Chen, Kexin Pei"
-  venue: "arXiv 2025"
+    paper: https://arxiv.org/abs/2507.20619
+    github: ''
+    website: ''
+- title: 'UTBoost: Rigorous Evaluation of Coding Agents on SWE-Bench'
+  authors: Boxi Yu, Yuxuan Zhu, Pinjia He, Daniel Kang
+  venue: arXiv 2025/06
   links:
-    paper: "https://arxiv.org/abs/2508.21302"
-    github: ""
-    website: ""
+    paper: https://arxiv.org/abs/2506.09289
+    github: ''
+    website: ''
+- title: 'Locus: Agentic Predicate Synthesis for Directed Fuzzing'
+  authors: Jie Zhu, Chihao Shen, Ziyang Li, Jiahao Yu, Yizheng Chen, Kexin Pei
+  venue: arXiv 2025
+  links:
+    paper: https://arxiv.org/abs/2508.21302
+    github: ''
+    website: ''

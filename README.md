@@ -91,7 +91,7 @@
 <!-- START PAPERS SUMMARY -->
 🔥 **We are actively tracking the frontier research of code agents.**<br>
 🧹 *We periodically curate our collection, retaining only published papers and interesting arXiv preprints from the last six months.*<br>
-📚 *Currently collected:* **`498` papers** — *(Last update: 2026-06-02)*
+📚 *Currently collected:* **`499` papers** — *(Last update: 2026-06-07)*
 <!-- END PAPERS SUMMARY -->
 
 <!-- - [🚀 Products & Tools](#-products--tools)
@@ -1336,6 +1336,10 @@
 > Autonomous agents for automated software testing through intelligent fuzzing techniques.
 
 <!-- START PAPERS:agentic_fuzzing -->
+- **Sakura: An Approach for Generating Complex Tests from Natural Language Test Descriptions.**  
+  _Tyler Stennett, Rangeet Pan, Bridget McGinn, Alessandro Orso, Saurabh Sinha._ arXiv 2026/05.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.00530)
+
 - **Intention-Driven Generation of Project-Specific Test Cases.**  
   _Binhang Qi, Yun Lin, Xinyi Weng, Yuhuan Huang, Chenyan Liu, Hailong Sun, Zhi Jin, Jin Song Dong._ arXiv 2025/09.  
   [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.20619)
