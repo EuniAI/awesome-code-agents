@@ -91,7 +91,7 @@
 <!-- START PAPERS SUMMARY -->
 🔥 **We are actively tracking the frontier research of code agents.**<br>
 🧹 *We periodically curate our collection, retaining only published papers and interesting arXiv preprints from the last six months.*<br>
-📚 *Currently collected:* **`499` papers** — *(Last update: 2026-06-07)*
+📚 *Currently collected:* **`515` papers** — *(Last update: 2026-06-20)*
 <!-- END PAPERS SUMMARY -->
 
 <!-- - [🚀 Products & Tools](#-products--tools)
@@ -731,6 +731,70 @@
 > AI agents that operate within terminal environments, executing shell commands, managing system operations, and automating command-line workflows through natural language interfaces and autonomous task execution.
 
 <!-- START PAPERS:terminal -->
+- **TerminalWorld: Benchmarking Agents on Real-World Terminal Tasks.**  
+  _Zhaoyang Chu, Jiarui Hu, Xingyu Jiang, Pengyu Zou, Han Li, Chao Peng, Peter O'Hearn, Earl T. Barr, Mark Harman, Federica Sarro, et al._ arXiv 2026/05.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.22535) [![GitHub Stars](https://img.shields.io/github/stars/EuniAI/TerminalWorld?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/EuniAI/TerminalWorld)
+
+- **Terminus-4B: Can a Smaller Model Replace Frontier LLMs at Agentic Execution Tasks?**  
+  _Spandan Garg, Vikram Nitin, Yufan Huang._ arXiv 2026/05.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.03195)
+
+- **ECHO: Terminal Agents Learn World Models for Free.**  
+  _Vaishnavi Shrivastava, Piero Kauffmann, Ahmed Awadallah, Dimitris Papailiopoulos._ arXiv 2026/05.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.24517)
+
+- **Terminal Agents Suffice for Enterprise Automation.**  
+  _Patrice Bechard, Orlando Marquez Ayala, Emily Chen, Jordan Skelton, Sagar Davasam, Srinivas Sunkara, Vikas Yadav, Sai Rajeswar._ arXiv 2026/03.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.00073)
+
+- **Toward Scalable Terminal Task Synthesis via Skill Graphs.**  
+  _Zhiyuan Fan, Tinghao Yu, Yuanjun Cai, Jiangtao Guan, Yun Yang, Dingxin Hu, Jiang Zhou, Xing Wu, Zhuo Han, Feng Zhang, et al._ arXiv 2026/04.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.25727)
+
+- **What Makes a Good Terminal-Agent Benchmark Task: A Guideline for Adversarial, Difficult, and Legible Evaluation Design.**  
+  _Ivan Bercovich._ arXiv 2026/04.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.28093)
+
+- **TermiGen: High-Fidelity Environment and Robust Trajectory Synthesis for Terminal Agents.**  
+  _Kaijie Zhu, Yuzhou Nie, Yijiang Li, Yiming Huang, Jialian Wu, Jiang Liu, Ximeng Sun, Zhenfei Yin, Lun Wang, Zicheng Liu, et al._ arXiv 2026/02.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.07274) [![GitHub Stars](https://img.shields.io/github/stars/ucsb-mlsec/terminal-bench-env?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ucsb-mlsec/terminal-bench-env)
+
+- **On Data Engineering for Scaling LLM Terminal Capabilities.**  
+  _Renjie Pi, Grace Lam, Mohammad Shoeybi, Pooya Jannaty, Bryan Catanzaro, Wei Ping._ arXiv 2026/02.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.21193)
+
+- **Endless Terminals: Scaling RL Environments for Terminal Agents.**  
+  _Kanishk Gandhi, Shivam Garg, Noah D. Goodman, Dimitris Papailiopoulos._ arXiv 2026/01.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.16443)
+
+- **Large-Scale Terminal Agentic Trajectory Generation from Dockerized Environments.**  
+  _Siwei Wu, Yizhi Li, Yuyang Song, Wei Zhang, Yang Wang, Riza Batista-Navarro, Xian Yang, Mingjie Tang, Bryan Dai, Jian Yang, et al._ arXiv 2026/02.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.01244) [![GitHub Stars](https://img.shields.io/github/stars/Wusiwei0410/TerminalTraj?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Wusiwei0410/TerminalTraj)
+
+- **MMTB: Evaluating Terminal Agents on Multimedia-File Tasks.**  
+  _Chiyeong Heo, Jaechang Kim, Junhyuk Kwon, Hoyoung Kim, Dongmin Park, Jonghyun Lee, Jungseul Ok._ arXiv 2026/05.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.10966)
+
+- **Terminal Wrench: A Dataset of 331 Reward-Hackable Environments and 3,632 Exploit Trajectories.**  
+  _Ivan Bercovich, Ivgeni Segal, Kexun Zhang, Shashwat Saxena, Aditi Raghunathan, Ziqian Zhong._ arXiv 2026/04.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.17596) [![GitHub Stars](https://img.shields.io/github/stars/few-sh/terminal-wrench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/few-sh/terminal-wrench)
+
+- **Learning CLI Agents with Structured Action Credit under Selective Observation.**  
+  _Haoyang Su, Ying Wen._ arXiv 2026/05.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.08013)
+
+- **LiteCoder-Terminal: Scaling Long-Horizon Terminal Environments for Learning Language Agents.**  
+  _Xiaoxuan Peng, Kaiqi Zhang, Xinyu Lu, Boxi Cao, Yaojie Lu, Hongyu Lin, Xianpei Han, Le Sun._ arXiv 2026/05.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.29559)
+
+- **What Makes Interaction Trajectories Effective for Training Terminal Agents?**  
+  _Sidi Yang, Chaofan Tao, Jierun Chen, Tiezheng Yu, Ruoyu Wang, Yuxin Jiang, Yiming Du, Wendong Xu, Jing Xiong, Taiqiang Wu, et al._ arXiv 2026/06.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.03461)
+
+- **A Self-Evolving Framework for Efficient Terminal Agents via Observational Context Compression.**  
+  _Jincheng Ren, Siwei Wu, Yizhi Li, Kang Zhu, Shu Xu, Boyu Feng, Ruibin Yuan, Wei Zhang, Riza Batista-Navarro, Jian Yang, et al._ arXiv 2026/04.  
+  [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.19572) [![GitHub Stars](https://img.shields.io/github/stars/multimodal-art-projection/TACO?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/multimodal-art-projection/TACO)
+
 - **Terminal-Bench: A Benchmark for AI Agents in Terminal Environments.**  
   _The Terminal-Bench Team._ 2025.  
   [![GitHub Stars](https://img.shields.io/github/stars/laude-institute/terminal-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/laude-institute/terminal-bench) [![Website](https://img.shields.io/website?url=https://www.tbench.ai/&up_message=TBENCH.AI&up_color=blue&down_message=TBENCH.AI&down_color=blue&style=for-the-badge)](https://www.tbench.ai/) ![Benchmark & Dataset](https://img.shields.io/badge/Benchmark_%26_Dataset-F4A261?style=for-the-badge) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge)
