@@ -19,9 +19,13 @@
 - L2 轴（Means 支）= agent 所作用的世界：终端-OS / 浏览器 / 游戏世界 / 物理世界 /
   数据 / ML 实验 / 科学发现
 - L3 轴（仅通用软件展开）= 软件生命周期活动
-- 正交轴全部降级为 **tags**：贡献类型（benchmark / model / training-data / survey /
-  empirical / position）、机制（planning / memory / feedback / multi-agent）、模态
-  （multimodal）。foundation_models、data_synthesis、multimodal_coding 作为类别溶解。
+- 正交轴降级为 **tags**，且 tag 只保留**贡献类型一个维度**（2026-07-06 收窄）：
+  benchmark / model / training-data / survey / empirical / position，默认 method，**单选**。
+  foundation_models → tag=model、data_synthesis → tag=training-data、multimodal_coding
+  直接溶解进领域类别。曾考虑的机制 tags（planning/memory/feedback/multi-agent）和模态
+  tag（multimodal）被**否决**：机制天然多标签、边界模糊，会把"无唯一答案"问题从类别
+  层搬到 tag 层；贡献类型是唯一近乎客观、LLM 可稳定判定的轴，且可驱动 README 渲染
+  （如 Foundation Models 节由 tag=model 过滤生成）。
 - products 移出论文分类体系，README 独立版块。
 - terminal 在新体系中的席位：Means 支下的"终端/OS 世界"，与 browser、embodied 平级。
 
