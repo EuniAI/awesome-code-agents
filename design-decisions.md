@@ -19,14 +19,19 @@
 - L2 轴（Means 支）= agent 所作用的世界：终端-OS / 浏览器 / 游戏世界 / 物理世界 /
   数据 / ML 实验 / 科学发现
 - L3 轴（仅通用软件展开）= 软件生命周期活动
-- 正交轴降级为 **tags**，且 tag 只保留**贡献类型一个维度**（2026-07-06 收窄）：
-  benchmark / model / training-data / survey / empirical / position，默认 method，**单选**。
-  foundation_models → tag=model、data_synthesis → tag=training-data、multimodal_coding
-  直接溶解进领域类别。曾考虑的机制 tags（planning/memory/feedback/multi-agent）和模态
-  tag（multimodal）被**否决**：机制天然多标签、边界模糊，会把"无唯一答案"问题从类别
-  层搬到 tag 层；贡献类型是唯一近乎客观、LLM 可稳定判定的轴，且可驱动 README 渲染
-  （如 Foundation Models 节由 tag=model 过滤生成）。
-- products 移出论文分类体系，README 独立版块。
+- 正交轴降级为 **tags**，且只保留贡献相关维度（2026-07-06 收窄）。tag 内部同样遵守
+  单轴平级原则，拆成两个 facet：
+  - **论文类型**（单选，互斥）：method（默认）/ survey / empirical / position
+  - **发布工件**（多选，可空）：benchmark / model / training-data
+    ——三者常共存（训练类工作常一次放出模型+数据+基准），故不能与论文类型混在一个单选集里。
+  foundation_models → artifact=model、data_synthesis → artifact=training-data、
+  multimodal_coding 直接溶解进领域类别。曾考虑的机制 tags（planning/memory/feedback/
+  multi-agent）和模态 tag（multimodal）被**否决**：机制天然多标签、边界模糊，会把
+  "无唯一答案"问题从类别层搬到 tag 层；贡献维度是唯一近乎客观、LLM 可稳定判定的轴，
+  且可驱动 README 渲染（如 Foundation Models 节由 artifact=model 过滤生成）。
+- products **已删除**（2026-07-06）：`data/papers_products.yaml`（44 条产品）连同 README
+  中已注释的 Products & Tools 版块一并移除。仓库定位收窄为**前沿研究论文与技术报告**，
+  不再收录工业产品条目（历史数据 git 可回溯）。删除后论文计数由 515 修正为 471。
 - terminal 在新体系中的席位：Means 支下的"终端/OS 世界"，与 browser、embodied 平级。
 
 ### 待解决

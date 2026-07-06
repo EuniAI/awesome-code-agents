@@ -81,7 +81,7 @@
 </p>
 -->
 <!-- <p align="center">
-  A curated list of <b>products, benchmarks, and research papers</b> on <b>Code Agents</b>.
+  A curated list of <b>frontier research papers and technical reports</b> on <b>Code Agents</b>.
 </p> -->
 
 ---
@@ -91,16 +91,9 @@
 <!-- START PAPERS SUMMARY -->
 🔥 **We are actively tracking the frontier research of code agents.**<br>
 🧹 *We periodically curate our collection, retaining only published papers and interesting arXiv preprints from the last six months.*<br>
-📚 *Currently collected:* **`515` papers** — *(Last update: 2026-06-20)*
+📚 *Currently collected:* **`471` papers** — *(Last update: 2026-07-06)*
 <!-- END PAPERS SUMMARY -->
 
-<!-- - [🚀 Products & Tools](#-products--tools)
-  * [🧰 IDEs & Editors](#-ides--editors)
-  * [💻 CLI Tools](#-cli-tools)
-  * [🧩 Extensions & Plugins](#-extensions--plugins)
-  * [🌐 Web-Based Development Platforms](#-web-based-development-platforms)
-  * [🖥 Desktop Applications](#-desktop-applicatio)
-  * [📱 Mobile Tools](#-mobile-tools) -->
 - [📚 Papers](#-papers)
   * [🌍 Foundation Models](#-foundation-models)
   * [🔧 Software Engineering Agents](#-software-general-engineering-agents)
@@ -149,14 +142,6 @@
    <!-- tags: dataset & benchmark, survey, position paper, empirical study -->
 
 ---
-
-<!-- ## 🚀 Products & Tools
-> Leading agentic systems, frameworks, and platforms for automated software development. -->
-
-<!-- START PAPERS:products_closed -->
-
-<!-- END PAPERS:products_closed -->
-<!-- --- -->
 
 ## 📚 Papers
 > Explore foundational, recent, and influential works advancing the code agent research landscape.
