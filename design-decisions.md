@@ -19,11 +19,14 @@
 - L2 轴（Means 支）= agent 所作用的世界：终端-OS / 浏览器 / 游戏世界 / 物理世界 /
   数据 / ML 实验 / 科学发现
 - L3 轴（仅通用软件展开）= 软件生命周期活动
-- 正交轴降级为 **tags**，且只保留贡献相关维度（2026-07-06 收窄）。tag 内部同样遵守
-  单轴平级原则，拆成两个 facet：
-  - **论文类型**（单选，互斥）：method（默认）/ survey / empirical / position
-  - **发布工件**（多选，可空）：benchmark / model / training-data
-    ——三者常共存（训练类工作常一次放出模型+数据+基准），故不能与论文类型混在一个单选集里。
+- 正交轴降级为 **tags**，且 tag 是**稀疏标注、非必填**（2026-07-06 定稿）：适用才打，
+  都不适用则无 tag（无 tag = 普通方法论文，不设 method 默认值——与 README 现行徽章
+  渲染逻辑一致）。两个 facet，各自内部平级：
+  - **论文类型**（适用才打，互斥）：survey / empirical / position
+  - **发布工件**（适用才打，可多选）：benchmark / model / training-data / agent
+    ——常共存（训练类工作常一次放出模型+数据+基准），故与论文类型分开、不强行单选。
+    `agent` 定义为**发布了可公开使用的 agent 系统/框架**（如 SWE-agent、OpenHands），
+    而非"论文提出 agent"（否则近乎全集、无信息量）。
   foundation_models → artifact=model、data_synthesis → artifact=training-data、
   multimodal_coding 直接溶解进领域类别。曾考虑的机制 tags（planning/memory/feedback/
   multi-agent）和模态 tag（multimodal）被**否决**：机制天然多标签、边界模糊，会把
