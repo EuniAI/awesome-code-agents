@@ -3,6 +3,41 @@
 > Durable record of non-trivial design decisions for this repo. Newest first.
 > This repo is English-only — keep every entry in English.
 
+## 2026-07-10: L3 settled: 10 software-lifecycle activities under General Software
+
+### Structure (encoded in taxonomy.json with full definitions/boundaries/examples)
+`software_development` (End-to-End Development), `software_code_generation` (Code
+Generation & Completion), `software_testing` (Testing & Verification),
+`software_debugging` (Debugging & Issue Resolution), `software_review` (Code Review),
+`software_comprehension` (Comprehension & Documentation), `software_maintenance`
+(Maintenance & Evolution), `software_security` (Security), `software_infrastructure`
+(Environments & Toolchains), `software_general` (Agentic Software Engineering).
+
+### Rulings and rationale
+- Data scan drove the design: old `code_generation` (62) hid at least six communities
+  (multi-agent end-to-end dev, repo-level codegen/completion, surveys, documentation,
+  code search, requirements); old `issue_resolution` (134) was a dumping ground for
+  field-level surveys, scaffolds/SDKs, and generalist agents.
+- **development vs code_generation split**: project/feature scope vs targeted code
+  units from spec/context.
+- **testing vs debugging line**: proactive search for unknown defects vs handling a
+  known/reported defect; issue reproduction therefore moves from testing to debugging.
+- **security kept as one leaf** (coherent community: vuln detection/localization/repair,
+  auditing, secure codegen); vuln-targeted fuzzing goes to security, general fuzzing to
+  testing; exploiting running systems stays in world_terminal.
+- **Formal verification merged into testing** (Testing & Verification): both safeguard
+  correctness proactively.
+- **software_general is not a misc bin** (owner's rule): admission follows the master
+  test; enter only when the served task is software engineering as a whole (field-level
+  surveys/roadmaps, generalist agents, scaffolds/SDKs, cross-activity studies). A survey
+  of issue-resolution agents belongs to debugging.
+- Renames by owner taste: "Environments & Toolchains" (not Engineering Infrastructure),
+  "Agentic Software Engineering" (not Foundations & Overviews).
+
+The full tree is now complete: 2 (L1) x 14 (L2) with 10 L3 leaves under software,
+23 leaf categories total. Next: implementation phase (config sync from taxonomy.json,
+data-file migration, README regeneration, classifier prompt rewrite, backlog reset).
+
 ## 2026-07-10: L2 settled: 8 artifact domains + 6 agency worlds
 
 ### Structure (encoded in taxonomy.json with full definitions/boundaries/examples)

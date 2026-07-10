@@ -20,17 +20,25 @@
   "tags": {
     "paper_type": {
       "rule": "mutually exclusive; tag only if it applies (no tag = a plain method paper)",
-      "values": ["survey", "empirical", "position"]
+      "values": [
+        "survey",
+        "empirical",
+        "position"
+      ]
     },
     "released_artifact": {
       "rule": "multi-select; tag only if it applies; these often co-occur",
-      "values": ["benchmark", "model", "training-data"]
+      "values": [
+        "benchmark",
+        "model",
+        "training-data"
+      ]
     }
   },
   "levels": {
     "L1": "the task the paper serves: is its ultimate purpose producing code, or is code the tool for completing a task in the world",
     "L2": "artifact branch: the domain of the code being built (8) | agency branch: the world the agent acts in (6)",
-    "L3": "software-lifecycle activity (only general-software under artifact expands)"
+    "L3": "software-lifecycle activity (only general-software under artifact expands; 10 children)"
   },
   "axis": "the ultimate purpose of the task the paper serves",
   "master_test": [
@@ -57,11 +65,31 @@
         "Resource papers follow the task they serve, never their own output: a foundation model trained for terminal operation belongs to `agency` even though the paper ships a model."
       ],
       "examples": [
-        { "paper": "SWE-bench-style issue resolution", "verdict": "artifact", "why": "the served task delivers a patch to a repository" },
-        { "paper": "An agent that sets up a repository's environment so its tests can build and run", "verdict": "artifact", "why": "enabling the codebase serves code production, not interaction for its own sake" },
-        { "paper": "A repo-QA agent that answers questions about a codebase", "verdict": "artifact", "why": "understanding code serves producing code" },
-        { "paper": "A code foundation model evaluated on generation plus issue-resolution agentic tasks (Qwen-Coder style)", "verdict": "artifact + model tag", "why": "its agentic evaluations still serve code production" },
-        { "paper": "Synthesizing trajectories and environments to train issue-resolution agents", "verdict": "artifact + training-data tag", "why": "the downstream task is issue resolution, whose purpose is producing code" }
+        {
+          "paper": "SWE-bench-style issue resolution",
+          "verdict": "artifact",
+          "why": "the served task delivers a patch to a repository"
+        },
+        {
+          "paper": "An agent that sets up a repository's environment so its tests can build and run",
+          "verdict": "artifact",
+          "why": "enabling the codebase serves code production, not interaction for its own sake"
+        },
+        {
+          "paper": "A repo-QA agent that answers questions about a codebase",
+          "verdict": "artifact",
+          "why": "understanding code serves producing code"
+        },
+        {
+          "paper": "A code foundation model evaluated on generation plus issue-resolution agentic tasks (Qwen-Coder style)",
+          "verdict": "artifact + model tag",
+          "why": "its agentic evaluations still serve code production"
+        },
+        {
+          "paper": "Synthesizing trajectories and environments to train issue-resolution agents",
+          "verdict": "artifact + training-data tag",
+          "why": "the downstream task is issue resolution, whose purpose is producing code"
+        }
       ],
       "axis": "the domain of the code being built",
       "children": [
@@ -82,9 +110,269 @@
             "Formal verification of software stays here; pure mathematical theorem proving belongs to `world_research`."
           ],
           "examples": [
-            { "paper": "SWE-bench-style issue resolution", "verdict": "software", "why": "repairing a general-purpose repository" },
-            { "paper": "HumanEval-style function generation", "verdict": "software", "why": "producing domain-agnostic program code" },
-            { "paper": "An agent that configures a repo's environment so tests can run", "verdict": "software", "why": "enabling work in service of code production" }
+            {
+              "paper": "SWE-bench-style issue resolution",
+              "verdict": "software",
+              "why": "repairing a general-purpose repository"
+            },
+            {
+              "paper": "HumanEval-style function generation",
+              "verdict": "software",
+              "why": "producing domain-agnostic program code"
+            },
+            {
+              "paper": "An agent that configures a repo's environment so tests can run",
+              "verdict": "software",
+              "why": "enabling work in service of code production"
+            }
+          ],
+          "axis": "the software-lifecycle activity",
+          "children": [
+            {
+              "key": "software_development",
+              "emoji": "🏗️",
+              "title": "End-to-End Development",
+              "definition": "Tasks that carry software from requirements to working code end to end: whole projects built by agent teams, or complete features grown inside existing repositories.",
+              "includes": [
+                "Multi-agent development frameworks that run the full lifecycle (MetaGPT / ChatDev style).",
+                "Feature development in existing repositories (FEA-Bench / NoCode-bench style).",
+                "Requirements elicitation and design-to-implementation work."
+              ],
+              "boundary": [
+                "Producing a targeted code unit from a given spec or context is `software_code_generation`; here the scope is a project or feature, not a unit.",
+                "Fixing a reported defect is `software_debugging`."
+              ],
+              "examples": [
+                {
+                  "paper": "ChatDev-style communicative agents building software",
+                  "verdict": "software_development",
+                  "why": "agent team runs the whole lifecycle"
+                },
+                {
+                  "paper": "FEA-Bench feature-implementation benchmark",
+                  "verdict": "software_development + benchmark tag",
+                  "why": "repo-level feature growth is the served task"
+                }
+              ]
+            },
+            {
+              "key": "software_code_generation",
+              "emoji": "✏️",
+              "title": "Code Generation & Completion",
+              "definition": "Tasks that produce targeted units of code from a specification or surrounding context: functions, classes, files, repository-aware snippets, completions, and next edits.",
+              "includes": [
+                "Natural-language-to-code at function/class level and competitive programming.",
+                "Repository-level generation with retrieval and context (RepoBench / CodeAgent style).",
+                "Code completion and next-edit prediction."
+              ],
+              "boundary": [
+                "Project- or feature-scope work is `software_development`.",
+                "Translating existing code between languages is `software_maintenance`.",
+                "Generation whose purpose is security hardening is `software_security`."
+              ],
+              "examples": [
+                {
+                  "paper": "Repository-level code completion with RL (RLCoder style)",
+                  "verdict": "software_code_generation",
+                  "why": "delivers code units from repo context"
+                }
+              ]
+            },
+            {
+              "key": "software_testing",
+              "emoji": "🧪",
+              "title": "Testing & Verification",
+              "definition": "Tasks that proactively assure correctness before or independent of any specific reported defect: generating tests, fuzzing, and formally verifying code.",
+              "includes": [
+                "Unit and integration test generation; property-based testing.",
+                "Agentic fuzzing for general correctness.",
+                "Formal verification and proof-assisted correctness of software."
+              ],
+              "boundary": [
+                "Reproducing a reported bug as a failing test serves diagnosing a known defect and is `software_debugging`.",
+                "Fuzzing aimed at vulnerabilities and CVEs is `software_security`.",
+                "Pure mathematical theorem proving is `agency/world_research`."
+              ],
+              "examples": [
+                {
+                  "paper": "An agentic fuzzer that grows a corpus for a library",
+                  "verdict": "software_testing",
+                  "why": "proactive search for unknown defects"
+                }
+              ]
+            },
+            {
+              "key": "software_debugging",
+              "emoji": "🐛",
+              "title": "Debugging & Issue Resolution",
+              "definition": "Tasks that handle a known or reported defect end to end: reproducing it, localizing its cause, and repairing the code (SWE-bench style issue resolution and automated program repair).",
+              "includes": [
+                "Issue reproduction: turning a bug report into a failing test.",
+                "Fault localization and root-cause analysis.",
+                "Program repair and issue resolution; debugging assistants using dynamic analysis.",
+                "Resource papers serving issue resolution: training data and environments (plus training-data tag), issue-resolution benchmarks."
+              ],
+              "boundary": [
+                "Proactive defect search with no specific reported bug is `software_testing`.",
+                "Vulnerability repair is `software_security`.",
+                "Behavior-preserving transformation is `software_maintenance`.",
+                "Surveys and scaffolds serving software engineering as a whole are `software_general`."
+              ],
+              "examples": [
+                {
+                  "paper": "SWE-bench-style issue resolution agent",
+                  "verdict": "software_debugging",
+                  "why": "repairs a reported issue in a real repository"
+                },
+                {
+                  "paper": "Self-play RL to train issue-resolving agents (SWE-RL style)",
+                  "verdict": "software_debugging + training-data tag",
+                  "why": "the downstream task is issue resolution"
+                }
+              ]
+            },
+            {
+              "key": "software_review",
+              "emoji": "🔍",
+              "title": "Code Review",
+              "definition": "Tasks that judge code changes: reviewing pull requests, generating review comments, and assessing patch quality.",
+              "includes": [
+                "Automated PR review and review-comment generation.",
+                "Patch validation and change-quality judgment."
+              ],
+              "boundary": [
+                "Understanding or answering questions about code without judging a change is `software_comprehension`.",
+                "Actually repairing the defect found is `software_debugging`."
+              ],
+              "examples": [
+                {
+                  "paper": "An agent that reviews pull requests and drafts comments",
+                  "verdict": "software_review",
+                  "why": "the served task is judging changes"
+                }
+              ]
+            },
+            {
+              "key": "software_comprehension",
+              "emoji": "📖",
+              "title": "Comprehension & Documentation",
+              "definition": "Tasks that understand code and record that understanding: answering questions about codebases, summarizing, documenting, and searching code.",
+              "includes": [
+                "Repository QA and long-code understanding.",
+                "Code summarization and documentation generation (RepoAgent style).",
+                "Code search and navigation."
+              ],
+              "boundary": [
+                "Judging a change is `software_review`.",
+                "Understanding performed inside a fix pipeline belongs to the task it serves (e.g. `software_debugging`)."
+              ],
+              "examples": [
+                {
+                  "paper": "SWE-QA repository question answering",
+                  "verdict": "software_comprehension + benchmark tag",
+                  "why": "understanding the codebase is the served task"
+                }
+              ]
+            },
+            {
+              "key": "software_maintenance",
+              "emoji": "🔄",
+              "title": "Maintenance & Evolution",
+              "definition": "Tasks that evolve code while preserving its behavior: refactoring, migrating and translating, and optimizing performance.",
+              "includes": [
+                "Refactoring and technical-debt reduction.",
+                "Code migration and translation across languages, frameworks, and API versions.",
+                "Performance optimization of existing code; dependency upgrades."
+              ],
+              "boundary": [
+                "Fixing incorrect behavior is `software_debugging`.",
+                "Writing new code is `software_code_generation` or `software_development`."
+              ],
+              "examples": [
+                {
+                  "paper": "MigrationBench-style repository migration",
+                  "verdict": "software_maintenance + benchmark tag",
+                  "why": "behavior-preserving evolution of a codebase"
+                }
+              ]
+            },
+            {
+              "key": "software_security",
+              "emoji": "🔒",
+              "title": "Security",
+              "definition": "The security-assurance activity on code: finding, localizing, and fixing vulnerabilities; auditing repositories; producing secure code.",
+              "includes": [
+                "Vulnerability detection and localization; repository auditing.",
+                "CVE and vulnerability repair.",
+                "Secure code generation and completion; vulnerability-targeted fuzzing."
+              ],
+              "boundary": [
+                "Exploiting running systems (CTF, penetration testing) is `agency/world_terminal`.",
+                "General-correctness testing and fuzzing is `software_testing`."
+              ],
+              "examples": [
+                {
+                  "paper": "An agent that localizes real-world OSS vulnerabilities from traces",
+                  "verdict": "software_security",
+                  "why": "vulnerability work on the code itself"
+                },
+                {
+                  "paper": "A benchmark for repairing real-world CVEs",
+                  "verdict": "software_security + benchmark tag",
+                  "why": "the served task is vulnerability repair"
+                }
+              ]
+            },
+            {
+              "key": "software_infrastructure",
+              "emoji": "🛠️",
+              "title": "Environments & Toolchains",
+              "definition": "Enabling tasks that make code buildable and runnable: setting up environments, repairing builds, configuring CI/CD, and operating version control.",
+              "includes": [
+                "Environment and dependency setup agents; build-failure repair.",
+                "CI/CD configuration and repair.",
+                "Version-control operations: branching, merging, committing, merge-conflict resolution."
+              ],
+              "boundary": [
+                "Operating an OS for its own sake is `agency/world_terminal`; the interaction here serves code production.",
+                "Constructing environments at scale to train agents follows the downstream task served (e.g. `software_debugging` plus training-data tag)."
+              ],
+              "examples": [
+                {
+                  "paper": "An agent that installs dependencies so a repo's tests can run",
+                  "verdict": "software_infrastructure",
+                  "why": "enabling work in service of the codebase"
+                }
+              ]
+            },
+            {
+              "key": "software_general",
+              "emoji": "🗺️",
+              "title": "Agentic Software Engineering",
+              "definition": "Work whose served task is software engineering as a whole rather than any single lifecycle activity: field-level surveys and roadmaps, generalist software agents, agent scaffolds and SDKs, and studies of how agents and humans build software together.",
+              "includes": [
+                "Surveys, roadmaps, and position papers on software agents in general.",
+                "Generalist agents that span many software tasks (HyperAgent style).",
+                "Agent scaffolds, SDKs, and frameworks for building software agents (OpenHands SDK style).",
+                "Human-agent collaboration studies and cross-activity empirical analyses and benchmarks."
+              ],
+              "boundary": [
+                "Admission still follows the master test: enter only when no single lifecycle activity dominates the served task. A survey of issue-resolution agents is `software_debugging`; a completion benchmark is `software_code_generation`.",
+                "Work advocating code-as-action as a paradigm is `agency` (see the L1 cross-branch rule)."
+              ],
+              "examples": [
+                {
+                  "paper": "Agents in software engineering: survey, landscape, and vision",
+                  "verdict": "software_general + survey tag",
+                  "why": "the served task is the field as a whole"
+                },
+                {
+                  "paper": "A composable SDK for production software agents",
+                  "verdict": "software_general",
+                  "why": "scaffolding serves every software activity at once"
+                }
+              ]
+            }
           ]
         },
         {
@@ -101,8 +389,16 @@
             "Charts, SVG, and animation code not tied to a web application belong to `graphics`."
           ],
           "examples": [
-            { "paper": "Screenshot-to-code UI generation", "verdict": "web", "why": "delivers front-end code from a visual spec" },
-            { "paper": "Autonomous REST API scaffolding", "verdict": "web", "why": "delivers back-end code" }
+            {
+              "paper": "Screenshot-to-code UI generation",
+              "verdict": "web",
+              "why": "delivers front-end code from a visual spec"
+            },
+            {
+              "paper": "Autonomous REST API scaffolding",
+              "verdict": "web",
+              "why": "delivers back-end code"
+            }
           ]
         },
         {
@@ -117,7 +413,11 @@
             "Operating or tuning a running database service is systems operation and belongs to `world_terminal`; here the query or schema is the deliverable."
           ],
           "examples": [
-            { "paper": "Spider-style text-to-SQL", "verdict": "database", "why": "delivers a query" }
+            {
+              "paper": "Spider-style text-to-SQL",
+              "verdict": "database",
+              "why": "delivers a query"
+            }
           ]
         },
         {
@@ -132,7 +432,11 @@
             "Administering or operating a running system is `world_terminal`; here the systems code is the deliverable."
           ],
           "examples": [
-            { "paper": "Kernel patch generation with agents", "verdict": "systems", "why": "delivers OS-level code" }
+            {
+              "paper": "Kernel patch generation with agents",
+              "verdict": "systems",
+              "why": "delivers OS-level code"
+            }
           ]
         },
         {
@@ -147,7 +451,11 @@
             "Controlling physical devices at runtime is `world_physical`; here the hardware description is the deliverable."
           ],
           "examples": [
-            { "paper": "Verilog module generation from natural language", "verdict": "hardware", "why": "delivers RTL code" }
+            {
+              "paper": "Verilog module generation from natural language",
+              "verdict": "hardware",
+              "why": "delivers RTL code"
+            }
           ]
         },
         {
@@ -163,7 +471,11 @@
             "Building the game code is the deliverable here."
           ],
           "examples": [
-            { "paper": "Generating a playable game from a description", "verdict": "game", "why": "delivers the game's codebase" }
+            {
+              "paper": "Generating a playable game from a description",
+              "verdict": "game",
+              "why": "delivers the game's codebase"
+            }
           ]
         },
         {
@@ -178,8 +490,16 @@
             "Exploring data to deliver insight (charts as by-product) is `world_research`; here the visual artifact's code is the deliverable, produced from a given specification."
           ],
           "examples": [
-            { "paper": "SVG icon generation", "verdict": "graphics", "why": "delivers vector-graphic code" },
-            { "paper": "Math-animation code generation from a script", "verdict": "graphics", "why": "delivers animation code from a spec" }
+            {
+              "paper": "SVG icon generation",
+              "verdict": "graphics",
+              "why": "delivers vector-graphic code"
+            },
+            {
+              "paper": "Math-animation code generation from a script",
+              "verdict": "graphics",
+              "why": "delivers animation code from a spec"
+            }
           ]
         },
         {
@@ -195,7 +515,11 @@
             "Using 3D artifacts to act in the physical world is `world_physical`."
           ],
           "examples": [
-            { "paper": "Generating parametric CAD programs from text", "verdict": "cad", "why": "delivers a 3D model as code" }
+            {
+              "paper": "Generating parametric CAD programs from text",
+              "verdict": "cad",
+              "why": "delivers a 3D model as code"
+            }
           ]
         }
       ]
@@ -215,11 +539,31 @@
         "Resource papers follow the task they serve, never their own output: a dataset of embodied code-as-policy trajectories belongs here even though the paper ships data."
       ],
       "examples": [
-        { "paper": "A terminal agent completing enterprise automation tasks", "verdict": "agency", "why": "the served task is getting jobs done in an operating system" },
-        { "paper": "An embodied agent executing code to control a robot", "verdict": "agency", "why": "the served task is physical-world interaction; code is the policy language" },
-        { "paper": "An ML-engineering agent running training pipelines", "verdict": "agency", "why": "the served task is training models through interaction; the model is the task's product, not a code deliverable" },
-        { "paper": "An agent that explores a dataset and reports findings, producing charts along the way", "verdict": "agency", "why": "the insight is the goal; the code and charts are tools" },
-        { "paper": "A survey covering both branches but written to advocate the code-as-action paradigm (Code as Agent Harness style)", "verdict": "agency + survey tag", "why": "the purpose it serves is the second class of tasks" }
+        {
+          "paper": "A terminal agent completing enterprise automation tasks",
+          "verdict": "agency",
+          "why": "the served task is getting jobs done in an operating system"
+        },
+        {
+          "paper": "An embodied agent executing code to control a robot",
+          "verdict": "agency",
+          "why": "the served task is physical-world interaction; code is the policy language"
+        },
+        {
+          "paper": "An ML-engineering agent running training pipelines",
+          "verdict": "agency",
+          "why": "the served task is training models through interaction; the model is the task's product, not a code deliverable"
+        },
+        {
+          "paper": "An agent that explores a dataset and reports findings, producing charts along the way",
+          "verdict": "agency",
+          "why": "the insight is the goal; the code and charts are tools"
+        },
+        {
+          "paper": "A survey covering both branches but written to advocate the code-as-action paradigm (Code as Agent Harness style)",
+          "verdict": "agency + survey tag",
+          "why": "the purpose it serves is the second class of tasks"
+        }
       ],
       "axis": "the world the agent acts in (digital or physical)",
       "children": [
@@ -238,9 +582,21 @@
             "GUI applications are `world_apps`; the browser is `world_browser`."
           ],
           "examples": [
-            { "paper": "A benchmark of real-world terminal tasks (TerminalWorld style)", "verdict": "world_terminal + benchmark tag", "why": "the contribution is the terminal as the agent's world" },
-            { "paper": "An incident-mitigation agent operating a Kubernetes cluster", "verdict": "world_terminal", "why": "the served task is keeping a system running" },
-            { "paper": "A CTF agent solving challenges in a shell", "verdict": "world_terminal", "why": "the task is completed through OS interaction" }
+            {
+              "paper": "A benchmark of real-world terminal tasks (TerminalWorld style)",
+              "verdict": "world_terminal + benchmark tag",
+              "why": "the contribution is the terminal as the agent's world"
+            },
+            {
+              "paper": "An incident-mitigation agent operating a Kubernetes cluster",
+              "verdict": "world_terminal",
+              "why": "the served task is keeping a system running"
+            },
+            {
+              "paper": "A CTF agent solving challenges in a shell",
+              "verdict": "world_terminal",
+              "why": "the task is completed through OS interaction"
+            }
           ]
         },
         {
@@ -257,7 +613,11 @@
             "Desktop and mobile applications outside the browser are `world_apps`."
           ],
           "examples": [
-            { "paper": "A web agent executing JavaScript to complete site tasks", "verdict": "world_browser", "why": "the served task is acting on live websites" }
+            {
+              "paper": "A web agent executing JavaScript to complete site tasks",
+              "verdict": "world_browser",
+              "why": "the served task is acting on live websites"
+            }
           ]
         },
         {
@@ -274,8 +634,16 @@
             "Operating scientific software in pursuit of discovery is `world_research`; the browser is `world_browser`."
           ],
           "examples": [
-            { "paper": "A spreadsheet-manipulation agent automating office workflows", "verdict": "world_apps", "why": "the served task is operating the application" },
-            { "paper": "Multi-agent computer use acting across desktop applications", "verdict": "world_apps", "why": "the apps are the world being acted in" }
+            {
+              "paper": "A spreadsheet-manipulation agent automating office workflows",
+              "verdict": "world_apps",
+              "why": "the served task is operating the application"
+            },
+            {
+              "paper": "Multi-agent computer use acting across desktop applications",
+              "verdict": "world_apps",
+              "why": "the apps are the world being acted in"
+            }
           ]
         },
         {
@@ -291,7 +659,11 @@
             "Here the game is the world, and playing it is the task."
           ],
           "examples": [
-            { "paper": "An agent writing skills as code to survive in Minecraft (Voyager style)", "verdict": "world_game", "why": "code is the policy for acting in the game world" }
+            {
+              "paper": "An agent writing skills as code to survive in Minecraft (Voyager style)",
+              "verdict": "world_game",
+              "why": "code is the policy for acting in the game world"
+            }
           ]
         },
         {
@@ -308,8 +680,16 @@
             "Physical experimentation whose purpose is scientific discovery (self-driving labs) is `world_research`; here the purpose is acting and manipulation itself."
           ],
           "examples": [
-            { "paper": "Code-as-Policies style robot control", "verdict": "world_physical", "why": "code is the language for physical action" },
-            { "paper": "Synthesizing trajectories and environments for embodied code agents", "verdict": "world_physical + training-data tag", "why": "the downstream task is physical-world interaction" }
+            {
+              "paper": "Code-as-Policies style robot control",
+              "verdict": "world_physical",
+              "why": "code is the language for physical action"
+            },
+            {
+              "paper": "Synthesizing trajectories and environments for embodied code agents",
+              "verdict": "world_physical + training-data tag",
+              "why": "the downstream task is physical-world interaction"
+            }
           ]
         },
         {
@@ -329,9 +709,21 @@
             "Operating scientific or professional software for routine (non-discovery) tasks is `world_apps`."
           ],
           "examples": [
-            { "paper": "An MLE agent iterating on training pipelines (MLE-bench style)", "verdict": "world_research", "why": "the model is the product of experimental interaction" },
-            { "paper": "An AI-scientist agent running end-to-end experiments and reporting findings", "verdict": "world_research", "why": "the outcome is a scientific finding; code is the instrument" },
-            { "paper": "A Lean agent proving mathematical theorems", "verdict": "world_research", "why": "the purpose is mathematical knowledge, not software" }
+            {
+              "paper": "An MLE agent iterating on training pipelines (MLE-bench style)",
+              "verdict": "world_research",
+              "why": "the model is the product of experimental interaction"
+            },
+            {
+              "paper": "An AI-scientist agent running end-to-end experiments and reporting findings",
+              "verdict": "world_research",
+              "why": "the outcome is a scientific finding; code is the instrument"
+            },
+            {
+              "paper": "A Lean agent proving mathematical theorems",
+              "verdict": "world_research",
+              "why": "the purpose is mathematical knowledge, not software"
+            }
           ]
         }
       ]
