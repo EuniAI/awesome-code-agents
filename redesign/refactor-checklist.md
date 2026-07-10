@@ -81,6 +81,10 @@
           (documented for CI use; store as env var / Actions secret; renew yearly).
           Zero marginal cost; batch 20-50 papers per invocation to amortize startup;
           works identically under server cron and GitHub Actions.
+          Model: pass --model explicitly (never rely on the session default).
+          Migration runs on claude-sonnet-5 (accuracy first; whole-corpus cost is
+          trivial). Daily pipeline model decided by a golden-set A/B of haiku-4-5 vs
+          sonnet-5 after migration; downgrade only if accuracy ties.
       (b) Anthropic Messages API with structured outputs (pay-per-token, ~USD 1-2
           per month at current volume) as fallback if subscription limits ever bite;
       (c) keep LiteLLM proxy with a better model + structured output (if proxy quota
