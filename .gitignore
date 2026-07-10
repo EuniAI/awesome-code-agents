@@ -126,3 +126,6 @@ automation/state/processed.json
 automation/__pycache__/
 automation/**/__pycache__/
 .claude/
+
+# Runtime logs (not versioned; server writes these on every run)
+automation/logs/*.log
