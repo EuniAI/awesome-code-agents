@@ -1,74 +1,36 @@
 <div align="center">
-  <a href="https://euni.ai/" target="_blank"><img src="./docs/static/images/icon.png" alt="Euni logo" height="120"></a>
-  <h1 style="border-bottom: none;">
-    <b>Awesome Code Agents</b>
-  </h1>
 
-  <h3>The digital world we build. The real world we act in.</h3>
+<a href="https://euni.ai/"><img src="./docs/static/images/icon.png" alt="Euni logo" height="120"></a>
 
-  <p align="center">
-    <em>A curated list of frontier research papers and technical reports on autonomous code agents.</em>
-  </p>
+# Awesome Code Agents
 
-  <!-- Badges: primary row 1 (for-the-badge) -->
-  <p align="center">
-    <a href="https://github.com/EuniAI/awesome-code-agents/stargazers">
-      <img src="https://img.shields.io/github/stars/EuniAI/awesome-code-agents?style=for-the-badge&color=yellow" alt="Stars">
-    </a>
-    <a href="https://github.com/EuniAI/awesome-code-agents/forks">
-      <img src="https://img.shields.io/github/forks/EuniAI/awesome-code-agents?style=for-the-badge&color=blue" alt="Forks">
-    </a>
-    <a href="https://github.com/EuniAI/awesome-code-agents/graphs/contributors">
-      <img src="https://img.shields.io/github/contributors/EuniAI/awesome-code-agents?style=for-the-badge&color=orange" alt="Contributors">
-    </a>
-    <a href="https://opensource.org/licenses/Apache-2.0">
-      <img src="https://img.shields.io/badge/license-Apache--2.0-green?style=for-the-badge" alt="License: Apache 2.0">
-    </a>
-  </p>
+### The digital world we build. The real world we act in.
 
-  <!-- Badges: primary row 2 (for-the-badge) -->
-  <p align="center">
-    <a href="#-papers">
-      <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEuniAI%2Fawesome-code-agents%2Fmain%2Fdocs%2Fstatic%2Fbadges%2Fpapers.json&style=for-the-badge" alt="Papers">
-    </a>
-    <a href="https://github.com/EuniAI/awesome-code-agents/commits">
-      <img src="https://img.shields.io/github/last-commit/EuniAI/awesome-code-agents?style=for-the-badge&color=blueviolet" alt="Last Commit">
-    </a>
-    <a href="https://github.com/EuniAI/awesome-code-agents/graphs/commit-activity">
-      <img src="https://img.shields.io/github/commit-activity/m/EuniAI/awesome-code-agents?style=for-the-badge&color=blue&label=Commits" alt="Commit Activity">
-    </a>
-  </p>
+*A curated list of frontier research papers and technical reports on autonomous code agents.*
 
-  <!-- Badges: secondary (flat) -->
-  <p align="center">
-    <a href="https://awesome.re">
-      <img src="https://awesome.re/badge.svg" alt="Awesome">
-    </a>
-    <a href="https://github.com/EuniAI/awesome-code-agents/issues" target="_blank">
-      <img alt="Issues Closed" src="https://img.shields.io/github/issues-search?query=repo%3AEuniAI%2Fawesome-code-agents%20is%3Aclosed&label=Issues%20Closed&labelColor=%237d89b0&color=%235d6b98&style=flat">
-    </a>
-    <a href="https://github.com/EuniAI/awesome-code-agents/discussions" target="_blank">
-      <img alt="Discussion Posts" src="https://img.shields.io/github/discussions/EuniAI/awesome-code-agents?label=Discussions&labelColor=%239b8afb&color=%237a5af8&style=flat">
-    </a>
-    <a href="https://img.shields.io/badge/PRs-Welcome-red">
-      <img src="https://img.shields.io/badge/PRs-Welcome-red" alt="PRs Welcome">
-    </a>
-  </p>
+[![Stars](https://img.shields.io/github/stars/EuniAI/awesome-code-agents?style=for-the-badge&color=yellow)](https://github.com/EuniAI/awesome-code-agents/stargazers)
+[![Forks](https://img.shields.io/github/forks/EuniAI/awesome-code-agents?style=for-the-badge&color=blue)](https://github.com/EuniAI/awesome-code-agents/forks)
+[![Contributors](https://img.shields.io/github/contributors/EuniAI/awesome-code-agents?style=for-the-badge&color=orange)](https://github.com/EuniAI/awesome-code-agents/graphs/contributors)
+[![License](https://img.shields.io/badge/License-Apache_2.0-green?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
 
-  <!-- Project Links (brand-icon badges, below badges) -->
-  <p align="center">
-    <a href="https://euni.ai/"><img src="https://img.shields.io/badge/Website-2E3440?style=flat-square&logo=safari&logoColor=white" alt="Website"></a>
-    <a href="https://x.com/Euni_AI"><img src="https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white" alt="X"></a>
-    <a href="https://www.linkedin.com/company/euni-ai/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-    <a href="https://discord.gg/jDG4wqkKZj"><img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord"></a>
-    <a href="https://github.com/EuniAI/awesome-code-agents"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"></a>
-  </p>
+[![Papers](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEuniAI%2Fawesome-code-agents%2Fmain%2Fdocs%2Fstatic%2Fbadges%2Fpapers.json&style=for-the-badge)](#-papers)
+[![Last Commit](https://img.shields.io/github/last-commit/EuniAI/awesome-code-agents?style=for-the-badge&color=blueviolet)](https://github.com/EuniAI/awesome-code-agents/commits)
+[![Commits](https://img.shields.io/github/commit-activity/m/EuniAI/awesome-code-agents?style=for-the-badge&color=blue&label=Commits)](https://github.com/EuniAI/awesome-code-agents/graphs/commit-activity)
 
-  <p align="center">
-    <img src="docs/static/images/main_v1-min.png" alt="Awesome Code Agents" width="100%" style="border-radius: 15px; box-shadow: 0 4px 24px rgba(0,0,0,.1); margin: 5px 0;">
-  </p>
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Issues Closed](https://img.shields.io/github/issues-search?query=repo%3AEuniAI%2Fawesome-code-agents%20is%3Aclosed&label=Issues%20Closed&labelColor=%237d89b0&color=%235d6b98&style=flat)](https://github.com/EuniAI/awesome-code-agents/issues)
+[![Discussions](https://img.shields.io/github/discussions/EuniAI/awesome-code-agents?label=Discussions&labelColor=%239b8afb&color=%237a5af8&style=flat)](https://github.com/EuniAI/awesome-code-agents/discussions)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-red)](https://github.com/EuniAI/awesome-code-agents/pulls)
 
-  *Photo Credit: [Gemini-Nano-Banana-Pro🍌](https://deepmind.google/models/gemini-image/pro/)*.
+[![Website](https://img.shields.io/badge/Website-2E3440?style=flat-square&logo=safari&logoColor=white)](https://euni.ai/)
+[![X](https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/Euni_AI)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/euni-ai/)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/jDG4wqkKZj)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/EuniAI/awesome-code-agents)
+
+<img src="docs/static/images/main_v1-min.png" alt="Awesome Code Agents" width="100%">
+
+*Photo Credit: [Gemini-Nano-Banana-Pro🍌](https://deepmind.google/models/gemini-image/pro/)*.
 
 </div>
 
