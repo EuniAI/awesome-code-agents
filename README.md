@@ -57,7 +57,7 @@
 <!-- NAV:BEGIN -->
 - [🧱 Code as Artifact: Building the Digital World](#-code-as-artifact-building-the-digital-world)
   * [💻 General Software](#-general-software)
-    + [🏗️ End-to-End Development](#-end-to-end-development)
+    + [🏗️ Feature Development](#-feature-development)
     + [✏️ Code Generation & Completion](#-code-generation--completion)
     + [🧪 Testing & Verification](#-testing--verification)
     + [🐛 Debugging & Issue Resolution](#-debugging--issue-resolution)
@@ -92,15 +92,15 @@
 <!-- PAPERS:BEGIN -->
 ## 🧱 Code as Artifact: Building the Digital World
 
-> Agents whose job is to produce code.
+> Agents that build software, from one function to an entire system.
 
 ### 💻 General Software
 
 > Writing and maintaining general-purpose software.
 
-#### 🏗️ End-to-End Development
+#### 🏗️ Feature Development
 
-> Building whole projects or features end to end.
+> Implementing new functionality, from a feature to a whole app.
 
 *No papers yet.*
 

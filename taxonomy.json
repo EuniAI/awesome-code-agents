@@ -54,7 +54,7 @@
       "key": "artifact",
       "emoji": "🧱",
       "title": "Code as Artifact: Building the Digital World",
-      "blurb": "Agents whose job is to produce code.",
+      "blurb": "Agents that build software, from one function to an entire system.",
       "definition": "The paper serves a task whose ultimate purpose is producing code: a program, a patch, a query, a repository, hardware description code, a game codebase, graphics or animation code, a 3D/CAD program. The digital world is built of code. Tasks that improve, understand, safeguard, or enable code belong here too, because they all exist in service of producing code.",
       "includes": [
         "Tasks that write, complete, or extend code in any domain: general software, web applications, database queries, systems software, hardware description, games, graphics and animation, 3D/CAD.",
@@ -133,9 +133,9 @@
             {
               "key": "software_development",
               "emoji": "🏗️",
-              "title": "End-to-End Development",
-              "blurb": "Building whole projects or features end to end.",
-              "definition": "Tasks that carry software from requirements to working code end to end: whole projects built by agent teams, or complete features grown inside existing repositories.",
+              "title": "Feature Development",
+              "blurb": "Implementing new functionality, from a feature to a whole app.",
+              "definition": "Tasks that implement new functionality end to end, from a single feature grown inside an existing repository up to a whole application built by an agent team.",
               "includes": [
                 "Multi-agent development frameworks that run the full lifecycle (MetaGPT / ChatDev style).",
                 "Feature development in existing repositories (FEA-Bench / NoCode-bench style).",

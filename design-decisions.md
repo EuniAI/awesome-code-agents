@@ -6,7 +6,7 @@
 ## 2026-07-10: L3 settled: 10 software-lifecycle activities under General Software
 
 ### Structure (encoded in taxonomy.json with full definitions/boundaries/examples)
-`software_development` (End-to-End Development), `software_code_generation` (Code
+`software_development` (Feature Development), `software_code_generation` (Code
 Generation & Completion), `software_testing` (Testing & Verification),
 `software_debugging` (Debugging & Issue Resolution), `software_review` (Code Review),
 `software_comprehension` (Comprehension & Documentation), `software_maintenance`
