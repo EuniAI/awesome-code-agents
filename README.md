@@ -2,12 +2,12 @@
   <img src="./docs/static/images/icon.jpg" alt="Prometheus Logo" width="160">
   <h1 style="border-bottom: none;">
     <b><a href="https://euni.ai/" target="_blank">🤖 Awesome Code Agents</a></b><br>
-    Towards AI-Powered Software 3.0
+    Code as Everything
   </h1>
 
   <p align="center">
-    <strong>A curated list of research papers on autonomous code agents.</strong><br>
-    <em>Beyond coding — these agents are redefining how software changes the world.</em>
+    <strong>The digital world we build. The real world we act in.</strong><br>
+    <em>A curated list of frontier research papers on autonomous code agents.</em>
   </p>
 
   <!-- 🌍 Project Links -->
