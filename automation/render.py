@@ -46,12 +46,12 @@ def gh_slug(heading: str) -> str:
 # ── Paper entry rendering (badges) ────────────────────────────────────────────
 
 TAG_STYLES: dict[str, tuple[str, str]] = {
-    "benchmark":     ("Benchmark_%26_Dataset", "F4A261"),
-    "survey":        ("Survey",                "2A9D8F"),
-    "position":      ("Position_Paper",        "9B59B6"),
-    "empirical":     ("Empirical_Study",       "4A90D9"),
-    "model":         ("Model_Release",         "E76F51"),
-    "training-data": ("Training_Data",         "8AB17D"),
+    "benchmark":     ("Benchmark",       "F4A261"),
+    "survey":        ("Survey",          "2A9D8F"),
+    "position":      ("Position_Paper",  "9B59B6"),
+    "empirical":     ("Empirical_Study", "4A90D9"),
+    "model":         ("Model",           "E76F51"),
+    "training-data": ("Training_Data",   "8AB17D"),
 }
 
 
@@ -63,10 +63,11 @@ def _repo_slug(github_url: str) -> str:
 
 
 def _badge_paper(url: str) -> str:
-    return (
-        f"[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)]({url})"
-        if url else ""
-    )
+    """Paper badge; the arXiv logo only for actual arXiv links."""
+    if not url:
+        return ""
+    logo = "&logo=arxiv&logoColor=white" if "arxiv.org" in url.lower() else ""
+    return f"[![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge{logo})]({url})"
 
 
 def _badge_github(url: str) -> str:
@@ -77,9 +78,7 @@ def _badge_github(url: str) -> str:
     )
 
 
-def _badge_website(url: str) -> str:
-    if not url:
-        return ""
+def _website_label(url: str) -> str:
     parsed = urlparse(url)
     if parsed.path.strip("/"):
         label = parsed.path.strip("/").split("/")[-1]
@@ -87,12 +86,15 @@ def _badge_website(url: str) -> str:
     else:
         domain = re.sub(r"^www\.", "", parsed.netloc.lower())
         label = re.sub(r"\.(com|org|net|co|gov|edu|github|dev)(\.[a-z]{2})?$", "", domain)
-    label = label.replace("_", "-").upper()
-    return (
-        f"[![Website](https://img.shields.io/website?url={url}"
-        f"&up_message={label}&up_color=blue&down_message={label}&down_color=blue"
-        f"&style=for-the-badge)]({url})"
-    )
+    return label.replace("_", "-").upper() or "WEBSITE"
+
+
+def _badge_website(url: str) -> str:
+    """Static badge (no liveness ping) labeled from the site's domain or page name."""
+    if not url:
+        return ""
+    label = _website_label(url).replace("-", "--").replace(" ", "_")
+    return f"[![Website](https://img.shields.io/badge/{label}-blue?style=for-the-badge)]({url})"
 
 
 def _badge_tag(tag: str) -> str:
