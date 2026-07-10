@@ -72,10 +72,13 @@
 - [ ] Classifier LLM backend (researched 2026-07-10; orchestration stays python+cron
       either way; Claude Code routines/loop rejected: cloud routines cannot access the
       server's gitignored state, /loop needs a live session):
-      (a) Anthropic Messages API with structured outputs (guaranteed schema, ~USD 1-2
-          per month at current volume) <- recommended default;
-      (b) `claude -p` headless with --json-schema (runs on subscription via
-          `claude setup-token`, heavier per call, can read repo files itself);
+      (a) `claude -p` headless with --json-schema <- owner's preference, default.
+          Runs on the Claude subscription via a `claude setup-token` long-lived token
+          (documented for CI use; store as env var / Actions secret; renew yearly).
+          Zero marginal cost; batch 20-50 papers per invocation to amortize startup;
+          works identically under server cron and GitHub Actions.
+      (b) Anthropic Messages API with structured outputs (pay-per-token, ~USD 1-2
+          per month at current volume) as fallback if subscription limits ever bite;
       (c) keep LiteLLM proxy with a better model + structured output (if proxy quota
           is effectively free).
       The golden-set eval (P2) can A/B these on accuracy before committing.
