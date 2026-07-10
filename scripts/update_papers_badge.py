@@ -118,7 +118,7 @@ def update_readme_summary(total_papers: int) -> None:
     summary = (
         f"🔥 **We are actively tracking the frontier research of code agents.**<br>\n"
         f"🧹 *We periodically curate our collection, retaining only published papers and interesting arXiv preprints from the last six months.*<br>\n"
-        f"📚 *Currently collected:* **`{total_papers}` papers** — *(Last update: {today})*"
+        f"📚 *Currently collected:* **`{total_papers}` papers.** *(Last update: {today})*"
     )
 
     pattern = re.compile(
