@@ -106,7 +106,6 @@ def run_setup() -> None:
 def run_daily() -> None:
     """Full pipeline: crawl → enrich → classify → create review Issues."""
     from automation.crawler.arxiv import fetch_papers, fetch_date_range
-    from automation.enricher import papers_with_code as pwc
     from automation.enricher import metadata as meta_enricher
     from automation.classifier.llm import classify_papers
     from automation.review.create_issues import create_review_issues
@@ -181,7 +180,6 @@ def run_daily() -> None:
 
     # ── 4. Enrich ───────────────────────────────────────────────────────────
     logger.info("=== Step 3: Enriching %d papers ===", len(new_papers))
-    pwc.enrich_papers(new_papers)
     meta_enricher.enrich_papers(new_papers)
 
     # ── 5. Classify ─────────────────────────────────────────────────────────
@@ -234,7 +232,6 @@ def _run_incremental_backfill(cfg, state, owner: str, repo: str) -> None:
     Stops automatically once the cursor reaches today.
     """
     from automation.crawler.arxiv import fetch_date_range
-    from automation.enricher import papers_with_code as pwc
     from automation.enricher import metadata as meta_enricher
     from automation.classifier.llm import classify_papers
     from automation.review.create_issues import create_review_issues
@@ -270,7 +267,6 @@ def _run_incremental_backfill(cfg, state, owner: str, repo: str) -> None:
     logger.info("Backfill new papers: %d", len(new_papers))
 
     if new_papers:
-        pwc.enrich_papers(new_papers)
         meta_enricher.enrich_papers(new_papers)
         relevant, failed_ids = classify_papers(
             new_papers,
@@ -368,7 +364,6 @@ def run_finalize() -> None:
 def run_backfill(from_date: date, to_date: date) -> None:
     """Crawl a specific historical date range."""
     from automation.crawler.arxiv import fetch_date_range
-    from automation.enricher import papers_with_code as pwc
     from automation.enricher import metadata as meta_enricher
     from automation.classifier.llm import classify_papers
     from automation.review.create_issues import create_review_issues
@@ -394,7 +389,6 @@ def run_backfill(from_date: date, to_date: date) -> None:
         logger.info("Nothing new in this date range.")
         return
 
-    pwc.enrich_papers(new_papers)
     meta_enricher.enrich_papers(new_papers)
 
     relevant = classify_papers(

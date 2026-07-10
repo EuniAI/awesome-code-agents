@@ -23,6 +23,18 @@ def path_for(key: str) -> Path:
     return DATA_DIR / f"papers_{key}.yaml"
 
 
+def write_entries(key: str, entries: list[dict[str, Any]]) -> None:
+    """Write the full entry list for a leaf (newest first), matching repo YAML style."""
+    text = yaml.dump(
+        entries,
+        allow_unicode=True,
+        default_flow_style=False,
+        sort_keys=False,
+        width=120,
+    )
+    path_for(key).write_text(text, encoding="utf-8")
+
+
 def load_entries(key: str) -> list[dict[str, Any]]:
     path = path_for(key)
     if not path.exists():

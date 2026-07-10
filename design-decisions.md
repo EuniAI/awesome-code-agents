@@ -234,7 +234,7 @@ and its survey *Code as Agent Harness* (arXiv:2605.18747).
   Code-as-Action / Creative / Products) was **rejected**: the six groups came from five
   different axes, replicating the old disease at the top level.
 
-### Chosen skeleton (direction approved; details in redesign/taxonomy-v2.md)
+### Chosen skeleton (direction approved; full definitions now in taxonomy.json)
 - L1 axis = the role of code in the task: **Code as Artifact** (success measured on
   code-artifact quality) vs **Code as Agency** (success measured on external
   world-state change).
