@@ -5,6 +5,7 @@
 - **Always work directly on `main`**, no worktrees. The owner wants changes visible immediately without manual merging.
 - Commit and push after each logical change so nothing gets lost in a temporary branch.
 - **Do NOT add `Co-Authored-By: Claude` to commit messages.** Commits should only show the owner's account.
+- **This is an English-only repo.** Every file — including internal design docs, commit messages, and comments — must be written in English. No Chinese anywhere in the repo.
 
 ## What This Project Is
 

@@ -1,35 +1,42 @@
-# 分类体系 v2 重构规格(草案,对齐中)
+# Taxonomy v2 — Redesign Spec (draft, under alignment)
 
-> 状态:**DRAFT** — 骨架已与 owner 达成一致,标注 ⚖️ 的条目待 owner 拍板。
-> 决策沿革见 [design-decisions.md](../design-decisions.md)。
+> Status: **DRAFT** — the skeleton is agreed with the owner; items marked ⚖️ await the
+> owner's decision. Decision history in [design-decisions.md](../design-decisions.md).
 
-## Vision(list 的 thesis,置于 README 顶部)
+## Vision (the list's thesis, to sit at the top of the README)
 
-> **Code as Everything** — 从 agent 构建的数字世界,到它行动其中的真实世界。
+> **Code as Everything** — as agents reach into reality, code becomes the substrate the
+> world runs on: the medium through which intelligence *builds the digital world* and
+> *acts in the real one*.
 
-随着 agent 触及现实,代码正成为世界运行的核心要素,不再局限于 digital world。
-数字世界是真实世界的一部分——在终端/浏览器/游戏里行动同样是真实世界的活动。
+As agents touch reality, code is becoming a core element of how the world runs, no longer
+confined to the digital realm. The digital world is part of the real world — acting in a
+terminal, a browser, or a game is just as much real-world activity.
 
-## 0. 设计原则(已锁定)
+## 0. Design principles (locked)
 
-1. **每一层只用一条划分轴,同层类别概念平级、互斥**(单轴原则)。
-2. 仓库定位:**前沿研究论文与技术报告**,不收工业产品条目。
-3. 收录边界:agent 以写/执行代码为行动手段的一切好论文,不限领域(含 CAD、机器人等)。
-4. tag 是稀疏标注、非必填;正交维度一律进 tag,不占类别席位。
+1. **Each level uses exactly one classification axis; siblings at a level are
+   conceptually parallel and mutually exclusive** (single-axis rule).
+2. Repo scope: **frontier research papers and technical reports**; no industry product
+   entries.
+3. Inclusion boundary: any good paper where an agent uses writing/executing code as its
+   means of action, across all domains (including CAD, robotics, etc.).
+4. Tags are sparse and optional; every orthogonal dimension goes to tags, never a
+   category seat.
 
-## 1. 分类树(23 个叶子类别,原 36 个)
+## 1. Classification tree (23 leaf categories, down from 36)
 
-每层的划分轴显式声明;**叶子 = 分类器目标 = 数据文件**。
-
-内部机器 key 用短名 `artifact` / `agency`;README 展示用大标题。
+The dividing axis of each level is stated explicitly; **leaf = classifier target = data
+file**. Internal machine keys use short names `artifact` / `agency`; the README shows the
+full display titles.
 
 ```
-L1 轴:代码在任务中的角色(评价标准落在哪)
+L1 axis: the role of code in the task (where the evaluation lands)
 │
-├── 🧱 artifact — Code as Artifact: Building the Digital World(按代码工件质量评价)
-│   L2 轴:代码工件所属领域
-│   ├── software — 通用软件
-│   │   L3 轴:软件生命周期活动
+├── 🧱 artifact — Code as Artifact: Building the Digital World (evaluated on artifact quality)
+│   L2 axis: the domain of the code artifact
+│   ├── software — general software
+│   │   L3 axis: software-lifecycle activity
 │   │   ├── software_feature_development   ← feature_development (5)
 │   │   ├── software_code_authoring        ← code_generation (62) + code_completion (4)
 │   │   ├── software_testing               ← agentic_fuzzing (4) + issue_reproduction (17)
@@ -48,9 +55,9 @@ L1 轴:代码在任务中的角色(评价标准落在哪)
 │   │                                         + agentic_visualization (5) ⚖️
 │   └── cad_3d                             ← 3d_object_design (25)
 │
-└── 🌍 agency — Code as Agency: Acting on the Real World(按外部世界状态改变评价)
-    L2 轴:agent 所作用的世界(横跨数字与物理)
-    ├── world_terminal                     ← terminal (18,需按新定义清洗)
+└── 🌍 agency — Code as Agency: Acting in the Real World (evaluated on world-state change)
+    L2 axis: the world the agent acts in (spanning digital and physical)
+    ├── world_terminal                     ← terminal (18, needs cleanup to new definition)
     ├── world_browser                      ← code_executing_web (10)
     ├── world_game                         ← code_executing_game (5)
     ├── world_physical                     ← code_executing_embodied (23)
@@ -59,88 +66,101 @@ L1 轴:代码在任务中的角色(评价标准落在哪)
     └── world_science                      ← scientific_workflows (2)
 ```
 
-**溶解为 tag、逐篇重新归类的旧类别**(约 24 篇人工过一遍):
+**Old categories dissolved into tags, re-classified paper by paper** (~24 papers to
+review by hand):
 
-- `foundation_models` (4) → 按领域归入叶子类别 + tag `model`
-- `data_synthesis` (13) → 归入其目标领域 + tag `training-data`
-- `multimodal_coding` (7) → 逐篇按领域归类(screenshot-to-code → `web_generation`)
+- `foundation_models` (4) → into a domain leaf by topic + tag `model`
+- `data_synthesis` (13) → into its target domain + tag `training-data`
+- `multimodal_coding` (7) → per-paper by domain (screenshot-to-code → `web_generation`)
 
-**已删除**:`products` (44,2026-07-10 删除,git 可回溯)。
+**Deleted**: `products` (44, removed 2026-07-10, recoverable via git).
 
-### 关键判定规则(写入分类 prompt)
+### Key decision rules (to be written into the classifier prompt)
 
-- **product vs means**:看论文的成功度量落在哪——代码工件本身的质量/正确性 → product;
-  外部世界的状态/任务完成度 → means。
-- **game_generation vs world_game**:产出游戏代码 → 前者;用代码玩游戏 → 后者。
-- **world_terminal 收录标准**:贡献点在于终端/OS 作为 agent 的环境或世界
-  (terminal benchmark、terminal-specific 方法);只是恰好在终端里跑的 SWE 论文
-  归其任务类别。
+- **artifact vs agency**: look at where the paper's success is measured — quality/
+  correctness of the code artifact itself → artifact; state/task-completion of an
+  external world → agency.
+- **game_generation vs world_game**: produces game code → the former; plays a game by
+  executing code → the latter.
+- **world_terminal inclusion bar**: the contribution is the terminal/OS *as the agent's
+  environment or world* (terminal benchmarks, terminal-specific methods); a SWE paper
+  that merely happens to run in a terminal goes to its task category.
 
-## 2. Tag 体系(已锁定)
+## 2. Tag system (locked)
 
-稀疏标注,适用才打,都不适用 = 无 tag(普通方法论文):
+Sparse; tag if applicable; nothing applies = no tag (a plain method paper):
 
-| Facet | 值 | 规则 |
+| Facet | Values | Rule |
 |---|---|---|
-| 论文类型 | `survey` / `empirical` / `position` | 互斥,单选 |
-| 发布工件 | `benchmark` / `model` / `training-data` | 可多选,常共存 |
+| Paper type | `survey` / `empirical` / `position` | mutually exclusive, single |
+| Released artifact | `benchmark` / `model` / `training-data` | multi-select, often co-occur |
 
-YAML 中沿用现有 `tags:` 列表字段(渲染为徽章的机制已存在,无 schema 变更)。
+Reuses the existing `tags:` list field in YAML (badge rendering already exists; no schema
+change).
 
-## 3. 仓库文件架构变更
+## 3. Repo file-architecture changes
 
 ### config.yaml
 
-- 平铺 `categories:` → 嵌套 `taxonomy:`,每个节点含 `title`(README 节标题)、
-  `axis`(该层划分轴说明)、`definition`(喂给分类器的判定文案)、`children`。
-- 叶子节点的 key 即数据文件名后缀(`data/papers_{key}.yaml`)。
-- `tags:` 段改为两个 facet 的定义。
+- Flat `categories:` → nested `taxonomy:`; each node has `title` (README section
+  heading), `axis` (that level's dividing-axis note), `definition` (classifier-facing
+  text), and `children`.
+- A leaf node's key is the data-file suffix (`data/papers_{key}.yaml`).
+- The `tags:` block becomes the two facet definitions.
 
 ### data/
 
-- 36 个文件 → 23 个文件;合并/改名用脚本一次完成,溶解类别的约 24 篇人工归档。
-- 条目 schema 不变(title/authors/venue/summary/tags/links)。
+- 36 files → 23 files; merges/renames done in one scripted pass; the ~24 dissolved-
+  category papers filed by hand.
+- Entry schema unchanged (title/authors/venue/summary/tags/links).
 
 ### README.md
 
-- 结构由 `taxonomy:` 树驱动生成:L1 两大章 → L2 领域/世界节 → L3 生命周期小节
-  (仅 software 展开)。
-- Quick Navigation 同步由树生成。
-- ⚖️ 现有独立的 "🌍 Foundation Models" 节取消,相关论文归入领域类别、以 `model`
-  徽章标识(候补方案:保留一个由 tag 过滤自动生成的汇总节)。
+- Structure generated from the `taxonomy:` tree: L1 two chapters → L2 domain/world
+  sections → L3 lifecycle subsections (software only).
+- Quick Navigation generated from the same tree.
+- ⚖️ The current standalone "🌍 Foundation Models" section is removed; those papers go
+  into their domain categories, flagged by the `model` badge (fallback: keep one section
+  auto-generated by tag filter).
 
 ### scripts/
 
-- `render_papers.py`:从遍历平铺类别改为遍历 taxonomy 树(节标题、层级、顺序均取自树)。
-- `update_papers_badge.py`:无实质变更(继续数 data/*.yaml)。
+- `render_papers.py`: iterate the taxonomy tree instead of the flat category list
+  (section titles, depth, and order all taken from the tree).
+- `update_papers_badge.py`: no material change (still counts data/*.yaml).
 
-### automation/(分类器侧)
+### automation/ (classifier side)
 
-- `classifier/llm.py` prompt 重写为**层级式判定**:相关性 → L1 二选一(附评价标准
-  规则)→ 分支内叶子类别(只呈现同层兄弟的定义,选择空间从 36 平铺降为 2→8/7→9)
-  → 稀疏 tags。每个易混边界配 few-shot 示例。
-- LLM 失败率 / retry 队列膨胀是独立的第二期工作,不在本次分类重构范围,但重构后
-  队列需重置(见迁移计划)。
+- Rewrite the `classifier/llm.py` prompt as a **hierarchical decision**: relevance → L1
+  binary choice (with the where-does-evaluation-land rule) → leaf within the branch
+  (showing only sibling definitions, shrinking the choice space from a flat 36 to
+  2→8/7→9) → sparse tags. Each confusable boundary gets a few-shot example.
+- LLM failure rate / retry-queue bloat is a separate second phase, out of scope for this
+  classification redesign, but the queue must be reset afterward (see migration plan).
 
-## 4. 迁移计划(依赖顺序)
+## 4. Migration plan (dependency order)
 
-1. **定稿本规格**(消掉全部 ⚖️)。
-2. config.yaml 写入新 taxonomy + tags 定义。
-3. 脚本迁移 data/ 文件(机械合并/改名),同轮人工归档 24 篇溶解论文、
-   清洗 terminal 18 篇(⚖️ security 9 篇、visualization 5 篇按拍板结果处理)。
-4. 改 `render_papers.py`,重生成 README(结构 + Quick Navigation + 计数)。
-5. 重写分类器 prompt + few-shot,小样本回测(用已归档论文抽样验证分类一致性)。
-6. **状态与积压处理** ⚖️:271 个 pending GitHub Issues 按旧分类生成,建议全部关闭
-   作废;705 条 retry 队列清空;涉及论文重新走新分类器。`processed_ids` 保留防重。
-7. 恢复 cron。
+1. **Finalize this spec** (clear all ⚖️).
+2. Write the new taxonomy + tag definitions into config.yaml.
+3. Script the data/ file migration (mechanical merge/rename); in the same pass, hand-file
+   the 24 dissolved papers and clean up the 18 terminal papers (⚖️ handle the 9 security
+   and 5 visualization papers per the decisions).
+4. Update `render_papers.py`; regenerate the README (structure + Quick Navigation + count).
+5. Rewrite the classifier prompt + few-shot; small-sample back-test (sample already-filed
+   papers to check classification consistency).
+6. **State and backlog handling** ⚖️: the 271 pending GitHub Issues were generated under
+   the old scheme — recommend closing them all as void; clear the 705-entry retry queue;
+   re-run affected papers through the new classifier. Keep `processed_ids` for dedup.
+7. Resume cron.
 
-## 5. 待拍板清单 ⚖️
+## 5. Decisions pending ⚖️
 
-| # | 问题 | 选项 | 倾向 |
+| # | Question | Options | Leaning |
 |---|---|---|---|
-| 1 | security 9 篇 | 保留 `software_security` 叶子 vs 按实际任务打散(fuzzing→testing、patching→debugging) | 打散更纯粹,保留更省事 |
-| 2 | visualization 5 篇 | `graphics_animation`(图是工件) vs `world_data`(图是分析副产品) | 归 graphics_animation,迁移时逐篇复核 |
-| 3 | code_authoring 66 篇要不要拆 | 现在拆 vs 打完 artifact tag 看分布再定 | 先不拆 |
-| 4 | Foundation Models README 节 | 取消(徽章标识) vs tag 驱动自动汇总节 | 取消 |
-| 5 | 积压处理 | 271 pending Issues 全关 + retry 清空重跑 vs 逐个救 | 全关重跑 |
-| 6 | 叶子 key 命名 | `software_*` / `world_*` 前缀方案 | 如上;可整体换 |
+| 1 | security, 9 papers | keep a `software_security` leaf vs split by actual task (fuzzing→testing, patching→debugging) | split is purer, keeping is easier |
+| 2 | visualization, 5 papers | `graphics_animation` (chart is the artifact) vs `world_data` (chart is an analysis by-product) | graphics_animation, re-check each on migration |
+| 3 | code_authoring, 66 papers | split now vs wait for artifact tags, then decide by distribution | don't split yet |
+| 4 | Foundation Models README section | remove (badge only) vs a tag-driven auto section | remove |
+| 5 | backlog handling | close all 271 pending Issues + clear retry + re-run vs rescue one by one | close & re-run |
+| 6 | leaf key naming | the `software_*` / `world_*` prefix scheme | as above; can rename wholesale |
+```
