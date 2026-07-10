@@ -2,6 +2,14 @@
   "name": "Awesome Code Agents Taxonomy",
   "description": "Authoritative category system for this repo. Single source of truth: automation/config.yaml is synced from it, and it drives both the README structure and the auto-classifier. Rationale and history: design-decisions.md.",
   "vision": "Code as Everything. Every strong paper in which an agent writes or runs code, across all domains. Code is either the thing being built or the language of action; that split is Level 1.",
+  "scope": {
+    "collects": "Agent-related papers in which an agent writes or executes code, plus resource papers (datasets, models, benchmarks, surveys) that serve such agents.",
+    "excludes": [
+      "Pure LLM reasoning that merely emits code as a reasoning aid (PAL/PoT style, code-interpreter math solving) with no agentic task: not agent papers, out of scope.",
+      "Industry products: this list collects frontier research papers and technical reports only.",
+      "Agent papers where code is neither the product nor the language of action."
+    ]
+  },
   "principles": [
     "Categories classify the task a paper serves; tags record the paper's contribution form (survey, benchmark, model, training-data). The two axes never mix.",
     "Single-axis rule: each level divides on exactly one axis; sibling nodes are conceptually parallel and mutually exclusive.",
@@ -21,8 +29,8 @@
   },
   "levels": {
     "L1": "the task the paper serves: is its ultimate purpose producing code, or is code the tool for completing a task in the world",
-    "L2": "artifact branch: the domain of the code being built | agency branch: the world the agent acts in",
-    "L3": "software-lifecycle activity (only the general-software node under artifact expands)"
+    "L2": "artifact branch: the domain of the code being built (8) | agency branch: the world the agent acts in (6)",
+    "L3": "software-lifecycle activity (only general-software under artifact expands)"
   },
   "axis": "the ultimate purpose of the task the paper serves",
   "master_test": [
@@ -56,7 +64,141 @@
         { "paper": "Synthesizing trajectories and environments to train issue-resolution agents", "verdict": "artifact + training-data tag", "why": "the downstream task is issue resolution, whose purpose is producing code" }
       ],
       "axis": "the domain of the code being built",
-      "children": []
+      "children": [
+        {
+          "key": "software",
+          "emoji": "💻",
+          "title": "General Software",
+          "definition": "Tasks whose purpose is producing and sustaining general-purpose software: writing new code, and all the lifecycle work that improves, understands, safeguards, and enables it. The only Level-2 node that expands into Level 3 (software-lifecycle activities).",
+          "includes": [
+            "Writing, completing, and extending programs and repositories; feature development; program synthesis for general code.",
+            "Testing and fuzzing; bug reproduction, localization, and repair (issue resolution); code review; code comprehension and repo QA; maintenance, refactoring, migration, and performance optimization.",
+            "Enabling work: environment setup, build and CI, git operations; formal verification of software correctness.",
+            "Resource papers serving any of the above: issue-resolution training data, code foundation models, SWE benchmarks, surveys of software agents."
+          ],
+          "boundary": [
+            "If the code being built clearly belongs to a sibling domain (web, databases, systems, hardware, games, graphics, 3D/CAD), it goes there; this node is the home of domain-agnostic software work.",
+            "Terminal or OS interaction whose purpose is producing code (running tests, setting up environments) stays here; interaction for its own sake is `world_terminal`.",
+            "Formal verification of software stays here; pure mathematical theorem proving belongs to `world_research`."
+          ],
+          "examples": [
+            { "paper": "SWE-bench-style issue resolution", "verdict": "software", "why": "repairing a general-purpose repository" },
+            { "paper": "HumanEval-style function generation", "verdict": "software", "why": "producing domain-agnostic program code" },
+            { "paper": "An agent that configures a repo's environment so tests can run", "verdict": "software", "why": "enabling work in service of code production" }
+          ]
+        },
+        {
+          "key": "web",
+          "emoji": "🌐",
+          "title": "Web Applications",
+          "definition": "Tasks whose purpose is producing web-facing code: front-end interfaces, websites, back-end services and APIs.",
+          "includes": [
+            "Website and UI generation, including screenshot-to-code and design-to-code (multimodal inputs).",
+            "Back-end service, REST API, and full-stack application generation."
+          ],
+          "boundary": [
+            "Operating a browser to complete tasks on the live web is `world_browser`; here the web code itself is the deliverable.",
+            "Charts, SVG, and animation code not tied to a web application belong to `graphics`."
+          ],
+          "examples": [
+            { "paper": "Screenshot-to-code UI generation", "verdict": "web", "why": "delivers front-end code from a visual spec" },
+            { "paper": "Autonomous REST API scaffolding", "verdict": "web", "why": "delivers back-end code" }
+          ]
+        },
+        {
+          "key": "database",
+          "emoji": "🗄️",
+          "title": "Databases",
+          "definition": "Tasks whose purpose is producing database code: SQL queries, schemas, and database-centric programs.",
+          "includes": [
+            "Text-to-SQL and query synthesis; schema design; database-centric program generation."
+          ],
+          "boundary": [
+            "Operating or tuning a running database service is systems operation and belongs to `world_terminal`; here the query or schema is the deliverable."
+          ],
+          "examples": [
+            { "paper": "Spider-style text-to-SQL", "verdict": "database", "why": "delivers a query" }
+          ]
+        },
+        {
+          "key": "systems",
+          "emoji": "⚙️",
+          "title": "Systems",
+          "definition": "Tasks whose purpose is producing systems-level code: operating systems, kernels, compilers, networking, and distributed systems.",
+          "includes": [
+            "Kernel and OS component code; compiler and runtime code; network protocol implementations; distributed-systems code."
+          ],
+          "boundary": [
+            "Administering or operating a running system is `world_terminal`; here the systems code is the deliverable."
+          ],
+          "examples": [
+            { "paper": "Kernel patch generation with agents", "verdict": "systems", "why": "delivers OS-level code" }
+          ]
+        },
+        {
+          "key": "hardware",
+          "emoji": "🔌",
+          "title": "Hardware",
+          "definition": "Tasks whose purpose is producing hardware description code: RTL/HDL, chip design, and hardware verification.",
+          "includes": [
+            "Verilog/VHDL generation; chip design agents; hardware verification via code."
+          ],
+          "boundary": [
+            "Controlling physical devices at runtime is `world_physical`; here the hardware description is the deliverable."
+          ],
+          "examples": [
+            { "paper": "Verilog module generation from natural language", "verdict": "hardware", "why": "delivers RTL code" }
+          ]
+        },
+        {
+          "key": "game",
+          "emoji": "🎮",
+          "title": "Games",
+          "definition": "Tasks whose purpose is producing game code: game logic, levels as code, whole game codebases.",
+          "includes": [
+            "Text-to-game generation; game-logic and level-as-code synthesis; game codebase engineering."
+          ],
+          "boundary": [
+            "Playing a game by executing code is `world_game`; playing a game in order to test it serves the game's code and stays in `artifact` (here or software testing).",
+            "Building the game code is the deliverable here."
+          ],
+          "examples": [
+            { "paper": "Generating a playable game from a description", "verdict": "game", "why": "delivers the game's codebase" }
+          ]
+        },
+        {
+          "key": "graphics",
+          "emoji": "🎨",
+          "title": "Graphics & Animation",
+          "definition": "Tasks whose purpose is producing code that renders visual artifacts: vector graphics, animations, and charts from specification.",
+          "includes": [
+            "SVG and vector graphic generation; animation code (e.g. manim-style); chart-from-spec visualization code."
+          ],
+          "boundary": [
+            "Exploring data to deliver insight (charts as by-product) is `world_research`; here the visual artifact's code is the deliverable, produced from a given specification."
+          ],
+          "examples": [
+            { "paper": "SVG icon generation", "verdict": "graphics", "why": "delivers vector-graphic code" },
+            { "paper": "Math-animation code generation from a script", "verdict": "graphics", "why": "delivers animation code from a spec" }
+          ]
+        },
+        {
+          "key": "cad",
+          "emoji": "🧊",
+          "title": "3D & CAD",
+          "definition": "Tasks whose purpose is producing code that builds three-dimensional artifacts: CAD programs, parametric models, 3D scenes.",
+          "includes": [
+            "Text-to-CAD program generation; parametric 3D modeling via code; 3D scene construction as code."
+          ],
+          "boundary": [
+            "Operating CAD or design software as an application task is `world_apps`; here the 3D artifact's code is the deliverable.",
+            "Using 3D artifacts to act in the physical world is `world_physical`."
+          ],
+          "examples": [
+            { "paper": "Generating parametric CAD programs from text", "verdict": "cad", "why": "delivers a 3D model as code" }
+          ]
+        }
+      ]
     },
     {
       "key": "agency",
@@ -64,7 +206,7 @@
       "title": "Code as Agency: Acting in the Real World",
       "definition": "The paper serves a task whose goal is to get something done in the world through interaction, where code is the tool of action rather than the deliverable. The environment may be digital (a terminal, a browser, a game) or physical (a robot, a lab); the digital world is part of the real world, and acting there has real consequences. The task's product is a completed interaction: a job done in an OS, a game won, a robot acting, an experiment run, a model trained, a discovery made.",
       "includes": [
-        "Tasks where agents operate terminals and operating systems, drive web browsers, play games, or control robots and other physical systems.",
+        "Tasks where agents operate terminals and operating systems, drive web browsers, operate software applications, play games, or control robots and other physical systems.",
         "Tasks where agents do research through interaction: data analysis, machine-learning engineering (training a model is itself a real-world task; the model is the product of that interaction, not a digital-world code artifact), scientific discovery.",
         "Resource papers (datasets, models, benchmarks, surveys) whose downstream task is one of the above, e.g. synthesizing trajectories and environments for code-as-policy embodied agents."
       ],
@@ -80,7 +222,119 @@
         { "paper": "A survey covering both branches but written to advocate the code-as-action paradigm (Code as Agent Harness style)", "verdict": "agency + survey tag", "why": "the purpose it serves is the second class of tasks" }
       ],
       "axis": "the world the agent acts in (digital or physical)",
-      "children": []
+      "children": [
+        {
+          "key": "world_terminal",
+          "emoji": "🖥️",
+          "title": "Terminals & Operating Systems",
+          "definition": "Agents act in shells and operating systems to get jobs done; shell commands and scripts are the language of action, and the contribution is about the terminal/OS as the agent's world.",
+          "includes": [
+            "Terminal task benchmarks and terminal-native agents; enterprise and personal automation through the shell.",
+            "System administration and operations: DevOps, SRE, incident mitigation, live-service and database operations.",
+            "Offensive-security tasks run in terminals: CTF, penetration testing."
+          ],
+          "boundary": [
+            "Terminal interaction whose purpose is producing code (running tests to fix a repo, setting up build environments) is `artifact/software`; a SWE paper that merely happens to run in a shell does not belong here.",
+            "GUI applications are `world_apps`; the browser is `world_browser`."
+          ],
+          "examples": [
+            { "paper": "A benchmark of real-world terminal tasks (TerminalWorld style)", "verdict": "world_terminal + benchmark tag", "why": "the contribution is the terminal as the agent's world" },
+            { "paper": "An incident-mitigation agent operating a Kubernetes cluster", "verdict": "world_terminal", "why": "the served task is keeping a system running" },
+            { "paper": "A CTF agent solving challenges in a shell", "verdict": "world_terminal", "why": "the task is completed through OS interaction" }
+          ]
+        },
+        {
+          "key": "world_browser",
+          "emoji": "🧭",
+          "title": "Browsers & the Web",
+          "definition": "Agents act on the live web through browsers, using code-level control (scripts, APIs, DOM actions) as the language of action.",
+          "includes": [
+            "Web task completion and browsing agents that act by executing code.",
+            "Benchmarks and resources for code-driven web agents."
+          ],
+          "boundary": [
+            "Building web applications is `artifact/web`; here the live web is the world being acted in.",
+            "Desktop and mobile applications outside the browser are `world_apps`."
+          ],
+          "examples": [
+            { "paper": "A web agent executing JavaScript to complete site tasks", "verdict": "world_browser", "why": "the served task is acting on live websites" }
+          ]
+        },
+        {
+          "key": "world_apps",
+          "emoji": "🧰",
+          "title": "Software Applications",
+          "definition": "Agents operate professional and everyday software applications through scripting interfaces, APIs, or generated control code: office suites, design tools, simulators, enterprise systems, desktop and mobile apps.",
+          "includes": [
+            "Office and spreadsheet automation; design and media tools (Blender, Photoshop style) operated as tasks; enterprise systems.",
+            "Computer-use agents that act through generated code; mobile and desktop app operation."
+          ],
+          "boundary": [
+            "If operating the app delivers a code-built artifact (a 3D model from Blender scripting), it belongs to the matching `artifact` domain (e.g. cad).",
+            "Operating scientific software in pursuit of discovery is `world_research`; the browser is `world_browser`."
+          ],
+          "examples": [
+            { "paper": "A spreadsheet-manipulation agent automating office workflows", "verdict": "world_apps", "why": "the served task is operating the application" },
+            { "paper": "Multi-agent computer use acting across desktop applications", "verdict": "world_apps", "why": "the apps are the world being acted in" }
+          ]
+        },
+        {
+          "key": "world_game",
+          "emoji": "🕹️",
+          "title": "Game Worlds",
+          "definition": "Agents act inside game environments, using code as the policy language to play, explore, and win.",
+          "includes": [
+            "Code-as-policy game playing (Voyager style); game environments as benchmarks for code-driven agents."
+          ],
+          "boundary": [
+            "Producing a game's codebase is `artifact/game`; playing a game in order to test it also serves the game's code and belongs to `artifact`.",
+            "Here the game is the world, and playing it is the task."
+          ],
+          "examples": [
+            { "paper": "An agent writing skills as code to survive in Minecraft (Voyager style)", "verdict": "world_game", "why": "code is the policy for acting in the game world" }
+          ]
+        },
+        {
+          "key": "world_physical",
+          "emoji": "🤖",
+          "title": "The Physical World",
+          "definition": "Agents act on physical systems; code is the policy and control language for robots, devices, and other embodied platforms.",
+          "includes": [
+            "Code-as-policy robot control; embodied agents that write executable policies; device and machine control through code.",
+            "Resource papers for embodied code agents, e.g. trajectory and environment synthesis."
+          ],
+          "boundary": [
+            "Designing hardware description code is `artifact/hardware`; simulated game environments are `world_game`.",
+            "Physical experimentation whose purpose is scientific discovery (self-driving labs) is `world_research`; here the purpose is acting and manipulation itself."
+          ],
+          "examples": [
+            { "paper": "Code-as-Policies style robot control", "verdict": "world_physical", "why": "code is the language for physical action" },
+            { "paper": "Synthesizing trajectories and environments for embodied code agents", "verdict": "world_physical + training-data tag", "why": "the downstream task is physical-world interaction" }
+          ]
+        },
+        {
+          "key": "world_research",
+          "emoji": "🔬",
+          "title": "Research & Discovery",
+          "definition": "Agents pursue knowledge through interaction: exploring data, running machine-learning experiments, and driving scientific discovery. Code is the instrument; the outcome is an insight, a model, or a finding.",
+          "includes": [
+            "Autonomous data analysis and exploration; data-science agents whose deliverable is insight.",
+            "Machine-learning engineering agents (MLE-bench style): training, tuning, and experiment management through interaction.",
+            "Scientific-discovery agents: operating scientific software and simulators for discovery, self-driving labs, AI-scientist style end-to-end research.",
+            "Pure mathematical theorem proving (Lean/Coq agents whose purpose is mathematical knowledge)."
+          ],
+          "boundary": [
+            "Chart-from-spec code generation is `artifact/graphics`; here charts are by-products of pursuing insight.",
+            "Formal verification of software correctness is `artifact/software`.",
+            "Operating scientific or professional software for routine (non-discovery) tasks is `world_apps`."
+          ],
+          "examples": [
+            { "paper": "An MLE agent iterating on training pipelines (MLE-bench style)", "verdict": "world_research", "why": "the model is the product of experimental interaction" },
+            { "paper": "An AI-scientist agent running end-to-end experiments and reporting findings", "verdict": "world_research", "why": "the outcome is a scientific finding; code is the instrument" },
+            { "paper": "A Lean agent proving mathematical theorems", "verdict": "world_research", "why": "the purpose is mathematical knowledge, not software" }
+          ]
+        }
+      ]
     }
   ]
 }

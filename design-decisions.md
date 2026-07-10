@@ -3,6 +3,38 @@
 > Durable record of non-trivial design decisions for this repo. Newest first.
 > This repo is English-only — keep every entry in English.
 
+## 2026-07-10: L2 settled: 8 artifact domains + 6 agency worlds
+
+### Structure (encoded in taxonomy.json with full definitions/boundaries/examples)
+- **artifact** (axis: the domain of the code being built): `software` (General Software,
+  the only node that expands into L3), `web` (Web Applications), `database` (Databases),
+  `systems` (Systems), `hardware` (Hardware), `game` (Games), `graphics` (Graphics &
+  Animation), `cad` (3D & CAD).
+- **agency** (axis: the world the agent acts in): `world_terminal` (Terminals & Operating
+  Systems), `world_browser` (Browsers & the Web), `world_apps` (Software Applications),
+  `world_game` (Game Worlds), `world_physical` (The Physical World), `world_research`
+  (Research & Discovery).
+- Agency keys carry a `world_` prefix: it guarantees key uniqueness against artifact
+  domains (web vs world_browser, game vs world_game) and encodes the branch in data
+  filenames.
+
+### Rulings in this round (owner)
+- Titles: "General Software" (not Software), "Systems" (not Systems Software).
+- **`world_apps` added** (title: Software Applications): agents operating professional
+  and everyday software (office, design tools, simulators, enterprise, desktop/mobile)
+  through code. Fills a real gap; the papers mis-filed into old `terminal` (e.g.
+  Multi-Agent Computer Use) land here.
+- **Research merge confirmed**: data analysis + ML engineering + scientific discovery
+  form one world, `world_research` (they share one purpose: knowledge through
+  interaction; code is the instrument).
+- **Theorem proving split**: formal verification of software -> artifact/software; pure
+  mathematical theorem proving -> world_research.
+- **Scope exclusion**: non-agent papers are out. Pure LLM reasoning that merely emits
+  code as a reasoning aid (PAL/PoT, code-interpreter math) is not collected. Recorded in
+  taxonomy.json `scope.excludes`.
+- DevOps/SRE/live-ops (incl. database tuning) live under `world_terminal`; game-testing
+  by playing serves the game's code and stays in artifact.
+
 ## 2026-07-10: L1 sealed: four boundary rulings by the owner
 
 All four reduce to one unified test: **is the served task's ultimate purpose producing
