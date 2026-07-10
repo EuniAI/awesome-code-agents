@@ -24,6 +24,7 @@ Paper:
   title     str
   authors   list[str]
   venue     str
+  published str            # first-publication date YYYY-MM-DD (drives the 6-month curation)
   links     {paper, github, website}
   category  str            # a taxonomy leaf key (the single classification field)
   tags      list[str]      # paper_type + released_artifact values
@@ -32,7 +33,10 @@ Paper:
 
 Storage: one YAML file per taxonomy leaf, `data/papers_{leaf}.yaml`, newest first (fresh
 folder, 23 files). `category` is carried in each record too, so re-classification is a
-field change plus a `storage.move`, never manual file surgery. `storage` is the only
+field change plus a save, never manual file surgery. Abstracts are raw source material,
+not curated content: they live in a sidecar `data/abstracts.json` (id -> abstract),
+fetched once and reused forever (re-classification when the taxonomy evolves, golden-set
+evals, future search) instead of re-crawling arXiv each time. `storage` is the only
 module that knows this layout.
 
 ## Modules (flat, under `automation/`)

@@ -18,6 +18,7 @@ class Paper:
     title: str
     authors: list[str] = field(default_factory=list)
     venue: str = ""
+    published: str = ""          # first-publication date, YYYY-MM-DD (drives curation)
     links: dict[str, str] = field(default_factory=dict)   # paper / github / website
     category: str = ""           # a taxonomy leaf key
     tags: list[str] = field(default_factory=list)          # paper_type + released_artifact values
@@ -48,6 +49,7 @@ class Paper:
             title=(d.get("title") or "").strip(),
             authors=authors,
             venue=(d.get("venue") or "").strip(),
+            published=(d.get("published") or "").strip(),
             links=links,
             category=(d.get("category") or "").strip(),
             tags=tags,
@@ -63,6 +65,8 @@ class Paper:
             "venue": self.venue,
             "category": self.category,
         }
+        if self.published:
+            d["published"] = self.published
         if self.tags:
             d["tags"] = self.tags
         if self.summary:

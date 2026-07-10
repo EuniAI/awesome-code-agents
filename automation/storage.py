@@ -8,6 +8,7 @@ save, never manual file surgery. Identity and dedup key is Paper.id.
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import yaml
@@ -66,3 +67,26 @@ def all_ids(leaf_keys: list[str], data_dir: Path = DATA_DIR) -> set[str]:
     for key in leaf_keys:
         ids.update(p.id for p in load(key, data_dir))
     return ids
+
+
+# ── Abstract sidecar ──────────────────────────────────────────────────────────
+# Raw source material (id -> abstract), kept out of the human-facing curated YAML.
+# Fetched once, reused forever: re-classification, golden-set evals, future search.
+
+def _abstracts_path(data_dir: Path = DATA_DIR) -> Path:
+    return data_dir / "abstracts.json"
+
+
+def load_abstracts(data_dir: Path = DATA_DIR) -> dict[str, str]:
+    path = _abstracts_path(data_dir)
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def save_abstracts(abstracts: dict[str, str], data_dir: Path = DATA_DIR) -> None:
+    data_dir.mkdir(parents=True, exist_ok=True)
+    _abstracts_path(data_dir).write_text(
+        json.dumps(abstracts, indent=1, ensure_ascii=False, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )

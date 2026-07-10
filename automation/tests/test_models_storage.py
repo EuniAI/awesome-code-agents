@@ -51,6 +51,24 @@ def test_paper_dict_round_trip_and_legacy_tolerance():
     assert r.id == "2601.00001"
 
 
+def test_published_field_round_trip():
+    p = _paper()
+    p.published = "2026-05-28"
+    q = Paper.from_dict(p.to_dict())
+    assert q.published == "2026-05-28"
+    # absent in old files -> empty, and omitted from serialized dict when empty
+    assert "published" not in _paper().to_dict()
+
+
+def test_abstract_sidecar_round_trip():
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Path(tmp)
+        assert storage.load_abstracts(d) == {}
+        storage.save_abstracts({"2605.22535": "We present TerminalWorld..."}, d)
+        got = storage.load_abstracts(d)
+        assert got["2605.22535"].startswith("We present")
+
+
 def test_storage_round_trip_add_dedup_and_all_ids():
     with tempfile.TemporaryDirectory() as tmp:
         d = Path(tmp)
