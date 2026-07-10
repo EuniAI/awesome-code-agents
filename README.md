@@ -4,11 +4,9 @@
 
 # Awesome Code Agents
 
-### Autonomous Code Agents Across Every Domain
+### The Digital World We Build. The Real World We Act In.
 
-*The digital world we build. The real world we act in.*
-<br>
-A curated list of frontier research papers and technical reports on autonomous code agents.
+*A curated list of frontier research papers and technical reports on autonomous code agents.*
 
 [![Stars](https://img.shields.io/github/stars/EuniAI/awesome-code-agents?style=for-the-badge&color=yellow)](https://github.com/EuniAI/awesome-code-agents/stargazers)
 [![Forks](https://img.shields.io/github/forks/EuniAI/awesome-code-agents?style=for-the-badge&color=blue)](https://github.com/EuniAI/awesome-code-agents/forks)
