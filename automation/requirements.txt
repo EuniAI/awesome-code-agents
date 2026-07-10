@@ -1,5 +1,3 @@
-arxiv>=2.1.0
-requests>=2.31.0
+# Pipeline dependencies. A package is listed only when a live module imports it;
+# re-add arxiv/requests/etc. as sources/enrich are rebuilt.
 pyyaml>=6.0
-python-dotenv>=1.0.0
-openai>=1.0.0

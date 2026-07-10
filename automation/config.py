@@ -1,6 +1,7 @@
 """
-Operational configuration only (repo, inbox, arxiv, llm, schedule).
-Category definitions live in taxonomy.json, never here.
+Operational configuration. A key exists here only when a live module consumes it
+(currently: repo identity and the inbox issue number). Category definitions live in
+taxonomy.json, never here; arxiv crawl settings return when sources.py is rebuilt.
 """
 
 from __future__ import annotations
