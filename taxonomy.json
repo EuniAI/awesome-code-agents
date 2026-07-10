@@ -134,27 +134,27 @@
               "key": "software_development",
               "emoji": "🏗️",
               "title": "Feature Development",
-              "blurb": "Implementing new functionality, from a feature to a whole app.",
-              "definition": "Tasks that implement new functionality end to end, from a single feature grown inside an existing repository up to a whole application built by an agent team.",
+              "blurb": "Adding new features to an existing codebase.",
+              "definition": "Tasks that implement new, described functionality inside an existing codebase, integrating a feature or requirement into code that is already there.",
               "includes": [
-                "Multi-agent development frameworks that run the full lifecycle (MetaGPT / ChatDev style).",
-                "Feature development in existing repositories (FEA-Bench / NoCode-bench style).",
-                "Requirements elicitation and design-to-implementation work."
+                "Natural-language-driven feature addition (NoCode-bench style).",
+                "Repository-level feature implementation (FEA-Bench style).",
+                "Requirement-to-feature development inside existing projects."
               ],
               "boundary": [
-                "Producing a targeted code unit from a given spec or context is `software_code_generation`; here the scope is a project or feature, not a unit.",
+                "Generating a whole repository or application from scratch is `software_code_generation`; here the codebase already exists and a feature is added to it.",
                 "Fixing a reported defect is `software_debugging`."
               ],
               "examples": [
                 {
-                  "paper": "ChatDev-style communicative agents building software",
-                  "verdict": "software_development",
-                  "why": "agent team runs the whole lifecycle"
-                },
-                {
                   "paper": "FEA-Bench feature-implementation benchmark",
                   "verdict": "software_development + benchmark tag",
-                  "why": "repo-level feature growth is the served task"
+                  "why": "adds features into existing repositories"
+                },
+                {
+                  "paper": "NoCode-bench natural-language feature addition",
+                  "verdict": "software_development + benchmark tag",
+                  "why": "the task is extending an existing codebase with a described feature"
                 }
               ]
             },
@@ -162,15 +162,15 @@
               "key": "software_code_generation",
               "emoji": "✏️",
               "title": "Code Generation & Completion",
-              "blurb": "Generating and completing code from a spec or context.",
-              "definition": "Tasks that produce targeted units of code from a specification or surrounding context: functions, classes, files, repository-aware snippets, completions, and next edits.",
+              "blurb": "Generating and completing code, from a function to a whole repository.",
+              "definition": "Tasks that produce or complete code from a specification or context, at any scale: functions and classes, repository-aware completion and next edits, and whole repositories or applications generated from scratch.",
               "includes": [
-                "Natural-language-to-code at function/class level and competitive programming.",
-                "Repository-level generation with retrieval and context (RepoBench / CodeAgent style).",
-                "Code completion and next-edit prediction."
+                "Natural-language-to-code at function and class level, and competitive programming.",
+                "Repository-level generation and repo-aware completion and next-edit (RepoBench / RLCoder style).",
+                "Whole-repository or whole-application generation from scratch, including multi-agent development teams (MetaGPT / ChatDev / Commit0 style)."
               ],
               "boundary": [
-                "Project- or feature-scope work is `software_development`.",
+                "Adding a feature to an existing codebase is `software_development`; here code is produced or completed, including whole new repositories built from scratch.",
                 "Translating existing code between languages is `software_maintenance`.",
                 "Generation whose purpose is security hardening is `software_security`."
               ],
@@ -178,7 +178,12 @@
                 {
                   "paper": "Repository-level code completion with RL (RLCoder style)",
                   "verdict": "software_code_generation",
-                  "why": "delivers code units from repo context"
+                  "why": "completes code units from repo context"
+                },
+                {
+                  "paper": "A multi-agent team generating a whole app from a one-line spec (MetaGPT style)",
+                  "verdict": "software_code_generation",
+                  "why": "builds a codebase from scratch, no pre-existing repo to extend"
                 }
               ]
             },

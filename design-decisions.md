@@ -18,8 +18,10 @@ Generation & Completion), `software_testing` (Testing & Verification),
   (multi-agent end-to-end dev, repo-level codegen/completion, surveys, documentation,
   code search, requirements); old `issue_resolution` (134) was a dumping ground for
   field-level surveys, scaffolds/SDKs, and generalist agents.
-- **development vs code_generation split**: project/feature scope vs targeted code
-  units from spec/context.
+- **development vs code_generation split** (revised 2026-07-10): the line is whether a
+  codebase already exists. Producing code from spec/scratch at any scale (function to a
+  whole repo/app from zero, incl. MetaGPT/ChatDev multi-agent teams) is code_generation;
+  adding a feature into an existing codebase (FEA-Bench/NoCode-bench) is feature_development.
 - **testing vs debugging line**: proactive search for unknown defects vs handling a
   known/reported defect; issue reproduction therefore moves from testing to debugging.
 - **security kept as one leaf** (coherent community: vuln detection/localization/repair,

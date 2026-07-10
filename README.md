@@ -100,13 +100,13 @@
 
 #### 🏗️ Feature Development
 
-> Implementing new functionality, from a feature to a whole app.
+> Adding new features to an existing codebase.
 
 *No papers yet.*
 
 #### ✏️ Code Generation & Completion
 
-> Generating and completing code from a spec or context.
+> Generating and completing code, from a function to a whole repository.
 
 *No papers yet.*
 
