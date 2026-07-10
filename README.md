@@ -7,7 +7,7 @@
   <h3>The digital world we build. The real world we act in.</h3>
 
   <p align="center">
-    <em>A curated list of frontier research papers on autonomous code agents.</em>
+    <em>A curated list of frontier research papers and technical reports on autonomous code agents.</em>
   </p>
 
   <!-- Badges: primary (for-the-badge) -->
@@ -51,14 +51,14 @@
     </a>
   </p>
 
-  <!-- Project Links (emoji nav, below badges) -->
+  <!-- Project Links (below badges) -->
   <p align="center">
-    🌐 <a href="https://euni.ai/">Website</a> ·
-    🐦 <a href="https://x.com/Euni_AI">X/Twitter</a> ·
-    💼 <a href="https://www.linkedin.com/company/euni-ai/">LinkedIn</a> ·
-    💬 <a href="https://discord.gg/jDG4wqkKZj">Discord</a> ·
-    👽 <a href="https://www.reddit.com/r/EuniAI">Reddit</a> ·
-    🐙 <a href="https://github.com/EuniAI/awesome-code-agents">GitHub</a>
+    <a href="https://euni.ai/"><b>Website</b></a> ·
+    <a href="https://x.com/Euni_AI"><b>X/Twitter</b></a> ·
+    <a href="https://www.linkedin.com/company/euni-ai/"><b>LinkedIn</b></a> ·
+    <a href="https://discord.gg/jDG4wqkKZj"><b>Discord</b></a> ·
+    <a href="https://www.reddit.com/r/EuniAI"><b>Reddit</b></a> ·
+    <a href="https://github.com/EuniAI/awesome-code-agents"><b>GitHub</b></a>
   </p>
 
   <p align="center">
