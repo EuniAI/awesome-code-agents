@@ -17,16 +17,16 @@
 [![Last Commit](https://img.shields.io/github/last-commit/EuniAI/awesome-code-agents?style=for-the-badge&color=blueviolet)](https://github.com/EuniAI/awesome-code-agents/commits)
 [![Commits](https://img.shields.io/github/commit-activity/m/EuniAI/awesome-code-agents?style=for-the-badge&color=blue&label=Commits)](https://github.com/EuniAI/awesome-code-agents/graphs/commit-activity)
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![Issues Closed](https://img.shields.io/github/issues-search?query=repo%3AEuniAI%2Fawesome-code-agents%20is%3Aclosed&label=Issues%20Closed&style=flat&logo=github&logoColor=white&color=5d6b98)](https://github.com/EuniAI/awesome-code-agents/issues)
-[![Discussions](https://img.shields.io/github/discussions/EuniAI/awesome-code-agents?label=Discussions&style=flat&logo=github&logoColor=white&color=7a5af8)](https://github.com/EuniAI/awesome-code-agents/discussions)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-E24B4A?style=flat&logo=github&logoColor=white)](https://github.com/EuniAI/awesome-code-agents/pulls)
-
 [![Website](https://img.shields.io/badge/Website-2E3440?style=flat&logo=safari&logoColor=white)](https://euni.ai/)
 [![X/Twitter](https://img.shields.io/badge/X%2FTwitter-000000?style=flat&logo=x&logoColor=white)](https://x.com/Euni_AI)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/euni-ai/)
 [![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/jDG4wqkKZj)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/EuniAI/awesome-code-agents)
+<br>
+[![Awesome](https://img.shields.io/badge/Awesome-2AA198?style=flat&logo=awesomelists&logoColor=white)](https://awesome.re)
+[![Issues Closed](https://img.shields.io/github/issues-search?query=repo%3AEuniAI%2Fawesome-code-agents%20is%3Aclosed&label=Issues%20Closed&style=flat&logo=github&logoColor=white&color=5d6b98&labelColor=5d6b98)](https://github.com/EuniAI/awesome-code-agents/issues)
+[![Discussions](https://img.shields.io/github/discussions/EuniAI/awesome-code-agents?label=Discussions&style=flat&logo=github&logoColor=white&color=7a5af8&labelColor=7a5af8)](https://github.com/EuniAI/awesome-code-agents/discussions)
+[![PRs Welcome](https://img.shields.io/badge/PRs_Welcome-E24B4A?style=flat&logo=github&logoColor=white)](https://github.com/EuniAI/awesome-code-agents/pulls)
 
 <img src="docs/static/images/main_v1-min.png" alt="Awesome Code Agents" width="100%">
 
