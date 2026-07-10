@@ -4,7 +4,7 @@
 
 # Awesome Code Agents
 
-### The digital world we build. The real world we act in.
+## The digital world we build. The real world we act in.
 
 *A curated list of frontier research papers and technical reports on autonomous code agents.*
 
@@ -12,7 +12,7 @@
 [![Forks](https://img.shields.io/github/forks/EuniAI/awesome-code-agents?style=for-the-badge&color=blue)](https://github.com/EuniAI/awesome-code-agents/forks)
 [![Contributors](https://img.shields.io/github/contributors/EuniAI/awesome-code-agents?style=for-the-badge&color=orange)](https://github.com/EuniAI/awesome-code-agents/graphs/contributors)
 [![License](https://img.shields.io/badge/License-Apache_2.0-green?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
-
+<br>
 [![Papers](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEuniAI%2Fawesome-code-agents%2Fmain%2Fdocs%2Fstatic%2Fbadges%2Fpapers.json&style=for-the-badge)](#-papers)
 [![Last Commit](https://img.shields.io/github/last-commit/EuniAI/awesome-code-agents?style=for-the-badge&color=blueviolet)](https://github.com/EuniAI/awesome-code-agents/commits)
 [![Commits](https://img.shields.io/github/commit-activity/m/EuniAI/awesome-code-agents?style=for-the-badge&color=blue&label=Commits)](https://github.com/EuniAI/awesome-code-agents/graphs/commit-activity)
