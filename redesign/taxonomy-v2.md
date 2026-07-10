@@ -3,6 +3,13 @@
 > 状态:**DRAFT** — 骨架已与 owner 达成一致,标注 ⚖️ 的条目待 owner 拍板。
 > 决策沿革见 [design-decisions.md](../design-decisions.md)。
 
+## Vision(list 的 thesis,置于 README 顶部)
+
+> **Code as Everything** — 从 agent 构建的数字世界,到它行动其中的真实世界。
+
+随着 agent 触及现实,代码正成为世界运行的核心要素,不再局限于 digital world。
+数字世界是真实世界的一部分——在终端/浏览器/游戏里行动同样是真实世界的活动。
+
 ## 0. 设计原则(已锁定)
 
 1. **每一层只用一条划分轴,同层类别概念平级、互斥**(单轴原则)。
@@ -14,10 +21,12 @@
 
 每层的划分轴显式声明;**叶子 = 分类器目标 = 数据文件**。
 
+内部机器 key 用短名 `artifact` / `agency`;README 展示用大标题。
+
 ```
 L1 轴:代码在任务中的角色(评价标准落在哪)
 │
-├── 🧱 product — Code as Product(按代码工件质量评价)
+├── 🧱 artifact — Code as Artifact: Building the Digital World(按代码工件质量评价)
 │   L2 轴:代码工件所属领域
 │   ├── software — 通用软件
 │   │   L3 轴:软件生命周期活动
@@ -39,8 +48,8 @@ L1 轴:代码在任务中的角色(评价标准落在哪)
 │   │                                         + agentic_visualization (5) ⚖️
 │   └── cad_3d                             ← 3d_object_design (25)
 │
-└── 🌍 means — Code as Means(按外部世界状态改变评价)
-    L2 轴:agent 所作用的世界
+└── 🌍 agency — Code as Agency: Acting on the Real World(按外部世界状态改变评价)
+    L2 轴:agent 所作用的世界(横跨数字与物理)
     ├── world_terminal                     ← terminal (18,需按新定义清洗)
     ├── world_browser                      ← code_executing_web (10)
     ├── world_game                         ← code_executing_game (5)

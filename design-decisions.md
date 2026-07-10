@@ -1,4 +1,31 @@
 
+## 2026-07-10：确立 list 的 vision 与 L1 命名（Code as Everything）
+
+### Vision（list 的 thesis，置于 README 顶部）
+> **Code as Everything** — 从 agent 构建的数字世界，到它行动其中的真实世界。
+
+论点：随着 agent 迅猛发展并触及现实，代码正成为世界运行的核心要素，不再局限于 digital
+world。关键洞见（owner 提出）：**数字世界是真实世界的一部分**——在终端/浏览器/游戏里
+行动同样是真实世界的活动、同样产生真实后果。这统一了 Agency 分支从浏览器到机器人的全部
+成员，也让 "Code as Everything" 从"代码无处不在"升级为"代码是一切智能行动的基底"。
+
+### L1 命名（display title 与内部 key 分离）
+- 内部机器 key（config / data 文件名 / 分类 prompt 用）：`artifact` / `agency`
+  ——保持短、稳定、ASCII。
+- README 展示标题：
+  - **Code as Artifact: Building the Digital World**（= 原 product 分支；agent 把想法
+    建造成数字造物：软件、芯片设计、3D 模型；评价落在工件质量）
+  - **Code as Agency: Acting on the Real World**（= 原 means 分支；agent 用代码行动于
+    真实世界，该世界横跨数字与物理；评价落在世界状态改变）
+  - ⚖️ 微调待定：副标题 "Acting **on** the Real World" vs "Acting **in** the Real World"
+    （in 更贴"置身环境中操作"，on 更有力度）。暂用 on。
+
+### 被否决的前案
+- 曾担心 "Real World" 副标题对 Agency 分支（含 browser/terminal/game 等数字环境）过度
+  声称，建议改为 "Acting Through Code"。**否决**：owner 的"数字世界属于真实世界"框架
+  更有力，且不违反单轴——L1 真轴始终是 artifact(建造工件) vs agency(行动于世界)，
+  digital/real 只是副标题的诗意修辞，不承担分类判定。
+
 ## 2026-07-06：新分类体系的设计约束——每一层必须单轴、同层概念平级
 
 ### 背景
