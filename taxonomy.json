@@ -54,7 +54,7 @@
       "key": "artifact",
       "emoji": "🧱",
       "title": "Code as Artifact: Building the Digital World",
-      "blurb": "Where code is the thing we build.",
+      "blurb": "Agents whose job is to produce code.",
       "definition": "The paper serves a task whose ultimate purpose is producing code: a program, a patch, a query, a repository, hardware description code, a game codebase, graphics or animation code, a 3D/CAD program. The digital world is built of code. Tasks that improve, understand, safeguard, or enable code belong here too, because they all exist in service of producing code.",
       "includes": [
         "Tasks that write, complete, or extend code in any domain: general software, web applications, database queries, systems software, hardware description, games, graphics and animation, 3D/CAD.",
@@ -98,7 +98,7 @@
           "key": "software",
           "emoji": "💻",
           "title": "General Software",
-          "blurb": "The whole craft of writing and tending software.",
+          "blurb": "Writing and maintaining general-purpose software.",
           "definition": "Tasks whose purpose is producing and sustaining general-purpose software: writing new code, and all the lifecycle work that improves, understands, safeguards, and enables it. The only Level-2 node that expands into Level 3 (software-lifecycle activities).",
           "includes": [
             "Writing, completing, and extending programs and repositories; feature development; program synthesis for general code.",
@@ -134,7 +134,7 @@
               "key": "software_development",
               "emoji": "🏗️",
               "title": "End-to-End Development",
-              "blurb": "From a blank repo to a working product.",
+              "blurb": "Building whole projects or features end to end.",
               "definition": "Tasks that carry software from requirements to working code end to end: whole projects built by agent teams, or complete features grown inside existing repositories.",
               "includes": [
                 "Multi-agent development frameworks that run the full lifecycle (MetaGPT / ChatDev style).",
@@ -162,7 +162,7 @@
               "key": "software_code_generation",
               "emoji": "✏️",
               "title": "Code Generation & Completion",
-              "blurb": "Conjuring the next function, file, and line.",
+              "blurb": "Generating and completing code from a spec or context.",
               "definition": "Tasks that produce targeted units of code from a specification or surrounding context: functions, classes, files, repository-aware snippets, completions, and next edits.",
               "includes": [
                 "Natural-language-to-code at function/class level and competitive programming.",
@@ -186,7 +186,7 @@
               "key": "software_testing",
               "emoji": "🧪",
               "title": "Testing & Verification",
-              "blurb": "Hunting down the bugs before they ship.",
+              "blurb": "Writing tests and finding bugs before release.",
               "definition": "Tasks that proactively assure correctness before or independent of any specific reported defect: generating tests, fuzzing, and formally verifying code.",
               "includes": [
                 "Unit and integration test generation; property-based testing.",
@@ -210,7 +210,7 @@
               "key": "software_debugging",
               "emoji": "🐛",
               "title": "Debugging & Issue Resolution",
-              "blurb": "Chasing a reported failure to its fix.",
+              "blurb": "Reproducing, locating, and fixing reported bugs.",
               "definition": "Tasks that handle a known or reported defect end to end: reproducing it, localizing its cause, and repairing the code (SWE-bench style issue resolution and automated program repair).",
               "includes": [
                 "Issue reproduction: turning a bug report into a failing test.",
@@ -241,7 +241,7 @@
               "key": "software_review",
               "emoji": "🔍",
               "title": "Code Review",
-              "blurb": "Judging a change before it lands.",
+              "blurb": "Reviewing code changes and pull requests.",
               "definition": "Tasks that judge code changes: reviewing pull requests, generating review comments, and assessing patch quality.",
               "includes": [
                 "Automated PR review and review-comment generation.",
@@ -263,7 +263,7 @@
               "key": "software_comprehension",
               "emoji": "📖",
               "title": "Comprehension & Documentation",
-              "blurb": "Making sense of code, and writing it down.",
+              "blurb": "Understanding, documenting, and searching code.",
               "definition": "Tasks that understand code and record that understanding: answering questions about codebases, summarizing, documenting, and searching code.",
               "includes": [
                 "Repository QA and long-code understanding.",
@@ -286,7 +286,7 @@
               "key": "software_maintenance",
               "emoji": "🔄",
               "title": "Maintenance & Evolution",
-              "blurb": "Keeping code alive as the world moves on.",
+              "blurb": "Refactoring, migrating, and optimizing existing code.",
               "definition": "Tasks that evolve code while preserving its behavior: refactoring, migrating and translating, and optimizing performance.",
               "includes": [
                 "Refactoring and technical-debt reduction.",
@@ -309,7 +309,7 @@
               "key": "software_security",
               "emoji": "🔒",
               "title": "Security",
-              "blurb": "Finding the holes in code, and closing them.",
+              "blurb": "Detecting and fixing security vulnerabilities in code.",
               "definition": "The security-assurance activity on code: finding, localizing, and fixing vulnerabilities; auditing repositories; producing secure code.",
               "includes": [
                 "Vulnerability detection and localization; repository auditing.",
@@ -337,7 +337,7 @@
               "key": "software_infrastructure",
               "emoji": "🛠️",
               "title": "Environment Setup & CI/CD",
-              "blurb": "Making code build, run, and ship.",
+              "blurb": "Setting up environments, builds, CI/CD, and version control.",
               "definition": "Enabling tasks that make code buildable and runnable: setting up environments, repairing builds, configuring CI/CD, and operating version control.",
               "includes": [
                 "Environment and dependency setup agents; build-failure repair.",
@@ -360,7 +360,7 @@
               "key": "software_general",
               "emoji": "🗺️",
               "title": "General-Purpose Software Agents",
-              "blurb": "The generalists, and the maps of the field.",
+              "blurb": "Generalist software agents, and surveys of the field.",
               "definition": "Work whose served task is software engineering as a whole rather than any single lifecycle activity: field-level surveys and roadmaps, generalist software agents, agent scaffolds and SDKs, and studies of how agents and humans build software together.",
               "includes": [
                 "Surveys, roadmaps, and position papers on software agents in general.",
@@ -391,7 +391,7 @@
           "key": "web",
           "emoji": "🌐",
           "title": "Web Applications",
-          "blurb": "Bringing the web to life in code.",
+          "blurb": "Building websites, front-ends, and back-end services.",
           "definition": "Tasks whose purpose is producing web-facing code: front-end interfaces, websites, back-end services and APIs.",
           "includes": [
             "Website and UI generation, including screenshot-to-code and design-to-code (multimodal inputs).",
@@ -418,7 +418,7 @@
           "key": "database",
           "emoji": "🗄️",
           "title": "Databases",
-          "blurb": "Turning questions into queries.",
+          "blurb": "Generating SQL queries and database code.",
           "definition": "Tasks whose purpose is producing database code: SQL queries, schemas, and database-centric programs.",
           "includes": [
             "Text-to-SQL and query synthesis; schema design; database-centric program generation."
@@ -438,7 +438,7 @@
           "key": "systems",
           "emoji": "⚙️",
           "title": "Systems",
-          "blurb": "Code down at the level of the machine.",
+          "blurb": "Writing systems code: OS, kernels, compilers, networking.",
           "definition": "Tasks whose purpose is producing systems-level code: operating systems, kernels, compilers, networking, and distributed systems.",
           "includes": [
             "Kernel and OS component code; compiler and runtime code; network protocol implementations; distributed-systems code."
@@ -458,7 +458,7 @@
           "key": "hardware",
           "emoji": "🔌",
           "title": "Hardware",
-          "blurb": "Describing silicon in code.",
+          "blurb": "Generating hardware description code like RTL and HDL.",
           "definition": "Tasks whose purpose is producing hardware description code: RTL/HDL, chip design, and hardware verification.",
           "includes": [
             "Verilog/VHDL generation; chip design agents; hardware verification via code."
@@ -478,7 +478,7 @@
           "key": "game",
           "emoji": "🎮",
           "title": "Games",
-          "blurb": "Building worlds that are meant to be played.",
+          "blurb": "Generating game code and full game projects.",
           "definition": "Tasks whose purpose is producing game code: game logic, levels as code, whole game codebases.",
           "includes": [
             "Text-to-game generation; game-logic and level-as-code synthesis; game codebase engineering."
@@ -499,7 +499,7 @@
           "key": "graphics",
           "emoji": "🎨",
           "title": "Graphics & Animation",
-          "blurb": "Drawing and animating with code.",
+          "blurb": "Generating vector graphics, animation, and chart code.",
           "definition": "Tasks whose purpose is producing code that renders visual artifacts: vector graphics, animations, and charts from specification.",
           "includes": [
             "SVG and vector graphic generation; animation code (e.g. manim-style); chart-from-spec visualization code."
@@ -524,7 +524,7 @@
           "key": "cad",
           "emoji": "🧊",
           "title": "3D & CAD",
-          "blurb": "Modeling the three-dimensional in code.",
+          "blurb": "Generating 3D models and CAD programs.",
           "definition": "Tasks whose purpose is producing code that builds three-dimensional artifacts: CAD programs, parametric models, 3D scenes.",
           "includes": [
             "Text-to-CAD program generation; parametric 3D modeling via code; 3D scene construction as code."
@@ -547,7 +547,7 @@
       "key": "agency",
       "emoji": "🌍",
       "title": "Code as Agency: Acting in the Real World",
-      "blurb": "Where code is how we act on the world.",
+      "blurb": "Agents that use code to act in the world.",
       "definition": "The paper serves a task whose goal is to get something done in the world through interaction, where code is the tool of action rather than the deliverable. The environment may be digital (a terminal, a browser, a game) or physical (a robot, a lab); the digital world is part of the real world, and acting there has real consequences. The task's product is a completed interaction: a job done in an OS, a game won, a robot acting, an experiment run, a model trained, a discovery made.",
       "includes": [
         "Tasks where agents operate terminals and operating systems, drive web browsers, operate software applications, play games, or control robots and other physical systems.",
@@ -591,7 +591,7 @@
           "key": "world_terminal",
           "emoji": "🖥️",
           "title": "Terminals & Operating Systems",
-          "blurb": "Getting real work done at the command line.",
+          "blurb": "Completing tasks in terminals and operating systems.",
           "definition": "Agents act in shells and operating systems to get jobs done; shell commands and scripts are the language of action, and the contribution is about the terminal/OS as the agent's world.",
           "includes": [
             "Terminal task benchmarks and terminal-native agents; enterprise and personal automation through the shell.",
@@ -624,7 +624,7 @@
           "key": "world_browser",
           "emoji": "🧭",
           "title": "Browsers & the Web",
-          "blurb": "Acting across the living web.",
+          "blurb": "Operating web browsers to get things done online.",
           "definition": "Agents act on the live web through browsers, using code-level control (scripts, APIs, DOM actions) as the language of action.",
           "includes": [
             "Web task completion and browsing agents that act by executing code.",
@@ -646,7 +646,7 @@
           "key": "world_apps",
           "emoji": "🧰",
           "title": "Software Applications",
-          "blurb": "Driving the software people use every day.",
+          "blurb": "Operating desktop, mobile, and professional software.",
           "definition": "Agents operate professional and everyday software applications through scripting interfaces, APIs, or generated control code: office suites, design tools, simulators, enterprise systems, desktop and mobile apps.",
           "includes": [
             "Office and spreadsheet automation; design and media tools (Blender, Photoshop style) operated as tasks; enterprise systems.",
@@ -673,7 +673,7 @@
           "key": "world_game",
           "emoji": "🕹️",
           "title": "Game Worlds",
-          "blurb": "Playing to win, with code as the controller.",
+          "blurb": "Playing games by writing and running code.",
           "definition": "Agents act inside game environments, using code as the policy language to play, explore, and win.",
           "includes": [
             "Code-as-policy game playing (Voyager style); game environments as benchmarks for code-driven agents."
@@ -694,7 +694,7 @@
           "key": "world_physical",
           "emoji": "🤖",
           "title": "The Physical World",
-          "blurb": "Where code reaches out and moves matter.",
+          "blurb": "Controlling robots and physical systems with code.",
           "definition": "Agents act on physical systems; code is the policy and control language for robots, devices, and other embodied platforms.",
           "includes": [
             "Code-as-policy robot control; embodied agents that write executable policies; device and machine control through code.",
@@ -721,7 +721,7 @@
           "key": "world_research",
           "emoji": "🔬",
           "title": "Research & Discovery",
-          "blurb": "Code as the instrument of discovery.",
+          "blurb": "Running experiments and analysis to make discoveries.",
           "definition": "Agents pursue knowledge through interaction: exploring data, running machine-learning experiments, and driving scientific discovery. Code is the instrument; the outcome is an insight, a model, or a finding.",
           "includes": [
             "Autonomous data analysis and exploration; data-science agents whose deliverable is insight.",

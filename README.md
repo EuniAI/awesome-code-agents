@@ -92,151 +92,151 @@
 <!-- PAPERS:BEGIN -->
 ## 🧱 Code as Artifact: Building the Digital World
 
-> Where code is the thing we build.
+> Agents whose job is to produce code.
 
 ### 💻 General Software
 
-> The whole craft of writing and tending software.
+> Writing and maintaining general-purpose software.
 
 #### 🏗️ End-to-End Development
 
-> From a blank repo to a working product.
+> Building whole projects or features end to end.
 
 *No papers yet.*
 
 #### ✏️ Code Generation & Completion
 
-> Conjuring the next function, file, and line.
+> Generating and completing code from a spec or context.
 
 *No papers yet.*
 
 #### 🧪 Testing & Verification
 
-> Hunting down the bugs before they ship.
+> Writing tests and finding bugs before release.
 
 *No papers yet.*
 
 #### 🐛 Debugging & Issue Resolution
 
-> Chasing a reported failure to its fix.
+> Reproducing, locating, and fixing reported bugs.
 
 *No papers yet.*
 
 #### 🔍 Code Review
 
-> Judging a change before it lands.
+> Reviewing code changes and pull requests.
 
 *No papers yet.*
 
 #### 📖 Comprehension & Documentation
 
-> Making sense of code, and writing it down.
+> Understanding, documenting, and searching code.
 
 *No papers yet.*
 
 #### 🔄 Maintenance & Evolution
 
-> Keeping code alive as the world moves on.
+> Refactoring, migrating, and optimizing existing code.
 
 *No papers yet.*
 
 #### 🔒 Security
 
-> Finding the holes in code, and closing them.
+> Detecting and fixing security vulnerabilities in code.
 
 *No papers yet.*
 
 #### 🛠️ Environment Setup & CI/CD
 
-> Making code build, run, and ship.
+> Setting up environments, builds, CI/CD, and version control.
 
 *No papers yet.*
 
 #### 🗺️ General-Purpose Software Agents
 
-> The generalists, and the maps of the field.
+> Generalist software agents, and surveys of the field.
 
 *No papers yet.*
 
 ### 🌐 Web Applications
 
-> Bringing the web to life in code.
+> Building websites, front-ends, and back-end services.
 
 *No papers yet.*
 
 ### 🗄️ Databases
 
-> Turning questions into queries.
+> Generating SQL queries and database code.
 
 *No papers yet.*
 
 ### ⚙️ Systems
 
-> Code down at the level of the machine.
+> Writing systems code: OS, kernels, compilers, networking.
 
 *No papers yet.*
 
 ### 🔌 Hardware
 
-> Describing silicon in code.
+> Generating hardware description code like RTL and HDL.
 
 *No papers yet.*
 
 ### 🎮 Games
 
-> Building worlds that are meant to be played.
+> Generating game code and full game projects.
 
 *No papers yet.*
 
 ### 🎨 Graphics & Animation
 
-> Drawing and animating with code.
+> Generating vector graphics, animation, and chart code.
 
 *No papers yet.*
 
 ### 🧊 3D & CAD
 
-> Modeling the three-dimensional in code.
+> Generating 3D models and CAD programs.
 
 *No papers yet.*
 
 ## 🌍 Code as Agency: Acting in the Real World
 
-> Where code is how we act on the world.
+> Agents that use code to act in the world.
 
 ### 🖥️ Terminals & Operating Systems
 
-> Getting real work done at the command line.
+> Completing tasks in terminals and operating systems.
 
 *No papers yet.*
 
 ### 🧭 Browsers & the Web
 
-> Acting across the living web.
+> Operating web browsers to get things done online.
 
 *No papers yet.*
 
 ### 🧰 Software Applications
 
-> Driving the software people use every day.
+> Operating desktop, mobile, and professional software.
 
 *No papers yet.*
 
 ### 🕹️ Game Worlds
 
-> Playing to win, with code as the controller.
+> Playing games by writing and running code.
 
 *No papers yet.*
 
 ### 🤖 The Physical World
 
-> Where code reaches out and moves matter.
+> Controlling robots and physical systems with code.
 
 *No papers yet.*
 
 ### 🔬 Research & Discovery
 
-> Code as the instrument of discovery.
+> Running experiments and analysis to make discoveries.
 
 *No papers yet.*
 <!-- PAPERS:END -->
