@@ -3,6 +3,46 @@
 > Durable record of non-trivial design decisions for this repo. Newest first.
 > This repo is English-only — keep every entry in English.
 
+## 2026-07-10: L2 rulings + the name-vs-definition principle for the taxonomy
+
+### The core principle (drives everything below)
+Old category names failed not because they were "casual" but because each word tried to
+serve two jobs at once — a human-facing label AND a classifier spec — and did neither
+well. **Separate the two:**
+- **title** — human-facing display name (README); carries the vision; parallel and
+  elegant within a level.
+- **definition** — classifier-facing spec; carries the precision; stored, not improvised.
+
+Every taxonomy node stores a structured definition (in config.yaml under `taxonomy:`):
+- `key` — stable machine id, ASCII, never changes even if the title is reworded.
+- `title` — display name.
+- `axis` — (non-leaf only) the single dividing axis of its children.
+- `definition` — one-sentence precise scope.
+- `includes` — positive signals / kinds of papers that belong.
+- `boundary` — **the anti-mis-classification field**: explicit "if X, it goes to sibling
+  Y instead" rules for every confusable neighbor pair. All past mis-classifications came
+  from unwritten sibling boundaries; writing them once, here, feeds them into the
+  classifier prompt.
+- `examples` — 2-3 real papers, each with a one-line "why here".
+
+### Naming principles (titles)
+- Parallel grammatical form within a level: Artifact-L2 = engineering/craft domains
+  (`X Engineering` / `X Design`); Agency-L2 = worlds acted in (`The X World` / acting in X).
+- The title should telegraph the boundary so human browsing also lands right.
+- Drop implementation words like `generation` / `executing` — they are exactly what
+  smuggled the "output" and "interface" axes back in and caused the old mess.
+
+### L2 rulings
+- **agentic_visualization → artifact (graphics_animation) by default.** General rule the
+  owner set: agency = code that, when run, produces actions/interactions in a world; so a
+  static chart/figure is an artifact, but a **dynamic, interactive** visualization →
+  agency. This "static = artifact / interactive = agency" test is a general discriminator,
+  not viz-only.
+- **machine_learning_engineering → agency**, grouped under "autonomous research /
+  discovery" (evaluated on model/experiment outcomes in the world, not artifact quality).
+  Open: whether ML-experiments, data, and scientific-discovery merge into one
+  research/discovery world or stay separate agency leaves.
+
 ## 2026-07-10: List vision and L1 naming (Code as Everything)
 
 ### Vision (the list's thesis, to sit at the top of the README)
