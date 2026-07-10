@@ -1,12 +1,11 @@
 <div align="center">
-  <a href="https://euni.ai/" target="_blank"><img src="./docs/static/images/icon.png" alt="Euni logo" height="80"></a>
+  <a href="https://euni.ai/" target="_blank"><img src="./docs/static/images/icon.png" alt="Euni logo" height="120"></a>
   <h1 style="border-bottom: none;">
     <b><a href="https://github.com/EuniAI/awesome-code-agents" target="_blank">Awesome Code Agents</a></b>
   </h1>
-  <h3>Code as Everything</h3>
+  <h3>The digital world we build. The real world we act in.</h3>
 
   <p align="center">
-    <strong>The digital world we build. The real world we act in.</strong><br>
     <em>A curated list of frontier research papers on autonomous code agents.</em>
   </p>
 

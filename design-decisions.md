@@ -14,6 +14,13 @@ sentence echoes the two L1 chapter titles (*Building the Digital World* / *Actin
 Real World*), so the tagline closes back on the section headings. "act in" chosen over
 "reach/shape/…" for exact consistency with the Agency chapter title (2026-07-10).
 
+Header presentation (2026-07-10): in the rendered README header we show only the
+subtitle sentence "The digital world we build. The real world we act in." — the literal
+"Code as Everything" label was dropped from the visible header for visual balance (a
+short second title line under a longer one looked unbalanced). "Code as Everything"
+remains the conceptual thesis of the list and the name of the L1 framing; it just is not
+printed as header chrome. Do not "restore" it to the header assuming it was lost.
+
 Rationale: as agents advance rapidly and touch the physical world, code is becoming a
 core element of how the world runs, no longer confined to the digital realm — code is
 the very core of large models and agents. Key insight (from the owner): **the digital
