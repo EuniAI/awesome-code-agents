@@ -69,6 +69,16 @@
 - [ ] Final package layout: flat modules vs light subpackages (decide at P0 start;
       default to flat unless it gets crowded).
 - [ ] `learned_rules`: confirmed delete? (default: delete)
+- [ ] Classifier LLM backend (researched 2026-07-10; orchestration stays python+cron
+      either way; Claude Code routines/loop rejected: cloud routines cannot access the
+      server's gitignored state, /loop needs a live session):
+      (a) Anthropic Messages API with structured outputs (guaranteed schema, ~USD 1-2
+          per month at current volume) <- recommended default;
+      (b) `claude -p` headless with --json-schema (runs on subscription via
+          `claude setup-token`, heavier per call, can read repo files itself);
+      (c) keep LiteLLM proxy with a better model + structured output (if proxy quota
+          is effectively free).
+      The golden-set eval (P2) can A/B these on accuracy before committing.
 
 ## After the checklist
 
