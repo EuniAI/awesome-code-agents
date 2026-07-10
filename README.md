@@ -10,7 +10,7 @@
     <em>A curated list of frontier research papers and technical reports on autonomous code agents.</em>
   </p>
 
-  <!-- Badges: primary (for-the-badge) -->
+  <!-- Badges: primary row 1 (for-the-badge) -->
   <p align="center">
     <a href="https://github.com/EuniAI/awesome-code-agents/stargazers">
       <img src="https://img.shields.io/github/stars/EuniAI/awesome-code-agents?style=for-the-badge&color=yellow" alt="Stars">
@@ -18,11 +18,24 @@
     <a href="https://github.com/EuniAI/awesome-code-agents/forks">
       <img src="https://img.shields.io/github/forks/EuniAI/awesome-code-agents?style=for-the-badge&color=blue" alt="Forks">
     </a>
+    <a href="https://github.com/EuniAI/awesome-code-agents/graphs/contributors">
+      <img src="https://img.shields.io/github/contributors/EuniAI/awesome-code-agents?style=for-the-badge&color=orange" alt="Contributors">
+    </a>
     <a href="https://opensource.org/licenses/Apache-2.0">
       <img src="https://img.shields.io/badge/license-Apache--2.0-green?style=for-the-badge" alt="License: Apache 2.0">
     </a>
-    <a href="https://github.com/EuniAI/awesome-code-agents/graphs/contributors">
-      <img src="https://img.shields.io/github/contributors/EuniAI/awesome-code-agents?style=for-the-badge&color=orange" alt="Contributors">
+  </p>
+
+  <!-- Badges: primary row 2 (for-the-badge) -->
+  <p align="center">
+    <a href="#-papers">
+      <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEuniAI%2Fawesome-code-agents%2Fmain%2Fdocs%2Fstatic%2Fbadges%2Fpapers.json&style=for-the-badge" alt="Papers">
+    </a>
+    <a href="https://github.com/EuniAI/awesome-code-agents/commits">
+      <img src="https://img.shields.io/github/last-commit/EuniAI/awesome-code-agents?style=for-the-badge&color=blueviolet" alt="Last Commit">
+    </a>
+    <a href="https://github.com/EuniAI/awesome-code-agents/graphs/commit-activity">
+      <img src="https://img.shields.io/github/commit-activity/m/EuniAI/awesome-code-agents?style=for-the-badge&color=blue&label=Commits" alt="Commit Activity">
     </a>
   </p>
 
@@ -30,12 +43,6 @@
   <p align="center">
     <a href="https://awesome.re">
       <img src="https://awesome.re/badge.svg" alt="Awesome">
-    </a>
-    <a href="./docs/static/badges/papers.svg">
-      <img src="./docs/static/badges/papers.svg" alt="Papers Count">
-    </a>
-    <a href="https://github.com/EuniAI/awesome-code-agents" target="_blank">
-      <img src="https://img.shields.io/github/commit-activity/m/EuniAI/awesome-code-agents?label=Commits&color=brightgreen&style=flat" alt="Commit Activity">
     </a>
     <a href="https://github.com/EuniAI/awesome-code-agents/issues" target="_blank">
       <img alt="Issues Closed" src="https://img.shields.io/github/issues-search?query=repo%3AEuniAI%2Fawesome-code-agents%20is%3Aclosed&label=Issues%20Closed&labelColor=%237d89b0&color=%235d6b98&style=flat">
@@ -46,19 +53,15 @@
     <a href="https://img.shields.io/badge/PRs-Welcome-red">
       <img src="https://img.shields.io/badge/PRs-Welcome-red" alt="PRs Welcome">
     </a>
-    <a href="https://img.shields.io/github/last-commit/EuniAI/awesome-code-agents?color=green">
-      <img src="https://img.shields.io/github/last-commit/EuniAI/awesome-code-agents?color=green" alt="Last Commit">
-    </a>
   </p>
 
   <!-- Project Links (below badges) -->
   <p align="center">
-    <a href="https://euni.ai/"><b>Website</b></a> ·
-    <a href="https://x.com/Euni_AI"><b>X/Twitter</b></a> ·
-    <a href="https://www.linkedin.com/company/euni-ai/"><b>LinkedIn</b></a> ·
-    <a href="https://discord.gg/jDG4wqkKZj"><b>Discord</b></a> ·
-    <a href="https://www.reddit.com/r/EuniAI"><b>Reddit</b></a> ·
-    <a href="https://github.com/EuniAI/awesome-code-agents"><b>GitHub</b></a>
+    🌐 <a href="https://euni.ai/"><b>Website</b></a> ·
+    🐦 <a href="https://x.com/Euni_AI"><b>X/Twitter</b></a> ·
+    💼 <a href="https://www.linkedin.com/company/euni-ai/"><b>LinkedIn</b></a> ·
+    💬 <a href="https://discord.gg/jDG4wqkKZj"><b>Discord</b></a> ·
+    ⭐ <a href="https://github.com/EuniAI/awesome-code-agents"><b>GitHub</b></a>
   </p>
 
   <p align="center">
