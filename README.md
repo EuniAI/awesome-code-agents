@@ -4,7 +4,7 @@
 
 # Awesome Code Agents
 
-### Code as Everything
+### Autonomous Code Agents Across Every Domain
 
 *The digital world we build. The real world we act in.*
 <br>
