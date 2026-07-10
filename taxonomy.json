@@ -3,11 +3,11 @@
   "description": "Authoritative category system for this repo. Single source of truth: automation/config.yaml is synced from it, and it drives both the README structure and the auto-classifier. Rationale and history: design-decisions.md.",
   "vision": "Code as Everything. Every strong paper in which an agent writes or runs code, across all domains. Code is either the thing being built or the language of action; that split is Level 1.",
   "principles": [
+    "Categories classify the task a paper serves; tags record the paper's contribution form (survey, benchmark, model, training-data). The two axes never mix.",
     "Single-axis rule: each level divides on exactly one axis; sibling nodes are conceptually parallel and mutually exclusive.",
     "Name vs definition: `title` is the human-facing label (carries the vision); the definition/includes/boundary/examples block is the classifier's contract.",
     "Boundary lines ('if X, it belongs to sibling Y instead') are the anti-mis-classification device and feed directly into the classifier prompt.",
-    "Stable keys: `key` is lowercase ASCII and never changes even when a title is reworded; data files, README markers, and the classifier reference keys.",
-    "Tags are orthogonal and sparse, never categories."
+    "Stable keys: `key` is lowercase ASCII and never changes even when a title is reworded; data files, README markers, and the classifier reference keys."
   ],
   "tags": {
     "paper_type": {
@@ -20,55 +20,59 @@
     }
   },
   "levels": {
-    "L1": "the role of code, i.e. where the paper's success is measured (the master test; apply first)",
-    "L2": "artifact branch: the domain of the code artifact | agency branch: the world the agent acts in",
+    "L1": "the task the paper serves: building code (the digital world) vs acting in the world through code",
+    "L2": "artifact branch: the domain of the code being built | agency branch: the world the agent acts in",
     "L3": "software-lifecycle activity (only the general-software node under artifact expands)"
   },
-  "axis": "where the paper's success is measured",
+  "axis": "the task the paper serves",
   "master_test": [
-    "Ask: is code the product (its own quality is what gets judged) or the means (code runs to produce some other outcome)? Product goes to artifact; means goes to agency.",
-    "Classify by the paper's primary/headline evaluation. Most agents both write and run code, so follow what the main result actually measures.",
-    "Nearly every paper here contributes an agent, so classify by what the agent produces or does, not by the fact that it is an agent."
+    "Identify the task the paper ultimately serves. For resource papers (data synthesis, foundation models, benchmarks, surveys, training methods) that is the downstream task they enable, never what the paper itself produces.",
+    "If the served task's goal is to produce code or a repository, the paper goes to `artifact`.",
+    "If the served task's goal is to complete a task in the world through interaction, with code as the tool, the paper goes to `agency`.",
+    "Do not classify by the paper's own output or headline metric. A dataset paper for issue-resolution agents is artifact (plus training-data tag); a dataset paper for code-as-policy embodied agents is agency (plus training-data tag).",
+    "Nearly every paper here proposes an agent; that fact carries no signal. Classify by the task the agent (or resource) serves."
   ],
   "nodes": [
     {
       "key": "artifact",
       "emoji": "🧱",
       "title": "Code as Artifact: Building the Digital World",
-      "definition": "Code is the product. The agent's valued output is a digital artifact produced through code (source code, a patch, a query, a circuit design, a 3D model, or even a generated dataset or model), and the paper's success is measured by the quality or correctness of that artifact itself: does it compile, pass tests, meet the spec, resolve the issue, match the design.",
+      "definition": "The paper serves a task whose goal is to produce code: a program, a patch, a query, a repository, hardware description code, a game codebase, graphics or animation code, a 3D/CAD program. The digital world is built of code, and the served task's deliverable is the code itself.",
       "includes": [
-        "Agents that write, complete, test, debug, localize, review, or maintain software.",
-        "Agents that generate other digital artifacts (web apps, database queries, systems software, hardware/HDL, games, graphics, animations, 3D/CAD models), judged on the artifact's own merits."
+        "Tasks that write, complete, test, debug, localize, review, or maintain software, up to growing entire repositories.",
+        "Tasks that author code in any domain: web applications, database queries, systems software, hardware description, games, graphics and animation, 3D/CAD.",
+        "Resource papers (datasets, models, benchmarks, surveys) whose downstream task is one of the above, e.g. synthesizing trajectories and environments to train issue-resolution agents."
       ],
       "boundary": [
-        "If success is measured by a change in an external world's state (a task completed, a game won, a robot moved, an experiment's result) rather than by the artifact's quality, it is `agency`.",
-        "Static output inspected as an artifact stays here; code that is run to act or interact in a world is `agency`. A static chart is an artifact; a dynamic, interactive visualization is agency."
+        "If the served task's goal is to act in an environment rather than to deliver code, it is `agency`: building a game's codebase is artifact, while playing the game is agency; writing static chart code is artifact, while driving an interactive visualization is agency.",
+        "Resource papers follow the task they serve, never their own output: a foundation model trained for terminal operation belongs to agency even though the paper ships a model."
       ],
       "examples": [
-        { "paper": "SWE-bench-style issue resolution", "verdict": "artifact", "why": "the patch is judged by whether the repo's tests pass" },
-        { "paper": "Text-to-SQL generation", "verdict": "artifact", "why": "judged by query correctness" },
-        { "paper": "RTL/HDL generation", "verdict": "artifact", "why": "judged by whether the chip passes verification" }
+        { "paper": "SWE-bench-style issue resolution", "verdict": "artifact", "why": "the served task delivers a patch to a repository" },
+        { "paper": "Text-to-SQL generation", "verdict": "artifact", "why": "the served task delivers a query" },
+        { "paper": "Synthesizing trajectories and environments to train issue-resolution agents", "verdict": "artifact + training-data tag", "why": "the downstream task is issue resolution, whose deliverable is code" }
       ],
-      "axis": "the domain of the code artifact",
+      "axis": "the domain of the code being built",
       "children": []
     },
     {
       "key": "agency",
       "emoji": "🌍",
       "title": "Code as Agency: Acting in the Real World",
-      "definition": "Code is the means, not the product. The agent writes and runs code to reach an end beyond the code itself, and the paper's success is measured by that outcome, not by the code's own quality: a task completed in an environment, a world's state changed, an experiment or analysis run, a model trained, a discovery made. The environment may be digital (a terminal, a browser, a game) or physical (a robot, a lab); the digital world is part of the real world and acting there has real consequences.",
+      "definition": "The paper serves a task whose goal is to get something done in the world through interaction, where code is the tool of action rather than the deliverable. The environment may be digital (a terminal, a browser, a game) or physical (a robot, a lab); the digital world is part of the real world, and acting there has real consequences. The task's product is a completed interaction: a job done in an OS, a game won, a robot acting, an experiment run, a model trained, a discovery made.",
       "includes": [
-        "Agents that operate terminals and operating systems, drive web browsers, play in game worlds, or control robots and the physical world.",
-        "Agents that autonomously run data analysis, machine-learning experiments, and scientific discovery, where code is the lever and the outcome lives outside the code."
+        "Tasks where agents operate terminals and operating systems, drive web browsers, play games, or control robots and other physical systems.",
+        "Tasks where agents do research through interaction: data analysis, machine-learning engineering (training a model is itself a real-world task; the model is the product of that interaction, not a digital-world code artifact), scientific discovery.",
+        "Resource papers (datasets, models, benchmarks, surveys) whose downstream task is one of the above, e.g. synthesizing trajectories and environments for code-as-policy embodied agents."
       ],
       "boundary": [
-        "If the deliverable is a code artifact judged on its own quality, it is `artifact` (apply the master test).",
-        "Producing game code is `artifact` (game development); playing a game by executing code is agency. Writing a data-viz artifact is `artifact`; running an interactive/dynamic visualization or dashboard is agency."
+        "If the served task's deliverable is code or a repository, it is `artifact` (apply the master test).",
+        "Resource papers follow the task they serve, never their own output: a dataset of embodied code-as-policy trajectories belongs here even though the paper ships data."
       ],
       "examples": [
-        { "paper": "A terminal agent completing enterprise automation tasks", "verdict": "agency", "why": "judged by task completion in the OS, not code quality" },
-        { "paper": "An embodied agent executing code to move a robot", "verdict": "agency", "why": "judged by the physical outcome" },
-        { "paper": "An ML-engineering agent running a training pipeline", "verdict": "agency", "why": "judged by model performance" }
+        { "paper": "A terminal agent completing enterprise automation tasks", "verdict": "agency", "why": "the served task is getting jobs done in an operating system" },
+        { "paper": "An embodied agent executing code to control a robot", "verdict": "agency", "why": "the served task is physical-world interaction; code is the policy language" },
+        { "paper": "An ML-engineering agent running training pipelines", "verdict": "agency", "why": "the served task is training models through interaction; the model is the task's product, not a code deliverable" }
       ],
       "axis": "the world the agent acts in (digital or physical)",
       "children": []

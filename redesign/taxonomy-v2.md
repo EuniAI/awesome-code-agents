@@ -1,7 +1,11 @@
 # Taxonomy v2 — Redesign Spec (draft, under alignment)
 
-> Status: **DRAFT** — the skeleton is agreed with the owner; items marked ⚖️ await the
-> owner's decision. Decision history in [design-decisions.md](../design-decisions.md).
+> Status: **DRAFT** working spec; items marked ⚖️ await the owner's decision. Decision
+> history in [design-decisions.md](../design-decisions.md).
+> **Category definitions are now maintained in [taxonomy.json](../taxonomy.json) (single
+> source of truth); where this draft differs, taxonomy.json wins.** In particular, the
+> L1 rule here ("where evaluation lands") is superseded: classify by the task the paper
+> serves.
 
 ## Vision (the list's thesis, to sit at the top of the README)
 

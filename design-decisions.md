@@ -3,6 +3,29 @@
 > Durable record of non-trivial design decisions for this repo. Newest first.
 > This repo is English-only — keep every entry in English.
 
+## 2026-07-10: L1 semantics corrected: classify by the task served, not by the paper's own output
+
+### Owner's correction (supersedes the earlier "where evaluation lands" master test)
+L1 does not classify what a paper produces, nor how it evaluates. It classifies **the
+task the paper serves**:
+- **artifact (Building the Digital World)**: the served task's goal is to produce code or
+  a repository. The digital world is built of code; the task's deliverable is the code.
+- **agency (Acting in the Real World)**: the served task's goal is to complete a
+  real-world task through interaction, and code is the tool. A trained model is not a
+  digital-world artifact; it is the product of the real-world task "train a model", so
+  MLE belongs to agency.
+
+### Implications
+- Resource papers (data synthesis, foundation models, benchmarks, surveys) are classified
+  by the downstream task they serve, then tagged by contribution form (training-data,
+  model, benchmark, survey). Worked examples: synthesizing trajectories/environments for
+  issue-resolution agents goes to artifact; synthesizing data for code-as-policy embodied
+  agents goes to agency.
+- "Every paper both writes and runs code" is the wrong lens; never classify by the
+  paper's own artifact or headline metric alone.
+- Crisp formulation now in taxonomy.json: **category = the task served; tag = the
+  contribution form. The two axes never mix.**
+
 ## 2026-07-10: L2 rulings + the name-vs-definition principle for the taxonomy
 
 ### The core principle (drives everything below)
