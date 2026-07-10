@@ -3,6 +3,29 @@
 > Durable record of non-trivial design decisions for this repo. Newest first.
 > This repo is English-only — keep every entry in English.
 
+## 2026-07-10: L1 sealed: four boundary rulings by the owner
+
+All four reduce to one unified test: **is the served task's ultimate purpose producing
+code (artifact), or is the produced code merely the tool for completing a task in the
+world (agency)?**
+
+1. **Artifact broadened beyond "emits code".** Testing, fuzzing, localization, review,
+   comprehension/QA: their ultimate purpose is producing code, so they are artifact.
+2. **Environment building is artifact.** Setting up environments serves writing and
+   fixing code; it is not interaction for its own sake.
+3. **Cross-branch papers: judge the purpose the paper positions itself to serve.**
+   Qwen-Coder-style models whose agentic evals are issue resolution: artifact. A generic
+   agent method evaluated on SWE-bench plus web/game benches that do not use code as
+   action: artifact. The Code-as-Agent-Harness survey covers both branches but advocates
+   code-as-action: agency.
+4. **Data analysis vs chart generation.** Chart-from-spec (deliverable is chart code):
+   artifact. Explore-the-data (deliverable is insight; code and charts are tools):
+   agency. Static-vs-interactive is only a proxy for this purpose test.
+
+Residual note: truly 50/50 papers are rare; the classifier picks the closest by stated
+purpose and the human review step (approve/edit) is the backstop. All four rulings are
+encoded in taxonomy.json (master_test, boundary, examples).
+
 ## 2026-07-10: L1 semantics corrected: classify by the task served, not by the paper's own output
 
 ### Owner's correction (supersedes the earlier "where evaluation lands" master test)

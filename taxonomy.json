@@ -20,37 +20,40 @@
     }
   },
   "levels": {
-    "L1": "the task the paper serves: building code (the digital world) vs acting in the world through code",
+    "L1": "the task the paper serves: is its ultimate purpose producing code, or is code the tool for completing a task in the world",
     "L2": "artifact branch: the domain of the code being built | agency branch: the world the agent acts in",
     "L3": "software-lifecycle activity (only the general-software node under artifact expands)"
   },
-  "axis": "the task the paper serves",
+  "axis": "the ultimate purpose of the task the paper serves",
   "master_test": [
     "Identify the task the paper ultimately serves. For resource papers (data synthesis, foundation models, benchmarks, surveys, training methods) that is the downstream task they enable, never what the paper itself produces.",
-    "If the served task's goal is to produce code or a repository, the paper goes to `artifact`.",
-    "If the served task's goal is to complete a task in the world through interaction, with code as the tool, the paper goes to `agency`.",
-    "Do not classify by the paper's own output or headline metric. A dataset paper for issue-resolution agents is artifact (plus training-data tag); a dataset paper for code-as-policy embodied agents is agency (plus training-data tag).",
-    "Nearly every paper here proposes an agent; that fact carries no signal. Classify by the task the agent (or resource) serves."
+    "Ask of that task: is its ultimate purpose to produce code? Then `artifact`. Is the produced code merely the tool for completing a task in the world? Then `agency`.",
+    "Lifecycle activities that emit no code themselves (testing, fuzzing, bug localization, review, comprehension, environment setup) still belong to `artifact`: improving, understanding, safeguarding, and enabling code all exist in service of producing code.",
+    "For papers whose evaluations span both branches, judge the purpose the paper positions itself to serve. A code foundation model whose agentic evaluations are issue resolution serves `artifact`. A generic agent method evaluated on SWE-bench plus web/game benchmarks that do not use code as action serves `artifact`. A survey covering both branches but written to advocate code-as-action serves `agency`.",
+    "Do not classify by the paper's own output or headline metric. A dataset paper for issue-resolution agents is artifact plus training-data tag; a dataset paper for code-as-policy embodied agents is agency plus training-data tag.",
+    "Nearly every paper here proposes an agent; that fact carries no signal. Classify by the purpose of the task the agent (or resource) serves."
   ],
   "nodes": [
     {
       "key": "artifact",
       "emoji": "🧱",
       "title": "Code as Artifact: Building the Digital World",
-      "definition": "The paper serves a task whose goal is to produce code: a program, a patch, a query, a repository, hardware description code, a game codebase, graphics or animation code, a 3D/CAD program. The digital world is built of code, and the served task's deliverable is the code itself.",
+      "definition": "The paper serves a task whose ultimate purpose is producing code: a program, a patch, a query, a repository, hardware description code, a game codebase, graphics or animation code, a 3D/CAD program. The digital world is built of code. Tasks that improve, understand, safeguard, or enable code belong here too, because they all exist in service of producing code.",
       "includes": [
-        "Tasks that write, complete, test, debug, localize, review, or maintain software, up to growing entire repositories.",
-        "Tasks that author code in any domain: web applications, database queries, systems software, hardware description, games, graphics and animation, 3D/CAD.",
+        "Tasks that write, complete, or extend code in any domain: general software, web applications, database queries, systems software, hardware description, games, graphics and animation, 3D/CAD.",
+        "Lifecycle tasks around the code: testing and fuzzing, bug reproduction and localization, debugging and repair, code review, code comprehension and QA, maintenance and migration, and setting up environments so code can be built and run.",
         "Resource papers (datasets, models, benchmarks, surveys) whose downstream task is one of the above, e.g. synthesizing trajectories and environments to train issue-resolution agents."
       ],
       "boundary": [
-        "If the served task's goal is to act in an environment rather than to deliver code, it is `agency`: building a game's codebase is artifact, while playing the game is agency; writing static chart code is artifact, while driving an interactive visualization is agency.",
-        "Resource papers follow the task they serve, never their own output: a foundation model trained for terminal operation belongs to agency even though the paper ships a model."
+        "If the produced code is only the tool for completing a task in the world, it is `agency`: building a game's codebase is artifact, playing the game is agency; a chart-from-spec task that delivers chart code is artifact, an explore-the-data task that delivers insight is agency (static vs interactive output is only a proxy for this purpose test).",
+        "Resource papers follow the task they serve, never their own output: a foundation model trained for terminal operation belongs to `agency` even though the paper ships a model."
       ],
       "examples": [
         { "paper": "SWE-bench-style issue resolution", "verdict": "artifact", "why": "the served task delivers a patch to a repository" },
-        { "paper": "Text-to-SQL generation", "verdict": "artifact", "why": "the served task delivers a query" },
-        { "paper": "Synthesizing trajectories and environments to train issue-resolution agents", "verdict": "artifact + training-data tag", "why": "the downstream task is issue resolution, whose deliverable is code" }
+        { "paper": "An agent that sets up a repository's environment so its tests can build and run", "verdict": "artifact", "why": "enabling the codebase serves code production, not interaction for its own sake" },
+        { "paper": "A repo-QA agent that answers questions about a codebase", "verdict": "artifact", "why": "understanding code serves producing code" },
+        { "paper": "A code foundation model evaluated on generation plus issue-resolution agentic tasks (Qwen-Coder style)", "verdict": "artifact + model tag", "why": "its agentic evaluations still serve code production" },
+        { "paper": "Synthesizing trajectories and environments to train issue-resolution agents", "verdict": "artifact + training-data tag", "why": "the downstream task is issue resolution, whose purpose is producing code" }
       ],
       "axis": "the domain of the code being built",
       "children": []
@@ -66,13 +69,15 @@
         "Resource papers (datasets, models, benchmarks, surveys) whose downstream task is one of the above, e.g. synthesizing trajectories and environments for code-as-policy embodied agents."
       ],
       "boundary": [
-        "If the served task's deliverable is code or a repository, it is `artifact` (apply the master test).",
+        "If the served task's ultimate purpose is producing code, it is `artifact` (apply the master test); this includes lifecycle tasks like environment setup that never emit code themselves.",
         "Resource papers follow the task they serve, never their own output: a dataset of embodied code-as-policy trajectories belongs here even though the paper ships data."
       ],
       "examples": [
         { "paper": "A terminal agent completing enterprise automation tasks", "verdict": "agency", "why": "the served task is getting jobs done in an operating system" },
         { "paper": "An embodied agent executing code to control a robot", "verdict": "agency", "why": "the served task is physical-world interaction; code is the policy language" },
-        { "paper": "An ML-engineering agent running training pipelines", "verdict": "agency", "why": "the served task is training models through interaction; the model is the task's product, not a code deliverable" }
+        { "paper": "An ML-engineering agent running training pipelines", "verdict": "agency", "why": "the served task is training models through interaction; the model is the task's product, not a code deliverable" },
+        { "paper": "An agent that explores a dataset and reports findings, producing charts along the way", "verdict": "agency", "why": "the insight is the goal; the code and charts are tools" },
+        { "paper": "A survey covering both branches but written to advocate the code-as-action paradigm (Code as Agent Harness style)", "verdict": "agency + survey tag", "why": "the purpose it serves is the second class of tasks" }
       ],
       "axis": "the world the agent acts in (digital or physical)",
       "children": []
