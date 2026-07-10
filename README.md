@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://euni.ai/"><img src="./docs/static/images/icon.png" alt="Euni logo" height="120"></a>
+<a href="https://euni.ai/"><img src="./docs/static/images/icon.png" alt="Euni logo" height="135"></a>
 
 # Awesome Code Agents
 
