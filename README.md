@@ -92,151 +92,151 @@
 <!-- PAPERS:BEGIN -->
 ## 🧱 Code as Artifact: Building the Digital World
 
-> The paper serves a task whose ultimate purpose is producing code: a program, a patch, a query, a repository, hardware description code, a game codebase, graphics or animation code, a 3D/CAD program.
+> Where code is the thing we build.
 
 ### 💻 General Software
 
-> Tasks whose purpose is producing and sustaining general-purpose software: writing new code, and all the lifecycle work that improves, understands, safeguards, and enables it.
+> The whole craft of writing and tending software.
 
 #### 🏗️ End-to-End Development
 
-> Tasks that carry software from requirements to working code end to end: whole projects built by agent teams, or complete features grown inside existing repositories.
+> From a blank repo to a working product.
 
 *No papers yet.*
 
 #### ✏️ Code Generation & Completion
 
-> Tasks that produce targeted units of code from a specification or surrounding context: functions, classes, files, repository-aware snippets, completions, and next edits.
+> Conjuring the next function, file, and line.
 
 *No papers yet.*
 
 #### 🧪 Testing & Verification
 
-> Tasks that proactively assure correctness before or independent of any specific reported defect: generating tests, fuzzing, and formally verifying code.
+> Hunting down the bugs before they ship.
 
 *No papers yet.*
 
 #### 🐛 Debugging & Issue Resolution
 
-> Tasks that handle a known or reported defect end to end: reproducing it, localizing its cause, and repairing the code (SWE-bench style issue resolution and automated program repair).
+> Chasing a reported failure to its fix.
 
 *No papers yet.*
 
 #### 🔍 Code Review
 
-> Tasks that judge code changes: reviewing pull requests, generating review comments, and assessing patch quality.
+> Judging a change before it lands.
 
 *No papers yet.*
 
 #### 📖 Comprehension & Documentation
 
-> Tasks that understand code and record that understanding: answering questions about codebases, summarizing, documenting, and searching code.
+> Making sense of code, and writing it down.
 
 *No papers yet.*
 
 #### 🔄 Maintenance & Evolution
 
-> Tasks that evolve code while preserving its behavior: refactoring, migrating and translating, and optimizing performance.
+> Keeping code alive as the world moves on.
 
 *No papers yet.*
 
 #### 🔒 Security
 
-> The security-assurance activity on code: finding, localizing, and fixing vulnerabilities; auditing repositories; producing secure code.
+> Finding the holes in code, and closing them.
 
 *No papers yet.*
 
 #### 🛠️ Environment Setup & CI/CD
 
-> Enabling tasks that make code buildable and runnable: setting up environments, repairing builds, configuring CI/CD, and operating version control.
+> Making code build, run, and ship.
 
 *No papers yet.*
 
 #### 🗺️ General-Purpose Software Agents
 
-> Work whose served task is software engineering as a whole rather than any single lifecycle activity: field-level surveys and roadmaps, generalist software agents, agent scaffolds and SDKs, and studies of how agents and humans build software together.
+> The generalists, and the maps of the field.
 
 *No papers yet.*
 
 ### 🌐 Web Applications
 
-> Tasks whose purpose is producing web-facing code: front-end interfaces, websites, back-end services and APIs.
+> Bringing the web to life in code.
 
 *No papers yet.*
 
 ### 🗄️ Databases
 
-> Tasks whose purpose is producing database code: SQL queries, schemas, and database-centric programs.
+> Turning questions into queries.
 
 *No papers yet.*
 
 ### ⚙️ Systems
 
-> Tasks whose purpose is producing systems-level code: operating systems, kernels, compilers, networking, and distributed systems.
+> Code down at the level of the machine.
 
 *No papers yet.*
 
 ### 🔌 Hardware
 
-> Tasks whose purpose is producing hardware description code: RTL/HDL, chip design, and hardware verification.
+> Describing silicon in code.
 
 *No papers yet.*
 
 ### 🎮 Games
 
-> Tasks whose purpose is producing game code: game logic, levels as code, whole game codebases.
+> Building worlds that are meant to be played.
 
 *No papers yet.*
 
 ### 🎨 Graphics & Animation
 
-> Tasks whose purpose is producing code that renders visual artifacts: vector graphics, animations, and charts from specification.
+> Drawing and animating with code.
 
 *No papers yet.*
 
 ### 🧊 3D & CAD
 
-> Tasks whose purpose is producing code that builds three-dimensional artifacts: CAD programs, parametric models, 3D scenes.
+> Modeling the three-dimensional in code.
 
 *No papers yet.*
 
 ## 🌍 Code as Agency: Acting in the Real World
 
-> The paper serves a task whose goal is to get something done in the world through interaction, where code is the tool of action rather than the deliverable.
+> Where code is how we act on the world.
 
 ### 🖥️ Terminals & Operating Systems
 
-> Agents act in shells and operating systems to get jobs done; shell commands and scripts are the language of action, and the contribution is about the terminal/OS as the agent's world.
+> Getting real work done at the command line.
 
 *No papers yet.*
 
 ### 🧭 Browsers & the Web
 
-> Agents act on the live web through browsers, using code-level control (scripts, APIs, DOM actions) as the language of action.
+> Acting across the living web.
 
 *No papers yet.*
 
 ### 🧰 Software Applications
 
-> Agents operate professional and everyday software applications through scripting interfaces, APIs, or generated control code: office suites, design tools, simulators, enterprise systems, desktop and mobile apps.
+> Driving the software people use every day.
 
 *No papers yet.*
 
 ### 🕹️ Game Worlds
 
-> Agents act inside game environments, using code as the policy language to play, explore, and win.
+> Playing to win, with code as the controller.
 
 *No papers yet.*
 
 ### 🤖 The Physical World
 
-> Agents act on physical systems; code is the policy and control language for robots, devices, and other embodied platforms.
+> Where code reaches out and moves matter.
 
 *No papers yet.*
 
 ### 🔬 Research & Discovery
 
-> Agents pursue knowledge through interaction: exploring data, running machine-learning experiments, and driving scientific discovery.
+> Code as the instrument of discovery.
 
 *No papers yet.*
 <!-- PAPERS:END -->

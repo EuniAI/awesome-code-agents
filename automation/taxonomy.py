@@ -25,6 +25,7 @@ class Node:
     key: str
     title: str
     definition: str
+    blurb: str = ""  # short, human-facing, vision-flavored one-liner for the README
     emoji: str = ""
     includes: list[str] = field(default_factory=list)
     boundary: list[str] = field(default_factory=list)
@@ -84,6 +85,7 @@ def _parse_node(obj: dict[str, Any]) -> Node:
         key=obj["key"],
         title=obj["title"],
         definition=obj["definition"],
+        blurb=obj.get("blurb", ""),
         emoji=obj.get("emoji", ""),
         includes=obj.get("includes", []),
         boundary=obj.get("boundary", []),

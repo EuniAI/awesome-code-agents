@@ -168,7 +168,7 @@ def render_papers(tax: taxonomy.Taxonomy) -> str:
     blocks: list[str] = []
     for node, depth in tax.walk():
         blocks.append(_heading(node, depth))
-        blocks.append(f"> {_first_sentence(node.definition)}")
+        blocks.append(f"> {node.blurb or _first_sentence(node.definition)}")
         if node.is_leaf:
             entries = storage.load_entries(node.key)
             if entries:
