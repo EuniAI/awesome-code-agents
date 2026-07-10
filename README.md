@@ -10,17 +10,7 @@
     <em>A curated list of frontier research papers on autonomous code agents.</em>
   </p>
 
-  <!-- 🌍 Project Links -->
-  <p align="center">
-    <a href="https://euni.ai/"><b>Website</b></a> •
-    <a href="https://x.com/Euni_AI"><b>X/Twitter</b></a> •
-    <a href="https://www.linkedin.com/company/euni-ai/"><b>LinkedIn</b></a> •
-    <a href="https://discord.gg/jDG4wqkKZj"><b>Discord</b></a> •
-    <a href="https://www.reddit.com/r/EuniAI"><b>Reddit</b></a> •
-    <a href="https://github.com/EuniAI/awesome-code-agents"><b>GitHub</b></a>
-  </p>
-
-  <!-- Badges -->
+  <!-- Badges: primary (for-the-badge) -->
   <p align="center">
     <a href="https://github.com/EuniAI/awesome-code-agents/stargazers">
       <img src="https://img.shields.io/github/stars/EuniAI/awesome-code-agents?style=for-the-badge&color=yellow" alt="Stars">
@@ -31,14 +21,12 @@
     <a href="https://opensource.org/licenses/Apache-2.0">
       <img src="https://img.shields.io/badge/license-Apache--2.0-green?style=for-the-badge" alt="License: Apache 2.0">
     </a>
-    <a href="https://www.arxiv.org/abs/2507.19942">
-      <img src="https://img.shields.io/badge/Paper-arXiv-red?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv Paper">
-    </a>
     <a href="https://github.com/EuniAI/awesome-code-agents/graphs/contributors">
       <img src="https://img.shields.io/github/contributors/EuniAI/awesome-code-agents?style=for-the-badge&color=orange" alt="Contributors">
     </a>
   </p>
 
+  <!-- Badges: secondary (flat) -->
   <p align="center">
     <a href="https://awesome.re">
       <img src="https://awesome.re/badge.svg" alt="Awesome">
@@ -48,9 +36,6 @@
     </a>
     <a href="https://github.com/EuniAI/awesome-code-agents" target="_blank">
       <img src="https://img.shields.io/github/commit-activity/m/EuniAI/awesome-code-agents?label=Commits&color=brightgreen&style=flat" alt="Commit Activity">
-    </a>
-    <a href="https://github.com/EuniAI/awesome-code-agents/forks" target="_blank">
-      <img src="https://img.shields.io/github/forks/EuniAI/awesome-code-agents.svg?style=flat&color=blue&label=Forks" alt="Forks">
     </a>
     <a href="https://github.com/EuniAI/awesome-code-agents/issues" target="_blank">
       <img alt="Issues Closed" src="https://img.shields.io/github/issues-search?query=repo%3AEuniAI%2Fawesome-code-agents%20is%3Aclosed&label=Issues%20Closed&labelColor=%237d89b0&color=%235d6b98&style=flat">
@@ -64,6 +49,16 @@
     <a href="https://img.shields.io/github/last-commit/EuniAI/awesome-code-agents?color=green">
       <img src="https://img.shields.io/github/last-commit/EuniAI/awesome-code-agents?color=green" alt="Last Commit">
     </a>
+  </p>
+
+  <!-- Project Links (emoji nav, below badges) -->
+  <p align="center">
+    🌐 <a href="https://euni.ai/">Website</a> ·
+    🐦 <a href="https://x.com/Euni_AI">X/Twitter</a> ·
+    💼 <a href="https://www.linkedin.com/company/euni-ai/">LinkedIn</a> ·
+    💬 <a href="https://discord.gg/jDG4wqkKZj">Discord</a> ·
+    👽 <a href="https://www.reddit.com/r/EuniAI">Reddit</a> ·
+    🐙 <a href="https://github.com/EuniAI/awesome-code-agents">GitHub</a>
   </p>
 
   <p align="center">
