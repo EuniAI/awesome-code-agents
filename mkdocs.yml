@@ -5,8 +5,8 @@ repo_name: EuniAI/awesome-code-agents
 repo_url: https://github.com/EuniAI/awesome-code-agents
 theme:
   name: material
-  logo: static/images/icon.jpg
-  favicon: static/images/icon.jpg
+  logo: static/images/icon.png
+  favicon: static/images/icon.png
   palette:
     # Light mode
     - scheme: default
