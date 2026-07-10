@@ -25,12 +25,17 @@
     "L3": "software-lifecycle activity (only the general-software node under artifact expands)"
   },
   "axis": "where the paper's success is measured",
+  "master_test": [
+    "Ask: is code the product (its own quality is what gets judged) or the means (code runs to produce some other outcome)? Product goes to artifact; means goes to agency.",
+    "Classify by the paper's primary/headline evaluation. Most agents both write and run code, so follow what the main result actually measures.",
+    "Nearly every paper here contributes an agent, so classify by what the agent produces or does, not by the fact that it is an agent."
+  ],
   "nodes": [
     {
       "key": "artifact",
       "emoji": "🧱",
       "title": "Code as Artifact: Building the Digital World",
-      "definition": "The agent's deliverable is a code artifact, and the paper's success is measured by the quality or correctness of that artifact itself: does the code compile, pass tests, meet the spec, resolve the issue, match the design.",
+      "definition": "Code is the product. The agent's valued output is a digital artifact produced through code (source code, a patch, a query, a circuit design, a 3D model, or even a generated dataset or model), and the paper's success is measured by the quality or correctness of that artifact itself: does it compile, pass tests, meet the spec, resolve the issue, match the design.",
       "includes": [
         "Agents that write, complete, test, debug, localize, review, or maintain software.",
         "Agents that generate other digital artifacts (web apps, database queries, systems software, hardware/HDL, games, graphics, animations, 3D/CAD models), judged on the artifact's own merits."
@@ -51,7 +56,7 @@
       "key": "agency",
       "emoji": "🌍",
       "title": "Code as Agency: Acting in the Real World",
-      "definition": "The agent uses writing and running code as a means of action, and the paper's success is measured by the resulting change in an external world's state, digital or physical, not by the code's own quality. The digital world (terminals, browsers, games) is part of the real world; acting there produces real consequences.",
+      "definition": "Code is the means, not the product. The agent writes and runs code to reach an end beyond the code itself, and the paper's success is measured by that outcome, not by the code's own quality: a task completed in an environment, a world's state changed, an experiment or analysis run, a model trained, a discovery made. The environment may be digital (a terminal, a browser, a game) or physical (a robot, a lab); the digital world is part of the real world and acting there has real consequences.",
       "includes": [
         "Agents that operate terminals and operating systems, drive web browsers, play in game worlds, or control robots and the physical world.",
         "Agents that autonomously run data analysis, machine-learning experiments, and scientific discovery, where code is the lever and the outcome lives outside the code."
