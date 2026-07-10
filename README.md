@@ -4,8 +4,10 @@
     <b>Awesome Code Agents</b>
   </h1>
 
+  <h3>The digital world we build. The real world we act in.</h3>
+
   <p align="center">
-    <em>The digital world we build. The real world we act in.</em>
+    <em>A curated list of frontier research papers on autonomous code agents.</em>
   </p>
 
   <!-- 🌍 Project Links -->
