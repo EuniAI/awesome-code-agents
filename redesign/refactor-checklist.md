@@ -18,9 +18,10 @@
 
 - [x] **taxonomy.json is consumed by nothing.** DONE 2026-07-10: `automation/taxonomy.py`
       (load/validate/walk/leaves/by_key, fails loudly) + `automation/storage.py` (sole
-      owner of the data-file layout). Remaining sub-step: delete `categories:`/`tags:`
-      from config.yaml when the classifier is rebuilt (they are still read by the old
-      classifier until then).
+      owner of the data-file layout). 2026-07-10: `categories:`/`tags:` deleted from
+      config.yaml (old classifier parked in _legacy); `automation/config.py` loads
+      operational config only. New data model in `automation/models.py` (Paper: id as
+      identity, category as a field); old data parked in `_legacy/data/`.
 - [ ] **Classifier prompt encodes the old worldview and contradicts L1** (requires
       "agent executes code/CLI"; would reject review/QA/localization and resource
       papers). Rebuild the prompt by compiling scope + master_test + tree

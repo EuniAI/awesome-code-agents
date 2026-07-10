@@ -19,6 +19,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from automation import storage, taxonomy
+from automation.models import Paper
 
 _REPO_ROOT = Path(__file__).resolve().parents[1]
 README = _REPO_ROOT / "README.md"
@@ -104,35 +105,26 @@ def _badge_tag(tag: str) -> str:
     return f"![{display}](https://img.shields.io/badge/{label}-{color}?style=for-the-badge)"
 
 
-def _format_authors(authors_field) -> str:
-    if not authors_field:
-        return ""
-    if isinstance(authors_field, list):
-        names = [str(a).strip() for a in authors_field if str(a).strip()]
-    else:
-        names = [s.strip() for s in str(authors_field).split(",") if s.strip()]
+def _format_authors(names: list[str]) -> str:
+    names = [n for n in names if n.strip()]
     if len(names) > 10:
         return ", ".join(names[:10]) + ", et al."
     return ", ".join(names)
 
 
-def render_entry(e: dict) -> str:
-    title = e.get("title", "").rstrip(".")
-    authors = _format_authors(e.get("authors", ""))
-    venue = e.get("venue", "")
-    links = e.get("links", {}) or {}
+def render_entry(p: Paper) -> str:
+    title = p.title.rstrip(".")
+    authors = _format_authors(p.authors)
+    venue = p.venue
 
     link_badges = " ".join(
         x for x in [
-            _badge_paper(links.get("paper", "")),
-            _badge_github(links.get("github", "")),
-            _badge_website(links.get("website", "")),
+            _badge_paper(p.links.get("paper", "")),
+            _badge_github(p.links.get("github", "")),
+            _badge_website(p.links.get("website", "")),
         ] if x
     )
-    tags = e.get("tags") or []
-    if isinstance(tags, str):
-        tags = [t.strip() for t in tags.split(",") if t.strip()]
-    tag_badges = " ".join(_badge_tag(t) for t in tags if t)
+    tag_badges = " ".join(_badge_tag(t) for t in p.tags if t)
     badges = " ".join(x for x in [link_badges, tag_badges] if x)
 
     lines = [f"- **{title}**  " if title and title[-1] in "?!" else f"- **{title}.**  "]
@@ -170,9 +162,9 @@ def render_papers(tax: taxonomy.Taxonomy) -> str:
         blocks.append(_heading(node, depth))
         blocks.append(f"> {node.blurb or _first_sentence(node.definition)}")
         if node.is_leaf:
-            entries = storage.load_entries(node.key)
-            if entries:
-                blocks.append("\n\n".join(render_entry(e) for e in entries))
+            papers = storage.load(node.key)
+            if papers:
+                blocks.append("\n\n".join(render_entry(p) for p in papers))
             else:
                 blocks.append("*No papers yet.*")
     return "\n\n".join(blocks)

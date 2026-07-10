@@ -1,51 +1,68 @@
 """
-The single owner of the data/ file layout.
+The single owner of the data/ layout.
 
-One YAML file per taxonomy leaf: data/papers_{key}.yaml, newest first.
-A missing file means an empty category (legitimate for new categories and
-during migration); malformed YAML is an error, not an empty list.
+One YAML file per taxonomy leaf: data/papers_{leaf}.yaml, newest first. Each record
+also carries its `category` field, so re-classification is a field change plus a
+save, never manual file surgery. Identity and dedup key is Paper.id.
 """
 
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any
 
 import yaml
+
+from automation.models import Paper
 
 _REPO_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = _REPO_ROOT / "data"
 
-REQUIRED_ENTRY_KEYS = ("title", "authors", "venue", "links")
+
+def path_for(key: str, data_dir: Path = DATA_DIR) -> Path:
+    return data_dir / f"papers_{key}.yaml"
 
 
-def path_for(key: str) -> Path:
-    return DATA_DIR / f"papers_{key}.yaml"
+def load(key: str, data_dir: Path = DATA_DIR) -> list[Paper]:
+    """Papers of one leaf; a missing file is an empty category."""
+    path = path_for(key, data_dir)
+    if not path.exists():
+        return []
+    raw = yaml.safe_load(path.read_text(encoding="utf-8")) or []
+    if not isinstance(raw, list):
+        raise ValueError(f"{path} must contain a YAML list")
+    papers = [Paper.from_dict(d) for d in raw]
+    for p in papers:
+        p.category = p.category or key
+    return papers
 
 
-def write_entries(key: str, entries: list[dict[str, Any]]) -> None:
-    """Write the full entry list for a leaf (newest first), matching repo YAML style."""
+def save(key: str, papers: list[Paper], data_dir: Path = DATA_DIR) -> None:
+    """Write one leaf's papers (callers keep newest-first order)."""
+    data_dir.mkdir(parents=True, exist_ok=True)
     text = yaml.dump(
-        entries,
+        [p.to_dict() for p in papers],
         allow_unicode=True,
         default_flow_style=False,
         sort_keys=False,
         width=120,
     )
-    path_for(key).write_text(text, encoding="utf-8")
+    path_for(key, data_dir).write_text(text, encoding="utf-8")
 
 
-def load_entries(key: str) -> list[dict[str, Any]]:
-    path = path_for(key)
-    if not path.exists():
-        return []
-    data = yaml.safe_load(path.read_text(encoding="utf-8")) or []
-    if not isinstance(data, list):
-        raise ValueError(f"{path} must contain a YAML list")
-    for i, entry in enumerate(data):
-        if not isinstance(entry, dict):
-            raise ValueError(f"{path} entry {i} is not a mapping")
-        missing = [k for k in REQUIRED_ENTRY_KEYS if k not in entry]
-        if missing:
-            raise ValueError(f"{path} entry {i} missing keys: {missing}")
-    return data
+def add(paper: Paper, data_dir: Path = DATA_DIR) -> bool:
+    """Prepend one paper to its category file; False if its id already exists there."""
+    if not paper.category:
+        raise ValueError(f"Paper has no category: {paper.title!r}")
+    existing = load(paper.category, data_dir)
+    if any(p.id == paper.id for p in existing):
+        return False
+    save(paper.category, [paper] + existing, data_dir)
+    return True
+
+
+def all_ids(leaf_keys: list[str], data_dir: Path = DATA_DIR) -> set[str]:
+    """Every stored paper id across the given leaves (the global dedup set)."""
+    ids: set[str] = set()
+    for key in leaf_keys:
+        ids.update(p.id for p in load(key, data_dir))
+    return ids
