@@ -16,10 +16,11 @@
 
 ## P0: foundations (before paper migration)
 
-- [ ] **taxonomy.json is consumed by nothing.** Add a small `taxonomy` module (load,
-      validate, walk, leaves, by_key); make it the only reader of taxonomy.json.
-      Delete `categories:` and `tags:` from config.yaml; config keeps operational
-      settings only.
+- [x] **taxonomy.json is consumed by nothing.** DONE 2026-07-10: `automation/taxonomy.py`
+      (load/validate/walk/leaves/by_key, fails loudly) + `automation/storage.py` (sole
+      owner of the data-file layout). Remaining sub-step: delete `categories:`/`tags:`
+      from config.yaml when the classifier is rebuilt (they are still read by the old
+      classifier until then).
 - [ ] **Classifier prompt encodes the old worldview and contradicts L1** (requires
       "agent executes code/CLI"; would reject review/QA/localization and resource
       papers). Rebuild the prompt by compiling scope + master_test + tree
@@ -28,9 +29,11 @@
 - [ ] **No structured-output guarantee; unlimited retries** (the 705-entry queue).
       Use JSON response format, cap retries, add a dead-letter list surfaced for
       manual triage instead of silent re-queueing.
-- [ ] **README structure is hand-maintained; render only fills 23 scattered blocks.**
-      Generate the whole Papers chapter (headings, section intros, Quick Navigation,
-      entries) from the taxonomy tree between one pair of global markers.
+- [x] **README structure is hand-maintained; render only fills 23 scattered blocks.**
+      DONE 2026-07-10: `automation/render.py` generates NAV and PAPERS zones from the
+      tree between two marker pairs (idempotent, fails loudly on missing markers);
+      old 36-block chapter surgically removed; `scripts/render_papers.py` is now a
+      thin shim; tests in `automation/tests/`.
 - [ ] **Paper is a raw dict mutated across stages; entry schema implicit in 3 places.**
       One small `Paper` dataclass (+ `Classification`); YAML (de)serialization lives
       only in a `storage` module that owns the `papers_{key}.yaml` layout and dedup.
