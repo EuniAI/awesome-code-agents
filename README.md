@@ -1,12 +1,11 @@
 <div align="center">
   <a href="https://euni.ai/" target="_blank"><img src="./docs/static/images/icon.png" alt="Euni logo" height="120"></a>
   <h1 style="border-bottom: none;">
-    <b><a href="https://github.com/EuniAI/awesome-code-agents" target="_blank">Awesome Code Agents</a></b>
+    <b>Awesome Code Agents</b>
   </h1>
-  <h3>The digital world we build. The real world we act in.</h3>
 
   <p align="center">
-    <em>A curated list of frontier research papers on autonomous code agents.</em>
+    <em>The digital world we build. The real world we act in.</em>
   </p>
 
   <!-- 🌍 Project Links -->
