@@ -23,7 +23,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-red)](https://github.com/EuniAI/awesome-code-agents/pulls)
 
 [![Website](https://img.shields.io/badge/Website-2E3440?style=flat-square&logo=safari&logoColor=white)](https://euni.ai/)
-[![X](https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/Euni_AI)
+[![X/Twitter](https://img.shields.io/badge/X%2FTwitter-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/Euni_AI)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/euni-ai/)
 [![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/jDG4wqkKZj)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/EuniAI/awesome-code-agents)
