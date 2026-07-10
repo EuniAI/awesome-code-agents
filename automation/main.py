@@ -25,6 +25,7 @@ import argparse
 import logging
 import sys
 from datetime import date, timedelta
+from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -35,12 +36,29 @@ sys.path.insert(0, str(_REPO_ROOT))
 load_dotenv(_REPO_ROOT / "automation" / ".env", override=False)
 load_dotenv(_REPO_ROOT / ".env", override=False)
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s %(levelname)-8s %(name)s — %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-)
+_LOG_FORMAT = "%(asctime)s %(levelname)-8s %(name)s — %(message)s"
+_LOG_DATEFMT = "%Y-%m-%d %H:%M:%S"
+_LOG_DIR = _REPO_ROOT / "automation" / "logs"
+
+logging.basicConfig(level=logging.INFO, format=_LOG_FORMAT, datefmt=_LOG_DATEFMT)
 logger = logging.getLogger("main")
+
+
+def _attach_file_logging(mode: str) -> None:
+    """Add a size-capped rotating file handler for this run's mode.
+
+    Logs are local-only (gitignored). Rotation keeps the last few runs while
+    bounding disk usage — the durable state lives in state/processed.json, not here.
+    """
+    _LOG_DIR.mkdir(parents=True, exist_ok=True)
+    handler = RotatingFileHandler(
+        _LOG_DIR / f"{mode}.log",
+        maxBytes=5 * 1024 * 1024,  # 5 MB per file
+        backupCount=3,             # keep 3 rotations (~20 MB max per mode)
+        encoding="utf-8",
+    )
+    handler.setFormatter(logging.Formatter(_LOG_FORMAT, datefmt=_LOG_DATEFMT))
+    logging.getLogger().addHandler(handler)
 
 from automation.config_loader import load_config, save_config
 import automation.state_manager as state_mgr
@@ -412,20 +430,27 @@ def main() -> None:
     parser.add_argument("--from", dest="from_date", help="Start date for backfill (YYYY-MM-DD)")
     parser.add_argument("--to",   dest="to_date",   help="End date for backfill (YYYY-MM-DD)")
     args = parser.parse_args()
+    _attach_file_logging(args.mode)
 
-    if args.mode == "setup":
-        run_setup()
-    elif args.mode == "daily":
-        run_daily()
-    elif args.mode == "finalize":
-        run_finalize()
-    elif args.mode == "backfill":
-        if not args.from_date or not args.to_date:
-            parser.error("--mode=backfill requires --from and --to")
-        run_backfill(
-            date.fromisoformat(args.from_date),
-            date.fromisoformat(args.to_date),
-        )
+    try:
+        if args.mode == "setup":
+            run_setup()
+        elif args.mode == "daily":
+            run_daily()
+        elif args.mode == "finalize":
+            run_finalize()
+        elif args.mode == "backfill":
+            if not args.from_date or not args.to_date:
+                parser.error("--mode=backfill requires --from and --to")
+            run_backfill(
+                date.fromisoformat(args.from_date),
+                date.fromisoformat(args.to_date),
+            )
+    except Exception:
+        # Land uncaught crashes in the rotating file too, so cron can redirect
+        # to /dev/null without losing tracebacks.
+        logger.exception("Pipeline run failed (mode=%s)", args.mode)
+        raise
 
 
 if __name__ == "__main__":

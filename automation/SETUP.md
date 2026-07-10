@@ -35,10 +35,13 @@ Add these two lines (adjust path):
 
 ```
 # Daily: crawl arXiv + process inbox → classify → open review Issues
-0 9 * * *  cd /path/to/awesome-code-agents && python automation/main.py --mode=daily >> /tmp/aca-daily.log 2>&1
+0 9 * * *  cd /path/to/awesome-code-agents && python automation/main.py --mode=daily > /dev/null 2>&1
 
 # Hourly: check for /approve commands → write YAML → push
-0 * * * *  cd /path/to/awesome-code-agents && python automation/main.py --mode=finalize >> /tmp/aca-finalize.log 2>&1
+0 * * * *  cd /path/to/awesome-code-agents && python automation/main.py --mode=finalize > /dev/null 2>&1
+
+# Run logs (incl. tracebacks) are written to automation/logs/{mode}.log,
+# size-capped and rotated by the app itself — no shell redirect needed.
 ```
 
 ## 5. Daily workflow (for you)
