@@ -55,13 +55,13 @@
     </a>
   </p>
 
-  <!-- Project Links (below badges) -->
+  <!-- Project Links (brand-icon badges, below badges) -->
   <p align="center">
-    🌐 <a href="https://euni.ai/"><b>Website</b></a> ·
-    🐦 <a href="https://x.com/Euni_AI"><b>X/Twitter</b></a> ·
-    💼 <a href="https://www.linkedin.com/company/euni-ai/"><b>LinkedIn</b></a> ·
-    💬 <a href="https://discord.gg/jDG4wqkKZj"><b>Discord</b></a> ·
-    ⭐ <a href="https://github.com/EuniAI/awesome-code-agents"><b>GitHub</b></a>
+    <a href="https://euni.ai/"><img src="https://img.shields.io/badge/Website-2E3440?style=flat-square&logo=safari&logoColor=white" alt="Website"></a>
+    <a href="https://x.com/Euni_AI"><img src="https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white" alt="X"></a>
+    <a href="https://www.linkedin.com/company/euni-ai/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+    <a href="https://discord.gg/jDG4wqkKZj"><img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord"></a>
+    <a href="https://github.com/EuniAI/awesome-code-agents"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"></a>
   </p>
 
   <p align="center">
