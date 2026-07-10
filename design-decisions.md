@@ -23,10 +23,10 @@
   都不适用则无 tag（无 tag = 普通方法论文，不设 method 默认值——与 README 现行徽章
   渲染逻辑一致）。两个 facet，各自内部平级：
   - **论文类型**（适用才打，互斥）：survey / empirical / position
-  - **发布工件**（适用才打，可多选）：benchmark / model / training-data / agent
+  - **发布工件**（适用才打，可多选）：benchmark / model / training-data
     ——常共存（训练类工作常一次放出模型+数据+基准），故与论文类型分开、不强行单选。
-    `agent` 定义为**发布了可公开使用的 agent 系统/框架**（如 SWE-agent、OpenHands），
-    而非"论文提出 agent"（否则近乎全集、无信息量）。
+    曾考虑加 `agent` 工件 tag，**否决**（2026-07-10）：本列表论文绝大多数都提出 agent，
+    近乎全集、无信息量；"是否放出可运行系统"由 links.github 字段已隐含承载。
   foundation_models → artifact=model、data_synthesis → artifact=training-data、
   multimodal_coding 直接溶解进领域类别。曾考虑的机制 tags（planning/memory/feedback/
   multi-agent）和模态 tag（multimodal）被**否决**：机制天然多标签、边界模糊，会把
