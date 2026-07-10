@@ -1,0 +1,72 @@
+{
+  "name": "Awesome Code Agents Taxonomy",
+  "description": "Authoritative category system for this repo. Single source of truth: automation/config.yaml is synced from it, and it drives both the README structure and the auto-classifier. Rationale and history: design-decisions.md.",
+  "vision": "Code as Everything — every strong paper in which an agent writes or runs code, across all domains. Code is either the thing being built or the language of action; that split is Level 1.",
+  "principles": [
+    "Single-axis rule: each level divides on exactly one axis; sibling nodes are conceptually parallel and mutually exclusive.",
+    "Name vs definition: `title` is the human-facing label (carries the vision); the definition/includes/boundary/examples block is the classifier's contract.",
+    "Boundary lines ('if X, it belongs to sibling Y instead') are the anti-mis-classification device and feed directly into the classifier prompt.",
+    "Stable keys: `key` is lowercase ASCII and never changes even when a title is reworded; data files, README markers, and the classifier reference keys.",
+    "Tags are orthogonal and sparse, never categories."
+  ],
+  "tags": {
+    "paper_type": {
+      "rule": "mutually exclusive; tag only if it applies (no tag = a plain method paper)",
+      "values": ["survey", "empirical", "position"]
+    },
+    "released_artifact": {
+      "rule": "multi-select; tag only if it applies; these often co-occur",
+      "values": ["benchmark", "model", "training-data"]
+    }
+  },
+  "levels": {
+    "L1": "the role of code — where the paper's success is measured (the master test; apply first)",
+    "L2": "artifact branch: the domain of the code artifact | agency branch: the world the agent acts in",
+    "L3": "software-lifecycle activity (only the general-software node under artifact expands)"
+  },
+  "axis": "where the paper's success is measured",
+  "nodes": [
+    {
+      "key": "artifact",
+      "emoji": "🧱",
+      "title": "Code as Artifact — Building the Digital World",
+      "definition": "The agent's deliverable is a code artifact, and the paper's success is measured by the quality or correctness of that artifact itself: does the code compile, pass tests, meet the spec, resolve the issue, match the design.",
+      "includes": [
+        "Agents that write, complete, test, debug, localize, review, or maintain software.",
+        "Agents that generate other digital artifacts — web apps, database queries, systems software, hardware/HDL, games, graphics, animations, 3D/CAD models — judged on the artifact's own merits."
+      ],
+      "boundary": [
+        "If success is measured by a change in an external world's state (a task completed, a game won, a robot moved, an experiment's result) rather than by the artifact's quality, it is `agency`.",
+        "Static output inspected as an artifact stays here; code that is run to act or interact in a world is `agency`. A static chart is an artifact; a dynamic, interactive visualization is agency."
+      ],
+      "examples": [
+        { "paper": "SWE-bench-style issue resolution", "verdict": "artifact", "why": "the patch is judged by whether the repo's tests pass" },
+        { "paper": "Text-to-SQL generation", "verdict": "artifact", "why": "judged by query correctness" },
+        { "paper": "RTL/HDL generation", "verdict": "artifact", "why": "judged by whether the chip passes verification" }
+      ],
+      "axis": "the domain of the code artifact",
+      "children": []
+    },
+    {
+      "key": "agency",
+      "emoji": "🌍",
+      "title": "Code as Agency — Acting in the Real World",
+      "definition": "The agent uses writing and running code as a means of action, and the paper's success is measured by the resulting change in an external world's state — digital or physical — not by the code's own quality. The digital world (terminals, browsers, games) is part of the real world; acting there produces real consequences.",
+      "includes": [
+        "Agents that operate terminals and operating systems, drive web browsers, play in game worlds, or control robots and the physical world.",
+        "Agents that autonomously run data analysis, machine-learning experiments, and scientific discovery — where code is the lever and the outcome lives outside the code."
+      ],
+      "boundary": [
+        "If the deliverable is a code artifact judged on its own quality, it is `artifact` (apply the master test).",
+        "Producing game code is `artifact` (game development); playing a game by executing code is agency. Writing a data-viz artifact is `artifact`; running an interactive/dynamic visualization or dashboard is agency."
+      ],
+      "examples": [
+        { "paper": "A terminal agent completing enterprise automation tasks", "verdict": "agency", "why": "judged by task completion in the OS, not code quality" },
+        { "paper": "An embodied agent executing code to move a robot", "verdict": "agency", "why": "judged by the physical outcome" },
+        { "paper": "An ML-engineering agent running a training pipeline", "verdict": "agency", "why": "judged by model performance" }
+      ],
+      "axis": "the world the agent acts in (digital or physical)",
+      "children": []
+    }
+  ]
+}
