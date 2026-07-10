@@ -5,13 +5,13 @@
 
 ## Vision (the list's thesis, to sit at the top of the README)
 
-> **Code as Everything** — as agents reach into reality, code becomes the substrate the
-> world runs on: the medium through which intelligence *builds the digital world* and
-> *acts in the real one*.
+> **Code as Everything.**
+> The digital world we build. The real world we act in.
 
 As agents touch reality, code is becoming a core element of how the world runs, no longer
-confined to the digital realm. The digital world is part of the real world — acting in a
-terminal, a browser, or a game is just as much real-world activity.
+confined to the digital realm. The digital world is part of the real world: acting in a
+terminal, a browser, or a game is just as much real-world activity. The two sentences map
+to the two L1 chapters (Building the Digital World / Acting in the Real World).
 
 ## 0. Design principles (locked)
 

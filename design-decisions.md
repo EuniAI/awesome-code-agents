@@ -6,9 +6,13 @@
 ## 2026-07-10: List vision and L1 naming (Code as Everything)
 
 ### Vision (the list's thesis, to sit at the top of the README)
-> **Code as Everything** — as agents reach into reality, code becomes the substrate
-> the world runs on: the medium through which intelligence *builds the digital world*
-> and *acts in the real one*.
+> **Code as Everything.**
+> The digital world we build. The real world we act in.
+
+Kept deliberately short (fits at the very top of the repo), no dashes. The second
+sentence echoes the two L1 chapter titles (*Building the Digital World* / *Acting in the
+Real World*), so the tagline closes back on the section headings. "act in" chosen over
+"reach/shape/…" for exact consistency with the Agency chapter title (2026-07-10).
 
 Rationale: as agents advance rapidly and touch the physical world, code is becoming a
 core element of how the world runs, no longer confined to the digital realm — code is
