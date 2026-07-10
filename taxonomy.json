@@ -326,7 +326,7 @@
             {
               "key": "software_infrastructure",
               "emoji": "🛠️",
-              "title": "Environments & Toolchains",
+              "title": "Environment Setup & CI/CD",
               "definition": "Enabling tasks that make code buildable and runnable: setting up environments, repairing builds, configuring CI/CD, and operating version control.",
               "includes": [
                 "Environment and dependency setup agents; build-failure repair.",
@@ -348,7 +348,7 @@
             {
               "key": "software_general",
               "emoji": "🗺️",
-              "title": "Agentic Software Engineering",
+              "title": "General-Purpose Software Agents",
               "definition": "Work whose served task is software engineering as a whole rather than any single lifecycle activity: field-level surveys and roadmaps, generalist software agents, agent scaffolds and SDKs, and studies of how agents and humans build software together.",
               "includes": [
                 "Surveys, roadmaps, and position papers on software agents in general.",

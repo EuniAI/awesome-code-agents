@@ -11,7 +11,7 @@ Generation & Completion), `software_testing` (Testing & Verification),
 `software_debugging` (Debugging & Issue Resolution), `software_review` (Code Review),
 `software_comprehension` (Comprehension & Documentation), `software_maintenance`
 (Maintenance & Evolution), `software_security` (Security), `software_infrastructure`
-(Environments & Toolchains), `software_general` (Agentic Software Engineering).
+(Environment Setup & CI/CD), `software_general` (General-Purpose Software Agents).
 
 ### Rulings and rationale
 - Data scan drove the design: old `code_generation` (62) hid at least six communities
@@ -31,8 +31,10 @@ Generation & Completion), `software_testing` (Testing & Verification),
   test; enter only when the served task is software engineering as a whole (field-level
   surveys/roadmaps, generalist agents, scaffolds/SDKs, cross-activity studies). A survey
   of issue-resolution agents belongs to debugging.
-- Renames by owner taste: "Environments & Toolchains" (not Engineering Infrastructure),
-  "Agentic Software Engineering" (not Foundations & Overviews).
+- Titles fixed by owner after two rounds: "Environment Setup & CI/CD" (rejected:
+  Engineering Infrastructure, Environments & Toolchains as too vague) and
+  "General-Purpose Software Agents" (rejected: Foundations & Overviews as vague,
+  Agentic Software Engineering as overclaiming the whole field).
 
 The full tree is now complete: 2 (L1) x 14 (L2) with 10 L3 leaves under software,
 23 leaf categories total. Next: implementation phase (config sync from taxonomy.json,
