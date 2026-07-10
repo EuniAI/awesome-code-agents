@@ -14,12 +14,22 @@ sentence echoes the two L1 chapter titles (*Building the Digital World* / *Actin
 Real World*), so the tagline closes back on the section headings. "act in" chosen over
 "reach/shape/…" for exact consistency with the Agency chapter title (2026-07-10).
 
-Header presentation (2026-07-10): in the rendered README header we show only the
-subtitle sentence "The digital world we build. The real world we act in." — the literal
-"Code as Everything" label was dropped from the visible header for visual balance (a
-short second title line under a longer one looked unbalanced). "Code as Everything"
-remains the conceptual thesis of the list and the name of the L1 framing; it just is not
-printed as header chrome. Do not "restore" it to the header assuming it was lost.
+Header presentation (2026-07-10, final): the rendered README header is three lines whose
+widths increase top-to-bottom (an intentional expanding shape, mirrored from
+AssetOpsBench):
+1. `# Awesome Code Agents` (name)
+2. `### The Digital World We Are Building. The Real World We Are Acting In.` (the vision,
+   Title Case, as the subtitle)
+3. `*A curated, ever-growing collection of frontier research papers and technical reports
+   on autonomous code agents.*`
+
+Notes: the literal "Code as Everything" label was dropped from the visible header — as a
+17-char phrase it was shorter than the title and broke the expanding-line shape. It
+remains the conceptual thesis of the list and the name of the L1 framing (Code as
+Artifact / Code as Agency); it is just not printed as header chrome. Do not "restore" it
+to the header assuming it was lost. Title Case for the vision line is deliberate (a hero
+tagline reads as a title, not prose); here it also capitalizes cleanly because the only
+preposition "in" is the final word.
 
 Rationale: as agents advance rapidly and touch the physical world, code is becoming a
 core element of how the world runs, no longer confined to the digital realm — code is
