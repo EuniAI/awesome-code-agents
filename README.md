@@ -1,7 +1,6 @@
 <div align="center">
-  <img src="./docs/static/images/icon.jpg" alt="Prometheus Logo" width="160">
   <h1 style="border-bottom: none;">
-    <b><a href="https://euni.ai/" target="_blank">🤖 Awesome Code Agents</a></b><br>
+    <b><a href="https://euni.ai/" target="_blank"><img src="./docs/static/images/icon.jpg" alt="Euni logo" height="40" align="middle"> Awesome Code Agents</a></b><br>
     Code as Everything
   </h1>
 
