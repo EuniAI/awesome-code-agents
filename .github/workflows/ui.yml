@@ -1,4 +1,4 @@
-# Deploys the owner's private review UI (ui/) to GitHub Pages.
+# Deploys the owner's private review UI (automation/ui/) to GitHub Pages.
 # The page is an empty shell without a token; all writes go through issue
 # comments, which decide.yml trusts only from the configured reviewer.
 name: Deploy review UI
@@ -6,7 +6,7 @@ name: Deploy review UI
 on:
   push:
     branches: [main]
-    paths: ["ui/**"]
+    paths: ["automation/ui/**"]
   workflow_dispatch:
 
 permissions:
@@ -28,6 +28,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ui
+          path: automation/ui
       - id: deployment
         uses: actions/deploy-pages@v4
