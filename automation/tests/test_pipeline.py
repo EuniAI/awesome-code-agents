@@ -154,7 +154,7 @@ def test_parse_decisions_ranges_and_all():
 def test_parse_decisions_trailing_reason_and_venue():
     # A free-text reason after the indices must not swallow the command.
     d = reviewflow.parse_decisions([_comment("o", "/reject 2 wrong topic")], "o", 3)
-    assert d == {2: ("reject", {})}
+    assert d == {2: ("reject", {"reason": "wrong topic"})}
     # Venue values may contain spaces; a following key= ends the value.
     d = reviewflow.parse_decisions(
         [_comment("o", "/edit 1 venue=ICSE 2026 tags=benchmark")], "o", 3)
@@ -167,7 +167,7 @@ def test_parse_decisions_mixed_line_and_case_insensitive_login():
         [_comment("Owner", "/approve 1,3 /reject 2 wrong topic /edit 3 venue=FSE 2027")],
         "owner", 3)
     assert d[1] == ("approve", {})
-    assert d[2] == ("reject", {})
+    assert d[2] == ("reject", {"reason": "wrong topic"})
     assert d[3] == ("approve", {"venue": "FSE 2027"})
     # An edit followed by a newline command keeps its value bounded to the line.
     d = reviewflow.parse_decisions(

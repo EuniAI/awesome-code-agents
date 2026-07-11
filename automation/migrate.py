@@ -476,7 +476,7 @@ def process_backlog(limit: int = 50) -> None:
         batch = new_ids[:limit]
         logger.info("backlog: absorbing %d of %d (re-run for the rest)", len(batch), len(new_ids))
         papers = list(fetch_arxiv_papers(batch).values())
-        pipeline.classify_and_propose(papers)
+        pipeline.classify_and_propose(papers, origin={p.id: "backlog" for p in papers})
 
     # New pool issues exist; now retire the old-format ones.
     cfg = config.load()["repo"]

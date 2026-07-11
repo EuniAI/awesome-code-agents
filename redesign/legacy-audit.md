@@ -38,8 +38,9 @@ feature. _legacy/ may be deleted once the owner accepts this record.
    new only matched URLs. Restored with the captured-via-URL dedup subtlety.
 
 Also rescued: scripts/generate_ack_badges.py (acknowledgement badges tooling)
-copied out of _legacy before deletion; its data/ack_repos.yaml no longer exists,
-so the README's current static badges are the source of truth until regenerated.
+copied out of _legacy before deletion. CORRECTION (owner spotted it): its config
+data/ack_repos.yaml was never lost; it still lives in the live data/ directory,
+so the acknowledgement tooling is fully intact.
 
 ## Covered or upgraded (no action)
 

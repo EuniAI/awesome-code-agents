@@ -83,24 +83,26 @@ def all_ids(leaf_keys: list[str], data_dir: Path = DATA_DIR) -> set[str]:
     return ids
 
 
-def newest_first(papers: list[Paper]) -> list[Paper]:
-    """Sort newest first by first-publication date (arXiv v1). Fallback when
-    `published` is empty: an 'arXiv YYYY/MM' venue, then any year in the venue;
-    undated papers sink to the end. Stable within equal keys."""
+def date_key(p: Paper) -> str:
+    """Sortable/comparable date for a paper: the first-publication date (arXiv v1),
+    falling back to an 'arXiv YYYY/MM' venue, then any year in the venue; undated
+    papers yield '0000' and sink to the end / the archive."""
     import re as _re
 
-    def key(p: Paper) -> str:
-        if p.published:
-            return p.published
-        m = _re.search(r"arXiv (\d{4})/(\d{2})", p.venue)
-        if m:
-            return f"{m.group(1)}-{m.group(2)}-00"
-        m = _re.search(r"(20\d{2})", p.venue)
-        if m:
-            return f"{m.group(1)}-00-00"
-        return "0000"
+    if p.published:
+        return p.published
+    m = _re.search(r"arXiv (\d{4})/(\d{2})", p.venue)
+    if m:
+        return f"{m.group(1)}-{m.group(2)}-00"
+    m = _re.search(r"(20\d{2})", p.venue)
+    if m:
+        return f"{m.group(1)}-00-00"
+    return "0000"
 
-    return sorted(papers, key=key, reverse=True)
+
+def newest_first(papers: list[Paper]) -> list[Paper]:
+    """Sort newest first by date_key. Stable within equal keys."""
+    return sorted(papers, key=date_key, reverse=True)
 
 
 # ── Seen ids (pipeline state) ─────────────────────────────────────────────────
@@ -123,6 +125,29 @@ def save_seen(seen: set[str], data_dir: Path = DATA_DIR) -> None:
     data_dir.mkdir(parents=True, exist_ok=True)
     _seen_path(data_dir).write_text(
         json.dumps(sorted(seen), indent=1) + "\n", encoding="utf-8"
+    )
+
+
+# ── Review feedback queue (owner reasons awaiting LLM distillation) ───────────
+# decide captures the owner's terse /reject and /edit reasons here; the next
+# crawl run (which holds the Claude token) distills them into calibration
+# examples and clears the queue.
+
+def _feedback_path(data_dir: Path = DATA_DIR) -> Path:
+    return data_dir / "feedback.json"
+
+
+def load_feedback(data_dir: Path = DATA_DIR) -> list[dict]:
+    path = _feedback_path(data_dir)
+    if not path.exists():
+        return []
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def save_feedback(items: list[dict], data_dir: Path = DATA_DIR) -> None:
+    data_dir.mkdir(parents=True, exist_ok=True)
+    _feedback_path(data_dir).write_text(
+        json.dumps(items, indent=1, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
 

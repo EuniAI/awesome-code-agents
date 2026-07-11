@@ -31,7 +31,9 @@ _PAYLOAD_RE = re.compile(r"```json\n(.*?)\n```", re.DOTALL)
 # "/approve 1,3 /reject 2 wrong topic"); the index spec is captured up front and
 # trailing free text (a reject reason) is tolerated and ignored.
 _APPROVE_RE = re.compile(r"/approve\s+(all|[\d,\s\-]+)", re.IGNORECASE)
-_REJECT_RE = re.compile(r"/reject\s+(all|[\d,\s\-]+)", re.IGNORECASE)
+# The reject reason (free text up to the next command or line end) is captured:
+# it feeds the calibration learning loop after an LLM distillation pass.
+_REJECT_RE = re.compile(r"/reject\s+(all|[\d,\s\-]+)([^/\n]*)", re.IGNORECASE)
 _EDIT_RE = re.compile(
     r"/edit\s+(\d+)\s+([^\n]+?)(?=\s*/(?:approve|reject|edit)\b|\s*\n|\s*$)",
     re.IGNORECASE,
@@ -69,9 +71,11 @@ def _entry_block(i: int, e: dict) -> str:
     if len(p.get("authors", [])) > 3:
         authors += ", et al."
     tags = " ".join(f"`{t}`" for t in e.get("tags", [])) or "none"
+    source = {"inbox": " · 📥 inbox", "backlog": " · 🗃️ backlog",
+              "backfill": " · 🕰️ backfill"}.get(e.get("source", ""), "")
     lines = [
         f"### {i}. {p['title']}",
-        f"_{authors}_ · {p.get('venue', '')} · [paper]({p['links'].get('paper', '')})",
+        f"_{authors}_ · {p.get('venue', '')} · [paper]({p['links'].get('paper', '')}){source}",
         f"**proposed: `{e['category']}`** · tags: {tags}",
     ]
     if e.get("summary"):
@@ -184,13 +188,19 @@ def parse_decisions(comments: list[dict], reviewer: str, n: int) -> dict[int, tu
         for m in _APPROVE_RE.finditer(body):
             events.append((m.start(), "approve", m.group(1)))
         for m in _REJECT_RE.finditer(body):
-            events.append((m.start(), "reject", m.group(1)))
+            events.append((m.start(), "reject", (m.group(1), m.group(2).strip())))
         for m in _EDIT_RE.finditer(body):
             events.append((m.start(), "edit", m))
         for _, kind, payload in sorted(events, key=lambda e: e[0]):
-            if kind in ("approve", "reject"):
+            if kind == "approve":
                 for i in _indices(str(payload), n):
-                    decisions[i] = (kind, {})
+                    decisions[i] = ("approve", {})
+                continue
+            if kind == "reject":
+                spec, reason = payload  # type: ignore[misc]
+                info = {"reason": reason} if reason else {}
+                for i in _indices(spec, n):
+                    decisions[i] = ("reject", info)
                 continue
             m = payload  # an _EDIT_RE match
             i = int(m.group(1))
@@ -205,6 +215,8 @@ def parse_decisions(comments: list[dict], reviewer: str, n: int) -> dict[int, tu
                     overrides["tags"] = [] if value == "-" else value.split(",")
                 elif key == "venue":
                     overrides["venue"] = value
+                elif key == "reason":
+                    overrides["reason"] = value
             decisions[i] = ("approve", overrides)
     return decisions
 

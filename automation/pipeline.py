@@ -37,10 +37,12 @@ CALIBRATION_PATH = _REPO_ROOT / "calibration.json"
 MAX_PER_ISSUE = 25  # large intakes are chunked into several review issues
 
 
-def classify_and_propose(candidates: list[Paper], dry_run: bool = False) -> None:
+def classify_and_propose(candidates: list[Paper], dry_run: bool = False,
+                         origin: dict[str, str] | None = None) -> None:
     """Shared tail of every intake path (daily crawl, inbox, backlog): classify,
     mark handled ids seen, and open chunked review issues (the pool). Unreviewed
-    issues simply stay open; nothing is ever dropped."""
+    issues simply stay open; nothing is ever dropped. `origin` maps paper id to
+    its source (inbox/backlog/backfill) for the issue's source markers."""
     if not candidates:
         logger.info("nothing new to propose")
         return
@@ -74,6 +76,7 @@ def classify_and_propose(candidates: list[Paper], dry_run: bool = False) -> None
             "paper": p.to_dict(),
             "category": v.category, "tags": v.tags,
             "summary": v.summary, "reason": v.reason,
+            "source": (origin or {}).get(p.id, "crawl"),
         })
 
     note = f"Auto-skipped {skipped} out-of-scope; {len(failed_ids)} failed (retried next run)."
@@ -127,20 +130,23 @@ def crawl(since: str | None = None, dry_run: bool = False) -> None:
     cursor = since or storage.load_harvest_cursor() or str(date.today() - timedelta(days=2))
     retry_papers = list(sources.fetch_arxiv_papers(sorted(storage.load_retry_counts())).values())
     fresh, day_counts = sources.harvest_announced(cursor)
+    inbox_papers = sources.read_inbox()
     updates = [p for p in fresh if p.id in stored]  # v2+ of papers we already curate
+    origin = {p.id: "inbox" for p in inbox_papers}
     candidates: list[Paper] = []
-    for p in retry_papers + fresh + sources.read_inbox():
+    for p in retry_papers + fresh + inbox_papers:
         if p.id not in known:
             known.add(p.id)  # also dedups retry vs harvest vs inbox within this run
             candidates.append(p)
     logger.info("harvest: %d new candidates, %d updates of stored papers",
                 len(candidates), len(updates))
     if candidates:
-        classify_and_propose(candidates, dry_run=dry_run)
+        classify_and_propose(candidates, dry_run=dry_run, origin=origin)
     else:
         logger.info("nothing new today")
     if not dry_run:
         _refresh_venues(updates, stored)
+        _distill_feedback()  # owner reasons queued by decide -> calibration examples
         # The run succeeded end to end: ledger the swept days, advance the cursor.
         storage.record_harvest(day_counts, cursor=str(date.today()))
         # Thumbs-up inbox comments whose links are now all handled.
@@ -187,7 +193,8 @@ def backfill(from_date: str, to_date: str, dry_run: bool = False) -> None:
     fresh, day_counts = sources.harvest_announced(from_date, until=to_date)
     candidates = [p for p in fresh if p.id not in known]
     logger.info("backfill %s..%s: %d new candidates", from_date, to_date, len(candidates))
-    classify_and_propose(candidates, dry_run=dry_run)
+    classify_and_propose(candidates, dry_run=dry_run,
+                         origin={p.id: "backfill" for p in candidates})
     if not dry_run:
         storage.record_harvest(day_counts)
 
@@ -229,25 +236,76 @@ def _weekend_backfill() -> None:
 
 # ── decide ────────────────────────────────────────────────────────────────────
 
-def _append_calibration(corrections: list[tuple[Paper, str, str]]) -> None:
-    """Feed each category correction back to the classifier as an owner example."""
+def _distill_feedback() -> None:
+    """Turn the owner's terse review feedback (queued by decide) into durable
+    calibration examples via one LLM pass. Runs in crawl, which holds the Claude
+    token; decide stays token-free. The queue survives a failed distillation."""
+    items = storage.load_feedback()
+    if not items:
+        return
+    leaves = taxonomy.load().leaf_keys()
+    prompt = (
+        "You maintain the calibration examples of a paper classifier for a curated "
+        "list of code-agent research. Below are review-feedback items from the list's "
+        "owner: category corrections (action=edit, proposed -> final) and rejections "
+        "(action=reject) with the owner's terse reasons. For EACH item, draft a "
+        "durable classification example: a `why` of 1-2 sentences that turns the "
+        "owner's reason into a reusable rule-of-thumb the classifier can apply to "
+        "similar papers.\n"
+        "- action=edit: category is the corrected leaf; the why explains why it beats "
+        "the proposed one.\n"
+        "- action=reject: decide from the reason whether the paper is OUT OF SCOPE "
+        "(include=true, category=null) or merely low quality / a duplicate "
+        "(include=false: quality judgments are not scope rules and must not become "
+        "examples).\n"
+        f"Valid category keys: {', '.join(leaves)}\n\n"
+        "FEEDBACK ITEMS (JSON, one per line):\n"
+        + "\n".join(json.dumps(it, ensure_ascii=False) for it in items)
+        + "\n\nOUTPUT: an object {results: [...]} with one entry per item, in order: "
+        "{id, title, include, category (key or null), tags (list, [] if none), why}."
+    )
+    schema = {
+        "type": "object",
+        "properties": {"results": {
+            "type": "array", "minItems": len(items), "maxItems": len(items),
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {"type": "string"}, "title": {"type": "string"},
+                    "include": {"type": "boolean"},
+                    "category": {"anyOf": [{"type": "string", "enum": leaves},
+                                           {"type": "null"}]},
+                    "tags": {"type": "array", "items": {"type": "string"}},
+                    "why": {"type": "string"},
+                },
+                "required": ["id", "title", "include", "category", "tags", "why"],
+                "additionalProperties": False,
+            },
+        }},
+        "required": ["results"], "additionalProperties": False,
+    }
+    try:
+        results = classify._run_claude(prompt, schema, classify.MODEL)
+    except Exception as exc:
+        logger.warning("feedback distillation failed, queue kept: %s", exc)
+        return
     data = json.loads(CALIBRATION_PATH.read_text(encoding="utf-8"))
     existing = {e["id"] for e in data["examples"]}
     added = 0
-    for p, proposed, corrected in corrections:
-        if p.id in existing:
+    for ex in results:
+        if not ex.get("include") or ex["id"] in existing:
             continue
         data["examples"].append({
-            "id": p.id, "title": p.title, "category": corrected, "tags": p.tags,
-            "why": (f"Owner correction during review: the classifier proposed "
-                    f"`{proposed}`; the owner filed it under `{corrected}`."),
+            "id": ex["id"], "title": ex["title"], "category": ex["category"],
+            "tags": ex.get("tags", []), "why": ex["why"],
         })
         added += 1
     if added:
         CALIBRATION_PATH.write_text(
             json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
         )
-        logger.info("calibration.json: %d owner examples appended", added)
+    storage.save_feedback([])
+    logger.info("feedback distilled: %d items -> %d calibration examples", len(items), added)
 
 
 def decide(issue_number: int) -> None:
@@ -261,13 +319,19 @@ def decide(issue_number: int) -> None:
     leaves = set(taxonomy.load().leaf_keys())
     approved, rejected, errors = [], [], []
     added_new = 0
-    corrections: list[tuple[Paper, str, str]] = []
+    feedback: list[dict] = []  # owner reasons, distilled into calibration by crawl
 
     for idx in sorted(decisions):
         action, overrides = decisions[idx]
         e = entries[idx - 1]
         if action == "reject":
             rejected.append(idx)
+            if overrides.get("reason"):
+                feedback.append({
+                    "action": "reject", "id": e["paper"]["id"],
+                    "title": e["paper"]["title"], "proposed": e["category"],
+                    "reason": overrides["reason"],
+                })
             continue
         category = overrides.get("category", e["category"])
         tags = overrides.get("tags", e["tags"])
@@ -287,10 +351,15 @@ def decide(issue_number: int) -> None:
             added_new += 1
         approved.append(idx)
         if "category" in overrides and overrides["category"] != e["category"]:
-            corrections.append((p, e["category"], overrides["category"]))
+            feedback.append({
+                "action": "edit", "id": p.id, "title": p.title,
+                "proposed": e["category"], "final": overrides["category"],
+                "reason": overrides.get("reason", ""),
+            })
 
-    if corrections:
-        _append_calibration(corrections)
+    if feedback:
+        storage.save_feedback(storage.load_feedback() + feedback)
+        logger.info("queued %d feedback items for distillation", len(feedback))
     if added_new:
         render.main()
         badges.refresh()

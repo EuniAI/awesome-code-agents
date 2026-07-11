@@ -23,9 +23,15 @@ from automation.models import Paper
 
 _REPO_ROOT = Path(__file__).resolve().parents[1]
 README = _REPO_ROOT / "README.md"
+ARCHIVE = _REPO_ROOT / "ARCHIVE.md"
 
 NAV_BEGIN, NAV_END = "<!-- NAV:BEGIN -->", "<!-- NAV:END -->"
 PAPERS_BEGIN, PAPERS_END = "<!-- PAPERS:BEGIN -->", "<!-- PAPERS:END -->"
+
+# The README shows the frontier: papers from the last N days. Everything older
+# moves to ARCHIVE.md (same tree, fully generated) so the main list stays sharp
+# without ever losing a paper.
+FRESH_DAYS = 365
 
 # Heading level of L1 nodes; L2 = +1, L3 = +2.
 _L1_HEADING = "##"
@@ -158,18 +164,53 @@ def render_nav(tax: taxonomy.Taxonomy) -> str:
     return "\n".join(lines)
 
 
+def _fresh_cutoff() -> str:
+    import datetime
+
+    return str(datetime.date.today() - datetime.timedelta(days=FRESH_DAYS))
+
+
 def render_papers(tax: taxonomy.Taxonomy) -> str:
+    """The README papers chapter: fresh papers only, with per-leaf archive links."""
+    cutoff = _fresh_cutoff()
     blocks: list[str] = []
     for node, depth in tax.walk():
         blocks.append(_heading(node, depth))
         blocks.append(f"> {node.blurb or _first_sentence(node.definition)}")
         if node.is_leaf:
             papers = storage.load(node.key)
-            if papers:
-                blocks.append("\n\n".join(render_entry(p) for p in papers))
-            else:
+            fresh = [p for p in papers if storage.date_key(p) >= cutoff]
+            older = len(papers) - len(fresh)
+            if fresh:
+                blocks.append("\n\n".join(render_entry(p) for p in fresh))
+            elif not older:
                 blocks.append("*No papers yet.*")
+            if older:
+                anchor = gh_slug(f"{node.emoji} {node.title}".strip())
+                blocks.append(f"<sub>… and {older} earlier paper(s) in the "
+                              f"[archive](ARCHIVE.md#{anchor}).</sub>")
     return "\n\n".join(blocks)
+
+
+def render_archive(tax: taxonomy.Taxonomy) -> str:
+    """ARCHIVE.md: every paper older than the freshness window, same tree."""
+    cutoff = _fresh_cutoff()
+    blocks: list[str] = [
+        "# Archive\n\n"
+        "> Papers older than twelve months, moved out of the README to keep the "
+        "main list focused on the frontier. Auto-generated; do not edit by hand.",
+    ]
+    for node, depth in tax.walk():
+        if not node.is_leaf:
+            blocks.append(_heading(node, depth))
+            continue
+        papers = [p for p in storage.load(node.key) if storage.date_key(p) < cutoff]
+        blocks.append(_heading(node, depth))
+        if papers:
+            blocks.append("\n\n".join(render_entry(p) for p in papers))
+        else:
+            blocks.append("*Nothing archived yet.*")
+    return "\n\n".join(blocks) + "\n"
 
 
 # ── README assembly ───────────────────────────────────────────────────────────
@@ -200,6 +241,10 @@ def main() -> None:
         print("[OK] README regenerated from taxonomy.")
     else:
         print("[OK] README unchanged.")
+    archive = render_archive(tax)
+    if not ARCHIVE.exists() or ARCHIVE.read_text(encoding="utf-8") != archive:
+        ARCHIVE.write_text(archive, encoding="utf-8")
+        print("[OK] ARCHIVE.md regenerated.")
 
 
 if __name__ == "__main__":

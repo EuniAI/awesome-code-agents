@@ -39,11 +39,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # State (seen/abstracts/retry/backfill/harvest) plus venue upgrades
-          # mined from announcement updates (data yaml + regenerated README).
-          git add data/ README.md docs/static/badges/
+          # State (seen/abstracts/retry/backfill/harvest/feedback), venue upgrades,
+          # distilled calibration examples, and the regenerated README + archive.
+          git add data/ README.md ARCHIVE.md docs/static/badges/ calibration.json
           if ! git diff --cached --quiet; then
-            git pull --rebase origin main
+            # Commit BEFORE rebasing: rebase refuses staged-but-uncommitted changes.
             git commit -m "chore(pipeline): daily crawl state"
+            git pull --rebase origin main
             git push
           fi

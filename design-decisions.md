@@ -3,6 +3,28 @@
 > Durable record of non-trivial design decisions for this repo. Newest first.
 > This repo is English-only — keep every entry in English.
 
+## 2026-07-11: owner rulings from the legacy-audit review
+
+1. FRESHNESS SPLIT: the README shows only papers from the last twelve months;
+   everything older moves to a fully generated ARCHIVE.md (same tree, per-leaf
+   anchor links from the README). Nothing is ever deleted. This makes the old
+   "we periodically curate" README copy true (it was aspirational before), keeps
+   the main list frontier-focused, and prevents bloat. FRESH_DAYS=365 in render.py.
+2. FEEDBACK DISTILLATION: /reject and /edit reasons are captured (reject: free
+   text after indices; edit: a reason= key). decide queues them in
+   data/feedback.json (token-free); the next crawl run distills them via one
+   Claude call into calibration examples: edits become positive examples; rejects
+   become negative examples ONLY when the reason indicates out-of-scope (quality
+   rejections are excluded from examples by the LLM's judgment). This replaces
+   the templated auto-append; the owner's terse reasons get expanded into
+   reusable rules-of-thumb.
+3. SOURCE MARKERS: review-issue entries now carry their origin (inbox/backfill/
+   backlog markers next to the paper line); the future UI should surface it too.
+4. Summary sentences stay unrendered on README/site (owner call).
+5. Positional command ordering confirmed over the legacy "reject wins" rule.
+6. Audit correction: data/ack_repos.yaml was never lost (auditor searched only
+   _legacy/data); acknowledgement badge tooling is fully intact.
+
 ## 2026-07-11: daily crawl is announcement-driven (OAI-PMH), no lookback window
 
 The first design crawled via the arXiv search API, which filters by SUBMISSION
