@@ -90,10 +90,12 @@ def build_issue_body(entries: list[dict], note: str = "") -> str:
 
 
 def create_issue(entries: list[dict], note: str = "") -> int:
+    from datetime import datetime, timezone
+
     cfg = config.load()
     label = cfg["review"]["label"]
-    date = entries and entries[0]["paper"].get("published", "") or ""
-    title = f"Paper review: {len(entries)} candidates"
+    date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    title = f"Paper review {date}: {len(entries)} candidates"
     issue = _gh_json(
         [f"repos/{_repo()}/issues"],
         payload={"title": title, "body": build_issue_body(entries, note), "labels": [label]},

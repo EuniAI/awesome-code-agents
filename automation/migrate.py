@@ -448,12 +448,60 @@ def process_inbox(model: str = classify.MODEL) -> Path:
     return out
 
 
+def process_backlog() -> None:
+    """One-off: absorb the old pipeline's stale pending review issues (the ~271
+    issues left open when automation paused in 2026-06). Harvests their arXiv ids,
+    routes the unhandled papers through the live pipeline into chunked review
+    issues (the pool), then closes the old-format issues. Safe to re-run: handled
+    ids are seen, and closing an already-closed issue is a no-op."""
+    import json as _json
+    import subprocess
+
+    from automation import config, pipeline, reviewflow, taxonomy
+
+    state = _json.loads((_REPO_ROOT / "_legacy" / "state" / "processed.json").read_text())
+    pending = state["pending_issues"]
+    ids: list[str] = []
+    for it in pending:
+        for a in it.get("arxiv_ids", []):
+            if a not in ids:
+                ids.append(a)
+    known = (storage.all_ids(taxonomy.load().leaf_keys())
+             | storage.load_seen() | reviewflow.pending_ids())
+    new_ids = [i for i in ids if i not in known]
+    logger.info("backlog: %d unique ids in %d stale issues; %d unhandled",
+                len(ids), len(pending), len(new_ids))
+
+    papers = list(fetch_arxiv_papers(new_ids).values())
+    pipeline.classify_and_propose(papers)
+
+    # New pool issues exist; now retire the old-format ones.
+    cfg = config.load()["repo"]
+    repo = f"{cfg['owner']}/{cfg['name']}"
+    closed = 0
+    for it in pending:
+        num = it.get("issue_number")
+        if not num:
+            continue
+        proc = subprocess.run(
+            ["gh", "api", "--method", "PATCH", f"repos/{repo}/issues/{num}",
+             "-f", "state=closed"],
+            capture_output=True, text=True, timeout=60,
+        )
+        if proc.returncode == 0:
+            closed += 1
+        else:
+            logger.warning("could not close old issue #%s: %s", num, proc.stderr[:120])
+    logger.info("backlog: closed %d/%d stale issues", closed, len(pending))
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(message)s")
     parser = argparse.ArgumentParser(description="Legacy corpus migration tooling")
-    parser.add_argument("command", choices=["calibrate", "run", "dates", "refetch", "reclass", "inbox"])
+    parser.add_argument("command",
+                        choices=["calibrate", "run", "dates", "refetch", "reclass", "inbox", "backlog"])
     parser.add_argument("keys", nargs="*", help="leaf keys to reclassify (for reclass)")
     args = parser.parse_args()
     if args.command == "calibrate":
@@ -467,6 +515,8 @@ def main() -> None:
         print(f"review sheet written: {reclassify_leaves(keys)}")
     elif args.command == "inbox":
         print(f"review sheet written: {process_inbox()}")
+    elif args.command == "backlog":
+        process_backlog()
     else:
         backfill_dates()
 

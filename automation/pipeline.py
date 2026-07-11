@@ -32,19 +32,17 @@ _REPO_ROOT = Path(__file__).resolve().parents[1]
 CALIBRATION_PATH = _REPO_ROOT / "calibration.json"
 
 
-# ── crawl ─────────────────────────────────────────────────────────────────────
+# ── intake: classify candidates and propose them into the pool ────────────────
 
-def crawl(days_back: int | None = None, dry_run: bool = False) -> None:
-    leaves = taxonomy.load().leaf_keys()
-    known = storage.all_ids(leaves) | storage.load_seen() | reviewflow.pending_ids()
+MAX_PER_ISSUE = 25  # large intakes are chunked into several review issues
 
-    candidates: list[Paper] = []
-    for p in sources.crawl(days_back) + sources.read_inbox():
-        if p.id not in known:
-            known.add(p.id)  # also dedups crawl vs inbox within this run
-            candidates.append(p)
+
+def classify_and_propose(candidates: list[Paper], dry_run: bool = False) -> None:
+    """Shared tail of every intake path (daily crawl, inbox, backlog): classify,
+    mark handled ids seen, and open chunked review issues (the pool). Unreviewed
+    issues simply stay open; nothing is ever dropped."""
     if not candidates:
-        logger.info("nothing new today")
+        logger.info("nothing new to propose")
         return
     logger.info("classifying %d new candidates", len(candidates))
 
@@ -61,7 +59,7 @@ def crawl(days_back: int | None = None, dry_run: bool = False) -> None:
     seen = storage.load_seen()
     for p, v in zip(candidates, verdicts):
         if v.failed:
-            failed += 1  # not marked seen: retried on the next crawl
+            failed += 1  # not marked seen: retried on the next intake
             continue
         seen.add(p.id)
         if not v.relevant:
@@ -79,11 +77,30 @@ def crawl(days_back: int | None = None, dry_run: bool = False) -> None:
         print(note)
         return
     storage.save_seen(seen)
-    if entries:
-        number = reviewflow.create_issue(entries, note=note)
-        logger.info("review issue #%d: %d papers proposed", number, len(entries))
-    else:
-        logger.info("no relevant papers today (%s)", note)
+    if not entries:
+        logger.info("no relevant papers in this intake (%s)", note)
+        return
+    for start in range(0, len(entries), MAX_PER_ISSUE):
+        chunk = entries[start:start + MAX_PER_ISSUE]
+        number = reviewflow.create_issue(chunk, note=note if start == 0 else "")
+        logger.info("review issue #%d: %d papers proposed", number, len(chunk))
+
+
+# ── crawl ─────────────────────────────────────────────────────────────────────
+
+def crawl(days_back: int | None = None, dry_run: bool = False) -> None:
+    leaves = taxonomy.load().leaf_keys()
+    known = storage.all_ids(leaves) | storage.load_seen() | reviewflow.pending_ids()
+
+    candidates: list[Paper] = []
+    for p in sources.crawl(days_back) + sources.read_inbox():
+        if p.id not in known:
+            known.add(p.id)  # also dedups crawl vs inbox within this run
+            candidates.append(p)
+    if not candidates:
+        logger.info("nothing new today")
+        return
+    classify_and_propose(candidates, dry_run=dry_run)
 
 
 # ── decide ────────────────────────────────────────────────────────────────────
