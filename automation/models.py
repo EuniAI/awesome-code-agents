@@ -13,6 +13,17 @@ _ARXIV_ID_RE = re.compile(r"arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})(?:v\d+)?", r
 
 
 @dataclass
+class Classification:
+    """The classifier's verdict for one paper."""
+    relevant: bool
+    category: str = ""            # a taxonomy leaf key; empty when not relevant / failed
+    tags: list[str] = field(default_factory=list)
+    summary: str = ""
+    reason: str = ""              # one-line why (kept for review issues and debugging)
+    failed: bool = False          # classification could not be obtained/validated
+
+
+@dataclass
 class Paper:
     id: str                      # arxiv id when available, else the paper URL
     title: str
