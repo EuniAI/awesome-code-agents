@@ -96,6 +96,51 @@
           is effectively free).
       The golden-set eval (P2) can A/B these on accuracy before committing.
 
+## Post-migration quality audit (open items as of 2026-07-11)
+
+Owner is reviewing the migrated corpus; more error reports incoming. Pending work:
+
+- [ ] **Misclassification reports from owner** (fix + root-cause each):
+      - HTAM: Hierarchical Transition-Attended Memory for Operator Optimization:
+        abstract says experiments on KernelBench (GPU kernel/operator optimization).
+        Currently misplaced; candidates: software_maintenance (perf optimization) or
+        systems. Also root-cause why the KernelBench signal was missed.
+      - (owner will send more; append here)
+- [ ] **Rules-revision round** (do once owner's error list is in):
+      - Encode owner's general-leaf semantics into taxonomy.json definitions of
+        software_general/world_general: general = research on the GENERAL FORM of the
+        task that fits no specific leaf; NOT an overviews/surveys bin; when a specific
+        class accumulates, split it out as a new leaf.
+      - Move the anti-marketing-framing rule (already in the classifier prompt) into
+        the general leaves' boundary fields in taxonomy.json.
+      - Add explicit judgment rule: benchmark evidence (e.g. runs on KernelBench /
+        SWE-bench) is a strong category signal; look up what the benchmark tests.
+- [ ] **Pending owner rulings** (from my software_general audit + refetch pass):
+      - Cross-Team Orchestration + Scaling LLM-based Multi-Agent Collaboration:
+        same family as AgentVerse/Evolving Orchestration which owner OUTed; consistency
+        says OUT too. Confirm.
+      - InterCode: interactive bash/SQL/CTF environments = code-as-action; move to
+        agency (world_terminal or world_general)?
+      - Kimi K2: general agentic FM, not SE-specific; world_general + model, or out?
+      - "A Survey on Code Generation with LLM-based Agents": activity-specific survey;
+        move to software_code_generation + survey per our own rule?
+      - SWE-Lancer / MAD-empirical / ReasoningBank: medium suspects in software_general.
+      - Armchair: OUTed on title-only evidence ("insufficient information"); owner may
+        know the paper; identify and re-place or confirm OUT.
+      - APIGen scope ruling: does function/tool-calling count as code-as-action?
+        If yes: world_general; if no: OUT stands, and write the exclusion into
+        taxonomy.json scope.
+- [ ] **Re-audit pass after rules revision**: re-run classification over
+      software_general and world_general members (and spot-check 20 random others);
+      the 12 title-only papers (see refetch-reclass.md, evidence=title-only) get a
+      manual look.
+- [ ] **Remaining migration work**: inbox rescue (~70 papers not yet in the list;
+      compute fresh from inbox issue #4 vs current data); close 271 stale pending
+      GitHub Issues + retire _legacy/state/processed.json (keep rejected_ids for
+      reference until rescue done); completeness diff against _legacy/ then delete it.
+- [ ] CLAUDE.md full rewrite after the rebuild settles (banner added 2026-07-11 is
+      interim).
+
 ## After the checklist
 
 Paper migration (36 -> 23 files, per-paper re-filing of dissolved categories and the
