@@ -1,36 +1,22 @@
-- id: '2510.07297'
-  title: Agentic generative AI for media content discovery at the national football league
+- id: '2601.05930'
+  title: Can We Predict Before Executing Machine Learning Agents?
   authors:
-  - Henry Wang
-  - Md Sirajus Salekin
-  - Jake Lee
-  - Ross Claytor
-  - Shinan Zhang
-  - Michael Chi
-  venue: arXiv 2025/10
+  - Jingsheng Zheng
+  - Jintian Zhang
+  - Yujie Luo
+  - Yuren Mao
+  - Yunjun Gao
+  - Lun Du
+  - Huajun Chen
+  - Ningyu Zhang
+  venue: arXiv 2026/01
   category: world_research
-  summary: This industry report describes an agentic generative-AI workflow at the NFL that translates natural-language queries
-    into database queries with semantic caching to help media analysts discover relevant historical game footage. The system
-    achieves over 95% accuracy and drastically reduces video search time.
+  published: '2026-01-09'
+  summary: Introduces FOREAGENT, an ML research agent that predicts solution quality before executing costly training runs,
+    using a Predict-then-Verify loop trained on 18,438 pairwise comparisons. Achieves faster convergence than execution-based
+    baselines on data-centric ML tasks.
   links:
-    paper: https://arxiv.org/abs/2510.07297
-    github: ''
-    website: ''
-- id: '2503.21735'
-  title: 'GateLens: A Reasoning-Enhanced LLM Agent for Automotive Software Release Analytics'
-  authors:
-  - Arsham Gholamzadeh Khoee
-  - Shuai Wang
-  - Yinan Yu
-  - Robert Feldt
-  - Dhasarathy Parthasarathy
-  venue: arXiv 2025
-  category: world_research
-  summary: GateLens is an LLM agent architecture that uses relational algebra as an intermediate representation to translate
-    natural-language queries into executable Python code for automotive software release analytics on tabular data. It achieves
-    faster, more transparent, and more accurate analysis than chain-of-thought baselines in industrial deployment.
-  links:
-    paper: https://arxiv.org/abs/2503.21735
+    paper: https://arxiv.org/abs/2601.05930
     github: ''
     website: ''
 - id: '2601.03513'
@@ -47,6 +33,7 @@
   - Linfeng Zhang
   venue: arXiv 2026/01
   category: world_research
+  published: '2026-01-07'
   summary: Deploy-Master is an agentic workflow that discovers, builds, validates, and publishes containerized execution environments
     for over 50,000 open-source scientific tools at scale, enabling human and agent reuse. It reports deployment throughput,
     cost, and failure analysis to motivate shared execution substrates for AI4S and agentic science.
@@ -54,6 +41,128 @@
     paper: https://arxiv.org/abs/2601.03513
     github: ''
     website: https://www.bohrium.com/apps/deploy-master
+- id: '2511.03985'
+  title: 'ArchPilot: A Proxy-Guided Multi-Agent Approach for Machine Learning Engineering'
+  authors:
+  - Zhuowen Yuan
+  - Tao Liu
+  - Yang Yang
+  - Yang Wang
+  - Feng Qi
+  - Kaushik Rangadurai
+  - Bo Li
+  - Shuang Yang
+  venue: arXiv 2025/11
+  category: world_research
+  published: '2025-11-06'
+  summary: ArchPilot is a multi-agent ML engineering system combining architecture generation, proxy-based evaluation, and
+    MCTS-style adaptive search to reduce reliance on full training runs. It outperforms AIDE and ML-Master on MLE-Bench.
+  links:
+    paper: https://arxiv.org/abs/2511.03985
+    github: ''
+    website: ''
+- id: '2510.16872'
+  title: 'DeepAnalyze: Agentic Large Language Models for Autonomous Data Science'
+  authors:
+  - Shaolei Zhang
+  - Ju Fan
+  - Meihao Fan
+  - Guoliang Li
+  - Xiaoyong Du
+  venue: arXiv 2025
+  category: world_research
+  published: '2025-10-19'
+  tags:
+  - model
+  - training-data
+  summary: DeepAnalyze-8B is an agentic LLM trained via curriculum-based agentic training and data-grounded trajectory synthesis
+    to autonomously perform end-to-end data science, from raw data to analyst-grade reports. It outperforms larger workflow-based
+    agents despite its small size, with model, code, and data released.
+  links:
+    paper: https://arxiv.org/abs/2510.16872
+    github: https://github.com/ruc-datalab/DeepAnalyze
+    website: https://ruc-deepanalyze.github.io/
+- id: '2510.07297'
+  title: Agentic generative AI for media content discovery at the national football league
+  authors:
+  - Henry Wang
+  - Md Sirajus Salekin
+  - Jake Lee
+  - Ross Claytor
+  - Shinan Zhang
+  - Michael Chi
+  venue: arXiv 2025/10
+  category: world_research
+  published: '2025-10-08'
+  summary: This industry report describes an agentic generative-AI workflow at the NFL that translates natural-language queries
+    into database queries with semantic caching to help media analysts discover relevant historical game footage. The system
+    achieves over 95% accuracy and drastically reduces video search time.
+  links:
+    paper: https://arxiv.org/abs/2510.07297
+    github: ''
+    website: ''
+- id: '2510.07307'
+  title: 'MLE-Smith: Scaling MLE Tasks with Automated Multi-Agent Pipeline'
+  authors:
+  - Rushi Qiang
+  - Yuchen Zhuang
+  - Anikait Singh
+  - Percy Liang
+  - Chao Zhang
+  - Sherry Yang
+  - Bo Dai
+  venue: arXiv 2025
+  category: world_research
+  published: '2025-10-08'
+  tags:
+  - benchmark
+  - training-data
+  summary: MLE-Smith is an automated multi-agent pipeline that converts raw datasets into 606 competition-style MLE tasks
+    via a generate-verify-execute paradigm, scaling task creation for evaluating ML engineering agents.
+  links:
+    paper: https://arxiv.org/abs/2510.07307
+    github: ''
+    website: ''
+- id: '2510.04023'
+  title: 'LLM-Based Data Science Agents: A Survey of Capabilities, Challenges, and Future Directions'
+  authors:
+  - Mizanur Rahman
+  - Amran Bhuiyan
+  - Mohammed Saidul Islam
+  - Md Tahmid Rahman Laskar
+  - Ridwan Mahbub
+  - Ahmed Masry
+  - Shafiq Joty
+  - Enamul Hoque
+  venue: arXiv 2025
+  category: world_research
+  published: '2025-10-05'
+  tags:
+  - survey
+  summary: A lifecycle-aligned survey taxonomizing 45 LLM-based data science agent systems across six workflow stages and
+    five design dimensions. It identifies gaps in business understanding, deployment, and trust/safety mechanisms, proposing
+    future research directions.
+  links:
+    paper: https://arxiv.org/abs/2510.04023
+    github: ''
+    website: ''
+- id: '2509.01684'
+  title: Reinforcement Learning for Machine Learning Engineering Agents
+  authors:
+  - Sherry Yang
+  - Joy He-Yueya
+  - Percy Liang
+  venue: arXiv 2025
+  category: world_research
+  published: '2025-09-01'
+  tags:
+  - training-data
+  summary: Trains smaller ML engineering agents via reinforcement learning with duration-aware gradient updates and environment
+    instrumentation for partial-credit rewards, outperforming prompted larger models on MLEBench Kaggle tasks.
+  links:
+    paper: https://arxiv.org/abs/2509.01684
+    github: ''
+    website: ''
 - id: '2508.01222'
   title: 'WebDS: An End-to-End Benchmark for Web-based Data Science'
   authors:
@@ -71,6 +180,7 @@
   - Christopher D. Manning
   venue: arXiv 2025
   category: world_research
+  published: '2025-08-02'
   tags:
   - benchmark
   summary: WebDS is an end-to-end benchmark of 870 web-based data science tasks requiring agents to acquire, clean, analyze,
@@ -78,135 +188,6 @@
     on these multi-step analytic workflows.
   links:
     paper: https://arxiv.org/abs/2508.01222
-    github: ''
-    website: ''
-- id: '2510.04023'
-  title: 'LLM-Based Data Science Agents: A Survey of Capabilities, Challenges, and Future Directions'
-  authors:
-  - Mizanur Rahman
-  - Amran Bhuiyan
-  - Mohammed Saidul Islam
-  - Md Tahmid Rahman Laskar
-  - Ridwan Mahbub
-  - Ahmed Masry
-  - Shafiq Joty
-  - Enamul Hoque
-  venue: arXiv 2025
-  category: world_research
-  tags:
-  - survey
-  summary: A lifecycle-aligned survey taxonomizing 45 LLM-based data science agent systems across six workflow stages and
-    five design dimensions. It identifies gaps in business understanding, deployment, and trust/safety mechanisms, proposing
-    future research directions.
-  links:
-    paper: https://arxiv.org/abs/2510.04023
-    github: ''
-    website: ''
-- id: '2510.16872'
-  title: 'DeepAnalyze: Agentic Large Language Models for Autonomous Data Science'
-  authors:
-  - Shaolei Zhang
-  - Ju Fan
-  - Meihao Fan
-  - Guoliang Li
-  - Xiaoyong Du
-  venue: arXiv 2025
-  category: world_research
-  tags:
-  - model
-  - training-data
-  summary: DeepAnalyze-8B is an agentic LLM trained via curriculum-based agentic training and data-grounded trajectory synthesis
-    to autonomously perform end-to-end data science, from raw data to analyst-grade reports. It outperforms larger workflow-based
-    agents despite its small size, with model, code, and data released.
-  links:
-    paper: https://arxiv.org/abs/2510.16872
-    github: https://github.com/ruc-datalab/DeepAnalyze
-    website: https://ruc-deepanalyze.github.io/
-- id: '2506.10974'
-  title: 'AutoMind: Adaptive Knowledgeable Agent for Automated Data Science'
-  authors:
-  - Yixin Ou
-  - Yujie Luo
-  - Jingsheng Zheng
-  - Lanning Wei
-  - Zhuoyun Yu
-  - Shuofei Qiao
-  - Jintian Zhang
-  - Da Zheng
-  - Yuren Mao
-  - Yunjun Gao
-  - Huajun Chen
-  - Ningyu Zhang
-  venue: arXiv 2025
-  category: world_research
-  summary: AutoMind is an adaptive LLM agent for automated data science that combines an expert knowledge base, knowledgeable
-    tree search, and self-adaptive coding to solve complex ML pipeline tasks. It outperforms rigid workflow-based baselines
-    on data science benchmarks.
-  links:
-    paper: https://arxiv.org/abs/2506.10974
-    github: https://github.com/innovatingAI/AutoMind
-    website: https://innovatingai.github.io/
-- id: https://aclanthology.org/2024.emnlp-main.748/
-  title: 'DA-Code: Agent Data Science Code Generation Benchmark for Large Language Models'
-  authors:
-  - Yiming Huang
-  - Jianwen Luo
-  - Yan Yu
-  - Yitong Zhang
-  - Fangyu Lei
-  - Yifan Wei
-  - Shizhu He
-  - Lifu Huang
-  - Xiao Liu
-  - Jun Zhao
-  - Kang Liu
-  venue: EMNLP 2024
-  category: world_research
-  tags:
-  - benchmark
-  summary: DA-Code is a benchmark for evaluating LLM agents on agentic data science code generation tasks. It targets the
-    code-driven data science workflow as the served task.
-  links:
-    paper: https://aclanthology.org/2024.emnlp-main.748/
-    github: https://github.com/yiyihum/da-code
-    website: https://da-code-bench.github.io/
-- id: '2601.05930'
-  title: Can We Predict Before Executing Machine Learning Agents?
-  authors:
-  - Jingsheng Zheng
-  - Jintian Zhang
-  - Yujie Luo
-  - Yuren Mao
-  - Yunjun Gao
-  - Lun Du
-  - Huajun Chen
-  - Ningyu Zhang
-  venue: arXiv 2026/01
-  category: world_research
-  summary: Introduces FOREAGENT, an ML research agent that predicts solution quality before executing costly training runs,
-    using a Predict-then-Verify loop trained on 18,438 pairwise comparisons. Achieves faster convergence than execution-based
-    baselines on data-centric ML tasks.
-  links:
-    paper: https://arxiv.org/abs/2601.05930
-    github: ''
-    website: ''
-- id: '2511.03985'
-  title: 'ArchPilot: A Proxy-Guided Multi-Agent Approach for Machine Learning Engineering'
-  authors:
-  - Zhuowen Yuan
-  - Tao Liu
-  - Yang Yang
-  - Yang Wang
-  - Feng Qi
-  - Kaushik Rangadurai
-  - Bo Li
-  - Shuang Yang
-  venue: arXiv 2025/11
-  category: world_research
-  summary: ArchPilot is a multi-agent ML engineering system combining architecture generation, proxy-based evaluation, and
-    MCTS-style adaptive search to reduce reliance on full training runs. It outperforms AIDE and ML-Master on MLE-Bench.
-  links:
-    paper: https://arxiv.org/abs/2511.03985
     github: ''
     website: ''
 - id: '2507.02554'
@@ -239,6 +220,7 @@
   - Yoram Bachrach
   venue: arXiv 2025/07
   category: world_research
+  published: '2025-07-03'
   summary: Formalizes AI research agents as search policies over candidate ML solutions and studies how search strategy and
     operator design affect performance on MLE-bench Kaggle tasks. Achieves state-of-the-art medal success rate via improved
     search-operator pairing.
@@ -274,6 +256,7 @@
   - Yoram Bachrach
   venue: arXiv 2025/06
   category: world_research
+  published: '2025-06-27'
   tags:
   - benchmark
   summary: Introduces a benchmark of 19 NanoGPT speedrun tasks to test whether AI agents can reproduce known ML training improvements
@@ -281,6 +264,189 @@
     guidance.
   links:
     paper: https://arxiv.org/abs/2506.22419
+    github: ''
+    website: ''
+- id: '2506.20640'
+  title: Towards Community-Driven Agents for Machine Learning Engineering
+  authors:
+  - Sijie Li
+  - Weiwei Sun
+  - Shanda Li
+  - Ameet Talwalkar
+  - Yiming Yang
+  venue: arXiv 2025
+  category: world_research
+  published: '2025-06-25'
+  tags:
+  - benchmark
+  summary: Introduces MLE-Live, a live evaluation framework for ML engineering agents interacting with a simulated Kaggle
+    community, and CoMind, a multi-agent system leveraging collective knowledge to achieve top Kaggle rankings. Code is the
+    instrument for running ML experiments, not the deliverable.
+  links:
+    paper: https://arxiv.org/abs/2506.20640
+    github: https://github.com/comind-ml/CoMind
+    website: ''
+- id: '2506.10974'
+  title: 'AutoMind: Adaptive Knowledgeable Agent for Automated Data Science'
+  authors:
+  - Yixin Ou
+  - Yujie Luo
+  - Jingsheng Zheng
+  - Lanning Wei
+  - Zhuoyun Yu
+  - Shuofei Qiao
+  - Jintian Zhang
+  - Da Zheng
+  - Yuren Mao
+  - Yunjun Gao
+  - Huajun Chen
+  - Ningyu Zhang
+  venue: arXiv 2025
+  category: world_research
+  published: '2025-06-12'
+  summary: AutoMind is an adaptive LLM agent for automated data science that combines an expert knowledge base, knowledgeable
+    tree search, and self-adaptive coding to solve complex ML pipeline tasks. It outperforms rigid workflow-based baselines
+    on data science benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2506.10974
+    github: https://github.com/innovatingAI/AutoMind
+    website: https://innovatingai.github.io/
+- id: '2505.23723'
+  title: 'ML-Agent: Reinforcing LLM Agents for Autonomous Machine Learning Engineering'
+  authors:
+  - Zexi Liu
+  - Jingyi Chai
+  - Xinyu Zhu
+  - Shuo Tang
+  - Rui Ye
+  - Bo Zhang
+  - Lei Bai
+  - Siheng Chen
+  venue: arXiv 2025
+  category: world_research
+  published: '2025-05-29'
+  tags:
+  - model
+  summary: Proposes ML-Agent, an RL-trained LLM agent that learns autonomous ML engineering through interactive experimentation,
+    achieving strong performance with a 7B model. The agent trains models via execution feedback rather than producing code
+    as a deliverable.
+  links:
+    paper: https://arxiv.org/abs/2505.23723
+    github: https://github.com/MASWorks/ML-Agent
+    website: ''
+- id: '2506.15692'
+  title: 'MLE-STAR: Machine Learning Engineering Agent via Search and Targeted Refinement'
+  authors:
+  - Jaehyun Nam
+  - Jinsung Yoon
+  - Jiefeng Chen
+  - Jinwoo Shin
+  - Sercan Ö. Arık
+  - Tomas Pfister
+  venue: arXiv 2025
+  category: world_research
+  published: '2025-05-27'
+  summary: MLE-STAR builds an ML engineering agent that retrieves models via search and iteratively refines solutions through
+    targeted ablation-guided exploration, achieving strong medal rates on MLE-bench. The agent's goal is producing trained/optimized
+    ML solutions through experimentation.
+  links:
+    paper: https://arxiv.org/abs/2506.15692
+    github: https://github.com/jaehyun513/MLE-STAR
+    website: ''
+- id: '2505.19955'
+  title: 'MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research'
+  authors:
+  - Hui Chen
+  - Miao Xiong
+  - Yujie Lu
+  - Wei Han
+  - Ailin Deng
+  - Yufei He
+  - Jiaying Wu
+  - Yibo Li
+  - Yue Liu
+  - Bryan Hooi
+  venue: NeurIPS 2025 Datasets & Benchmarks Track
+  category: world_research
+  published: '2025-05-26'
+  tags:
+  - benchmark
+  summary: MLR-Bench evaluates AI agents on open-ended ML research tasks spanning idea generation, experimentation, and paper
+    writing, revealing frequent fabricated experimental results. The benchmark targets end-to-end scientific discovery capability.
+  links:
+    paper: https://arxiv.org/abs/2505.19955
+    github: ''
+    website: ''
+- id: '2505.19897'
+  title: 'ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic Scientific Workflows'
+  authors:
+  - Qiushi Sun
+  - Zhoumianze Liu
+  - Chang Ma
+  - Zichen Ding
+  - Fangzhi Xu
+  - Zhangyue Yin
+  - Haiteng Zhao
+  - Zhenyu Wu
+  - Kanzhi Cheng
+  - Zhaoyang Liu
+  - Jianing Wang
+  - Qintong Li
+  - Xiangru Tang
+  - Tianbao Xie
+  - Xiachong Feng
+  - Xiang Li
+  - Ben Kao
+  - Wenhai Wang
+  - Biqing Qi
+  - Lingpeng Kong
+  - Zhiyong Wu
+  venue: arXiv 2025/06
+  category: world_research
+  published: '2025-05-26'
+  tags:
+  - benchmark
+  summary: ScienceBoard introduces a multi-domain environment and 169-task benchmark for computer-using agents that interact
+    with professional scientific software across biochemistry, astronomy, and geoinformatics to accelerate research workflows.
+    Evaluations show current agents (GPT-4o, Claude 3.7, UI-TARS) achieve only 15% success.
+  links:
+    paper: https://arxiv.org/abs/2505.19897
+    github: https://github.com/OS-Copilot/ScienceBoard
+    website: https://qiushisun.github.io/ScienceBoard-Home/
+- id: '2504.20117'
+  title: 'ResearchCodeAgent: An LLM Multi-Agent System for Automated Codification of Research Methodologies'
+  authors:
+  - Shubham Gandhi
+  - Dhruv Shah
+  - Manasi Patwardhan
+  - Lovekesh Vig
+  - Gautam Shroff
+  venue: arXiv 2025
+  category: world_research
+  published: '2025-04-28'
+  summary: ResearchCodeAgent is a multi-agent system that codifies ML research methodologies from papers into runnable implementations
+    for benchmarking or extension, evaluated on data augmentation, optimization, and batching tasks. The deliverable is a
+    working research implementation, not general software.
+  links:
+    paper: https://arxiv.org/abs/2504.20117
+    github: ''
+    website: ''
+- id: '2503.21735'
+  title: 'GateLens: A Reasoning-Enhanced LLM Agent for Automotive Software Release Analytics'
+  authors:
+  - Arsham Gholamzadeh Khoee
+  - Shuai Wang
+  - Yinan Yu
+  - Robert Feldt
+  - Dhasarathy Parthasarathy
+  venue: arXiv 2025
+  category: world_research
+  published: '2025-03-27'
+  summary: GateLens is an LLM agent architecture that uses relational algebra as an intermediate representation to translate
+    natural-language queries into executable Python code for automotive software release analytics on tabular data. It achieves
+    faster, more transparent, and more accurate analysis than chain-of-thought baselines in industrial deployment.
+  links:
+    paper: https://arxiv.org/abs/2503.21735
     github: ''
     website: ''
 - id: '2502.14499'
@@ -305,6 +471,7 @@
   - Roberta Raileanu
   venue: arXiv 2025/02
   category: world_research
+  published: '2025-02-20'
   tags:
   - benchmark
   summary: Presents MLGym, a Gym-style framework and benchmark of 13 open-ended AI research tasks spanning CV, NLP, RL, and
@@ -312,43 +479,6 @@
     but rarely generate novel methods.
   links:
     paper: https://arxiv.org/abs/2502.14499
-    github: ''
-    website: ''
-- id: '2509.01684'
-  title: Reinforcement Learning for Machine Learning Engineering Agents
-  authors:
-  - Sherry Yang
-  - Joy He-Yueya
-  - Percy Liang
-  venue: arXiv 2025
-  category: world_research
-  tags:
-  - training-data
-  summary: Trains smaller ML engineering agents via reinforcement learning with duration-aware gradient updates and environment
-    instrumentation for partial-credit rewards, outperforming prompted larger models on MLEBench Kaggle tasks.
-  links:
-    paper: https://arxiv.org/abs/2509.01684
-    github: ''
-    website: ''
-- id: '2510.07307'
-  title: 'MLE-Smith: Scaling MLE Tasks with Automated Multi-Agent Pipeline'
-  authors:
-  - Rushi Qiang
-  - Yuchen Zhuang
-  - Anikait Singh
-  - Percy Liang
-  - Chao Zhang
-  - Sherry Yang
-  - Bo Dai
-  venue: arXiv 2025
-  category: world_research
-  tags:
-  - benchmark
-  - training-data
-  summary: MLE-Smith is an automated multi-agent pipeline that converts raw datasets into 606 competition-style MLE tasks
-    via a generate-verify-execute paradigm, scaling task creation for evaluating ML engineering agents.
-  links:
-    paper: https://arxiv.org/abs/2510.07307
     github: ''
     website: ''
 - id: '2502.13138'
@@ -363,53 +493,13 @@
   - Yuxiang Wu
   venue: arXiv 2025
   category: world_research
+  published: '2025-02-18'
   summary: AIDE frames machine learning engineering as a code-optimization tree search problem, iteratively refining candidate
     ML solutions to achieve state-of-the-art results on Kaggle, MLE-Bench, and RE-Bench.
   links:
     paper: https://arxiv.org/abs/2502.13138
     github: https://github.com/WecoAI/aideml
     website: https://www.weco.ai/
-- id: '2506.20640'
-  title: Towards Community-Driven Agents for Machine Learning Engineering
-  authors:
-  - Sijie Li
-  - Weiwei Sun
-  - Shanda Li
-  - Ameet Talwalkar
-  - Yiming Yang
-  venue: arXiv 2025
-  category: world_research
-  tags:
-  - benchmark
-  summary: Introduces MLE-Live, a live evaluation framework for ML engineering agents interacting with a simulated Kaggle
-    community, and CoMind, a multi-agent system leveraging collective knowledge to achieve top Kaggle rankings. Code is the
-    instrument for running ML experiments, not the deliverable.
-  links:
-    paper: https://arxiv.org/abs/2506.20640
-    github: https://github.com/comind-ml/CoMind
-    website: ''
-- id: '2505.23723'
-  title: 'ML-Agent: Reinforcing LLM Agents for Autonomous Machine Learning Engineering'
-  authors:
-  - Zexi Liu
-  - Jingyi Chai
-  - Xinyu Zhu
-  - Shuo Tang
-  - Rui Ye
-  - Bo Zhang
-  - Lei Bai
-  - Siheng Chen
-  venue: arXiv 2025
-  category: world_research
-  tags:
-  - model
-  summary: Proposes ML-Agent, an RL-trained LLM agent that learns autonomous ML engineering through interactive experimentation,
-    achieving strong performance with a 7B model. The agent trains models via execution feedback rather than producing code
-    as a deliverable.
-  links:
-    paper: https://arxiv.org/abs/2505.23723
-    github: https://github.com/MASWorks/ML-Agent
-    website: ''
 - id: '2410.07095'
   title: 'MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering'
   authors:
@@ -427,6 +517,7 @@
   - Aleksander Mądry
   venue: arXiv 2025
   category: world_research
+  published: '2024-10-09'
   tags:
   - benchmark
   summary: MLE-bench curates 75 Kaggle ML engineering competitions to benchmark AI agents on tasks like model training and
@@ -435,64 +526,6 @@
     paper: https://arxiv.org/abs/2410.07095
     github: https://github.com/openai/mle-bench
     website: https://openai.com/index/mle-bench/
-- id: '2506.15692'
-  title: 'MLE-STAR: Machine Learning Engineering Agent via Search and Targeted Refinement'
-  authors:
-  - Jaehyun Nam
-  - Jinsung Yoon
-  - Jiefeng Chen
-  - Jinwoo Shin
-  - Sercan Ö. Arık
-  - Tomas Pfister
-  venue: arXiv 2025
-  category: world_research
-  summary: MLE-STAR builds an ML engineering agent that retrieves models via search and iteratively refines solutions through
-    targeted ablation-guided exploration, achieving strong medal rates on MLE-bench. The agent's goal is producing trained/optimized
-    ML solutions through experimentation.
-  links:
-    paper: https://arxiv.org/abs/2506.15692
-    github: https://github.com/jaehyun513/MLE-STAR
-    website: ''
-- id: '2504.20117'
-  title: 'ResearchCodeAgent: An LLM Multi-Agent System for Automated Codification of Research Methodologies'
-  authors:
-  - Shubham Gandhi
-  - Dhruv Shah
-  - Manasi Patwardhan
-  - Lovekesh Vig
-  - Gautam Shroff
-  venue: arXiv 2025
-  category: world_research
-  summary: ResearchCodeAgent is a multi-agent system that codifies ML research methodologies from papers into runnable implementations
-    for benchmarking or extension, evaluated on data augmentation, optimization, and batching tasks. The deliverable is a
-    working research implementation, not general software.
-  links:
-    paper: https://arxiv.org/abs/2504.20117
-    github: ''
-    website: ''
-- id: '2505.19955'
-  title: 'MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research'
-  authors:
-  - Hui Chen
-  - Miao Xiong
-  - Yujie Lu
-  - Wei Han
-  - Ailin Deng
-  - Yufei He
-  - Jiaying Wu
-  - Yibo Li
-  - Yue Liu
-  - Bryan Hooi
-  venue: NeurIPS 2025 Datasets & Benchmarks Track
-  category: world_research
-  tags:
-  - benchmark
-  summary: MLR-Bench evaluates AI agents on open-ended ML research tasks spanning idea generation, experimentation, and paper
-    writing, revealing frequent fabricated experimental results. The benchmark targets end-to-end scientific discovery capability.
-  links:
-    paper: https://arxiv.org/abs/2505.19955
-    github: ''
-    website: ''
 - id: '2410.07095'
   title: 'MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering'
   authors:
@@ -510,6 +543,7 @@
   - Aleksander Mądry
   venue: ICLR 2025
   category: world_research
+  published: '2024-10-09'
   tags:
   - benchmark
   summary: MLE-bench curates 75 Kaggle ML engineering competitions to benchmark AI agents on tasks like model training and
@@ -518,6 +552,30 @@
     paper: https://arxiv.org/abs/2410.07095
     github: https://github.com/openai/mle-bench
     website: https://openai.com/index/mle-bench/
+- id: https://aclanthology.org/2024.emnlp-main.748/
+  title: 'DA-Code: Agent Data Science Code Generation Benchmark for Large Language Models'
+  authors:
+  - Yiming Huang
+  - Jianwen Luo
+  - Yan Yu
+  - Yitong Zhang
+  - Fangyu Lei
+  - Yifan Wei
+  - Shizhu He
+  - Lifu Huang
+  - Xiao Liu
+  - Jun Zhao
+  - Kang Liu
+  venue: EMNLP 2024
+  category: world_research
+  tags:
+  - benchmark
+  summary: DA-Code is a benchmark for evaluating LLM agents on agentic data science code generation tasks. It targets the
+    code-driven data science workflow as the served task.
+  links:
+    paper: https://aclanthology.org/2024.emnlp-main.748/
+    github: https://github.com/yiyihum/da-code
+    website: https://da-code-bench.github.io/
 - id: '2311.09835'
   title: 'ML-Bench: Evaluating Large Language Models and Agents for Machine Learning Tasks on Repository-Level Code'
   authors:
@@ -545,6 +603,7 @@
   - Mark Gerstein
   venue: ICLR 2025 Workshop
   category: world_research
+  published: '2023-11-16'
   tags:
   - benchmark
   summary: ML-Bench evaluates LLMs and agents on repository-level ML tasks requiring understanding of GitHub repos to generate
@@ -554,38 +613,3 @@
     paper: https://arxiv.org/abs/2311.09835
     github: https://github.com/gersteinlab/ML-bench
     website: https://ml-bench.github.io/
-- id: '2505.19897'
-  title: 'ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic Scientific Workflows'
-  authors:
-  - Qiushi Sun
-  - Zhoumianze Liu
-  - Chang Ma
-  - Zichen Ding
-  - Fangzhi Xu
-  - Zhangyue Yin
-  - Haiteng Zhao
-  - Zhenyu Wu
-  - Kanzhi Cheng
-  - Zhaoyang Liu
-  - Jianing Wang
-  - Qintong Li
-  - Xiangru Tang
-  - Tianbao Xie
-  - Xiachong Feng
-  - Xiang Li
-  - Ben Kao
-  - Wenhai Wang
-  - Biqing Qi
-  - Lingpeng Kong
-  - Zhiyong Wu
-  venue: arXiv 2025/06
-  category: world_research
-  tags:
-  - benchmark
-  summary: ScienceBoard introduces a multi-domain environment and 169-task benchmark for computer-using agents that interact
-    with professional scientific software across biochemistry, astronomy, and geoinformatics to accelerate research workflows.
-    Evaluations show current agents (GPT-4o, Claude 3.7, UI-TARS) achieve only 15% success.
-  links:
-    paper: https://arxiv.org/abs/2505.19897
-    github: https://github.com/OS-Copilot/ScienceBoard
-    website: https://qiushisun.github.io/ScienceBoard-Home/

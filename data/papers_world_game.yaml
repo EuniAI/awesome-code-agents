@@ -1,18 +1,3 @@
-- id: '2502.01492'
-  title: Develop AI Agents for System Engineering in Factorio
-  authors:
-  - Neel Kant
-  venue: arXiv 2025
-  category: world_game
-  tags:
-  - position
-  summary: Position paper advocating training and evaluating AI agents' system-engineering abilities using automation-oriented
-    sandbox games like Factorio. Argues static benchmarks fail to capture long-horizon planning and adaptive trade-off management
-    needed for engineering.
-  links:
-    paper: https://arxiv.org/abs/2502.01492
-    github: ''
-    website: ''
 - id: '2510.12088'
   title: 'One Life to Learn: Inferring Symbolic World Models for Stochastic Environments from Unguided Exploration'
   authors:
@@ -23,6 +8,7 @@
   - Mohit Bansal
   venue: arXiv 2025
   category: world_game
+  published: '2025-10-14'
   tags:
   - benchmark
   summary: OneLife learns programmatic, conditionally-activated laws as executable world models from unguided exploration
@@ -43,11 +29,28 @@
   - Kevin Ellis
   venue: arXiv 2025
   category: world_game
+  published: '2025-05-16'
   summary: PoE-World synthesizes programmatic world models via LLM-generated products of programmatic experts, learning complex
     stochastic dynamics from few observations and embedding them in a model-based planning agent for Atari Pong and Montezuma's
     Revenge. Demonstrates generalization to unseen game levels.
   links:
     paper: https://arxiv.org/abs/2505.10819
+    github: ''
+    website: ''
+- id: '2502.01492'
+  title: Develop AI Agents for System Engineering in Factorio
+  authors:
+  - Neel Kant
+  venue: arXiv 2025
+  category: world_game
+  published: '2025-02-03'
+  tags:
+  - position
+  summary: Position paper advocating training and evaluating AI agents' system-engineering abilities using automation-oriented
+    sandbox games like Factorio. Argues static benchmarks fail to capture long-horizon planning and adaptive trade-off management
+    needed for engineering.
+  links:
+    paper: https://arxiv.org/abs/2502.01492
     github: ''
     website: ''
 - id: https://openreview.net/forum?id=QGJSXMhVaL

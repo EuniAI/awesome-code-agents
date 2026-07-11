@@ -69,6 +69,26 @@ def all_ids(leaf_keys: list[str], data_dir: Path = DATA_DIR) -> set[str]:
     return ids
 
 
+def newest_first(papers: list[Paper]) -> list[Paper]:
+    """Sort newest first by first-publication date (arXiv v1). Fallback when
+    `published` is empty: an 'arXiv YYYY/MM' venue, then any year in the venue;
+    undated papers sink to the end. Stable within equal keys."""
+    import re as _re
+
+    def key(p: Paper) -> str:
+        if p.published:
+            return p.published
+        m = _re.search(r"arXiv (\d{4})/(\d{2})", p.venue)
+        if m:
+            return f"{m.group(1)}-{m.group(2)}-00"
+        m = _re.search(r"(20\d{2})", p.venue)
+        if m:
+            return f"{m.group(1)}-00-00"
+        return "0000"
+
+    return sorted(papers, key=key, reverse=True)
+
+
 # ── Abstract sidecar ──────────────────────────────────────────────────────────
 # Raw source material (id -> abstract), kept out of the human-facing curated YAML.
 # Fetched once, reused forever: re-classification, golden-set evals, future search.

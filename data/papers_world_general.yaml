@@ -1,155 +1,3 @@
-- id: '2402.01030'
-  title: Executable Code Actions Elicit Better LLM Agents
-  authors:
-  - Xingyao Wang
-  - Yangyi Chen
-  - Lifan Yuan
-  - Yizhe Zhang
-  - Yunzhu Li
-  - Hao Peng
-  - Heng Ji
-  venue: ICML 2024
-  category: world_general
-  tags:
-  - training-data
-  summary: CodeAct proposes consolidating LLM agent actions into executable Python code as a unified action space, outperforming
-    JSON/text action formats across diverse tasks including tool use and model training. The authors release CodeActInstruct
-    data and a finetuned CodeActAgent.
-  links:
-    paper: https://arxiv.org/abs/2402.01030
-    github: https://github.com/xingyaoww/code-act
-    website: ''
-- id: https://proceedings.neurips.cc/paper_files/paper/2024/hash/61cce86d180b1184949e58939c4f983d-Abstract-Datasets_and_Benchmarks_Track.html
-  title: 'APIGen: Automated PIpeline for Generating Verifiable and Diverse Function-Calling Datasets'
-  authors:
-  - Zuxin Liu
-  - Thai Hoang
-  - Jianguo Zhang
-  - Ming Zhu
-  - Tian Lan
-  - Shirley Kokane
-  - Juntao Tan
-  - Weiran Yao
-  - Zhiwei Liu
-  - Yihao Feng
-  - Rithesh Murthy
-  - Liangwei Yang
-  - Silvio Savarese
-  - Juan Carlos Niebles
-  - Huan Wang
-  - Shelby Heinecke
-  - Caiming Xiong
-  venue: NeurIPS 2024 Datasets and Benchmarks Track
-  category: world_general
-  tags:
-  - training-data
-  summary: APIGen is an automated pipeline for generating verifiable and diverse function-calling datasets to train agents
-    in tool invocation. It emphasizes correctness verification of generated function calls across many domains.
-  links:
-    paper: https://proceedings.neurips.cc/paper_files/paper/2024/hash/61cce86d180b1184949e58939c4f983d-Abstract-Datasets_and_Benchmarks_Track.html
-    github: ''
-    website: https://apigen-pipeline.github.io/
-- id: '2401.00812'
-  title: 'If LLM Is the Wizard, Then Code Is the Wand: A Survey on How Code Empowers Large Language Models to Serve as Intelligent
-    Agents'
-  authors:
-  - Ke Yang
-  - Jiateng Liu
-  - John Wu
-  - Chaoqi Yang
-  - Yi R. Fung
-  - Sha Li
-  - Zixuan Huang
-  - Xu Cao
-  - Xingyao Wang
-  - Yiquan Wang
-  - Heng Ji
-  - Chengxiang Zhai
-  venue: ICLR 2024 Workshop
-  category: world_general
-  tags:
-  - survey
-  summary: This survey examines how integrating code into LLM training empowers reasoning, structured intermediate steps,
-    and execution feedback, ultimately explaining the emergence of LLMs as intelligent agents. It advocates code as a core
-    mechanism enabling agentic capabilities across tasks.
-  links:
-    paper: https://arxiv.org/abs/2401.00812
-    github: ''
-    website: ''
-- id: '2505.21577'
-  title: 'RepoMaster: Autonomous Exploration and Understanding of GitHub Repositories for Complex Task Solving'
-  authors:
-  - Huacan Wang
-  - Ziyi Ni
-  - Shuo Zhang
-  - Shuo Lu
-  - Sen Hu
-  - Ziyang He
-  - Chen Hu
-  - Jiaye Lin
-  - Yifu Guo
-  - Ronghao Chen
-  - Xin Li
-  - Daxin Jiang
-  - Yuntao Du
-  - Pin Lyu
-  venue: NeurIPS 2025
-  category: world_general
-  tags:
-  - benchmark
-  summary: RepoMaster autonomously explores and reuses GitHub repositories to solve complex tasks by building dependency graphs
-    and pruning context, evaluated on MLE-bench and the newly released GitTaskBench spanning diverse task domains. The served
-    task is general repo-driven task completion, not a single world.
-  links:
-    paper: https://arxiv.org/abs/2505.21577
-    github: https://github.com/QuantaAlpha/RepoMaster
-    website: https://quantaalpha.com/
-- id: '2508.18993'
-  title: 'GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leveraging'
-  authors:
-  - Ziyi Ni
-  - Huacan Wang
-  - Shuo Zhang
-  - Shuo Lu
-  - Ziyang He
-  - Wang You
-  - Zhenheng Tang
-  - Yuntao Du
-  - Bill Sun
-  - Hongzhang Liu
-  - Sen Hu
-  - Ronghao Chen
-  - Bo Li
-  - Xin Li
-  - Chen Hu
-  - Binxing Jiao
-  - Daxin Jiang
-  - Pin Lyu
-  venue: arXiv 2025
-  category: world_general
-  tags:
-  - benchmark
-  links:
-    paper: https://arxiv.org/abs/2508.18993
-    github: https://github.com/QuantaAlpha/GitTaskBench
-    website: https://gittaskbench.github.io/
-- id: '2506.03011'
-  title: Coding Agents with Multimodal Browsing are Generalist Problem Solvers
-  authors:
-  - Aditya Bharat Soni
-  - Boxuan Li
-  - Xingyao Wang
-  - Valerie Chen
-  - Graham Neubig
-  venue: arXiv 2025
-  category: world_general
-  summary: OpenHands-Versa is a generalist agent built from a minimal set of general tools (code editing/execution, web search,
-    multimodal browsing) that outperforms specialized agents across SWE-bench Multimodal, GAIA, and The Agent Company. It
-    shows specialized multi-agent systems fail to generalize beyond their target domains.
-  links:
-    paper: https://arxiv.org/abs/2506.03011
-    github: https://github.com/adityasoni9998/OpenHands-Versa
-    website: ''
 - id: '2605.18747'
   title: Code as Agent Harness
   authors:
@@ -197,6 +45,7 @@
   - Jingrui He
   venue: arXiv 2026/05
   category: world_general
+  published: '2026-05-18'
   tags:
   - survey
   summary: This paper introduces the 'code as agent harness' framework, conceptualizing code as the fundamental infrastructure
@@ -206,22 +55,6 @@
     paper: https://arxiv.org/abs/2605.18747
     github: ''
     website: ''
-- id: '2507.03616'
-  title: 'EvoAgentX: An Automated Framework for Evolving Agentic Workflows'
-  authors:
-  - Yingxu Wang
-  - Siwei Liu
-  - Jinyuan Fang
-  - Zaiqiao Meng
-  venue: arXiv 2025
-  category: world_general
-  summary: EvoAgentX is a platform that automates generation, execution, and evolutionary optimization of multi-agent workflows,
-    integrating algorithms like TextGrad, AFlow, and MIPRO. It is evaluated across QA, code generation, math, and general
-    agentic tasks (GAIA), showing broad performance gains.
-  links:
-    paper: https://arxiv.org/abs/2507.03616
-    github: https://github.com/EvoAgentX/EvoAgentX
-    website: https://evoagentx.github.io/EvoAgentX/
 - id: '2512.24873'
   title: 'Let It Flow: Agentic Crafting on Rock and Roll, Building the ROME Model within an Open Agentic Learning Ecosystem'
   authors:
@@ -317,6 +150,7 @@
   - Bo Zheng
   venue: arXiv 2025/12
   category: world_general
+  published: '2025-12-31'
   tags:
   - model
   - training-data
@@ -353,6 +187,7 @@
   - Graham Neubig
   venue: arXiv 2025/10
   category: world_general
+  published: '2025-10-28'
   tags:
   - training-data
   summary: Agent Data Protocol (ADP) is a unifying representation language that converts heterogeneous agent datasets—spanning
@@ -362,6 +197,100 @@
     paper: https://arxiv.org/abs/2510.24702
     github: https://github.com/neulab/agent-data-protocol
     website: https://www.agentdataprotocol.com/
+- id: '2508.18993'
+  title: 'GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leveraging'
+  authors:
+  - Ziyi Ni
+  - Huacan Wang
+  - Shuo Zhang
+  - Shuo Lu
+  - Ziyang He
+  - Wang You
+  - Zhenheng Tang
+  - Yuntao Du
+  - Bill Sun
+  - Hongzhang Liu
+  - Sen Hu
+  - Ronghao Chen
+  - Bo Li
+  - Xin Li
+  - Chen Hu
+  - Binxing Jiao
+  - Daxin Jiang
+  - Pin Lyu
+  venue: arXiv 2025
+  category: world_general
+  published: '2025-08-26'
+  tags:
+  - benchmark
+  links:
+    paper: https://arxiv.org/abs/2508.18993
+    github: https://github.com/QuantaAlpha/GitTaskBench
+    website: https://gittaskbench.github.io/
+- id: '2507.03616'
+  title: 'EvoAgentX: An Automated Framework for Evolving Agentic Workflows'
+  authors:
+  - Yingxu Wang
+  - Siwei Liu
+  - Jinyuan Fang
+  - Zaiqiao Meng
+  venue: arXiv 2025
+  category: world_general
+  published: '2025-07-04'
+  summary: EvoAgentX is a platform that automates generation, execution, and evolutionary optimization of multi-agent workflows,
+    integrating algorithms like TextGrad, AFlow, and MIPRO. It is evaluated across QA, code generation, math, and general
+    agentic tasks (GAIA), showing broad performance gains.
+  links:
+    paper: https://arxiv.org/abs/2507.03616
+    github: https://github.com/EvoAgentX/EvoAgentX
+    website: https://evoagentx.github.io/EvoAgentX/
+- id: '2506.03011'
+  title: Coding Agents with Multimodal Browsing are Generalist Problem Solvers
+  authors:
+  - Aditya Bharat Soni
+  - Boxuan Li
+  - Xingyao Wang
+  - Valerie Chen
+  - Graham Neubig
+  venue: arXiv 2025
+  category: world_general
+  published: '2025-06-03'
+  summary: OpenHands-Versa is a generalist agent built from a minimal set of general tools (code editing/execution, web search,
+    multimodal browsing) that outperforms specialized agents across SWE-bench Multimodal, GAIA, and The Agent Company. It
+    shows specialized multi-agent systems fail to generalize beyond their target domains.
+  links:
+    paper: https://arxiv.org/abs/2506.03011
+    github: https://github.com/adityasoni9998/OpenHands-Versa
+    website: ''
+- id: '2505.21577'
+  title: 'RepoMaster: Autonomous Exploration and Understanding of GitHub Repositories for Complex Task Solving'
+  authors:
+  - Huacan Wang
+  - Ziyi Ni
+  - Shuo Zhang
+  - Shuo Lu
+  - Sen Hu
+  - Ziyang He
+  - Chen Hu
+  - Jiaye Lin
+  - Yifu Guo
+  - Ronghao Chen
+  - Xin Li
+  - Daxin Jiang
+  - Yuntao Du
+  - Pin Lyu
+  venue: NeurIPS 2025
+  category: world_general
+  published: '2025-05-27'
+  tags:
+  - benchmark
+  summary: RepoMaster autonomously explores and reuses GitHub repositories to solve complex tasks by building dependency graphs
+    and pruning context, evaluated on MLE-bench and the newly released GitTaskBench spanning diverse task domains. The served
+    task is general repo-driven task completion, not a single world.
+  links:
+    paper: https://arxiv.org/abs/2505.21577
+    github: https://github.com/QuantaAlpha/RepoMaster
+    website: https://quantaalpha.com/
 - id: '2501.10893'
   title: 'Learn-by-interact: A Data-Centric Framework for Self-Adaptive Agents in Realistic Environments'
   authors:
@@ -373,6 +302,7 @@
   - Sercan Ö. Arık
   venue: arXiv 2025
   category: world_general
+  published: '2025-01-18'
   tags:
   - training-data
   summary: Learn-by-interact synthesizes agent-environment interaction trajectories from documentation via backward construction,
@@ -382,3 +312,83 @@
     paper: https://arxiv.org/abs/2501.10893
     github: ''
     website: ''
+- id: '2402.01030'
+  title: Executable Code Actions Elicit Better LLM Agents
+  authors:
+  - Xingyao Wang
+  - Yangyi Chen
+  - Lifan Yuan
+  - Yizhe Zhang
+  - Yunzhu Li
+  - Hao Peng
+  - Heng Ji
+  venue: ICML 2024
+  category: world_general
+  published: '2024-02-01'
+  tags:
+  - training-data
+  summary: CodeAct proposes consolidating LLM agent actions into executable Python code as a unified action space, outperforming
+    JSON/text action formats across diverse tasks including tool use and model training. The authors release CodeActInstruct
+    data and a finetuned CodeActAgent.
+  links:
+    paper: https://arxiv.org/abs/2402.01030
+    github: https://github.com/xingyaoww/code-act
+    website: ''
+- id: '2401.00812'
+  title: 'If LLM Is the Wizard, Then Code Is the Wand: A Survey on How Code Empowers Large Language Models to Serve as Intelligent
+    Agents'
+  authors:
+  - Ke Yang
+  - Jiateng Liu
+  - John Wu
+  - Chaoqi Yang
+  - Yi R. Fung
+  - Sha Li
+  - Zixuan Huang
+  - Xu Cao
+  - Xingyao Wang
+  - Yiquan Wang
+  - Heng Ji
+  - Chengxiang Zhai
+  venue: ICLR 2024 Workshop
+  category: world_general
+  published: '2024-01-01'
+  tags:
+  - survey
+  summary: This survey examines how integrating code into LLM training empowers reasoning, structured intermediate steps,
+    and execution feedback, ultimately explaining the emergence of LLMs as intelligent agents. It advocates code as a core
+    mechanism enabling agentic capabilities across tasks.
+  links:
+    paper: https://arxiv.org/abs/2401.00812
+    github: ''
+    website: ''
+- id: https://proceedings.neurips.cc/paper_files/paper/2024/hash/61cce86d180b1184949e58939c4f983d-Abstract-Datasets_and_Benchmarks_Track.html
+  title: 'APIGen: Automated PIpeline for Generating Verifiable and Diverse Function-Calling Datasets'
+  authors:
+  - Zuxin Liu
+  - Thai Hoang
+  - Jianguo Zhang
+  - Ming Zhu
+  - Tian Lan
+  - Shirley Kokane
+  - Juntao Tan
+  - Weiran Yao
+  - Zhiwei Liu
+  - Yihao Feng
+  - Rithesh Murthy
+  - Liangwei Yang
+  - Silvio Savarese
+  - Juan Carlos Niebles
+  - Huan Wang
+  - Shelby Heinecke
+  - Caiming Xiong
+  venue: NeurIPS 2024 Datasets and Benchmarks Track
+  category: world_general
+  tags:
+  - training-data
+  summary: APIGen is an automated pipeline for generating verifiable and diverse function-calling datasets to train agents
+    in tool invocation. It emphasizes correctness verification of generated function calls across many domains.
+  links:
+    paper: https://proceedings.neurips.cc/paper_files/paper/2024/hash/61cce86d180b1184949e58939c4f983d-Abstract-Datasets_and_Benchmarks_Track.html
+    github: ''
+    website: https://apigen-pipeline.github.io/

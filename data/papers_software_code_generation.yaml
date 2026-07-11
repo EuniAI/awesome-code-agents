@@ -1,100 +1,48 @@
-- id: '2410.06949'
-  title: Towards Exception Safety Code Generation with Intermediate Representation Agents Framework
+- id: '2511.08301'
+  title: 'Smarter Together: Creating Agentic Communities of Practice through Shared Experiential Learning'
   authors:
-  - Xuanming Zhang
-  - Yuxuan Chen
-  - Yuan Yuan
-  - Minlie Huang
-  venue: arXiv 2025
+  - Valentin Tablan
+  - Scott Taylor
+  - Gabriel Hurtado
+  - Kristoffer Bernhem
+  - Anders Uhrenholt
+  - Gabriele Farei
+  - Karo Moilanen
+  venue: arXiv 2025/11
   category: software_code_generation
-  summary: Seeker is a multi-agent framework using an intermediate representation to detect fragile code segments and inject
-    robust exception-handling logic into LLM-generated code. It improves exception handling precision and overall code robustness
-    across Java projects and SWE-bench fixes.
+  published: '2025-11-11'
+  summary: Spark is a shared agentic memory architecture that lets AI coding agents contribute to and draw from a persistent
+    experiential knowledge base, coaching them during code generation tasks. Evaluations show it improves generated code quality
+    across model sizes.
   links:
-    paper: https://arxiv.org/abs/2410.06949
+    paper: https://arxiv.org/abs/2511.08301
     github: ''
     website: ''
-- id: '2510.17925'
-  title: 'SpecAgent: A Speculative Retrieval and Forecasting Agent for Code Completion'
+- id: '2511.03404'
+  title: Towards Realistic Project-Level Code Generation via Multi-Agent Collaboration and Semantic Architecture Modeling
   authors:
-  - George Ma
-  - Anurag Koul
-  - Qi Chen
-  - Yawen Wu
-  - Sachit Kuhar
-  - Yu Yu
-  - Aritra Sengupta
-  - Varun Kumar
-  - Murali Krishna Ramanathan
-  venue: arXiv 2025/10
+  - Qianhui Zhao
+  - Li Zhang
+  - Fang Liu
+  - Junhang Cheng
+  - Chengru Wu
+  - Junchen Ai
+  - Qiaoyuanhe Meng
+  - Lichen Zhang
+  - Xiaoli Lian
+  - Shubin Song
+  - Yuanping Guo
+  venue: arXiv 2025/11
   category: software_code_generation
+  published: '2025-11-05'
   tags:
   - benchmark
-  summary: SpecAgent is a retrieval-augmented agent for repository-level code completion that proactively builds speculative
-    context during indexing to reduce latency and improve generation quality. The paper also introduces a leakage-free synthetic
-    benchmark for realistic evaluation.
+  summary: Introduces CodeProjectEval, a realistic project-level code generation benchmark, and ProjectGen, a multi-agent
+    framework using a Semantic Software Architecture Tree to generate whole software projects from requirements. Achieves
+    large improvements in test-passing generated projects over baselines.
   links:
-    paper: https://arxiv.org/abs/2510.17925
-    github: ''
-    website: ''
-- id: '2403.10059'
-  title: 'Repoformer: Selective Retrieval for Repository-Level Code Completion'
-  authors:
-  - Di Wu
-  - Wasi Uddin Ahmad
-  - Dejiao Zhang
-  - Murali Krishna Ramanathan
-  - Xiaofei Ma
-  venue: ICML 2024
-  category: software_code_generation
-  tags:
-  - benchmark
-  summary: Repoformer introduces a selective retrieval-augmented generation framework that lets a code LM self-evaluate whether
-    retrieval helps, improving efficiency and robustness for repository-level code completion. It achieves state-of-the-art
-    results across multiple completion benchmarks including a new long-form benchmark.
-  links:
-    paper: https://arxiv.org/abs/2403.10059
-    github: ''
-    website: ''
-- id: '2405.19782'
-  title: Dataflow-Guided Retrieval Augmentation for Repository-Level Code Completion
-  authors:
-  - Wei Cheng
-  - Yuhan Wu
-  - Wei Hu
-  venue: ACL 2024
-  category: software_code_generation
-  tags:
-  - benchmark
-  summary: DraCo proposes dataflow-guided retrieval augmentation that parses a repository into a context graph for more precise
-    cross-file retrieval in code completion, improving accuracy over prior methods. The paper also releases ReccEval, a new
-    Python completion dataset.
-  links:
-    paper: https://arxiv.org/abs/2405.19782
-    github: ''
-    website: ''
-- id: '2303.12570'
-  title: 'RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and Generation'
-  authors:
-  - Fengji Zhang
-  - Bei Chen
-  - Yue Zhang
-  - Jacky Keung
-  - Jin Liu
-  - Daoguang Zan
-  - Yi Mao
-  - Jian-Guang Lou
-  - Weizhu Chen
-  venue: EMNLP 2023
-  category: software_code_generation
-  tags:
-  - benchmark
-  summary: RepoCoder is an iterative retrieval-generation framework for repository-level code completion that combines similarity-based
-    retrieval with a code LM to leverage cross-file context. It also introduces RepoEval, a benchmark covering line, API,
-    and function-level completion.
-  links:
-    paper: https://arxiv.org/abs/2303.12570
-    github: ''
+    paper: https://arxiv.org/abs/2511.03404
+    github: https://github.com/whisperzqh/ProjectGen
     website: ''
 - id: '2510.23538'
   title: 'JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intelligence'
@@ -110,6 +58,7 @@
   - Fei Yuan
   venue: arXiv 2025/10
   category: software_code_generation
+  published: '2025-10-27'
   tags:
   - model
   - training-data
@@ -119,59 +68,28 @@
     paper: https://arxiv.org/abs/2510.23538
     github: https://github.com/InternLM/JanusCoder
     website: ''
-- id: https://openreview.net/forum?id=qnE2m3pIAb
-  title: Automated Benchmark Generation for Repository-Level Coding Tasks
+- id: '2510.17925'
+  title: 'SpecAgent: A Speculative Retrieval and Forecasting Agent for Code Completion'
   authors:
-  - Konstantinos Vergopoulos
-  - Mark Niklas Müller
-  - Martin Vechev
-  venue: ICML 2025
+  - George Ma
+  - Anurag Koul
+  - Qi Chen
+  - Yawen Wu
+  - Sachit Kuhar
+  - Yu Yu
+  - Aritra Sengupta
+  - Varun Kumar
+  - Murali Krishna Ramanathan
+  venue: arXiv 2025/10
   category: software_code_generation
+  published: '2025-10-20'
   tags:
   - benchmark
-  summary: This paper proposes an automated pipeline for generating benchmarks targeting repository-level coding tasks, reducing
-    manual benchmark curation effort. No abstract details are available beyond the title.
+  summary: SpecAgent is a retrieval-augmented agent for repository-level code completion that proactively builds speculative
+    context during indexing to reduce latency and improve generation quality. The paper also introduces a leakage-free synthetic
+    benchmark for realistic evaluation.
   links:
-    paper: https://openreview.net/forum?id=qnE2m3pIAb
-    github: ''
-    website: ''
-- id: '2508.09945'
-  title: 'VisCodex: Unified Multimodal Code Generation via Merging Vision and Coding Models'
-  authors:
-  - Lingjie Jiang
-  - Shaohan Huang
-  - Xun Wu
-  - Yixia Li
-  - Dongdong Zhang
-  - Furu Wei
-  venue: arXiv 2025/08
-  category: software_code_generation
-  tags:
-  - model
-  - training-data
-  - benchmark
-  links:
-    paper: https://arxiv.org/abs/2508.09945
-    github: ''
-    website: ''
-- id: https://aclanthology.org/2024.findings-emnlp.42/
-  title: 'MMCode: Benchmarking Multimodal Large Language Models for Code Generation with Visually Rich Programming Problems'
-  authors:
-  - Kaixin Li
-  - Yuchen Tian
-  - Qisheng Hu
-  - Ziyang Luo
-  - Zhiyong Huang
-  - Jing Ma
-  venue: EMNLP 2024 Findings
-  category: software_code_generation
-  tags:
-  - benchmark
-  summary: MMCode benchmarks multimodal LLMs on code generation for visually rich programming problems that include images
-    such as figures or diagrams in the problem statement. It evaluates models' ability to produce correct code from combined
-    textual and visual specifications.
-  links:
-    paper: https://aclanthology.org/2024.findings-emnlp.42/
+    paper: https://arxiv.org/abs/2510.17925
     github: ''
     website: ''
 - id: '2510.07315'
@@ -191,6 +109,7 @@
   - Jiao Sun
   venue: arXiv 2025
   category: software_code_generation
+  published: '2025-10-08'
   tags:
   - benchmark
   summary: Introduces VeriCode taxonomy and SWE-IF benchmark to evaluate LLM code generation on instruction-following beyond
@@ -198,50 +117,6 @@
     differentiator among 31 evaluated LLMs.
   links:
     paper: https://arxiv.org/abs/2510.07315
-    github: ''
-    website: ''
-- id: '2511.03404'
-  title: Towards Realistic Project-Level Code Generation via Multi-Agent Collaboration and Semantic Architecture Modeling
-  authors:
-  - Qianhui Zhao
-  - Li Zhang
-  - Fang Liu
-  - Junhang Cheng
-  - Chengru Wu
-  - Junchen Ai
-  - Qiaoyuanhe Meng
-  - Lichen Zhang
-  - Xiaoli Lian
-  - Shubin Song
-  - Yuanping Guo
-  venue: arXiv 2025/11
-  category: software_code_generation
-  tags:
-  - benchmark
-  summary: Introduces CodeProjectEval, a realistic project-level code generation benchmark, and ProjectGen, a multi-agent
-    framework using a Semantic Software Architecture Tree to generate whole software projects from requirements. Achieves
-    large improvements in test-passing generated projects over baselines.
-  links:
-    paper: https://arxiv.org/abs/2511.03404
-    github: https://github.com/whisperzqh/ProjectGen
-    website: ''
-- id: '2511.08301'
-  title: 'Smarter Together: Creating Agentic Communities of Practice through Shared Experiential Learning'
-  authors:
-  - Valentin Tablan
-  - Scott Taylor
-  - Gabriel Hurtado
-  - Kristoffer Bernhem
-  - Anders Uhrenholt
-  - Gabriele Farei
-  - Karo Moilanen
-  venue: arXiv 2025/11
-  category: software_code_generation
-  summary: Spark is a shared agentic memory architecture that lets AI coding agents contribute to and draw from a persistent
-    experiential knowledge base, coaching them during code generation tasks. Evaluations show it improves generated code quality
-    across model sizes.
-  links:
-    paper: https://arxiv.org/abs/2511.08301
     github: ''
     website: ''
 - id: '2510.04905'
@@ -252,6 +127,7 @@
   - Yepang Liu
   venue: arXiv 2025/10
   category: software_code_generation
+  published: '2025-10-06'
   tags:
   - survey
   summary: A survey of Retrieval-Augmented Code Generation with focus on repository-level approaches, framing RACG as a coupled
@@ -260,113 +136,6 @@
   links:
     paper: https://arxiv.org/abs/2510.04905
     github: ''
-    website: ''
-- id: '2509.05980'
-  title: 'GRACE: Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion'
-  authors:
-  - Xingliang Wang
-  - Baoyi Wang
-  - Chen Zhi
-  - Junxiao Han
-  - Xinkui Zhao
-  - Jianwei Yin
-  - Shuiguang Deng
-  venue: arXiv 2025/09
-  category: software_code_generation
-  summary: GRACE is a graph-guided repository-aware code completion method that constructs multi-level code graphs and uses
-    hybrid graph-text retrieval to improve context for LLM-based completion. It significantly outperforms prior RAG baselines
-    on repository-level benchmarks.
-  links:
-    paper: https://arxiv.org/abs/2509.05980
-    github: ''
-    website: ''
-- id: '2508.10074'
-  title: 'Next Edit Prediction: Learning to Predict Code Edits from Context and Interaction History'
-  authors:
-  - Ruofan Lu
-  - Yintong Huo
-  - Meng Zhang
-  - Yichen Li
-  - Michael R. Lyu
-  venue: arXiv 2025/09
-  category: software_code_generation
-  tags:
-  - benchmark
-  - training-data
-  summary: Introduces Next Edit Prediction, a task and dataset for predicting the location and content of a developer's next
-    code edit from interaction history, along with fine-tuned models and an evaluation benchmark. This aims to proactively
-    assist developers beyond completion or chat-based editing.
-  links:
-    paper: https://arxiv.org/abs/2508.10074
-    github: https://github.com/lurf21/NextEditPrediction
-    website: ''
-- id: '2412.00535'
-  title: 'FullStack Bench: Evaluating LLMs as Full Stack Coders'
-  authors:
-  - 'Bytedance-Seed-Foundation-Code-Team: Yao Cheng'
-  - Jianfeng Chen
-  - Jie Chen
-  - Li Chen
-  - Liyu Chen
-  - Wentao Chen
-  - Zhengyu Chen
-  - Shijie Geng
-  - Aoyan Li
-  - Bo Li
-  - Bowen Li
-  - Linyi Li
-  - Boyi Liu
-  - Jiaheng Liu
-  - Kaibo Liu
-  - Qi Liu
-  - Shukai Liu
-  - Siyao Liu
-  - Tianyi Liu
-  - Tingkai Liu
-  - Yongfei Liu
-  - Rui Long
-  - Jing Mai
-  - Guanghan Ning
-  - Z.Y. Peng
-  - Kai Shen
-  - Jiahao Su
-  - Jing Su
-  - Tao Sun
-  - Yifan Sun
-  - Yunzhe Tao
-  - Guoyin Wang
-  - Siwei Wang
-  - Xuwu Wang
-  - Yite Wang
-  - Zihan Wang
-  - Jinxiang Xia
-  - Liang Xiang
-  - Xia Xiao
-  - Yongsheng Xiao
-  - Chenguang Xi
-  - Shulin Xin
-  - Jingjing Xu
-  - Shikun Xu
-  - Hongxia Yang
-  - Jack Yang
-  - Yingxiang Yang
-  - Jianbo Yuan
-  - Jun Zhang
-  - Yufeng Zhang
-  - Yuyu Zhang
-  - Shen Zheng
-  - He Zhu
-  - Ming Zhu
-  venue: arXiv 2025/05
-  category: software_code_generation
-  tags:
-  - benchmark
-  summary: FullStack Bench is a comprehensive multilingual code evaluation benchmark spanning many application domains including
-    software engineering, data analysis, and machine learning, paired with a sandbox execution tool. It evaluates LLMs' full-stack
-    coding capabilities across 16 languages.
-  links:
-    paper: https://arxiv.org/abs/2412.00535
-    github: https://github.com/bytedance/FullStackBench
     website: ''
 - id: '2509.16198'
   title: 'RPG: A Repository Planning Graph for Unified and Scalable Codebase Generation'
@@ -387,6 +156,7 @@
   - Mao Yang
   venue: arXiv 2025
   category: software_code_generation
+  published: '2025-09-19'
   tags:
   - benchmark
   summary: RPG introduces a Repository Planning Graph to structure long-horizon planning for generating complete repositories
@@ -395,6 +165,67 @@
   links:
     paper: https://arxiv.org/abs/2509.16198
     github: ''
+    website: ''
+- id: '2509.05980'
+  title: 'GRACE: Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion'
+  authors:
+  - Xingliang Wang
+  - Baoyi Wang
+  - Chen Zhi
+  - Junxiao Han
+  - Xinkui Zhao
+  - Jianwei Yin
+  - Shuiguang Deng
+  venue: arXiv 2025/09
+  category: software_code_generation
+  published: '2025-09-07'
+  summary: GRACE is a graph-guided repository-aware code completion method that constructs multi-level code graphs and uses
+    hybrid graph-text retrieval to improve context for LLM-based completion. It significantly outperforms prior RAG baselines
+    on repository-level benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2509.05980
+    github: ''
+    website: ''
+- id: '2508.09945'
+  title: 'VisCodex: Unified Multimodal Code Generation via Merging Vision and Coding Models'
+  authors:
+  - Lingjie Jiang
+  - Shaohan Huang
+  - Xun Wu
+  - Yixia Li
+  - Dongdong Zhang
+  - Furu Wei
+  venue: arXiv 2025/08
+  category: software_code_generation
+  published: '2025-08-13'
+  tags:
+  - model
+  - training-data
+  - benchmark
+  links:
+    paper: https://arxiv.org/abs/2508.09945
+    github: ''
+    website: ''
+- id: '2508.10074'
+  title: 'Next Edit Prediction: Learning to Predict Code Edits from Context and Interaction History'
+  authors:
+  - Ruofan Lu
+  - Yintong Huo
+  - Meng Zhang
+  - Yichen Li
+  - Michael R. Lyu
+  venue: arXiv 2025/09
+  category: software_code_generation
+  published: '2025-08-13'
+  tags:
+  - benchmark
+  - training-data
+  summary: Introduces Next Edit Prediction, a task and dataset for predicting the location and content of a developer's next
+    code edit from interaction history, along with fine-tuned models and an evaluation benchmark. This aims to proactively
+    assist developers beyond completion or chat-based editing.
+  links:
+    paper: https://arxiv.org/abs/2508.10074
+    github: https://github.com/lurf21/NextEditPrediction
     website: ''
 - id: '2507.15224'
   title: 'SimdBench: Benchmarking Large Language Models for SIMD-Intrinsic Code Generation'
@@ -408,6 +239,7 @@
   - Tao Xie
   venue: arXiv 2025
   category: software_code_generation
+  published: '2025-07-21'
   tags:
   - benchmark
   summary: SimdBench is a benchmark of 136 tasks for evaluating LLMs on generating SIMD-intrinsic vectorized code across five
@@ -416,54 +248,26 @@
     paper: https://arxiv.org/abs/2507.15224
     github: ''
     website: ''
-- id: '2502.15872'
-  title: 'MutaGReP: Execution-Free Repository-Grounded Plan Search for Code-Use'
+- id: '2506.03136'
+  title: Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning
   authors:
-  - Zaid Khan
-  - Ali Farhadi
-  - Ranjay Krishna
-  - Luca Weihs
-  - Mohit Bansal
-  - Tanmay Gupta
-  venue: arXiv 2025
+  - Yinjie Wang
+  - Ling Yang
+  - Ye Tian
+  - Ke Shen
+  - Mengdi Wang
+  venue: NeurIPS 2025
   category: software_code_generation
-  summary: MutaGReP searches for repository-grounded natural-language plans via mutation-guided tree search to help LLMs use
-    large codebases efficiently for coding tasks without needing full-repo context. It enables smaller models to match GPT-4o's
-    coding performance on repository-level benchmarks.
+  published: '2025-06-03'
+  tags:
+  - model
+  summary: CURE is an RL framework that co-evolves a coder model and a unit-test generator using their interaction outcomes
+    as reward, without ground-truth code. The resulting ReasonFlux-Coder models improve code generation and test-generation
+    accuracy over similarly sized baselines.
   links:
-    paper: https://arxiv.org/abs/2502.15872
-    github: ''
+    paper: https://arxiv.org/abs/2506.03136
+    github: https://github.com/Gen-Verse/CURE
     website: ''
-- id: https://cursor.com/blog/tab-rl
-  title: Improving Cursor Tab with online RL
-  authors:
-  - Jacob Jackson
-  - Phillip Kravtsov
-  - Shomil Jain
-  venue: '2025'
-  category: software_code_generation
-  summary: A technical report describing improvements to Cursor's Tab code-completion feature using online reinforcement learning.
-    The work targets better repository-aware code completion suggestions for developers.
-  links:
-    paper: https://cursor.com/blog/tab-rl
-    github: ''
-    website: ''
-- id: '2505.18646'
-  title: 'SEW: Self-Evolving Agentic Workflows for Automated Code Generation'
-  authors:
-  - Siwei Liu
-  - Jinyuan Fang
-  - Han Zhou
-  - Yingxu Wang
-  - Zaiqiao Meng
-  venue: arXiv 2025
-  category: software_code_generation
-  summary: SEW is a self-evolving multi-agent framework that automatically designs and optimizes agentic workflows for code
-    generation. It improves performance on coding benchmarks including LiveCodeBench by up to 12% over single-LLM baselines.
-  links:
-    paper: https://arxiv.org/abs/2505.18646
-    github: https://github.com/EvoAgentX/EvoAgentX
-    website: https://evoagentx.github.io/EvoAgentX/
 - id: '2505.21898'
   title: 'Co-Saving: Resource Aware Multi-Agent Collaboration for Software Development'
   authors:
@@ -481,11 +285,48 @@
   - Maosong Sun
   venue: arXiv 2025
   category: software_code_generation
+  published: '2025-05-28'
   summary: Co-Saving is a resource-aware multi-agent system for software development that uses learned 'shortcuts' from successful
     trajectories to reduce token usage and execution time. Compared to ChatDev, it cuts token usage by 50.85% while improving
     code quality by 10.06%.
   links:
     paper: https://arxiv.org/abs/2505.21898
+    github: ''
+    website: ''
+- id: '2505.18646'
+  title: 'SEW: Self-Evolving Agentic Workflows for Automated Code Generation'
+  authors:
+  - Siwei Liu
+  - Jinyuan Fang
+  - Han Zhou
+  - Yingxu Wang
+  - Zaiqiao Meng
+  venue: arXiv 2025
+  category: software_code_generation
+  published: '2025-05-24'
+  summary: SEW is a self-evolving multi-agent framework that automatically designs and optimizes agentic workflows for code
+    generation. It improves performance on coding benchmarks including LiveCodeBench by up to 12% over single-LLM baselines.
+  links:
+    paper: https://arxiv.org/abs/2505.18646
+    github: https://github.com/EvoAgentX/EvoAgentX
+    website: https://evoagentx.github.io/EvoAgentX/
+- id: '2502.15872'
+  title: 'MutaGReP: Execution-Free Repository-Grounded Plan Search for Code-Use'
+  authors:
+  - Zaid Khan
+  - Ali Farhadi
+  - Ranjay Krishna
+  - Luca Weihs
+  - Mohit Bansal
+  - Tanmay Gupta
+  venue: arXiv 2025
+  category: software_code_generation
+  published: '2025-02-21'
+  summary: MutaGReP searches for repository-grounded natural-language plans via mutation-guided tree search to help LLMs use
+    large codebases efficiently for coding tasks without needing full-repo context. It enables smaller models to match GPT-4o's
+    coding performance on repository-level benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2502.15872
     github: ''
     website: ''
 - id: '2501.04694'
@@ -506,6 +347,7 @@
   - Scarlett Li
   venue: ICML 2025
   category: software_code_generation
+  published: '2025-01-08'
   tags:
   - training-data
   summary: EpiCoder introduces a feature-tree-based synthesis framework to generate diverse, complex code training data at
@@ -513,6 +355,36 @@
     generation benchmarks.
   links:
     paper: https://arxiv.org/abs/2501.04694
+    github: ''
+    website: ''
+- id: https://openreview.net/forum?id=qnE2m3pIAb
+  title: Automated Benchmark Generation for Repository-Level Coding Tasks
+  authors:
+  - Konstantinos Vergopoulos
+  - Mark Niklas Müller
+  - Martin Vechev
+  venue: ICML 2025
+  category: software_code_generation
+  tags:
+  - benchmark
+  summary: This paper proposes an automated pipeline for generating benchmarks targeting repository-level coding tasks, reducing
+    manual benchmark curation effort. No abstract details are available beyond the title.
+  links:
+    paper: https://openreview.net/forum?id=qnE2m3pIAb
+    github: ''
+    website: ''
+- id: https://cursor.com/blog/tab-rl
+  title: Improving Cursor Tab with online RL
+  authors:
+  - Jacob Jackson
+  - Phillip Kravtsov
+  - Shomil Jain
+  venue: '2025'
+  category: software_code_generation
+  summary: A technical report describing improvements to Cursor's Tab code-completion feature using online reinforcement learning.
+    The work targets better repository-aware code completion suggestions for developers.
+  links:
+    paper: https://cursor.com/blog/tab-rl
     github: ''
     website: ''
 - id: https://aclanthology.org/2025.findings-naacl.82/
@@ -579,22 +451,6 @@
     paper: https://aclanthology.org/2025.findings-acl.1036/
     github: https://github.com/RyanLoil/ProjectEval/
     website: ''
-- id: '2406.11912'
-  title: 'AgileCoder: Dynamic Collaborative Agents for Software Development based on Agile Methodology'
-  authors:
-  - Minh Huynh Nguyen
-  - Thang Chau Phan
-  - Phong X. Nguyen
-  - Nghi D. Q. Bui
-  venue: FORGE 2025
-  category: software_code_generation
-  summary: AgileCoder is a multi-agent software development system that assigns Agile roles (Product Manager, Developer, Tester)
-    to LLM agents collaborating in sprints, using a dynamic code dependency graph to guide code generation. It outperforms
-    prior multi-agent systems like ChatDev and MetaGPT.
-  links:
-    paper: https://arxiv.org/abs/2406.11912
-    github: https://github.com/FSoft-AI4Code/AgileCoder
-    website: https://fsoft-ai4code.github.io/agilecoder/
 - id: https://openreview.net/forum?id=MMwaQEVsAg
   title: 'Commit0: Library Generation from Scratch'
   authors:
@@ -613,6 +469,127 @@
     paper: https://openreview.net/forum?id=MMwaQEVsAg
     github: https://github.com/commit-0/commit0
     website: https://commit-0.github.io/
+- id: '2412.00535'
+  title: 'FullStack Bench: Evaluating LLMs as Full Stack Coders'
+  authors:
+  - 'Bytedance-Seed-Foundation-Code-Team: Yao Cheng'
+  - Jianfeng Chen
+  - Jie Chen
+  - Li Chen
+  - Liyu Chen
+  - Wentao Chen
+  - Zhengyu Chen
+  - Shijie Geng
+  - Aoyan Li
+  - Bo Li
+  - Bowen Li
+  - Linyi Li
+  - Boyi Liu
+  - Jiaheng Liu
+  - Kaibo Liu
+  - Qi Liu
+  - Shukai Liu
+  - Siyao Liu
+  - Tianyi Liu
+  - Tingkai Liu
+  - Yongfei Liu
+  - Rui Long
+  - Jing Mai
+  - Guanghan Ning
+  - Z.Y. Peng
+  - Kai Shen
+  - Jiahao Su
+  - Jing Su
+  - Tao Sun
+  - Yifan Sun
+  - Yunzhe Tao
+  - Guoyin Wang
+  - Siwei Wang
+  - Xuwu Wang
+  - Yite Wang
+  - Zihan Wang
+  - Jinxiang Xia
+  - Liang Xiang
+  - Xia Xiao
+  - Yongsheng Xiao
+  - Chenguang Xi
+  - Shulin Xin
+  - Jingjing Xu
+  - Shikun Xu
+  - Hongxia Yang
+  - Jack Yang
+  - Yingxiang Yang
+  - Jianbo Yuan
+  - Jun Zhang
+  - Yufeng Zhang
+  - Yuyu Zhang
+  - Shen Zheng
+  - He Zhu
+  - Ming Zhu
+  venue: arXiv 2025/05
+  category: software_code_generation
+  published: '2024-11-30'
+  tags:
+  - benchmark
+  summary: FullStack Bench is a comprehensive multilingual code evaluation benchmark spanning many application domains including
+    software engineering, data analysis, and machine learning, paired with a sandbox execution tool. It evaluates LLMs' full-stack
+    coding capabilities across 16 languages.
+  links:
+    paper: https://arxiv.org/abs/2412.00535
+    github: https://github.com/bytedance/FullStackBench
+    website: ''
+- id: '2411.04329'
+  title: 'CodeTree: Agent-guided Tree Search for Code Generation with Large Language Models'
+  authors:
+  - Jierui Li
+  - Hung Le
+  - Yingbo Zhou
+  - Caiming Xiong
+  - Silvio Savarese
+  - Doyen Sahoo
+  venue: arXiv 2024
+  category: software_code_generation
+  published: '2024-11-07'
+  summary: CodeTree uses agent-guided tree search to explore coding strategies, generate solutions, and refine them with execution
+    and LLM feedback. It achieves strong results on HumanEval, MBPP, CodeContests, and SWE-bench.
+  links:
+    paper: https://arxiv.org/abs/2411.04329
+    github: https://github.com/SalesforceAIResearch/CodeTree
+    website: ''
+- id: '2410.06949'
+  title: Towards Exception Safety Code Generation with Intermediate Representation Agents Framework
+  authors:
+  - Xuanming Zhang
+  - Yuxuan Chen
+  - Yuan Yuan
+  - Minlie Huang
+  venue: arXiv 2025
+  category: software_code_generation
+  published: '2024-10-09'
+  summary: Seeker is a multi-agent framework using an intermediate representation to detect fragile code segments and inject
+    robust exception-handling logic into LLM-generated code. It improves exception handling precision and overall code robustness
+    across Java projects and SWE-bench fixes.
+  links:
+    paper: https://arxiv.org/abs/2410.06949
+    github: ''
+    website: ''
+- id: '2409.05001'
+  title: A Pair Programming Framework for Code Generation via Multi-Plan Exploration and Feedback-Driven Refinement
+  authors:
+  - Huan Zhang
+  - Wei Cheng
+  - Yuhan Wu
+  - Wei Hu
+  venue: ASE 2024
+  category: software_code_generation
+  published: '2024-09-08'
+  summary: PairCoder introduces a pair-programming-inspired LLM framework with a Navigator agent for planning and a Driver
+    agent for implementation, using multi-plan exploration and feedback-driven refinement to improve code generation accuracy
+    across benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2409.05001
+    github: https://github.com/nju-websoft/PairCoder
+    website: ''
 - id: '2407.19487'
   title: 'RLCoder: Reinforcement Learning for Repository-Level Code Completion'
   authors:
@@ -625,11 +602,50 @@
   - Zibin Zheng
   venue: ICSE 2025
   category: software_code_generation
+  published: '2024-07-28'
   summary: RLCoder trains a retriever via reinforcement learning, using perplexity-based feedback, to fetch useful repository
     context for code completion without labeled data. It improves repository-level code completion performance over lexical
     and prior retrieval baselines.
   links:
     paper: https://arxiv.org/abs/2407.19487
+    github: ''
+    website: ''
+- id: '2406.11912'
+  title: 'AgileCoder: Dynamic Collaborative Agents for Software Development based on Agile Methodology'
+  authors:
+  - Minh Huynh Nguyen
+  - Thang Chau Phan
+  - Phong X. Nguyen
+  - Nghi D. Q. Bui
+  venue: FORGE 2025
+  category: software_code_generation
+  published: '2024-06-16'
+  summary: AgileCoder is a multi-agent software development system that assigns Agile roles (Product Manager, Developer, Tester)
+    to LLM agents collaborating in sprints, using a dynamic code dependency graph to guide code generation. It outperforms
+    prior multi-agent systems like ChatDev and MetaGPT.
+  links:
+    paper: https://arxiv.org/abs/2406.11912
+    github: https://github.com/FSoft-AI4Code/AgileCoder
+    website: https://fsoft-ai4code.github.io/agilecoder/
+- id: '2406.07003'
+  title: 'GraphCoder: Enhancing Repository-Level Code Completion via Code Context Graph-based Retrieval and Language Model'
+  authors:
+  - Wei Liu
+  - Ailun Yu
+  - Daoguang Zan
+  - Bo Shen
+  - Wei Zhang
+  - Haiyan Zhao
+  - Zhi Jin
+  - Qianxiang Wang
+  venue: arXiv 2024
+  category: software_code_generation
+  published: '2024-06-11'
+  summary: GraphCoder improves repository-level code completion using a code context graph capturing control- and data-flow
+    dependencies for more accurate retrieval-augmented generation. It outperforms sequence-based retrieval baselines in exact
+    match while being faster and more space-efficient.
+  links:
+    paper: https://arxiv.org/abs/2406.07003
     github: ''
     website: ''
 - id: '2406.03283'
@@ -641,11 +657,30 @@
   - Xiaohu Yang
   venue: TOSEM 2025
   category: software_code_generation
+  published: '2024-06-05'
   summary: CatCoder improves repository-level code generation for statically typed languages by combining retrieved code with
     static-analysis-derived type context to build better LLM prompts. It is evaluated on new Java and Rust benchmarks, outperforming
     RepoCoder baselines.
   links:
     paper: https://arxiv.org/abs/2406.03283
+    github: ''
+    website: ''
+- id: '2405.19782'
+  title: Dataflow-Guided Retrieval Augmentation for Repository-Level Code Completion
+  authors:
+  - Wei Cheng
+  - Yuhan Wu
+  - Wei Hu
+  venue: ACL 2024
+  category: software_code_generation
+  published: '2024-05-30'
+  tags:
+  - benchmark
+  summary: DraCo proposes dataflow-guided retrieval augmentation that parses a repository into a context graph for more precise
+    cross-file retrieval in code completion, improving accuracy over prior methods. The paper also releases ReccEval, a new
+    Python completion dataset.
+  links:
+    paper: https://arxiv.org/abs/2405.19782
     github: ''
     website: ''
 - id: '2405.04219'
@@ -664,46 +699,13 @@
   - Maosong Sun
   venue: arXiv 2024
   category: software_code_generation
+  published: '2024-05-07'
   summary: Proposes Iterative Experience Refinement, letting LLM software-developing agents iteratively refine a dynamic pool
     of past experiences via successive/cumulative patterns and heuristic elimination. Improves efficiency and stability in
     generating software solutions using far fewer stored experiences.
   links:
     paper: https://arxiv.org/abs/2405.04219
     github: ''
-    website: ''
-- id: '2411.04329'
-  title: 'CodeTree: Agent-guided Tree Search for Code Generation with Large Language Models'
-  authors:
-  - Jierui Li
-  - Hung Le
-  - Yingbo Zhou
-  - Caiming Xiong
-  - Silvio Savarese
-  - Doyen Sahoo
-  venue: arXiv 2024
-  category: software_code_generation
-  summary: CodeTree uses agent-guided tree search to explore coding strategies, generate solutions, and refine them with execution
-    and LLM feedback. It achieves strong results on HumanEval, MBPP, CodeContests, and SWE-bench.
-  links:
-    paper: https://arxiv.org/abs/2411.04329
-    github: https://github.com/SalesforceAIResearch/CodeTree
-    website: ''
-- id: '2312.13010'
-  title: 'AgentCoder: Multi-Agent-based Code Generation with Iterative Testing and Optimisation'
-  authors:
-  - Dong Huang
-  - Jie M.Zhang
-  - Michael Luck
-  - Qingwen Bu
-  - Yuhao Qing
-  - Heming Cui
-  venue: arXiv 2024
-  category: software_code_generation
-  summary: AgentCoder is a multi-agent framework with programmer, test-designer, and test-executor agents collaborating to
-    generate and refine code using test feedback. It surpasses prior methods on HumanEval and MBPP with less token overhead.
-  links:
-    paper: https://arxiv.org/abs/2312.13010
-    github: https://github.com/huangd1999/AgentCoder
     website: ''
 - id: '2404.02183'
   title: 'Self-Organized Agents: A LLM Multi-Agent Framework toward Ultra Large-Scale Code Generation and Optimization'
@@ -712,57 +714,71 @@
   - Yoshimasa Nishimura
   venue: arXiv 2024
   category: software_code_generation
+  published: '2024-04-02'
   summary: Self-Organized Agents (SoA) is a multi-agent framework that dynamically scales the number of agents to generate
     and optimize large-scale codebases beyond single-agent context limits. It outperforms single-agent baselines on HumanEval.
   links:
     paper: https://arxiv.org/abs/2404.02183
     github: https://github.com/tsukushiAI/self-organized-agent
     website: ''
-- id: '2406.07003'
-  title: 'GraphCoder: Enhancing Repository-Level Code Completion via Code Context Graph-based Retrieval and Language Model'
+- id: '2403.10059'
+  title: 'Repoformer: Selective Retrieval for Repository-Level Code Completion'
   authors:
-  - Wei Liu
-  - Ailun Yu
-  - Daoguang Zan
-  - Bo Shen
-  - Wei Zhang
-  - Haiyan Zhao
-  - Zhi Jin
-  - Qianxiang Wang
-  venue: arXiv 2024
+  - Di Wu
+  - Wasi Uddin Ahmad
+  - Dejiao Zhang
+  - Murali Krishna Ramanathan
+  - Xiaofei Ma
+  venue: ICML 2024
   category: software_code_generation
-  summary: GraphCoder improves repository-level code completion using a code context graph capturing control- and data-flow
-    dependencies for more accurate retrieval-augmented generation. It outperforms sequence-based retrieval baselines in exact
-    match while being faster and more space-efficient.
+  published: '2024-03-15'
+  tags:
+  - benchmark
+  summary: Repoformer introduces a selective retrieval-augmented generation framework that lets a code LM self-evaluate whether
+    retrieval helps, improving efficiency and robustness for repository-level code completion. It achieves state-of-the-art
+    results across multiple completion benchmarks including a new long-form benchmark.
   links:
-    paper: https://arxiv.org/abs/2406.07003
+    paper: https://arxiv.org/abs/2403.10059
     github: ''
     website: ''
-- id: '2308.00352'
-  title: 'MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework'
+- id: '2401.07339'
+  title: 'CodeAgent: Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges'
   authors:
-  - Sirui Hong
-  - Mingchen Zhuge
-  - Jiaqi Chen
-  - Xiawu Zheng
-  - Yuheng Cheng
-  - Ceyao Zhang
-  - Jinlin Wang
-  - Zili Wang
-  - Steven Ka Shing Yau
-  - Zijuan Lin
-  - Liyang Zhou
-  - Chenyu Ran
-  - Lingfeng Xiao
-  - Chenglin Wu
-  - Jürgen Schmidhuber
-  venue: ICLR 2024
+  - Kechi Zhang
+  - Jia Li
+  - Ge Li
+  - Xianjie Shi
+  - Zhi Jin
+  venue: ACL 2024
   category: software_code_generation
-  summary: MetaGPT encodes standardized operating procedures into LLM multi-agent workflows, assigning specialized roles to
-    collaboratively generate coherent software solutions from requirements. It outperforms prior chat-based multi-agent systems
-    on software engineering benchmarks.
+  published: '2024-01-14'
+  tags:
+  - benchmark
+  summary: CodeAgent is a tool-integrated LLM agent framework for repository-level code generation, using tools for information
+    retrieval, symbol navigation, and testing. It introduces CodeAgentBench, a benchmark of five real Python projects, and
+    shows large improvements over prompting baselines.
   links:
-    paper: https://arxiv.org/abs/2308.00352
+    paper: https://arxiv.org/abs/2401.07339
+    github: ''
+    website: ''
+- id: https://aclanthology.org/2024.findings-emnlp.42/
+  title: 'MMCode: Benchmarking Multimodal Large Language Models for Code Generation with Visually Rich Programming Problems'
+  authors:
+  - Kaixin Li
+  - Yuchen Tian
+  - Qisheng Hu
+  - Ziyang Luo
+  - Zhiyong Huang
+  - Jing Ma
+  venue: EMNLP 2024 Findings
+  category: software_code_generation
+  tags:
+  - benchmark
+  summary: MMCode benchmarks multimodal LLMs on code generation for visually rich programming problems that include images
+    such as figures or diagrams in the problem statement. It evaluates models' ability to produce correct code from combined
+    textual and visual specifications.
+  links:
+    paper: https://aclanthology.org/2024.findings-emnlp.42/
     github: ''
     website: ''
 - id: https://proceedings.iclr.cc/paper_files/paper/2024/file/d191ba4c8923ed8fd8935b7c98658b5f-Paper-Conference.pdf
@@ -796,25 +812,6 @@
   links:
     paper: https://openreview.net/forum?id=pPjZIOuQuF
     github: https://github.com/Leolty/repobench
-    website: ''
-- id: '2401.07339'
-  title: 'CodeAgent: Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges'
-  authors:
-  - Kechi Zhang
-  - Jia Li
-  - Ge Li
-  - Xianjie Shi
-  - Zhi Jin
-  venue: ACL 2024
-  category: software_code_generation
-  tags:
-  - benchmark
-  summary: CodeAgent is a tool-integrated LLM agent framework for repository-level code generation, using tools for information
-    retrieval, symbol navigation, and testing. It introduces CodeAgentBench, a benchmark of five real Python projects, and
-    shows large improvements over prompting baselines.
-  links:
-    paper: https://arxiv.org/abs/2401.07339
-    github: ''
     website: ''
 - id: https://aclanthology.org/2024.acl-long.305/
   title: Experiential Co-Learning of Software-Developing Agents
@@ -901,22 +898,6 @@
     paper: https://aclanthology.org/2024.findings-acl.138/
     github: ''
     website: ''
-- id: '2409.05001'
-  title: A Pair Programming Framework for Code Generation via Multi-Plan Exploration and Feedback-Driven Refinement
-  authors:
-  - Huan Zhang
-  - Wei Cheng
-  - Yuhan Wu
-  - Wei Hu
-  venue: ASE 2024
-  category: software_code_generation
-  summary: PairCoder introduces a pair-programming-inspired LLM framework with a Navigator agent for planning and a Driver
-    agent for implementation, using multi-plan exploration and feedback-driven refinement to improve code generation accuracy
-    across benchmarks.
-  links:
-    paper: https://arxiv.org/abs/2409.05001
-    github: https://github.com/nju-websoft/PairCoder
-    website: ''
 - id: https://www.computer.org/csdl/journal/ts/2024/12/10734067/21iLh4j0oG4
   title: 'A3-CodGen: A Repository-Level Code Generation Framework for Code Reuse With Local-Aware, Global-Aware, and Third-Party-Library-Aware'
   authors:
@@ -936,6 +917,76 @@
     paper: https://www.computer.org/csdl/journal/ts/2024/12/10734067/21iLh4j0oG4
     github: ''
     website: ''
+- id: '2312.13010'
+  title: 'AgentCoder: Multi-Agent-based Code Generation with Iterative Testing and Optimisation'
+  authors:
+  - Dong Huang
+  - Jie M.Zhang
+  - Michael Luck
+  - Qingwen Bu
+  - Yuhao Qing
+  - Heming Cui
+  venue: arXiv 2024
+  category: software_code_generation
+  published: '2023-12-20'
+  summary: AgentCoder is a multi-agent framework with programmer, test-designer, and test-executor agents collaborating to
+    generate and refine code using test feedback. It surpasses prior methods on HumanEval and MBPP with less token overhead.
+  links:
+    paper: https://arxiv.org/abs/2312.13010
+    github: https://github.com/huangd1999/AgentCoder
+    website: ''
+- id: '2308.00352'
+  title: 'MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework'
+  authors:
+  - Sirui Hong
+  - Mingchen Zhuge
+  - Jiaqi Chen
+  - Xiawu Zheng
+  - Yuheng Cheng
+  - Ceyao Zhang
+  - Jinlin Wang
+  - Zili Wang
+  - Steven Ka Shing Yau
+  - Zijuan Lin
+  - Liyang Zhou
+  - Chenyu Ran
+  - Lingfeng Xiao
+  - Chenglin Wu
+  - Jürgen Schmidhuber
+  venue: ICLR 2024
+  category: software_code_generation
+  published: '2023-08-01'
+  summary: MetaGPT encodes standardized operating procedures into LLM multi-agent workflows, assigning specialized roles to
+    collaboratively generate coherent software solutions from requirements. It outperforms prior chat-based multi-agent systems
+    on software engineering benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2308.00352
+    github: ''
+    website: ''
+- id: '2303.12570'
+  title: 'RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and Generation'
+  authors:
+  - Fengji Zhang
+  - Bei Chen
+  - Yue Zhang
+  - Jacky Keung
+  - Jin Liu
+  - Daoguang Zan
+  - Yi Mao
+  - Jian-Guang Lou
+  - Weizhu Chen
+  venue: EMNLP 2023
+  category: software_code_generation
+  published: '2023-03-22'
+  tags:
+  - benchmark
+  summary: RepoCoder is an iterative retrieval-generation framework for repository-level code completion that combines similarity-based
+    retrieval with a code LM to leverage cross-file context. It also introduces RepoEval, a benchmark covering line, API,
+    and function-level completion.
+  links:
+    paper: https://arxiv.org/abs/2303.12570
+    github: ''
+    website: ''
 - id: https://neurips.cc/virtual/2023/poster/70362
   title: Monitor-Guided Decoding of Code LMs with Static Analysis of Repository Context
   authors:
@@ -951,23 +1002,4 @@
   links:
     paper: https://neurips.cc/virtual/2023/poster/70362
     github: ''
-    website: ''
-- id: '2506.03136'
-  title: Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning
-  authors:
-  - Yinjie Wang
-  - Ling Yang
-  - Ye Tian
-  - Ke Shen
-  - Mengdi Wang
-  venue: NeurIPS 2025
-  category: software_code_generation
-  tags:
-  - model
-  summary: CURE is an RL framework that co-evolves a coder model and a unit-test generator using their interaction outcomes
-    as reward, without ground-truth code. The resulting ReasonFlux-Coder models improve code generation and test-generation
-    accuracy over similarly sized baselines.
-  links:
-    paper: https://arxiv.org/abs/2506.03136
-    github: https://github.com/Gen-Verse/CURE
     website: ''

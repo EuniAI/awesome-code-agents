@@ -1,23 +1,3 @@
-- id: '2412.04455'
-  title: 'Code-as-Monitor: Constraint-aware Visual Programming for Reactive and Proactive Robotic Failure Detection'
-  authors:
-  - Enshen Zhou
-  - Qi Su
-  - Cheng Chi
-  - Zhizheng Zhang
-  - Zhongyuan Wang
-  - Tiejun Huang
-  - Lu Sheng
-  - He Wang
-  venue: CVPR 2025
-  category: world_physical
-  summary: Code-as-Monitor uses VLM-generated code to formulate spatio-temporal constraint satisfaction problems for real-time
-    reactive and proactive failure detection in robotic manipulation. Constraint elements abstract entities into geometric
-    primitives, improving monitoring accuracy and speed across simulators and real robots.
-  links:
-    paper: https://arxiv.org/abs/2412.04455
-    github: ''
-    website: https://zhoues.github.io/Code-as-Monitor/
 - id: https://openaccess.thecvf.com/content/CVPR2025W/CV2/html/Zook_GRS_Generating_Robotic_Simulation_Tasks_from_Real-World_Images_CVPRW_2025_paper.html
   title: 'GRS: Generating Robotic Simulation Tasks from Real-World Images'
   authors:
@@ -37,6 +17,27 @@
     paper: https://openaccess.thecvf.com/content/CVPR2025W/CV2/html/Zook_GRS_Generating_Robotic_Simulation_Tasks_from_Real-World_Images_CVPRW_2025_paper.html
     github: ''
     website: ''
+- id: '2412.04455'
+  title: 'Code-as-Monitor: Constraint-aware Visual Programming for Reactive and Proactive Robotic Failure Detection'
+  authors:
+  - Enshen Zhou
+  - Qi Su
+  - Cheng Chi
+  - Zhizheng Zhang
+  - Zhongyuan Wang
+  - Tiejun Huang
+  - Lu Sheng
+  - He Wang
+  venue: CVPR 2025
+  category: world_physical
+  published: '2024-12-05'
+  summary: Code-as-Monitor uses VLM-generated code to formulate spatio-temporal constraint satisfaction problems for real-time
+    reactive and proactive failure detection in robotic manipulation. Constraint elements abstract entities into geometric
+    primitives, improving monitoring accuracy and speed across simulators and real robots.
+  links:
+    paper: https://arxiv.org/abs/2412.04455
+    github: ''
+    website: https://zhoues.github.io/Code-as-Monitor/
 - id: '2402.14623'
   title: 'RoboScript: Code Generation for Free-Form Manipulation Tasks across Real and Simulation'
   authors:
@@ -56,6 +57,7 @@
   - Ping Luo
   venue: arXiv 2024
   category: world_physical
+  published: '2024-02-22'
   tags:
   - benchmark
   summary: RoboScript is a platform and benchmark for generating deployable code for free-form robot manipulation tasks, unifying
@@ -95,6 +97,25 @@
     paper: https://dl.acm.org/doi/10.5555/3692070.3693552
     github: https://github.com/RoboCodeX-source/RoboCodeX_code
     website: https://sites.google.com/view/robocodexplus
+- id: '2305.11176'
+  title: 'Instruct2Act: Mapping Multi-modality Instructions to Robotic Actions with Large Language Model'
+  authors:
+  - Siyuan Huang
+  - Zhengkai Jiang
+  - Hao Dong
+  - Yu Qiao
+  - Peng Gao
+  - Hongsheng Li
+  venue: arXiv 2023
+  category: world_physical
+  published: '2023-05-18'
+  summary: Instruct2Act maps multi-modal instructions to Python programs that orchestrate perception (SAM, CLIP) and action
+    for robotic manipulation tasks. The generated code acts as policy connecting foundation models to robot actions, evaluated
+    on tabletop manipulation.
+  links:
+    paper: https://arxiv.org/abs/2305.11176
+    github: https://github.com/OpenGVLab/Instruct2Act
+    website: ''
 - id: '2306.17582'
   title: 'ChatGPT for Robotics: Design Principles and Model Abilities'
   authors:
@@ -104,6 +125,7 @@
   - Ashish Kapoor
   venue: arXiv 2023
   category: world_physical
+  published: '2023-02-20'
   summary: This study explores using ChatGPT with prompt engineering and a function library to generate code for controlling
     robots across simulators and tasks, including navigation and manipulation. It introduces PromptCraft, a platform for sharing
     effective robotics prompting strategies.
@@ -125,6 +147,7 @@
   - Animesh Garg
   venue: ICRA 2023
   category: world_physical
+  published: '2022-09-22'
   summary: ProgPrompt uses program-like LLM prompts specifying available actions and objects to generate executable robot
     task plans, achieving strong results in VirtualHome and on a physical robot arm.
   links:
@@ -144,27 +167,10 @@
   - Andy Zeng
   venue: ICRA 2023
   category: world_physical
+  published: '2022-09-16'
   summary: Code as Policies repurposes code-writing LLMs to generate robot policy code that processes perception and parameterizes
     control primitives, enabling spatial reasoning and generalization across real robot platforms.
   links:
     paper: https://arxiv.org/abs/2209.07753
     github: https://github.com/google-research/google-research/tree/master/code_as_policies
     website: https://code-as-policies.github.io/
-- id: '2305.11176'
-  title: 'Instruct2Act: Mapping Multi-modality Instructions to Robotic Actions with Large Language Model'
-  authors:
-  - Siyuan Huang
-  - Zhengkai Jiang
-  - Hao Dong
-  - Yu Qiao
-  - Peng Gao
-  - Hongsheng Li
-  venue: arXiv 2023
-  category: world_physical
-  summary: Instruct2Act maps multi-modal instructions to Python programs that orchestrate perception (SAM, CLIP) and action
-    for robotic manipulation tasks. The generated code acts as policy connecting foundation models to robot actions, evaluated
-    on tabletop manipulation.
-  links:
-    paper: https://arxiv.org/abs/2305.11176
-    github: https://github.com/OpenGVLab/Instruct2Act
-    website: ''

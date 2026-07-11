@@ -8,6 +8,7 @@
   - Saurabh Sinha
   venue: arXiv 2026/05
   category: software_testing
+  published: '2026-05-30'
   tags:
   - benchmark
   summary: Sakura is a multi-agent framework that generates structurally complex test cases from natural language descriptions
@@ -15,6 +16,44 @@
     on compilability and coverage overlap across 20 applications.
   links:
     paper: https://arxiv.org/abs/2606.00530
+    github: ''
+    website: ''
+- id: '2511.00202'
+  title: 'Position: Vibe Coding Needs Vibe Reasoning: Improving Vibe Coding with Formal Verification'
+  authors:
+  - Jacqueline Mitchell
+  - Yasser Shaaban
+  venue: arXiv 2025
+  category: software_testing
+  published: '2025-10-31'
+  tags:
+  - position
+  summary: Position paper arguing that vibe coding's pitfalls (technical debt, security issues, churn) stem from LLMs failing
+    to reconcile accumulating constraints, and proposes a side-car system using formal verification to autoformalize and validate
+    specifications during development.
+  links:
+    paper: https://arxiv.org/abs/2511.00202
+    github: ''
+    website: ''
+- id: '2508.00408'
+  title: Benchmarking LLMs for Unit Test Generation from Real-World Functions
+  authors:
+  - Dong Huang
+  - Jie M. Zhang
+  - Mark Harman
+  - Qianru Zhang
+  - Mingzhe Du
+  - See-Kiong Ng
+  venue: arXiv 2025/08
+  category: software_testing
+  published: '2025-08-01'
+  tags:
+  - benchmark
+  summary: ULT is a new benchmark for function-level unit test generation from real-world, complex Python functions, designed
+    to avoid data contamination and structural simplicity issues in prior benchmarks. Evaluation shows it is substantially
+    more challenging than existing benchmarks like TestEval.
+  links:
+    paper: https://arxiv.org/abs/2508.00408
     github: ''
     website: ''
 - id: '2507.20619'
@@ -30,6 +69,7 @@
   - Jin Song Dong
   venue: arXiv 2025/09
   category: software_testing
+  published: '2025-07-28'
   summary: IntentionTest generates project-specific test cases from validation-intention descriptions using a retrieve-and-edit
     approach with LLMs. It outperforms baselines in semantic relevance to ground-truth tests and passing test generation rate.
   links:
@@ -45,6 +85,7 @@
   - Daniel Kang
   venue: arXiv 2025/06
   category: software_testing
+  published: '2025-06-10'
   tags:
   - benchmark
   summary: UTBoost introduces UTGenerator, an LLM-driven test case generator, to augment insufficient test suites in SWE-Bench,
@@ -52,26 +93,6 @@
     via better test coverage.
   links:
     paper: https://arxiv.org/abs/2506.09289
-    github: ''
-    website: ''
-- id: '2508.00408'
-  title: Benchmarking LLMs for Unit Test Generation from Real-World Functions
-  authors:
-  - Dong Huang
-  - Jie M. Zhang
-  - Mark Harman
-  - Qianru Zhang
-  - Mingzhe Du
-  - See-Kiong Ng
-  venue: arXiv 2025/08
-  category: software_testing
-  tags:
-  - benchmark
-  summary: ULT is a new benchmark for function-level unit test generation from real-world, complex Python functions, designed
-    to avoid data contamination and structural simplicity issues in prior benchmarks. Evaluation shows it is substantially
-    more challenging than existing benchmarks like TestEval.
-  links:
-    paper: https://arxiv.org/abs/2508.00408
     github: ''
     website: ''
 - id: '2501.11086'
@@ -83,25 +104,10 @@
   - Marcel Böhme
   venue: arXiv 2025/01
   category: software_testing
+  published: '2025-01-19'
   summary: Cleverest uses LLMs to generate just-in-time regression tests from commit messages and code diffs for structured-input
     programs like parsers and compilers, finding bugs as effectively as directed fuzzing and boosting fuzzing when combined.
   links:
     paper: https://arxiv.org/abs/2501.11086
-    github: ''
-    website: ''
-- id: '2511.00202'
-  title: 'Position: Vibe Coding Needs Vibe Reasoning: Improving Vibe Coding with Formal Verification'
-  authors:
-  - Jacqueline Mitchell
-  - Yasser Shaaban
-  venue: arXiv 2025
-  category: software_testing
-  tags:
-  - position
-  summary: Position paper arguing that vibe coding's pitfalls (technical debt, security issues, churn) stem from LLMs failing
-    to reconcile accumulating constraints, and proposes a side-car system using formal verification to autoformalize and validate
-    specifications during development.
-  links:
-    paper: https://arxiv.org/abs/2511.00202
     github: ''
     website: ''

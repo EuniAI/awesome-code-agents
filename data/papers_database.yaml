@@ -8,6 +8,7 @@
   - Nathan Miller
   venue: arXiv 2026/06
   category: database
+  published: '2026-06-01'
   summary: BADGER is a unified evaluation framework combining text-to-SQL execution accuracy assessment with agentic behavior
     evaluation for enterprise systems. It introduces a hybrid execution-accuracy metric and an agentic evaluation suite validated
     against human judgment on industry queries.
@@ -25,6 +26,7 @@
   - Yuxiong He
   venue: arXiv 2026/05
   category: database
+  published: '2026-05-30'
   summary: MERIT is a dual-level long-term memory retrieval framework for interactive text-to-SQL agents, using reinforcement
     learning to optimize episode- and turn-level memory retrieval. It improves success rate and reduces interaction turns
     on BIRD-Interact and transfers to Spider2-Snow.
@@ -42,6 +44,7 @@
   - Liu Ren
   venue: arXiv 2025/10
   category: database
+  published: '2025-10-13'
   tags:
   - empirical
   summary: This paper benchmarks six inference-time test-time scaling strategies across four LLMs for Text-to-SQL, evaluating
@@ -59,6 +62,7 @@
   - Yassine Yaakoubi
   venue: arXiv 2025/10
   category: database
+  published: '2025-10-12'
   summary: AGENTIQL is a multi-expert agentic framework for text-to-SQL that decomposes questions, generates sub-queries,
     and refines column selection with an adaptive router. It achieves competitive execution accuracy on Spider using much
     smaller open-source models than GPT-4.
@@ -78,6 +82,7 @@
   - Chandan K. Reddy
   venue: arXiv 2025/10
   category: database
+  published: '2025-10-12'
   tags:
   - training-data
   summary: MTSQL-R1 is an agentic training framework casting multi-turn text-to-SQL as an MDP with execution feedback and
@@ -99,6 +104,7 @@
   - Unso Eun Seo Jo
   venue: arXiv 2025/10
   category: database
+  published: '2025-10-08'
   tags:
   - benchmark
   summary: CORGI is a new text-to-SQL benchmark built on synthetic enterprise databases that expands beyond simple queries
@@ -133,6 +139,7 @@
   - Reynold Cheng
   venue: arXiv 2025
   category: database
+  published: '2025-06-23'
   tags:
   - benchmark
   - training-data

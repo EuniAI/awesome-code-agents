@@ -8,6 +8,7 @@
   - Wenhao Wang
   venue: arXiv 2026/05
   category: web
+  published: '2026-05-30'
   tags:
   - benchmark
   summary: Introduces a Paper-to-Interactive-System Agent (PaperVoyager) that converts research papers into executable interactive
@@ -30,28 +31,12 @@
   - Bo Zhou
   venue: arXiv 2025/10
   category: web
+  published: '2025-10-13'
   summary: ReLook is a vision-grounded RL framework where an agent uses an MLLM critic on rendered screenshots to iteratively
     generate and refine front-end code, improving front-end coding benchmarks.
   links:
     paper: https://arxiv.org/abs/2510.11498
     github: ''
-    website: ''
-- id: '2509.25297'
-  title: Automatically Generating Web Applications from Requirements Via Multi-Agent Test-Driven Development
-  authors:
-  - Yuxuan Wan
-  - Tingshuo Liang
-  - Jiakai Xu
-  - Jingyu Xiao
-  - Yintong Huo
-  - Michael R. Lyu
-  venue: arXiv 2025/10
-  category: web
-  summary: TDDev is a test-driven-development multi-agent framework that generates full-stack web applications (front-end
-    and back-end) from natural language or design images, iteratively refining via derived test cases.
-  links:
-    paper: https://arxiv.org/abs/2509.25297
-    github: https://github.com/yxwan123/TDDev
     website: ''
 - id: '2510.09724'
   title: 'InteractScience: Programmatic and Visually-Grounded Evaluation of Interactive Scientific Demonstration Code Generation'
@@ -65,6 +50,7 @@
   - Fei Yuan
   venue: arXiv 2025/10
   category: web
+  published: '2025-10-10'
   tags:
   - benchmark
   summary: InteractScience is a benchmark evaluating LLMs on generating interactive scientific demonstration front-end code,
@@ -73,22 +59,23 @@
     paper: https://arxiv.org/abs/2510.09724
     github: https://github.com/open-compass/InteractScience
     website: ''
-- id: '2509.12159'
-  title: 'EfficientUICoder: Efficient MLLM-based UI Code Generation via Input and Output Token Compression'
+- id: '2509.25297'
+  title: Automatically Generating Web Applications from Requirements Via Multi-Agent Test-Driven Development
   authors:
-  - Jingyu Xiao
-  - Zhongyi Zhang
   - Yuxuan Wan
+  - Tingshuo Liang
+  - Jiakai Xu
+  - Jingyu Xiao
   - Yintong Huo
-  - Yang Liu
-  - Michael R.Lyu
-  venue: arXiv 2025/09
+  - Michael R. Lyu
+  venue: arXiv 2025/10
   category: web
-  summary: EfficientUICoder is a token-compression framework that reduces input image and output HTML/CSS tokens in MLLM-based
-    UI-to-code generation, cutting computation while preserving webpage quality.
+  published: '2025-09-29'
+  summary: TDDev is a test-driven-development multi-agent framework that generates full-stack web applications (front-end
+    and back-end) from natural language or design images, iteratively refining via derived test cases.
   links:
-    paper: https://arxiv.org/abs/2509.12159
-    github: https://github.com/WebPAI/EfficientUICoder
+    paper: https://arxiv.org/abs/2509.25297
+    github: https://github.com/yxwan123/TDDev
     website: ''
 - id: '2509.22644'
   title: 'WebGen-Agent: Enhancing Interactive Website Generation with Multi-Level Feedback and Step-Level Reinforcement Learning'
@@ -103,170 +90,30 @@
   - Hongsheng Li
   venue: arXiv 2025
   category: web
+  published: '2025-09-26'
   summary: WebGen-Agent uses multi-level visual and GUI-agent feedback with step-level RL (Step-GRPO) to iteratively generate
     and refine interactive website codebases, substantially improving accuracy over prior agents.
   links:
     paper: https://arxiv.org/abs/2509.22644
     github: https://github.com/mnluzimu/WebGen-Agent
     website: ''
-- id: '2505.03733'
-  title: 'WebGen-Bench: Evaluating LLMs on Generating Interactive and Functional Websites from Scratch'
-  authors:
-  - Zimu Lu
-  - Yunqiao Yang
-  - Houxing Ren
-  - Haotian Hou
-  - Han Xiao
-  - Ke Wang
-  - Weikang Shi
-  - Aojun Zhou
-  - Mingjie Zhan
-  - Hongsheng Li
-  venue: arXiv 2025
-  category: web
-  tags:
-  - benchmark
-  - training-data
-  summary: WebGen-Bench evaluates LLM agents on generating multi-file website codebases from scratch using functional test
-    cases and a web-navigation agent for automated grading, and releases a companion WebGen-Instruct training set.
-  links:
-    paper: https://arxiv.org/abs/2505.03733
-    github: https://github.com/mnluzimu/WebGen-Bench
-    website: ''
-- id: '2507.22827'
-  title: 'ScreenCoder: Advancing Visual-to-Code Generation for Front-End Automation via Modular Multimodal Agents'
-  authors:
-  - Yilei Jiang
-  - Yaozhi Zheng
-  - Yuxuan Wan
-  - Jiaming Han
-  - Qunzhong Wang
-  - Michael R. Lyu
-  - Xiangyu Yue
-  venue: arXiv 2025
-  category: web
-  summary: ScreenCoder is a modular multi-agent framework that decomposes UI-to-code generation into grounding, planning,
-    and generation stages, also serving as a data engine to fine-tune open-source MLLMs for UI code generation.
-  links:
-    paper: https://arxiv.org/abs/2507.22827
-    github: https://github.com/leigest519/ScreenCoder
-    website: ''
-- id: '2411.03292'
-  title: 'Interaction2Code: Benchmarking MLLM-based Interactive Webpage Code Generation from Interactive Prototyping'
+- id: '2509.12159'
+  title: 'EfficientUICoder: Efficient MLLM-based UI Code Generation via Input and Output Token Compression'
   authors:
   - Jingyu Xiao
+  - Zhongyi Zhang
   - Yuxuan Wan
   - Yintong Huo
-  - Zixin Wang
-  - Xinyi Xu
-  - Wenxuan Wang
-  - Zhiyao Xu
-  - Yuhang Wang
-  - Michael R. Lyu
-  venue: arXiv 2025
+  - Yang Liu
+  - Michael R.Lyu
+  venue: arXiv 2025/09
   category: web
-  tags:
-  - benchmark
-  summary: Interaction2Code introduces a benchmark and enhancement strategies for evaluating MLLMs on generating interactive
-    (not just static) webpage code from UI mock-ups, identifying key failure modes.
+  published: '2025-09-15'
+  summary: EfficientUICoder is a token-compression framework that reduces input image and output HTML/CSS tokens in MLLM-based
+    UI-to-code generation, cutting computation while preserving webpage quality.
   links:
-    paper: https://arxiv.org/abs/2411.03292
-    github: https://github.com/WebPAI/Interaction2Code
-    website: https://webpai.github.io/Interaction2Code/
-- id: '2506.06251'
-  title: 'DesignBench: A Comprehensive Benchmark for MLLM-based Front-end Code Generation'
-  authors:
-  - Jingyu Xiao
-  - Ming Wang
-  - Man Ho Lam
-  - Yuxuan Wan
-  - Junliang Liu
-  - Yintong Huo
-  - Michael R. Lyu
-  venue: arXiv 2025
-  category: web
-  tags:
-  - benchmark
-  summary: DesignBench is a multi-framework (React, Vue, Angular, HTML/CSS) benchmark evaluating MLLMs on front-end UI code
-    generation, editing, and repair across 900 webpage samples. It provides fine-grained analysis of framework-specific and
-    task-specific model limitations.
-  links:
-    paper: https://arxiv.org/abs/2506.06251
-    github: ''
-    website: ''
-- id: '2506.13663'
-  title: 'DesignCoder: Hierarchy-Aware and Self-Correcting UI Code Generation with Large Language Models'
-  authors:
-  - Yunnong Chen
-  - Shixian Ding
-  - YingYing Zhang
-  - Wenkai Chen
-  - Jinzhou Du
-  - Lingyun Sun
-  - Liuqing Chen
-  venue: arXiv 2025
-  category: web
-  summary: DesignCoder is a hierarchy-aware, self-correcting framework that generates React Native UI code from mockups using
-    UI grouping chains and divide-and-conquer generation. It improves visual and structural fidelity over prior state-of-the-art
-    methods.
-  links:
-    paper: https://www.arxiv.org/abs/2506.13663
-    github: ''
-    website: ''
-- id: https://dl.acm.org/doi/abs/10.1145/3729364
-  title: 'Divide-and-Conquer: Generating UI Code from Screenshots'
-  authors:
-  - Yuxuan Wan
-  - Chaozheng Wang
-  - Yi Dong
-  - Wenxuan Wang
-  - Shuqing Li
-  - Yintong Huo
-  - Michael Lyu
-  venue: FSE 2025
-  category: web
-  summary: This paper proposes a divide-and-conquer approach for generating UI code directly from screenshots. The method
-    decomposes screenshots to improve accuracy of the generated front-end code.
-  links:
-    paper: https://dl.acm.org/doi/abs/10.1145/3729364
-    github: ''
-    website: ''
-- id: '2506.10376'
-  title: MLLM-Based UI2Code Automation Guided by UI Layout Information
-  authors:
-  - Fan Wu
-  - Cuiyun Gao
-  - Shuqing Li
-  - Xin-Cheng Wen
-  - Qing Liao
-  venue: ISSTA 2025
-  category: web
-  tags:
-  - benchmark
-  summary: LayoutCoder is an MLLM-based framework for UI2Code that parses UI layout trees to guide accurate, layout-preserving
-    code generation from webpage images, evaluated on a newly built Snap2Code benchmark plus Design2Code.
-  links:
-    paper: https://arxiv.org/abs/2506.10376
-    github: ''
-    website: ''
-- id: '2403.03163'
-  title: 'Design2Code: Benchmarking Multimodal Code Generation for Automated Front-End Engineering'
-  authors:
-  - Chenglei Si
-  - Yanzhe Zhang
-  - Ryan Li
-  - Zhengyuan Yang
-  - Ruibo Liu
-  - Diyi Yang
-  venue: NAACL 2025
-  category: web
-  tags:
-  - benchmark
-  summary: Design2Code is the first real-world benchmark for converting visual webpage designs into code, curating 484 webpages
-    with automatic and human evaluation metrics to assess frontier MLLMs like GPT-4o and Gemini.
-  links:
-    paper: https://arxiv.org/abs/2403.03163
-    github: https://github.com/NoviScl/Design2Code
+    paper: https://arxiv.org/abs/2509.12159
+    github: https://github.com/WebPAI/EfficientUICoder
     website: ''
 - id: '2508.16763'
   title: 'WebMMU: A Benchmark for Multimodal Multilingual Website Understanding and Code Generation'
@@ -286,6 +133,7 @@
   - Sai Rajeswar
   venue: EMNLP 2025
   category: web
+  published: '2025-08-22'
   tags:
   - benchmark
   summary: WebMMU is a multilingual benchmark unifying website visual QA, HTML/CSS/JS code editing, and mockup-to-code generation
@@ -295,25 +143,110 @@
     paper: https://arxiv.org/abs/2508.16763
     github: ''
     website: https://webmmu-paper.github.io/
-- id: '2412.15310'
-  title: 'MRWeb: An Exploration of Generating Multi-Page Resource-Aware Web Code from UI Designs'
+- id: '2507.22827'
+  title: 'ScreenCoder: Advancing Visual-to-Code Generation for Front-End Automation via Modular Multimodal Agents'
   authors:
+  - Yilei Jiang
+  - Yaozhi Zheng
   - Yuxuan Wan
-  - Yi Dong
-  - Jingyu Xiao
-  - Yintong Huo
-  - Wenxuan Wang
+  - Jiaming Han
+  - Qunzhong Wang
   - Michael R. Lyu
-  venue: arXiv 2024
+  - Xiangyu Yue
+  venue: arXiv 2025
   category: web
+  published: '2025-07-30'
+  summary: ScreenCoder is a modular multi-agent framework that decomposes UI-to-code generation into grounding, planning,
+    and generation stages, also serving as a data engine to fine-tune open-source MLLMs for UI code generation.
+  links:
+    paper: https://arxiv.org/abs/2507.22827
+    github: https://github.com/leigest519/ScreenCoder
+    website: ''
+- id: '2506.13663'
+  title: 'DesignCoder: Hierarchy-Aware and Self-Correcting UI Code Generation with Large Language Models'
+  authors:
+  - Yunnong Chen
+  - Shixian Ding
+  - YingYing Zhang
+  - Wenkai Chen
+  - Jinzhou Du
+  - Lingyun Sun
+  - Liuqing Chen
+  venue: arXiv 2025
+  category: web
+  published: '2025-06-16'
+  summary: DesignCoder is a hierarchy-aware, self-correcting framework that generates React Native UI code from mockups using
+    UI grouping chains and divide-and-conquer generation. It improves visual and structural fidelity over prior state-of-the-art
+    methods.
+  links:
+    paper: https://www.arxiv.org/abs/2506.13663
+    github: ''
+    website: ''
+- id: '2506.10376'
+  title: MLLM-Based UI2Code Automation Guided by UI Layout Information
+  authors:
+  - Fan Wu
+  - Cuiyun Gao
+  - Shuqing Li
+  - Xin-Cheng Wen
+  - Qing Liao
+  venue: ISSTA 2025
+  category: web
+  published: '2025-06-12'
   tags:
   - benchmark
-  summary: MRWeb introduces the task of generating multi-page, resource-aware web code from UI designs, including navigation,
-    image loading, and backend routing, using a novel resource-list structure and a new 500-website dataset. Resource lists
-    substantially improve navigation functionality in generated sites.
+  summary: LayoutCoder is an MLLM-based framework for UI2Code that parses UI layout trees to guide accurate, layout-preserving
+    code generation from webpage images, evaluated on a newly built Snap2Code benchmark plus Design2Code.
   links:
-    paper: https://arxiv.org/abs/2412.15310
-    github: https://github.com/WebPAI/MRWeb
+    paper: https://arxiv.org/abs/2506.10376
+    github: ''
+    website: ''
+- id: '2506.06251'
+  title: 'DesignBench: A Comprehensive Benchmark for MLLM-based Front-end Code Generation'
+  authors:
+  - Jingyu Xiao
+  - Ming Wang
+  - Man Ho Lam
+  - Yuxuan Wan
+  - Junliang Liu
+  - Yintong Huo
+  - Michael R. Lyu
+  venue: arXiv 2025
+  category: web
+  published: '2025-06-06'
+  tags:
+  - benchmark
+  summary: DesignBench is a multi-framework (React, Vue, Angular, HTML/CSS) benchmark evaluating MLLMs on front-end UI code
+    generation, editing, and repair across 900 webpage samples. It provides fine-grained analysis of framework-specific and
+    task-specific model limitations.
+  links:
+    paper: https://arxiv.org/abs/2506.06251
+    github: ''
+    website: ''
+- id: '2505.03733'
+  title: 'WebGen-Bench: Evaluating LLMs on Generating Interactive and Functional Websites from Scratch'
+  authors:
+  - Zimu Lu
+  - Yunqiao Yang
+  - Houxing Ren
+  - Haotian Hou
+  - Han Xiao
+  - Ke Wang
+  - Weikang Shi
+  - Aojun Zhou
+  - Mingjie Zhan
+  - Hongsheng Li
+  venue: arXiv 2025
+  category: web
+  published: '2025-05-06'
+  tags:
+  - benchmark
+  - training-data
+  summary: WebGen-Bench evaluates LLM agents on generating multi-file website codebases from scratch using functional test
+    cases and a web-navigation agent for automated grading, and releases a companion WebGen-Instruct training set.
+  links:
+    paper: https://arxiv.org/abs/2505.03733
+    github: https://github.com/mnluzimu/WebGen-Bench
     website: ''
 - id: '2502.11844'
   title: 'BaxBench: Can LLMs Generate Correct and Secure Backends?'
@@ -328,6 +261,7 @@
   - Martin Vechev
   venue: ICML 2025
   category: web
+  published: '2025-02-17'
   tags:
   - benchmark
   summary: BaxBench is a 392-task benchmark evaluating LLMs' ability to generate production-quality, secure backend applications,
@@ -337,6 +271,24 @@
     paper: https://arxiv.org/abs/2502.11844
     github: https://github.com/logic-star-ai/baxbench
     website: https://baxbench.com/
+- id: https://dl.acm.org/doi/abs/10.1145/3729364
+  title: 'Divide-and-Conquer: Generating UI Code from Screenshots'
+  authors:
+  - Yuxuan Wan
+  - Chaozheng Wang
+  - Yi Dong
+  - Wenxuan Wang
+  - Shuqing Li
+  - Yintong Huo
+  - Michael Lyu
+  venue: FSE 2025
+  category: web
+  summary: This paper proposes a divide-and-conquer approach for generating UI code directly from screenshots. The method
+    decomposes screenshots to improve accuracy of the generated front-end code.
+  links:
+    paper: https://dl.acm.org/doi/abs/10.1145/3729364
+    github: ''
+    website: ''
 - id: https://openreview.net/forum?id=CaXZB6bI31
   title: 'Figma2Code: Automating Multimodal Design to Code in the Wild'
   authors:
@@ -348,4 +300,68 @@
   links:
     paper: https://openreview.net/forum?id=CaXZB6bI31
     github: ''
+    website: ''
+- id: '2412.15310'
+  title: 'MRWeb: An Exploration of Generating Multi-Page Resource-Aware Web Code from UI Designs'
+  authors:
+  - Yuxuan Wan
+  - Yi Dong
+  - Jingyu Xiao
+  - Yintong Huo
+  - Wenxuan Wang
+  - Michael R. Lyu
+  venue: arXiv 2024
+  category: web
+  published: '2024-12-19'
+  tags:
+  - benchmark
+  summary: MRWeb introduces the task of generating multi-page, resource-aware web code from UI designs, including navigation,
+    image loading, and backend routing, using a novel resource-list structure and a new 500-website dataset. Resource lists
+    substantially improve navigation functionality in generated sites.
+  links:
+    paper: https://arxiv.org/abs/2412.15310
+    github: https://github.com/WebPAI/MRWeb
+    website: ''
+- id: '2411.03292'
+  title: 'Interaction2Code: Benchmarking MLLM-based Interactive Webpage Code Generation from Interactive Prototyping'
+  authors:
+  - Jingyu Xiao
+  - Yuxuan Wan
+  - Yintong Huo
+  - Zixin Wang
+  - Xinyi Xu
+  - Wenxuan Wang
+  - Zhiyao Xu
+  - Yuhang Wang
+  - Michael R. Lyu
+  venue: arXiv 2025
+  category: web
+  published: '2024-11-05'
+  tags:
+  - benchmark
+  summary: Interaction2Code introduces a benchmark and enhancement strategies for evaluating MLLMs on generating interactive
+    (not just static) webpage code from UI mock-ups, identifying key failure modes.
+  links:
+    paper: https://arxiv.org/abs/2411.03292
+    github: https://github.com/WebPAI/Interaction2Code
+    website: https://webpai.github.io/Interaction2Code/
+- id: '2403.03163'
+  title: 'Design2Code: Benchmarking Multimodal Code Generation for Automated Front-End Engineering'
+  authors:
+  - Chenglei Si
+  - Yanzhe Zhang
+  - Ryan Li
+  - Zhengyuan Yang
+  - Ruibo Liu
+  - Diyi Yang
+  venue: NAACL 2025
+  category: web
+  published: '2024-03-05'
+  tags:
+  - benchmark
+  summary: Design2Code is the first real-world benchmark for converting visual webpage designs into code, curating 484 webpages
+    with automatic and human evaluation metrics to assess frontier MLLMs like GPT-4o and Gemini.
+  links:
+    paper: https://arxiv.org/abs/2403.03163
+    github: https://github.com/NoviScl/Design2Code
     website: ''

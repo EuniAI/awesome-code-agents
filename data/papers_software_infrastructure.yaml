@@ -10,6 +10,7 @@
   - Yang Liu
   venue: arXiv 2025
   category: software_infrastructure
+  published: '2025-11-03'
   tags:
   - empirical
   summary: This empirical study examines LLM-based translation of CI configurations from Travis CI to GitHub Actions, quantifying
@@ -18,6 +19,95 @@
   links:
     paper: https://arxiv.org/abs/2511.01316
     github: ''
+    website: ''
+- id: '2511.00780'
+  title: Can Language Models Go Beyond Coding? Assessing the Capability of Language Models to Build Real-World Systems
+  authors:
+  - Chenyu Zhao
+  - Shenglin Zhang
+  - Zeshun Huang
+  - Weilin Jin
+  - Yongqian Sun
+  - Dan Pei
+  - Chaoyun Zhang
+  - Qingwei Lin
+  - Chetan Bansal
+  - Saravan Rajmohan
+  - Minghua Ma
+  venue: arXiv 2025
+  category: software_infrastructure
+  published: '2025-11-02'
+  tags:
+  - benchmark
+  summary: Build-bench is an architecture-aware benchmark of 268 real-world failed packages evaluating LLMs' ability to repair
+    build failures during cross-ISA (x86_64 to aarch64) software migration using iterative tool-augmented reasoning. State-of-the-art
+    models achieve only 63.19% build success rate.
+  links:
+    paper: https://arxiv.org/abs/2511.00780
+    github: ''
+    website: ''
+- id: '2510.25694'
+  title: Process-Level Trajectory Evaluation for Environment Configuration in Software Engineering Agents
+  authors:
+  - Jiayi Kuang
+  - Yinghui Li
+  - Xin Zhang
+  - Yangning Li
+  - Di Yin
+  - Xing Sun
+  - Ying Shen
+  - Philip S. Yu
+  venue: arXiv 2025/10
+  category: software_infrastructure
+  published: '2025-10-29'
+  tags:
+  - benchmark
+  summary: Enconda-bench is a process-level benchmark diagnosing agent capabilities in environment configuration—planning,
+    error diagnosis, feedback-driven repair, and execution—rather than just end-to-end build success. It reveals agents struggle
+    to translate diagnosed errors into effective corrections.
+  links:
+    paper: https://arxiv.org/abs/2510.25694
+    github: ''
+    website: ''
+- id: '2503.14443'
+  title: 'EnvBench: A Benchmark for Automated Environment Setup'
+  authors:
+  - Aleksandra Eliseeva
+  - Alexander Kovrigin
+  - Ilia Kholkin
+  - Egor Bogomolov
+  - Yaroslav Zharov
+  venue: ICLR 2025 Workshop
+  category: software_infrastructure
+  published: '2025-03-18'
+  tags:
+  - benchmark
+  summary: EnvBench is a large benchmark of 329 Python and 665 JVM repositories for evaluating automated environment setup
+    agents, with automatic metrics for configuration success. It reveals current LLM agentic approaches struggle with this
+    task.
+  links:
+    paper: https://arxiv.org/abs/2503.14443
+    github: https://github.com/JetBrains-Research/EnvBench
+    website: https://huggingface.co/datasets/JetBrains-Research/EnvBench
+- id: '2502.13681'
+  title: 'Repo2Run: Automated Building Executable Environment for Code Repository at Scale'
+  authors:
+  - Ruida Hu
+  - Chao Peng
+  - Xinchen Wang
+  - Junjielong Xu
+  - Cuiyun Gao
+  venue: NeurIPS 2025
+  category: software_infrastructure
+  published: '2025-02-19'
+  tags:
+  - benchmark
+  summary: Repo2Run is an LLM-based agent that automatically builds executable Docker environments for arbitrary Python code
+    repositories by iteratively synthesizing and testing Dockerfiles. Evaluated on a new 420-repository benchmark, it achieves
+    an 86% success rate, far outperforming SWE-agent.
+  links:
+    paper: https://arxiv.org/abs/2502.13681
+    github: https://github.com/bytedance/Repo2Run
     website: ''
 - id: '2501.13699'
   title: 'DI-BENCH: Benchmarking Large Language Models on Dependency Inference with Testable Repositories at Scale'
@@ -40,6 +130,7 @@
   - Qi Zhang
   venue: arXiv 2025
   category: software_infrastructure
+  published: '2025-01-23'
   tags:
   - benchmark
   summary: DI-BENCH is a large-scale benchmark of 581 repositories across four languages that evaluates LLMs' ability to infer
@@ -49,49 +140,20 @@
     paper: https://arxiv.org/abs/2501.13699
     github: ''
     website: ''
-- id: '2511.00780'
-  title: Can Language Models Go Beyond Coding? Assessing the Capability of Language Models to Build Real-World Systems
+- id: '2501.12339'
+  title: 'Treefix: Enabling Execution with a Tree of Prefixes'
   authors:
-  - Chenyu Zhao
-  - Shenglin Zhang
-  - Zeshun Huang
-  - Weilin Jin
-  - Yongqian Sun
-  - Dan Pei
-  - Chaoyun Zhang
-  - Qingwei Lin
-  - Chetan Bansal
-  - Saravan Rajmohan
-  - Minghua Ma
-  venue: arXiv 2025
+  - Beatriz Souza
+  - Michael Pradel
+  venue: ICSE 2025
   category: software_infrastructure
-  tags:
-  - benchmark
-  summary: Build-bench is an architecture-aware benchmark of 268 real-world failed packages evaluating LLMs' ability to repair
-    build failures during cross-ISA (x86_64 to aarch64) software migration using iterative tool-augmented reasoning. State-of-the-art
-    models achieve only 63.19% build success rate.
+  published: '2025-01-21'
+  summary: Treefix uses an LLM to iteratively build a tree of code prefixes that supply plausible values for missing variables,
+    enabling execution of otherwise-unrunnable Python code snippets for dynamic analysis. It improves execution coverage by
+    25% and 7% over prior learning-guided execution methods on two datasets.
   links:
-    paper: https://arxiv.org/abs/2511.00780
+    paper: https://arxiv.org/abs/2501.12339
     github: ''
-    website: ''
-- id: '2502.13681'
-  title: 'Repo2Run: Automated Building Executable Environment for Code Repository at Scale'
-  authors:
-  - Ruida Hu
-  - Chao Peng
-  - Xinchen Wang
-  - Junjielong Xu
-  - Cuiyun Gao
-  venue: NeurIPS 2025
-  category: software_infrastructure
-  tags:
-  - benchmark
-  summary: Repo2Run is an LLM-based agent that automatically builds executable Docker environments for arbitrary Python code
-    repositories by iteratively synthesizing and testing Dockerfiles. Evaluated on a new 420-repository benchmark, it achieves
-    an 86% success rate, far outperforming SWE-agent.
-  links:
-    paper: https://arxiv.org/abs/2502.13681
-    github: https://github.com/bytedance/Repo2Run
     website: ''
 - id: https://openreview.net/forum?id=2txrMBpw3q#discussion
   title: 'RepoST: Scalable Repository-Level Coding Environment Construction with Sandbox Testing'
@@ -112,34 +174,6 @@
   links:
     paper: https://openreview.net/forum?id=2txrMBpw3q#discussion
     github: https://github.com/yiqingxyq/RepoST
-    website: ''
-- id: '2501.12339'
-  title: 'Treefix: Enabling Execution with a Tree of Prefixes'
-  authors:
-  - Beatriz Souza
-  - Michael Pradel
-  venue: ICSE 2025
-  category: software_infrastructure
-  summary: Treefix uses an LLM to iteratively build a tree of code prefixes that supply plausible values for missing variables,
-    enabling execution of otherwise-unrunnable Python code snippets for dynamic analysis. It improves execution coverage by
-    25% and 7% over prior learning-guided execution methods on two datasets.
-  links:
-    paper: https://arxiv.org/abs/2501.12339
-    github: ''
-    website: ''
-- id: '2412.10133'
-  title: 'You Name It, I Run It: An LLM Agent to Execute Tests of Arbitrary Projects'
-  authors:
-  - Islem Bouzenia
-  - Michael Pradel
-  venue: ISSTA 2025
-  category: software_infrastructure
-  summary: ExecutionAgent is an LLM-based agent that autonomously prepares build scripts and executes test suites for arbitrary
-    open-source projects across languages and toolchains, using meta-prompting and iterative feedback. It successfully runs
-    test suites for 33/50 evaluated projects, substantially outperforming prior techniques.
-  links:
-    paper: https://arxiv.org/abs/2412.10133
-    github: ''
     website: ''
 - id: https://dl.acm.org/doi/10.1145/3729386
   title: 'CXXCrafter: An LLM-Based Agent for Automated C/C++ Open Source Software Building'
@@ -196,25 +230,37 @@
     paper: https://aclanthology.org/2025.naacl-long.633/
     github: https://github.com/amazon-science/CSR-Bench
     website: ''
-- id: '2503.14443'
-  title: 'EnvBench: A Benchmark for Automated Environment Setup'
+- id: https://aclanthology.org/2025.realm-1.19/
+  title: 'GitGoodBench: A Novel Benchmark For Evaluating Agentic Performance On Git'
   authors:
-  - Aleksandra Eliseeva
-  - Alexander Kovrigin
-  - Ilia Kholkin
+  - Tobias Lindenbauer
   - Egor Bogomolov
   - Yaroslav Zharov
-  venue: ICLR 2025 Workshop
+  venue: REALM 2025
   category: software_infrastructure
   tags:
   - benchmark
-  summary: EnvBench is a large benchmark of 329 Python and 665 JVM repositories for evaluating automated environment setup
-    agents, with automatic metrics for configuration success. It reveals current LLM agentic approaches struggle with this
-    task.
+  summary: GitGoodBench is a benchmark evaluating agentic performance on Git operations such as committing, branching, merging,
+    and resolving conflicts. It targets version-control tasks that enable software development workflows.
   links:
-    paper: https://arxiv.org/abs/2503.14443
-    github: https://github.com/JetBrains-Research/EnvBench
-    website: https://huggingface.co/datasets/JetBrains-Research/EnvBench
+    paper: https://aclanthology.org/2025.realm-1.19/
+    github: ''
+    website: ''
+- id: '2412.10133'
+  title: 'You Name It, I Run It: An LLM Agent to Execute Tests of Arbitrary Projects'
+  authors:
+  - Islem Bouzenia
+  - Michael Pradel
+  venue: ISSTA 2025
+  category: software_infrastructure
+  published: '2024-12-13'
+  summary: ExecutionAgent is an LLM-based agent that autonomously prepares build scripts and executes test suites for arbitrary
+    open-source projects across languages and toolchains, using meta-prompting and iterative feedback. It successfully runs
+    test suites for 33/50 evaluated projects, substantially outperforming prior techniques.
+  links:
+    paper: https://arxiv.org/abs/2412.10133
+    github: ''
+    website: ''
 - id: '2412.06294'
   title: 'Beyond pip install: Evaluating LLM Agents for the Automated Installation of Python Projects'
   authors:
@@ -223,6 +269,7 @@
   - Shin Yoo
   venue: SANER 2025
   category: software_infrastructure
+  published: '2024-12-09'
   tags:
   - benchmark
   summary: Installamatic and its benchmark evaluate LLM agents on automatically installing Python project dependencies by
@@ -241,6 +288,7 @@
   - Rocco Oliveto
   venue: ICSSP 2023
   category: software_infrastructure
+  published: '2023-03-28'
   tags:
   - training-data
   summary: This study trains a T5 model to generate Dockerfiles from structured natural-language specifications of execution
@@ -248,43 +296,5 @@
     configuration generation.
   links:
     paper: https://arxiv.org/abs/2303.15990
-    github: ''
-    website: ''
-- id: https://aclanthology.org/2025.realm-1.19/
-  title: 'GitGoodBench: A Novel Benchmark For Evaluating Agentic Performance On Git'
-  authors:
-  - Tobias Lindenbauer
-  - Egor Bogomolov
-  - Yaroslav Zharov
-  venue: REALM 2025
-  category: software_infrastructure
-  tags:
-  - benchmark
-  summary: GitGoodBench is a benchmark evaluating agentic performance on Git operations such as committing, branching, merging,
-    and resolving conflicts. It targets version-control tasks that enable software development workflows.
-  links:
-    paper: https://aclanthology.org/2025.realm-1.19/
-    github: ''
-    website: ''
-- id: '2510.25694'
-  title: Process-Level Trajectory Evaluation for Environment Configuration in Software Engineering Agents
-  authors:
-  - Jiayi Kuang
-  - Yinghui Li
-  - Xin Zhang
-  - Yangning Li
-  - Di Yin
-  - Xing Sun
-  - Ying Shen
-  - Philip S. Yu
-  venue: arXiv 2025/10
-  category: software_infrastructure
-  tags:
-  - benchmark
-  summary: Enconda-bench is a process-level benchmark diagnosing agent capabilities in environment configuration—planning,
-    error diagnosis, feedback-driven repair, and execution—rather than just end-to-end build success. It reveals agents struggle
-    to translate diagnosed errors into effective corrections.
-  links:
-    paper: https://arxiv.org/abs/2510.25694
     github: ''
     website: ''

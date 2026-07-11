@@ -65,6 +65,46 @@ def ensure_abstracts(ids: list[str]) -> dict[str, str]:
     return cache
 
 
+def fetch_published(ids: list[str]) -> dict[str, str]:
+    """id -> first-publication date (arXiv v1 <published>), YYYY-MM-DD."""
+    dates: dict[str, str] = {}
+    arxiv_ids = [i for i in ids if _ARXIV_ID.match(i)]
+    for start in range(0, len(arxiv_ids), 50):
+        chunk = arxiv_ids[start:start + 50]
+        url = "https://export.arxiv.org/api/query?max_results=100&id_list=" + ",".join(chunk)
+        logger.info("fetching %d publication dates from arXiv", len(chunk))
+        with urllib.request.urlopen(url, timeout=60) as r:
+            root = ET.fromstring(r.read())
+        for entry in root.findall("a:entry", _ATOM):
+            eid = entry.find("a:id", _ATOM).text or ""
+            m = re.search(r"abs/(\d{4}\.\d{4,5})", eid)
+            pub = entry.find("a:published", _ATOM)
+            if m and pub is not None and pub.text:
+                dates[m.group(1)] = pub.text[:10]
+        time.sleep(3)
+    return dates
+
+
+def backfill_dates() -> None:
+    """Set Paper.published from arXiv v1 dates and sort every leaf newest first."""
+    from automation import badges, render, taxonomy
+
+    leaves = taxonomy.load().leaf_keys()
+    all_papers = {k: storage.load(k) for k in leaves}
+    ids = [p.id for ps in all_papers.values() for p in ps if not p.published]
+    dates = fetch_published(ids)
+    filled = 0
+    for key, papers in all_papers.items():
+        for p in papers:
+            if not p.published and p.id in dates:
+                p.published = dates[p.id]
+                filled += 1
+        storage.save(key, storage.newest_first(papers))
+    logger.info("published dates filled: %d; all leaves re-sorted newest first", filled)
+    render.main()
+    badges.refresh()
+
+
 def _classify_input(paper: Paper, abstracts: dict[str, str]) -> dict[str, str]:
     abstract = abstracts.get(paper.id, "")
     if not abstract:
@@ -281,13 +321,14 @@ def run_full(model: str = classify.MODEL) -> Path:
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(message)s")
     parser = argparse.ArgumentParser(description="Legacy corpus migration tooling")
-    parser.add_argument("command", choices=["calibrate", "run"])
+    parser.add_argument("command", choices=["calibrate", "run", "dates"])
     args = parser.parse_args()
     if args.command == "calibrate":
-        path = run_calibration()
+        print(f"review sheet written: {run_calibration()}")
+    elif args.command == "run":
+        print(f"review sheet written: {run_full()}")
     else:
-        path = run_full()
-    print(f"review sheet written: {path}")
+        backfill_dates()
 
 
 if __name__ == "__main__":

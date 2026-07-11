@@ -13,6 +13,7 @@
   - Fei Huang
   venue: arXiv 2025
   category: world_apps
+  published: '2025-10-28'
   tags:
   - benchmark
   summary: OSWorld-MCP is a benchmark evaluating computer-use agents on MCP tool invocation combined with GUI operation in

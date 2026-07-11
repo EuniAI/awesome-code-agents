@@ -7,6 +7,7 @@
   - Michael R. Lyu
   venue: arXiv 2025/09
   category: game
+  published: '2025-09-30'
   summary: UniGen is a multi-agent framework that generates production-ready 3D game projects (C# scripts, engine bindings,
     scene construction) for Unity/Unreal from natural language requirements. It automates zero-code game development including
     debugging via conversational interaction.
@@ -22,6 +23,7 @@
   - Eray Tüzün
   venue: ASE 2025
   category: game
+  published: '2025-03-25'
   tags:
   - benchmark
   summary: BugCraft is an end-to-end LLM-driven framework that reproduces Minecraft crash bugs from user bug reports, using

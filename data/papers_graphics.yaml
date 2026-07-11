@@ -10,6 +10,7 @@
   - Raymond Chi-Wing Wong
   venue: arXiv 2026/05
   category: graphics
+  published: '2026-05-28'
   tags:
   - benchmark
   summary: PMVis is a progressive multi-turn text-to-visualization paradigm with an accompanying benchmark (PMVisBench) and
@@ -19,80 +20,31 @@
     paper: https://arxiv.org/abs/2605.29692
     github: https://github.com/wxxv/PMVis
     website: ''
-- id: https://openaccess.thecvf.com/content/CVPR2025/html/Wu_Chat2SVG_Vector_Graphics_Generation_with_Large_Language_Models_and_Image_CVPR_2025_paper.html
-  title: 'Chat2SVG: Vector Graphics Generation with Large Language Models and Image Diffusion Models'
+- id: '2510.17932'
+  title: 'From Charts to Code: A Hierarchical Benchmark for Multimodal Models'
   authors:
-  - Ronghuan Wu
-  - Wanchao Su
-  - Jing Liao
-  venue: CVPR 2025
-  category: graphics
-  summary: Chat2SVG combines LLMs and image diffusion models to generate vector graphics (SVG) from natural language descriptions.
-    The pipeline produces editable SVG code as the final deliverable.
-  links:
-    paper: https://openaccess.thecvf.com/content/CVPR2025/html/Wu_Chat2SVG_Vector_Graphics_Generation_with_Large_Language_Models_and_Image_CVPR_2025_paper.html
-    github: https://github.com/kingnobro/chat2svg
-    website: https://chat2svg.github.io/
-- id: '2405.07065'
-  title: 'LogoMotion: Visually-Grounded Code Synthesis for Creating and Editing Animation'
-  authors:
-  - Vivian Liu
-  - Rubaiat Habib Kazi
-  - Li-Yi Wei
-  - Matthew Fisher
-  - Timothy Langlois
-  - Seth Walker
-  - Lydia Chilton
-  venue: CHI 2025
-  category: graphics
-  summary: LogoMotion is an AI system that synthesizes and repairs animation code for logos through visually-grounded code
-    synthesis, and provides code-connected editing widgets for novice users to refine motion, grouping, and timing.
-  links:
-    paper: https://arxiv.org/abs/2405.07065
-    github: ''
-    website: ''
-- id: '2501.18623'
-  title: 'VLMaterial: Procedural Material Generation with Large Vision-Language Models'
-  authors:
-  - Beichen Li
-  - Rundi Wu
-  - Armando Solar-Lezama
-  - Changxi Zheng
-  - Liang Shi
-  - Bernd Bickel
-  - Wojciech Matusik
-  venue: ICLR 2025
-  category: graphics
-  summary: VLMaterial fine-tunes a vision-language model to generate procedural material node graphs as Python programs from
-    input images, using an open-source dataset and LLM-based program augmentation. It outperforms prior methods on synthetic
-    and real material appearance reconstruction.
-  links:
-    paper: https://arxiv.org/abs/2501.18623
-    github: https://github.com/mit-gfx/VLMaterial
-    website: ''
-- id: '2405.07990'
-  title: 'Plot2Code: A Comprehensive Benchmark for Evaluating Multi-modal Large Language Models in Code Generation from Scientific
-    Plots'
-  authors:
-  - Chengyue Wu
-  - Yixiao Ge
-  - Qiushan Guo
-  - Jiahao Wang
-  - Zhixuan Liang
-  - Zeyu Lu
-  - Ying Shan
-  - Ping Luo
+  - Jiahao Tang
+  - Henry Hengyuan Zhao
+  - Lijian Wu
+  - Yifei Tao
+  - Dongxing Mao
+  - Yang Wan
+  - Jingru Tan
+  - Min Zeng
+  - Min Li
+  - Alex Jinpeng Wang
   venue: arXiv 2025
   category: graphics
+  published: '2025-10-20'
   tags:
   - benchmark
-  summary: Plot2Code is a benchmark evaluating multimodal LLMs on generating executable matplotlib code from scientific plot
-    images, using 132 curated plots with source code and instructions. It introduces automatic metrics including code pass
-    rate and GPT-4V-based visual fidelity judgment.
+  summary: Chart2Code is a hierarchical benchmark evaluating multimodal models on chart reproduction, editing, and long-table-to-chart
+    code generation across 2,023 tasks and 22 chart types. It reveals substantial gaps even in state-of-the-art models like
+    GPT-5 on code correctness and visual fidelity.
   links:
-    paper: https://arxiv.org/abs/2405.07990
-    github: https://github.com/TencentARC/Plot2Code
-    website: https://huggingface.co/datasets/TencentARC/Plot2Code
+    paper: https://arxiv.org/abs/2510.17932
+    github: ''
+    website: ''
 - id: '2510.03341'
   title: 'OpusAnimation: Code-Based Dynamic Chart Generation'
   authors:
@@ -110,6 +62,7 @@
   - Wenbo Zhu
   venue: arXiv 2025
   category: graphics
+  published: '2025-10-02'
   tags:
   - benchmark
   - training-data
@@ -120,27 +73,80 @@
     paper: https://arxiv.org/abs/2510.03341
     github: ''
     website: ''
-- id: '2510.17932'
-  title: 'From Charts to Code: A Hierarchical Benchmark for Multimodal Models'
+- id: '2501.18623'
+  title: 'VLMaterial: Procedural Material Generation with Large Vision-Language Models'
   authors:
-  - Jiahao Tang
-  - Henry Hengyuan Zhao
-  - Lijian Wu
-  - Yifei Tao
-  - Dongxing Mao
-  - Yang Wan
-  - Jingru Tan
-  - Min Zeng
-  - Min Li
-  - Alex Jinpeng Wang
+  - Beichen Li
+  - Rundi Wu
+  - Armando Solar-Lezama
+  - Changxi Zheng
+  - Liang Shi
+  - Bernd Bickel
+  - Wojciech Matusik
+  venue: ICLR 2025
+  category: graphics
+  published: '2025-01-27'
+  summary: VLMaterial fine-tunes a vision-language model to generate procedural material node graphs as Python programs from
+    input images, using an open-source dataset and LLM-based program augmentation. It outperforms prior methods on synthetic
+    and real material appearance reconstruction.
+  links:
+    paper: https://arxiv.org/abs/2501.18623
+    github: https://github.com/mit-gfx/VLMaterial
+    website: ''
+- id: https://openaccess.thecvf.com/content/CVPR2025/html/Wu_Chat2SVG_Vector_Graphics_Generation_with_Large_Language_Models_and_Image_CVPR_2025_paper.html
+  title: 'Chat2SVG: Vector Graphics Generation with Large Language Models and Image Diffusion Models'
+  authors:
+  - Ronghuan Wu
+  - Wanchao Su
+  - Jing Liao
+  venue: CVPR 2025
+  category: graphics
+  summary: Chat2SVG combines LLMs and image diffusion models to generate vector graphics (SVG) from natural language descriptions.
+    The pipeline produces editable SVG code as the final deliverable.
+  links:
+    paper: https://openaccess.thecvf.com/content/CVPR2025/html/Wu_Chat2SVG_Vector_Graphics_Generation_with_Large_Language_Models_and_Image_CVPR_2025_paper.html
+    github: https://github.com/kingnobro/chat2svg
+    website: https://chat2svg.github.io/
+- id: '2405.07990'
+  title: 'Plot2Code: A Comprehensive Benchmark for Evaluating Multi-modal Large Language Models in Code Generation from Scientific
+    Plots'
+  authors:
+  - Chengyue Wu
+  - Yixiao Ge
+  - Qiushan Guo
+  - Jiahao Wang
+  - Zhixuan Liang
+  - Zeyu Lu
+  - Ying Shan
+  - Ping Luo
   venue: arXiv 2025
   category: graphics
+  published: '2024-05-13'
   tags:
   - benchmark
-  summary: Chart2Code is a hierarchical benchmark evaluating multimodal models on chart reproduction, editing, and long-table-to-chart
-    code generation across 2,023 tasks and 22 chart types. It reveals substantial gaps even in state-of-the-art models like
-    GPT-5 on code correctness and visual fidelity.
+  summary: Plot2Code is a benchmark evaluating multimodal LLMs on generating executable matplotlib code from scientific plot
+    images, using 132 curated plots with source code and instructions. It introduces automatic metrics including code pass
+    rate and GPT-4V-based visual fidelity judgment.
   links:
-    paper: https://arxiv.org/abs/2510.17932
+    paper: https://arxiv.org/abs/2405.07990
+    github: https://github.com/TencentARC/Plot2Code
+    website: https://huggingface.co/datasets/TencentARC/Plot2Code
+- id: '2405.07065'
+  title: 'LogoMotion: Visually-Grounded Code Synthesis for Creating and Editing Animation'
+  authors:
+  - Vivian Liu
+  - Rubaiat Habib Kazi
+  - Li-Yi Wei
+  - Matthew Fisher
+  - Timothy Langlois
+  - Seth Walker
+  - Lydia Chilton
+  venue: CHI 2025
+  category: graphics
+  published: '2024-05-11'
+  summary: LogoMotion is an AI system that synthesizes and repairs animation code for logos through visually-grounded code
+    synthesis, and provides code-connected editing widgets for novice users to refine motion, grouping, and timing.
+  links:
+    paper: https://arxiv.org/abs/2405.07065
     github: ''
     website: ''

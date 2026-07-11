@@ -33,6 +33,7 @@
   - Nachiappan Nagappan
   venue: arXiv 2026/05
   category: software_review
+  published: '2026-05-28'
   tags:
   - empirical
   summary: Describes RADAR, Meta's risk-stratified automated code review system combining static heuristics, an ML-based Diff
@@ -40,6 +41,25 @@
     rates and faster review turnaround.
   links:
     paper: https://arxiv.org/abs/2605.30208
+    github: ''
+    website: ''
+- id: '2511.00517'
+  title: Issue-Oriented Agent-Based Framework for Automated Review Comment Generation
+  authors:
+  - Shuochuan Li
+  - Dong Wang
+  - Patanamon Thongtanunam
+  - Zan Wang
+  - Jiuqiao Yu
+  - Junjie Chen
+  venue: arXiv 2025
+  category: software_review
+  published: '2025-11-01'
+  summary: Proposes RevAgent, an agent-based framework decomposing review comment generation into issue-specific commentator
+    agents, a critic agent for selection, and fine-tuning for specialization. Outperforms prior PLM/LLM baselines on BLEU,
+    ROUGE-L, METEOR, and SBERT for review comment generation.
+  links:
+    paper: https://arxiv.org/abs/2511.00517
     github: ''
     website: ''
 - id: '2509.01494'
@@ -57,6 +77,7 @@
   - Shikun Zhang
   venue: arXiv 2025
   category: software_review
+  published: '2025-09-01'
   tags:
   - benchmark
   summary: Introduces SWRBench, a PR-centric benchmark of 1000 GitHub pull requests with full project context and an LLM-based
@@ -66,23 +87,25 @@
     paper: https://arxiv.org/abs/2509.01494
     github: ''
     website: ''
-- id: '2511.00517'
-  title: Issue-Oriented Agent-Based Framework for Automated Review Comment Generation
+- id: '2504.13472'
+  title: 'CodeVisionary: An Agent-based Framework for Evaluating Large Language Models in Code Generation'
   authors:
-  - Shuochuan Li
-  - Dong Wang
-  - Patanamon Thongtanunam
-  - Zan Wang
-  - Jiuqiao Yu
-  - Junjie Chen
-  venue: arXiv 2025
+  - Xinchen Wang
+  - Pengfei Gao
+  - Chao Peng
+  - Ruida Hu
+  - Cuiyun Gao
+  venue: ASE 2025
   category: software_review
-  summary: Proposes RevAgent, an agent-based framework decomposing review comment generation into issue-specific commentator
-    agents, a critic agent for selection, and fine-tuning for specialization. Outperforms prior PLM/LLM baselines on BLEU,
-    ROUGE-L, METEOR, and SBERT for review comment generation.
+  published: '2025-04-18'
+  tags:
+  - benchmark
+  summary: CodeVisionary is an agent-based framework that evaluates the quality of LLM-generated code through requirement-guided
+    context distillation and fine-grained scoring, producing explainable evaluation reports. It introduces a benchmark of
+    363 complex coding samples across 37 scenarios and 23 languages.
   links:
-    paper: https://arxiv.org/abs/2511.00517
-    github: ''
+    paper: https://arxiv.org/abs/2504.13472
+    github: https://github.com/Eshe0922/CodeVisionary
     website: ''
 - id: ''
   title: Armchair
@@ -158,6 +181,7 @@
   - Neel Sundaresan
   venue: FSE 2022
   category: software_review
+  published: '2022-03-17'
   tags:
   - model
   - benchmark
@@ -185,23 +209,4 @@
   links:
     paper: https://www.sciencedirect.com/science/article/abs/pii/S0164121221001060
     github: ''
-    website: ''
-- id: '2504.13472'
-  title: 'CodeVisionary: An Agent-based Framework for Evaluating Large Language Models in Code Generation'
-  authors:
-  - Xinchen Wang
-  - Pengfei Gao
-  - Chao Peng
-  - Ruida Hu
-  - Cuiyun Gao
-  venue: ASE 2025
-  category: software_review
-  tags:
-  - benchmark
-  summary: CodeVisionary is an agent-based framework that evaluates the quality of LLM-generated code through requirement-guided
-    context distillation and fine-grained scoring, producing explainable evaluation reports. It introduces a benchmark of
-    363 complex coding samples across 37 scenarios and 23 languages.
-  links:
-    paper: https://arxiv.org/abs/2504.13472
-    github: https://github.com/Eshe0922/CodeVisionary
     website: ''

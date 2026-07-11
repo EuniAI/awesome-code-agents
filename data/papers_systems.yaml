@@ -1,19 +1,3 @@
-- id: '2510.08803'
-  title: Man-Made Heuristics Are Dead. Long Live Code Generators!
-  authors:
-  - Rohit Dwivedula
-  - Divyanshu Saxena
-  - Aditya Akella
-  - Swarat Chaudhuri
-  - Daehyeok Kim
-  venue: arXiv 2025/10
-  category: systems
-  summary: PolicySmith uses LLM-driven code generation to automatically synthesize instance-optimal systems policies for web
-    caching and congestion control, producing heuristics that outperform manual baselines and integrate into the Linux kernel.
-  links:
-    paper: https://arxiv.org/abs/2510.08803
-    github: ''
-    website: ''
 - id: '2605.31463'
   title: 'PithTrain: A Compact and Agent-Native MoE Training System'
   authors:
@@ -28,6 +12,7 @@
   - Tianqi Chen
   venue: arXiv 2026/05
   category: systems
+  published: '2026-05-29'
   tags:
   - benchmark
   summary: PithTrain is a compact MoE training framework designed with agent-native principles to improve the efficiency of
@@ -37,27 +22,23 @@
     paper: https://arxiv.org/abs/2605.31463
     github: ''
     website: ''
-- id: '2502.10517'
-  title: 'KernelBench: Can LLMs Write Efficient GPU Kernels?'
+- id: '2510.08803'
+  title: Man-Made Heuristics Are Dead. Long Live Code Generators!
   authors:
-  - Anne Ouyang
-  - Simon Guo
-  - Simran Arora
-  - Alex L. Zhang
-  - William Hu
-  - Christopher Ré
-  - Azalia Mirhoseini
-  venue: ICML 2025
+  - Rohit Dwivedula
+  - Divyanshu Saxena
+  - Aditya Akella
+  - Swarat Chaudhuri
+  - Daehyeok Kim
+  venue: arXiv 2025/10
   category: systems
-  tags:
-  - benchmark
-  summary: KernelBench is a benchmark evaluating LLMs' ability to generate fast and correct GPU kernels for 250 PyTorch ML
-    workloads, introducing a fast_p metric for correctness plus speedup. It finds frontier models still fall short of matching
-    baseline PyTorch performance in most cases.
+  published: '2025-10-09'
+  summary: PolicySmith uses LLM-driven code generation to automatically synthesize instance-optimal systems policies for web
+    caching and congestion control, producing heuristics that outperform manual baselines and integrate into the Linux kernel.
   links:
-    paper: https://arxiv.org/abs/2502.10517
-    github: https://github.com/ScalingIntelligence/KernelBench
-    website: https://scalingintelligence.stanford.edu/blogs/kernelbench/
+    paper: https://arxiv.org/abs/2510.08803
+    github: ''
+    website: ''
 - id: '2504.20412'
   title: 'CrashFixer: A crash resolution agent for the Linux kernel'
   authors:
@@ -73,6 +54,7 @@
   - Baishakhi Ray
   venue: arXiv 2025/04
   category: systems
+  published: '2025-04-29'
   tags:
   - benchmark
   summary: CrashFixer builds kAgent, a workflow-based agent that diagnoses and repairs Linux kernel crashes discovered by
@@ -82,3 +64,25 @@
     paper: https://arxiv.org/abs/2504.20412
     github: ''
     website: ''
+- id: '2502.10517'
+  title: 'KernelBench: Can LLMs Write Efficient GPU Kernels?'
+  authors:
+  - Anne Ouyang
+  - Simon Guo
+  - Simran Arora
+  - Alex L. Zhang
+  - William Hu
+  - Christopher Ré
+  - Azalia Mirhoseini
+  venue: ICML 2025
+  category: systems
+  published: '2025-02-14'
+  tags:
+  - benchmark
+  summary: KernelBench is a benchmark evaluating LLMs' ability to generate fast and correct GPU kernels for 250 PyTorch ML
+    workloads, introducing a fast_p metric for correctness plus speedup. It finds frontier models still fall short of matching
+    baseline PyTorch performance in most cases.
+  links:
+    paper: https://arxiv.org/abs/2502.10517
+    github: https://github.com/ScalingIntelligence/KernelBench
+    website: https://scalingintelligence.stanford.edu/blogs/kernelbench/
