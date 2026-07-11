@@ -11,7 +11,7 @@ on:
       days_back:
         description: "Crawl window in days"
         required: false
-        default: "2"
+        default: "5"
 
 permissions:
   contents: write
@@ -38,7 +38,7 @@ jobs:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           GH_TOKEN: ${{ github.token }}
         run: |
-          python -m automation.pipeline crawl --days-back "${{ github.event.inputs.days_back || 2 }}"
+          python -m automation.pipeline crawl --days-back "${{ github.event.inputs.days_back || 5 }}"
 
       - name: Commit pipeline state
         run: |
