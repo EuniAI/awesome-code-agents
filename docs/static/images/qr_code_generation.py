@@ -9,7 +9,9 @@ import qrcode
 url = "https://github.com/EuniAI/awesome-code-agents"
 
 # Path to your icon (make sure the file exists)
-icon_path = "docs/static/images/icon.jpg"
+from pathlib import Path
+_HERE = Path(__file__).resolve().parent
+icon_path = str(_HERE / "icon.jpg")
 
 # Generate QR Code
 qr = qrcode.QRCode(
@@ -61,7 +63,7 @@ bg.paste(icon, (pad, pad), icon)
 qr_img.paste(bg, ((qr_w - bg_size) // 2, (qr_h - bg_size) // 2))
 
 # Save output
-output_path = "docs/static/images/qr_code.png"
+output_path = str(_HERE / "qr_code.png")
 qr_img.save(output_path)
 
 print(f"✅ Saved sleek QR code: {output_path}")

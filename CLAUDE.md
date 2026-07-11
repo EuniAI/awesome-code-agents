@@ -48,7 +48,7 @@ feature disposition: records/legacy-audit.md.
   a missing day = a coverage gap) plus the daily cursor.
 - `automation/data/backfill.json`: historical-sweep cursor (weekend/idle slices).
 - `automation/data/feedback.json`: owner review reasons queued for LLM distillation.
-- `automation/data/ack_repos.yaml`: acknowledgement badges config (scripts/generate_ack_badges.py).
+- `automation/data/ack_repos.yaml`: acknowledgement badges config (docs/static/images/generate_ack_badges.py).
 - `README.md`: generated zones between NAV/PAPERS markers show papers from the
   last 12 months; `automation/PAPERS.md` (fully generated) is the complete collection
   including the recent ones. Never
