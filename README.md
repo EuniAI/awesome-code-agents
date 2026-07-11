@@ -51,7 +51,7 @@
 <!-- START PAPERS SUMMARY -->
 🔥 **We are actively tracking the frontier research of code agents.**<br>
 🧹 *The list below shows the last twelve months; the [full paper list](automation/PAPERS.md) holds the complete collection.*<br>
-📚 *Currently collected:* **`465` papers.** *(Last update: 2026-07-11)*
+📚 *Currently collected:* **`468` papers.** *(Last update: 2026-07-11)*
 <!-- END PAPERS SUMMARY -->
 
 <!-- NAV:BEGIN -->
@@ -104,6 +104,14 @@
 ## 📊 Surveys & Empirical Studies
 
 > Research that studies and surveys code agents themselves.
+
+- **3100 Opinions on Code Review in an AI World: Building Causal Theory from Practitioner Discourse.**  
+  _Shyam Agarwal, Courtney Miller, Christian Kästner, Bogdan Vasilescu._ arXiv 2026/07.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.07980) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge)
+
+- **From Solvers to Research: Large Language Model-Driven Formal Mathematics at the Research Frontier.**  
+  _Eric Jiang, Xiao Liang, Yikai Zhang, Yingjia Wan, Mengting Li, Haikang Deng, Alexander K. Taylor, Justin Baker, Rushil Raghavan, Junyi Zhang, et al._ arXiv 2026/07.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.07779) ![Position Paper](https://img.shields.io/badge/Position_Paper-9B59B6?style=for-the-badge)
 
 - **How Coding Agents Fail Their Users: A Large-Scale Analysis of Developer-Agent Misalignment in 20,574 Real-World Sessions.**  
   _Ningzhi Tang, Chaoran Chen, Gelei Xu, Yiyu Shi, Yu Huang, Collin McMillan, Tao Dong, Toby Jia-Jun Li._ arXiv 2026/05.  
@@ -214,6 +222,10 @@
 #### 🐛 Debugging & Issue Resolution
 
 > Reproducing, locating, and fixing reported bugs.
+
+- **AgentLens: Production-Assessed Trajectory Reviews for Coding Agent Evaluation.**  
+  _Andrey Podivilov, Vadim Lomshakov, Sergey Savin, Matvei Startsev, Roman Pozharskiy, Maksim Parshin, Sergey Nikolenko._ arXiv 2026/07.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.06624) [![GitHub Stars](https://img.shields.io/github/stars/agent-lens/agent-lens-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/agent-lens/agent-lens-bench) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
 - **Dockerless: Environment-Free Program Verifier for Coding Agents.**  
   _Wenhao Zeng, Yuling Shi, Xiaodong Gu, Chao Hu, Chaofan Wang, Yuhao Cui, Hongting Zhou, Mengnan Qi, Jianqiao Wangni, Zhaojian Yu, et al._ arXiv 2026/06.  

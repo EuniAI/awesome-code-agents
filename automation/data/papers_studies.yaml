@@ -1,3 +1,56 @@
+- id: '2607.07980'
+  title: '3100 Opinions on Code Review in an AI World: Building Causal Theory from Practitioner Discourse'
+  authors:
+  - Shyam Agarwal
+  - Courtney Miller
+  - Christian Kästner
+  - Bogdan Vasilescu
+  venue: arXiv 2026/07
+  category: studies
+  published: '2026-07-08'
+  tags:
+  - empirical
+  summary: An empirical study analyzing GitHub trends and 3,100 coded practitioner discourse documents to build a causal theory
+    of how coding agents affect code review, identifying human review process as the control point. It reframes 'AI is changing
+    code review' into falsifiable, mechanism-based propositions.
+  links:
+    paper: https://arxiv.org/abs/2607.07980
+    github: ''
+    website: ''
+- id: '2607.07779'
+  title: 'From Solvers to Research: Large Language Model-Driven Formal Mathematics at the Research Frontier'
+  authors:
+  - Eric Jiang
+  - Xiao Liang
+  - Yikai Zhang
+  - Yingjia Wan
+  - Mengting Li
+  - Haikang Deng
+  - Alexander K. Taylor
+  - Justin Baker
+  - Rushil Raghavan
+  - Junyi Zhang
+  - Ying Nian Wu
+  - Andrea L. Bertozzi
+  - Kai-Wei Chang
+  - Raghu Meka
+  - Matthew Sottile
+  - Nanyun Peng
+  - Amit Sahai
+  - Terence Tao
+  - Wei Wang
+  venue: arXiv 2026/07
+  category: studies
+  published: '2026-07-08'
+  tags:
+  - position
+  summary: A position paper arguing AI4Math systems must shift from problem-solving theorem provers to research agents tackling
+    open-ended frontier mathematics, surveying datasets, autoformalization, and proof synthesis and outlining a roadmap of
+    core limitations.
+  links:
+    paper: https://arxiv.org/abs/2607.07779
+    github: ''
+    website: ''
 - id: '2605.29442'
   title: 'How Coding Agents Fail Their Users: A Large-Scale Analysis of Developer-Agent Misalignment in 20,574 Real-World
     Sessions'

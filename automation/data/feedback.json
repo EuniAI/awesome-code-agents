@@ -5,5 +5,13 @@
   "title": "Prismata: Confining Cross-Site Prompt Injection in Web Agents",
   "proposed": "world_browser",
   "reason": "web agent acts via GUI primitives, not code as action"
+ },
+ {
+  "action": "edit",
+  "id": "2607.06624",
+  "title": "AgentLens: Production-Assessed Trajectory Reviews for Coding Agent Evaluation",
+  "proposed": "studies",
+  "final": "software_debugging",
+  "reason": ""
  }
 ]

@@ -1,3 +1,26 @@
+- id: '2607.06624'
+  title: 'AgentLens: Production-Assessed Trajectory Reviews for Coding Agent Evaluation'
+  authors:
+  - Andrey Podivilov
+  - Vadim Lomshakov
+  - Sergey Savin
+  - Matvei Startsev
+  - Roman Pozharskiy
+  - Maksim Parshin
+  - Sergey Nikolenko
+  venue: arXiv 2026/07
+  category: software_debugging
+  published: '2026-07-07'
+  tags:
+  - empirical
+  - benchmark
+  summary: AgentLens is a production-assessed benchmark that evaluates whole coding-agent trajectories—instruction following,
+    tool use, self-verification, and recovery—combining formal checks with LLM-written trajectory reviews rather than pass/fail
+    scores.
+  links:
+    paper: https://arxiv.org/abs/2607.06624
+    github: https://github.com/agent-lens/agent-lens-bench
+    website: ''
 - id: '2606.28436'
   title: 'Dockerless: Environment-Free Program Verifier for Coding Agents'
   authors:
