@@ -18,6 +18,50 @@
     paper: https://arxiv.org/abs/2606.00530
     github: ''
     website: ''
+- id: '2605.22175'
+  title: 'SWE-Mutation: Can LLMs Generate Reliable Test Suites in Software Engineering?'
+  authors:
+  - Yuxuan Sun
+  - Yuze Zhao
+  - Yufeng Wang
+  - Yao Du
+  - Zhiyuan Ma
+  - Jinbo Wang
+  - Mengdi Zhang
+  - Kai Zhang
+  - Zhenya Huang
+  venue: arXiv 2026/05
+  category: software_testing
+  published: '2026-05-21'
+  tags:
+  - benchmark
+  summary: SWE-Mutation is a benchmark evaluating whether LLMs can generate reliable, discriminative test suites by introducing
+    mutated solutions designed to fool weak tests. Experiments show even strong LLMs achieve low verification and detection
+    rates, exposing deficiencies in generated test quality.
+  links:
+    paper: https://arxiv.org/abs/2605.22175
+    github: ''
+    website: ''
+- id: '2602.11724'
+  title: 'WebTestPilot: Agentic End-to-End Web Testing against Natural Language Specification by Inferring Oracles with Symbolized
+    GUI Elements'
+  authors:
+  - Xiwen Teoh
+  - Yun Lin
+  - Duc-Minh Nguyen
+  - Ruofei Ren
+  - Wenjie Zhang
+  - Jin Song Dong
+  venue: arXiv 2026/02
+  category: software_testing
+  published: '2026-02-12'
+  summary: WebTestPilot is an LLM agent for end-to-end web testing that symbolizes GUI elements and infers implicit pre/post-condition
+    oracles from natural language specifications to distinguish real bugs from hallucinations. It achieves 99% task completion
+    and high precision/recall on a new benchmark of bug-injected web apps.
+  links:
+    paper: https://arxiv.org/abs/2602.11724
+    github: ''
+    website: ''
 - id: '2511.00202'
   title: 'Position: Vibe Coding Needs Vibe Reasoning: Improving Vibe Coding with Formal Verification'
   authors:

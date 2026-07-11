@@ -1,3 +1,46 @@
+- id: '2606.01057'
+  title: '3DCodeBench: Benchmarking Agentic Procedural 3D Modeling Via Code'
+  authors:
+  - Yipeng Gao
+  - Lei Shu
+  - Genzhi Ye
+  - Xi Xiong
+  - Ameesh Makadia
+  - Meiqi Guo
+  - Laurent Itti
+  - Jindong Chen
+  venue: arXiv 2026/05
+  category: cad
+  published: '2026-05-31'
+  tags:
+  - benchmark
+  summary: 3DCodeBench evaluates vision-language models as procedural 3D modelers, translating text/image prompts into code
+    for 3D modeling software, paired with a human-preference ranking platform 3DCodeArena. It finds API mismatches and geometric
+    disconnection as common failure modes despite gains from test-time scaling.
+  links:
+    paper: https://arxiv.org/abs/2606.01057
+    github: ''
+    website: ''
+- id: '2605.19587'
+  title: 'SceneCode: Executable World Programs for Editable Indoor Scenes with Articulated Objects'
+  authors:
+  - Puyi Wang
+  - Yuhao Wang
+  - Linjie Li
+  - Zhengyuan Yang
+  - Kevin Qinghong Lin
+  - Yangguang Li
+  - Yu Cheng
+  venue: arXiv 2026/05
+  category: cad
+  published: '2026-05-19'
+  summary: SceneCode compiles natural language prompts into executable Blender Python programs that generate physically interactable,
+    articulated indoor scenes for embodied AI and robotics. The framework uses a planner-designer-critic loop and execution-guided
+    repair to produce simulation-ready 3D assets.
+  links:
+    paper: https://arxiv.org/abs/2605.19587
+    github: ''
+    website: ''
 - id: '2605.18451'
   title: 'Code-as-Room: Generating 3D Rooms from Top-Down View Images via Agentic Code Synthesis'
   authors:

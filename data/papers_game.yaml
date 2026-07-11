@@ -1,3 +1,30 @@
+- id: '2604.18394'
+  title: 'OpenGame: Open Agentic Coding for Games'
+  authors:
+  - Yilei Jiang
+  - Jinyuan Hu
+  - Qianyin Xiao
+  - Yaozhi Zheng
+  - Ruize Ma
+  - Kaituo Feng
+  - Jiaming Han
+  - Tianshuo Peng
+  - Kaixuan Fan
+  - Manyuan Zhang
+  - Xiangyu Yue
+  venue: arXiv 2026/04
+  category: game
+  published: '2026-04-20'
+  tags:
+  - benchmark
+  - model
+  summary: OpenGame is an agentic framework for end-to-end web game creation using reusable 'Game Skills' and GameCoder-27B,
+    a specialized code LLM trained via continual pretraining and execution-grounded RL. It introduces OpenGame-Bench to evaluate
+    agentic game generation via headless browser execution and VLM judging.
+  links:
+    paper: https://arxiv.org/abs/2604.18394
+    github: ''
+    website: ''
 - id: '2509.26161'
   title: '90% Faster, 100% Code-Free: MLLM-Driven Zero-Code 3D Game Development'
   authors:

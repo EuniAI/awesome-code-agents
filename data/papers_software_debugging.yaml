@@ -1,3 +1,140 @@
+- id: '2606.28436'
+  title: 'Dockerless: Environment-Free Program Verifier for Coding Agents'
+  authors:
+  - Wenhao Zeng
+  - Yuling Shi
+  - Xiaodong Gu
+  - Chao Hu
+  - Chaofan Wang
+  - Yuhao Cui
+  - Hongting Zhou
+  - Mengnan Qi
+  - Jianqiao Wangni
+  - Zhaojian Yu
+  - Shuzheng Gao
+  - Kai Cai
+  - Shilin He
+  venue: arXiv 2026/06
+  category: software_debugging
+  published: '2026-06-26'
+  tags:
+  - training-data
+  summary: Dockerless is an environment-free agentic patch verifier that judges code-patch correctness via repository exploration
+    instead of test execution, enabling environment-free SFT filtering and RL rewards. It matches environment-based training
+    on SWE-bench Verified, Multilingual, and Pro.
+  links:
+    paper: https://arxiv.org/abs/2606.28436
+    github: ''
+    website: ''
+- id: '2606.14066'
+  title: 'FastContext: Training Efficient Repository Explorer for Coding Agents'
+  authors:
+  - Shaoqiu Zhang
+  - Maoquan Wang
+  - Yuling Shi
+  - Yuhang Wang
+  - Xiaodong Gu
+  - Yongqiang Yao
+  - Tori Gong
+  - Sheng Chen
+  - Rao Fu
+  - Anisha Agarwal
+  - Spandan Grag
+  - Gabriel Ryan
+  - Colin Merkel
+  - Yufan Huang
+  - Shengyu Fu
+  venue: arXiv 2026/06
+  category: software_debugging
+  published: '2026-06-12'
+  tags:
+  - model
+  summary: FastContext is a dedicated repository-exploration subagent with specialized 4B-30B models that separate exploration
+    from solving in coding agents. Integrating it into Mini-SWE-Agent improves resolution rates on SWE-bench and reduces token
+    consumption significantly.
+  links:
+    paper: https://arxiv.org/abs/2606.14066
+    github: ''
+    website: ''
+- id: '2606.12344'
+  title: 'Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks'
+  authors:
+  - Mengyu Zheng
+  - Kai Han
+  - Boxun Li
+  - Haiyang Xu
+  - Yuchuan Tian
+  - Wei He
+  - Hang Zhou
+  - Jianyuan Guo
+  - Hailin Hu
+  - Lin Ma
+  - Chao Xu
+  - Guohao Dai
+  - Lixue Xia
+  - Yunchao Wei
+  - Yunhe Wang
+  - Yu Wang
+  venue: arXiv 2026/06
+  category: software_debugging
+  published: '2026-06-10'
+  tags:
+  - benchmark
+  summary: Claw-SWE-Bench is a multilingual SWE-bench-style benchmark and adapter protocol for fairly comparing OpenClaw-style
+    general-purpose agent harnesses on GitHub issue-resolution tasks across 350 instances. It shows harness/adapter design
+    and model choice both substantially affect Pass@1 and cost.
+  links:
+    paper: https://arxiv.org/abs/2606.12344
+    github: ''
+    website: ''
+- id: '2606.07297'
+  title: 'SWE-Explore: Benchmarking How Coding Agents Explore Repositories'
+  authors:
+  - Shaoqiu Zhang
+  - Yuhang Wang
+  - Jialiang Liang
+  - Yuling Shi
+  - Wenhao Zeng
+  - Maoquan Wang
+  - Shilin He
+  - Ningyuan Xu
+  - Siyu Ye
+  - Kai Cai
+  - Xiaodong Gu
+  venue: arXiv 2026/06
+  category: software_debugging
+  published: '2026-06-05'
+  tags:
+  - benchmark
+  summary: SWE-Explore isolates and benchmarks repository exploration capability of coding agents—coverage, ranking, and efficiency
+    of code regions retrieved for issues—using ground truth distilled from successful bug-fixing trajectories across 848 issues.
+    It finds these exploration metrics strongly predict downstream repair success.
+  links:
+    paper: https://arxiv.org/abs/2606.07297
+    github: ''
+    website: ''
+- id: '2605.12925'
+  title: 'AgentLens: Revealing The Lucky Pass Problem in SWE-Agent Evaluation'
+  authors:
+  - Priyam Sahoo
+  - Gaurav Mittal
+  - Xiaomin Li
+  - Shengjie Ma
+  - Benjamin Steenhoek
+  - Pingping Lin
+  - Yu Hu
+  venue: arXiv 2026/05
+  category: software_debugging
+  published: '2026-05-13'
+  tags:
+  - benchmark
+  summary: AgentLens introduces process-level evaluation of SWE-agent trajectories on SWE-bench Verified, revealing that many
+    passing patches are 'Lucky Passes' from chaotic trial-and-error rather than principled fixes. It releases AgentLens-Bench,
+    an annotated trajectory dataset with quality tiers for issue-resolution agents.
+  links:
+    paper: https://arxiv.org/abs/2605.12925
+    github: ''
+    website: ''
 - id: '2604.24212'
   title: Empowering Autonomous Debugging Agents with Efficient Dynamic Analysis
   authors:
@@ -14,6 +151,294 @@
     to existing SWE agents.
   links:
     paper: https://arxiv.org/abs/2604.24212
+    github: ''
+    website: ''
+- id: '2604.14624'
+  title: 'Asking What Matters: Reward-Driven Clarification for Software Engineering Tasks'
+  authors:
+  - Sanidhya Vijayvargiya
+  - Vijay Viswanathan
+  - Graham Neubig
+  venue: arXiv 2026/04
+  category: software_debugging
+  published: '2026-04-16'
+  tags:
+  - model
+  summary: CLARITI is an 8B-parameter clarification module trained with reward-driven reinforcement learning to ask targeted
+    clarifying questions on underspecified software issues. It matches GPT-5's issue-resolution rate while asking 41% fewer
+    questions by grounding rewards in task relevance and user answerability.
+  links:
+    paper: https://arxiv.org/abs/2604.14624
+    github: ''
+    website: ''
+- id: '2603.29378'
+  title: How and Why Agents Can Identify Bug-Introducing Commits
+  authors:
+  - Niklas Risse
+  - Marcel Böhme
+  venue: arXiv 2026/03
+  category: software_debugging
+  published: '2026-03-31'
+  tags:
+  - empirical
+  summary: This paper shows LLM-based agents substantially outperform prior SZZ-style approaches at identifying bug-introducing
+    commits from fix commits, raising F1 from 0.64 to 0.81 on a Linux kernel dataset. It analyzes how agents derive greppable
+    patterns to search commit history effectively.
+  links:
+    paper: https://arxiv.org/abs/2603.29378
+    github: ''
+    website: ''
+- id: '2603.24631'
+  title: 'Coherence Collapse: Diagnosing Why Code Agents Fail After Reaching the Right Code'
+  authors:
+  - Myeongsoo Kim
+  - Dingmin Wang
+  - Siwei Cui
+  - Farima Farmahinifarahani
+  - Terry Yue Zhuo
+  - Shweta Garg
+  - Baishakhi Ray
+  - Rajdeep Mukherjee
+  - Varun Kumar
+  venue: arXiv 2026/03
+  category: software_debugging
+  published: '2026-03-25'
+  tags:
+  - empirical
+  summary: This paper introduces TRAJEVAL to decompose SWE-bench agent trajectories into search, read, and edit stages, revealing
+    that most capable-model failures occur after correctly locating and editing the right code ('Coherence Collapse'), where
+    agents overwrite correct patches. An edit-commit checkpoint recovers several such cases.
+  links:
+    paper: https://arxiv.org/abs/2603.24631
+    github: ''
+    website: ''
+- id: '2603.20691'
+  title: 'SWE-Next: Scalable Real-World Software Engineering Tasks for Agents'
+  authors:
+  - Jiarong Liang
+  - Zhiheng Lyu
+  - Zijie Liu
+  - Xiangchao Chen
+  - Ping Nie
+  - Kai Zou
+  - Wenhu Chen
+  venue: arXiv 2026/03
+  category: software_debugging
+  published: '2026-03-21'
+  tags:
+  - training-data
+  summary: SWE-Next is an execution-grounded framework that mines real merged pull requests to construct scalable, self-verifying
+    software engineering task instances and trajectories for training SWE agents, using efficient reusable repo-quarter environments.
+    It improves downstream pass@1 through higher-signal supervision.
+  links:
+    paper: https://arxiv.org/abs/2603.20691
+    github: ''
+    website: ''
+- id: '2603.13023'
+  title: 'daVinci-Env: Open SWE Environment Synthesis at Scale'
+  authors:
+  - Dayuan Fu
+  - Shenyu Wu
+  - Yunze Wu
+  - Zerui Peng
+  - Yaxing Huang
+  - Jie Sun
+  - Ji Zeng
+  - Mohan Jiang
+  - Lin Zhang
+  - Yukun Li
+  - Jiarui Hu
+  - Liming Liu
+  - Jinlong Hou
+  - Pengfei Liu
+  venue: arXiv 2026/03
+  category: software_debugging
+  published: '2026-03-13'
+  tags:
+  - training-data
+  - model
+  summary: daVinci-Env (OpenSWE) is a fully open multi-agent pipeline that synthesizes 45,320 executable Docker environments
+    across 12.8k repositories to train software engineering agents at scale. Trained models achieve state-of-the-art SWE-bench
+    Verified results, demonstrating the value of large-scale open environment synthesis.
+  links:
+    paper: https://arxiv.org/abs/2603.13023
+    github: ''
+    website: ''
+- id: '2603.00520'
+  title: 'SWE-ABS: Adversarial Benchmark Strengthening Exposes Inflated Success Rates on Test-based Benchmark'
+  authors:
+  - Boxi Yu
+  - Yang Cao
+  - Yuzhong Zhang
+  - Liting Lin
+  - Junjielong Xu
+  - Zhiqing Zhong
+  - Qinghua Xu
+  - Guancheng Wang
+  - Jialun Cao
+  - Shing-Chi Cheung
+  - Pinjia He
+  - Lionel Briand
+  venue: arXiv 2026/02
+  category: software_debugging
+  published: '2026-02-28'
+  tags:
+  - benchmark
+  summary: SWE-ABS strengthens SWE-Bench Verified test suites via coverage-driven augmentation and mutation-driven adversarial
+    testing, exposing that many 'solved' patches are semantically incorrect. This adversarial re-evaluation substantially
+    lowers reported leaderboard scores for top issue-resolution agents.
+  links:
+    paper: https://arxiv.org/abs/2603.00520
+    github: ''
+    website: ''
+- id: '2602.23866'
+  title: 'SWE-rebench V2: Language-Agnostic SWE Task Collection at Scale'
+  authors:
+  - Ibragim Badertdinov
+  - Maksim Nekrashevich
+  - Anton Shevtsov
+  - Alexander Golubev
+  venue: arXiv 2026/02
+  category: software_debugging
+  published: '2026-02-27'
+  tags:
+  - training-data
+  - benchmark
+  summary: SWE-rebench V2 is a language-agnostic automated pipeline that harvests executable real-world software engineering
+    tasks and builds RL training environments at scale across 20 languages. It releases over 150k validated task instances
+    with installation and test metadata to support large-scale training of issue-resolution agents.
+  links:
+    paper: https://arxiv.org/abs/2602.23866
+    github: ''
+    website: ''
+- id: '2602.11210'
+  title: 'SWE-MiniSandbox: Container-Free Reinforcement Learning for Building Software Engineering Agents'
+  authors:
+  - Danlong Yuan
+  - Wei Wu
+  - Enhan Zhao
+  - Zhengren Wang
+  - Xueliang Zhao
+  - Huishuai Zhang
+  - Dongyan Zhao
+  venue: arXiv 2026/02
+  category: software_debugging
+  published: '2026-02-11'
+  summary: SWE-MiniSandbox proposes a container-free, kernel-level isolation method for scalable reinforcement learning training
+    of software engineering agents, greatly reducing disk usage and setup time versus container-based pipelines. It matches
+    container-based evaluation performance while lowering infrastructure overhead.
+  links:
+    paper: https://arxiv.org/abs/2602.11210
+    github: ''
+    website: ''
+- id: '2602.09892'
+  title: 'Immersion in the GitHub Universe: Scaling Coding Agents to Mastery'
+  authors:
+  - Jiale Zhao
+  - Guoxin Chen
+  - Fanzhe Meng
+  - Minghao Li
+  - Jie Chen
+  - Hui Xu
+  - Yongshuai Sun
+  - Wayne Xin Zhao
+  - Ruihua Song
+  - Yuan Zhang
+  - Peng Wang
+  - Cheng Chen
+  - Jirong Wen
+  - Kai Jia
+  venue: arXiv 2026/02
+  category: software_debugging
+  published: '2026-02-10'
+  tags:
+  - training-data
+  summary: ScaleSWE proposes an automated multi-agent workflow that constructs 100k verified SWE task instances from 6 million
+    pull requests, the largest such dataset to date. Fine-tuning on distilled trajectories nearly triples resolve rate on
+    SWE-bench Verified.
+  links:
+    paper: https://arxiv.org/abs/2602.09892
+    github: ''
+    website: ''
+- id: '2602.07900'
+  title: Rethinking the Value of Agent-Generated Tests for LLM-Based Software Engineering Agents
+  authors:
+  - Zhi Chen
+  - Zhensu Sun
+  - Yuling Shi
+  - Chao Peng
+  - Xiaodong Gu
+  - David Lo
+  - Lingxiao Jiang
+  venue: arXiv 2026/02
+  category: software_debugging
+  published: '2026-02-08'
+  tags:
+  - empirical
+  summary: This study analyzes whether tests written on-the-fly by LLM code agents during SWE-bench Verified issue resolution
+    actually improve patch correctness, finding tests mainly serve as observational print-based feedback rather than assertions,
+    and that prompt-induced changes in test-writing volume don't significantly affect outcomes.
+  links:
+    paper: https://arxiv.org/abs/2602.07900
+    github: ''
+    website: ''
+- id: '2602.02361'
+  title: 'SWE-Universe: Scale Real-World Verifiable Environments to Millions'
+  authors:
+  - Mouxiang Chen
+  - Lei Zhang
+  - Yunlong Feng
+  - Xuwu Wang
+  - Wenting Zhao
+  - Ruisheng Cao
+  - Jiaxi Yang
+  - Jiawei Chen
+  - Mingze Li
+  - Zeyao Ma
+  - Hao Ge
+  - Zongmeng Zhang
+  - Zeyu Cui
+  - Dayiheng Liu
+  - Jingren Zhou
+  - Jianling Sun
+  - Junyang Lin
+  - Binyuan Hui
+  venue: arXiv 2026/02
+  category: software_debugging
+  published: '2026-02-02'
+  tags:
+  - training-data
+  summary: SWE-Universe is a scalable framework that automatically constructs verifiable real-world SWE environments from
+    GitHub PRs using a self-verifying building agent, scaling to over 800,000 multilingual environments. Applied to mid-training
+    and RL, it boosts Qwen3-Max-Thinking to 75.3% on SWE-Bench Verified.
+  links:
+    paper: https://arxiv.org/abs/2602.02361
+    github: ''
+    website: ''
+- id: '2602.02084'
+  title: 'Closing the Loop: Universal Repository Representation with RPG-Encoder'
+  authors:
+  - Jane Luo
+  - Chengyu Yin
+  - Xin Zhang
+  - Qingtao Li
+  - Steven Liu
+  - Yiming Huang
+  - Jie Wu
+  - Hao Liu
+  - Yangyu Huang
+  - Yu Kang
+  - Fangkai Yang
+  - Ying Xin
+  - Scarlett Li
+  venue: arXiv 2026/02
+  category: software_debugging
+  published: '2026-02-02'
+  summary: RPG-Encoder generalizes the Repository Planning Graph into a unified representation linking code comprehension
+    and generation, enabling structure-aware repository navigation. It achieves state-of-the-art fault-localization accuracy
+    on SWE-bench Verified and SWE-bench Live Lite.
+  links:
+    paper: https://arxiv.org/abs/2602.02084
     github: ''
     website: ''
 - id: '2601.01426'
@@ -978,6 +1403,33 @@
     paper: https://arxiv.org/abs/2507.09108
     github: ''
     website: ''
+- id: '2506.19290'
+  title: 'Skywork-SWE: Unveiling Data Scaling Laws for Software Engineering in LLMs'
+  authors:
+  - Liang Zeng
+  - Yongcong Li
+  - Yuzhen Xiao
+  - Changshi Li
+  - Chris Yuhao Liu
+  - Rui Yan
+  - Tianwen Wei
+  - Jujie He
+  - Xuchen Song
+  - Yang Liu
+  - Yahui Zhou
+  venue: arXiv 2025/06
+  category: software_debugging
+  published: '2025-06-24'
+  tags:
+  - training-data
+  - model
+  summary: Skywork-SWE presents an automated data-curation pipeline yielding over 10,000 validated software engineering task
+    instances with runtime environments, and studies data scaling laws for training issue-resolution agents. The resulting
+    Skywork-SWE-32B model achieves state-of-the-art SWE-bench Verified results among similarly sized models.
+  links:
+    paper: https://arxiv.org/abs/2506.19290
+    github: ''
+    website: ''
 - id: '2506.18824'
   title: 'Understanding Software Engineering Agents: A Study of Thought-Action-Result Trajectories'
   authors:
@@ -1301,6 +1753,27 @@
   links:
     paper: https://arxiv.org/abs/2505.20749
     github: https://github.com/alfin06/AgentIssue-Bench
+    website: ''
+- id: '2506.11060'
+  title: 'Code Researcher: Deep Research Agent for Large Systems Code and Commit History'
+  authors:
+  - Ramneet Singh
+  - Sathvik Joel
+  - Abhav Mehrotra
+  - Nalin Wadhwa
+  - Ramakrishna B Bairi
+  - Aditya Kanade
+  - Nagarajan Natarajan
+  venue: arXiv 2025/05
+  category: software_debugging
+  published: '2025-05-27'
+  tags:
+  - benchmark
+  summary: Code Researcher is a deep research agent that gathers global code and commit-history context to generate patches
+    for Linux kernel crashes. It outperforms SWE-agent and Agentless on the kBenchSyz benchmark of systems-code crashes.
+  links:
+    paper: https://arxiv.org/abs/2506.11060
+    github: ''
     website: ''
 - id: '2505.19489'
   title: Benchmarking and Enhancing LLM Agents in Localizing Linux Kernel Bugs

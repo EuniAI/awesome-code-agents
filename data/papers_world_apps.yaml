@@ -1,3 +1,23 @@
+- id: '2605.30248'
+  title: 'GenClaw: Code-Driven Agentic Image Generation'
+  authors:
+  - Junyan Ye
+  - Jun He
+  - Zilong Huang
+  - Dongzhi Jiang
+  - Xuan Yang
+  - Rui Chen
+  - Weijia Li
+  venue: arXiv 2026/05
+  category: world_apps
+  published: '2026-05-28'
+  summary: GenClaw is a code-driven agentic image generation paradigm where an agent uses code (SVG, HTML, ThreeJS) as an
+    intermediate canvas to sketch before an image model adds texture and photorealism. The final deliverable is a rendered
+    image, not code, so code serves as a controllable tool within a creative media workflow.
+  links:
+    paper: https://arxiv.org/abs/2605.30248
+    github: ''
+    website: ''
 - id: '2510.24563'
   title: 'OSWorld-MCP: Benchmarking MCP Tool Invocation In Computer-Use Agents'
   authors:

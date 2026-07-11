@@ -17,6 +17,67 @@
     paper: https://arxiv.org/abs/2606.00750
     github: ''
     website: ''
+- id: '2604.18224'
+  title: 'WebCompass: Towards Multimodal Web Coding Evaluation for Code Language Models'
+  authors:
+  - Xinping Lei
+  - Xinyu Che
+  - Junqi Xiong
+  - Chenchen Zhang
+  - Yukai Huang
+  - Chenyu Zhou
+  - Haoyang Huang
+  - Minghao Liu
+  - Letian Zhu
+  - Hongyi Ye
+  - Jinhua Hao
+  - Ken Deng
+  - Zizheng Zhan
+  - Han Li
+  - Dailin Li
+  - Yifan Yao
+  - Ming Sun
+  - Zhaoxiang Zhang
+  - Jiaheng Liu
+  venue: arXiv 2026/04
+  category: web
+  published: '2026-04-20'
+  tags:
+  - benchmark
+  summary: WebCompass is a multimodal benchmark evaluating web coding across generation, editing, and repair tasks from text,
+    image, and video inputs, using an Agent-as-a-Judge protocol that executes websites in a real browser. It finds aesthetics
+    and framework choice are key bottlenecks for current models.
+  links:
+    paper: https://arxiv.org/abs/2604.18224
+    github: ''
+    website: ''
+- id: '2604.13648'
+  title: 'Figma2Code: Automating Multimodal Design to Code in the Wild'
+  authors:
+  - Yi Gui
+  - Jiawan Zhang
+  - Yina Wang
+  - Tianran Ma
+  - Yao Wan
+  - Shilin He
+  - Dongping Chen
+  - Zhou Zhao
+  - Wenbin Jiang
+  - Xuanhua Shi
+  - Hai Jin
+  - Philip S Yu
+  venue: arXiv 2026/04
+  category: web
+  published: '2026-04-15'
+  tags:
+  - benchmark
+  summary: Figma2Code introduces a multimodal design-to-code task using real Figma files with rich metadata, curating 3,055
+    samples down to 213 high-quality cases to benchmark ten MLLMs on generating production UI code. Results show proprietary
+    models lead in fidelity but lag in layout responsiveness and maintainability.
+  links:
+    paper: https://arxiv.org/abs/2604.13648
+    github: ''
+    website: ''
 - id: '2510.11498'
   title: 'ReLook: Vision-Grounded RL with a Multimodal LLM Critic for Agentic Web Coding'
   authors:
@@ -143,6 +204,34 @@
     paper: https://arxiv.org/abs/2508.16763
     github: ''
     website: https://webmmu-paper.github.io/
+- id: '2508.03560'
+  title: 'LaTCoder: Converting Webpage Design to Code with Layout-as-Thought'
+  authors:
+  - Yi Gui
+  - Zhen Li
+  - Zhongyi Zhang
+  - Guohao Wang
+  - Tianpeng Lv
+  - Gaoyang Jiang
+  - Yi Liu
+  - Dongping Chen
+  - Yao Wan
+  - Hongyu Zhang
+  - Wenbin Jiang
+  - Xuanhua Shi
+  - Hai Jin
+  venue: arXiv 2025/08
+  category: web
+  published: '2025-08-05'
+  tags:
+  - benchmark
+  summary: LaTCoder improves layout preservation in design-to-code generation using a Layout-as-Thought chain-of-thought approach
+    that divides designs into blocks and assembles generated code. It introduces the CC-HARD benchmark and shows significant
+    gains in layout metrics and human preference over direct prompting.
+  links:
+    paper: https://arxiv.org/abs/2508.03560
+    github: ''
+    website: ''
 - id: '2507.22827'
   title: 'ScreenCoder: Advancing Visual-to-Code Generation for Front-End Automation via Modular Multimodal Agents'
   authors:
@@ -221,6 +310,30 @@
     task-specific model limitations.
   links:
     paper: https://arxiv.org/abs/2506.06251
+    github: ''
+    website: ''
+- id: '2505.09904'
+  title: 'UICopilot: Automating UI Synthesis via Hierarchical Code Generation from Webpage Designs'
+  authors:
+  - Yi Gui
+  - Zhen Li
+  - Zhongyi Zhang
+  - Yao Wan
+  - Dongping Chen
+  - Hongyu Zhang
+  - Yi Su
+  - Bohua Chen
+  - Xing Zhou
+  - Wenbin Jiang
+  - Xiangliang Zhang
+  venue: arXiv 2025/05
+  category: web
+  published: '2025-05-15'
+  summary: UICopilot automates UI synthesis from webpage designs via a two-stage hierarchical code generation approach, first
+    producing coarse HTML structure then fine-grained code. It outperforms baselines including GPT-4V on the WebCode2M dataset
+    in automatic and human evaluations.
+  links:
+    paper: https://arxiv.org/abs/2505.09904
     github: ''
     website: ''
 - id: '2505.03733'
@@ -347,6 +460,34 @@
     paper: https://arxiv.org/abs/2411.03292
     github: https://github.com/WebPAI/Interaction2Code
     website: https://webpai.github.io/Interaction2Code/
+- id: '2404.06369'
+  title: 'WebCode2M: A Real-World Dataset for Code Generation from Webpage Designs'
+  authors:
+  - Yi Gui
+  - Zhen Li
+  - Yao Wan
+  - Yemin Shi
+  - Hongyu Zhang
+  - Yi Su
+  - Bohua Chen
+  - Dongping Chen
+  - Siyuan Wu
+  - Xing Zhou
+  - Wenbin Jiang
+  - Hai Jin
+  - Xiangliang Zhang
+  venue: arXiv 2024/04
+  category: web
+  published: '2024-04-09'
+  tags:
+  - training-data
+  summary: WebCode2M is a 2.56-million-instance real-world dataset pairing webpage design images with corresponding code and
+    layout details, filtered by a quality-scoring model. It introduces a ViT-based baseline (WebCoder) and a new TreeBLEU
+    metric for structural fidelity evaluation.
+  links:
+    paper: https://arxiv.org/abs/2404.06369
+    github: ''
+    website: ''
 - id: '2403.03163'
   title: 'Design2Code: Benchmarking Multimodal Code Generation for Automated Front-End Engineering'
   authors:

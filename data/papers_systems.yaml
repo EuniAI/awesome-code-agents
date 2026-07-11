@@ -43,6 +43,23 @@
     paper: https://arxiv.org/abs/2605.29734
     github: ''
     website: ''
+- id: '2605.26720'
+  title: Towards Feedback-to-Plan Decisions for Self-Evolving LLM Agents in CUDA Kernel Generation
+  authors:
+  - Yee Hin Chong
+  - Jiaming Wu
+  - Youhui Zhang
+  - Peng Qu
+  venue: arXiv 2026/05
+  category: systems
+  published: '2026-05-26'
+  summary: CUDAnalyst is a controlled analysis layer that attributes self-evolving LLM agents' planning decisions in CUDA
+    kernel generation to specific feedback signals via trajectory freezing and selective injection. It finds explicit planning
+    helps only with aligned feedback and that plans partially transfer across model strengths.
+  links:
+    paper: https://arxiv.org/abs/2605.26720
+    github: ''
+    website: ''
 - id: '2511.03586'
   title: 'PerfDojo: Automated ML Library Generation for Heterogeneous Architectures'
   authors:

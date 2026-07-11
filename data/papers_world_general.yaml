@@ -55,6 +55,30 @@
     paper: https://arxiv.org/abs/2605.18747
     github: ''
     website: ''
+- id: '2601.16206'
+  title: Computer Environments Elicit General Agentic Intelligence in LLMs
+  authors:
+  - Daixuan Cheng
+  - Shaohan Huang
+  - Yuxian Gu
+  - Huatong Song
+  - Guoxin Chen
+  - Li Dong
+  - Wayne Xin Zhao
+  - Ji-Rong Wen
+  - Furu Wei
+  venue: arXiv 2026/01
+  category: world_general
+  published: '2026-01-22'
+  tags:
+  - empirical
+  summary: This work shows that equipping LLMs with a minimal code sandbox ('LLM-in-Sandbox') elicits general agentic problem-solving
+    across math, science, and long-context tasks via external resource access, file management, and code execution, and trains
+    weaker models to internalize such interactions via RL. Gains span multiple unrelated domains rather than one task.
+  links:
+    paper: https://arxiv.org/abs/2601.16206
+    github: ''
+    website: ''
 - id: '2510.24702'
   title: 'Agent Data Protocol: Unifying Datasets for Diverse, Effective Fine-tuning of LLM Agents'
   authors:

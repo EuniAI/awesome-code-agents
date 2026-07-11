@@ -1,3 +1,26 @@
+- id: '2605.26186'
+  title: 'SetupX: Can LLM Agents Learn from Past Failures in Functionality-Correct Code Repository Setup?'
+  authors:
+  - Zihang Zhou
+  - Ziqian Ren
+  - Yukai Wu
+  - Yingjie Xiong
+  - Wei Zhou
+  - Chao Peng
+  - Dong Zhang
+  - Bingheng Yan
+  - Xuanhe Zhou
+  - Fan Wu
+  venue: arXiv 2026/05
+  category: software_infrastructure
+  published: '2026-05-25'
+  summary: SetupX is an experiential-learning framework for LLM agents to configure functionality-correct repository execution
+    environments, using a self-evolving experience representation, speculative Docker-snapshot execution, and a verification
+    protocol. It achieves a 92% pass rate on repository setup benchmarks, outperforming baselines by over 19%.
+  links:
+    paper: https://arxiv.org/abs/2605.26186
+    github: ''
+    website: ''
 - id: '2511.01316'
   title: Exploring and Unleashing the Power of Large Language Models in CI/CD Configuration Translation
   authors:

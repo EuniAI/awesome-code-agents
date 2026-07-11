@@ -1,3 +1,438 @@
+- id: '2607.00041'
+  title: 'ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis'
+  authors:
+  - Eagl Huang
+  venue: arXiv 2026/06
+  category: software_general
+  published: '2026-06-29'
+  summary: ATM is a governance framework that brokers pre-write admission for concurrent multi-agent code co-synthesis, deciding
+    which write intents may proceed in parallel versus requiring serialization. It is evaluated via controlled, field, and
+    adoption studies for auditability and bounded recoverability.
+  links:
+    paper: https://arxiv.org/abs/2607.00041
+    github: ''
+    website: ''
+- id: '2605.29442'
+  title: 'How Coding Agents Fail Their Users: A Large-Scale Analysis of Developer-Agent Misalignment in 20,574 Real-World
+    Sessions'
+  authors:
+  - Ningzhi Tang
+  - Chaoran Chen
+  - Gelei Xu
+  - Yiyu Shi
+  - Yu Huang
+  - Collin McMillan
+  - Tao Dong
+  - Toby Jia-Jun Li
+  venue: arXiv 2026/05
+  category: software_general
+  published: '2026-05-28'
+  tags:
+  - empirical
+  summary: This is a large-scale observational study of 20,574 real-world coding-agent sessions that characterizes developer-agent
+    misalignment across IDE and CLI workflows, annotating breakdown forms, causes, costs, and resolutions. Findings show most
+    misalignment costs effort and trust rather than damage, informing agent design.
+  links:
+    paper: https://arxiv.org/abs/2605.29442
+    github: ''
+    website: ''
+- id: '2605.26563'
+  title: 'TrajAudit: Automated Failure Diagnosis for Agentic Coding Systems'
+  authors:
+  - Minxing Wang
+  - Xiaofei Xie
+  - Yintong Huo
+  venue: arXiv 2026/05
+  category: software_general
+  published: '2026-05-26'
+  tags:
+  - benchmark
+  summary: TrajAudit is a framework that diagnoses failures in long, noisy trajectories produced by repository-level coding
+    agents, using semantic saliency folding and test-report priors to localize the decisive error step. It also introduces
+    RootSE, a 102-instance benchmark for evaluating failure localization in agentic coding trajectories.
+  links:
+    paper: https://arxiv.org/abs/2605.26563
+    github: ''
+    website: ''
+- id: '2605.25430'
+  title: 'CODESKILL: Learning Self-Evolving Skills for Coding Agents'
+  authors:
+  - Yanzhou Li
+  - Yiran Zhang
+  - Xiaoyu Zhang
+  - Xiaoxia Liu
+  - Yang Liu
+  venue: arXiv 2026/05
+  category: software_general
+  published: '2026-05-25'
+  summary: CODESKILL trains a learnable policy to extract, evolve, and maintain reusable procedural skills from coding-agent
+    trajectories via RL. It improves pass rates across EnvBench, SWE-Bench Verified, and Terminal-Bench 2.
+  links:
+    paper: https://arxiv.org/abs/2605.25430
+    github: ''
+    website: ''
+- id: '2605.21384'
+  title: 'SpecBench: Measuring Reward Hacking in Long-Horizon Coding Agents'
+  authors:
+  - Bingchen Zhao
+  - Dhruv Srikanth
+  - Yuxiang Wu
+  - Zhengyao Jiang
+  venue: arXiv 2026/05
+  category: software_general
+  published: '2026-05-20'
+  tags:
+  - benchmark
+  summary: SpecBench measures reward hacking in long-horizon coding agents by comparing pass rates on visible versus held-out
+    tests across 30 systems-level programming tasks, from short scripts to full OS kernels. It finds reward hacking scales
+    with task length and model size, revealing gaming of test suites.
+  links:
+    paper: https://arxiv.org/abs/2605.21384
+    github: ''
+    website: ''
+- id: '2605.18583'
+  title: 'Overeager Coding Agents: Measuring Out-of-Scope Actions on Benign Tasks'
+  authors:
+  - Yubin Qu
+  - Ying Zhang
+  - Yanjun Zhang
+  - Gelei Deng
+  - Yuekang Li
+  - Leo Yu Zhang
+  - Yi Liu
+  venue: arXiv 2026/05
+  category: software_general
+  published: '2026-05-18'
+  tags:
+  - benchmark
+  - empirical
+  summary: This paper studies 'overeager' out-of-scope actions by autonomous coding agents on benign tasks, introducing OverEager-Gen/Bench
+    to measure scope-expansion behavior across Claude Code, OpenHands, Codex CLI, and Gemini CLI. It finds framework permissiveness
+    dominates model-layer alignment in causing unintended actions.
+  links:
+    paper: https://arxiv.org/abs/2605.18583
+    github: ''
+    website: ''
+- id: '2605.08366'
+  title: 'SWE Atlas: Benchmarking Coding Agents Beyond Issue Resolution'
+  authors:
+  - Mohit Raghavendra
+  - Soham Dan
+  - Miguel Romero Calvo
+  - Yannis Yiming He
+  - Johannes Baptist Mols
+  - Gautam Anand
+  - Cole McCollum
+  - Edgar Arakelyan
+  - Vijay Bharadwaj
+  - Andrew Park
+  - Jeff Da
+  - MohammadHossein Rezaei
+  - Bing Liu
+  - Brad Kenstler
+  - Yunzhong He
+  venue: arXiv 2026/05
+  category: software_general
+  published: '2026-05-08'
+  tags:
+  - benchmark
+  summary: SWE Atlas is a benchmark spanning Codebase Q&A, Test Writing, and Refactoring tasks to evaluate coding agents beyond
+    issue resolution, using rubric-based protocols assessing engineering quality. Frontier models like GPT-5.4 and Opus 4.7
+    lead but even top models struggle with edge cases and best practices.
+  links:
+    paper: https://arxiv.org/abs/2605.08366
+    github: ''
+    website: ''
+- id: '2605.05980'
+  title: 'TACT: Mitigating Overthinking and Overacting in Coding Agents via Activation Steering'
+  authors:
+  - Yuan Sui
+  - Yulin Chen
+  - Yibo Li
+  - Xue Jiang
+  - Yufei He
+  - Yihong Dong
+  - Xiaoxin He
+  - Tianyu Gao
+  - Bryan Hooi
+  venue: arXiv 2026/05
+  category: software_general
+  published: '2026-05-07'
+  summary: TACT detects and mitigates 'agent drift' (overthinking/overacting) in long-horizon coding agents via activation
+    steering along linearly separable drift axes in hidden states. It improves resolve rates and reduces steps-to-resolve
+    on SWE-bench Verified, Terminal-Bench 2.0, and CLAW-Eval.
+  links:
+    paper: https://arxiv.org/abs/2605.05980
+    github: ''
+    website: ''
+- id: '2604.20779'
+  title: 'SWE-chat: Coding Agent Interactions From Real Users in the Wild'
+  authors:
+  - Joachim Baumann
+  - Vishakh Padmakumar
+  - Xiang Li
+  - John Yang
+  - Diyi Yang
+  - Sanmi Koyejo
+  venue: arXiv 2026/04
+  category: software_general
+  published: '2026-04-22'
+  tags:
+  - empirical
+  - training-data
+  summary: SWE-chat is a large, continually-growing dataset of real coding agent sessions from open-source developers, capturing
+    prompts, tool calls, and code-authorship attribution. Analysis reveals bimodal 'vibe coding' patterns, low code survival
+    rates, and frequent user pushback against agent outputs.
+  links:
+    paper: https://arxiv.org/abs/2604.20779
+    github: ''
+    website: ''
+- id: '2604.16529'
+  title: Scaling Test-Time Compute for Agentic Coding
+  authors:
+  - Joongwon Kim
+  - Wannan Yang
+  - Kelvin Niu
+  - Hongming Zhang
+  - Yun Zhu
+  - Eryk Helenowski
+  - Ruan Silva
+  - Zhengxing Chen
+  - Srinivasan Iyer
+  - Manzil Zaheer
+  - Daniel Fried
+  - Hannaneh Hajishirzi
+  - Sanjeev Arora
+  - Gabriel Synnaeve
+  - Ruslan Salakhutdinov
+  - Anirudh Goyal
+  venue: arXiv 2026/04
+  category: software_general
+  published: '2026-04-16'
+  summary: A test-time scaling framework for long-horizon coding agents that compresses rollout trajectories into structured
+    summaries, enabling tournament-style voting and iterative refinement across attempts. Evaluated on both SWE-Bench Verified
+    and Terminal-Bench, improving frontier agent performance on both.
+  links:
+    paper: https://arxiv.org/abs/2604.16529
+    github: ''
+    website: ''
+- id: '2604.13346'
+  title: 'AgentSPEX: An Agent SPecification and EXecution Language'
+  authors:
+  - Pengcheng Wang
+  - Jerry Huang
+  - Jiarui Yao
+  - Rui Pan
+  - Peizhi Niu
+  - Yaowenqi Liu
+  - Ruida Wang
+  - Renhao Lu
+  - Yuwei Guo
+  - Tong Zhang
+  venue: arXiv 2026/04
+  category: software_general
+  published: '2026-04-14'
+  summary: AgentSPEX is a specification and execution language for LLM-agent workflows with explicit control flow, modular
+    structure, and a customizable harness including sandboxed execution and checkpointing. A user study shows it is more interpretable
+    and accessible than existing agent orchestration frameworks.
+  links:
+    paper: https://arxiv.org/abs/2604.13346
+    github: ''
+    website: ''
+- id: '2604.14228'
+  title: 'Dive into Claude Code: The Design Space of Today''s and Future AI Agent Systems'
+  authors:
+  - Jiacheng Liu
+  - Xiaohan Zhao
+  - Xinyi Shang
+  - Zhiqiang Shen
+  venue: arXiv 2026/04
+  category: software_general
+  published: '2026-04-14'
+  tags:
+  - empirical
+  summary: This study reverse-engineers Claude Code's architecture from source and compares it with two other open-source
+    agent systems, identifying design principles around permissions, context management, extensibility, and orchestration.
+    It proposes open design directions for future agent systems.
+  links:
+    paper: https://arxiv.org/abs/2604.14228
+    github: ''
+    website: ''
+- id: '2604.11641'
+  title: 'CodeTracer: Towards Traceable Agent States'
+  authors:
+  - Han Li
+  - Yifan Yao
+  - Letian Zhu
+  - Rili Feng
+  - Hongyi Ye
+  - Jiaming Wang
+  - Yancheng He
+  - Pengyu Zou
+  - Lehan Zhang
+  - Xinping Lei
+  - Haoyang Huang
+  - Ken Deng
+  - Ming Sun
+  - Zhaoxiang Zhang
+  - He Ye
+  - Jiaheng Liu
+  venue: arXiv 2026/04
+  category: software_general
+  published: '2026-04-13'
+  tags:
+  - benchmark
+  summary: CodeTracer reconstructs coding agents' hierarchical state-transition traces to localize the origin of failures
+    across parallel tool calls and multi-stage workflows. It is evaluated on CodeTraceBench, spanning bug fixing, refactoring,
+    and terminal interaction trajectories from multiple agent frameworks.
+  links:
+    paper: https://arxiv.org/abs/2604.11641
+    github: ''
+    website: ''
+- id: '2604.00436'
+  title: 'Programming by Chat: A Large-Scale Behavioral Analysis of 11,579 Real-World AI-Assisted IDE Sessions'
+  authors:
+  - Ningzhi Tang
+  - Chaoran Chen
+  - Zihan Fang
+  - Gelei Xu
+  - Maria Dhakal
+  - Yiyu Shi
+  - Collin McMillan
+  - Yu Huang
+  - Toby Jia-Jun Li
+  venue: arXiv 2026/04
+  category: software_general
+  published: '2026-04-01'
+  tags:
+  - empirical
+  summary: This paper presents the first large-scale behavioral analysis of real-world conversational IDE coding sessions
+    (Cursor, GitHub Copilot), examining how developers iteratively specify tasks, delegate cognitive work, and manage AI collaboration.
+    It draws implications for designing future AI-assisted programming environments.
+  links:
+    paper: https://arxiv.org/abs/2604.00436
+    github: ''
+    website: ''
+- id: '2604.16393'
+  title: How Do Developers Interact with AI? An Exploratory Study on Modeling Developer Programming Behavior
+  authors:
+  - Yinan Wu
+  - Ze Shi Li
+  - Kathryn Thomasset Stolee
+  - Bowen Xu
+  venue: arXiv 2026/03
+  category: software_general
+  published: '2026-03-28'
+  tags:
+  - empirical
+  summary: A mixed-methods study of 76 developers modeling AI-assisted programming behavior across intention, action, tool,
+    and emotion dimensions. Proposes the S-IASE model revealing behavioral and emotional patterns distinguishing AI-assisted
+    from non-AI-assisted development.
+  links:
+    paper: https://arxiv.org/abs/2604.16393
+    github: ''
+    website: ''
+- id: '2603.15401'
+  title: 'SWE-Skills-Bench: Do Agent Skills Actually Help in Real-World Software Engineering?'
+  authors:
+  - Tingxu Han
+  - Yi Zhang
+  - Wei Song
+  - Chunrong Fang
+  - Zhenyu Chen
+  - Youcheng Sun
+  - Lijie Hu
+  venue: arXiv 2026/03
+  category: software_general
+  published: '2026-03-16'
+  tags:
+  - benchmark
+  - empirical
+  summary: SWE-Skills-Bench is a requirement-driven benchmark that isolates the marginal utility of injected agent skills
+    across 565 real-world software engineering tasks spanning six subdomains, using deterministic acceptance-criteria verification.
+    It finds most skills yield negligible or even negative gains.
+  links:
+    paper: https://arxiv.org/abs/2603.15401
+    github: ''
+    website: ''
+- id: '2603.03194'
+  title: 'BeyondSWE: Can Current Code Agent Survive Beyond Single-Repo Bug Fixing?'
+  authors:
+  - Guoxin Chen
+  - Fanzhe Meng
+  - Jiale Zhao
+  - Minghao Li
+  - Daixuan Cheng
+  - Huatong Song
+  - Jie Chen
+  - Yuzhi Lin
+  - Hui Chen
+  - Xin Zhao
+  - Ruihua Song
+  - Chang Liu
+  - Cheng Chen
+  - Kai Jia
+  - Ji-Rong Wen
+  venue: arXiv 2026/03
+  category: software_general
+  published: '2026-03-03'
+  tags:
+  - benchmark
+  summary: BeyondSWE is a 500-instance benchmark drawn from 246 GitHub repositories testing code agents beyond single-repo
+    bug fixing, covering cross-repo resolution, domain-specific issues, dependency migration, and doc-to-repo generation.
+    Evaluations show current agents remain far from saturated even with search augmentation.
+  links:
+    paper: https://arxiv.org/abs/2603.03194
+    github: ''
+    website: ''
+- id: '2601.20882'
+  title: 'DevOps-Gym: Benchmarking AI Agents in Software DevOps Cycle'
+  authors:
+  - Yuheng Tang
+  - Kaijie Zhu
+  - Bonan Ruan
+  - Chuqi Zhang
+  - Michael Yang
+  - Hongwei Li
+  - Suyue Guo
+  - Tianneng Shi
+  - Zekun Li
+  - Christopher Kruegel
+  - Giovanni Vigna
+  - Dawn Song
+  - William Yang Wang
+  - Lun Wang
+  - Yangruibo Ding
+  - Zhenkai Liang
+  - Wenbo Guo
+  venue: arXiv 2026/01
+  category: software_general
+  published: '2026-01-27'
+  tags:
+  - benchmark
+  summary: 'DevOps-Gym is an end-to-end benchmark with 700+ real-world tasks evaluating AI agents across the full DevOps cycle:
+    build/configuration, monitoring, issue resolving, and test generation. Evaluation reveals agents struggle across these
+    varied workflows, especially monitoring and build tasks.'
+  links:
+    paper: https://arxiv.org/abs/2601.20882
+    github: ''
+    website: ''
+- id: '2601.17406'
+  title: Fingerprinting AI Coding Agents on GitHub
+  authors:
+  - Taher A. Ghaleb
+  venue: arXiv 2026/01
+  category: software_general
+  published: '2026-01-24'
+  tags:
+  - empirical
+  summary: This study fingerprints five major AI coding agents (Codex, Copilot, Devin, Cursor, Claude Code) from 33,580 GitHub
+    PRs using 41 behavioral features, achieving 97.2% F1 in agent identification and revealing distinctive commit and code-structure
+    signatures per agent.
+  links:
+    paper: https://arxiv.org/abs/2601.17406
+    github: ''
+    website: ''
 - id: '2511.12884'
   title: 'Agent READMEs: An Empirical Study of Context Files for Agentic Coding'
   authors:

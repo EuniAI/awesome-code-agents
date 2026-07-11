@@ -34,6 +34,32 @@
     paper: https://arxiv.org/abs/2511.02399
     github: ''
     website: ''
+- id: '2510.24358'
+  title: Automatically Benchmarking LLM Code Agents through Agent-Driven Annotation and Evaluation
+  authors:
+  - Lingyue Fu
+  - Bolun Zhang
+  - Hao Guan
+  - Yaoming Zhu
+  - Lin Qiu
+  - Weiwen Liu
+  - Xuezhi Cao
+  - Xunliang Cai
+  - Weinan Zhang
+  - Yong Yu
+  venue: arXiv 2025/10
+  category: software_development
+  published: '2025-10-28'
+  tags:
+  - benchmark
+  - model
+  summary: PRDBench introduces 50 real-world Python projects with structured Product Requirement Documents to evaluate project-level
+    code agents, alongside a fine-tuned PRDJudge model achieving high human-alignment in assessment. It addresses shortcomings
+    of prior benchmarks and generic LLM judges for project-level development evaluation.
+  links:
+    paper: https://arxiv.org/abs/2510.24358
+    github: ''
+    website: ''
 - id: '2507.18130'
   title: 'NoCode-bench: A Benchmark for Evaluating Natural Language-Driven Feature Addition'
   authors:
@@ -74,6 +100,31 @@
     coverage and diversity on a new RGPair benchmark.
   links:
     paper: https://arxiv.org/abs/2507.14969
+    github: ''
+    website: ''
+- id: '2505.16975'
+  title: 'SWE-Dev: Evaluating and Training Autonomous Feature-Driven Software Development'
+  authors:
+  - Yaxin Du
+  - Yuzhu Cai
+  - Yifan Zhou
+  - Cheng Wang
+  - Yu Qian
+  - Xianghe Pang
+  - Qian Liu
+  - Yue Hu
+  - Siheng Chen
+  venue: arXiv 2025/05
+  category: software_development
+  published: '2025-05-22'
+  tags:
+  - benchmark
+  - training-data
+  summary: SWE-Dev introduces a large dataset of 14,500 feature-driven software development tasks with runnable environments
+    and unit tests for evaluating and training coding agents. Evaluations across many LLMs and agent systems show substantial
+    headroom on hard feature-development tasks.
+  links:
+    paper: https://arxiv.org/abs/2505.16975
     github: ''
     website: ''
 - id: '2503.06680'

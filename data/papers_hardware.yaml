@@ -15,3 +15,49 @@
     paper: https://arxiv.org/abs/2511.02285
     github: ''
     website: ''
+- id: '2506.13905'
+  title: 'Spec2RTL-Agent: Automated Hardware Code Generation from Complex Specifications Using LLM Agent Systems'
+  authors:
+  - Zhongzhi Yu
+  - Mingjie Liu
+  - Michael Zimmer
+  - Yingyan Celine Lin
+  - Yong Liu
+  - Haoxing Ren
+  venue: arXiv 2025/06
+  category: hardware
+  published: '2025-06-16'
+  summary: Spec2RTL-Agent is a multi-agent LLM system that translates complex hardware specification documents into synthesizable
+    C++ (optimized via HLS) and ultimately RTL code, using reasoning, iterative refinement, and reflection modules. It reduces
+    human intervention by up to 75% compared to prior RTL generation approaches.
+  links:
+    paper: https://arxiv.org/abs/2506.13905
+    github: ''
+    website: ''
+- id: '2504.10369'
+  title: 'SymRTLO: Enhancing RTL Code Optimization with LLMs and Neuron-Inspired Symbolic Reasoning'
+  authors:
+  - Yiting Wang
+  - Wanghao Ye
+  - Ping Guo
+  - Yexiao He
+  - Ziyao Wang
+  - Bowei Tian
+  - Shwai He
+  - Guoheng Sun
+  - Zheyu Shen
+  - Sihan Chen
+  - Ankur Srivastava
+  - Qingfu Zhang
+  - Gang Qu
+  - Ang Li
+  venue: arXiv 2025/04
+  category: hardware
+  published: '2025-04-14'
+  summary: SymRTLO combines LLM-based RTL rewriting with symbolic reasoning (RAG rules, AST templates, FSM analysis) and formal/test
+    verification to optimize RTL code for power, performance, and area. It improves PPA by up to 43.9-62.5% over prior methods
+    on the RTL-Rewriter benchmark.
+  links:
+    paper: https://arxiv.org/abs/2504.10369
+    github: ''
+    website: ''

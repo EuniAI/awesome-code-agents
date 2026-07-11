@@ -1,3 +1,28 @@
+- id: '2606.28480'
+  title: 'TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents'
+  authors:
+  - Shoufa Chen
+  - Luyuan Wang
+  - Xuan Yang
+  - Zhiheng Liu
+  - Yuren Cong
+  - Yuanfeng Ji
+  - Feiyan Zhou
+  - Xiaohui Zhang
+  - Fanny Yang
+  - Belinda Zeng
+  venue: arXiv 2026/06
+  category: world_terminal
+  published: '2026-06-26'
+  tags:
+  - benchmark
+  summary: TUA-Bench evaluates general-purpose terminal-use agents on 120 real-world tasks spanning routine digital activities
+    and scientific/engineering workflows, beyond programming-centric shell tasks. The strongest agent achieves 65.8% overall
+    performance.
+  links:
+    paper: https://arxiv.org/abs/2606.28480
+    github: ''
+    website: ''
 - id: '2606.03461'
   title: What Makes Interaction Trajectories Effective for Training Terminal Agents?
   authors:
@@ -92,6 +117,32 @@
   links:
     paper: https://arxiv.org/abs/2605.22535
     github: https://github.com/EuniAI/TerminalWorld
+    website: ''
+- id: '2605.10779'
+  title: 'LITMUS: Benchmarking Behavioral Jailbreaks of LLM Agents in Real OS Environments'
+  authors:
+  - Chiyu Zhang
+  - Huiqin Yang
+  - Bendong Jiang
+  - Xiaolei Zhang
+  - Yiran Zhao
+  - Ruyi Chen
+  - Lu Zhou
+  - Xiaogang Xu
+  - Jiafei Wu
+  - Liming Fang
+  - Zhe Liu
+  venue: arXiv 2026/05
+  category: world_terminal
+  published: '2026-05-11'
+  tags:
+  - benchmark
+  summary: LITMUS is a benchmark of 819 high-risk test cases evaluating whether LLM agents can be jailbroken into executing
+    dangerous OS-level operations, using dual semantic-physical verification and state rollback. It uncovers pervasive 'Execution
+    Hallucination' where agents claim refusal while harmful actions already executed.
+  links:
+    paper: https://arxiv.org/abs/2605.10779
+    github: ''
     website: ''
 - id: '2605.08013'
   title: Learning CLI Agents with Structured Action Credit under Selective Observation

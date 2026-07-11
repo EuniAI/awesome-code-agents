@@ -1,3 +1,226 @@
+- id: '2606.10728'
+  title: 'DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch'
+  authors:
+  - Jiale Zhao
+  - Guoxin Chen
+  - Fanzhe Meng
+  - Wayne Xin Zhao
+  - Ruihua Song
+  - Ji-Rong Wen
+  - Kai Jia
+  venue: arXiv 2026/06
+  category: software_code_generation
+  published: '2026-06-09'
+  tags:
+  - training-data
+  summary: DeNovoSWE is a large-scale, automatically constructed dataset of 4,818 instances for training agents to generate
+    entire software repositories from documentation, using a sandboxed divide-and-conquer critic-repair workflow. Fine-tuning
+    on it raises Qwen3-30B-A3B's whole-repository generation score from 5.8% to 47.2%.
+  links:
+    paper: https://arxiv.org/abs/2606.10728
+    github: ''
+    website: ''
+- id: '2606.06492'
+  title: 'Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution'
+  authors:
+  - Liliana Hotsko
+  - Yinxi Li
+  - Yuntian Deng
+  - Pengyu Nie
+  venue: arXiv 2026/06
+  category: software_code_generation
+  published: '2026-06-04'
+  tags:
+  - benchmark
+  summary: Code2LoRA is a hypernetwork framework that generates repository-specific LoRA adapters to inject repo knowledge
+    into code LMs without extra inference-time tokens, supporting both static and evolving codebases. The authors also release
+    RepoPeftBench, a benchmark of assertion-completion tasks over 604 Python repositories.
+  links:
+    paper: https://arxiv.org/abs/2606.06492
+    github: ''
+    website: ''
+- id: '2605.24812'
+  title: 'CoRe-Code: Collaborative Reinforcement Learning for Code Generation'
+  authors:
+  - Zhihao Dou
+  - Qinjian Zhao
+  - Zhongwei Wan
+  - Xiaoyu Xia
+  - Sumon Biswas
+  venue: arXiv 2026/05
+  category: software_code_generation
+  published: '2026-05-24'
+  summary: CoRe-Code is a multi-agent framework with role-specialized Planner and Coder agents trained via collaborative GRPO
+    reinforcement learning to produce globally coherent, efficient code. It outperforms existing RL-based and multi-agent
+    code generation baselines across multiple benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2605.24812
+    github: ''
+    website: ''
+- id: '2605.07122'
+  title: 'RepoZero: Can LLMs Generate a Code Repository from Scratch?'
+  authors:
+  - Zhaoxi Zhang
+  - Yiming Xu
+  - Jiahui Liang
+  - Weikang Li
+  - Xiaoshuai Chen
+  - Liwei Qian
+  - Xin Pei
+  - Jizhou Huang
+  - Run Sun
+  - Yunfang Wu
+  venue: arXiv 2026/05
+  category: software_code_generation
+  published: '2026-05-08'
+  tags:
+  - benchmark
+  summary: RepoZero is a benchmark that reformulates whole-repository generation as repository reproduction from API specs,
+    enabling automated execution-based verification via output equivalence. It also proposes an Agentic Code-Test Evolution
+    framework for iterative test-driven refinement, finding even top LLM agents achieve only 30-55% pass rates.
+  links:
+    paper: https://arxiv.org/abs/2605.07122
+    github: ''
+    website: ''
+- id: '2604.19742'
+  title: 'PlayCoder: Making LLM-Generated GUI Code Playable'
+  authors:
+  - Zhiyuan Peng
+  - Wei Tao
+  - Xin Yin
+  - Chenhao Ying
+  - Yuan Luo
+  - Yiwen Guo
+  venue: arXiv 2026/04
+  category: software_code_generation
+  published: '2026-04-21'
+  tags:
+  - benchmark
+  summary: PlayCoder is a multi-agent, repository-aware framework that generates, evaluates, and iteratively repairs interactive
+    GUI application code, guided by the new PlayEval benchmark and Play@k metric measuring end-to-end playability. It substantially
+    improves functional correctness of LLM-generated GUI applications across languages.
+  links:
+    paper: https://arxiv.org/abs/2604.19742
+    github: ''
+    website: ''
+- id: '2603.30038'
+  title: Benchmarking PhD-Level Coding in 3D Geometric Computer Vision
+  authors:
+  - Wenyi Li
+  - Renkai Luo
+  - Yue Yu
+  - Huan-ang Gao
+  - Mingju Gao
+  - Li Yuan
+  - Chaoyou Fu
+  - Hao Zhao
+  venue: arXiv 2026/03
+  category: software_code_generation
+  published: '2026-03-31'
+  tags:
+  - benchmark
+  summary: GeoCodeBench is a PhD-level benchmark evaluating LLMs on fill-in-the-function implementation of 3D geometric computer-vision
+    code from research papers, with automatic unit-test scoring. Best models achieve only 36.6% pass rate, revealing gaps
+    in research-level scientific coding.
+  links:
+    paper: https://arxiv.org/abs/2603.30038
+    github: ''
+    website: ''
+- id: '2603.16790'
+  title: 'InCoder-32B: Code Foundation Model for Industrial Scenarios'
+  authors:
+  - Jian Yang
+  - Wei Zhang
+  - Jiajun Wu
+  - Junhang Cheng
+  - Shawn Guo
+  - Haowen Wang
+  - Weicheng Gu
+  - Yaxin Du
+  - Joseph Li
+  - Fanglin Xu
+  - Yizhi Li
+  - Lin Jing
+  - Yuanbo Wang
+  - Yuhan Gao
+  - Ruihao Gong
+  - Chuan Hao
+  - Ran Tao
+  - Aishan Liu
+  - Tuney Zheng
+  - Ganqu Cui
+  - Zhoujun Li
+  - Mingjie Tang
+  - Chenghua Lin
+  - Wayne Xin Zhao
+  - Xianglong Liu
+  - Ming Zhou
+  - Bryan Dai
+  - Weifeng Lv
+  venue: arXiv 2026/03
+  category: software_code_generation
+  published: '2026-03-17'
+  tags:
+  - model
+  summary: InCoder-32B is a 32B code foundation model trained for industrial code domains (chip design, GPU kernels, embedded
+    systems, compiler optimization, 3D modeling) via staged pretraining and execution-grounded post-training. It is evaluated
+    on general and industrial code generation benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2603.16790
+    github: ''
+    website: ''
+- id: '2602.09447'
+  title: 'SWE-AGI: Benchmarking Specification-Driven Software Construction with MoonBit in the Era of Autonomous Agents'
+  authors:
+  - Zhirui Zhang
+  - Hongbo Zhang
+  - Haoxiang Fei
+  - Zhiyuan Bao
+  - Yubin Chen
+  - Zhengyu Lei
+  - Ziyue Liu
+  - Yixuan Sun
+  - Mingkun Xiao
+  - Zihang Ye
+  - Yu Zhang
+  - Hongcheng Zhu
+  - Yuxiang Wen
+  - Heung-Yeung Shum
+  venue: arXiv 2026/02
+  category: software_code_generation
+  published: '2026-02-10'
+  tags:
+  - benchmark
+  summary: SWE-AGI is a benchmark requiring LLM agents to build production-scale software (parsers, interpreters, SAT solvers)
+    entirely from specifications in the MoonBit language, testing long-horizon architectural reasoning. Results show performance
+    drops sharply on harder, specification-intensive tasks, with code reading becoming a key bottleneck.
+  links:
+    paper: https://arxiv.org/abs/2602.09447
+    github: ''
+    website: ''
+- id: '2601.11895'
+  title: 'DevBench: A Realistic, Developer-Informed Benchmark for Code Generation Models'
+  authors:
+  - Adarsh Kumarappan
+  - Pareesa Ameneh Golnari
+  - Wen Wen
+  - Xiaoyu Liu
+  - Gabriel Ryan
+  - Yuting Sun
+  - Shengyu Fu
+  - Elsie Nallipogu
+  venue: arXiv 2026/01
+  category: software_code_generation
+  published: '2026-01-17'
+  tags:
+  - benchmark
+  summary: DevBench is a telemetry-driven benchmark of 1,800 realistic code completion tasks across six languages, evaluating
+    LLMs with functional correctness, similarity metrics, and LLM-judge assessments. It reveals current models still struggle
+    with contextual, practical code completion.
+  links:
+    paper: https://arxiv.org/abs/2601.11895
+    github: ''
+    website: ''
 - id: '2511.08301'
   title: 'Smarter Together: Creating Agentic Communities of Practice through Shared Experiential Learning'
   authors:
@@ -376,6 +599,28 @@
     paper: https://arxiv.org/abs/2505.18646
     github: https://github.com/EvoAgentX/EvoAgentX
     website: https://evoagentx.github.io/EvoAgentX/
+- id: '2503.07358'
+  title: 'RepoST: Scalable Repository-Level Coding Environment Construction with Sandbox Testing'
+  authors:
+  - Yiqing Xie
+  - Alex Xie
+  - Divyanshu Sheth
+  - Pengfei Liu
+  - Daniel Fried
+  - Carolyn Rose
+  venue: arXiv 2025/03
+  category: software_code_generation
+  published: '2025-03-10'
+  tags:
+  - benchmark
+  - training-data
+  summary: RepoST constructs repository-level coding environments via sandbox testing that isolates a target function and
+    its dependencies for scalable execution feedback. It produces RepoST-Train (7,415 functions) for training and RepoST-Eval
+    for benchmarking 12 code generation models.
+  links:
+    paper: https://arxiv.org/abs/2503.07358
+    github: ''
+    website: ''
 - id: '2502.15872'
   title: 'MutaGReP: Execution-Free Repository-Grounded Plan Search for Code-Use'
   authors:
