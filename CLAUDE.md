@@ -11,7 +11,7 @@
 - **No em-dashes in anything we write** (they read as AI-written). Use colons,
   commas, parentheses, or separate sentences. Never alter em-dashes inside a
   paper's own title or abstract (quoted source text).
-- **Capture design decisions as they happen** into design-decisions.md (each
+- **Capture design decisions as they happen** into records/design-decisions.md (each
   with a one-line rationale). Chat is ephemeral; the repo is the memory.
 
 ## What This Is
@@ -19,12 +19,12 @@
 A curated list of research papers on autonomous code agents, published at
 [euni.ai](https://euni.ai) and github.com/EuniAI/awesome-code-agents. Rebuilt
 from the ground up in 2026-07 (taxonomy, data, and pipeline); the old system
-lives only in git history. Rebuild rationale: design-decisions.md; the legacy
+lives only in git history. Rebuild rationale: records/design-decisions.md; the legacy
 feature disposition: records/legacy-audit.md.
 
 ## The Two Sources of Truth
 
-- **taxonomy.json** (repo root): the category system. Four top-level branches:
+- **automation/taxonomy.json**: the category system. Four top-level branches:
   `foundation_models` (flagship general models), `studies` (surveys and
   empirical research about the agents), `artifact` (code as the deliverable;
   8 domains, software expands into 10 lifecycle activities), `agency` (code as
@@ -32,7 +32,7 @@ feature disposition: records/legacy-audit.md.
   definition / includes / boundary / examples; plus a repo-wide scope with a
   hardened relevance gate and an ordered master_test. The classifier prompt is
   COMPILED from this file; never hand-write category text elsewhere.
-- **calibration.json** (repo root): owner-labeled real papers as positive and
+- **automation/calibration.json**: owner-labeled real papers as positive and
   negative few-shot examples (each with a why). They guide the classifier by
   precedent; they never pin papers by id. Grows automatically from review
   feedback (see the learning loop) and by hand when the owner rules on a case.

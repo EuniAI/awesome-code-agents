@@ -1,5 +1,5 @@
 """
-The single reader of taxonomy.json (repo root).
+The single reader of automation/taxonomy.json.
 
 Everything that needs the category tree (rendering, classification, migration,
 review validation) goes through this module. Loading validates the tree and
@@ -14,8 +14,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Iterator
 
-_REPO_ROOT = Path(__file__).resolve().parents[1]
-TAXONOMY_PATH = _REPO_ROOT / "taxonomy.json"
+TAXONOMY_PATH = Path(__file__).resolve().parent / "taxonomy.json"
 
 _KEY_RE = re.compile(r"^[a-z][a-z0-9_]*$")
 
