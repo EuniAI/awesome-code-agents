@@ -19,35 +19,45 @@
       "id": "2511.05459",
       "title": "SWE-Compass: Towards Unified Evaluation of Agentic Coding Abilities for Large Language Models",
       "category": "software_debugging",
-      "tags": ["benchmark"],
+      "tags": [
+        "benchmark"
+      ],
       "why": "Its tasks are SWE-bench-style issue resolution. 'Unified' branding does not make it a general-purpose agent: benchmark routing dominates, so it belongs to the activity its tasks actually exercise."
     },
     {
       "id": "2605.18747",
       "title": "Code as Agent Harness",
       "category": "world_general",
-      "tags": ["survey"],
+      "tags": [
+        "survey"
+      ],
       "why": "A survey written to advocate the code-as-action paradigm across many worlds; no single world dominates, so it is general agency, not artifact."
     },
     {
       "id": "2508.18993",
       "title": "GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leverage",
       "category": "world_general",
-      "tags": ["benchmark"],
+      "tags": [
+        "benchmark"
+      ],
       "why": "Tasks span many domains and modalities with no single world dominating; the agent leverages code to act, so it is cross-world agency."
     },
     {
       "id": "2605.31463",
       "title": "PithTrain: A Compact and Agent-Native MoE Training System",
       "category": "systems",
-      "tags": ["benchmark"],
+      "tags": [
+        "benchmark"
+      ],
       "why": "The deliverable is systems-level software (a training system), not interaction in a world; it serves producing systems code."
     },
     {
       "id": "https://www.scbench.ai/",
       "title": "SlopCodeBench: Community driven benchmark for measuring feature development",
       "category": "software_development",
-      "tags": ["benchmark"],
+      "tags": [
+        "benchmark"
+      ],
       "why": "The tasks are implementing described features inside existing codebases, which is feature development, not from-scratch generation or issue repair."
     },
     {
@@ -61,7 +71,11 @@
       "id": "2508.09945",
       "title": "VisCodex: Unified Multimodal Code Generation via Merging Vision and Coding Models",
       "category": "software_code_generation",
-      "tags": ["model", "training-data", "benchmark"],
+      "tags": [
+        "model",
+        "training-data",
+        "benchmark"
+      ],
       "why": "A multimodal model, data, and benchmark whose downstream task is generating code; it serves code production, so artifact plus the released-artifact tags."
     },
     {
@@ -84,6 +98,34 @@
       "category": null,
       "tags": [],
       "why": "OUT: a general multi-agent orchestration method not focused on code as an artifact or as the language of action; the code-agent angle is incidental."
+    },
+    {
+      "id": "2607.08147",
+      "title": "Prismata: Confining Cross-Site Prompt Injection in Web Agents",
+      "category": null,
+      "tags": [],
+      "why": "OUT: the web agents it defends act via GUI primitives and natural-language instruction following, not by writing or executing code; securing non-code agents is out of scope."
+    },
+    {
+      "id": "2607.07459",
+      "title": "EmbodiedGen V2: An Agentic, Simulation-Ready 3D World Engine for Embodied AI",
+      "category": null,
+      "tags": [],
+      "why": "OUT: an agentic 3D world/asset generation engine whose artifacts are not produced as code; check the mechanism, not the output domain."
+    },
+    {
+      "id": "2607.07702",
+      "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+      "category": null,
+      "tags": [],
+      "why": "OUT: a domain-agnostic agent-optimization method (trace filtering + causal extraction) merely demonstrated on a formal-verification benchmark; the contribution is the general technique, not a code task or code agent. Benchmark routing never establishes relevance."
+    },
+    {
+      "id": "2602.12015",
+      "title": "Disentangling Ambiguity from Instability in Large Language Models: A Clinical Text-to-SQL Case Study",
+      "category": null,
+      "tags": [],
+      "why": "OUT: an uncertainty-quantification method for LLM outputs with no agent, applied to a clinical Text-to-SQL case study; a general technique with a code-shaped case study is not a code-agent paper."
     }
   ]
 }

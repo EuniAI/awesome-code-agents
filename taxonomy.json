@@ -7,7 +7,11 @@
     "excludes": [
       "Pure LLM reasoning that merely emits code as a reasoning aid (PAL/PoT style, code-interpreter math solving) with no agentic task: not agent papers, out of scope.",
       "Industry product announcements and marketing posts: this list collects frontier research papers and technical reports only. A flagship model's technical report (with architecture, training, and evaluations) is in and belongs to foundation_models; a product-launch or tooling announcement is out.",
-      "Agent papers where code is neither the product nor the language of action, e.g. GUI-driven web/OS agents acting via click/type primitives, and papers that secure or evaluate such non-code agents."
+      "Agent papers where code is neither the product nor the language of action, e.g. GUI-driven web/OS agents acting via click/type primitives, and papers that secure or evaluate such non-code agents.",
+      "No autonomous agent anywhere in the paper: methods, metrics, benchmarks-of-methods, or uncertainty/quality-estimation frameworks for LLM outputs are out of scope even when the task's output is code. A Text-to-SQL uncertainty estimator is not a code agent.",
+      "Generic ML/NLP/agent-improvement methods whose contribution is domain-agnostic and merely DEMONSTRATED on a code benchmark or dataset: the paper must be about the code task or the code agent itself, not a general technique with a code case study (restored from the old classifier's strict rules).",
+      "Domain-applied case studies (clinical, financial, legal, ...) of general techniques on code-shaped tasks, where neither a code agent nor the code task itself is the contribution.",
+      "Generation engines and pipelines whose artifacts (3D assets, scenes, media) are NOT produced as code: check the mechanism, not the output domain. An agentic 3D engine that does not emit programs is out even though CAD-as-code is in."
     ]
   },
   "principles": [
@@ -47,7 +51,7 @@
     "Ask of that task: is its ultimate purpose to produce code? Then `artifact`. Is the produced code merely the tool for completing a task in the world? Then `agency`.",
     "Lifecycle activities that emit no code themselves (testing, fuzzing, bug localization, review, comprehension, environment setup) still belong to `artifact`: improving, understanding, safeguarding, and enabling code all exist in service of producing code.",
     "For papers whose evaluations span both branches, judge the purpose the paper positions itself to serve. A code model specialized and evaluated on issue resolution serves `artifact/software_debugging` plus the model tag (a flagship general-purpose model instead goes to `foundation_models`, per step 1). A generic agent method evaluated on SWE-bench plus web/game benchmarks that do not use code as action serves `artifact`. A survey covering both branches but written to advocate code-as-action serves `agency`.",
-    "Benchmark routing dominates generalist framing. A paper evaluated on an activity-specific benchmark belongs to that activity, whatever it calls itself: SWE-bench to software_debugging, KernelBench to systems. Words like `unified`, `comprehensive`, `general`, or `generalist agent` in a title do not send a paper to a general leaf if its tasks belong to one activity or one world.",
+    "Benchmark routing dominates generalist framing. A paper evaluated on an activity-specific benchmark belongs to that activity, whatever it calls itself: SWE-bench to software_debugging, KernelBench to systems. Words like `unified`, `comprehensive`, `general`, or `generalist agent` in a title do not send a paper to a general leaf if its tasks belong to one activity or one world. Benchmark routing chooses a leaf for an IN-SCOPE paper only; it never establishes relevance. A generic method demonstrated on a code benchmark is still out of scope (see excludes); do not use routing to find it a seat.",
     "Do not classify by the paper's own output or headline metric. A dataset paper for issue-resolution agents is artifact plus training-data tag; a dataset paper for code-as-policy embodied agents is agency plus training-data tag.",
     "Nearly every paper here proposes an agent; that fact carries no signal. Classify by the purpose of the task the agent (or resource) serves."
   ],
