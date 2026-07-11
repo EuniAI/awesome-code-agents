@@ -11,9 +11,10 @@ State is GitHub-native: curated papers in data/*.yaml, handled ids in
 data/seen.json, pending proposals in the open review issue (whose body carries
 its own payload). The workflows commit whatever these entrypoints write.
 
-Learning loop: every `/edit category=` correction is appended to calibration.json
-as an owner-labeled example (templated why), so the classifier improves with each
-review. Rejects add no example: a reject can mean low quality, not out of scope.
+Learning loop: decide queues every /edit correction and reasoned /reject into
+data/feedback.json (token-free); the next crawl run distills the queue via one
+Claude call into calibration examples (quality-only rejections are excluded:
+quality is not a scope rule), so the classifier improves with each review.
 """
 
 from __future__ import annotations
