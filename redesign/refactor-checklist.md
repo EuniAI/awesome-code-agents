@@ -22,14 +22,19 @@
       config.yaml (old classifier parked in _legacy); `automation/config.py` loads
       operational config only. New data model in `automation/models.py` (Paper: id as
       identity, category as a field); old data parked in `_legacy/data/`.
-- [ ] **Classifier prompt encodes the old worldview and contradicts L1** (requires
-      "agent executes code/CLI"; would reject review/QA/localization and resource
-      papers). Rebuild the prompt by compiling scope + master_test + tree
-      (definitions/boundaries/examples) from the taxonomy module. No hand-written
-      category text anywhere.
-- [ ] **No structured-output guarantee; unlimited retries** (the 705-entry queue).
-      Use JSON response format, cap retries, add a dead-letter list surfaced for
-      manual triage instead of silent re-queueing.
+- [x] **Classifier prompt encodes the old worldview and contradicts L1.** DONE
+      2026-07-11: `automation/classify.py` compiles the prompt from taxonomy.json
+      (scope, master_test, tree with boundaries/examples, tag facets); zero
+      hand-written category text. Smoke test 3/3 with reasons citing our boundary
+      rules verbatim. Backend: `claude -p` on the subscription, scrubbed subprocess
+      env; note: setup-token auths via ANTHROPIC_AUTH_TOKEN (not
+      CLAUDE_CODE_OAUTH_TOKEN) on claude 2.1.165.
+- [x] **No structured-output guarantee; unlimited retries.** DONE 2026-07-11:
+      `--json-schema` enforced output (object root; payload in envelope
+      `structured_output`), category enum-locked to the 23 leaf keys at schema
+      level, semantic validation + exactly one retry per batch, failures marked
+      (`Classification.failed`) instead of re-queued forever. Remaining sub-step:
+      surface failed papers in a triage list when the daily pipeline is rebuilt.
 - [x] **README structure is hand-maintained; render only fills 23 scattered blocks.**
       DONE 2026-07-10: `automation/render.py` generates NAV and PAPERS zones from the
       tree between two marker pairs (idempotent, fails loudly on missing markers);
