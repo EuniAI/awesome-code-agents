@@ -20,6 +20,7 @@ def test_prompt_contains_full_taxonomy_contract():
     for key in tax.leaf_keys():
         assert f"[{key}]" in prompt, key
     assert "MASTER TEST" in prompt
+    assert "weight the TITLE higher" in prompt
     assert "PAL/PoT" in prompt                       # scope excludes made it in
     assert "playing the game is agency" in prompt    # boundary lines made it in
     assert "training-data" in prompt

@@ -93,6 +93,18 @@ def build_prompt(items: list[dict[str, str]]) -> str:
         "leaf category of the taxonomy, plus optional sparse tags, and write a summary."
     )
 
+    parts.append(
+        "JUDGING INPUTS: each paper is given as title + abstract; judge them together, "
+        "and weight the TITLE higher. The title is the authors' most deliberate "
+        "statement of the contribution. If the title carries an explicit signal (e.g. "
+        "'Manipulation Programs', 'Benchmark', 'Survey', a concrete task name) that the "
+        "abstract does not elaborate, trust the title's signal; never conclude from the "
+        "abstract's silence against the title. Also judge by what the work actually "
+        "does, not by marketing framing: words like 'unified', 'comprehensive', or "
+        "'general' in a title do not make a paper general-purpose if its tasks belong "
+        "to one category."
+    )
+
     scope = tax.scope
     parts.append("RELEVANCE SCOPE\ncollects: " + scope.get("collects", ""))
     parts.append("excludes (mark these relevant=false):\n- " + "\n- ".join(scope.get("excludes", [])))
