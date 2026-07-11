@@ -1,0 +1,9 @@
+[
+ {
+  "action": "reject",
+  "id": "2607.08147",
+  "title": "Prismata: Confining Cross-Site Prompt Injection in Web Agents",
+  "proposed": "world_browser",
+  "reason": "web agent acts via GUI primitives, not code as action"
+ }
+]
