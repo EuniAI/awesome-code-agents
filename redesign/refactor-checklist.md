@@ -100,12 +100,23 @@
 
 Owner is reviewing the migrated corpus; more error reports incoming. Pending work:
 
-- [ ] **Misclassification reports from owner** (fix + root-cause each):
-      - HTAM: Hierarchical Transition-Attended Memory for Operator Optimization:
-        abstract says experiments on KernelBench (GPU kernel/operator optimization).
-        Currently misplaced; candidates: software_maintenance (perf optimization) or
-        systems. Also root-cause why the KernelBench signal was missed.
+- [x] **Misclassification reports from owner** (fixed 2026-07-11):
+      - HTAM -> systems (KernelBench operator optimization). DONE.
+      - PerfDojo -> systems (ML library gen for hardware; same kernel cluster). DONE.
+      - Confucius Code Agent -> software_debugging (SWE-bench Pro). DONE.
+      - Kimi K2 -> world_general + model (general agentic model). DONE.
+      - SWE-Compass -> software_debugging. DONE (earlier).
+      - Dedup: removed 10 duplicates (7 same-id, 3 same-paper-different-id incl.
+        MatchFixAgent); storage.save now dedups as a safety net. DONE.
       - (owner will send more; append here)
+- [ ] **DECIDED 2026-07-11 (execute in re-audit): keep general leaves, purge via
+      benchmark-routing rule.** software_general is a misclassification magnet; owner
+      asked whether to delete it. Decision (design-decisions.md): KEEP, re-scope.
+      Rule: a paper on an activity-specific benchmark (SWE-bench->debugging,
+      KernelBench->systems) goes to that activity, not general; only surveys/positions/
+      productivity-empirical/multi-benchmark-platforms stay. Shrinks ~42 -> ~15.
+      TODO: encode this in software_general/world_general boundary in taxonomy.json,
+      then re-run classification over both general leaves and apply the purge.
 - [ ] **Rules-revision round** (do once owner's error list is in):
       - Encode owner's general-leaf semantics into taxonomy.json definitions of
         software_general/world_general: general = research on the GENERAL FORM of the
