@@ -3,6 +3,41 @@
 > Durable record of non-trivial design decisions for this repo. Newest first.
 > This repo is English-only — keep every entry in English.
 
+## 2026-07-11: review UI design ratified (a thin client over the issue protocol)
+
+Owner-ratified after a full design discussion (D1-D4). The UI is a private,
+single-user tool for the owner; readers never see it.
+
+1. SINGLE-WRITER RULE (D2): the UI only ever READS GitHub and POSTS issue
+   comments. Every repository write happens in Actions Python, exactly as today.
+   The UI is a remote control, never a second brain: no YAML in the browser, no
+   direct commits, no duplicated storage logic.
+2. QUEUE VIEW: all open paper-review issues merge into one taxonomy-grouped
+   list; rows are collapsed (title, proposed category, source marker) and expand
+   to abstract/summary/reason plus controls (approve; reject with reason; edit
+   category/tags/venue with reason).
+3. DRAFT-THEN-SUBMIT, INCREMENTAL (D3): decisions accumulate locally as a draft;
+   Submit posts ONE aggregated comment per affected issue. Multiple partial
+   submits are the normal flow: already-decided papers are derived STATELESSLY
+   by re-parsing the reviewer's comments (the UI mirrors parse_decisions) and
+   drop out of the queue; fully decided issues close themselves. No new state
+   anywhere.
+4. CHINESE IN, ENGLISH OUT (D1): the owner writes reasons in Chinese; on submit
+   the UI translates them via the GitHub Models API (the same fine-grained PAT,
+   plus Models read permission) and posts pure English. On translation failure
+   the draft stays local and submission is blocked: no Chinese ever reaches
+   comments, feedback.json, or calibration.json. Verify the Models endpoint at
+   build time; the fallback is swapping one translation function, not the design.
+5. COLLECTION MANAGEMENT (D2): a pinned Curation issue plus id-addressed
+   commands (/remove <id> [reason], /move <id> category=..., /set <id>
+   field=value) parsed by decide. The UI's collection tab reads a new
+   assets/collection.json (machine-readable export written by render) and posts
+   curation commands. Reasoned removals feed the same feedback distillation.
+6. HOSTING (D4): a static SPA under ui/, deployed to the existing GitHub Pages
+   slot (kept published solely for this; the MkDocs mirror stays deleted).
+   Auth: a fine-grained PAT (Issues RW, Models read) entered once per device;
+   the public URL is an empty shell without it.
+
 ## 2026-07-11: owner rulings from the legacy-audit review
 
 1. FRESHNESS SPLIT: the README shows only papers from the last twelve months;

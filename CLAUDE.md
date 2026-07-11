@@ -98,10 +98,13 @@ categories + keyword recall net) · tests/ (30 tests, no network).
 
 ## Roadmap (agreed, not yet built)
 
-1. **Review UI** (next): a thin layer OVER the GitHub issue protocol (GitHub
-   Pages + OAuth + API, no server). One screen per paper, buttons post the
-   /commands; desktop + mobile; source markers shown; the pool renders as one
-   queue. The pool is parked (~470 papers) until this exists.
+1. **Review UI** (next, design ratified in design-decisions.md): static SPA in
+   ui/ on the existing Pages slot; fine-grained PAT per device. Reads the pool +
+   assets/collection.json, posts aggregated /commands (draft-then-submit,
+   incremental; decided papers drop out statelessly). Chinese reasons are
+   translated to English client-side (GitHub Models) before posting. Collection
+   management via a pinned Curation issue with id-addressed /remove /move /set.
+   The pool is parked (~470 papers) until this exists.
 2. **Golden-set regression eval**: measure classifier precision on the approved
    corpus + recorded OUTs after every rule change, instead of discovering
    regressions through the owner's pain.
