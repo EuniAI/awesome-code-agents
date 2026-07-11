@@ -131,30 +131,33 @@
           "axis": "the software-lifecycle activity",
           "children": [
             {
-              "key": "software_development",
-              "emoji": "🏗️",
-              "title": "Feature Development",
-              "blurb": "Adding new features to an existing codebase.",
-              "definition": "Tasks that implement new, described functionality inside an existing codebase, integrating a feature or requirement into code that is already there.",
+              "key": "software_debugging",
+              "emoji": "🐛",
+              "title": "Debugging & Issue Resolution",
+              "blurb": "Reproducing, locating, and fixing reported bugs.",
+              "definition": "Tasks that handle a known or reported defect end to end: reproducing it, localizing its cause, and repairing the code (SWE-bench style issue resolution and automated program repair).",
               "includes": [
-                "Natural-language-driven feature addition (NoCode-bench style).",
-                "Repository-level feature implementation (FEA-Bench style).",
-                "Requirement-to-feature development inside existing projects."
+                "Issue reproduction: turning a bug report into a failing test.",
+                "Fault localization and root-cause analysis.",
+                "Program repair and issue resolution; debugging assistants using dynamic analysis.",
+                "Resource papers serving issue resolution: training data and environments (plus training-data tag), issue-resolution benchmarks."
               ],
               "boundary": [
-                "Generating a whole repository or application from scratch is `software_code_generation`; here the codebase already exists and a feature is added to it.",
-                "Fixing a reported defect is `software_debugging`."
+                "Proactive defect search with no specific reported bug is `software_testing`.",
+                "Vulnerability repair is `software_security`.",
+                "Behavior-preserving transformation is `software_maintenance`.",
+                "Surveys and scaffolds serving software engineering as a whole are `software_general`."
               ],
               "examples": [
                 {
-                  "paper": "FEA-Bench feature-implementation benchmark",
-                  "verdict": "software_development + benchmark tag",
-                  "why": "adds features into existing repositories"
+                  "paper": "SWE-bench-style issue resolution agent",
+                  "verdict": "software_debugging",
+                  "why": "repairs a reported issue in a real repository"
                 },
                 {
-                  "paper": "NoCode-bench natural-language feature addition",
-                  "verdict": "software_development + benchmark tag",
-                  "why": "the task is extending an existing codebase with a described feature"
+                  "paper": "Self-play RL to train issue-resolving agents (SWE-RL style)",
+                  "verdict": "software_debugging + training-data tag",
+                  "why": "the downstream task is issue resolution"
                 }
               ]
             },
@@ -188,102 +191,25 @@
               ]
             },
             {
-              "key": "software_testing",
-              "emoji": "🧪",
-              "title": "Testing & Verification",
-              "blurb": "Writing tests and finding bugs before release.",
-              "definition": "Tasks that proactively assure correctness before or independent of any specific reported defect: generating tests, fuzzing, and formally verifying code.",
+              "key": "software_infrastructure",
+              "emoji": "🛠️",
+              "title": "Environment Setup & CI/CD",
+              "blurb": "Setting up environments, builds, CI/CD, and version control.",
+              "definition": "Enabling tasks that make code buildable and runnable: setting up environments, repairing builds, configuring CI/CD, and operating version control.",
               "includes": [
-                "Unit and integration test generation; property-based testing.",
-                "Agentic fuzzing for general correctness.",
-                "Formal verification and proof-assisted correctness of software."
+                "Environment and dependency setup agents; build-failure repair.",
+                "CI/CD configuration and repair.",
+                "Version-control operations: branching, merging, committing, merge-conflict resolution."
               ],
               "boundary": [
-                "Reproducing a reported bug as a failing test serves diagnosing a known defect and is `software_debugging`.",
-                "Fuzzing aimed at vulnerabilities and CVEs is `software_security`.",
-                "Pure mathematical theorem proving is `agency/world_research`."
+                "Operating an OS for its own sake is `agency/world_terminal`; the interaction here serves code production.",
+                "Constructing environments at scale to train agents follows the downstream task served (e.g. `software_debugging` plus training-data tag)."
               ],
               "examples": [
                 {
-                  "paper": "An agentic fuzzer that grows a corpus for a library",
-                  "verdict": "software_testing",
-                  "why": "proactive search for unknown defects"
-                }
-              ]
-            },
-            {
-              "key": "software_debugging",
-              "emoji": "🐛",
-              "title": "Debugging & Issue Resolution",
-              "blurb": "Reproducing, locating, and fixing reported bugs.",
-              "definition": "Tasks that handle a known or reported defect end to end: reproducing it, localizing its cause, and repairing the code (SWE-bench style issue resolution and automated program repair).",
-              "includes": [
-                "Issue reproduction: turning a bug report into a failing test.",
-                "Fault localization and root-cause analysis.",
-                "Program repair and issue resolution; debugging assistants using dynamic analysis.",
-                "Resource papers serving issue resolution: training data and environments (plus training-data tag), issue-resolution benchmarks."
-              ],
-              "boundary": [
-                "Proactive defect search with no specific reported bug is `software_testing`.",
-                "Vulnerability repair is `software_security`.",
-                "Behavior-preserving transformation is `software_maintenance`.",
-                "Surveys and scaffolds serving software engineering as a whole are `software_general`."
-              ],
-              "examples": [
-                {
-                  "paper": "SWE-bench-style issue resolution agent",
-                  "verdict": "software_debugging",
-                  "why": "repairs a reported issue in a real repository"
-                },
-                {
-                  "paper": "Self-play RL to train issue-resolving agents (SWE-RL style)",
-                  "verdict": "software_debugging + training-data tag",
-                  "why": "the downstream task is issue resolution"
-                }
-              ]
-            },
-            {
-              "key": "software_review",
-              "emoji": "🔍",
-              "title": "Code Review",
-              "blurb": "Reviewing code changes and pull requests.",
-              "definition": "Tasks that judge code changes: reviewing pull requests, generating review comments, and assessing patch quality.",
-              "includes": [
-                "Automated PR review and review-comment generation.",
-                "Patch validation and change-quality judgment."
-              ],
-              "boundary": [
-                "Understanding or answering questions about code without judging a change is `software_comprehension`.",
-                "Actually repairing the defect found is `software_debugging`."
-              ],
-              "examples": [
-                {
-                  "paper": "An agent that reviews pull requests and drafts comments",
-                  "verdict": "software_review",
-                  "why": "the served task is judging changes"
-                }
-              ]
-            },
-            {
-              "key": "software_comprehension",
-              "emoji": "📖",
-              "title": "Comprehension & Documentation",
-              "blurb": "Understanding, documenting, and searching code.",
-              "definition": "Tasks that understand code and record that understanding: answering questions about codebases, summarizing, documenting, and searching code.",
-              "includes": [
-                "Repository QA and long-code understanding.",
-                "Code summarization and documentation generation (RepoAgent style).",
-                "Code search and navigation."
-              ],
-              "boundary": [
-                "Judging a change is `software_review`.",
-                "Understanding performed inside a fix pipeline belongs to the task it serves (e.g. `software_debugging`)."
-              ],
-              "examples": [
-                {
-                  "paper": "SWE-QA repository question answering",
-                  "verdict": "software_comprehension + benchmark tag",
-                  "why": "understanding the codebase is the served task"
+                  "paper": "An agent that installs dependencies so a repo's tests can run",
+                  "verdict": "software_infrastructure",
+                  "why": "enabling work in service of the codebase"
                 }
               ]
             },
@@ -307,6 +233,28 @@
                   "paper": "MigrationBench-style repository migration",
                   "verdict": "software_maintenance + benchmark tag",
                   "why": "behavior-preserving evolution of a codebase"
+                }
+              ]
+            },
+            {
+              "key": "software_review",
+              "emoji": "🔍",
+              "title": "Code Review",
+              "blurb": "Reviewing code changes and pull requests.",
+              "definition": "Tasks that judge code changes: reviewing pull requests, generating review comments, and assessing patch quality.",
+              "includes": [
+                "Automated PR review and review-comment generation.",
+                "Patch validation and change-quality judgment."
+              ],
+              "boundary": [
+                "Understanding or answering questions about code without judging a change is `software_comprehension`.",
+                "Actually repairing the defect found is `software_debugging`."
+              ],
+              "examples": [
+                {
+                  "paper": "An agent that reviews pull requests and drafts comments",
+                  "verdict": "software_review",
+                  "why": "the served task is judging changes"
                 }
               ]
             },
@@ -339,25 +287,77 @@
               ]
             },
             {
-              "key": "software_infrastructure",
-              "emoji": "🛠️",
-              "title": "Environment Setup & CI/CD",
-              "blurb": "Setting up environments, builds, CI/CD, and version control.",
-              "definition": "Enabling tasks that make code buildable and runnable: setting up environments, repairing builds, configuring CI/CD, and operating version control.",
+              "key": "software_comprehension",
+              "emoji": "📖",
+              "title": "Comprehension & Documentation",
+              "blurb": "Understanding, documenting, and searching code.",
+              "definition": "Tasks that understand code and record that understanding: answering questions about codebases, summarizing, documenting, and searching code.",
               "includes": [
-                "Environment and dependency setup agents; build-failure repair.",
-                "CI/CD configuration and repair.",
-                "Version-control operations: branching, merging, committing, merge-conflict resolution."
+                "Repository QA and long-code understanding.",
+                "Code summarization and documentation generation (RepoAgent style).",
+                "Code search and navigation."
               ],
               "boundary": [
-                "Operating an OS for its own sake is `agency/world_terminal`; the interaction here serves code production.",
-                "Constructing environments at scale to train agents follows the downstream task served (e.g. `software_debugging` plus training-data tag)."
+                "Judging a change is `software_review`.",
+                "Understanding performed inside a fix pipeline belongs to the task it serves (e.g. `software_debugging`)."
               ],
               "examples": [
                 {
-                  "paper": "An agent that installs dependencies so a repo's tests can run",
-                  "verdict": "software_infrastructure",
-                  "why": "enabling work in service of the codebase"
+                  "paper": "SWE-QA repository question answering",
+                  "verdict": "software_comprehension + benchmark tag",
+                  "why": "understanding the codebase is the served task"
+                }
+              ]
+            },
+            {
+              "key": "software_testing",
+              "emoji": "🧪",
+              "title": "Testing & Verification",
+              "blurb": "Writing tests and finding bugs before release.",
+              "definition": "Tasks that proactively assure correctness before or independent of any specific reported defect: generating tests, fuzzing, and formally verifying code.",
+              "includes": [
+                "Unit and integration test generation; property-based testing.",
+                "Agentic fuzzing for general correctness.",
+                "Formal verification and proof-assisted correctness of software."
+              ],
+              "boundary": [
+                "Reproducing a reported bug as a failing test serves diagnosing a known defect and is `software_debugging`.",
+                "Fuzzing aimed at vulnerabilities and CVEs is `software_security`.",
+                "Pure mathematical theorem proving is `agency/world_research`."
+              ],
+              "examples": [
+                {
+                  "paper": "An agentic fuzzer that grows a corpus for a library",
+                  "verdict": "software_testing",
+                  "why": "proactive search for unknown defects"
+                }
+              ]
+            },
+            {
+              "key": "software_development",
+              "emoji": "🏗️",
+              "title": "Feature Development",
+              "blurb": "Adding new features to an existing codebase.",
+              "definition": "Tasks that implement new, described functionality inside an existing codebase, integrating a feature or requirement into code that is already there.",
+              "includes": [
+                "Natural-language-driven feature addition (NoCode-bench style).",
+                "Repository-level feature implementation (FEA-Bench style).",
+                "Requirement-to-feature development inside existing projects."
+              ],
+              "boundary": [
+                "Generating a whole repository or application from scratch is `software_code_generation`; here the codebase already exists and a feature is added to it.",
+                "Fixing a reported defect is `software_debugging`."
+              ],
+              "examples": [
+                {
+                  "paper": "FEA-Bench feature-implementation benchmark",
+                  "verdict": "software_development + benchmark tag",
+                  "why": "adds features into existing repositories"
+                },
+                {
+                  "paper": "NoCode-bench natural-language feature addition",
+                  "verdict": "software_development + benchmark tag",
+                  "why": "the task is extending an existing codebase with a described feature"
                 }
               ]
             },
@@ -389,6 +389,27 @@
                   "why": "scaffolding serves every software activity at once"
                 }
               ]
+            }
+          ]
+        },
+        {
+          "key": "cad",
+          "emoji": "🧊",
+          "title": "3D & CAD",
+          "blurb": "Generating 3D models and CAD programs.",
+          "definition": "Tasks whose purpose is producing code that builds three-dimensional artifacts: CAD programs, parametric models, 3D scenes.",
+          "includes": [
+            "Text-to-CAD program generation; parametric 3D modeling via code; 3D scene construction as code."
+          ],
+          "boundary": [
+            "Operating CAD or design software as an application task is `world_apps`; here the 3D artifact's code is the deliverable.",
+            "Using 3D artifacts to act in the physical world is `world_physical`."
+          ],
+          "examples": [
+            {
+              "paper": "Generating parametric CAD programs from text",
+              "verdict": "cad",
+              "why": "delivers a 3D model as code"
             }
           ]
         },
@@ -440,67 +461,6 @@
           ]
         },
         {
-          "key": "systems",
-          "emoji": "⚙️",
-          "title": "Systems",
-          "blurb": "Writing systems code: OS, kernels, compilers, networking.",
-          "definition": "Tasks whose purpose is producing systems-level code: operating systems, kernels, compilers, networking, and distributed systems.",
-          "includes": [
-            "Kernel and OS component code; compiler and runtime code; network protocol implementations; distributed-systems code."
-          ],
-          "boundary": [
-            "Administering or operating a running system is `world_terminal`; here the systems code is the deliverable."
-          ],
-          "examples": [
-            {
-              "paper": "Kernel patch generation with agents",
-              "verdict": "systems",
-              "why": "delivers OS-level code"
-            }
-          ]
-        },
-        {
-          "key": "hardware",
-          "emoji": "🔌",
-          "title": "Hardware",
-          "blurb": "Generating hardware description code like RTL and HDL.",
-          "definition": "Tasks whose purpose is producing hardware description code: RTL/HDL, chip design, and hardware verification.",
-          "includes": [
-            "Verilog/VHDL generation; chip design agents; hardware verification via code."
-          ],
-          "boundary": [
-            "Controlling physical devices at runtime is `world_physical`; here the hardware description is the deliverable."
-          ],
-          "examples": [
-            {
-              "paper": "Verilog module generation from natural language",
-              "verdict": "hardware",
-              "why": "delivers RTL code"
-            }
-          ]
-        },
-        {
-          "key": "game",
-          "emoji": "🎮",
-          "title": "Games",
-          "blurb": "Generating game code and full game projects.",
-          "definition": "Tasks whose purpose is producing game code: game logic, levels as code, whole game codebases.",
-          "includes": [
-            "Text-to-game generation; game-logic and level-as-code synthesis; game codebase engineering."
-          ],
-          "boundary": [
-            "Playing a game by executing code is `world_game`; playing a game in order to test it serves the game's code and stays in `artifact` (here or software testing).",
-            "Building the game code is the deliverable here."
-          ],
-          "examples": [
-            {
-              "paper": "Generating a playable game from a description",
-              "verdict": "game",
-              "why": "delivers the game's codebase"
-            }
-          ]
-        },
-        {
           "key": "graphics",
           "emoji": "🎨",
           "title": "Graphics & Animation",
@@ -526,23 +486,63 @@
           ]
         },
         {
-          "key": "cad",
-          "emoji": "🧊",
-          "title": "3D & CAD",
-          "blurb": "Generating 3D models and CAD programs.",
-          "definition": "Tasks whose purpose is producing code that builds three-dimensional artifacts: CAD programs, parametric models, 3D scenes.",
+          "key": "systems",
+          "emoji": "⚙️",
+          "title": "Systems",
+          "blurb": "Writing systems code: OS, kernels, compilers, networking.",
+          "definition": "Tasks whose purpose is producing systems-level code: operating systems, kernels, compilers, networking, and distributed systems.",
           "includes": [
-            "Text-to-CAD program generation; parametric 3D modeling via code; 3D scene construction as code."
+            "Kernel and OS component code; compiler and runtime code; network protocol implementations; distributed-systems code."
           ],
           "boundary": [
-            "Operating CAD or design software as an application task is `world_apps`; here the 3D artifact's code is the deliverable.",
-            "Using 3D artifacts to act in the physical world is `world_physical`."
+            "Administering or operating a running system is `world_terminal`; here the systems code is the deliverable."
           ],
           "examples": [
             {
-              "paper": "Generating parametric CAD programs from text",
-              "verdict": "cad",
-              "why": "delivers a 3D model as code"
+              "paper": "Kernel patch generation with agents",
+              "verdict": "systems",
+              "why": "delivers OS-level code"
+            }
+          ]
+        },
+        {
+          "key": "game",
+          "emoji": "🎮",
+          "title": "Games",
+          "blurb": "Generating game code and full game projects.",
+          "definition": "Tasks whose purpose is producing game code: game logic, levels as code, whole game codebases.",
+          "includes": [
+            "Text-to-game generation; game-logic and level-as-code synthesis; game codebase engineering."
+          ],
+          "boundary": [
+            "Playing a game by executing code is `world_game`; playing a game in order to test it serves the game's code and stays in `artifact` (here or software testing).",
+            "Building the game code is the deliverable here."
+          ],
+          "examples": [
+            {
+              "paper": "Generating a playable game from a description",
+              "verdict": "game",
+              "why": "delivers the game's codebase"
+            }
+          ]
+        },
+        {
+          "key": "hardware",
+          "emoji": "🔌",
+          "title": "Hardware",
+          "blurb": "Generating hardware description code like RTL and HDL.",
+          "definition": "Tasks whose purpose is producing hardware description code: RTL/HDL, chip design, and hardware verification.",
+          "includes": [
+            "Verilog/VHDL generation; chip design agents; hardware verification via code."
+          ],
+          "boundary": [
+            "Controlling physical devices at runtime is `world_physical`; here the hardware description is the deliverable."
+          ],
+          "examples": [
+            {
+              "paper": "Verilog module generation from natural language",
+              "verdict": "hardware",
+              "why": "delivers RTL code"
             }
           ]
         }
@@ -593,6 +593,41 @@
       "axis": "the world the agent acts in (digital or physical)",
       "children": [
         {
+          "key": "world_research",
+          "emoji": "🔬",
+          "title": "Research & Discovery",
+          "blurb": "Running experiments and analysis to make discoveries.",
+          "definition": "Agents pursue knowledge through interaction: exploring data, running machine-learning experiments, and driving scientific discovery. Code is the instrument; the outcome is an insight, a model, or a finding.",
+          "includes": [
+            "Autonomous data analysis and exploration; data-science agents whose deliverable is insight.",
+            "Machine-learning engineering agents (MLE-bench style): training, tuning, and experiment management through interaction.",
+            "Scientific-discovery agents: operating scientific software and simulators for discovery, self-driving labs, AI-scientist style end-to-end research.",
+            "Pure mathematical theorem proving (Lean/Coq agents whose purpose is mathematical knowledge)."
+          ],
+          "boundary": [
+            "Chart-from-spec code generation is `artifact/graphics`; here charts are by-products of pursuing insight.",
+            "Formal verification of software correctness is `artifact/software`.",
+            "Operating scientific or professional software for routine (non-discovery) tasks is `world_apps`."
+          ],
+          "examples": [
+            {
+              "paper": "An MLE agent iterating on training pipelines (MLE-bench style)",
+              "verdict": "world_research",
+              "why": "the model is the product of experimental interaction"
+            },
+            {
+              "paper": "An AI-scientist agent running end-to-end experiments and reporting findings",
+              "verdict": "world_research",
+              "why": "the outcome is a scientific finding; code is the instrument"
+            },
+            {
+              "paper": "A Lean agent proving mathematical theorems",
+              "verdict": "world_research",
+              "why": "the purpose is mathematical knowledge, not software"
+            }
+          ]
+        },
+        {
           "key": "world_terminal",
           "emoji": "🖥️",
           "title": "Terminals & Operating Systems",
@@ -622,6 +657,54 @@
               "paper": "A CTF agent solving challenges in a shell",
               "verdict": "world_terminal",
               "why": "the task is completed through OS interaction"
+            }
+          ]
+        },
+        {
+          "key": "world_physical",
+          "emoji": "🤖",
+          "title": "The Physical World",
+          "blurb": "Controlling robots and physical systems with code.",
+          "definition": "Agents act on physical systems; code is the policy and control language for robots, devices, and other embodied platforms.",
+          "includes": [
+            "Code-as-policy robot control; embodied agents that write executable policies; device and machine control through code.",
+            "Resource papers for embodied code agents, e.g. trajectory and environment synthesis."
+          ],
+          "boundary": [
+            "Designing hardware description code is `artifact/hardware`; simulated game environments are `world_game`.",
+            "Physical experimentation whose purpose is scientific discovery (self-driving labs) is `world_research`; here the purpose is acting and manipulation itself."
+          ],
+          "examples": [
+            {
+              "paper": "Code-as-Policies style robot control",
+              "verdict": "world_physical",
+              "why": "code is the language for physical action"
+            },
+            {
+              "paper": "Synthesizing trajectories and environments for embodied code agents",
+              "verdict": "world_physical + training-data tag",
+              "why": "the downstream task is physical-world interaction"
+            }
+          ]
+        },
+        {
+          "key": "world_game",
+          "emoji": "🕹️",
+          "title": "Game Worlds",
+          "blurb": "Playing games by writing and running code.",
+          "definition": "Agents act inside game environments, using code as the policy language to play, explore, and win.",
+          "includes": [
+            "Code-as-policy game playing (Voyager style); game environments as benchmarks for code-driven agents."
+          ],
+          "boundary": [
+            "Producing a game's codebase is `artifact/game`; playing a game in order to test it also serves the game's code and belongs to `artifact`.",
+            "Here the game is the world, and playing it is the task."
+          ],
+          "examples": [
+            {
+              "paper": "An agent writing skills as code to survive in Minecraft (Voyager style)",
+              "verdict": "world_game",
+              "why": "code is the policy for acting in the game world"
             }
           ]
         },
@@ -671,89 +754,6 @@
               "paper": "Multi-agent computer use acting across desktop applications",
               "verdict": "world_apps",
               "why": "the apps are the world being acted in"
-            }
-          ]
-        },
-        {
-          "key": "world_game",
-          "emoji": "🕹️",
-          "title": "Game Worlds",
-          "blurb": "Playing games by writing and running code.",
-          "definition": "Agents act inside game environments, using code as the policy language to play, explore, and win.",
-          "includes": [
-            "Code-as-policy game playing (Voyager style); game environments as benchmarks for code-driven agents."
-          ],
-          "boundary": [
-            "Producing a game's codebase is `artifact/game`; playing a game in order to test it also serves the game's code and belongs to `artifact`.",
-            "Here the game is the world, and playing it is the task."
-          ],
-          "examples": [
-            {
-              "paper": "An agent writing skills as code to survive in Minecraft (Voyager style)",
-              "verdict": "world_game",
-              "why": "code is the policy for acting in the game world"
-            }
-          ]
-        },
-        {
-          "key": "world_physical",
-          "emoji": "🤖",
-          "title": "The Physical World",
-          "blurb": "Controlling robots and physical systems with code.",
-          "definition": "Agents act on physical systems; code is the policy and control language for robots, devices, and other embodied platforms.",
-          "includes": [
-            "Code-as-policy robot control; embodied agents that write executable policies; device and machine control through code.",
-            "Resource papers for embodied code agents, e.g. trajectory and environment synthesis."
-          ],
-          "boundary": [
-            "Designing hardware description code is `artifact/hardware`; simulated game environments are `world_game`.",
-            "Physical experimentation whose purpose is scientific discovery (self-driving labs) is `world_research`; here the purpose is acting and manipulation itself."
-          ],
-          "examples": [
-            {
-              "paper": "Code-as-Policies style robot control",
-              "verdict": "world_physical",
-              "why": "code is the language for physical action"
-            },
-            {
-              "paper": "Synthesizing trajectories and environments for embodied code agents",
-              "verdict": "world_physical + training-data tag",
-              "why": "the downstream task is physical-world interaction"
-            }
-          ]
-        },
-        {
-          "key": "world_research",
-          "emoji": "🔬",
-          "title": "Research & Discovery",
-          "blurb": "Running experiments and analysis to make discoveries.",
-          "definition": "Agents pursue knowledge through interaction: exploring data, running machine-learning experiments, and driving scientific discovery. Code is the instrument; the outcome is an insight, a model, or a finding.",
-          "includes": [
-            "Autonomous data analysis and exploration; data-science agents whose deliverable is insight.",
-            "Machine-learning engineering agents (MLE-bench style): training, tuning, and experiment management through interaction.",
-            "Scientific-discovery agents: operating scientific software and simulators for discovery, self-driving labs, AI-scientist style end-to-end research.",
-            "Pure mathematical theorem proving (Lean/Coq agents whose purpose is mathematical knowledge)."
-          ],
-          "boundary": [
-            "Chart-from-spec code generation is `artifact/graphics`; here charts are by-products of pursuing insight.",
-            "Formal verification of software correctness is `artifact/software`.",
-            "Operating scientific or professional software for routine (non-discovery) tasks is `world_apps`."
-          ],
-          "examples": [
-            {
-              "paper": "An MLE agent iterating on training pipelines (MLE-bench style)",
-              "verdict": "world_research",
-              "why": "the model is the product of experimental interaction"
-            },
-            {
-              "paper": "An AI-scientist agent running end-to-end experiments and reporting findings",
-              "verdict": "world_research",
-              "why": "the outcome is a scientific finding; code is the instrument"
-            },
-            {
-              "paper": "A Lean agent proving mathematical theorems",
-              "verdict": "world_research",
-              "why": "the purpose is mathematical knowledge, not software"
             }
           ]
         },

@@ -101,7 +101,7 @@
   - Xin Zhou
   - Xing Hu
   - David Lo
-  venue: arXiv 2025
+  venue: arXiv 2025/09
   category: software_security
   published: '2025-09-26'
   tags:
@@ -122,7 +122,7 @@
   - Jiahao Yu
   - Yizheng Chen
   - Kexin Pei
-  venue: arXiv 2025
+  venue: arXiv 2025/08
   category: software_security
   published: '2025-08-29'
   summary: Locus is an agentic directed-fuzzing framework that synthesizes and refines semantic predicates as milestones to
@@ -139,7 +139,7 @@
   - Ziqi Zhang
   - Hanxiao Lu
   - Lingming Zhang
-  venue: arXiv 2025
+  venue: arXiv 2025/06
   category: software_security
   published: '2025-06-13'
   tags:
@@ -160,7 +160,7 @@
   - Luke Griffith
   - Yu Ding
   - Yizheng Chen
-  venue: arXiv 2025/11
+  venue: arXiv 2025/04
   category: software_security
   published: '2025-04-29'
   tags:

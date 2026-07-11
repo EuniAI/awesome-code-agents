@@ -34,7 +34,7 @@
   - Sen Hu
   - Yi Xu
   - Huacan Wang
-  venue: arXiv 2026
+  venue: arXiv 2026/01
   category: software_maintenance
   published: '2026-01-12'
   summary: Controlled Self-Evolution (CSE) improves iterative code optimization via diversified planning initialization, feedback-guided
@@ -50,7 +50,7 @@
   - Khouloud Oueslati
   - Maxime Lamothe
   - Foutse Khomh
-  venue: arXiv 2025
+  venue: arXiv 2025/11
   category: software_maintenance
   published: '2025-11-05'
   summary: RefAgent is a multi-agent LLM framework for end-to-end software refactoring, with agents for planning, executing,
@@ -71,7 +71,7 @@
   - Timo Schneider
   - Luca Benini
   - Torsten Hoefler
-  venue: arXiv 2025
+  venue: arXiv 2025/11
   category: software_maintenance
   published: '2025-11-05'
   summary: PerfDojo frames ML library performance tuning as an RL game over a semantically-valid, human-readable code representation,
@@ -86,7 +86,7 @@
   - Katherine A. Rosenfeld
   - Cliff C. Kerr
   - Jessica Lundin
-  venue: arXiv 2025
+  venue: arXiv 2025/10
   category: software_maintenance
   published: '2025-10-31'
   tags:
@@ -124,7 +124,7 @@
   - Reyhaneh Jabbarvand
   - Joey Dodds
   - Daniel Kroening
-  venue: arXiv 2025
+  venue: arXiv 2025/09
   category: software_maintenance
   published: '2025-09-19'
   summary: MatchFixAgent is a multi-agent, language-agnostic LLM framework for validating functional equivalence of code translations
@@ -145,7 +145,7 @@
   - Yiming Huang
   - Zejian Yuan
   - Zejun Ma
-  venue: arXiv 2025
+  venue: arXiv 2025/07
   category: software_maintenance
   published: '2025-07-16'
   tags:
@@ -192,7 +192,7 @@
   - Yanlin Wang
   - Xin Peng
   - Zibin Zheng
-  venue: arXiv 2025/10
+  venue: arXiv 2024/11
   category: software_maintenance
   published: '2024-11-21'
   tags:

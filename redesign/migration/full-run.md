@@ -653,3 +653,19 @@
 
 ## Totals
 placed 412, out 28, failed 0, duplicates skipped 31, owner-ruled 9
+
+## Post-review corrections (2026-07-11, owner)
+
+- Tree-of-Code: reinstated -> world_general. ACL page confirms CodeAct-style agentic
+  execution (agent generates AND executes code as actions); the OUT verdict was made
+  from a stale second-hand summary.
+- Chain-of-Modality: reinstated -> world_physical. Owner has read the paper: it
+  executes generated Manipulation Programs (code) as robot actions; the abstract
+  understates the mechanism.
+- SWE-Compass: software_general -> software_debugging. SWE-style unified coding
+  evaluations are issue-resolution family; "unified" branding is not cross-activity.
+- General semantics clarified by owner: general = research on the general form of the
+  task that fits no specific leaf, NOT an overviews bin; when a specific class emerges,
+  split it out. Ordering rule: categories by size desc, general always last.
+- 144 arXiv venues corrected to the true v1 upload month (arXiv YYYY/MM from the
+  `published` field).

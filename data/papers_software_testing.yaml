@@ -23,7 +23,7 @@
   authors:
   - Jacqueline Mitchell
   - Yasser Shaaban
-  venue: arXiv 2025
+  venue: arXiv 2025/10
   category: software_testing
   published: '2025-10-31'
   tags:
@@ -67,7 +67,7 @@
   - Hailong Sun
   - Zhi Jin
   - Jin Song Dong
-  venue: arXiv 2025/09
+  venue: arXiv 2025/07
   category: software_testing
   published: '2025-07-28'
   summary: IntentionTest generates project-specific test cases from validation-intention descriptions using a retrieve-and-edit

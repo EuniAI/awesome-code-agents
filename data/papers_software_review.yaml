@@ -52,7 +52,7 @@
   - Zan Wang
   - Jiuqiao Yu
   - Junjie Chen
-  venue: arXiv 2025
+  venue: arXiv 2025/11
   category: software_review
   published: '2025-11-01'
   summary: Proposes RevAgent, an agent-based framework decomposing review comment generation into issue-specific commentator
@@ -75,7 +75,7 @@
   - Rui Xie
   - Wei Ye
   - Shikun Zhang
-  venue: arXiv 2025
+  venue: arXiv 2025/09
   category: software_review
   published: '2025-09-01'
   tags:

@@ -9,7 +9,7 @@
   - Jinghao Yan
   - Zhaoyang Lyu
   - Xudong Xu
-  venue: arXiv 2026
+  venue: arXiv 2026/05
   category: cad
   published: '2026-05-18'
   tags:
@@ -27,7 +27,7 @@
   - Wenqian Zhang
   - Weiyang Liu
   - Zhen Liu
-  venue: arXiv 2025
+  venue: arXiv 2025/10
   category: cad
   published: '2025-10-16'
   tags:
@@ -46,7 +46,7 @@
   - Benjamin Jones
   - Siyuan Bian
   - Wojciech Matusik
-  venue: arXiv 2025
+  venue: arXiv 2025/08
   category: cad
   published: '2025-08-25'
   tags:
@@ -74,7 +74,7 @@
   - Haoqian Wang
   - Zhaoyang Lyu
   - Jiangmiao Pang
-  venue: arXiv 2025
+  venue: arXiv 2025/08
   category: cad
   published: '2025-08-20'
   tags:
@@ -96,7 +96,7 @@
   - Ruofeng Tong
   - Min Tang
   - Peng Du
-  venue: arXiv 2025
+  venue: arXiv 2025/08
   category: cad
   published: '2025-08-01'
   summary: CADDesigner is an LLM-powered agent for conceptual CAD design that converts textual descriptions and sketches into
@@ -141,7 +141,7 @@
   - Rio Aguina-Kang
   - Stewart Morris
   - Daniel Ritchie
-  venue: arXiv 2025
+  venue: arXiv 2025/04
   category: cad
   published: '2025-04-07'
   summary: This paper proposes an imperative LLM-driven approach to 3D scene layout generation, having the model write a step-by-step
@@ -157,7 +157,7 @@
   - Stefan Menzel
   - Ahmed Sadik
   - Thiago Rios
-  venue: arXiv 2025
+  venue: arXiv 2025/03
   category: cad
   published: '2025-03-06'
   summary: A VLM-based multi-agent system mirrors an engineering team (requirements, CAD engineering, quality assurance) to
@@ -175,7 +175,7 @@
   - Manolis Savva
   - Angel X. Chang
   - Daniel Ritchie
-  venue: arXiv 2025
+  venue: arXiv 2025/03
   category: cad
   published: '2025-03-06'
   summary: This work learns to generate programs in a domain-specific language that predict object placements in 3D indoor
@@ -191,7 +191,7 @@
   - Paul Guerrero
   - Niloy J. Mitra
   - Daniel Ritchie
-  venue: arXiv 2025
+  venue: arXiv 2025/02
   category: cad
   published: '2025-02-13'
   summary: ShapeLib uses LLMs guided by geometric reasoning to discover libraries of programmatic 3D shape abstraction functions
@@ -373,7 +373,7 @@
   - Qiuhong Anna Wei
   - Kailiang Fu
   - Daniel Ritchie
-  venue: arXiv 2024
+  venue: arXiv 2024/02
   category: cad
   published: '2024-02-05'
   summary: This system generates open-vocabulary indoor scenes by having an LLM synthesize programs in a domain-specific layout

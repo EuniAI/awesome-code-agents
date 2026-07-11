@@ -48,60 +48,6 @@
     paper: https://arxiv.org/abs/2511.12884
     github: ''
     website: ''
-- id: '2511.05459'
-  title: 'SWE-Compass: Towards Unified Evaluation of Agentic Coding Abilities for Large Language Models'
-  authors:
-  - Jingxuan Xu
-  - Ken Deng
-  - Weihao Li
-  - Songwei Yu
-  - Huaixi Tang
-  - Haoyang Huang
-  - Zhiyi Lai
-  - Zizheng Zhan
-  - Yanan Wu
-  - Chenchen Zhang
-  - Kepeng Lei
-  - Yifan Yao
-  - Xinping Lei
-  - Wenqiang Zhu
-  - Zongxian Feng
-  - Han Li
-  - Junqi Xiong
-  - Dailin Li
-  - Zuchen Gao
-  - Kun Wu
-  - Wen Xiang
-  - Ziqi Zhan
-  - Yuanxing Zhang
-  - Wuxuan Gong
-  - Ziyuan Gao
-  - Guanxiang Wang
-  - Yirong Xue
-  - Mengtong Li
-  - Mengfei Xie
-  - Xiaojiang Zhang
-  - Jinghui Wang
-  - Wenhao Zhuang
-  - Zheng Lin
-  - Huiming Wang
-  - Zhaoxiang Zhang
-  - Yuqun Zhang
-  - Haotian Zhang
-  - Bin Chen
-  - Jiaheng Liu
-  venue: arXiv 2025/11
-  category: software_general
-  published: '2025-11-07'
-  tags:
-  - benchmark
-  summary: SWE-Compass is a comprehensive benchmark unifying 8 task types, 8 scenarios, and 10 languages into 2000 real GitHub-derived
-    instances for evaluating agentic coding abilities of LLMs. It benchmarks state-of-the-art models under SWE-Agent and Claude
-    Code frameworks, revealing difficulty hierarchies.
-  links:
-    paper: https://arxiv.org/abs/2511.05459
-    github: ''
-    website: ''
 - id: '2511.04427'
   title: Does AI-Assisted Coding Deliver? A Difference-in-Differences Study of Cursor's Impact on Software Projects
   authors:
@@ -172,7 +118,7 @@
   - Wenzhang Yang
   - Yinxing Xue
   - Lijun Zhang
-  venue: arXiv 2025
+  venue: arXiv 2025/11
   category: software_general
   published: '2025-11-02'
   tags:
@@ -224,7 +170,7 @@
   - Jiafeng Guo
   - Shenghua Liu
   - Xueqi Cheng
-  venue: arXiv 2025
+  venue: arXiv 2025/10
   category: software_general
   published: '2025-10-14'
   tags:
@@ -249,7 +195,7 @@
   - Calvin Smith
   - Ameet Talwalkar
   - Graham Neubig
-  venue: arXiv 2025
+  venue: arXiv 2025/10
   category: software_general
   published: '2025-10-10'
   tags:
@@ -276,7 +222,7 @@
   - Christian Jensen
   - Pietro Lio
   - Kwok-Yan Lam
-  venue: arXiv 2025
+  venue: arXiv 2025/10
   category: software_general
   published: '2025-10-10'
   tags:
@@ -374,7 +320,7 @@
   - Jiawei Han
   - Chen-Yu Lee
   - Tomas Pfister
-  venue: arXiv 2025
+  venue: arXiv 2025/09
   category: software_general
   published: '2025-09-29'
   summary: ReasoningBank is a generalizable memory framework that distills reasoning strategies from an agent's past successes
@@ -415,7 +361,7 @@
   - Tse-Hsun Chen
   - Yutaro Kashiwa
   - Dong Qiu
-  venue: arXiv 2025
+  venue: arXiv 2025/09
   category: software_general
   published: '2025-09-07'
   tags:
@@ -458,7 +404,7 @@
   - Kechi Zhang
   - Zhi Jin
   - Ge Li
-  venue: arXiv 2025
+  venue: arXiv 2025/07
   category: software_general
   published: '2025-07-31'
   tags:
@@ -590,7 +536,7 @@
   - Hao Li
   - Haoxiang Zhang
   - Ahmed E. Hassan
-  venue: arXiv 2025
+  venue: arXiv 2025/07
   category: software_general
   published: '2025-07-20'
   tags:
@@ -610,7 +556,7 @@
   - Nate Rush
   - Elizabeth Barnes
   - David Rein
-  venue: arXiv 2025
+  venue: arXiv 2025/07
   category: software_general
   published: '2025-07-12'
   tags:
@@ -628,7 +574,7 @@
   - Ameet Talwalkar
   - Robert Brennan
   - Graham Neubig
-  venue: arXiv 2025
+  venue: arXiv 2025/07
   category: software_general
   published: '2025-07-10'
   tags:
@@ -670,7 +616,7 @@
   - Gail Kaiser
   - Baishakhi Ray
   - Shyam Ramji
-  venue: arXiv 2025
+  venue: arXiv 2025/06
   category: software_general
   published: '2025-06-16'
   tags:
@@ -688,7 +634,7 @@
   - Ranjan Sapkota
   - Konstantinos I. Roumeliotis
   - Manoj Karkee
-  venue: arXiv 2025
+  venue: arXiv 2025/05
   category: software_general
   published: '2025-05-26'
   tags:
@@ -711,7 +657,7 @@
   - Junda He
   - Xin Xia
   - David Lo
-  venue: arXiv 2025
+  venue: arXiv 2025/05
   category: software_general
   published: '2025-05-13'
   tags:
@@ -728,7 +674,7 @@
   - Maxime Robeyns
   - Martin Szummer
   - Laurence Aitchison
-  venue: arXiv 2025
+  venue: arXiv 2025/04
   category: software_general
   published: '2025-04-21'
   summary: A self-improving agent system that autonomously edits its own code to boost performance, tested on SWE-Bench Verified
@@ -744,7 +690,7 @@
   - Qihong Chen
   - Jiawei Li
   - Iftekhar Ahmed
-  venue: arXiv 2025
+  venue: arXiv 2025/03
   category: software_general
   published: '2025-03-15'
   tags:
@@ -760,7 +706,7 @@
   authors:
   - Pranjal Aggarwal
   - Sean Welleck
-  venue: arXiv 2025/10
+  venue: arXiv 2025/02
   category: software_general
   published: '2025-02-24'
   tags:
@@ -920,7 +866,7 @@
   - Tien N. Nguyen
   - Phong X. Nguyen
   - Nghi D. Q. Bui
-  venue: arXiv 2025
+  venue: arXiv 2024/09
   category: software_general
   published: '2024-09-09'
   summary: HyperAgent is a generalist multi-agent system with Planner, Navigator, Code Editor, and Executor roles that handles
@@ -940,7 +886,7 @@
   - Zhenpeng Chen
   - Lingming Zhang
   - Yiling Lou
-  venue: arXiv 2024
+  venue: arXiv 2024/09
   category: software_general
   published: '2024-09-04'
   tags:
@@ -1046,7 +992,7 @@
   - Jinu Jang
   - Roshanak Zilouchian Moghaddam
   - Neel Sundaresan
-  venue: arXiv 2025
+  venue: arXiv 2024/03
   category: software_general
   published: '2024-03-13'
   summary: AutoDev is a fully automated AI-driven software development framework where autonomous agents edit files, build,

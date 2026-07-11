@@ -111,6 +111,60 @@
     paper: https://arxiv.org/abs/2511.13646
     github: https://github.com/OpenAutoCoder/live-swe-agent
     website: ''
+- id: '2511.05459'
+  title: 'SWE-Compass: Towards Unified Evaluation of Agentic Coding Abilities for Large Language Models'
+  authors:
+  - Jingxuan Xu
+  - Ken Deng
+  - Weihao Li
+  - Songwei Yu
+  - Huaixi Tang
+  - Haoyang Huang
+  - Zhiyi Lai
+  - Zizheng Zhan
+  - Yanan Wu
+  - Chenchen Zhang
+  - Kepeng Lei
+  - Yifan Yao
+  - Xinping Lei
+  - Wenqiang Zhu
+  - Zongxian Feng
+  - Han Li
+  - Junqi Xiong
+  - Dailin Li
+  - Zuchen Gao
+  - Kun Wu
+  - Wen Xiang
+  - Ziqi Zhan
+  - Yuanxing Zhang
+  - Wuxuan Gong
+  - Ziyuan Gao
+  - Guanxiang Wang
+  - Yirong Xue
+  - Mengtong Li
+  - Mengfei Xie
+  - Xiaojiang Zhang
+  - Jinghui Wang
+  - Wenhao Zhuang
+  - Zheng Lin
+  - Huiming Wang
+  - Zhaoxiang Zhang
+  - Yuqun Zhang
+  - Haotian Zhang
+  - Bin Chen
+  - Jiaheng Liu
+  venue: arXiv 2025/11
+  category: software_debugging
+  published: '2025-11-07'
+  tags:
+  - benchmark
+  summary: SWE-Compass is a comprehensive benchmark unifying 8 task types, 8 scenarios, and 10 languages into 2000 real GitHub-derived
+    instances for evaluating agentic coding abilities of LLMs. It benchmarks state-of-the-art models under SWE-Agent and Claude
+    Code frameworks, revealing difficulty hierarchies.
+  links:
+    paper: https://arxiv.org/abs/2511.05459
+    github: ''
+    website: ''
 - id: '2511.02352'
   title: 'SWE-Sharp-Bench: A Reproducible Benchmark for C# Software Engineering Tasks'
   authors:
@@ -138,7 +192,7 @@
   - Hao Li
   - Bram Adams
   - Ahmed E. Hassan
-  venue: arXiv 2025
+  venue: arXiv 2025/11
   category: software_debugging
   published: '2025-11-02'
   summary: HAFixAgent is a history-aware automated program repair agent that injects blame-derived repository heuristics into
@@ -155,7 +209,7 @@
   - Xiang Li
   - Federica Sarro
   - He Ye
-  venue: arXiv 2025/11
+  venue: arXiv 2025/10
   category: software_debugging
   published: '2025-10-31'
   tags:
@@ -234,7 +288,7 @@
   authors:
   - Pengfei Gao
   - Chao Peng
-  venue: arXiv 2025/11
+  venue: arXiv 2025/10
   category: software_debugging
   published: '2025-10-19'
   tags:
@@ -271,7 +325,7 @@
   - Shaowei Wang
   - Kui Liu
   - Ruiqi Pan
-  venue: arXiv 2025
+  venue: arXiv 2025/10
   category: software_debugging
   published: '2025-10-13'
   summary: Lingxi extracts procedural knowledge from historical issue-fixing data to guide agents in repository-level issue
@@ -287,7 +341,7 @@
   - Spandan Garg
   - Ben Steenhoek
   - Yufan Huang
-  venue: arXiv 2025
+  venue: arXiv 2025/10
   category: software_debugging
   published: '2025-10-10'
   tags:
@@ -420,7 +474,7 @@
   - Yang Gao
   - Zhilin Yang
   - Tianyu Liu
-  venue: arXiv 2025
+  venue: arXiv 2025/09
   category: software_debugging
   published: '2025-09-27'
   tags:
@@ -467,7 +521,7 @@
   - Wenyun Zhao
   - Yiling Lou
   - Xin Peng
-  venue: arXiv 2025/10
+  venue: arXiv 2025/09
   category: software_debugging
   published: '2025-09-25'
   summary: RepoLens extracts and clusters conceptual knowledge from repositories into high-level concerns to improve LLM-based
@@ -499,7 +553,7 @@
   - Noah Jacobson
   - Bing Liu
   - Brad Kenstler
-  venue: arXiv 2025
+  venue: arXiv 2025/09
   category: software_debugging
   published: '2025-09-21'
   tags:
@@ -544,7 +598,7 @@
   - Jie M. Zhang
   - Pinjia He
   - Ahmed E. Hassan
-  venue: arXiv 2025
+  venue: arXiv 2025/09
   category: software_debugging
   published: '2025-09-11'
   tags:
@@ -565,7 +619,7 @@
   - Siyao Liu
   - Yurong Wu
   - Kai Shen
-  venue: arXiv 2025
+  venue: arXiv 2025/09
   category: software_debugging
   published: '2025-09-10'
   tags:
@@ -644,7 +698,7 @@
   - Filipp Fisin
   - Sergei Skvortsov
   - Boris Yangel
-  venue: arXiv 2025
+  venue: arXiv 2025/08
   category: software_debugging
   published: '2025-08-05'
   summary: Presents an RL pipeline (rejection fine-tuning plus DAPO) for training long-context, multi-turn software engineering
@@ -698,7 +752,7 @@
   - Youssef Esseddiq
   - Yanruo Yang
   - Ahmed Hassan
-  venue: arXiv 2025
+  venue: arXiv 2025/08
   category: software_debugging
   published: '2025-08-03'
   tags:
@@ -717,7 +771,7 @@
   - Moumita Asad
   - Rafed Muhammad Yasir
   - Sam Malek
-  venue: arXiv 2025/10
+  venue: arXiv 2025/08
   category: software_debugging
   published: '2025-08-01'
   summary: GenLoc combines semantic retrieval with LLM-driven code exploration to iteratively localize buggy files from bug
@@ -743,7 +797,7 @@
   - Yingfei Xiong
   - Chao Peng
   - Xia Liu
-  venue: arXiv 2025
+  venue: arXiv 2025/07
   category: software_debugging
   published: '2025-07-31'
   summary: Trae Agent is an agent-based ensemble reasoning approach for repository-level GitHub issue resolution, using modular
@@ -765,7 +819,7 @@
   - Weiguo Sun
   - Lin Cao
   - Qianxiang Wang
-  venue: arXiv 2025
+  venue: arXiv 2025/07
   category: software_debugging
   published: '2025-07-31'
   summary: SWE-Exp introduces an experience bank that distills reusable knowledge from prior software issue-resolution trajectories
@@ -787,7 +841,7 @@
   - Yantao Jia
   - Tao Huang
   - Qianxiang Wang
-  venue: arXiv 2025
+  venue: arXiv 2025/07
   category: software_debugging
   published: '2025-07-31'
   summary: SWE-Debate is a multi-agent debate framework that uses fault propagation traces and structured debate to consolidate
@@ -822,7 +876,7 @@
   - Claire Le Goues
   - Martin Monperrus
   - He Ye
-  venue: arXiv 2025
+  venue: arXiv 2025/07
   category: software_debugging
   published: '2025-07-26'
   summary: Prometheus is a memory-centric multi-agent framework that builds a unified knowledge graph over repositories to
@@ -899,7 +953,7 @@
   - Dmitry Babayev
   - Alena Fenogenova
   - Valentin Malykh
-  venue: arXiv 2025
+  venue: arXiv 2025/07
   category: software_debugging
   published: '2025-07-15'
   tags:
@@ -975,7 +1029,7 @@
   - Jian Zhang
   - Xiaofei Xie
   - Chunyang Chen
-  venue: arXiv 2025
+  venue: arXiv 2025/06
   category: software_debugging
   published: '2025-06-19'
   summary: GUIRepair resolves multimodal GitHub issues by translating GUI screenshots into reproduced code (Image2Code) and
@@ -991,7 +1045,7 @@
   - Alex Mathai
   - Anindya Chakraborty
   - Baishakhi Ray
-  venue: arXiv 2025
+  venue: arXiv 2025/06
   category: software_debugging
   published: '2025-06-19'
   summary: SemAgent is a program repair agent that leverages issue, code, and execution semantics to generate complete, non-overfitting
@@ -1010,7 +1064,7 @@
   - Zhao Wei
   - Hai Yu
   - Zhiliang Zhu
-  venue: arXiv 2025
+  venue: arXiv 2025/06
   category: software_debugging
   published: '2025-06-15'
   tags:
@@ -1028,7 +1082,7 @@
   - Thomas Joshi
   - Shayan Chowdhury
   - Fatih Uysal
-  venue: arXiv 2025
+  venue: arXiv 2025/06
   category: software_debugging
   published: '2025-06-13'
   tags:
@@ -1049,7 +1103,7 @@
   - Yuntao Ma
   - Nikhil Barhate
   - Sean Hendryx
-  venue: arXiv 2025
+  venue: arXiv 2025/06
   category: software_debugging
   published: '2025-06-13'
   summary: Agent-RLVR trains software engineering agents using reinforcement learning with verifiable rewards augmented by
@@ -1071,7 +1125,7 @@
   - Yingtian Zou
   - Duyu Tang
   - Zibin Zheng
-  venue: arXiv 2025
+  venue: arXiv 2025/06
   category: software_debugging
   published: '2025-06-12'
   tags:
@@ -1092,7 +1146,7 @@
   - Song Wang
   - Shoubin Li
   - Qing Wang
-  venue: arXiv 2025
+  venue: arXiv 2025/06
   category: software_debugging
   published: '2025-06-12'
   summary: ExpeRepair is a repository-level program repair framework using dual episodic/semantic memory to reuse past repair
@@ -1293,7 +1347,7 @@
   - Maria Trofimova
   - Daria Litvintseva
   - Boris Yangel
-  venue: arXiv 2025
+  venue: arXiv 2025/05
   category: software_debugging
   published: '2025-05-26'
   tags:
@@ -1342,7 +1396,7 @@
   - Hang Yu
   - Jianguo Li
   - Peng Di
-  venue: arXiv 2025
+  venue: arXiv 2025/05
   category: software_debugging
   published: '2025-05-22'
   tags:
@@ -1462,7 +1516,7 @@
   - Cuong Le Chi
   - Tien N. Nguyen
   - Nghi D. Q. Bui
-  venue: arXiv 2025
+  venue: arXiv 2025/04
   category: software_debugging
   published: '2025-04-20'
   tags:
@@ -1490,7 +1544,7 @@
   - Anoop Deoras
   - Giovanni Zappella
   - Laurent Callot
-  venue: arXiv 2025
+  venue: arXiv 2025/04
   category: software_debugging
   published: '2025-04-11'
   tags:
@@ -1511,7 +1565,7 @@
   - Liang Zheng
   - Koushik Sen
   - Ion Stoica
-  venue: arXiv 2025
+  venue: arXiv 2025/04
   category: software_debugging
   published: '2025-04-09'
   tags:
@@ -1547,7 +1601,7 @@
   - Rui Long
   - Kai Shen
   - Liang Xiang
-  venue: arXiv 2025
+  venue: arXiv 2025/04
   category: software_debugging
   published: '2025-04-03'
   tags:
@@ -1571,7 +1625,7 @@
   - Jue Chen
   - Fei Huang
   - Binhua Li
-  venue: arXiv 2025
+  venue: arXiv 2025/03
   category: software_debugging
   published: '2025-03-31'
   tags:
@@ -1613,7 +1667,7 @@
   - Feng Liu
   - Bach Le
   - Haoye Tian
-  venue: arXiv 2025/10
+  venue: arXiv 2025/03
   category: software_debugging
   published: '2025-03-27'
   summary: KGCompass builds a repository-aware knowledge graph linking issues, PRs, and code entities to narrow fault localization
@@ -1637,7 +1691,7 @@
   - Minseon Kim
   - Alessandro Sordoni
   - Marc-Alexandre Côté
-  venue: arXiv 2025
+  venue: arXiv 2025/03
   category: software_debugging
   published: '2025-03-27'
   tags:
@@ -1658,7 +1712,7 @@
   - Feng Liu
   - Bach Le
   - Haoye Tian
-  venue: arXiv 2025
+  venue: arXiv 2025/03
   category: software_debugging
   published: '2025-03-27'
   summary: KGCompass builds a repository-aware knowledge graph linking issues, PRs, and code entities to narrow fault localization
@@ -1677,7 +1731,7 @@
   - Jia Li
   - Yunfei Zhao
   - Zhi Jin
-  venue: arXiv 2025
+  venue: arXiv 2025/03
   category: software_debugging
   published: '2025-03-24'
   summary: SEAlign is an alignment training framework using MCTS-based fine-grained preference optimization to better prepare
@@ -1693,7 +1747,7 @@
   - Islem Bouzenia
   - Michael Pradel
   - Ali Mesbah
-  venue: arXiv 2025/10
+  venue: arXiv 2025/03
   category: software_debugging
   published: '2025-03-20'
   summary: Issue2Test generates reproducing test cases from GitHub issue reports by understanding the issue, drafting a candidate
@@ -1901,7 +1955,7 @@
   - Renyao Wei
   - Aaron Sun
   - Satish Chandra
-  venue: arXiv 2025/05
+  venue: arXiv 2025/02
   category: software_debugging
   published: '2025-02-03'
   summary: This industry paper from Google presents an agent-based bug reproduction test generator that outperforms LIBRO
@@ -2296,7 +2350,7 @@
   - Fei Huang
   - Xiaodong Gu
   - Yongbin Li
-  venue: arXiv 2024
+  venue: arXiv 2024/11
   category: software_debugging
   published: '2024-11-21'
   summary: EvoCoder is a multi-agent continuous learning framework that reproduces defective code from software issues, using
@@ -2359,7 +2413,7 @@
   - Yuxi Xie
   - Anirudh Goyal
   - William Wang
-  venue: arXiv 2025
+  venue: arXiv 2024/10
   category: software_debugging
   published: '2024-10-26'
   summary: SWE-Search combines Monte Carlo Tree Search with a hybrid value function and multi-agent debate to help software

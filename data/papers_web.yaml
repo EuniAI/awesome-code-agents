@@ -68,7 +68,7 @@
   - Jingyu Xiao
   - Yintong Huo
   - Michael R. Lyu
-  venue: arXiv 2025/10
+  venue: arXiv 2025/09
   category: web
   published: '2025-09-29'
   summary: TDDev is a test-driven-development multi-agent framework that generates full-stack web applications (front-end
@@ -88,7 +88,7 @@
   - Junting Pan
   - Mingjie Zhan
   - Hongsheng Li
-  venue: arXiv 2025
+  venue: arXiv 2025/09
   category: web
   published: '2025-09-26'
   summary: WebGen-Agent uses multi-level visual and GUI-agent feedback with step-level RL (Step-GRPO) to iteratively generate
@@ -153,7 +153,7 @@
   - Qunzhong Wang
   - Michael R. Lyu
   - Xiangyu Yue
-  venue: arXiv 2025
+  venue: arXiv 2025/07
   category: web
   published: '2025-07-30'
   summary: ScreenCoder is a modular multi-agent framework that decomposes UI-to-code generation into grounding, planning,
@@ -172,7 +172,7 @@
   - Jinzhou Du
   - Lingyun Sun
   - Liuqing Chen
-  venue: arXiv 2025
+  venue: arXiv 2025/06
   category: web
   published: '2025-06-16'
   summary: DesignCoder is a hierarchy-aware, self-correcting framework that generates React Native UI code from mockups using
@@ -211,7 +211,7 @@
   - Junliang Liu
   - Yintong Huo
   - Michael R. Lyu
-  venue: arXiv 2025
+  venue: arXiv 2025/06
   category: web
   published: '2025-06-06'
   tags:
@@ -236,7 +236,7 @@
   - Aojun Zhou
   - Mingjie Zhan
   - Hongsheng Li
-  venue: arXiv 2025
+  venue: arXiv 2025/05
   category: web
   published: '2025-05-06'
   tags:
@@ -310,7 +310,7 @@
   - Yintong Huo
   - Wenxuan Wang
   - Michael R. Lyu
-  venue: arXiv 2024
+  venue: arXiv 2024/12
   category: web
   published: '2024-12-19'
   tags:
@@ -334,7 +334,7 @@
   - Zhiyao Xu
   - Yuhang Wang
   - Michael R. Lyu
-  venue: arXiv 2025
+  venue: arXiv 2024/11
   category: web
   published: '2024-11-05'
   tags:

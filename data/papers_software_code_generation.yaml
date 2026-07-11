@@ -107,7 +107,7 @@
   - Jiawei Han
   - Benoit Schillings
   - Jiao Sun
-  venue: arXiv 2025
+  venue: arXiv 2025/10
   category: software_code_generation
   published: '2025-10-08'
   tags:
@@ -154,7 +154,7 @@
   - Qi Chen
   - Scarlett Li
   - Mao Yang
-  venue: arXiv 2025
+  venue: arXiv 2025/09
   category: software_code_generation
   published: '2025-09-19'
   tags:
@@ -214,7 +214,7 @@
   - Meng Zhang
   - Yichen Li
   - Michael R. Lyu
-  venue: arXiv 2025/09
+  venue: arXiv 2025/08
   category: software_code_generation
   published: '2025-08-13'
   tags:
@@ -237,7 +237,7 @@
   - Hao Yu
   - Cunjian Huang
   - Tao Xie
-  venue: arXiv 2025
+  venue: arXiv 2025/07
   category: software_code_generation
   published: '2025-07-21'
   tags:
@@ -283,7 +283,7 @@
   - Lei Han
   - Zhiyuan Liu
   - Maosong Sun
-  venue: arXiv 2025
+  venue: arXiv 2025/05
   category: software_code_generation
   published: '2025-05-28'
   summary: Co-Saving is a resource-aware multi-agent system for software development that uses learned 'shortcuts' from successful
@@ -301,7 +301,7 @@
   - Han Zhou
   - Yingxu Wang
   - Zaiqiao Meng
-  venue: arXiv 2025
+  venue: arXiv 2025/05
   category: software_code_generation
   published: '2025-05-24'
   summary: SEW is a self-evolving multi-agent framework that automatically designs and optimizes agentic workflows for code
@@ -319,7 +319,7 @@
   - Luca Weihs
   - Mohit Bansal
   - Tanmay Gupta
-  venue: arXiv 2025
+  venue: arXiv 2025/02
   category: software_code_generation
   published: '2025-02-21'
   summary: MutaGReP searches for repository-grounded natural-language plans via mutation-guided tree search to help LLMs use
@@ -526,7 +526,7 @@
   - Shen Zheng
   - He Zhu
   - Ming Zhu
-  venue: arXiv 2025/05
+  venue: arXiv 2024/11
   category: software_code_generation
   published: '2024-11-30'
   tags:
@@ -547,7 +547,7 @@
   - Caiming Xiong
   - Silvio Savarese
   - Doyen Sahoo
-  venue: arXiv 2024
+  venue: arXiv 2024/11
   category: software_code_generation
   published: '2024-11-07'
   summary: CodeTree uses agent-guided tree search to explore coding strategies, generate solutions, and refine them with execution
@@ -563,7 +563,7 @@
   - Yuxuan Chen
   - Yuan Yuan
   - Minlie Huang
-  venue: arXiv 2025
+  venue: arXiv 2024/10
   category: software_code_generation
   published: '2024-10-09'
   summary: Seeker is a multi-agent framework using an intermediate representation to detect fragile code segments and inject
@@ -638,7 +638,7 @@
   - Haiyan Zhao
   - Zhi Jin
   - Qianxiang Wang
-  venue: arXiv 2024
+  venue: arXiv 2024/06
   category: software_code_generation
   published: '2024-06-11'
   summary: GraphCoder improves repository-level code completion using a code context graph capturing control- and data-flow
@@ -697,7 +697,7 @@
   - Yingli Zhang
   - Zhiyuan Liu
   - Maosong Sun
-  venue: arXiv 2024
+  venue: arXiv 2024/05
   category: software_code_generation
   published: '2024-05-07'
   summary: Proposes Iterative Experience Refinement, letting LLM software-developing agents iteratively refine a dynamic pool
@@ -712,7 +712,7 @@
   authors:
   - Yoichi Ishibashi
   - Yoshimasa Nishimura
-  venue: arXiv 2024
+  venue: arXiv 2024/04
   category: software_code_generation
   published: '2024-04-02'
   summary: Self-Organized Agents (SoA) is a multi-agent framework that dynamically scales the number of agents to generate
@@ -926,7 +926,7 @@
   - Qingwen Bu
   - Yuhao Qing
   - Heming Cui
-  venue: arXiv 2024
+  venue: arXiv 2023/12
   category: software_code_generation
   published: '2023-12-20'
   summary: AgentCoder is a multi-agent framework with programmer, test-designer, and test-executor agents collaborating to

@@ -1,3 +1,22 @@
+- id: '2504.13351'
+  title: 'Chain-of-Modality: Learning Manipulation Programs from Multimodal Human Videos with Vision-Language-Models'
+  authors:
+  - Chen Wang
+  - Fei Xia
+  - Wenhao Yu
+  - Tingnan Zhang
+  - Ruohan Zhang
+  - C. Karen Liu
+  - Li Fei-Fei
+  - Jie Tan
+  - Jacky Liang
+  venue: ICRA 2025
+  category: world_physical
+  published: '2025-04-17'
+  links:
+    paper: https://arxiv.org/abs/2504.13351
+    github: ''
+    website: https://chain-of-modality.github.io/
 - id: https://openaccess.thecvf.com/content/CVPR2025W/CV2/html/Zook_GRS_Generating_Robotic_Simulation_Tasks_from_Real-World_Images_CVPRW_2025_paper.html
   title: 'GRS: Generating Robotic Simulation Tasks from Real-World Images'
   authors:
@@ -55,7 +74,7 @@
   - Huazhe Xu
   - Mingyu Ding
   - Ping Luo
-  venue: arXiv 2024
+  venue: arXiv 2024/02
   category: world_physical
   published: '2024-02-22'
   tags:
@@ -106,7 +125,7 @@
   - Yu Qiao
   - Peng Gao
   - Hongsheng Li
-  venue: arXiv 2023
+  venue: arXiv 2023/05
   category: world_physical
   published: '2023-05-18'
   summary: Instruct2Act maps multi-modal instructions to Python programs that orchestrate perception (SAM, CLIP) and action
@@ -123,7 +142,7 @@
   - Rogerio Bonatti
   - Arthur Bucker
   - Ashish Kapoor
-  venue: arXiv 2023
+  venue: arXiv 2023/02
   category: world_physical
   published: '2023-02-20'
   summary: This study explores using ChatGPT with prompt engineering and a function library to generate code for controlling

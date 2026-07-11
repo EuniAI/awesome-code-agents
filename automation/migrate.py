@@ -183,7 +183,9 @@ def _review_sheet(sample: list[tuple[str, Paper]], verdicts: list[Classification
 # Matched by title fragment; None = out of scope, else (category, tags).
 RULING_OVERRIDES: list[tuple[str, tuple[str, list[str]] | None]] = [
     ("Robo-Blocks", None),
-    ("Tree-of-Code", None),
+    ("Tree-of-Code", ("world_general", [])),
+    ("Chain-of-Modality", ("world_physical", [])),
+    ("SWE-Compass", ("software_debugging", ["benchmark"])),
     ("Can LLMs Replace Manual Annotation", None),
     ("Multi-Agent Collaboration via Evolving Orchestration", None),
     ("Code as Agent Harness", ("world_general", ["survey"])),

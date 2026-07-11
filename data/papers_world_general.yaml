@@ -218,7 +218,7 @@
   - Binxing Jiao
   - Daxin Jiang
   - Pin Lyu
-  venue: arXiv 2025
+  venue: arXiv 2025/08
   category: world_general
   published: '2025-08-26'
   tags:
@@ -234,7 +234,7 @@
   - Siwei Liu
   - Jinyuan Fang
   - Zaiqiao Meng
-  venue: arXiv 2025
+  venue: arXiv 2025/07
   category: world_general
   published: '2025-07-04'
   summary: EvoAgentX is a platform that automates generation, execution, and evolutionary optimization of multi-agent workflows,
@@ -252,7 +252,7 @@
   - Xingyao Wang
   - Valerie Chen
   - Graham Neubig
-  venue: arXiv 2025
+  venue: arXiv 2025/06
   category: world_general
   published: '2025-06-03'
   summary: OpenHands-Versa is a generalist agent built from a minimal set of general tools (code editing/execution, web search,
@@ -300,7 +300,7 @@
   - Pengcheng Yin
   - Tao Yu
   - Sercan Ö. Arık
-  venue: arXiv 2025
+  venue: arXiv 2025/01
   category: world_general
   published: '2025-01-18'
   tags:
@@ -310,6 +310,21 @@
     web, and desktop environments.
   links:
     paper: https://arxiv.org/abs/2501.10893
+    github: ''
+    website: ''
+- id: https://aclanthology.org/2025.findings-acl.509/
+  title: 'Tree-of-Code: A Self-Growing Tree Framework for End-to-End Code Generation and Execution in Complex Tasks'
+  authors:
+  - Ziyi Ni
+  - Yifan Li
+  - Ning Yang
+  - Dou Shen
+  - Pin Lyu
+  - Daxiang Dong
+  venue: ACL 2025 Findings
+  category: world_general
+  links:
+    paper: https://aclanthology.org/2025.findings-acl.509/
     github: ''
     website: ''
 - id: '2402.01030'

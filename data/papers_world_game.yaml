@@ -6,7 +6,7 @@
   - Elias Stengel-Eskin
   - Jaemin Cho
   - Mohit Bansal
-  venue: arXiv 2025
+  venue: arXiv 2025/10
   category: world_game
   published: '2025-10-14'
   tags:
@@ -27,7 +27,7 @@
   - Adrian Weller
   - Marta Kryven
   - Kevin Ellis
-  venue: arXiv 2025
+  venue: arXiv 2025/05
   category: world_game
   published: '2025-05-16'
   summary: PoE-World synthesizes programmatic world models via LLM-generated products of programmatic experts, learning complex
@@ -41,7 +41,7 @@
   title: Develop AI Agents for System Engineering in Factorio
   authors:
   - Neel Kant
-  venue: arXiv 2025
+  venue: arXiv 2025/02
   category: world_game
   published: '2025-02-03'
   tags:

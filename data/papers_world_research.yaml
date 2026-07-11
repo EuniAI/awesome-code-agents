@@ -69,7 +69,7 @@
   - Meihao Fan
   - Guoliang Li
   - Xiaoyong Du
-  venue: arXiv 2025
+  venue: arXiv 2025/10
   category: world_research
   published: '2025-10-19'
   tags:
@@ -111,7 +111,7 @@
   - Chao Zhang
   - Sherry Yang
   - Bo Dai
-  venue: arXiv 2025
+  venue: arXiv 2025/10
   category: world_research
   published: '2025-10-08'
   tags:
@@ -134,7 +134,7 @@
   - Ahmed Masry
   - Shafiq Joty
   - Enamul Hoque
-  venue: arXiv 2025
+  venue: arXiv 2025/10
   category: world_research
   published: '2025-10-05'
   tags:
@@ -152,7 +152,7 @@
   - Sherry Yang
   - Joy He-Yueya
   - Percy Liang
-  venue: arXiv 2025
+  venue: arXiv 2025/09
   category: world_research
   published: '2025-09-01'
   tags:
@@ -178,7 +178,7 @@
   - Shikhar Murty
   - Tenghao Huang
   - Christopher D. Manning
-  venue: arXiv 2025
+  venue: arXiv 2025/08
   category: world_research
   published: '2025-08-02'
   tags:
@@ -274,7 +274,7 @@
   - Shanda Li
   - Ameet Talwalkar
   - Yiming Yang
-  venue: arXiv 2025
+  venue: arXiv 2025/06
   category: world_research
   published: '2025-06-25'
   tags:
@@ -301,7 +301,7 @@
   - Yunjun Gao
   - Huajun Chen
   - Ningyu Zhang
-  venue: arXiv 2025
+  venue: arXiv 2025/06
   category: world_research
   published: '2025-06-12'
   summary: AutoMind is an adaptive LLM agent for automated data science that combines an expert knowledge base, knowledgeable
@@ -322,7 +322,7 @@
   - Bo Zhang
   - Lei Bai
   - Siheng Chen
-  venue: arXiv 2025
+  venue: arXiv 2025/05
   category: world_research
   published: '2025-05-29'
   tags:
@@ -343,7 +343,7 @@
   - Jinwoo Shin
   - Sercan Ö. Arık
   - Tomas Pfister
-  venue: arXiv 2025
+  venue: arXiv 2025/05
   category: world_research
   published: '2025-05-27'
   summary: MLE-STAR builds an ML engineering agent that retrieves models via search and iteratively refines solutions through
@@ -401,7 +401,7 @@
   - Biqing Qi
   - Lingpeng Kong
   - Zhiyong Wu
-  venue: arXiv 2025/06
+  venue: arXiv 2025/05
   category: world_research
   published: '2025-05-26'
   tags:
@@ -421,7 +421,7 @@
   - Manasi Patwardhan
   - Lovekesh Vig
   - Gautam Shroff
-  venue: arXiv 2025
+  venue: arXiv 2025/04
   category: world_research
   published: '2025-04-28'
   summary: ResearchCodeAgent is a multi-agent system that codifies ML research methodologies from papers into runnable implementations
@@ -439,7 +439,7 @@
   - Yinan Yu
   - Robert Feldt
   - Dhasarathy Parthasarathy
-  venue: arXiv 2025
+  venue: arXiv 2025/03
   category: world_research
   published: '2025-03-27'
   summary: GateLens is an LLM agent architecture that uses relational algebra as an intermediate representation to translate
@@ -491,7 +491,7 @@
   - Ian Kaplan
   - Deniss Jacenko
   - Yuxiang Wu
-  venue: arXiv 2025
+  venue: arXiv 2025/02
   category: world_research
   published: '2025-02-18'
   summary: AIDE frames machine learning engineering as a code-optimization tree search problem, iteratively refining candidate
@@ -515,7 +515,7 @@
   - Tejal Patwardhan
   - Lilian Weng
   - Aleksander Mądry
-  venue: arXiv 2025
+  venue: arXiv 2024/10
   category: world_research
   published: '2024-10-09'
   tags:
