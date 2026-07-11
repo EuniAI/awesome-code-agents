@@ -526,32 +526,6 @@
     paper: https://arxiv.org/abs/2410.07095
     github: https://github.com/openai/mle-bench
     website: https://openai.com/index/mle-bench/
-- id: '2410.07095'
-  title: 'MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering'
-  authors:
-  - Jun Shern Chan
-  - Neil Chowdhury
-  - Oliver Jaffe
-  - James Aung
-  - Dane Sherburn
-  - Evan Mays
-  - Giulio Starace
-  - Kevin Liu
-  - Leon Maksin
-  - Tejal Patwardhan
-  - Lilian Weng
-  - Aleksander Mądry
-  venue: ICLR 2025
-  category: world_research
-  published: '2024-10-09'
-  tags:
-  - benchmark
-  summary: MLE-bench curates 75 Kaggle ML engineering competitions to benchmark AI agents on tasks like model training and
-    experiment running, establishing human baselines. The benchmark targets ML engineering as real-world experimentation.
-  links:
-    paper: https://arxiv.org/abs/2410.07095
-    github: https://github.com/openai/mle-bench
-    website: https://openai.com/index/mle-bench/
 - id: https://aclanthology.org/2024.emnlp-main.748/
   title: 'DA-Code: Agent Data Science Code Generation Benchmark for Large Language Models'
   authors:

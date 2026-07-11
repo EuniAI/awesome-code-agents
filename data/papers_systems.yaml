@@ -22,6 +22,47 @@
     paper: https://arxiv.org/abs/2605.31463
     github: ''
     website: ''
+- id: '2605.29734'
+  title: 'HTAM: Hierarchical Transition-Attended Memory for Operator Optimization'
+  authors:
+  - Yining Zhang
+  - Mingyang Yi
+  - Chen Wang
+  - Xuwen Xiang
+  - Tianhe Jia
+  - Zedong Dan
+  - Chengqing Zong
+  - Yue Wang
+  venue: arXiv 2026/05
+  category: systems
+  published: '2026-05-28'
+  summary: HTAM is a hierarchical memory framework guiding LLM-based generation and optimization of GPU CUDA kernels, organizing
+    coarse global directions and fine-grained local strategies. It improves correctness and speedup on KernelBench over existing
+    LLM-based operator optimization baselines.
+  links:
+    paper: https://arxiv.org/abs/2605.29734
+    github: ''
+    website: ''
+- id: '2511.03586'
+  title: 'PerfDojo: Automated ML Library Generation for Heterogeneous Architectures'
+  authors:
+  - Andrei Ivanov
+  - Siyuan Shen
+  - Gioele Gottardo
+  - Marcin Chrapek
+  - Afif Boudaoud
+  - Timo Schneider
+  - Luca Benini
+  - Torsten Hoefler
+  venue: arXiv 2025/11
+  category: systems
+  published: '2025-11-05'
+  summary: PerfDojo frames ML library performance tuning as an RL game over a semantically-valid, human-readable code representation,
+    enabling PerfLLM to optimize kernels across heterogeneous CPU/GPU architectures without hardware-specific heuristics.
+  links:
+    paper: https://arxiv.org/abs/2511.03586
+    github: ''
+    website: ''
 - id: '2510.08803'
   title: Man-Made Heuristics Are Dead. Long Live Code Generators!
   authors:

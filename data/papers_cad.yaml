@@ -333,25 +333,6 @@
     paper: https://ieeexplore.ieee.org/document/11125634
     github: https://github.com/Chuny1/3DGPT
     website: https://chuny1.github.io/3DGPT/3dgpt.html
-- id: https://aclanthology.org/2025.acl-long.873/
-  title: 'SceneGenAgent: Precise Industrial Scene Generation with Coding Agent'
-  authors:
-  - Xiao Xia
-  - Dan Zhang
-  - Zibo Liao
-  - Zhenyu Hou
-  - Tianrui Sun
-  - Jing Li
-  - Ling Fu
-  - Yuxiao Dong
-  venue: ACL 2025
-  category: cad
-  summary: SceneGenAgent is a coding agent that generates precise industrial 3D scenes by writing and executing code. It targets
-    accurate placement and configuration of industrial scene elements via program synthesis.
-  links:
-    paper: https://aclanthology.org/2025.acl-long.873/
-    github: https://github.com/THUDM/SceneGenAgent
-    website: ''
 - id: '2408.02211'
   title: 'SceneMotifCoder: Example-driven Visual Program Learning for Generating 3D Object Arrangements'
   authors:

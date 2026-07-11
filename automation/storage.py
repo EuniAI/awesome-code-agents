@@ -9,6 +9,7 @@ save, never manual file surgery. Identity and dedup key is Paper.id.
 from __future__ import annotations
 
 import json
+import logging
 from pathlib import Path
 
 import yaml
@@ -38,8 +39,21 @@ def load(key: str, data_dir: Path = DATA_DIR) -> list[Paper]:
 
 
 def save(key: str, papers: list[Paper], data_dir: Path = DATA_DIR) -> None:
-    """Write one leaf's papers (callers keep newest-first order)."""
+    """Write one leaf's papers (callers keep newest-first order).
+
+    Id is identity, so a file must never hold two entries with the same id.
+    Dedup here (keep first) is a safety net against caller bugs, logged loudly.
+    """
     data_dir.mkdir(parents=True, exist_ok=True)
+    seen: set[str] = set()
+    deduped: list[Paper] = []
+    for p in papers:
+        if p.id in seen:
+            logging.getLogger(__name__).warning("dropping duplicate id %s in %s", p.id, key)
+            continue
+        seen.add(p.id)
+        deduped.append(p)
+    papers = deduped
     text = yaml.dump(
         [p.to_dict() for p in papers],
         allow_unicode=True,

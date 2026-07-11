@@ -388,34 +388,6 @@
     paper: https://aclanthology.org/2025.findings-naacl.82/
     github: https://github.com/FSoft-AI4Code/RepoExec
     website: https://fsoft-ai4code.github.io/repoexec/
-- id: https://aclanthology.org/2025.findings-naacl.82/
-  title: 'CodeSIM: Multi-Agent Code Generation and Problem Solving through Simulation-Driven Planning and Debugging'
-  authors:
-  - Md. Ashraful Islam
-  - Mohammed Eunus Ali
-  - Md Rizwan Parvez
-  venue: NAACL 2025 Findings
-  category: software_code_generation
-  summary: CodeSIM is a multi-agent system for code generation and problem solving that uses simulation-driven planning and
-    iterative debugging to improve solution correctness. It targets competitive-programming-style code generation tasks.
-  links:
-    paper: https://aclanthology.org/2025.findings-naacl.82/
-    github: https://github.com/kagnlp/CodeGenerator
-    website: https://kagnlp.github.io/codesim.github.io/
-- id: https://aclanthology.org/2025.findings-naacl.82/
-  title: On the Impacts of Contexts on Repository-Level Code Generation
-  authors:
-  - Nam Le Hai
-  - Dung Manh Nguyen
-  - Nghi D. Q. Bui
-  venue: NAACL 2025 Findings
-  category: software_code_generation
-  summary: This paper studies how different types and amounts of repository context affect the quality of repository-level
-    code generation by LLMs. It analyzes context selection strategies to improve generated code accuracy.
-  links:
-    paper: https://aclanthology.org/2025.findings-naacl.82/
-    github: ''
-    website: ''
 - id: https://aclanthology.org/2025.findings-acl.1036/
   title: 'ProjectEval: A Benchmark for Programming Agents Automated Evaluation on Project-Level Code Generation'
   authors:
@@ -806,23 +778,6 @@
     multi-file repository context.
   links:
     paper: https://proceedings.iclr.cc/paper_files/paper/2024/file/d191ba4c8923ed8fd8935b7c98658b5f-Paper-Conference.pdf
-    github: https://github.com/Leolty/repobench
-    website: ''
-- id: https://openreview.net/forum?id=pPjZIOuQuF
-  title: 'RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems'
-  authors:
-  - Tianyang Liu
-  - Canwen Xu
-  - Julian McAuley
-  venue: ICLR 2024
-  category: software_code_generation
-  tags:
-  - benchmark
-  summary: RepoBench is a benchmark for repository-level code auto-completion, covering retrieval of cross-file context, next-line
-    code completion, and a combined pipeline task in Python and Java. It targets evaluating systems that complete code using
-    multi-file repository context.
-  links:
-    paper: https://openreview.net/forum?id=pPjZIOuQuF
     github: https://github.com/Leolty/repobench
     website: ''
 - id: https://aclanthology.org/2024.acl-long.810/

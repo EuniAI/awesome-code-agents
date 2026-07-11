@@ -70,6 +70,30 @@
     paper: https://arxiv.org/abs/2512.18552
     github: ''
     website: ''
+- id: '2512.10398'
+  title: 'Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases'
+  authors:
+  - Zhaodong Wang
+  - Zhenting Qi
+  - Sherman Wong
+  - Nathan Hu
+  - Samuel Lin
+  - Jun Ge
+  - Erwin Gao
+  - Wenlin Chen
+  - Yilun Du
+  - Minlan Yu
+  - Ying Zhang
+  venue: arXiv 2025/12
+  category: software_debugging
+  published: '2025-12-11'
+  summary: Confucius Code Agent is a scalable agent scaffold built on the Confucius SDK, featuring context management, persistent
+    memory, and a meta-agent for automated agent construction, achieving strong results on SWE-Bench-Pro. It targets large-scale,
+    long-horizon software engineering workloads broadly.
+  links:
+    paper: https://arxiv.org/abs/2512.10398
+    github: ''
+    website: ''
 - id: '2511.16004'
   title: 'InfCode: Adversarial Iterative Refinement of Tests and Patches for Reliable Software Issue Resolution'
   authors:
@@ -446,41 +470,6 @@
   summary: Kimi-Dev trains an open-source SWE LLM via Agentless-style training to build skill priors (localization, code edit,
     reflection) that transfer to agentic SWE-Agent settings. It achieves top results on SWE-bench Verified and improves SWE-Agent
     adaptation.
-  links:
-    paper: https://arxiv.org/abs/2509.23045
-    github: ''
-    website: ''
-- id: '2509.23045'
-  title: 'Kimi-Dev: Agentless Training as Skill Prior for SWE-Agents'
-  authors:
-  - Zonghan Yang
-  - Shengjie Wang
-  - Kelin Fu
-  - Wenyang He
-  - Weimin Xiong
-  - Yibo Liu
-  - Yibo Miao
-  - Bofei Gao
-  - Yejie Wang
-  - Yingwei Ma
-  - Yanhao Li
-  - Yue Liu
-  - Zhenxing Hu
-  - Kaitai Zhang
-  - Shuyi Wang
-  - Huarong Chen
-  - Flood Sung
-  - Yang Liu
-  - Yang Gao
-  - Zhilin Yang
-  - Tianyu Liu
-  venue: arXiv 2025/09
-  category: software_debugging
-  published: '2025-09-27'
-  tags:
-  - model
-  summary: Kimi-Dev is an open-source SWE LLM trained via an Agentless recipe that induces localization, editing, and self-reflection
-    skills, then adapted via SFT to power SWE-Agents, achieving strong SWE-bench Verified results.
   links:
     paper: https://arxiv.org/abs/2509.23045
     github: ''
@@ -1702,25 +1691,6 @@
     paper: https://arxiv.org/abs/2503.21557
     github: https://github.com/microsoft/debug-gym
     website: https://microsoft.github.io/debug-gym/
-- id: '2503.21710'
-  title: Enhancing repository-level software repair via repository-aware knowledge graphs
-  authors:
-  - Boyang Yang
-  - Jiadong Ren
-  - Shunfu Jin
-  - Yang Liu
-  - Feng Liu
-  - Bach Le
-  - Haoye Tian
-  venue: arXiv 2025/03
-  category: software_debugging
-  published: '2025-03-27'
-  summary: KGCompass builds a repository-aware knowledge graph linking issues, PRs, and code entities to narrow fault localization
-    and guide patch generation. It achieves state-of-the-art single-LLM repair performance on SWE-bench Lite at low cost.
-  links:
-    paper: https://arxiv.org/abs/2503.21710
-    github: https://github.com/GLEAM-Lab/KGCompass
-    website: ''
 - id: '2503.18455'
   title: 'SEAlign: Alignment Training for Software Engineering Agent'
   authors:
@@ -2176,22 +2146,6 @@
     paper: https://openreview.net/forum?id=cKlzKs3Nnb
     github: https://github.com/SalesforceAIResearch/swecomm
     website: https://salesforce-research-dei-agents.github.io/
-- id: https://aclanthology.org/2025.acl-long.973/
-  title: 'DARS: Dynamic Action Re-Sampling to Enhance Coding Agent Performance by Adaptive Tree Traversal'
-  authors:
-  - Vaibhav Aggarwal
-  - Ojasv Kamal
-  - Abhinav Japesh
-  - Zhijing Jin
-  - Bernhard Schölkopf
-  venue: ACL 2025
-  category: software_debugging
-  summary: DARS is an inference-time compute scaling method that dynamically re-samples actions at key decision points to
-    improve coding agents' recovery from mistakes. It is evaluated on SWE-Bench Lite issue resolution.
-  links:
-    paper: https://aclanthology.org/2025.acl-long.973/
-    github: https://github.com/vaibhavagg303/DARS-Agent
-    website: ''
 - id: https://aclanthology.org/2025.acl-long.559/
   title: 'SoRFT: Issue Resolving with Subtask-oriented Reinforced Fine-Tuning'
   authors:
@@ -2282,23 +2236,6 @@
     localization and repair.
   links:
     paper: https://dl.acm.org/doi/abs/10.1145/3770581
-    github: ''
-    website: ''
-- id: https://openreview.net/forum?id=qnE2m3pIAb
-  title: Automated Benchmark Generation for Repository-Level Coding Tasks
-  authors:
-  - Konstantinos Vergopoulos
-  - Mark Niklas Müller
-  - Martin Vechev
-  venue: ICML 2025
-  category: software_debugging
-  tags:
-  - benchmark
-  summary: SetUpAgent automates historically-accurate environment setup and test execution to build SWEE-Bench and SWA-Bench,
-    large-scale extensions of SWE-Bench across hundreds of repositories. These benchmarks reveal significant performance drops
-    for code agents compared to the original narrow SWE-Bench.
-  links:
-    paper: https://openreview.net/forum?id=qnE2m3pIAb
     github: ''
     website: ''
 - id: '2412.21139'

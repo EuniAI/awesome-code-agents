@@ -3,6 +3,47 @@
 > Durable record of non-trivial design decisions for this repo. Newest first.
 > This repo is English-only — keep every entry in English.
 
+## 2026-07-11: general leaves kept, re-scoped by a benchmark-routing rule
+
+The two "general" leaves (software_general "General-Purpose Software Agents",
+world_general "General-Purpose Action Agents") were acting as misclassification
+magnets: any paper with a "generalist agent" framing landed there, including agents
+actually evaluated on a single activity's benchmark (Confucius on SWE-bench Pro, MASAI
+on SWE-bench, SWE-Compass). Owner asked whether to delete software_general.
+
+Decision: KEEP both, but re-scope. Deleting orphans ~17 genuinely cross-cutting
+papers (broad multi-activity surveys, position/roadmap papers, productivity/adoption
+empirical studies) that fit no single activity. The real fix is a boundary rule:
+
+  BENCHMARK ROUTING DOMINATES GENERALIST FRAMING. A paper evaluated on an
+  activity-specific benchmark belongs to that activity (SWE-bench -> debugging,
+  KernelBench -> systems), regardless of "general/unified/comprehensive" self-labeling.
+  Only papers with NO single-activity benchmark (surveys spanning activities, position
+  papers, empirical studies of the practice, truly multi-benchmark platforms) stay in
+  a general leaf.
+
+This shrinks software_general from ~42 to ~15, all legitimately cross-cutting. The rule
+is to be encoded in the general leaves' boundary fields in taxonomy.json and enforced
+in the re-audit pass. Also: general = research on the general FORM of the task; when a
+specific class accumulates enough papers, split it out as a new leaf (owner principle).
+
+## 2026-07-11: performance/kernel papers route to systems, no new leaf yet
+
+HTAM (operator optimization, KernelBench) and PerfDojo (ML library generation for
+heterogeneous architectures) were misfiled under software_maintenance. They are about
+WRITING low-level performance-critical code, which is systems ("kernels, compilers").
+Moved to systems (which already holds KernelBench, PithTrain, CrashFixer). The cluster
+(HTAM, PerfDojo, KernelBench, SimdBench, ~4-5 papers) is not yet large enough to
+warrant a dedicated "HPC/kernel engineering" leaf; revisit if it grows past ~6-8.
+SWE-Perf stays in maintenance (optimizing existing repos, not writing kernels).
+
+## 2026-07-11: id is identity; storage.save dedups as a safety net
+
+Found 10 duplicates in migrated data: 7 same-id-within-a-file (caller bug) and 3
+same-paper-different-id (arXiv id vs venue link). Rule: id is the identity; a leaf file
+never holds two entries with the same id. storage.save() now dedups by id (keep first,
+log a warning). For same-paper-different-id, prefer the arXiv id version.
+
 ## 2026-07-10: L3 settled: 10 software-lifecycle activities under General Software
 
 ### Structure (encoded in taxonomy.json with full definitions/boundaries/examples)
