@@ -3,6 +3,25 @@
 > Durable record of non-trivial design decisions for this repo. Newest first.
 > This repo is English-only — keep every entry in English.
 
+## 2026-07-11: daily crawl is announcement-driven (OAI-PMH), no lookback window
+
+The first design crawled via the arXiv search API, which filters by SUBMISSION
+date. Announcements lag submissions by 0.5 to 4 days (weekend pileup), forcing a
+lookback window + dedup to approximate "the new papers" and creating both a
+confusing magic number (days_back) and a weekend hole when set too small.
+
+Owner's instinct was right: crawl by announcement directly. arXiv's OAI-PMH
+interface indexes by announcement/update datestamp, so the daily source is now
+harvest_announced(since): "every mailing since my last successful run", with a
+committed cursor (data/harvest.json). Properties:
+- Exactly matches the mental model: one run = one announcement batch.
+- Self-healing: a failed run leaves the cursor untouched; the next run harvests
+  the gap. No lookback knob exists at all (days_back removed).
+- Replacements (v2+) reappear in mailings; the known-ids dedup drops them.
+- 503 Retry-After flow control honored; resumption tokens paginate.
+The search API remains only for submittedDate-range backfill (crawl_range) and
+id lookups (fetch_arxiv_papers).
+
 ## 2026-07-11: Phase-4 pipeline is event-driven and GitHub-native (3 modules)
 
 The old pipeline's shape (daily crawl cron + HOURLY finalize cron polling for

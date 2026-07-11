@@ -19,12 +19,9 @@ backfill:
   until: "2026-07-11" # the relaunch date; daily crawling covers everything after
   slice_days: 4 # history processed per weekend run (when the pool has room)
 arxiv:
-  # Lookback window, NOT a volume knob: dedup against data/seen/pool means
-  # each run only ever ingests the latest announcement batch. 5 days covers
-  # arXiv's weekend announcement lag (Fri/Sat submissions surface Tuesday)
-  # plus one day of slack for a failed run. Smaller values silently lose papers.
-  days_back: 5
-  max_results: 200
+  # The daily crawl is announcement-driven (OAI-PMH): each run ingests exactly
+  # the mailings since the last successful run, tracked by data/harvest.json.
+  # No lookback window exists; a missed day self-heals on the next run.
   # Category recall net, mapped to the taxonomy branches:
   # software (cs.SE, cs.PL, cs.CR), agents/models (cs.AI, cs.CL, cs.LG),
   # worlds and domains (cs.RO robots, cs.AR hardware, cs.OS+cs.DC systems, cs.DB).

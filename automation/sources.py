@@ -15,10 +15,10 @@ import logging
 import re
 import subprocess
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timedelta, timezone
 from functools import lru_cache
 
 from automation import config, storage
@@ -220,36 +220,90 @@ def keyword_hit(text: str, keywords: list[str]) -> bool:
 
 
 # ── The two sources ───────────────────────────────────────────────────────────
+# The daily source is arXiv's OAI-PMH interface, which is indexed by ANNOUNCEMENT
+# date (exactly the "last night's mailing" semantics). The search API only filters
+# by submission date, which lags announcements by up to four days over weekends.
 
-def crawl(days_back: int | None = None) -> list[Paper]:
-    """Fresh keyword-matching papers from the configured arXiv categories.
-    Returns candidates only; the pipeline filters against known ids."""
-    cfg = config.load()["arxiv"]
-    days = days_back if days_back is not None else cfg.get("days_back", 2)
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
-    keywords = cfg["keywords"]
-    found: dict[str, tuple[Paper, str]] = {}
-    for cat in cfg["categories"]:
+_OAI = {
+    "oai": "http://www.openarchives.org/OAI/2.0/",
+    "ax": "http://arxiv.org/OAI/arXiv/",
+}
+_OAI_BASE = "https://export.arxiv.org/oai2"
+
+
+def _oai_page(url: str) -> tuple[list[tuple[Paper, str, set[str]]], str]:
+    """One OAI-PMH page, honoring arXiv's 503 Retry-After flow control."""
+    for attempt in range(3):
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (paper-metadata-fetch)"})
         try:
-            pairs = _query({
-                "search_query": f"cat:{cat}", "sortBy": "submittedDate",
-                "sortOrder": "descending", "max_results": str(cfg.get("max_results", 200)),
-            })
-        except Exception as exc:
-            logger.warning("crawl %s failed: %s", cat, exc)
-            time.sleep(_SLEEP_S)
+            with urllib.request.urlopen(req, timeout=120) as r:
+                data = r.read()
+            break
+        except urllib.error.HTTPError as exc:
+            if exc.code == 503 and attempt < 2:
+                wait = int(exc.headers.get("Retry-After", "10") or "10")
+                logger.info("OAI 503, retrying in %ds", wait)
+                time.sleep(wait)
+                continue
+            raise
+    return _oai_parse(data)
+
+
+def _oai_parse(data: bytes) -> tuple[list[tuple[Paper, str, set[str]]], str]:
+    """Parse an OAI-PMH page into ((paper, abstract, categories) triples, token)."""
+    root = ET.fromstring(data)
+    out: list[tuple[Paper, str, set[str]]] = []
+    for rec in root.findall(".//oai:record", _OAI):
+        meta = rec.find(".//ax:arXiv", _OAI)
+        if meta is None:  # deleted records carry no metadata
             continue
-        fresh = hits = 0
-        for paper, abstract in pairs:
-            if paper.published and paper.published < cutoff:
-                continue  # one page is scanned; older entries just fall through
-            fresh += 1
+        pid = (meta.findtext("ax:id", "", _OAI) or "").strip()
+        title = re.sub(r"\s+", " ", meta.findtext("ax:title", "", _OAI) or "").strip()
+        abstract = re.sub(r"\s+", " ", meta.findtext("ax:abstract", "", _OAI) or "").strip()
+        created = (meta.findtext("ax:created", "", _OAI) or "").strip()  # v1 date
+        cats = set((meta.findtext("ax:categories", "", _OAI) or "").split())
+        authors = []
+        for a in meta.findall("ax:authors/ax:author", _OAI):
+            fore = (a.findtext("ax:forenames", "", _OAI) or "").strip()
+            key = (a.findtext("ax:keyname", "", _OAI) or "").strip()
+            authors.append(f"{fore} {key}".strip())
+        default = f"arXiv {created[:4]}/{created[5:7]}" if created else "arXiv"
+        paper = Paper(
+            id=pid, title=title, authors=authors,
+            venue=extract_venue(abstract, default), published=created,
+            links={"paper": f"https://arxiv.org/abs/{pid}"},
+        )
+        out.append((paper, abstract, cats))
+    token = (root.findtext(".//oai:resumptionToken", "", _OAI) or "").strip()
+    return out, token
+
+
+def harvest_announced(since: str) -> list[Paper]:
+    """Keyword-matching papers ANNOUNCED (or updated) on or after `since`
+    (YYYY-MM-DD). This is the daily source: 'everything in the mailings since my
+    last successful run'. Candidates only; the pipeline dedups against known ids."""
+    cfg = config.load()["arxiv"]
+    wanted = set(cfg["categories"])
+    keywords = cfg["keywords"]
+    url = f"{_OAI_BASE}?verb=ListRecords&metadataPrefix=arXiv&set=cs&from={since}"
+    found: dict[str, tuple[Paper, str]] = {}
+    scanned = 0
+    while url:
+        records, token = _oai_page(url)
+        scanned += len(records)
+        for paper, abstract, cats in records:
+            if not ARXIV_ID.match(paper.id):
+                continue  # old-style ids predate our scope
+            if not (cats & wanted):
+                continue
             if not keyword_hit(paper.title + " " + abstract, keywords):
                 continue
-            hits += 1
             found.setdefault(paper.id, (paper, abstract))
-        logger.info("crawl %s: %d fresh, %d keyword hits", cat, fresh, hits)
+        url = (f"{_OAI_BASE}?verb=ListRecords&resumptionToken={urllib.parse.quote(token)}"
+               if token else "")
         time.sleep(_SLEEP_S)
+    logger.info("harvest since %s: %d announced records scanned, %d keyword hits",
+                since, scanned, len(found))
     _cache_abstracts(list(found.values()))
     return [p for p, _ in found.values()]
 

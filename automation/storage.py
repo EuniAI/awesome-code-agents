@@ -126,6 +126,29 @@ def save_seen(seen: set[str], data_dir: Path = DATA_DIR) -> None:
     )
 
 
+# ── Harvest cursor (last successful announcement harvest) ─────────────────────
+# The daily source is announcement-driven: each run ingests everything announced
+# since this date. A failed run leaves the cursor untouched, so the next run
+# self-heals by re-harvesting the gap.
+
+def _harvest_path(data_dir: Path = DATA_DIR) -> Path:
+    return data_dir / "harvest.json"
+
+
+def load_harvest_cursor(data_dir: Path = DATA_DIR) -> str:
+    path = _harvest_path(data_dir)
+    if not path.exists():
+        return ""
+    return json.loads(path.read_text(encoding="utf-8")).get("since", "")
+
+
+def save_harvest_cursor(since: str, data_dir: Path = DATA_DIR) -> None:
+    data_dir.mkdir(parents=True, exist_ok=True)
+    _harvest_path(data_dir).write_text(
+        json.dumps({"since": since}, indent=1) + "\n", encoding="utf-8"
+    )
+
+
 # ── Backfill cursor (weekend historical sweep progress) ───────────────────────
 
 def _backfill_path(data_dir: Path = DATA_DIR) -> Path:

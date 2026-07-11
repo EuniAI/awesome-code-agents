@@ -98,21 +98,29 @@ def classify_and_propose(candidates: list[Paper], dry_run: bool = False) -> None
 
 # ── crawl ─────────────────────────────────────────────────────────────────────
 
-def crawl(days_back: int | None = None, dry_run: bool = False) -> None:
+def crawl(since: str | None = None, dry_run: bool = False) -> None:
+    """Daily intake: everything ANNOUNCED since the last successful run (harvest
+    cursor), plus retries and the inbox. A failed run leaves the cursor untouched,
+    so missed days self-heal on the next run."""
+    from datetime import date, timedelta
+
     leaves = taxonomy.load().leaf_keys()
     known = storage.all_ids(leaves) | storage.load_seen() | reviewflow.pending_ids()
 
+    cursor = since or storage.load_harvest_cursor() or str(date.today() - timedelta(days=2))
     retry_papers = list(sources.fetch_arxiv_papers(storage.load_retry()).values())
     candidates: list[Paper] = []
-    for p in retry_papers + sources.crawl(days_back) + sources.read_inbox():
+    for p in retry_papers + sources.harvest_announced(cursor) + sources.read_inbox():
         if p.id not in known:
-            known.add(p.id)  # also dedups retry vs crawl vs inbox within this run
+            known.add(p.id)  # also dedups retry vs harvest vs inbox within this run
             candidates.append(p)
     if candidates:
         classify_and_propose(candidates, dry_run=dry_run)
     else:
         logger.info("nothing new today")
     if not dry_run:
+        # The harvest succeeded end to end; next run picks up from today's mailing.
+        storage.save_harvest_cursor(str(date.today()))
         # Thumbs-up inbox comments whose links are now all handled.
         sources.ack_inbox(storage.all_ids(leaves) | storage.load_seen() | reviewflow.pending_ids())
         # Weekends are arXiv's quiet days: spend them sweeping history.
@@ -256,14 +264,14 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Daily paper pipeline")
     parser.add_argument("command", choices=["crawl", "decide", "backfill"])
     parser.add_argument("--issue", type=int, help="review issue number (decide)")
-    parser.add_argument("--days-back", type=int, default=None, help="crawl window override")
+    parser.add_argument("--since", help="crawl: harvest-cursor override (YYYY-MM-DD)")
     parser.add_argument("--from", dest="from_date", help="backfill start date (YYYY-MM-DD)")
     parser.add_argument("--to", dest="to_date", help="backfill end date (YYYY-MM-DD)")
     parser.add_argument("--dry-run", action="store_true",
                         help="crawl/backfill: print instead of creating issues")
     args = parser.parse_args()
     if args.command == "crawl":
-        crawl(days_back=args.days_back, dry_run=args.dry_run)
+        crawl(since=args.since, dry_run=args.dry_run)
     elif args.command == "backfill":
         if not (args.from_date and args.to_date):
             parser.error("backfill requires --from and --to")

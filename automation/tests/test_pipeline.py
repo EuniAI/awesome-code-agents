@@ -35,6 +35,40 @@ def test_feed_parsing_builds_ready_paper():
     assert abstract == "An abstract about agents."
 
 
+_OAI_FEED = b"""<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/">
+  <ListRecords>
+    <record>
+      <metadata>
+        <arXiv xmlns="http://arxiv.org/OAI/arXiv/">
+          <id>2607.05432</id>
+          <created>2026-07-08</created>
+          <authors><author><keyname>Doe</keyname><forenames>Jane</forenames></author></authors>
+          <title>An Agent
+            that Codes</title>
+          <categories>cs.SE cs.AI</categories>
+          <abstract> Abstract body. Accepted at ICSE 2027. </abstract>
+        </arXiv>
+      </metadata>
+    </record>
+    <resumptionToken>tok123</resumptionToken>
+  </ListRecords>
+</OAI-PMH>"""
+
+
+def test_oai_feed_parsing():
+    root_records, token = sources._oai_parse(_OAI_FEED)
+    (paper, abstract, cats), = root_records
+    assert paper.id == "2607.05432"
+    assert paper.title == "An Agent that Codes"
+    assert paper.authors == ["Jane Doe"]
+    assert paper.published == "2026-07-08"
+    assert paper.venue == "ICSE 2027"  # extracted from the acceptance phrase
+    assert cats == {"cs.SE", "cs.AI"}
+    assert abstract.startswith("Abstract body.")
+    assert token == "tok123"
+
+
 def test_keyword_hit_respects_word_boundaries():
     kws = ["CAD program", "code agent", "SWE-bench"]
     assert sources.keyword_hit("A Code Agent for X", kws)
