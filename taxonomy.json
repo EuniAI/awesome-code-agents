@@ -7,7 +7,7 @@
     "excludes": [
       "Pure LLM reasoning that merely emits code as a reasoning aid (PAL/PoT style, code-interpreter math solving) with no agentic task: not agent papers, out of scope.",
       "Industry product announcements and marketing posts: this list collects frontier research papers and technical reports only. A flagship model's technical report (with architecture, training, and evaluations) is in and belongs to foundation_models; a product-launch or tooling announcement is out.",
-      "Agent papers where code is neither the product nor the language of action."
+      "Agent papers where code is neither the product nor the language of action, e.g. GUI-driven web/OS agents acting via click/type primitives, and papers that secure or evaluate such non-code agents."
     ]
   },
   "principles": [
@@ -758,13 +758,14 @@
           "emoji": "🧭",
           "title": "Browsers & the Web",
           "blurb": "Operating web browsers to get things done online.",
-          "definition": "Agents act on the live web through browsers, using code-level control (scripts, APIs, DOM actions) as the language of action.",
+          "definition": "Agents act on the live web through browsers by WRITING AND EXECUTING CODE: generated scripts, JavaScript-level control, programmatic API calls. Web agents that act through GUI action primitives (click, type, scroll, select) without generating code are out of the repo's scope entirely, not merely out of this leaf.",
           "includes": [
             "Web task completion and browsing agents that act by executing code.",
             "Benchmarks and resources for code-driven web agents."
           ],
           "boundary": [
             "Building web applications is `artifact/web`; here the live web is the world being acted in.",
+            "GUI-primitive web agents (click/type/scroll actions, no generated code) are OUT OF SCOPE, and so are papers that secure, attack, or benchmark such agents: code must be the language of action (see the scope excludes).",
             "Desktop and mobile applications outside the browser are `world_apps`."
           ],
           "examples": [
