@@ -105,21 +105,29 @@ def crawl(since: str | None = None, dry_run: bool = False) -> None:
     from datetime import date, timedelta
 
     leaves = taxonomy.load().leaf_keys()
-    known = storage.all_ids(leaves) | storage.load_seen() | reviewflow.pending_ids()
+    stored: dict[str, str] = {}  # id -> leaf, for the update stream below
+    for k in leaves:
+        for p in storage.load(k):
+            stored[p.id] = k
+    known = set(stored) | storage.load_seen() | reviewflow.pending_ids()
 
     cursor = since or storage.load_harvest_cursor() or str(date.today() - timedelta(days=2))
     retry_papers = list(sources.fetch_arxiv_papers(storage.load_retry()).values())
     fresh, day_counts = sources.harvest_announced(cursor)
+    updates = [p for p in fresh if p.id in stored]  # v2+ of papers we already curate
     candidates: list[Paper] = []
     for p in retry_papers + fresh + sources.read_inbox():
         if p.id not in known:
             known.add(p.id)  # also dedups retry vs harvest vs inbox within this run
             candidates.append(p)
+    logger.info("harvest: %d new candidates, %d updates of stored papers",
+                len(candidates), len(updates))
     if candidates:
         classify_and_propose(candidates, dry_run=dry_run)
     else:
         logger.info("nothing new today")
     if not dry_run:
+        _refresh_venues(updates, stored)
         # The run succeeded end to end: ledger the swept days, advance the cursor.
         storage.record_harvest(day_counts, cursor=str(date.today()))
         # Thumbs-up inbox comments whose links are now all handled.
@@ -128,6 +136,30 @@ def crawl(since: str | None = None, dry_run: bool = False) -> None:
         from datetime import datetime, timezone
         if datetime.now(timezone.utc).weekday() >= 5:
             _weekend_backfill()
+
+
+def _refresh_venues(updates: list[Paper], stored: dict[str, str]) -> None:
+    """Mine the announcement-update stream (v2+ of papers already in the corpus):
+    authors often add an acceptance note to the abstract after publication, so an
+    update can upgrade our arXiv-default venue to the real one. Never overwrites
+    a venue that is already real (set by a conference note or by the owner)."""
+    upgraded = False
+    for p in updates:
+        if p.venue.startswith("arXiv"):
+            continue  # the update carries no venue signal
+        leaf = stored[p.id]
+        papers = storage.load(leaf)
+        cur = next(x for x in papers if x.id == p.id)
+        if not cur.venue.startswith("arXiv"):
+            continue  # already a real venue; not ours to overwrite
+        logger.info("venue upgraded from announcement update: %s: %s -> %s",
+                    p.title[:55], cur.venue, p.venue)
+        cur.venue = p.venue
+        storage.save(leaf, papers)
+        upgraded = True
+    if upgraded:
+        render.main()
+        badges.refresh()
 
 
 # ── backfill ──────────────────────────────────────────────────────────────────
