@@ -96,10 +96,6 @@
 
 > Flagship frontier models that both write code and act through it.
 
-- **Let It Flow: Agentic Crafting on Rock and Roll, Building the ROME Model within an Open Agentic Learning Ecosystem.**  
-  _Weixun Wang, XiaoXiao Xu, Wanhe An, Fangwen Dai, Wei Gao, Yancheng He, Ju Huang, Qiang Ji, Hanqi Jin, Xiaoyang Li, et al._ arXiv 2025/12.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.24873) ![Model](https://img.shields.io/badge/Model-E76F51?style=for-the-badge)
-
 - **Kimi K2: Open Agentic Intelligence.**  
   _Kimi Team: Yifan Bai, Yiping Bao, Guanduo Chen, Jiahao Chen, Ningxin Chen, Ruijue Chen, Yanru Chen, Yuankun Chen, Yutian Chen, Zhuofu Chen, et al._ arXiv 2025/07.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.20534) ![Model](https://img.shields.io/badge/Model-E76F51?style=for-the-badge)
@@ -684,6 +680,10 @@
 
 > Generating and completing code, from a function to a whole repository.
 
+- **ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis.**  
+  _Eagl Huang._ arXiv 2026/06.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.00041)
+
 - **DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch.**  
   _Jiale Zhao, Guoxin Chen, Fanzhe Meng, Wayne Xin Zhao, Ruihua Song, Ji-Rong Wen, Kai Jia._ arXiv 2026/06.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.10728) ![Training Data](https://img.shields.io/badge/Training_Data-8AB17D?style=for-the-badge)
@@ -1211,10 +1211,6 @@
 #### 🗺️ General-Purpose Software Agents
 
 > Generalist software agents, and surveys of the field.
-
-- **ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis.**  
-  _Eagl Huang._ arXiv 2026/06.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.00041)
 
 - **How Coding Agents Fail Their Users: A Large-Scale Analysis of Developer-Agent Misalignment in 20,574 Real-World Sessions.**  
   _Ningzhi Tang, Chaoran Chen, Gelei Xu, Yiyu Shi, Yu Huang, Collin McMillan, Tao Dong, Toby Jia-Jun Li._ arXiv 2026/05.  
@@ -1836,10 +1832,6 @@
   _Yiming Huang, Jianwen Luo, Yan Yu, Yitong Zhang, Fangyu Lei, Yifan Wei, Shizhu He, Lifu Huang, Xiao Liu, Jun Zhao, et al._ EMNLP 2024.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2024.emnlp-main.748/) [![GitHub Stars](https://img.shields.io/github/stars/yiyihum/da-code?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/yiyihum/da-code) [![Website](https://img.shields.io/badge/DA--CODE--BENCH-blue?style=for-the-badge)](https://da-code-bench.github.io/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-- **WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment.**  
-  _Hao Tang, Darren Yan Key, Kevin Ellis._ NeurIPS 2024.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=QGJSXMhVaL) [![GitHub Stars](https://img.shields.io/github/stars/haotang1995/WorldCoder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/haotang1995/WorldCoder) [![Website](https://img.shields.io/badge/WORLDCODER-blue?style=for-the-badge)](https://haotang1995.github.io/projects/worldcoder)
-
 - **ML-Bench: Evaluating Large Language Models and Agents for Machine Learning Tasks on Repository-Level Code.**  
   _Xiangru Tang, Yuliang Liu, Zefan Cai, Daniel Shao, Junjie Lu, Yichi Zhang, Zexuan Deng, Helan Hu, Kaikai An, Ruijun Huang, et al._ ICLR 2025 Workshop.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2311.09835) [![GitHub Stars](https://img.shields.io/github/stars/gersteinlab/ML-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/gersteinlab/ML-bench) [![Website](https://img.shields.io/badge/ML--BENCH-blue?style=for-the-badge)](https://ml-bench.github.io/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
@@ -1924,6 +1916,10 @@
   _Mike A. Merrill, Alexander G. Shaw, Nicholas Carlini, Boxuan Li, Harsh Raj, Ivan Bercovich, Lin Shi, Jeong Yeon Shin, Thomas Walshe, E. Kelly Buchanan, et al._ 2026.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.11868) [![GitHub Stars](https://img.shields.io/github/stars/harbor-framework/terminal-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/harbor-framework/terminal-bench) [![Website](https://img.shields.io/badge/TBENCH.AI-blue?style=for-the-badge)](https://www.tbench.ai/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
+- **Let It Flow: Agentic Crafting on Rock and Roll, Building the ROME Model within an Open Agentic Learning Ecosystem.**  
+  _Weixun Wang, XiaoXiao Xu, Wanhe An, Fangwen Dai, Wei Gao, Yancheng He, Ju Huang, Qiang Ji, Hanqi Jin, Xiaoyang Li, et al._ arXiv 2025/12.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.24873)
+
 - **Large Language Models for IT Automation Tasks: Are We There Yet?**  
   _Md Mahadi Hassan, John Salvador, Akond Rahman, Santu Karmaker._ arXiv 2025/05.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.20505) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
@@ -1931,6 +1927,10 @@
 - **CVE-Bench: A Benchmark for AI Agents’ Ability to Exploit Real-World Web Application Vulnerabilities.**  
   _Yuxuan Zhu, Antony Kellermann, Dylan Bowman, Philip Li, Akul Gupta, Adarsh Danda, Richard Fang, Conner Jensen, Eric Ihli, Jason Benn, et al._ ICML 2025.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.17332) [![GitHub Stars](https://img.shields.io/github/stars/uiuc-kang-lab/cve-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/uiuc-kang-lab/cve-bench) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
+
+- **InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback.**  
+  _John Yang, Akshara Prabhakar, Karthik Narasimhan, Shunyu Yao._ NeurIPS 2023 Datasets & Benchmarks Track.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2306.14898) [![GitHub Stars](https://img.shields.io/github/stars/princeton-nlp/intercode?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/princeton-nlp/intercode) [![Website](https://img.shields.io/badge/INTERCODE--BENCHMARK-blue?style=for-the-badge)](https://intercode-benchmark.github.io/)
 
 ### 🤖 The Physical World
 
@@ -2068,9 +2068,9 @@
   _Ke Yang, Jiateng Liu, John Wu, Chaoqi Yang, Yi R. Fung, Sha Li, Zixuan Huang, Xu Cao, Xingyao Wang, Yiquan Wang, et al._ ICLR 2024 Workshop.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2401.00812) ![Survey](https://img.shields.io/badge/Survey-2A9D8F?style=for-the-badge)
 
-- **InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback.**  
-  _John Yang, Akshara Prabhakar, Karthik Narasimhan, Shunyu Yao._ NeurIPS 2023 Datasets & Benchmarks Track.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2306.14898) [![GitHub Stars](https://img.shields.io/github/stars/princeton-nlp/intercode?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/princeton-nlp/intercode) [![Website](https://img.shields.io/badge/INTERCODE--BENCHMARK-blue?style=for-the-badge)](https://intercode-benchmark.github.io/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
+- **WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment.**  
+  _Hao Tang, Darren Yan Key, Kevin Ellis._ NeurIPS 2024.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=QGJSXMhVaL) [![GitHub Stars](https://img.shields.io/github/stars/haotang1995/WorldCoder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/haotang1995/WorldCoder) [![Website](https://img.shields.io/badge/WORLDCODER-blue?style=for-the-badge)](https://haotang1995.github.io/projects/worldcoder)
 <!-- PAPERS:END -->
 
 ## 🗺️ Research Landscape

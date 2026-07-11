@@ -297,22 +297,18 @@
     paper: https://arxiv.org/abs/2401.00812
     github: ''
     website: ''
-- id: '2306.14898'
-  title: 'InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback'
+- id: https://openreview.net/forum?id=QGJSXMhVaL
+  title: 'WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment'
   authors:
-  - John Yang
-  - Akshara Prabhakar
-  - Karthik Narasimhan
-  - Shunyu Yao
-  venue: NeurIPS 2023 Datasets & Benchmarks Track
+  - Hao Tang
+  - Darren Yan Key
+  - Kevin Ellis
+  venue: NeurIPS 2024
   category: world_general
-  published: '2023-06-26'
-  tags:
-  - benchmark
-  summary: InterCode standardizes interactive coding with execution feedback as an RL environment, using code as actions across
-    Bash, SQL, and Python action spaces, including CTF tasks. It benchmarks LLMs with prompting strategies like ReAct across
-    multiple execution worlds.
+  summary: WorldCoder is a model-based LLM agent that builds a Python world model from environment interactions, balancing
+    explanatory accuracy with optimism about achievable reward. It is more sample- and compute-efficient than deep RL and
+    ReAct-style agents on gridworlds and task planning, and transfers knowledge across environments.
   links:
-    paper: https://arxiv.org/abs/2306.14898
-    github: https://github.com/princeton-nlp/intercode
-    website: https://intercode-benchmark.github.io/
+    paper: https://openreview.net/forum?id=QGJSXMhVaL
+    github: https://github.com/haotang1995/WorldCoder
+    website: https://haotang1995.github.io/projects/worldcoder

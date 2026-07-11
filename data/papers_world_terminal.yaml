@@ -501,6 +501,109 @@
     paper: https://arxiv.org/abs/2601.11868
     github: https://github.com/harbor-framework/terminal-bench
     website: https://www.tbench.ai/
+- id: '2512.24873'
+  title: 'Let It Flow: Agentic Crafting on Rock and Roll, Building the ROME Model within an Open Agentic Learning Ecosystem'
+  authors:
+  - Weixun Wang
+  - XiaoXiao Xu
+  - Wanhe An
+  - Fangwen Dai
+  - Wei Gao
+  - Yancheng He
+  - Ju Huang
+  - Qiang Ji
+  - Hanqi Jin
+  - Xiaoyang Li
+  - Yang Li
+  - Zhongwen Li
+  - Shirong Lin
+  - Jiashun Liu
+  - Zenan Liu
+  - Tao Luo
+  - Dilxat Muhtar
+  - Yuanbin Qu
+  - Jiaqiang Shi
+  - Qinghui Sun
+  - Yingshui Tan
+  - Hao Tang
+  - Runze Wang
+  - Yi Wang
+  - Zhaoguo Wang
+  - Yanan Wu
+  - Shaopan Xiong
+  - Binchen Xu
+  - Xander Xu
+  - Yuchi Xu
+  - Qipeng Zhang
+  - Xixia Zhang
+  - Haizhou Zhao
+  - Jie Zhao
+  - Shuaibing Zhao
+  - Baihui Zheng
+  - Jianhui Zheng
+  - Suhang Zheng
+  - Yanni Zhu
+  - Mengze Cai
+  - Kerui Cao
+  - Xitong Chen
+  - Yue Dai
+  - Lifan Du
+  - Tao Feng
+  - Tao He
+  - Jin Hu
+  - Yijie Hu
+  - Ziyu Jiang
+  - Cheng Li
+  - Xiang Li
+  - Jing Liang
+  - Xin Lin
+  - Chonghuan Liu
+  - ZhenDong Liu
+  - Zhiqiang Lv
+  - Haodong Mi
+  - Yanhu Mo
+  - Junjia Ni
+  - Shixin Pei
+  - Jingyu Shen
+  - XiaoShuai Song
+  - Cecilia Wang
+  - Chaofan Wang
+  - Kangyu Wang
+  - Pei Wang
+  - Tao Wang
+  - Wei Wang
+  - Ke Xiao
+  - Mingyu Xu
+  - Tiange Xu
+  - Nan Ya
+  - Siran Yang
+  - Jianan Ye
+  - Yaxing Zang
+  - Duo Zhang
+  - Junbo Zhang
+  - Boren Zheng
+  - Wanxi Deng
+  - Ling Pan
+  - Lin Qu
+  - Wenbo Su
+  - Jiamang Wang
+  - Wei Wang
+  - Hu Wei
+  - Minggang Wu
+  - Cheng Yu
+  - Bing Zhao
+  - Zhicheng Zheng
+  - Bo Zheng
+  venue: arXiv 2025/12
+  category: world_terminal
+  published: '2025-12-31'
+  summary: The paper introduces the Agentic Learning Ecosystem (ALE) with post-training, sandbox, and CLI components, releasing
+    the ROME agent trained on over a million trajectories using a new policy optimization algorithm. ROME is evaluated across
+    SWE-bench Verified and Terminal-Bench.
+  links:
+    paper: https://arxiv.org/abs/2512.24873
+    github: ''
+    website: ''
 - id: '2505.20505'
   title: 'Large Language Models for IT Automation Tasks: Are We There Yet?'
   authors:
@@ -551,3 +654,20 @@
     paper: https://arxiv.org/abs/2503.17332
     github: https://github.com/uiuc-kang-lab/cve-bench
     website: ''
+- id: '2306.14898'
+  title: 'InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback'
+  authors:
+  - John Yang
+  - Akshara Prabhakar
+  - Karthik Narasimhan
+  - Shunyu Yao
+  venue: NeurIPS 2023 Datasets & Benchmarks Track
+  category: world_terminal
+  published: '2023-06-26'
+  summary: InterCode standardizes interactive coding with execution feedback as an RL environment, using code as actions across
+    Bash, SQL, and Python action spaces, including CTF tasks. It benchmarks LLMs with prompting strategies like ReAct across
+    multiple execution worlds.
+  links:
+    paper: https://arxiv.org/abs/2306.14898
+    github: https://github.com/princeton-nlp/intercode
+    website: https://intercode-benchmark.github.io/

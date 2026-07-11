@@ -1,17 +1,3 @@
-- id: '2607.00041'
-  title: 'ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis'
-  authors:
-  - Eagl Huang
-  venue: arXiv 2026/06
-  category: software_general
-  published: '2026-06-29'
-  summary: ATM is a governance framework that brokers pre-write admission for concurrent multi-agent code co-synthesis, deciding
-    which write intents may proceed in parallel versus requiring serialization. It is evaluated via controlled, field, and
-    adoption studies for auditability and bounded recoverability.
-  links:
-    paper: https://arxiv.org/abs/2607.00041
-    github: ''
-    website: ''
 - id: '2605.29442'
   title: 'How Coding Agents Fail Their Users: A Large-Scale Analysis of Developer-Agent Misalignment in 20,574 Real-World
     Sessions'
