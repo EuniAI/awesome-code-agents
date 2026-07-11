@@ -1,0 +1,207 @@
+- id: '2605.30208'
+  title: 'Automating Low-Risk Code Review at Meta: RADAR, Risk Calibration, and Review Efficiency'
+  authors:
+  - Chris Adams
+  - Arjun Singh Banga
+  - Parveen Bansal
+  - Souvik Bhattacharya
+  - Rujin Cao
+  - Pedro Canahuati
+  - Nate Cook
+  - Brian Ellis
+  - Prabhakar Goyal
+  - Gurinder Grewal
+  - Tianyu He
+  - Matt Labunka
+  - Alex Manners
+  - David Molnar
+  - Ging Cee Ng
+  - Vishal Parekh
+  - Jiefu Pei
+  - Frederic Sagnes
+  - James Saindon
+  - Will Shackleton
+  - Sid Sidhu
+  - Gursharan Singh
+  - Karthik Chengayan Sridhar
+  - Matt Steiner
+  - Pratibha Udmalpet
+  - Sean Xia
+  - Stacey Yan
+  - Audris Mockus
+  - Peter Rigby
+  - Nachiappan Nagappan
+  venue: arXiv 2026/05
+  category: software_review
+  tags:
+  - empirical
+  summary: Describes RADAR, Meta's risk-stratified automated code review system combining static heuristics, an ML-based Diff
+    Risk Score, and LLM review to approve low-risk diffs at scale. Telemetry across 535K+ diffs shows reduced revert/incident
+    rates and faster review turnaround.
+  links:
+    paper: https://arxiv.org/abs/2605.30208
+    github: ''
+    website: ''
+- id: '2509.01494'
+  title: Benchmarking and Studying the LLM-based Code Review
+  authors:
+  - Zhengran Zeng
+  - Ruikai Shi
+  - Keke Han
+  - Yixin Li
+  - Kaicheng Sun
+  - Yidong Wang
+  - Zhuohao Yu
+  - Rui Xie
+  - Wei Ye
+  - Shikun Zhang
+  venue: arXiv 2025
+  category: software_review
+  tags:
+  - benchmark
+  summary: Introduces SWRBench, a PR-centric benchmark of 1000 GitHub pull requests with full project context and an LLM-based
+    evaluation method for automated code review. Systematic evaluation shows current ACR tools/LLMs underperform, and proposes
+    a multi-review aggregation strategy that improves F1 by up to 43.67%.
+  links:
+    paper: https://arxiv.org/abs/2509.01494
+    github: ''
+    website: ''
+- id: '2511.00517'
+  title: Issue-Oriented Agent-Based Framework for Automated Review Comment Generation
+  authors:
+  - Shuochuan Li
+  - Dong Wang
+  - Patanamon Thongtanunam
+  - Zan Wang
+  - Jiuqiao Yu
+  - Junjie Chen
+  venue: arXiv 2025
+  category: software_review
+  summary: Proposes RevAgent, an agent-based framework decomposing review comment generation into issue-specific commentator
+    agents, a critic agent for selection, and fine-tuning for specialization. Outperforms prior PLM/LLM baselines on BLEU,
+    ROUGE-L, METEOR, and SBERT for review comment generation.
+  links:
+    paper: https://arxiv.org/abs/2511.00517
+    github: ''
+    website: ''
+- id: ''
+  title: Armchair
+  authors:
+  - Armchair
+  venue: '2025'
+  category: software_review
+  summary: Armchair appears to be a tool related to automated code review, though no abstract is available to detail its methodology.
+    Included alongside other code review agent papers in this collection.
+  links:
+    paper: ''
+    github: https://github.com/armchr/armchr
+    website: ''
+- id: https://openreview.net/forum?id=cdwp8BXTVV
+  title: 'PReview: A Benchmark Dataset for Pull Request Outcomes and Quality Analysis'
+  authors:
+  - Anonymous Authors
+  venue: '2025'
+  category: software_review
+  tags:
+  - benchmark
+  summary: PReview introduces a benchmark dataset for analyzing pull request outcomes and quality, supporting research into
+    automated code review and PR assessment. It provides structured data for studying acceptance and quality signals of PRs.
+  links:
+    paper: https://openreview.net/forum?id=cdwp8BXTVV
+    github: ''
+    website: ''
+- id: ''
+  title: 'PR-Agent: An AI-Powered Tool for Automated Pull Request Analysis, Feedback, Suggestions and More!'
+  authors:
+  - Qodo
+  venue: '2024'
+  category: software_review
+  summary: PR-Agent is an AI-powered tool that automates pull request analysis, providing feedback, suggestions, and other
+    review assistance. It targets streamlining the code review workflow for developers.
+  links:
+    paper: ''
+    github: https://github.com/qodo-ai/pr-agent
+    website: https://www.qodo.ai/
+- id: https://aclanthology.org/2024.emnlp-main.632/
+  title: 'CodeAgent: Autonomous Communicative Agents for Code Review'
+  authors:
+  - Xunzhu Tang
+  - Kisub Kim
+  - Yewei Song
+  - Cedric Lothritz
+  - Bei Li
+  - Saad Ezzini
+  - Haoye Tian
+  - Jacques Klein
+  - Tegawendé F. Bissyandé
+  venue: EMNLP 2024
+  category: software_review
+  summary: CodeAgent proposes autonomous communicative multi-agent systems designed to perform code review tasks collaboratively.
+    It focuses on agents discussing and evaluating code changes to produce review outcomes.
+  links:
+    paper: https://aclanthology.org/2024.emnlp-main.632/
+    github: ''
+    website: ''
+- id: '2203.09095'
+  title: Automating Code Review Activities by Large-Scale Pre-training
+  authors:
+  - Zhiyu Li
+  - Shuai Lu
+  - Daya Guo
+  - Nan Duan
+  - Shailesh Jannu
+  - Grant Jenks
+  - Deep Majumder
+  - Jared Green
+  - Alexey Svyatkovskiy
+  - Shengyu Fu
+  - Neel Sundaresan
+  venue: FSE 2022
+  category: software_review
+  tags:
+  - model
+  - benchmark
+  summary: Introduces CodeReviewer, a pre-trained model with four review-specific pretraining tasks trained on a large multilingual
+    dataset of real code changes and reviews, plus a new benchmark for quality estimation, comment generation, and code refinement.
+    It outperforms prior pre-training approaches on all three code review tasks.
+  links:
+    paper: https://arxiv.org/abs/2203.09095
+    github: ''
+    website: ''
+- id: https://www.sciencedirect.com/science/article/abs/pii/S0164121221001060
+  title: Can We Benchmark Code Review Studies? A Systematic Mapping Study of Methodology, Dataset, and Metric
+  authors:
+  - Dong Wang
+  - Yuki Ueda
+  - Raula Gaikovina Kula
+  - Takashi Ishio
+  - Kenichi Matsumoto
+  venue: Journal of Systems and Software, 2021, Elsevier
+  category: software_review
+  tags:
+  - survey
+  summary: A systematic mapping study analyzing methodology, datasets, and metrics used in code review research to assess
+    benchmarking practices. It serves as a resource/survey for building and evaluating code review systems and agents.
+  links:
+    paper: https://www.sciencedirect.com/science/article/abs/pii/S0164121221001060
+    github: ''
+    website: ''
+- id: '2504.13472'
+  title: 'CodeVisionary: An Agent-based Framework for Evaluating Large Language Models in Code Generation'
+  authors:
+  - Xinchen Wang
+  - Pengfei Gao
+  - Chao Peng
+  - Ruida Hu
+  - Cuiyun Gao
+  venue: ASE 2025
+  category: software_review
+  tags:
+  - benchmark
+  summary: CodeVisionary is an agent-based framework that evaluates the quality of LLM-generated code through requirement-guided
+    context distillation and fine-grained scoring, producing explainable evaluation reports. It introduces a benchmark of
+    363 complex coding samples across 37 scenarios and 23 languages.
+  links:
+    paper: https://arxiv.org/abs/2504.13472
+    github: https://github.com/Eshe0922/CodeVisionary
+    website: ''

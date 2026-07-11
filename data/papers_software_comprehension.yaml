@@ -1,0 +1,155 @@
+- id: '2509.14635'
+  title: 'SWE-QA: Can Language Models Answer Repository-level Code Questions?'
+  authors:
+  - Weihan Peng
+  - Yuling Shi
+  - Yuhang Wang
+  - Xinyun Zhang
+  - Beijun Shen
+  - Xiaodong Gu
+  venue: arXiv 2025
+  category: software_comprehension
+  tags:
+  - benchmark
+  summary: SWE-QA is a repository-level code question-answering benchmark with 576 QA pairs covering intention understanding,
+    cross-file reasoning, and dependency analysis, built from real GitHub issues. It also introduces SWE-QA-Agent, an agentic
+    framework for answering such questions automatically.
+  links:
+    paper: https://arxiv.org/abs/2509.14635
+    github: https://github.com/peng-weihan/SWE-QA-Bench
+    website: ''
+- id: https://aclanthology.org/2025.acl-long.1324/
+  title: Benchmarking Long-Context Language Models on Long Code Understanding
+  authors:
+  - Jia Li
+  - Xuyuan Guo
+  - Lei Li
+  - Kechi Zhang
+  - Ge Li
+  - Jia Li
+  - Zhengwei Tao
+  - Fang Liu
+  - Chongyang Tao
+  - Yuqi Zhu
+  - Zhi Jin
+  venue: ACL 2025
+  category: software_comprehension
+  tags:
+  - benchmark
+  summary: This paper benchmarks long-context language models on their ability to understand long code, evaluating comprehension
+    capabilities over extended codebases.
+  links:
+    paper: https://aclanthology.org/2025.acl-long.1324/
+    github: ''
+    website: ''
+- id: https://aclanthology.org/2024.acl-srw.28/
+  title: On Improving Repository-Level Code QA for Large Language Models
+  authors:
+  - Jan Strich
+  - Florian Schneider
+  - Irina Nikishina
+  - Chris Biemann
+  venue: ACL 2024 Workshop
+  category: software_comprehension
+  summary: This paper investigates methods to improve repository-level code question answering performance for large language
+    models.
+  links:
+    paper: https://aclanthology.org/2024.acl-srw.28/
+    github: ''
+    website: ''
+- id: '2509.25257'
+  title: 'RANGER: Repository-Level Agent for Graph-Enhanced Retrieval'
+  authors:
+  - Pratik Shah
+  - Rajat Ghosh
+  - Aryan Singhal
+  - Debojyoti Dutta
+  venue: arXiv 2025/09
+  category: software_comprehension
+  summary: RANGER builds a repository-wide knowledge graph and uses a dual-stage retrieval pipeline (Cypher lookups and MCTS-guided
+    exploration) to answer both entity-based and natural-language code queries. It is evaluated on code search, QA, cross-file
+    dependency retrieval, and completion benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2509.25257
+    github: ''
+    website: ''
+- id: '2502.07067'
+  title: Repository-level Code Search with Neural Retrieval Methods
+  authors:
+  - Siddharth Gandhi
+  - Luyu Gao
+  - Jamie Callan
+  venue: arXiv 2025/02
+  category: software_comprehension
+  summary: This paper presents a neural reranking system combining BM25 and CodeBERT for repository-level code search, retrieving
+    relevant files to aid bug fixing using commit history. It is designed to support LLM agents in code search and understanding
+    tasks.
+  links:
+    paper: https://arxiv.org/abs/2502.07067
+    github: ''
+    website: ''
+- id: https://aclanthology.org/2024.emnlp-demo.46/
+  title: 'RepoAgent: An LLM-Powered Open-Source Framework for Repository-level Code Documentation Generation'
+  authors:
+  - Qinyu Luo
+  - Yining Ye
+  - Shihao Liang
+  - Zhong Zhang
+  - Yujia Qin
+  - Yaxi Lu
+  - Yesai Wu
+  - Xin Cong
+  - Yankai Lin
+  - Yingli Zhang
+  - Xiaoyin Che
+  - Zhiyuan Liu
+  - Maosong Sun
+  venue: EMNLP 2024 Demo
+  category: software_comprehension
+  summary: RepoAgent is an LLM-powered open-source framework that automatically generates repository-level code documentation,
+    understanding codebase structure to produce docs. It aims to reduce manual documentation effort for developers.
+  links:
+    paper: https://aclanthology.org/2024.emnlp-demo.46/
+    github: https://github.com/OpenBMB/RepoAgent
+    website: ''
+- id: '2510.26790'
+  title: Gistify! Codebase-Level Understanding via Runtime Execution
+  authors:
+  - Hyunji Lee
+  - Minseon Kim
+  - Chinmay Singh
+  - Matheus Pereira
+  - Atharv Sonwane
+  - Isadora White
+  - Elias Stengel-Eskin
+  - Mohit Bansal
+  - Zhengyan Shi
+  - Alessandro Sordoni
+  - Marc-Alexandre Côté
+  - Xingdi Yuan
+  - Lucas Caccia
+  venue: arXiv 2025/10
+  category: software_comprehension
+  tags:
+  - benchmark
+  summary: Gistify is a benchmark task requiring an agent to distill a codebase down to a minimal self-contained file reproducing
+    a specific functionality, testing structural and execution-flow understanding. Current LLMs struggle especially with long
+    execution traces.
+  links:
+    paper: https://arxiv.org/abs/2510.26790
+    github: ''
+    website: ''
+- id: '2503.07967'
+  title: 'Code Digital Twin: Empowering LLMs with Tacit Knowledge for Complex Software Development'
+  authors:
+  - Xin Peng
+  - Chong Wang
+  venue: arXiv 2025/10
+  category: software_comprehension
+  summary: Code Digital Twin proposes a persistent knowledge infrastructure that captures tacit knowledge (responsibilities,
+    intent, rationale) from a codebase's history and artifacts to serve as a context engine for AI coding assistants. It aims
+    to support sustainable development in ultra-complex enterprise systems.
+  links:
+    paper: https://arxiv.org/abs/2503.07967
+    github: ''
+    website: ''

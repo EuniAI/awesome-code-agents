@@ -1,0 +1,67 @@
+- id: '2502.01492'
+  title: Develop AI Agents for System Engineering in Factorio
+  authors:
+  - Neel Kant
+  venue: arXiv 2025
+  category: world_game
+  tags:
+  - position
+  summary: Position paper advocating training and evaluating AI agents' system-engineering abilities using automation-oriented
+    sandbox games like Factorio. Argues static benchmarks fail to capture long-horizon planning and adaptive trade-off management
+    needed for engineering.
+  links:
+    paper: https://arxiv.org/abs/2502.01492
+    github: ''
+    website: ''
+- id: '2510.12088'
+  title: 'One Life to Learn: Inferring Symbolic World Models for Stochastic Environments from Unguided Exploration'
+  authors:
+  - Zaid Khan
+  - Archiki Prasad
+  - Elias Stengel-Eskin
+  - Jaemin Cho
+  - Mohit Bansal
+  venue: arXiv 2025
+  category: world_game
+  tags:
+  - benchmark
+  summary: OneLife learns programmatic, conditionally-activated laws as executable world models from unguided exploration
+    in a stochastic, hostile Crafter-like environment, using a new evaluation protocol and planning via simulated rollouts.
+    It introduces Crafter-OO, a reimplemented object-oriented benchmark environment.
+  links:
+    paper: https://arxiv.org/abs/2510.12088
+    github: ''
+    website: ''
+- id: '2505.10819'
+  title: 'PoE-World: Compositional World Modeling with Products of Programmatic Experts'
+  authors:
+  - Wasu Top Piriyakulkij
+  - Yichao Liang
+  - Hao Tang
+  - Adrian Weller
+  - Marta Kryven
+  - Kevin Ellis
+  venue: arXiv 2025
+  category: world_game
+  summary: PoE-World synthesizes programmatic world models via LLM-generated products of programmatic experts, learning complex
+    stochastic dynamics from few observations and embedding them in a model-based planning agent for Atari Pong and Montezuma's
+    Revenge. Demonstrates generalization to unseen game levels.
+  links:
+    paper: https://arxiv.org/abs/2505.10819
+    github: ''
+    website: ''
+- id: https://openreview.net/forum?id=QGJSXMhVaL
+  title: 'WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment'
+  authors:
+  - Hao Tang
+  - Darren Yan Key
+  - Kevin Ellis
+  venue: NeurIPS 2024
+  category: world_game
+  summary: WorldCoder is a model-based LLM agent that builds world models by writing code and interacting with its environment,
+    using the resulting program as a model for planning and acting. The approach targets grid/game-like environments where
+    code serves as the world-dynamics representation.
+  links:
+    paper: https://openreview.net/forum?id=QGJSXMhVaL
+    github: https://github.com/haotang1995/WorldCoder
+    website: https://haotang1995.github.io/projects/worldcoder

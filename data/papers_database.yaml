@@ -1,0 +1,145 @@
+- id: '2606.02109'
+  title: 'BADGER: Bridging Agentic and Deterministic Evaluation for Generative Enterprise Reasoning'
+  authors:
+  - Shannon Serrao
+  - Soumitra Chatterjee
+  - Dorina Strori
+  - Abhishek Sharma
+  - Nathan Miller
+  venue: arXiv 2026/06
+  category: database
+  summary: BADGER is a unified evaluation framework combining text-to-SQL execution accuracy assessment with agentic behavior
+    evaluation for enterprise systems. It introduces a hybrid execution-accuracy metric and an agentic evaluation suite validated
+    against human judgment on industry queries.
+  links:
+    paper: https://arxiv.org/abs/2606.02109
+    github: ''
+    website: ''
+- id: '2606.00547'
+  title: 'Learning to Retrieve: Dual-Level Long-Term Memory for Text-to-SQL Agents'
+  authors:
+  - Yibo Wang
+  - Nikki Lijing Kuang
+  - Philip S. Yu
+  - Zhewei Yao
+  - Yuxiong He
+  venue: arXiv 2026/05
+  category: database
+  summary: MERIT is a dual-level long-term memory retrieval framework for interactive text-to-SQL agents, using reinforcement
+    learning to optimize episode- and turn-level memory retrieval. It improves success rate and reduces interaction turns
+    on BIRD-Interact and transfers to Spider2-Snow.
+  links:
+    paper: https://arxiv.org/abs/2606.00547
+    github: ''
+    website: ''
+- id: '2510.10885'
+  title: 'Rethinking Agentic Workflows: Evaluating Inference-Based Test-Time Scaling Strategies in Text2SQL Tasks'
+  authors:
+  - Jiajing Guo
+  - Kenil Patel
+  - Jorge Piazentin Ono
+  - Wenbin He
+  - Liu Ren
+  venue: arXiv 2025/10
+  category: database
+  tags:
+  - empirical
+  summary: This paper benchmarks six inference-time test-time scaling strategies across four LLMs for Text-to-SQL, evaluating
+    accuracy, latency, and token cost on BIRD Mini-Dev. It finds Divide-and-Conquer prompting and few-shot demonstrations
+    most consistently helpful.
+  links:
+    paper: https://arxiv.org/abs/2510.10885
+    github: ''
+    website: ''
+- id: '2510.10661'
+  title: 'AGENTIQL: An Agent-Inspired Multi-Expert Framework for Text-to-SQL Generation'
+  authors:
+  - Omid Reza Heidari
+  - Siobhan Reid
+  - Yassine Yaakoubi
+  venue: arXiv 2025/10
+  category: database
+  summary: AGENTIQL is a multi-expert agentic framework for text-to-SQL that decomposes questions, generates sub-queries,
+    and refines column selection with an adaptive router. It achieves competitive execution accuracy on Spider using much
+    smaller open-source models than GPT-4.
+  links:
+    paper: https://arxiv.org/abs/2510.10661
+    github: ''
+    website: ''
+- id: '2510.12831'
+  title: 'MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training'
+  authors:
+  - Taicheng Guo
+  - Hai Wang
+  - ChaoChun Liu
+  - Mohsen Golalikhani
+  - Xin Chen
+  - Xiangliang Zhang
+  - Chandan K. Reddy
+  venue: arXiv 2025/10
+  category: database
+  tags:
+  - training-data
+  summary: MTSQL-R1 is an agentic training framework casting multi-turn text-to-SQL as an MDP with execution feedback and
+    dialogue-memory verification, iterating propose-execute-verify-refine cycles. It outperforms short-horizon baselines on
+    COSQL and SPARC and releases trained models and trajectories.
+  links:
+    paper: https://arxiv.org/abs/2510.12831
+    github: ''
+    website: ''
+- id: '2510.07309'
+  title: 'Agent Bain vs. Agent McKinsey: A New Text-to-SQL Benchmark for the Business Domain'
+  authors:
+  - Yue Li
+  - Ran Tao
+  - Derek Hommel
+  - Yusuf Denizay Dönder
+  - Sungyong Chang
+  - David Mimno
+  - Unso Eun Seo Jo
+  venue: arXiv 2025/10
+  category: database
+  tags:
+  - benchmark
+  summary: CORGI is a new text-to-SQL benchmark built on synthetic enterprise databases that expands beyond simple queries
+    to descriptive, explanatory, predictive, and recommendational business questions. LLMs show substantially degraded execution
+    accuracy on CORGI compared to existing benchmarks like BIRD.
+  links:
+    paper: https://arxiv.org/abs/2510.07309
+    github: ''
+    website: ''
+- id: '2506.18951'
+  title: 'SWE-SQL: Illuminating LLM Pathways to Solve User SQL Issues in Real-World Applications'
+  authors:
+  - Jinyang Li
+  - Xiaolong Li
+  - Ge Qu
+  - Per Jacobsson
+  - Bowen Qin
+  - Binyuan Hui
+  - Shuzheng Si
+  - Nan Huo
+  - Xiaohan Xu
+  - Yue Zhang
+  - Ziwei Tang
+  - Yuanshuai Li
+  - Florensia Widjaja
+  - Xintong Zhu
+  - Feige Zhou
+  - Yongfeng Huang
+  - Yannis Papakonstantinou
+  - Fatma Ozcan
+  - Chenhao Ma
+  - Reynold Cheng
+  venue: arXiv 2025
+  category: database
+  tags:
+  - benchmark
+  - training-data
+  summary: SWE-SQL introduces BIRD-CRITIC, a benchmark of real-world SQL issue debugging tasks, and Six-Gym, a training environment
+    generating executable issue-solution data via SQL-Rewind and f-Plan Boosting to train the open-source agent Bird-Fixer.
+    Bird-Fixer surpasses several proprietary models on the debugging benchmark.
+  links:
+    paper: https://arxiv.org/abs/2506.18951
+    github: https://github.com/bird-bench/BIRD-CRITIC-1
+    website: https://bird-critic.github.io/

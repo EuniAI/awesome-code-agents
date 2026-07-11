@@ -1,0 +1,46 @@
+- id: '2510.24563'
+  title: 'OSWorld-MCP: Benchmarking MCP Tool Invocation In Computer-Use Agents'
+  authors:
+  - Hongrui Jia
+  - Jitong Liao
+  - Xi Zhang
+  - Haiyang Xu
+  - Tianbao Xie
+  - Chaoya Jiang
+  - Ming Yan
+  - Si Liu
+  - Wei Ye
+  - Fei Huang
+  venue: arXiv 2025
+  category: world_apps
+  tags:
+  - benchmark
+  summary: OSWorld-MCP is a benchmark evaluating computer-use agents on MCP tool invocation combined with GUI operation in
+    real application environments. It provides 158 verified tools across 7 applications to fairly assess tool-use and decision-making
+    abilities.
+  links:
+    paper: https://arxiv.org/abs/2510.24563
+    github: ''
+    website: ''
+- id: https://aclanthology.org/2024.acl-long.850/
+  title: 'AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents'
+  authors:
+  - Harsh Trivedi
+  - Tushar Khot
+  - Mareike Hartmann
+  - Ruskin Manku
+  - Vinty Dong
+  - Edward Li
+  - Shashank Gupta
+  - Ashish Sabharwal
+  - Niranjan Balasubramanian
+  venue: ACL 2024
+  category: world_apps
+  tags:
+  - benchmark
+  summary: AppWorld is a controllable simulated world of apps and people for benchmarking interactive coding agents that must
+    operate applications via code to accomplish tasks. It provides a rich environment for evaluating agentic app interaction.
+  links:
+    paper: https://aclanthology.org/2024.acl-long.850/
+    github: https://github.com/stonybrooknlp/appworld
+    website: https://appworld.dev/

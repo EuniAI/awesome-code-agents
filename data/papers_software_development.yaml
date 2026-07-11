@@ -1,0 +1,97 @@
+- id: '2511.02399'
+  title: 'EvoDev: An Iterative Feature-Driven Framework for End-to-End Software Development with LLM-based Agents'
+  authors:
+  - Junwei Liu
+  - Chen Xu
+  - Chong Wang
+  - Tong Bai
+  - Weitong Chen
+  - Kaseng Wong
+  - Yiling Lou
+  - Xin Peng
+  venue: arXiv 2025/11
+  category: software_development
+  summary: EvoDev is an iterative, feature-driven framework that decomposes requirements into a dependency-tracked Feature
+    Map to guide LLM agents through end-to-end software development. It outperforms baselines like Claude Code on Android
+    development tasks.
+  links:
+    paper: https://arxiv.org/abs/2511.02399
+    github: ''
+    website: ''
+- id: '2507.18130'
+  title: 'NoCode-bench: A Benchmark for Evaluating Natural Language-Driven Feature Addition'
+  authors:
+  - Le Deng
+  - Zhonghao Jiang
+  - Jialun Cao
+  - Michael Pradel
+  - Zhongxin Liu
+  venue: arXiv 2025
+  category: software_development
+  tags:
+  - benchmark
+  summary: NoCode-bench evaluates LLMs on natural-language-driven feature addition tasks, pairing documentation updates with
+    code implementations across 634 tasks from 10 projects. Results show current LLMs struggle with cross-file editing and
+    codebase understanding for no-code development.
+  links:
+    paper: https://arxiv.org/abs/2507.18130
+    github: ''
+    website: ''
+- id: '2503.06680'
+  title: 'FEA-Bench: A Benchmark for Evaluating Repository-Level Code Generation for Feature Implementation'
+  authors:
+  - Wei Li
+  - Xin Zhang
+  - Zhongxin Guo
+  - Shaoguang Mao
+  - Wen Luo
+  - Guangyue Peng
+  - Yangyu Huang
+  - Houfeng Wang
+  - Scarlett Li
+  venue: ACL 2025
+  category: software_development
+  tags:
+  - benchmark
+  summary: FEA-Bench assesses LLMs' ability to implement new features within repository-level codebases, combining code completion
+    and editing across 83 GitHub repositories with unit-test verification. Results show current LLMs perform poorly on this
+    incremental development task.
+  links:
+    paper: https://arxiv.org/abs/2503.06680
+    github: https://github.com/microsoft/FEA-Bench
+    website: https://gmago-leway.github.io/fea-bench.github.io/
+- id: '2507.14969'
+  title: 'Think Like an Engineer: A Neuro-Symbolic Collaboration Agent for Generative Software Requirements Elicitation and
+    Self-Review'
+  authors:
+  - Sai Zhang
+  - Zhenchang Xing
+  - Jieshan Chen
+  - Dehai Zhao
+  - Zizhong Zhu
+  - Xiaowang Zhang
+  - Zhiyong Feng
+  - Xiaohong Li
+  venue: arXiv 2025
+  category: software_development
+  summary: RequireCEG is a neuro-symbolic agent that elicits and self-reviews software requirements from ambiguous end-user
+    narratives using causal-effect graphs, refining Gherkin scenarios for generative software development. It improves requirement
+    coverage and diversity on a new RGPair benchmark.
+  links:
+    paper: https://arxiv.org/abs/2507.14969
+    github: ''
+    website: ''
+- id: '2511.03517'
+  title: 'U2F: Encouraging SWE-Agent to Seize Novelty without Losing Feasibility'
+  authors:
+  - Wencheng Ye
+  - Yan Liu
+  venue: arXiv 2025/11
+  category: software_development
+  summary: U2F is a multi-agent SWE framework designed to surface novel, feasible solution pathways for real-world software
+    'enabler stories' beyond conventional fixes. It improves solution novelty while maintaining feasibility on curated engineering
+    tasks.
+  links:
+    paper: https://arxiv.org/abs/2511.03517
+    github: ''
+    website: ''

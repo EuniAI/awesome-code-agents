@@ -1,0 +1,199 @@
+- id: '2512.07533'
+  title: 'VulnLLM-R: Specialized Reasoning LLM with Agent Scaffold for Vulnerability Detection'
+  authors:
+  - Yuzhou Nie
+  - Hongwei Li
+  - Chengquan Guo
+  - Ruizhe Jiang
+  - Zhun Wang
+  - Bo Li
+  - Dawn Song
+  - Wenbo Guo
+  venue: arXiv 2025/12
+  category: software_security
+  tags:
+  - model
+  summary: VulnLLM-R is a specialized 7B reasoning LLM trained via a custom data pipeline for vulnerability detection, wrapped
+    in an agent scaffold that outperforms static tools and finds zero-day vulnerabilities in real repositories. It targets
+    project-level vulnerability detection across multiple languages.
+  links:
+    paper: https://arxiv.org/abs/2512.07533
+    github: ''
+    website: ''
+- id: '2504.21205'
+  title: 'SecRepoBench: Benchmarking Code Agents for Secure Code Completion in Real-World Repositories'
+  authors:
+  - Chihao Shen
+  - Connor Dilgren
+  - Purva Chiniya
+  - Luke Griffith
+  - Yu Ding
+  - Yizheng Chen
+  venue: arXiv 2025/11
+  category: software_security
+  tags:
+  - benchmark
+  summary: SecRepoBench evaluates code agents on secure code completion tasks across real-world C/C++ repositories spanning
+    15 CWEs. It finds standalone LLMs struggle while agents perform notably better, offering insight into improving secure
+    code generation.
+  links:
+    paper: https://arxiv.org/abs/2504.21205
+    github: ''
+    website: ''
+- id: '2510.02389'
+  title: 'From Trace to Line: LLM Agent for Real-World OSS Vulnerability Localization'
+  authors:
+  - Haoran Xi
+  - Minghao Shao
+  - Brendan Dolan-Gavitt
+  - Muhammad Shafique
+  - Ramesh Karri
+  venue: arXiv 2025/09
+  category: software_security
+  tags:
+  - benchmark
+  summary: T2L is an agentic framework for precise line-level localization of real-world OSS vulnerabilities, combining AST-based
+    chunking with runtime trace evidence. The authors also release T2L-ARVO, an expert-verified benchmark for evaluating such
+    localization.
+  links:
+    paper: https://arxiv.org/abs/2510.02389
+    github: ''
+    website: ''
+- id: '2506.11791'
+  title: 'SEC-bench: Automated Benchmarking of LLM Agents on Real-World Software Security Tasks'
+  authors:
+  - Hwiwon Lee
+  - Ziqi Zhang
+  - Hanxiao Lu
+  - Lingming Zhang
+  venue: arXiv 2025
+  category: software_security
+  tags:
+  - benchmark
+  summary: SEC-bench automatically constructs reproducible security engineering tasks and evaluates LLM agents on proof-of-concept
+    exploit generation and vulnerability patching. Results reveal large performance gaps in current agents' security engineering
+    capabilities.
+  links:
+    paper: https://arxiv.org/abs/2506.11791
+    github: https://github.com/SEC-bench/SEC-bench
+    website: https://sec-bench.github.io/
+- id: '2509.22097'
+  title: 'SecureAgentBench: Benchmarking Secure Code Generation under Realistic Vulnerability Scenarios'
+  authors:
+  - Junkai Chen
+  - Huihui Huang
+  - Yunbo Lyu
+  - Junwen An
+  - Jieke Shi
+  - Chengran Yang
+  - Ting Zhang
+  - Haoye Tian
+  - Yikun Li
+  - Zhenhao Li
+  - Xin Zhou
+  - Xing Hu
+  - David Lo
+  venue: arXiv 2025
+  category: software_security
+  tags:
+  - benchmark
+  summary: SecureVibeBench benchmarks code agents on realistic secure coding tasks derived from actual OSS-Fuzz vulnerabilities
+    requiring multi-file repository edits. Evaluation of popular agents shows persistent difficulty producing code that is
+    both correct and secure.
+  links:
+    paper: https://arxiv.org/abs/2509.22097
+    github: https://github.com/iCSawyer/SecureAgentBench
+    website: ''
+- id: '2501.18160'
+  title: 'RepoAudit: An Autonomous LLM-Agent for Repository-Level Code Auditing'
+  authors:
+  - Jinyao Guo
+  - Chengpeng Wang
+  - Xiangzhe Xu
+  - Zian Su
+  - Xiangyu Zhang
+  venue: ICML 2025
+  category: software_security
+  summary: RepoAudit is an autonomous LLM agent that audits entire code repositories for bugs by analyzing data-flow facts
+    and validating path feasibility to reduce false positives. It discovered numerous confirmed bugs in real-world open-source
+    projects efficiently and cheaply.
+  links:
+    paper: https://arxiv.org/abs/2501.18160
+    github: ''
+    website: ''
+- id: https://aclanthology.org/2025.naacl-long.212/
+  title: 'CVE-Bench: Benchmarking LLM-based Software Engineering Agent’s Ability to Repair Real-World CVE Vulnerabilities'
+  authors:
+  - Peiran Wang
+  - Xiaogeng Liu
+  - Chaowei Xiao
+  venue: NAACL 2025
+  category: software_security
+  tags:
+  - benchmark
+  summary: This CVE-Bench benchmarks LLM-based software engineering agents on their ability to repair real-world CVE vulnerabilities,
+    assessing patch correctness and effectiveness. It provides a testbed for evaluating automated vulnerability repair capabilities.
+  links:
+    paper: https://aclanthology.org/2025.naacl-long.212/
+    github: ''
+    website: ''
+- id: '2508.21302'
+  title: 'Locus: Agentic Predicate Synthesis for Directed Fuzzing'
+  authors:
+  - Jie Zhu
+  - Chihao Shen
+  - Ziyang Li
+  - Jiahao Yu
+  - Yizheng Chen
+  - Kexin Pei
+  venue: arXiv 2025
+  category: software_security
+  summary: Locus is an agentic directed-fuzzing framework that synthesizes and refines semantic predicates as milestones to
+    guide fuzzers toward target program states, improving efficiency in finding real-world vulnerabilities. It discovered
+    nine previously unpatched bugs across evaluated programs.
+  links:
+    paper: https://arxiv.org/abs/2508.21302
+    github: ''
+    website: ''
+- id: '2512.03262'
+  title: Is Vibe Coding Safe? Benchmarking Vulnerability of Agent-Generated Code in Real-World Tasks
+  authors:
+  - Songwen Zhao
+  - Danqing Wang
+  - Kexun Zhang
+  - Jiaxuan Luo
+  - Zhuo Li
+  - Lei Li
+  venue: arXiv 2025/12
+  category: software_security
+  tags:
+  - benchmark
+  - empirical
+  summary: SUS VIBES is a 200-task benchmark of real-world feature requests that historically led to vulnerable implementations,
+    used to evaluate the security of code produced by agentic coding tools. Frontier agents achieve high functional correctness
+    but very low security rates, and simple mitigation prompts fail.
+  links:
+    paper: https://arxiv.org/abs/2512.03262
+    github: ''
+    website: ''
+- id: '2510.17862'
+  title: 'When “Correct” Is Not Safe: Can We Trust Functionally Correct Patches Generated by Code Agents?'
+  authors:
+  - Yibo Peng
+  - James Song
+  - Lei Li
+  - Xinyu Yang
+  - Mihai Christodorescu
+  - Ravi Mangal
+  - Corina Pasareanu
+  - Haizhong Zheng
+  - Beidi Chen
+  venue: arXiv 2025/10
+  category: software_security
+  summary: This paper introduces FCV-Attack, showing that code agents can produce functionally correct patches that pass all
+    tests yet contain injected vulnerabilities, exposing a security blind spot in current evaluation. SOTA models and agent
+    scaffolds are shown vulnerable across many agent-model combinations on SWE-Bench.
+  links:
+    paper: https://arxiv.org/abs/2510.17862
+    github: https://github.com/Infini-AI-Lab/FCV
+    website: https://infini-ai-lab.github.io/FCV/

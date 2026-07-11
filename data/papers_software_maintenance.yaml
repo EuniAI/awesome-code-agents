@@ -1,0 +1,236 @@
+- id: '2411.13990'
+  title: 'RustRepoTrans: Repository-level Code Translation Benchmark Targeting Rust'
+  authors:
+  - Guangsheng Ou
+  - Mingwei Liu
+  - Yuxuan Chen
+  - Yanlin Wang
+  - Xin Peng
+  - Zibin Zheng
+  venue: arXiv 2025/10
+  category: software_maintenance
+  tags:
+  - benchmark
+  summary: RustRepoTrans is a repository-level code translation benchmark targeting incremental translation into Rust from
+    C, Java, and Python, with 375 tasks. It evaluates seven LLMs, finding significant performance drops when handling repository-level
+    context.
+  links:
+    paper: https://arxiv.org/abs/2411.13990
+    github: ''
+    website: ''
+- id: '2509.16187'
+  title: 'MatchFixAgent: Language-Agnostic Autonomous Repository-Level Code Translation Validation and Repair'
+  authors:
+  - Ali Reza Ibrahimzada
+  - Brandon Paulsen
+  - Reyhaneh Jabbarvand
+  - Joey Dodds
+  - Daniel Kroening
+  venue: arXiv 2025/09
+  category: software_maintenance
+  summary: MatchFixAgent is a multi-agent, language-agnostic LLM framework for validating functional equivalence of code translations
+    and repairing inequivalent ones. It outperforms prior repository-level translation techniques in both validation accuracy
+    and repair success rate.
+  links:
+    paper: https://arxiv.org/abs/2509.16187
+    github: ''
+    website: ''
+- id: '2505.09569'
+  title: 'MigrationBench: Repository-Level Code Migration Benchmark from Java 8'
+  authors:
+  - Linbo Liu
+  - Xinle Liu
+  - Qiang Zhou
+  - Lin Chen
+  - Yihan Liu
+  - Hoan Nguyen
+  - Behrooz Omidvar-Tehrani
+  - Xi Shen
+  - Jun Huan
+  - Omer Tripp
+  - Anoop Deoras
+  venue: arXiv 2025/05
+  category: software_maintenance
+  tags:
+  - benchmark
+  summary: MigrationBench is a repository-level benchmark for migrating Java 8 codebases to newer LTS Java versions, with
+    thousands of repositories and an evaluation framework. An agentic framework achieves strong success rates on migration
+    tasks.
+  links:
+    paper: https://arxiv.org/abs/2505.09569
+    github: https://github.com/amazon-science/MigrationBench
+    website: https://huggingface.co/collections/AmazonScience/migrationbench
+- id: '2509.16187'
+  title: 'MatchFixAgent: Language-Agnostic Autonomous Repository-Level Code Translation Validation and Repair'
+  authors:
+  - Ali Reza Ibrahimzada
+  - Brandon Paulsen
+  - Reyhaneh Jabbarvand
+  - Joey Dodds
+  - Daniel Kroening
+  venue: arXiv 2025
+  category: software_maintenance
+  summary: MatchFixAgent is a multi-agent, language-agnostic LLM framework for validating functional equivalence of code translations
+    and repairing inequivalent ones. It outperforms prior repository-level translation techniques in both validation accuracy
+    and repair success rate.
+  links:
+    paper: https://arxiv.org/abs/2509.16187
+    github: ''
+    website: ''
+- id: '2511.00160'
+  title: 'What a diff makes: automating code migration with large language models'
+  authors:
+  - Katherine A. Rosenfeld
+  - Cliff C. Kerr
+  - Jessica Lundin
+  venue: arXiv 2025
+  category: software_maintenance
+  tags:
+  - training-data
+  summary: This paper studies LLM-based code migration to maintain compatibility with evolving dependencies, showing diff-based
+    context improves migration performance. It releases a dataset and the open-source AIMigrate tool, validated on a real-world
+    STARSIM migration case.
+  links:
+    paper: https://arxiv.org/abs/2511.00160
+    github: ''
+    website: ''
+- id: '2410.24117'
+  title: 'AlphaTrans: A Neuro-Symbolic Compositional Approach for Repository-Level Code Translation and Validation'
+  authors:
+  - Ali Reza Ibrahimzada
+  - Kaiyao Ke
+  - Mrigank Pawagi
+  - Muhammad Salman Abid
+  - Rangeet Pan
+  - Saurabh Sinha
+  - Reyhaneh Jabbarvand
+  venue: FSE 2025
+  category: software_maintenance
+  summary: AlphaTrans is a neuro-symbolic approach that decomposes repositories into fragments for repository-level code translation
+    with multi-level runtime and functional validation. Applied to ten real-world projects, it achieves high syntactic correctness
+    and helps developers fix remaining translation bugs.
+  links:
+    paper: https://arxiv.org/abs/2410.24117
+    github: ''
+    website: ''
+- id: '2511.03153'
+  title: 'RefAgent: A Multi-agent LLM-based Framework for Automatic Software Refactoring'
+  authors:
+  - Khouloud Oueslati
+  - Maxime Lamothe
+  - Foutse Khomh
+  venue: arXiv 2025
+  category: software_maintenance
+  summary: RefAgent is a multi-agent LLM framework for end-to-end software refactoring, with agents for planning, executing,
+    testing, and self-refining refactorings. Evaluated on eight Java projects, it improves test pass rate, reduces code smells,
+    and improves quality attributes compared to single-agent and search-based approaches.
+  links:
+    paper: https://arxiv.org/abs/2511.03153
+    github: ''
+    website: ''
+- id: '2605.29734'
+  title: 'HTAM: Hierarchical Transition-Attended Memory for Operator Optimization'
+  authors:
+  - Yining Zhang
+  - Mingyang Yi
+  - Chen Wang
+  - Xuwen Xiang
+  - Tianhe Jia
+  - Zedong Dan
+  - Chengqing Zong
+  - Yue Wang
+  venue: arXiv 2026/05
+  category: software_maintenance
+  summary: HTAM is a hierarchical memory framework guiding LLM-based generation and optimization of GPU CUDA kernels, organizing
+    coarse global directions and fine-grained local strategies. It improves correctness and speedup on KernelBench over existing
+    LLM-based operator optimization baselines.
+  links:
+    paper: https://arxiv.org/abs/2605.29734
+    github: ''
+    website: ''
+- id: '2601.07348'
+  title: Controlled Self-Evolution for Algorithmic Code Optimization
+  authors:
+  - Tu Hu
+  - Ronghao Chen
+  - Shuo Zhang
+  - Jianghao Yin
+  - Mou Xiao Feng
+  - Jingping Liu
+  - Shaolei Zhang
+  - Wenqi Jiang
+  - Yuqi Fang
+  - Sen Hu
+  - Yi Xu
+  - Huacan Wang
+  venue: arXiv 2026
+  category: software_maintenance
+  summary: Controlled Self-Evolution (CSE) improves iterative code optimization via diversified planning initialization, feedback-guided
+    genetic evolution, and hierarchical experience memory to find algorithmically superior solutions. It outperforms baselines
+    on the EffiBench-X efficiency benchmark.
+  links:
+    paper: https://arxiv.org/abs/2601.07348
+    github: https://github.com/QuantaAlpha/EvoControl
+    website: ''
+- id: '2507.12415'
+  title: 'SWE-Perf: Can Language Models Optimize Code Performance on Real-World Repositories?'
+  authors:
+  - Xinyi He
+  - Qian Liu
+  - Mingzhe Du
+  - Lin Yan
+  - Zhijie Fan
+  - Yiming Huang
+  - Zejian Yuan
+  - Zejun Ma
+  venue: arXiv 2025
+  category: software_maintenance
+  tags:
+  - benchmark
+  summary: SWE-Perf is a benchmark of 140 real-world repository instances derived from performance-improving GitHub pull requests,
+    evaluating LLM agents' ability to optimize code performance at the repo level. Evaluation reveals a large gap between
+    current LLMs and expert-level optimization.
+  links:
+    paper: https://arxiv.org/abs/2507.12415
+    github: https://github.com/SWE-Perf/SWE-Perf
+    website: https://swe-perf.github.io/
+- id: '2511.03586'
+  title: 'PerfDojo: Automated ML Library Generation for Heterogeneous Architectures'
+  authors:
+  - Andrei Ivanov
+  - Siyuan Shen
+  - Gioele Gottardo
+  - Marcin Chrapek
+  - Afif Boudaoud
+  - Timo Schneider
+  - Luca Benini
+  - Torsten Hoefler
+  venue: arXiv 2025
+  category: software_maintenance
+  summary: PerfDojo frames ML library performance tuning as an RL game over a semantically-valid, human-readable code representation,
+    enabling PerfLLM to optimize kernels across heterogeneous CPU/GPU architectures without hardware-specific heuristics.
+  links:
+    paper: https://arxiv.org/abs/2511.03586
+    github: ''
+    website: ''
+- id: https://dl.acm.org/doi/10.1145/3643757
+  title: 'CodePlan: Repository-Level Coding using LLMs and Planning'
+  authors:
+  - Ramakrishna Bairi
+  - Atharv Sonwane
+  - Aditya Kanade
+  - Vageesh D. C.
+  - Arun Iyer
+  - Suresh Parthasarathy
+  - Sriram Rajamani
+  - B. Ashok
+  - Shashank Shet
+  venue: FSE 2024
+  category: software_maintenance
+  summary: CodePlan uses LLMs combined with planning to perform repository-level coding tasks such as package migration and
+    API-version updates, coordinating multi-file edits across a codebase. It formulates these as a planning problem to preserve
+    overall repository consistency.
+  links:
+    paper: https://dl.acm.org/doi/10.1145/3643757
+    github: ''
+    website: ''

@@ -1,0 +1,33 @@
+- id: '2509.26161'
+  title: '90% Faster, 100% Code-Free: MLLM-Driven Zero-Code 3D Game Development'
+  authors:
+  - Runxin Yang
+  - Yuxuan Wan
+  - Shuqing Li
+  - Michael R. Lyu
+  venue: arXiv 2025/09
+  category: game
+  summary: UniGen is a multi-agent framework that generates production-ready 3D game projects (C# scripts, engine bindings,
+    scene construction) for Unity/Unreal from natural language requirements. It automates zero-code game development including
+    debugging via conversational interaction.
+  links:
+    paper: https://arxiv.org/abs/2509.26161
+    github: ''
+    website: ''
+- id: '2503.20036'
+  title: 'Agents in the Sandbox: End-to-End Crash Bug Reproduction for Minecraft'
+  authors:
+  - Eray Yapağcı
+  - Yavuz Alp Sencer Öztürk
+  - Eray Tüzün
+  venue: ASE 2025
+  category: game
+  tags:
+  - benchmark
+  summary: BugCraft is an end-to-end LLM-driven framework that reproduces Minecraft crash bugs from user bug reports, using
+    a step synthesizer and a vision-based action agent executing macro APIs in-game, evaluated on the new BugCraft-Bench dataset.
+    It automates a previously manual game bug reproduction process.
+  links:
+    paper: https://arxiv.org/abs/2503.20036
+    github: https://github.com/erayyap/bugcraft
+    website: https://bugcraft2025.github.io/

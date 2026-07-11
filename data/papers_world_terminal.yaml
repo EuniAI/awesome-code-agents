@@ -1,0 +1,483 @@
+- id: '2503.17332'
+  title: 'CVE-Bench: A Benchmark for AI Agents’ Ability to Exploit Real-World Web Application Vulnerabilities'
+  authors:
+  - Yuxuan Zhu
+  - Antony Kellermann
+  - Dylan Bowman
+  - Philip Li
+  - Akul Gupta
+  - Adarsh Danda
+  - Richard Fang
+  - Conner Jensen
+  - Eric Ihli
+  - Jason Benn
+  - Jet Geronimo
+  - Avi Dhir
+  - Sudhit Rao
+  - Kaicheng Yu
+  - Twm Stone
+  - Daniel Kang
+  venue: ICML 2025
+  category: world_terminal
+  tags:
+  - benchmark
+  summary: CVE-Bench is a sandboxed benchmark evaluating LLM agents' ability to autonomously exploit real critical-severity
+    CVEs in web applications, mimicking real-world attack conditions. State-of-the-art agent frameworks resolve only up to
+    13% of the vulnerabilities.
+  links:
+    paper: https://arxiv.org/abs/2503.17332
+    github: https://github.com/uiuc-kang-lab/cve-bench
+    website: ''
+- id: '2505.20505'
+  title: 'Large Language Models for IT Automation Tasks: Are We There Yet?'
+  authors:
+  - Md Mahadi Hassan
+  - John Salvador
+  - Akond Rahman
+  - Santu Karmaker
+  venue: arXiv 2025
+  category: world_terminal
+  tags:
+  - benchmark
+  summary: ITAB is a benchmark of 126 real-world IT automation tasks (e.g., server configuration, file management) evaluating
+    LLMs' ability to generate functional Ansible scripts with state reconciliation via dynamic execution. Current open-source
+    LLMs perform poorly, revealing weaknesses in state reasoning and module-specific execution knowledge.
+  links:
+    paper: https://arxiv.org/abs/2505.20505
+    github: ''
+    website: ''
+- id: '2605.08013'
+  title: Learning CLI Agents with Structured Action Credit under Selective Observation
+  authors:
+  - Haoyang Su
+  - Ying Wen
+  venue: arXiv 2026/05
+  category: world_terminal
+  links:
+    paper: https://arxiv.org/abs/2605.08013
+    github: ''
+    website: ''
+- id: '2605.22535'
+  title: 'TerminalWorld: Benchmarking Agents on Real-World Terminal Tasks'
+  authors:
+  - Zhaoyang Chu
+  - Jiarui Hu
+  - Xingyu Jiang
+  - Pengyu Zou
+  - Han Li
+  - Chao Peng
+  - Peter O'Hearn
+  - Earl T. Barr
+  - Mark Harman
+  - Federica Sarro
+  - He Ye
+  venue: arXiv 2026/05
+  category: world_terminal
+  tags:
+  - benchmark
+  summary: TerminalWorld is an automated data engine that reverse-engineers 1,530 validated real-world terminal tasks from
+    terminal recordings, with a 200-task verified subset. Frontier agents achieve at most 62.5% pass rate, revealing gaps
+    versus expert-curated benchmarks like Terminal-Bench.
+  links:
+    paper: https://arxiv.org/abs/2605.22535
+    github: https://github.com/EuniAI/TerminalWorld
+    website: ''
+- id: '2605.03195'
+  title: 'Terminus-4B: Can a Smaller Model Replace Frontier LLMs at Agentic Execution Tasks?'
+  authors:
+  - Spandan Garg
+  - Vikram Nitin
+  - Yufan Huang
+  venue: arXiv 2026/05
+  category: world_terminal
+  tags:
+  - model
+  summary: Terminus-4B is a fine-tuned small language model that serves as a terminal-execution subagent, matching frontier
+    models while reducing main-agent token usage by ~30% on SWE-Bench Pro and a C# benchmark. It shows small models can handle
+    agentic terminal execution as effectively as larger ones.
+  links:
+    paper: https://arxiv.org/abs/2605.03195
+    github: ''
+    website: ''
+- id: '2605.24517'
+  title: 'ECHO: Terminal Agents Learn World Models for Free'
+  authors:
+  - Vaishnavi Shrivastava
+  - Piero Kauffmann
+  - Ahmed Awadallah
+  - Dimitris Papailiopoulos
+  venue: arXiv 2026/05
+  category: world_terminal
+  summary: ECHO is a hybrid RL objective for terminal agents that trains policies to predict environment observation tokens
+    alongside standard action-token policy gradients, extracting dense supervision from terminal feedback. It roughly doubles
+    GRPO pass@1 on TerminalBench-2.0 and enables verifier-free self-improvement.
+  links:
+    paper: https://arxiv.org/abs/2605.24517
+    github: ''
+    website: ''
+- id: '2604.00073'
+  title: Terminal Agents Suffice for Enterprise Automation
+  authors:
+  - Patrice Bechard
+  - Orlando Marquez Ayala
+  - Emily Chen
+  - Jordan Skelton
+  - Sagar Davasam
+  - Srinivas Sunkara
+  - Vikas Yadav
+  - Sai Rajeswar
+  venue: arXiv 2026/03
+  category: world_terminal
+  tags:
+  - position
+  summary: This paper argues that simple terminal-and-filesystem coding agents interacting directly with platform APIs can
+    match or outperform complex MCP or GUI-based agents for enterprise automation. Evaluation across real-world systems supports
+    terminal agents as sufficient for practical enterprise tasks.
+  links:
+    paper: https://arxiv.org/abs/2604.00073
+    github: ''
+    website: ''
+- id: '2604.25727'
+  title: Toward Scalable Terminal Task Synthesis via Skill Graphs
+  authors:
+  - Zhiyuan Fan
+  - Tinghao Yu
+  - Yuanjun Cai
+  - Jiangtao Guan
+  - Yun Yang
+  - Dingxin Hu
+  - Jiang Zhou
+  - Xing Wu
+  - Zhuo Han
+  - Feng Zhang
+  - Lilin Wang
+  venue: arXiv 2026/04
+  category: world_terminal
+  tags:
+  - training-data
+  summary: SkillSynth is a scenario-mediated skill-graph framework that synthesizes diverse terminal task instances and trajectories
+    to train terminal agents, addressing limited trajectory diversity in prior synthesis approaches. It was used to train
+    Hy3 Preview, improving its terminal-based agentic capabilities.
+  links:
+    paper: https://arxiv.org/abs/2604.25727
+    github: ''
+    website: ''
+- id: '2604.28093'
+  title: 'What Makes a Good Terminal-Agent Benchmark Task: A Guideline for Adversarial, Difficult, and Legible Evaluation
+    Design'
+  authors:
+  - Ivan Bercovich
+  venue: arXiv 2026/04
+  category: world_terminal
+  tags:
+  - position
+  summary: This paper is a guideline, drawn from experience reviewing Terminal-Bench tasks, on designing adversarial, difficult,
+    and legible terminal-agent benchmark tasks. It catalogs common failure modes like reward-hackable environments and over-prescriptive
+    specifications.
+  links:
+    paper: https://arxiv.org/abs/2604.28093
+    github: ''
+    website: ''
+- id: '2602.07274'
+  title: 'TermiGen: High-Fidelity Environment and Robust Trajectory Synthesis for Terminal Agents'
+  authors:
+  - Kaijie Zhu
+  - Yuzhou Nie
+  - Yijiang Li
+  - Yiming Huang
+  - Jialian Wu
+  - Jiang Liu
+  - Ximeng Sun
+  - Zhenfei Yin
+  - Lun Wang
+  - Zicheng Liu
+  - Emad Barsoum
+  - William Yang Wang
+  - Wenbo Guo
+  venue: arXiv 2026/02
+  category: world_terminal
+  tags:
+  - training-data
+  summary: TermiGen synthesizes high-fidelity executable Docker environments and resilient expert trajectories with injected
+    errors for training terminal agents, achieving a new open-weights state-of-the-art of 31.3% on TerminalBench. It addresses
+    environment scarcity and distributional mismatch in instruction tuning.
+  links:
+    paper: https://arxiv.org/abs/2602.07274
+    github: https://github.com/ucsb-mlsec/terminal-bench-env
+    website: ''
+- id: '2602.21193'
+  title: On Data Engineering for Scaling LLM Terminal Capabilities
+  authors:
+  - Renjie Pi
+  - Grace Lam
+  - Mohammad Shoeybi
+  - Pooya Jannaty
+  - Bryan Catanzaro
+  - Wei Ping
+  venue: arXiv 2026/02
+  category: world_terminal
+  tags:
+  - training-data
+  - model
+  summary: This paper systematically studies data engineering strategies for terminal agents, releasing the Terminal-Task-Gen
+    pipeline, the Terminal-Corpus dataset, and Nemotron-Terminal models that substantially improve Terminal-Bench 2.0 performance
+    across model sizes. It analyzes filtering, curriculum learning, and scaling behavior.
+  links:
+    paper: https://arxiv.org/abs/2602.21193
+    github: ''
+    website: ''
+- id: '2601.16443'
+  title: 'Endless Terminals: Scaling RL Environments for Terminal Agents'
+  authors:
+  - Kanishk Gandhi
+  - Shivam Garg
+  - Noah D. Goodman
+  - Dimitris Papailiopoulos
+  venue: arXiv 2026/01
+  category: world_terminal
+  tags:
+  - training-data
+  summary: Endless Terminals is a fully autonomous pipeline procedurally generating 3255 terminal-use RL training tasks without
+    human annotation, enabling scalable self-improvement. Simple PPO training on these environments yields substantial gains
+    that transfer to human-curated TerminalBench 2.0.
+  links:
+    paper: https://arxiv.org/abs/2601.16443
+    github: ''
+    website: ''
+- id: '2602.01244'
+  title: Large-Scale Terminal Agentic Trajectory Generation from Dockerized Environments
+  authors:
+  - Siwei Wu
+  - Yizhi Li
+  - Yuyang Song
+  - Wei Zhang
+  - Yang Wang
+  - Riza Batista-Navarro
+  - Xian Yang
+  - Mingjie Tang
+  - Bryan Dai
+  - Jian Yang
+  - Chenghua Lin
+  venue: arXiv 2026/02
+  category: world_terminal
+  tags:
+  - training-data
+  summary: TerminalTraj is a scalable pipeline that constructs Dockerized execution environments and synthesizes 50,733 verified
+    terminal agent trajectories across eight domains, addressing executability and verifiability challenges. Models trained
+    on this data show consistent gains up to 20% on TerminalBench 1.0.
+  links:
+    paper: https://arxiv.org/abs/2602.01244
+    github: https://github.com/Wusiwei0410/TerminalTraj
+    website: ''
+- id: '2605.10966'
+  title: 'MMTB: Evaluating Terminal Agents on Multimedia-File Tasks'
+  authors:
+  - Chiyeong Heo
+  - Jaechang Kim
+  - Junhyuk Kwon
+  - Hoyoung Kim
+  - Dongmin Park
+  - Jonghyun Lee
+  - Jungseul Ok
+  venue: arXiv 2026/05
+  category: world_terminal
+  tags:
+  - benchmark
+  summary: MMTB is a benchmark of 105 terminal-agent tasks requiring agents to work with audio and video files, paired with
+    Terminus-MM, a multimedia-perception harness. It studies how multimedia access shapes terminal agents' ability to construct
+    executable workflows.
+  links:
+    paper: https://arxiv.org/abs/2605.10966
+    github: ''
+    website: ''
+- id: '2604.17596'
+  title: 'Terminal Wrench: A Dataset of 331 Reward-Hackable Environments and 3,632 Exploit Trajectories'
+  authors:
+  - Ivan Bercovich
+  - Ivgeni Segal
+  - Kexun Zhang
+  - Shashwat Saxena
+  - Aditi Raghunathan
+  - Ziqian Zhong
+  venue: arXiv 2026/04
+  category: world_terminal
+  tags:
+  - benchmark
+  - training-data
+  summary: Terminal Wrench releases 331 reward-hackable terminal-agent environments with 3,632 exploit trajectories from frontier
+    models, exposing task-specific reward-hacking exploits. It also studies detectability of hacking behavior via chain-of-thought
+    monitoring.
+  links:
+    paper: https://arxiv.org/abs/2604.17596
+    github: https://github.com/few-sh/terminal-wrench
+    website: ''
+- id: '2605.29559'
+  title: 'LiteCoder-Terminal: Scaling Long-Horizon Terminal Environments for Learning Language Agents'
+  authors:
+  - Xiaoxuan Peng
+  - Kaiqi Zhang
+  - Xinyu Lu
+  - Boxi Cao
+  - Yaojie Lu
+  - Hongyu Lin
+  - Xianpei Han
+  - Le Sun
+  venue: arXiv 2026/05
+  category: world_terminal
+  tags:
+  - training-data
+  summary: LiteCoder-Terminal-Gen synthesizes executable, verifiable terminal training environments from domain specifications,
+    producing SFT and RL datasets that improve Qwen agents' performance on Terminal-Bench.
+  links:
+    paper: https://arxiv.org/abs/2605.29559
+    github: ''
+    website: ''
+- id: '2606.03461'
+  title: What Makes Interaction Trajectories Effective for Training Terminal Agents?
+  authors:
+  - Sidi Yang
+  - Chaofan Tao
+  - Jierun Chen
+  - Tiezheng Yu
+  - Ruoyu Wang
+  - Yuxin Jiang
+  - Yiming Du
+  - Wendong Xu
+  - Jing Xiong
+  - Taiqiang Wu
+  - Lifeng Shang
+  - Xiaohui Li
+  - Ngai Wong
+  - Haoli Bai
+  venue: arXiv 2026/06
+  category: world_terminal
+  tags:
+  - empirical
+  - training-data
+  summary: This paper investigates what makes interaction trajectories effective for post-training terminal agents, using
+    the Terminal-Lego pipeline to generate environment-verified tasks and finding environment-grounded supervision drives
+    generalization more than teacher strength.
+  links:
+    paper: https://arxiv.org/abs/2606.03461
+    github: ''
+    website: ''
+- id: '2604.19572'
+  title: A Self-Evolving Framework for Efficient Terminal Agents via Observational Context Compression
+  authors:
+  - Jincheng Ren
+  - Siwei Wu
+  - Yizhi Li
+  - Kang Zhu
+  - Shu Xu
+  - Boyu Feng
+  - Ruibin Yuan
+  - Wei Zhang
+  - Riza Batista-Navarro
+  - Jian Yang
+  - Chenghua Lin
+  venue: arXiv 2026/04
+  category: world_terminal
+  summary: TACO is a training-free, self-evolving framework that compresses noisy terminal observations into structured, workflow-adaptive
+    rules, improving accuracy and token efficiency for long-horizon terminal agents across benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2604.19572
+    github: https://github.com/multimodal-art-projection/TACO
+    website: ''
+- id: '2601.11868'
+  title: 'Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces'
+  authors:
+  - Mike A. Merrill
+  - Alexander G. Shaw
+  - Nicholas Carlini
+  - Boxuan Li
+  - Harsh Raj
+  - Ivan Bercovich
+  - Lin Shi
+  - Jeong Yeon Shin
+  - Thomas Walshe
+  - E. Kelly Buchanan
+  - Junhong Shen
+  - Guanghao Ye
+  - Haowei Lin
+  - Jason Poulos
+  - Maoyu Wang
+  - Marianna Nezhurina
+  - Jenia Jitsev
+  - Di Lu
+  - Orfeas Menis Mastromichalakis
+  - Zhiwei Xu
+  - Zizhao Chen
+  - Yue Liu
+  - Robert Zhang
+  - Leon Liangyu Chen
+  - Anurag Kashyap
+  - Jan-Lucas Uslu
+  - Jeffrey Li
+  - Jianbo Wu
+  - Minghao Yan
+  - Song Bian
+  - Vedang Sharma
+  - Ke Sun
+  - Steven Dillmann
+  - Akshay Anand
+  - Andrew Lanpouthakoun
+  - Bardia Koopah
+  - Changran Hu
+  - Etash Guha
+  - Gabriel H. S. Dreiman
+  - Jiacheng Zhu
+  - Karl Krauth
+  - Li Zhong
+  - Niklas Muennighoff
+  - Robert Amanfu
+  - Shangyin Tan
+  - Shreyas Pimpalgaonkar
+  - Tushar Aggarwal
+  - Xiangning Lin
+  - Xin Lan
+  - Xuandong Zhao
+  - Yiqing Liang
+  - Yuanli Wang
+  - Zilong Wang
+  - Changzhi Zhou
+  - David Heineman
+  - Hange Liu
+  - Harsh Trivedi
+  - John Yang
+  - Junhong Lin
+  - Manish Shetty
+  - Michael Yang
+  - Nabil Omi
+  - Negin Raoof
+  - Shanda Li
+  - Terry Yue Zhuo
+  - Wuwei Lin
+  - Yiwei Dai
+  - Yuxin Wang
+  - Wenhao Chai
+  - Shang Zhou
+  - Dariush Wahdany
+  - Ziyu She
+  - Jiaming Hu
+  - Zhikang Dong
+  - Yuxuan Zhu
+  - Sasha Cui
+  - Ahson Saiyed
+  - Arinbjörn Kolbeinsson
+  - Jesse Hu
+  - Christopher Michael Rytting
+  - Ryan Marten
+  - Yixin Wang
+  - Alex Dimakis
+  - Andy Konwinski
+  - Ludwig Schmidt
+  venue: '2026'
+  category: world_terminal
+  tags:
+  - benchmark
+  summary: Terminal-Bench 2.0 is a curated benchmark of 89 hard, realistic terminal tasks with human-written solutions and
+    comprehensive tests, showing frontier agents score below 65%.
+  links:
+    paper: https://arxiv.org/abs/2601.11868
+    github: https://github.com/harbor-framework/terminal-bench
+    website: https://www.tbench.ai/

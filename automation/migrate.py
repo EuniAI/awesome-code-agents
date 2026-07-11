@@ -9,6 +9,7 @@ approves a bucket.
 
 Usage:
   python -m automation.migrate calibrate     # mixed ~34-paper calibration batch
+  python -m automation.migrate run           # full legacy migration into data/
 """
 
 from __future__ import annotations
@@ -136,16 +137,157 @@ def _review_sheet(sample: list[tuple[str, Paper]], verdicts: list[Classification
     return "\n".join(lines) + "\n"
 
 
+# ── Full migration ────────────────────────────────────────────────────────────
+
+# Owner rulings from the calibration review (redesign/migration/calibration.md).
+# Matched by title fragment; None = out of scope, else (category, tags).
+RULING_OVERRIDES: list[tuple[str, tuple[str, list[str]] | None]] = [
+    ("Robo-Blocks", None),
+    ("Tree-of-Code", None),
+    ("Can LLMs Replace Manual Annotation", None),
+    ("Multi-Agent Collaboration via Evolving Orchestration", None),
+    ("Code as Agent Harness", ("world_general", ["survey"])),
+    ("GitTaskBench", ("world_general", ["benchmark"])),
+    ("PithTrain", ("systems", ["benchmark"])),
+    ("SlopCodeBench", ("software_development", ["benchmark"])),
+    ("Learning CLI Agents with Structured Action Credit", ("world_terminal", [])),
+    ("VisCodex", ("software_code_generation", ["model", "training-data", "benchmark"])),
+]
+
+# Processing order: clean buckets first, then the messy ones.
+BUCKET_ORDER = [
+    "sql_engineering", "hardware_engineering", "system_engineering", "game_generation",
+    "software_security_engineering", "pull_request_review", "agentic_fuzzing",
+    "code_completion", "qa", "website_generation", "backend_generation",
+    "svg_generation", "animation_generation", "3d_object_design",
+    "issue_reproduction", "issue_localization", "code_migration",
+    "software_refactoring", "performance_optimization", "environment_building",
+    "git_management", "feature_development", "code_executing_web",
+    "code_executing_game", "code_executing_embodied", "automated_data_science",
+    "machine_learning_engineering", "scientific_workflows", "agentic_visualization",
+    "terminal", "foundation_models", "data_synthesis", "multimodal_coding",
+    "code_generation", "issue_resolution",
+]
+
+
+def _override_for(title: str) -> tuple[bool, tuple[str, list[str]] | None]:
+    for frag, ruling in RULING_OVERRIDES:
+        if frag.lower() in title.lower():
+            return True, ruling
+    return False, None
+
+
+def run_full(model: str = classify.MODEL) -> Path:
+    from automation import badges, render, taxonomy
+
+    leaves = taxonomy.load().leaf_keys()
+    store: dict[str, list[Paper]] = {k: storage.load(k) for k in leaves}
+    seen: set[str] = {p.id for ps in store.values() for p in ps}
+
+    report: list[str] = ["# Full migration run", ""]
+    removed: list[str] = []
+    failed: list[str] = []
+    totals = {"placed": 0, "out": 0, "failed": 0, "dup": 0, "overridden": 0}
+
+    for bucket in BUCKET_ORDER:
+        papers = [p for p in load_legacy(bucket) if p.id not in seen]
+        dup_count = len(load_legacy(bucket)) - len(papers)
+        totals["dup"] += dup_count
+        if not papers:
+            continue
+        logger.info("=== bucket %s: %d papers (%d dups skipped) ===", bucket, len(papers), dup_count)
+
+        # Split off owner-ruled papers; classify the rest.
+        ruled: list[tuple[Paper, tuple[str, list[str]] | None]] = []
+        to_classify: list[Paper] = []
+        for p in papers:
+            hit, ruling = _override_for(p.title)
+            if hit:
+                ruled.append((p, ruling))
+            else:
+                to_classify.append(p)
+
+        abstracts = ensure_abstracts([p.id for p in to_classify])
+        items = [_classify_input(p, abstracts) for p in to_classify]
+        verdicts = classify.classify(items, model=model) if items else []
+
+        report.append(f"\n## {bucket}\n")
+        report.append("| proposed | tags | title | reason |")
+        report.append("|---|---|---|---|")
+
+        def _row(proposed: str, tags: list[str], title: str, reason: str) -> None:
+            report.append(
+                f"| **{proposed}** | {','.join(tags) or '-'} | "
+                f"{title[:70].replace('|', '/')} | {reason[:100].replace('|', '/')} |"
+            )
+
+        for p, ruling in ruled:
+            totals["overridden"] += 1
+            seen.add(p.id)
+            if ruling is None:
+                totals["out"] += 1
+                removed.append(f"- [{bucket}] {p.title} (owner ruling)")
+                _row("OUT", [], p.title, "owner ruling (calibration)")
+            else:
+                cat, tags = ruling
+                p.category, p.tags = cat, tags
+                store[cat].append(p)
+                totals["placed"] += 1
+                _row(cat, tags, p.title, "owner ruling (calibration)")
+
+        for p, v in zip(to_classify, verdicts):
+            seen.add(p.id)
+            if v.failed:
+                totals["failed"] += 1
+                failed.append(f"- [{bucket}] {p.title}")
+                _row("FAILED", [], p.title, "no valid verdict; retry later")
+            elif not v.relevant:
+                totals["out"] += 1
+                removed.append(f"- [{bucket}] {p.title}: {v.reason}")
+                _row("OUT", [], p.title, v.reason)
+            else:
+                p.category, p.tags = v.category, v.tags
+                if v.summary:
+                    p.summary = v.summary
+                store[v.category].append(p)
+                totals["placed"] += 1
+                _row(v.category, v.tags, p.title, v.reason)
+
+        # Persist incrementally so an interruption loses at most one bucket.
+        for key in leaves:
+            storage.save(key, store[key])
+
+    report.append("\n## Removed (out of scope)\n")
+    report.extend(removed or ["(none)"])
+    report.append("\n## Failed (to retry)\n")
+    report.extend(failed or ["(none)"])
+    report.append(
+        f"\n## Totals\nplaced {totals['placed']}, out {totals['out']}, "
+        f"failed {totals['failed']}, duplicates skipped {totals['dup']}, "
+        f"owner-ruled {totals['overridden']}"
+    )
+
+    REVIEW_DIR.mkdir(parents=True, exist_ok=True)
+    out = REVIEW_DIR / "full-run.md"
+    out.write_text("\n".join(report) + "\n", encoding="utf-8")
+
+    render.main()
+    badges.refresh()
+    return out
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(message)s")
     parser = argparse.ArgumentParser(description="Legacy corpus migration tooling")
-    parser.add_argument("command", choices=["calibrate"])
+    parser.add_argument("command", choices=["calibrate", "run"])
     args = parser.parse_args()
     if args.command == "calibrate":
         path = run_calibration()
-        print(f"review sheet written: {path}")
+    else:
+        path = run_full()
+    print(f"review sheet written: {path}")
 
 
 if __name__ == "__main__":

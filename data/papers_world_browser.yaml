@@ -1,0 +1,61 @@
+- id: '2502.12561'
+  title: 'UXAgent: An LLM Agent-Based Usability Testing Framework for Web Design'
+  authors:
+  - Yuxuan Lu
+  - Bingsheng Yao
+  - Hansu Gu
+  - Jing Huang
+  - Jessie Wang
+  - Yang Li
+  - Jiri Gesi
+  - Qi He
+  - Toby Jia-Jun Li
+  - Dakuo Wang
+  venue: CHI EA 2025
+  category: world_browser
+  summary: UXAgent is an LLM-agent framework that simulates thousands of users via a browser connector to conduct usability
+    testing on web designs before real human studies. It reports simulated interactions to help UX researchers refine study
+    design.
+  links:
+    paper: https://arxiv.org/abs/2502.12561
+    github: https://github.com/neuhai/UXAgent
+    website: ''
+- id: '2504.07079'
+  title: 'SkillWeaver: Web Agents can Self-Improve by Discovering and Honing Skills'
+  authors:
+  - Boyuan Zheng
+  - Michael Y. Fatemi
+  - Xiaolong Jin
+  - Zora Zhiruo Wang
+  - Apurva Gandhi
+  - Yueqi Song
+  - Yu Gu
+  - Jayanth Srinivasa
+  - Gaowen Liu
+  - Graham Neubig
+  - Yu Su
+  venue: arXiv 2025
+  category: world_browser
+  summary: SkillWeaver enables web agents to self-improve by autonomously discovering, practicing, and distilling reusable
+    skills into APIs for website interaction. Experiments on WebArena and real websites show significant success-rate gains
+    and skill transferability across agents.
+  links:
+    paper: https://arxiv.org/abs/2504.07079
+    github: https://github.com/OSU-NLP-Group/SkillWeaver
+    website: https://osu-nlp-group.github.io/SkillWeaver/
+- id: '2504.06821'
+  title: Inducing Programmatic Skills for Agentic Tasks
+  authors:
+  - Zora Zhiruo Wang
+  - Apurva Gandhi
+  - Graham Neubig
+  - Daniel Fried
+  venue: COLM 2025
+  category: world_browser
+  summary: Agent Skill Induction (ASI) lets web agents induce, verify, and reuse program-based skills on the fly to improve
+    efficiency and accuracy on WebArena web navigation tasks. It shows improved success rates and generalization of skills
+    across websites.
+  links:
+    paper: https://arxiv.org/abs/2504.06821
+    github: https://github.com/zorazrw/agent-skill-induction
+    website: ''

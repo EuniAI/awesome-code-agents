@@ -1,0 +1,2452 @@
+- id: '2503.16320'
+  title: 'Issue2Test: Generating Reproducing Test Cases from Issue Reports'
+  authors:
+  - Noor Nashid
+  - Islem Bouzenia
+  - Michael Pradel
+  - Ali Mesbah
+  venue: arXiv 2025/10
+  category: software_debugging
+  summary: Issue2Test generates reproducing test cases from GitHub issue reports by understanding the issue, drafting a candidate
+    test, and iteratively refining it via compile/run feedback until it fails as described. It improves reproduction rate
+    on SWT-bench-lite over prior techniques.
+  links:
+    paper: https://arxiv.org/abs/2503.16320
+    github: ''
+    website: ''
+- id: '2510.18270'
+  title: 'When Old Meets New: Evaluating the Impact of Regression Tests on SWE Issue Resolution'
+  authors:
+  - Yang Chen
+  - Toufique Ahmed
+  - Reyhaneh Jabbarvand
+  - Martin Hirzel
+  venue: arXiv 2025/10
+  category: software_debugging
+  summary: TestPrune leverages and minimizes existing regression test suites to improve issue reproduction and patch validation
+    within agentic bug repair pipelines. It boosts issue resolution rates on SWE-Bench when plugged into agents like Agentless
+    and SWE-Agent.
+  links:
+    paper: https://arxiv.org/abs/2510.18270
+    github: ''
+    website: ''
+- id: '2508.06365'
+  title: Execution-Feedback Driven Test Generation from SWE Issues
+  authors:
+  - Toufique Ahmed
+  - Jatin Ganhotra
+  - Avraham Shinnar
+  - Martin Hirzel
+  venue: arXiv 2025/08
+  category: software_debugging
+  summary: e-Otter++ generates reproduction tests for SWE issues using novel execution-feedback techniques despite the buggy/missing
+    code, achieving strong fail-to-pass rates on TDD-Bench Verified.
+  links:
+    paper: https://arxiv.org/abs/2508.06365
+    github: ''
+    website: ''
+- id: '2507.17542'
+  title: 'AssertFlip: Reproducing Bugs via Inversion of LLM-Generated Passing Tests'
+  authors:
+  - Lara Khatib
+  - Noble Saji Mathews
+  - Meiyappan Nagappan
+  venue: arXiv 2025/07
+  category: software_debugging
+  summary: AssertFlip generates bug reproducible tests by first writing passing tests on buggy behavior then inverting them
+    to fail, outperforming prior SWT-Bench techniques for bug reproduction.
+  links:
+    paper: https://arxiv.org/abs/2507.17542
+    github: ''
+    website: ''
+- id: '2502.01821'
+  title: Agentic Bug Reproduction for Effective Automated Program Repair at Google
+  authors:
+  - Runxiang Cheng
+  - Michele Tufano
+  - Jürgen Cito
+  - José Cambronero
+  - Pat Rondon
+  - Renyao Wei
+  - Aaron Sun
+  - Satish Chandra
+  venue: arXiv 2025/05
+  category: software_debugging
+  summary: This industry paper from Google presents an agent-based bug reproduction test generator that outperforms LIBRO
+    on internal bugs and improves downstream automated program repair fix rates via an ensemble ranking metric.
+  links:
+    paper: https://arxiv.org/abs/2502.01821
+    github: ''
+    website: ''
+- id: '2502.05368'
+  title: 'Otter: Generating Tests from Issues to Validate SWE Patches'
+  authors:
+  - Toufique Ahmed
+  - Jatin Ganhotra
+  - Rangeet Pan
+  - Avraham Shinnar
+  - Saurabh Sinha
+  - Martin Hirzel
+  venue: ICML 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: Otter generates tests from issues to validate future SWE patches, introducing the TDD-Bench-Verified benchmark
+    and outperforming prior systems while also boosting patch-generation agents.
+  links:
+    paper: https://arxiv.org/abs/2502.05368
+    github: https://github.com/IBM/TDD-Bench-Verified
+    website: ''
+- id: '2509.01616'
+  title: Automated Generation of Issue-Reproducing Tests by Combining LLMs and Search-Based Testing
+  authors:
+  - Konstantinos Kitsios
+  - Marco Castelluccio
+  - Alberto Bacchelli
+  venue: ASE 2025
+  category: software_debugging
+  summary: BLAST combines LLMs and search-based software testing to generate issue-reproducing tests from issue-patch pairs,
+    outperforming prior state of the art and validated via a deployed GitHub bot on real PRs.
+  links:
+    paper: https://arxiv.org/abs/2509.01616
+    github: https://github.com/kitsiosk/blast
+    website: ''
+- id: '2411.18015'
+  title: 'AEGIS: An Agent-based Framework for General Bug Reproduction from Issue Descriptions'
+  authors:
+  - Xinchen Wang
+  - Pengfei Gao
+  - Xiangxin Meng
+  - Chao Peng
+  - Ruida Hu
+  - Yun Lin
+  - Cuiyun Gao
+  venue: FSE 2025 Industry Papers
+  category: software_debugging
+  summary: AEGIS is an agent-based framework for general bug reproduction from issue descriptions, using concise context construction
+    and FSM-based multi-feedback optimization to outperform baselines and boost Agentless repair rates.
+  links:
+    paper: https://arxiv.org/abs/2411.18015
+    github: ''
+    website: ''
+- id: '2502.15099'
+  title: An Empirical Study on Leveraging Images in Automated Bug Report Reproduction
+  authors:
+  - Dingbang Wang
+  - Zhaoxu Zhang
+  - Sidong Feng
+  - William G. J. Halfond
+  - Tingting Yu
+  venue: MSR 2025
+  category: software_debugging
+  tags:
+  - empirical
+  summary: An empirical study analyzing how images in bug reports (e.g., UI screenshots) contribute to automated bug reproduction,
+    identifying six functional roles images play. It shows images can improve existing bug-reproduction tool performance.
+  links:
+    paper: https://arxiv.org/abs/2502.15099
+    github: ''
+    website: ''
+- id: '2411.13941'
+  title: 'LLMs as Continuous Learners: Improving the Reproduction of Defective Code in Software Issues'
+  authors:
+  - Yalan Lin
+  - Yingwei Ma
+  - Rongyu Cao
+  - Binhua Li
+  - Fei Huang
+  - Xiaodong Gu
+  - Yongbin Li
+  venue: arXiv 2024
+  category: software_debugging
+  summary: EvoCoder is a multi-agent continuous learning framework that reproduces defective code from software issues, using
+    reflection and a hierarchical experience pool to adapt to repo-specific bugs. It improves issue reproduction rates and
+    boosts downstream issue-resolving accuracy.
+  links:
+    paper: https://arxiv.org/abs/2411.13941
+    github: ''
+    website: ''
+- id: '2412.02883'
+  title: 'TDD-Bench Verified: Can LLMs Generate Tests for Issues Before They Get Resolved?'
+  authors:
+  - Toufique Ahmed
+  - Martin Hirzel
+  - Rangeet Pan
+  - Avraham Shinnar
+  - Saurabh Sinha
+  venue: arXiv 2024/12
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: TDD-Bench Verified is a benchmark of 449 GitHub issues for evaluating fail-to-pass test generation before issue
+    resolution, paired with Auto-TDD, an LLM-based test generator for validating issue fixes. It emphasizes coverage adequacy
+    of generated tests.
+  links:
+    paper: https://arxiv.org/abs/2412.02883
+    github: https://github.com/IBM/TDD-Bench-Verified
+    website: ''
+- id: https://ieeexplore.ieee.org/document/10664637
+  title: Evaluating Diverse Large Language Models for Automatic and General Bug Reproduction
+  authors:
+  - Sungmin Kang
+  - Juyeon Yoon
+  - Nargiz Askarbekkyzy
+  - Shin Yoo
+  venue: IEEE Transactions on Software Engineering 2024
+  category: software_debugging
+  tags:
+  - empirical
+  summary: An empirical evaluation comparing diverse large language models on their ability to perform automatic and general
+    bug reproduction. The study benchmarks LLM effectiveness at reproducing reported bugs.
+  links:
+    paper: https://ieeexplore.ieee.org/document/10664637
+    github: ''
+    website: ''
+- id: '2406.12952'
+  title: 'SWT-Bench: Testing and Validating Real-World Bug-Fixes with Code Agents'
+  authors:
+  - Niels Mündler
+  - Mark Niklas Müller
+  - Jingxuan He
+  - Martin Vechev
+  venue: NeurIPS 2024
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: SWT-Bench evaluates LLM-based code agents on formalizing GitHub issues into tests using real-world repositories,
+    ground-truth fixes, and golden tests. Generated tests serve as an effective filter to validate code repair proposals like
+    SWE-Agent's.
+  links:
+    paper: https://arxiv.org/abs/2406.12952
+    github: https://github.com/logic-star-ai/swt-bench
+    website: https://swtbench.com/?results=verified
+- id: '2209.11515'
+  title: 'Large Language Models are Few-shot Testers: Exploring LLM-based General Bug Reproduction'
+  authors:
+  - Sungmin Kang
+  - Juyeon Yoon
+  - Shin Yoo
+  venue: ICSE 2023
+  category: software_debugging
+  summary: LIBRO uses LLMs to generate general bug-reproducing tests from bug reports beyond simple crashes, using post-processing
+    to rank valid tests. It reproduces failures for a third of studied Defects4J bugs, including on data unseen during training.
+  links:
+    paper: https://arxiv.org/abs/2209.11515
+    github: ''
+    website: ''
+- id: '2510.01003'
+  title: Improving Code Localization with Repository Memory
+  authors:
+  - Boshi Wang
+  - Weijian Xu
+  - Yunsheng Li
+  - Mei Gao
+  - Yujia Xie
+  - Huan Sun
+  - Dongdong Chen
+  venue: arXiv 2025/10
+  category: software_debugging
+  summary: Augments code localization agents with non-parametric repository memory built from commit history and issue links
+    to improve bug localization. Shown to boost LocAgent on SWE-bench-Verified and SWE-bench-Live.
+  links:
+    paper: https://arxiv.org/abs/2510.01003
+    github: ''
+    website: ''
+- id: '2509.21427'
+  title: Extracting Conceptual Knowledge to Locate Software Issues
+  authors:
+  - Ying Wang
+  - Wenjun Mao
+  - Chong Wang
+  - Zhenhao Zhou
+  - Yicheng Zhou
+  - Wenyun Zhao
+  - Yiling Lou
+  - Xin Peng
+  venue: arXiv 2025/10
+  category: software_debugging
+  summary: RepoLens extracts and clusters conceptual knowledge from repositories into high-level concerns to improve LLM-based
+    issue localization. It boosts file/function-level localization accuracy for AgentLess, OpenHands, and mini-SWE-agent on
+    a new benchmark derived from SWE-Lancer.
+  links:
+    paper: https://arxiv.org/abs/2509.21427
+    github: ''
+    website: ''
+- id: '2508.00253'
+  title: Leveraging Large Language Model for Information Retrieval-based Bug Localization
+  authors:
+  - Moumita Asad
+  - Rafed Muhammad Yasir
+  - Sam Malek
+  venue: arXiv 2025/10
+  category: software_debugging
+  summary: GenLoc combines semantic retrieval with LLM-driven code exploration to iteratively localize buggy files from bug
+    reports. It outperforms traditional IR, deep-learning, and LLM-based baselines on Java and SWE-bench Lite datasets.
+  links:
+    paper: https://arxiv.org/abs/2508.00253
+    github: ''
+    website: ''
+- id: '2509.25242'
+  title: A Benchmark for Localizing Code and Non-Code Issues in Software Projects
+  authors:
+  - Zejun Zhang
+  - Jian Wang
+  - Qingyun Yang
+  - Yifan Pan
+  - Yi Tang
+  - Yi Li
+  - Zhenchang Xing
+  - Tian Zhang
+  - Xuandong Li
+  - Guoan Zhang
+  venue: arXiv 2025/09
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: Introduces MULocBench, a diverse benchmark of 1,100 GitHub issues covering code and non-code artifacts for realistic
+    issue localization evaluation. Reveals current localization methods perform poorly (under 40% file-level accuracy) on
+    this broader task.
+  links:
+    paper: https://arxiv.org/abs/2509.25242
+    github: ''
+    website: ''
+- id: '2508.03012'
+  title: Tool-integrated Reinforcement Learning for Repo Deep Search
+  authors:
+  - Zexiong Ma
+  - Chao Peng
+  - Qunhong Zeng
+  - Pengfei Gao
+  - Yanzhen Zou
+  - Bing Xie
+  venue: arXiv 2025/08
+  category: software_debugging
+  tags:
+  - training-data
+  summary: ToolTrain trains LLMs via rejection-sampled SFT and tool-integrated RL to better use repository retrieval tools
+    for issue localization, framing it as 'Repo Deep Search'. Trained models achieve SOTA localization and improved end-to-end
+    issue resolution.
+  links:
+    paper: https://arxiv.org/abs/2508.03012
+    github: ''
+    website: ''
+- id: '2505.07849'
+  title: 'SweRank: Software Issue Localization with Code Ranking'
+  authors:
+  - Revanth Gangi Reddy
+  - Tarun Suresh
+  - JaeHyeok Doo
+  - Ye Liu
+  - Xuan Phi Nguyen
+  - Yingbo Zhou
+  - Semih Yavuz
+  - Caiming Xiong
+  - Heng Ji
+  - Shafiq Joty
+  venue: arXiv 2025/05
+  category: software_debugging
+  tags:
+  - training-data
+  summary: SweRank is a retrieve-and-rerank framework for software issue localization, trained on the newly curated SweLoc
+    dataset of GitHub issues and code changes. It outperforms both traditional rankers and costly agentic LLM approaches on
+    SWE-Bench-Lite and LocBench.
+  links:
+    paper: https://arxiv.org/abs/2505.07849
+    github: https://github.com/SalesforceAIResearch/SweRank
+    website: ''
+- id: '2505.19489'
+  title: Benchmarking and Enhancing LLM Agents in Localizing Linux Kernel Bugs
+  authors:
+  - Zhenhao Zhou
+  - Zhuochen Huang
+  - Yike He
+  - Chong Wang
+  - Jiajun Wang
+  - Yijian Wu
+  - Xin Peng
+  - Yiling Lou
+  venue: arXiv 2025/05
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: Introduces LinuxFLBench, a fault-localization benchmark built from real Linux kernel bugs, and LinuxFL+, a framework
+    that substantially improves LLM agent localization accuracy on this challenging large-scale codebase.
+  links:
+    paper: https://arxiv.org/abs/2505.19489
+    github: ''
+    website: ''
+- id: '2502.15292'
+  title: 'Bridging Bug Localization and Issue Fixing: A Hierarchical Localization Framework Leveraging Large Language Models'
+  authors:
+  - Jianming Chang
+  - Xin Zhou
+  - Lulu Wang
+  - David Lo
+  - Bixin Li
+  venue: arXiv 2025/02
+  category: software_debugging
+  summary: BugCerberus is a hierarchical bug localization framework using three customized LLMs to localize bugs at file,
+    function, and statement levels, improving downstream issue-fixing rates. Evaluated on SWE-bench-Lite, it outperforms prior
+    localization baselines.
+  links:
+    paper: https://arxiv.org/abs/2502.15292
+    github: ''
+    website: ''
+- id: '2502.00350'
+  title: 'OrcaLoca: An LLM Agent Framework for Software Issue Localization'
+  authors:
+  - Zhongming Yu
+  - Hejia Zhang
+  - Yujie Zhao
+  - Hanxian Huang
+  - Matrix Yao
+  - Ke Ding
+  - Jishen Zhao
+  venue: ICML 2025
+  category: software_debugging
+  summary: OrcaLoca is an LLM agent framework for software issue localization using priority-based scheduling, action decomposition,
+    and context pruning to navigate code repositories. It achieves new open-source SOTA function match rate on SWE-bench Lite
+    and improves downstream patch resolution.
+  links:
+    paper: https://arxiv.org/abs/2502.00350
+    github: ''
+    website: ''
+- id: https://aclanthology.org/2025.acl-long.426/
+  title: 'LocAgent: Graph-Guided LLM Agents for Code Localization'
+  authors:
+  - Zhaoling Chen
+  - Robert Tang
+  - Gangda Deng
+  - Fang Wu
+  - Jialong Wu
+  - Zhiwei Jiang
+  - Viktor Prasanna
+  - Arman Cohan
+  - Xingyao Wang
+  venue: ACL 2025
+  category: software_debugging
+  summary: LocAgent is a graph-guided LLM agent that localizes code relevant to reported issues by traversing repository structure
+    graphs, aiding downstream patch generation. It targets improving code localization accuracy for issue resolution.
+  links:
+    paper: https://aclanthology.org/2025.acl-long.426/
+    github: https://github.com/gersteinlab/LocAgent
+    website: ''
+- id: '2503.22424'
+  title: Issue Localization via LLM-Driven Iterative Code Graph Searching
+  authors:
+  - Zhonghao Jiang
+  - Xiaoxue Ren
+  - Meng Yan
+  - Wei Jiang
+  - Yong Li
+  - Zhongxin Liu
+  venue: ASE 2025
+  category: software_debugging
+  summary: CoSIL is an LLM-driven, training-free issue localization method that performs two-phase code graph search (file-level
+    then function-level) to pinpoint buggy code from issue descriptions. It improves localization accuracy on SWE-bench and
+    boosts downstream issue-resolution performance when combined with Agentless.
+  links:
+    paper: https://arxiv.org/abs/2503.22424
+    github: https://github.com/ZhonghaoJiang/CoSIL
+    website: ''
+- id: '2504.07164'
+  title: 'R2E-Gym: Procedural Environments and Hybrid Verifiers for Scaling Open-Weights SWE Agents'
+  authors:
+  - Naman Jain
+  - Jaskirat Singh
+  - Manish Shetty
+  - Liang Zheng
+  - Koushik Sen
+  - Ion Stoica
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - training-data
+  - benchmark
+  - model
+  summary: AgentGym (R2E-Gym) provides over 8.7K procedurally-curated executable training environments for SWE agents, using
+    synthetic test generation/back-translation from commits and hybrid execution-based/execution-free verifiers for test-time
+    scaling. The approach achieves a new state-of-the-art 51% on SWE-Bench Verified with open-weight models.
+  links:
+    paper: https://arxiv.org/abs/2504.07164
+    github: https://github.com/R2E-Gym/R2E-Gym
+    website: https://r2e-gym.github.io/
+- id: https://proceedings.mlr.press/v235/jain24c.html
+  title: 'R2E: Turning any Github Repository into a Programming Agent Environment'
+  authors:
+  - Naman Jain
+  - Manish Shetty
+  - Tianjun Zhang
+  - King Han
+  - Koushik Sen
+  - Ion Stoica
+  venue: ICML 2024
+  category: software_debugging
+  tags:
+  - benchmark
+  - training-data
+  summary: R2E turns arbitrary GitHub repositories into programming agent environments, generating executable tasks and tests
+    for training/evaluating coding agents, targeting issue-resolution style tasks. It provides scalable environment construction
+    for SWE-bench-like evaluation.
+  links:
+    paper: https://proceedings.mlr.press/v235/jain24c.html
+    github: https://github.com/r2e-project/r2e
+    website: ''
+- id: '2506.07636'
+  title: 'SWE-Dev: Building Software Engineering Agents with Training and Inference Scaling'
+  authors:
+  - Haoran Wang
+  - Zhenyu Hou
+  - Yao Wei
+  - Jie Tang
+  - Yuxiao Dong
+  venue: ACL 2025 Findings
+  category: software_debugging
+  tags:
+  - training-data
+  summary: SWE-Dev builds software engineering agents by synthesizing test cases and scaling agent trajectories as training
+    data, evaluated on SWE-bench-Verified for issue resolution. The resulting 7B/32B models outperform other open SWE agents
+    on patch generation.
+  links:
+    paper: https://arxiv.org/abs/2506.07636
+    github: https://github.com/THUDM/SWE-Dev
+    website: ''
+- id: '2506.10954'
+  title: 'SWE-Factory: Your Automated Factory for Issue Resolution Training Data and Evaluation Benchmarks'
+  authors:
+  - Lianghong Guo
+  - Yanlin Wang
+  - Caihua Li
+  - Pengyu Yang
+  - Jiachi Chen
+  - Wei Tao
+  - Yingtian Zou
+  - Duyu Tang
+  - Zibin Zheng
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - training-data
+  summary: SWE-Factory automates construction of GitHub issue resolution datasets and evaluation environments via an LLM-based
+    multi-agent system, including automated fail2pass validation. It scales training/evaluation benchmark creation across
+    languages for issue-resolving agents.
+  links:
+    paper: https://arxiv.org/abs/2506.10954
+    github: https://github.com/DeepSoftwareAnalytics/swe-factory
+    website: ''
+- id: '2504.14757'
+  title: 'SWE-Synth: Synthesizing Verifiable Bug-Fix Data to Enable Large Language Models in Resolving Real-World Bugs'
+  authors:
+  - Minh V.T. Pham
+  - Huy N. Phan
+  - Hoang N. Phan
+  - Cuong Le Chi
+  - Tien N. Nguyen
+  - Nghi D. Q. Bui
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - training-data
+  summary: SWE-Synth synthesizes verifiable, repository-level bug-fix datasets with test cases and repair trajectories using
+    LLM agents simulating debugging workflows. Models trained on this synthetic data outperform those trained on real-world
+    datasets on SWE-Bench Lite.
+  links:
+    paper: https://arxiv.org/abs/2504.14757
+    github: https://github.com/FSoft-AI4Code/SWE-Synth
+    website: ''
+- id: '2509.08724'
+  title: 'SWE-Mirror: Scaling Issue-Resolving Datasets by Mirroring Issues Across Repositories'
+  authors:
+  - Junhao Wang
+  - Daoguang Zan
+  - Shulin Xin
+  - Siyao Liu
+  - Yurong Wu
+  - Kai Shen
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - training-data
+  summary: SWE-Mirror scales issue-resolving datasets by mirroring real GitHub issues into repositories with existing Gym
+    environments, producing 60,671 verifiable tasks. Training on this data improves coding agents' issue-resolving performance
+    on SWE-Bench-Verified.
+  links:
+    paper: https://arxiv.org/abs/2509.08724
+    github: ''
+    website: ''
+- id: '2508.01550'
+  title: 'RepoForge: Training a SOTA Fast-thinking SWE Agent with an End-to-End Data Curation Pipeline Synergizing SFT and
+    RL at Scale'
+  authors:
+  - Zhilong Chen
+  - Chengzong Zhao
+  - Boyuan Chen
+  - Dayi Lin
+  - Yihao Chen
+  - Arthur Leung
+  - Gopi Krishnan Rajbahadur
+  - Gustavo Oliva
+  - Haoxiang Zhang
+  - Aadi Bhatia
+  - Kim Kisub
+  - Kirill Vasilevski
+  - Youssef Esseddiq
+  - Yanruo Yang
+  - Ahmed Hassan
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - training-data
+  - benchmark
+  summary: RepoForge is an end-to-end pipeline that auto-generates executable environments from GitHub commits and trains
+    SWE agents via SFT and RL, achieving SOTA on SWE-Bench-Verified for small models. It includes automated labeling and distributed
+    evaluation infrastructure.
+  links:
+    paper: https://arxiv.org/abs/2508.01550
+    github: ''
+    website: https://centre-for-software-excellence.github.io/docs/blog/repoforge
+- id: '2506.12728'
+  title: 'MCTS-Refined CoT: High-Quality Fine-Tuning Data for LLM-Based Repository Issue Resolution'
+  authors:
+  - Yibo Wang
+  - Zhihao Peng
+  - Ying Wang
+  - Zhao Wei
+  - Hai Yu
+  - Zhiliang Zhu
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - training-data
+  summary: MCTS-REFINE generates high-quality Chain-of-Thought fine-tuning data for repository issue resolution by validating
+    reasoning steps via Monte Carlo Tree Search and rejection sampling. The resulting dataset improves LLM performance on
+    file localization, fault localization, and patch generation subtasks.
+  links:
+    paper: https://arxiv.org/abs/2506.12728
+    github: ''
+    website: https://mcts-refine.github.io/
+- id: '2504.21798'
+  title: 'SWE-smith: Scaling Data for Software Engineering Agents'
+  authors:
+  - John Yang
+  - Kilian Lieret
+  - Carlos E. Jimenez
+  - Alexander Wettig
+  - Kabir Khandpur
+  - Yanzhe Zhang
+  - Binyuan Hui
+  - Ofir Press
+  - Ludwig Schmidt
+  - Diyi Yang
+  venue: NeurIPS 2025 Datasets & Benchmarks Track
+  category: software_debugging
+  tags:
+  - training-data
+  summary: SWE-smith is a scalable pipeline that constructs execution environments and synthesizes large numbers of bug-fix
+    task instances from any Python codebase, producing a 50k-instance dataset. Training on it yields SWE-agent-LM-32B, a state-of-the-art
+    open-source model on SWE-bench Verified.
+  links:
+    paper: https://arxiv.org/abs/2504.21798
+    github: https://github.com/SWE-bench/SWE-smith
+    website: https://swesmith.com/
+- id: '2412.21139'
+  title: Training Software Engineering Agents and Verifiers with SWE-Gym
+  authors:
+  - Jiayi Pan
+  - Xingyao Wang
+  - Graham Neubig
+  - Navdeep Jaitly
+  - Heng Ji
+  - Alane Suhr
+  - Yizhe Zhang
+  venue: ICML 2025
+  category: software_debugging
+  tags:
+  - training-data
+  - benchmark
+  summary: SWE-Gym is a training environment with 2,438 real-world Python issue-resolution task instances including runtime
+    environments, tests, and natural-language tasks. Training agents and verifiers on it achieves new state-of-the-art resolve
+    rates on SWE-Bench Verified and Lite.
+  links:
+    paper: https://arxiv.org/abs/2412.21139
+    github: https://github.com/SWE-Gym/SWE-Gym
+    website: ''
+- id: '2506.09003'
+  title: 'SWE-Flow: Synthesizing Software Engineering Data in a Test-Driven Manner'
+  authors:
+  - Lei Zhang
+  - Jiaxi Yang
+  - Min Yang
+  - Jian Yang
+  - Mouxiang Chen
+  - Jiajun Zhang
+  - Zeyu Cui
+  - Binyuan Hui
+  - Junyang Lin
+  venue: ICML 2025
+  category: software_debugging
+  tags:
+  - training-data
+  - benchmark
+  summary: SWE-Flow synthesizes test-driven-development software engineering data by inferring incremental development steps
+    from unit tests via a Runtime Dependency Graph, producing training instances and the SWE-Flow-Eval benchmark. Fine-tuning
+    on this data improves TDD-based coding performance.
+  links:
+    paper: https://arxiv.org/abs/2506.09003
+    github: https://github.com/Hambaobao/SWE-Flow
+    website: ''
+- id: '2507.09108'
+  title: 'SPICE: An Automated SWE-Bench Labeling Pipeline for Issue Clarity, Test Coverage, and Effort Estimation'
+  authors:
+  - Gustavo A. Oliva
+  - Gopi Krishnan Rajbahadur
+  - Aaditya Bhatia
+  - Haoxiang Zhang
+  - Yihao Chen
+  - Zhilong Chen
+  - Arthur Leung
+  - Dayi Lin
+  - Boyuan Chen
+  - Ahmed E. Hassan
+  venue: ASE 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: SPICE is an automated labeling pipeline that annotates SWE-bench-style datasets for issue clarity, test coverage,
+    and effort estimation, drastically cutting labeling cost versus manual annotation. It releases SPICE Bench, a large SPICE-labeled
+    dataset for issue-resolution research.
+  links:
+    paper: https://arxiv.org/abs/2507.09108
+    github: ''
+    website: ''
+- id: '2506.16136'
+  title: 'Seeing is Fixing: Cross-Modal Reasoning with Multimodal LLMs for Visual Software Issue Fixing'
+  authors:
+  - Kai Huang
+  - Jian Zhang
+  - Xiaofei Xie
+  - Chunyang Chen
+  venue: arXiv 2025
+  category: software_debugging
+  summary: GUIRepair resolves multimodal GitHub issues by translating GUI screenshots into reproduced code (Image2Code) and
+    validating patches via rendered GUI comparison (Code2Image). It substantially outperforms prior systems on SWE-bench Multimodal.
+  links:
+    paper: https://arxiv.org/abs/2506.16136
+    github: ''
+    website: ''
+- id: https://openreview.net/forum?id=riTiq3i21b
+  title: 'SWE-bench Multimodal: Do AI Systems Generalize to Visual Software Domains?'
+  authors:
+  - John Yang
+  - Carlos E Jimenez
+  - Alex L Zhang
+  - Kilian Lieret
+  - Joyce Yang
+  - Xindi Wu
+  - Ori Press
+  - Niklas Muennighoff
+  - Gabriel Synnaeve
+  - Karthik R Narasimhan
+  - Diyi Yang
+  - Sida Wang
+  - Ofir Press
+  venue: ICLR 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: SWE-bench Multimodal extends issue-resolution evaluation to visual software domains, testing whether AI systems
+    can resolve bugs requiring visual/GUI understanding. It reveals generalization gaps of text-only trained systems on visually
+    rich repositories.
+  links:
+    paper: https://openreview.net/forum?id=riTiq3i21b
+    github: https://github.com/SWE-bench/SWE-bench
+    website: https://www.swebench.com/multimodal.html
+- id: https://aclanthology.org/2025.findings-acl.384/
+  title: 'CodeV: Issue Resolving with Visual Data'
+  authors:
+  - Linhao Zhang
+  - Daoguang Zan
+  - Quanshun Yang
+  - Zhirong Huang
+  - Dong Chen
+  - Bo Shen
+  - Tianyu Liu
+  - Yongshun Gong
+  - Huang Pengjie
+  - Xudong Lu
+  - Guangtai Liang
+  - Lizhen Cui
+  - Qianxiang Wang
+  venue: ACL 2025 Findings
+  category: software_debugging
+  summary: CodeV addresses issue resolution tasks that involve visual data, extending automated repair to multimodal bug reports.
+    It targets the same class of visual software defects as SWE-bench Multimodal.
+  links:
+    paper: https://aclanthology.org/2025.findings-acl.384/
+    github: https://github.com/luolin101/CodeV
+    website: ''
+- id: '2604.24212'
+  title: Empowering Autonomous Debugging Agents with Efficient Dynamic Analysis
+  authors:
+  - Jiahong Xiang
+  - Xiaoyang Xu
+  - Xiaopan Chu
+  - Hongliang Tian
+  - Yuqun Zhang
+  venue: arXiv 2026/04
+  category: software_debugging
+  summary: ADI is an agent-centric debugging interface providing function-level, cost-efficient interaction via execution
+    traces for autonomous program repair agents. It boosts SWE-bench Verified resolution rates and generalizes as a plug-in
+    to existing SWE agents.
+  links:
+    paper: https://arxiv.org/abs/2604.24212
+    github: ''
+    website: ''
+- id: https://openreview.net/forum?id=R40rS2afQ3
+  title: 'SWE-Bench+: Enhanced Coding Benchmark for LLMs'
+  authors:
+  - Reem Aleithan
+  - Haoran Xue
+  - Mohammad Mahdi Mohajer
+  - Elijah Nnorom
+  - Gias Uddin
+  - Song Wang
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: SWE-Bench+ is an enhanced version of the SWE-bench issue-resolution benchmark, addressing data quality and leakage
+    issues in the original. It serves evaluation of automated bug-fixing agents.
+  links:
+    paper: https://openreview.net/forum?id=R40rS2afQ3
+    github: ''
+    website: ''
+- id: '2507.19942'
+  title: 'Prometheus: Unified Knowledge Graphs for Issue Resolution in Multilingual Codebases'
+  authors:
+  - Zimin Chen
+  - Yue Pan
+  - Siyu Lu
+  - Jiayi Xu
+  - Claire Le Goues
+  - Martin Monperrus
+  - He Ye
+  venue: arXiv 2025
+  category: software_debugging
+  summary: Prometheus is a memory-centric multi-agent framework that builds a unified knowledge graph over repositories to
+    support long-horizon codebase navigation for automated issue resolution. It achieves state-of-the-art results on SWE-bench
+    Verified and SWE-PolyBench Verified.
+  links:
+    paper: https://arxiv.org/abs/2507.19942
+    github: https://github.com/EuniAI/Prometheus
+    website: https://euni.ai/
+- id: '2601.01426'
+  title: 'SWE-Lego: Pushing the Limits of Supervised Fine-tuning for Software Issue Resolving'
+  authors:
+  - Chaofan Tao
+  - Jierun Chen
+  - Yuxin Jiang
+  - Kaiqi Kou
+  - Shaowei Wang
+  - Ruoyu Wang
+  - Xiaohui Li
+  - Sidi Yang
+  - Yiming Du
+  - Jianbo Dai
+  - Zhiming Mao
+  - Xinyu Wang
+  - Lifeng Shang
+  - Haoli Bai
+  venue: arXiv 2026/01
+  category: software_debugging
+  tags:
+  - training-data
+  - model
+  summary: SWE-Lego is a supervised fine-tuning recipe and dataset of real and synthetic trajectories for training software
+    issue-resolving agents, achieving state-of-the-art results among open models on SWE-bench Verified. It also studies test-time
+    scaling with a verifier.
+  links:
+    paper: https://arxiv.org/abs/2601.01426
+    github: https://github.com/SWE-Lego/SWE-Lego
+    website: ''
+- id: '2503.15223'
+  title: Are "Solved Issues" in SWE-bench Really Solved Correctly? An Empirical Study
+  authors:
+  - You Wang
+  - Michael Pradel
+  - Zhongxin Liu
+  venue: ICSE 2026
+  category: software_debugging
+  tags:
+  - empirical
+  summary: This empirical study introduces differential patch testing (PatchDiff) to check whether plausible patches from
+    SWE-bench-solving tools truly match developer intent, finding many pass tests yet diverge in behavior. It reveals inflated
+    resolution rates in SWE-bench evaluations.
+  links:
+    paper: https://arxiv.org/abs/2503.15223
+    github: ''
+    website: ''
+- id: '2503.12374'
+  title: 'Beyond Final Code: A Process-Oriented Error Analysis of Software Development Agents in Real-World GitHub Scenarios'
+  authors:
+  - Zhi Chen
+  - Wei Ma
+  - Lingxiao Jiang
+  venue: ICSE 2026
+  category: software_debugging
+  tags:
+  - empirical
+  summary: This empirical study analyzes solving- and testing-phase trajectories of 8 top SWE-bench agents to characterize
+    execution errors that hinder issue resolution, identifying common failure modes and benchmark bugs. It offers process-level
+    insight beyond final-patch evaluation.
+  links:
+    paper: https://arxiv.org/abs/2503.12374
+    github: ''
+    website: ''
+- id: '2411.10213'
+  title: 'LLM-based Agents for Automated Bug Fixing: How Far Are We?'
+  authors:
+  - Xiangxin Meng
+  - Zexiong Ma
+  - Pengfei Gao
+  - Chao Peng
+  venue: ICSE 2026
+  category: software_debugging
+  tags:
+  - empirical
+  summary: This study systematically compares six LLM-based automated bug-fixing agent systems on SWE-bench Verified, analyzing
+    fault localization accuracy and bug reproduction capability. It highlights performance gaps and areas needing further
+    optimization.
+  links:
+    paper: https://arxiv.org/abs/2411.10213
+    github: https://github.com/ResearchOpenRepos/bug_fixing_agent_empirical_study
+    website: ''
+- id: '2512.18552'
+  title: Toward Training Superintelligent Software Agents through Self-Play SWE-RL
+  authors:
+  - Yuxiang Wei
+  - Zhiqing Sun
+  - Emily McMilin
+  - Jonas Gehring
+  - David Zhang
+  - Gabriel Synnaeve
+  - Daniel Fried
+  - Lingming Zhang
+  - Sida Wang
+  venue: arXiv 2025/12
+  category: software_debugging
+  tags:
+  - training-data
+  summary: Self-play SWE-RL trains a software agent via self-play to inject and repair bugs in real repositories without human-labeled
+    issues, improving performance on SWE-bench Verified and SWE-bench Pro. It proposes a path toward autonomous acquisition
+    of issue-resolution skill.
+  links:
+    paper: https://arxiv.org/abs/2512.18552
+    github: ''
+    website: ''
+- id: '2511.13646'
+  title: 'Live-SWE-agent: Can Software Engineering Agents Self-Evolve on the Fly?'
+  authors:
+  - Chunqiu Steven Xia
+  - Zhe Wang
+  - Yan Yang
+  - Yuxiang Wei
+  - Lingming Zhang
+  venue: arXiv 2025/11
+  category: software_debugging
+  summary: Live-SWE-agent is a software agent that autonomously evolves its own scaffold at runtime while solving real-world
+    issue-resolution tasks. It achieves state-of-the-art solve rates on SWE-bench Verified and SWE-Bench Pro without offline
+    training.
+  links:
+    paper: https://arxiv.org/abs/2511.13646
+    github: https://github.com/OpenAutoCoder/live-swe-agent
+    website: ''
+- id: '2511.16004'
+  title: 'InfCode: Adversarial Iterative Refinement of Tests and Patches for Reliable Software Issue Resolution'
+  authors:
+  - KeFan Li
+  - Mengfei Wang
+  - Hengzhi Zhang
+  - Zhichao Li
+  - Yuan Yuan
+  - Mu Li
+  - Xiang Gao
+  - Hailong Sun
+  - Chunming Hu
+  - Weifeng Lv
+  venue: arXiv 2025/11
+  category: software_debugging
+  summary: InfCode is an adversarial multi-agent framework that iteratively refines tests and patches to reliably resolve
+    real-world software issues, achieving state-of-the-art results on SWE-bench Verified. It uses a containerized environment
+    for repository inspection and validation.
+  links:
+    paper: https://arxiv.org/abs/2511.16004
+    github: ''
+    website: ''
+- id: '2511.00197'
+  title: 'Understanding Code Agent Behaviour: An Empirical Study of Success and Failure Trajectories'
+  authors:
+  - Oorja Majgaonkar
+  - Zhiwei Fei
+  - Xiang Li
+  - Federica Sarro
+  - He Ye
+  venue: arXiv 2025/11
+  category: software_debugging
+  tags:
+  - empirical
+  summary: This empirical study analyzes success and failure trajectories of three code agents (OpenHands, SWE-agent, Prometheus)
+    on SWE-Bench issue-resolution tasks, examining problem-solving strategies and fault localization patterns. It finds failed
+    trajectories are longer and success depends more on approximate than exact fixes.
+  links:
+    paper: https://arxiv.org/abs/2511.00197
+    github: ''
+    website: ''
+- id: '2510.16786'
+  title: 'More with Less: An Empirical Study of Turn-Control Strategies for Efficient Coding Agents'
+  authors:
+  - Pengfei Gao
+  - Chao Peng
+  venue: arXiv 2025/11
+  category: software_debugging
+  tags:
+  - empirical
+  summary: This empirical study on SWE-bench evaluates turn-control strategies (unrestricted, fixed-limit, dynamic) for managing
+    cost and performance trade-offs in iterative coding agents. Dynamic turn allocation reduces costs substantially while
+    maintaining or improving solve rates.
+  links:
+    paper: https://arxiv.org/abs/2510.16786
+    github: ''
+    website: ''
+- id: '2511.02352'
+  title: 'SWE-Sharp-Bench: A Reproducible Benchmark for C# Software Engineering Tasks'
+  authors:
+  - Sanket Mhatre
+  - Yasharth Bajpai
+  - Sumit Gulwani
+  - Emerson Murphy-Hill
+  - Gustavo Soares
+  venue: arXiv 2025/11
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: SWE-Sharp-Bench is a reproducible benchmark of 150 C# software engineering tasks from 17 repositories, extending
+    SWE-bench-style evaluation to an underrepresented enterprise language. Results show a significant performance gap between
+    Python and C# task resolution rates.
+  links:
+    paper: https://arxiv.org/abs/2511.02352
+    github: https://github.com/microsoft/prose/tree/main/misc/SWE-Sharp-Bench
+    website: ''
+- id: '2510.03217'
+  title: 'Abstain and Validate: A Dual-LLM Policy for Reducing Noise in Agentic Program Repair'
+  authors:
+  - José Cambronero
+  - Michele Tufano
+  - Sherry Shi
+  - Renyao Wei
+  - Grant Uy
+  - Runxiang Cheng
+  - Chin-Jung Liu
+  - Shiying Pan
+  - Satish Chandra
+  - Pat Rondon
+  venue: arXiv 2025/10
+  category: software_debugging
+  summary: This paper proposes bug-abstention and patch-validation LLM policies to filter unlikely-to-be-fixed bugs and low-quality
+    patches in agentic automated program repair, evaluated on Google's internal codebase. Combining both policies raises repair
+    success rates substantially.
+  links:
+    paper: https://arxiv.org/abs/2510.03217
+    github: ''
+    website: ''
+- id: '2510.03588'
+  title: 'REFINE: Enhancing Program Repair Agents through Context-Aware Patch Refinement'
+  authors:
+  - Anvith Pabba
+  - Simin Chen
+  - Alex Mathai
+  - Anindya Chakraborty
+  - Baishakhi Ray
+  venue: arXiv 2025/10
+  category: software_debugging
+  summary: REFINE is a patch refinement framework that transforms partially-correct 'draft patches' from LLM-based automatic
+    program repair into correct fixes via disambiguation, candidate diversification, and LLM-based review. It improves state-of-the-art
+    results on SWE-Bench Lite and Verified.
+  links:
+    paper: https://arxiv.org/abs/2510.03588
+    github: ''
+    website: ''
+- id: '2510.19898'
+  title: 'BugPilot: Complex Bug Generation for Efficient Learning of SWE Skills'
+  authors:
+  - Atharv Sonwane
+  - Isadora White
+  - Hyunji Lee
+  - Matheus Pereira
+  - Lucas Caccia
+  - Minseon Kim
+  - Zhengyan Shi
+  - Chinmay Singh
+  - Alessandro Sordoni
+  - Marc-Alexandre Côté
+  - Xingdi Yuan
+  venue: arXiv 2025/10
+  category: software_debugging
+  tags:
+  - training-data
+  summary: BugPilot synthesizes realistic, diverse bugs by having SWE agents add features that unintentionally break tests,
+    producing more human-like training data than perturbation-based methods. Models trained on these bugs (FrogBoss, FrogMini)
+    achieve state-of-the-art SWE-bench Verified results.
+  links:
+    paper: https://arxiv.org/abs/2510.19898
+    github: ''
+    website: ''
+- id: '2510.23761'
+  title: 'TDFlow: Agentic Workflows for Test Driven Software Engineering'
+  authors:
+  - Kevin Han
+  - Siddharth Maddikayala
+  - Tim Knappe
+  - Om Patel
+  - Austen Liao
+  - Amir Barati Farimani
+  venue: arXiv 2025/10
+  category: software_debugging
+  summary: TDFlow is a test-driven agentic workflow that decomposes repository-scale program repair into proposing, revising,
+    and debugging patches guided by human-written tests, achieving near-human resolution rates on SWE-Bench Lite and Verified.
+    It identifies reproduction-test generation as the key remaining bottleneck.
+  links:
+    paper: https://arxiv.org/abs/2510.23761
+    github: ''
+    website: ''
+- id: '2503.21710'
+  title: Enhancing repository-level software repair via repository-aware knowledge graphs
+  authors:
+  - Boyang Yang
+  - Jiadong Ren
+  - Shunfu Jin
+  - Yang Liu
+  - Feng Liu
+  - Bach Le
+  - Haoye Tian
+  venue: arXiv 2025/10
+  category: software_debugging
+  summary: KGCompass builds a repository-aware knowledge graph linking issues, PRs, and code entities to narrow fault localization
+    and guide patch generation. It achieves state-of-the-art single-LLM repair on SWE-bench Lite with high fault localization
+    accuracy.
+  links:
+    paper: https://arxiv.org/abs/2503.21710
+    github: https://github.com/GLEAM-Lab/KGCompass
+    website: ''
+- id: '2510.16059'
+  title: 'SIADAFIX: issue description response for adaptive program repair'
+  authors:
+  - Xin Cao
+  - Nan Yu
+  venue: arXiv 2025/10
+  category: software_debugging
+  summary: SIADAFIX adaptively selects repair modes (easy/middle/hard) using fast/slow thinking to guide a bug-fix agent's
+    workflow based on issue description analysis. It achieves state-of-the-art open-source pass@1 on SWE-bench Lite.
+  links:
+    paper: https://www.arxiv.org/abs/2510.16059
+    github: https://github.com/liauto-siada/siada-cli
+    website: ''
+- id: '2509.23045'
+  title: 'Kimi-Dev: Agentless Training as Skill Prior for SWE-Agents'
+  authors:
+  - Zonghan Yang
+  - Shengjie Wang
+  - Kelin Fu
+  - Wenyang He
+  - Weimin Xiong
+  - Yibo Liu
+  - Yibo Miao
+  - Bofei Gao
+  - Yejie Wang
+  - Yingwei Ma
+  - Yanhao Li
+  - Yue Liu
+  - Zhenxing Hu
+  - Kaitai Zhang
+  - Shuyi Wang
+  - Huarong Chen
+  - Flood Sung
+  - Yang Liu
+  - Yang Gao
+  - Zhilin Yang
+  - Tianyu Liu
+  venue: arXiv 2025/09
+  category: software_debugging
+  tags:
+  - model
+  - training-data
+  summary: Kimi-Dev trains an open-source SWE LLM via Agentless-style training to build skill priors (localization, code edit,
+    reflection) that transfer to agentic SWE-Agent settings. It achieves top results on SWE-bench Verified and improves SWE-Agent
+    adaptation.
+  links:
+    paper: https://arxiv.org/abs/2509.23045
+    github: ''
+    website: ''
+- id: '2509.13941'
+  title: An Empirical Study on Failures in Automated Issue Solving
+  authors:
+  - Simiao Liu
+  - Fang Liu
+  - Liehao Li
+  - Xin Tan
+  - Yinghao Zhu
+  - Xiaoli Lian
+  - Li Zhang
+  venue: arXiv 2025/09
+  category: software_debugging
+  tags:
+  - empirical
+  summary: This paper analyzes failure modes of SOTA automated issue-solving tools on SWE-Bench-Verified, building a taxonomy
+    of failure causes, and proposes an Expert-Executor framework to correct flawed reasoning, solving 22.2% of previously
+    intractable issues.
+  links:
+    paper: https://arxiv.org/abs/2509.13941
+    github: ''
+    website: ''
+- id: '2506.08311'
+  title: 'Understanding Software Engineering Agents Through the Lens of Traceability: An Empirical Study'
+  authors:
+  - Ira Ceka
+  - Saurabh Pujar
+  - Shyam Ramji
+  - Luca Buratti
+  - Gail Kaiser
+  - Baishakhi Ray
+  venue: arXiv 2025/06
+  category: software_debugging
+  tags:
+  - empirical
+  summary: This empirical study traces decision-making pipelines of five state-of-the-art APR agents across 500 real repair
+    tasks, identifying bottlenecks in test generation, regression testing, and tooling that limit patch quality.
+  links:
+    paper: https://arxiv.org/abs/2506.08311
+    github: ''
+    website: ''
+- id: '2506.17812'
+  title: Is Your Automated Software Engineer Trustworthy?
+  authors:
+  - Noble Saji Mathews
+  - Meiyappan Nagappan
+  venue: arXiv 2025/06
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: BouncerBench evaluates whether LLM-based software agents can abstain from acting on vague issue reports or untrustworthy
+    patches, targeting overlooked failure points in bug resolution workflows. Results show most models fail to properly abstain.
+  links:
+    paper: https://arxiv.org/abs/2506.17812
+    github: https://github.com/uw-swag/BouncerBench
+    website: https://bouncerbench.com/
+- id: '2502.13069'
+  title: Interactive Agents to Overcome Ambiguity in Software Engineering
+  authors:
+  - Sanidhya Vijayvargiya
+  - Xuhui Zhou
+  - Akhila Yerukola
+  - Maarten Sap
+  - Graham Neubig
+  venue: arXiv 2025/02
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: This work studies LLM agents' ability to detect ambiguity, ask clarifying questions, and use interaction to improve
+    performance on underspecified SWE-bench-style bug-fixing tasks, introducing the Ambig-SWE benchmark.
+  links:
+    paper: https://arxiv.org/abs/2502.13069
+    github: ''
+    website: ''
+- id: '2509.16941'
+  title: 'SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?'
+  authors:
+  - Xiang Deng
+  - Jeff Da
+  - Edwin Pan
+  - Yannis Yiming He
+  - Charles Ide
+  - Kanak Garg
+  - Niklas Lauffer
+  - Andrew Park
+  - Nitin Pasari
+  - Chetan Rane
+  - Karmini Sampath
+  - Maya Krishnan
+  - Srivatsa Kundurthy
+  - Sean Hendryx
+  - Zifan Wang
+  - Chen Bo Calvin Zhang
+  - Noah Jacobson
+  - Bing Liu
+  - Brad Kenstler
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: SWE-Bench Pro introduces a harder, enterprise-scale benchmark of 1,865 long-horizon software engineering tasks
+    across 41 repositories to evaluate AI coding agents on realistic multi-file patches, with failure mode clustering.
+  links:
+    paper: https://arxiv.org/abs/2509.16941
+    github: https://github.com/scaleapi/SWE-bench_Pro-os
+    website: https://scale.com/leaderboard/swe_bench_pro_public
+- id: '2504.08703'
+  title: 'SWE-PolyBench: A multi-language benchmark for repository level evaluation of coding agents'
+  authors:
+  - Muhammad Shihab Rashid
+  - Christian Bock
+  - Yuan Zhuang
+  - Alexander Buchholz
+  - Tim Esler
+  - Simon Valentin
+  - Luca Franceschi
+  - Martin Wistuba
+  - Prabhu Teja Sivaprasad
+  - Woo Jung Kim
+  - Anoop Deoras
+  - Giovanni Zappella
+  - Laurent Callot
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: SWE-PolyBench is a multi-language, repository-level benchmark of 2110 instances covering bug fixes, feature additions,
+    and refactoring across Java, JavaScript, TypeScript, and Python, with syntax-tree-based evaluation metrics for coding
+    agents.
+  links:
+    paper: https://arxiv.org/abs/2504.08703
+    github: https://github.com/amazon-science/SWE-PolyBench
+    website: https://amazon-science.github.io/SWE-PolyBench/
+- id: '2504.02605'
+  title: 'Multi-SWE-bench: A Multilingual Benchmark for Issue Resolving'
+  authors:
+  - Daoguang Zan
+  - Zhirong Huang
+  - Wei Liu
+  - Hanwu Chen
+  - Linhao Zhang
+  - Shulin Xin
+  - Lu Chen
+  - Qi Liu
+  - Xiaojian Zhong
+  - Aoyan Li
+  - Siyao Liu
+  - Yongsheng Xiao
+  - Liangqiang Chen
+  - Yuyu Zhang
+  - Jing Su
+  - Tianyu Liu
+  - Rui Long
+  - Kai Shen
+  - Liang Xiang
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  - training-data
+  summary: Multi-SWE-bench is a multilingual issue-resolving benchmark spanning seven languages, built to evaluate LLM agents
+    beyond Python-only SWE-bench. The authors also release RL training instances and an open pipeline for building large-scale
+    issue-resolution training data.
+  links:
+    paper: https://arxiv.org/abs/2504.02605
+    github: https://github.com/multi-swe-bench/multi-swe-bench
+    website: https://multi-swe-bench.github.io/
+- id: '2505.20411'
+  title: 'SWE-rebench: An Automated Pipeline for Task Collection and Decontaminated Evaluation of Software Engineering Agents'
+  authors:
+  - Ibragim Badertdinov
+  - Alexander Golubev
+  - Maksim Nekrashevich
+  - Anton Shevtsov
+  - Simon Karasik
+  - Andrei Andriushchenko
+  - Maria Trofimova
+  - Daria Litvintseva
+  - Boris Yangel
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  - training-data
+  summary: SWE-rebench is an automated pipeline that continuously extracts real-world interactive SWE tasks from GitHub for
+    RL training and contamination-free evaluation of issue-resolution agents. It compares LLM performance against SWE-bench
+    Verified to reveal contamination effects.
+  links:
+    paper: https://arxiv.org/abs/2505.20411
+    github: ''
+    website: https://swe-rebench.com
+- id: '2507.23370'
+  title: 'Trae Agent: An LLM-based Agent for Software Engineering with Test-time Scaling'
+  authors:
+  - 'Trae Research Team: Pengfei Gao'
+  - Zhao Tian
+  - Xiangxin Meng
+  - Xinchen Wang
+  - Ruida Hu
+  - Yuanan Xiao
+  - Yizhou Liu
+  - Zhao Zhang
+  - Junjie Chen
+  - Cuiyun Gao
+  - Yun Lin
+  - Yingfei Xiong
+  - Chao Peng
+  - Xia Liu
+  venue: arXiv 2025
+  category: software_debugging
+  summary: Trae Agent is an agent-based ensemble reasoning approach for repository-level GitHub issue resolution, using modular
+    agents for generation, pruning, and selection. It achieves state-of-the-art Pass@1 on SWE-bench Verified.
+  links:
+    paper: https://arxiv.org/abs/2507.23370
+    github: https://github.com/bytedance/trae-agent
+    website: https://www.trae.ai/
+- id: '2506.10484'
+  title: 'EXPEREPAIR: Dual-Memory Enhanced LLM-based Repository-Level Program Repair'
+  authors:
+  - Fangwen Mu
+  - Junjie Wang
+  - Lin Shi
+  - Song Wang
+  - Shoubin Li
+  - Qing Wang
+  venue: arXiv 2025
+  category: software_debugging
+  summary: ExpeRepair is a repository-level program repair framework using dual episodic/semantic memory to reuse past repair
+    experience during inference. It achieves strong Pass@1 results on SWE-Bench Lite and Verified.
+  links:
+    paper: https://arxiv.org/abs/2506.10484
+    github: https://github.com/ExpeRepair/ExpeRepair
+    website: ''
+- id: '2507.23361'
+  title: 'SWE-Exp: Experience-Driven Software Issue Resolution'
+  authors:
+  - Silin Chen
+  - Shaoxin Lin
+  - Xiaodong Gu
+  - Yuling Shi
+  - Heng Lian
+  - Longfei Yun
+  - Dong Chen
+  - Weiguo Sun
+  - Lin Cao
+  - Qianxiang Wang
+  venue: arXiv 2025
+  category: software_debugging
+  summary: SWE-Exp introduces an experience bank that distills reusable knowledge from prior software issue-resolution trajectories
+    to guide future repairs, improving efficiency over memoryless agents. It achieves high Pass@1 on SWE-Bench Verified using
+    Claude 4 Sonnet.
+  links:
+    paper: https://arxiv.org/abs/2507.23361
+    github: https://github.com/YerbaPage/SWE-Exp
+    website: ''
+- id: '2503.23803'
+  title: 'Thinking Longer, Not Larger: Enhancing Software Engineering Agents via Scaling Test-Time Compute'
+  authors:
+  - Yingwei Ma
+  - Yongbin Li
+  - Yihong Dong
+  - Xue Jiang
+  - Rongyu Cao
+  - Jue Chen
+  - Fei Huang
+  - Binhua Li
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - model
+  - training-data
+  summary: This paper proposes a test-time compute scaling framework combining trajectory synthesis and search-based verification
+    to improve open-source LLMs on SWE-bench issue resolution without needing larger models. They release training data, models,
+    and code.
+  links:
+    paper: https://arxiv.org/abs/2503.23803
+    github: https://github.com/yingweima2022/SWE-Reasoner
+    website: ''
+- id: '2507.22414'
+  title: 'AutoCodeSherpa: Symbolic Explanations in AI Coding Agents'
+  authors:
+  - Sungmin Kang
+  - Haifeng Ruan
+  - Abhik Roychoudhury
+  venue: arXiv 2025/07
+  category: software_debugging
+  summary: AutoCodeSherpa generates executable symbolic explanations (input/infection/output conditions) for software faults
+    to validate or reject patches produced by automated issue-resolution agents. It improves plausible patch rates for techniques
+    like Agentless.
+  links:
+    paper: https://arxiv.org/abs/2507.22414
+    github: ''
+    website: ''
+- id: '2505.23604'
+  title: 'Satori-SWE: Evolutionary Test-Time Scaling for Sample-Efficient Software Engineering'
+  authors:
+  - Guangtao Zeng
+  - Maohao Shen
+  - Delin Chen
+  - Zhenting Qi
+  - Subhro Das
+  - Dan Gutfreund
+  - David Cox
+  - Gregory Wornell
+  - Wei Lu
+  - Zhang-Wei Hong
+  - Chuang Gan
+  venue: arXiv 2025/05
+  category: software_debugging
+  tags:
+  - model
+  summary: Satori-SWE proposes Evolutionary Test-Time Scaling, an RL-trained self-evolution method that iteratively refines
+    candidate patches to improve sample efficiency on SWE-Bench Verified. It enables a 32B model to match much larger models.
+  links:
+    paper: https://arxiv.org/abs/2505.23604
+    github: https://github.com/satori-reasoning/Satori-SWE
+    website: https://satori-reasoning.github.io/
+- id: '2503.14269'
+  title: 'DARS: Dynamic Action Re-Sampling to Enhance Coding Agent Performance by Adaptive Tree Traversal'
+  authors:
+  - Vaibhav Aggarwal
+  - Ojasv Kamal
+  - Abhinav Japesh
+  - Zhijing Jin
+  - Bernhard Schölkopf
+  venue: arXiv 2025/03
+  category: software_debugging
+  summary: DARS is an inference-time compute scaling strategy for coding agents that branches trajectories at key decision
+    points using execution feedback. Evaluated on SWE-Bench Lite, it improves pass@1 and pass@k over baselines for issue resolution.
+  links:
+    paper: https://arxiv.org/abs/2503.14269
+    github: ''
+    website: ''
+- id: '2501.16655'
+  title: Large Language Model Critics for Execution-Free Evaluation of Code Changes
+  authors:
+  - Aashish Yadavally
+  - Hoan Nguyen
+  - Laurent Callot
+  - Gauthier Guinet
+  venue: arXiv 2025/01
+  category: software_debugging
+  summary: This paper builds LLM-based critics for execution-free, reference-aware evaluation of repo-level code changes,
+    predicting patch executability and build status on SWE-bench. It enables comparison of agentic workflows generating patches
+    for issue resolution.
+  links:
+    paper: https://arxiv.org/abs/2501.16655
+    github: ''
+    website: ''
+- id: '2503.21557'
+  title: 'debug-gym: A Text-Based Environment for Interactive Debugging'
+  authors:
+  - Xingdi Yuan
+  - Morgane M Moss
+  - Charbel El Feghali
+  - Chinmay Singh
+  - Darya Moldavskaya
+  - Drew MacPhee
+  - Lucas Caccia
+  - Matheus Pereira
+  - Minseon Kim
+  - Alessandro Sordoni
+  - Marc-Alexandre Côté
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: debug-gym is a text-based interactive environment giving LLM agents tools like a Python debugger to explore codebases
+    while debugging. It targets improving coding/debugging task performance through interactive information-seeking.
+  links:
+    paper: https://arxiv.org/abs/2503.21557
+    github: https://github.com/microsoft/debug-gym
+    website: https://microsoft.github.io/debug-gym/
+- id: '2511.01047'
+  title: 'HAFixAgent: History-Aware Automated Program Repair Agent'
+  authors:
+  - Yu Shi
+  - Hao Li
+  - Bram Adams
+  - Ahmed E. Hassan
+  venue: arXiv 2025
+  category: software_debugging
+  summary: HAFixAgent is a history-aware automated program repair agent that injects blame-derived repository heuristics into
+    its repair loop, improving multi-hunk bug fixing on Defects4J and BugsInPy over prior APR agents.
+  links:
+    paper: https://arxiv.org/abs/2511.01047
+    github: ''
+    website: ''
+- id: '2507.23348'
+  title: 'SWE-Debate: Competitive Multi-Agent Debate for Software Issue Resolution'
+  authors:
+  - Han Li
+  - Yuling Shi
+  - Shaoxin Lin
+  - Xiaodong Gu
+  - Heng Lian
+  - Xin Wang
+  - Yantao Jia
+  - Tao Huang
+  - Qianxiang Wang
+  venue: arXiv 2025
+  category: software_debugging
+  summary: SWE-Debate is a multi-agent debate framework that uses fault propagation traces and structured debate to consolidate
+    issue localization before MCTS-based patch generation, achieving state-of-the-art results on SWE-bench.
+  links:
+    paper: https://arxiv.org/abs/2507.23348
+    github: https://github.com/YerbaPage/SWE-Debate
+    website: ''
+- id: '2509.23045'
+  title: 'Kimi-Dev: Agentless Training as Skill Prior for SWE-Agents'
+  authors:
+  - Zonghan Yang
+  - Shengjie Wang
+  - Kelin Fu
+  - Wenyang He
+  - Weimin Xiong
+  - Yibo Liu
+  - Yibo Miao
+  - Bofei Gao
+  - Yejie Wang
+  - Yingwei Ma
+  - Yanhao Li
+  - Yue Liu
+  - Zhenxing Hu
+  - Kaitai Zhang
+  - Shuyi Wang
+  - Huarong Chen
+  - Flood Sung
+  - Yang Liu
+  - Yang Gao
+  - Zhilin Yang
+  - Tianyu Liu
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - model
+  summary: Kimi-Dev is an open-source SWE LLM trained via an Agentless recipe that induces localization, editing, and self-reflection
+    skills, then adapted via SFT to power SWE-Agents, achieving strong SWE-bench Verified results.
+  links:
+    paper: https://arxiv.org/abs/2509.23045
+    github: ''
+    website: ''
+- id: '2410.20285'
+  title: 'SWE-Search: Enhancing Software Agents with Monte Carlo Tree Search and Iterative Refinement'
+  authors:
+  - Antonis Antoniades
+  - Albert Örwall
+  - Kexun Zhang
+  - Yuxi Xie
+  - Anirudh Goyal
+  - William Wang
+  venue: arXiv 2025
+  category: software_debugging
+  summary: SWE-Search combines Monte Carlo Tree Search with a hybrid value function and multi-agent debate to help software
+    agents iteratively refine strategies on repository-level tasks, improving performance on SWE-bench.
+  links:
+    paper: https://arxiv.org/abs/2410.20285
+    github: https://github.com/aorwall/moatless-tree-search
+    website: ''
+- id: '2503.18455'
+  title: 'SEAlign: Alignment Training for Software Engineering Agent'
+  authors:
+  - Kechi Zhang
+  - Huangzhao Zhang
+  - Ge Li
+  - Jinliang You
+  - Jia Li
+  - Yunfei Zhao
+  - Zhi Jin
+  venue: arXiv 2025
+  category: software_debugging
+  summary: SEAlign is an alignment training framework using MCTS-based fine-grained preference optimization to better prepare
+    code models for real-world software engineering, evaluated on HumanEvalFix and SWE-Bench benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2503.18455
+    github: ''
+    website: ''
+- id: '2510.11838'
+  title: 'Lingxi: Repository-Level Issue Resolution Framework Enhanced by Procedural Knowledge Guided Scaling'
+  authors:
+  - Xu Yang
+  - Jiayuan Zhou
+  - Michael Pacheco
+  - Wenhan Zhu
+  - Pengfei He
+  - Shaowei Wang
+  - Kui Liu
+  - Ruiqi Pan
+  venue: arXiv 2025
+  category: software_debugging
+  summary: Lingxi extracts procedural knowledge from historical issue-fixing data to guide agents in repository-level issue
+    resolution, achieving strong results on SWE-bench Verified by replacing brute-force exploration with knowledge-driven
+    scaling.
+  links:
+    paper: https://arxiv.org/abs/2510.11838
+    github: https://github.com/lingxi-agent/Lingxi
+    website: ''
+- id: '2505.16901'
+  title: 'Code Graph Model (CGM): A Graph-Integrated Large Language Model for Repository-Level Software Engineering Tasks'
+  authors:
+  - Hongyuan Tao
+  - Ying Zhang
+  - Zhenhao Tang
+  - Hongen Peng
+  - Xukun Zhu
+  - Bingchang Liu
+  - Yingguang Yang
+  - Ziyin Zhang
+  - Zhaogui Xu
+  - Haipeng Zhang
+  - Linchao Zhu
+  - Rui Wang
+  - Hang Yu
+  - Jianguo Li
+  - Peng Di
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - model
+  summary: Code Graph Model integrates repository code-graph structures into an LLM's attention via an adapter, enabling open-source
+    LLMs to handle repository-level tasks without agents, evaluated on SWE-bench Lite issue resolution.
+  links:
+    paper: https://arxiv.org/abs/2505.16901
+    github: ''
+    website: ''
+- id: '2507.00014'
+  title: 'SWE-Bench-CL: Continual Learning for Coding Agents'
+  authors:
+  - Thomas Joshi
+  - Shayan Chowdhury
+  - Fatih Uysal
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: SWE-Bench-CL reorganizes SWE-Bench Verified into chronological issue sequences to benchmark continual learning
+    in coding agents, measuring forgetting and knowledge transfer. It includes a LangGraph evaluation framework with semantic
+    memory and specialized continual-learning metrics.
+  links:
+    paper: https://arxiv.org/abs/2507.00014
+    github: https://github.com/thomasjoshi/agents-never-forget/
+    website: ''
+- id: '2506.11425'
+  title: 'Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards'
+  authors:
+  - Jeff Da
+  - Clinton Wang
+  - Xiang Deng
+  - Yuntao Ma
+  - Nikhil Barhate
+  - Sean Hendryx
+  venue: arXiv 2025
+  category: software_debugging
+  summary: Agent-RLVR trains software engineering agents using reinforcement learning with verifiable rewards augmented by
+    agent guidance cues, improving SWE-Bench Verified pass@1 substantially. It targets sparse-reward challenges in agentic
+    issue-resolution settings.
+  links:
+    paper: https://arxiv.org/abs/2506.11425
+    github: ''
+    website: ''
+- id: '2508.03501'
+  title: Training Long-Context, Multi-Turn Software Engineering Agents with Reinforcement Learning
+  authors:
+  - Alexander Golubev
+  - Maria Trofimova
+  - Sergei Polezhaev
+  - Ibragim Badertdinov
+  - Maksim Nekrashevich
+  - Anton Shevtsov
+  - Simon Karasik
+  - Sergey Abramov
+  - Andrei Andriushchenko
+  - Filipp Fisin
+  - Sergei Skvortsov
+  - Boris Yangel
+  venue: arXiv 2025
+  category: software_debugging
+  summary: Presents an RL pipeline (rejection fine-tuning plus DAPO) for training long-context, multi-turn software engineering
+    agents on stateful environments, greatly improving SWE-bench Verified pass@1. Evaluated further on SWE-rebench splits.
+  links:
+    paper: https://arxiv.org/abs/2508.03501
+    github: ''
+    website: ''
+- id: '2509.09853'
+  title: 'SWE-Effi: Re-Evaluating Software AI Agent System Effectiveness Under Resource Constraints'
+  authors:
+  - Zhiyu Fan
+  - Kirill Vasilevski
+  - Dayi Lin
+  - Boyuan Chen
+  - Yihao Chen
+  - Zhiqing Zhong
+  - Jie M. Zhang
+  - Pinjia He
+  - Ahmed E. Hassan
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - empirical
+  summary: SWE-Effi introduces effectiveness metrics balancing accuracy against token/time cost to re-rank AI systems on SWE-bench
+    issue resolution. It reveals patterns like 'token snowball' and 'expensive failures' that hinder practical deployment
+    and RL training.
+  links:
+    paper: https://arxiv.org/abs/2509.09853
+    github: https://centre-for-software-excellence.github.io/SWE-Effi/
+    website: https://github.com/Centre-for-Software-Excellence/SWE-Effi
+- id: '2503.21710'
+  title: Enhancing repository-level software repair via repository-aware knowledge graphs
+  authors:
+  - Boyang Yang
+  - Jiadong Ren
+  - Shunfu Jin
+  - Yang Liu
+  - Feng Liu
+  - Bach Le
+  - Haoye Tian
+  venue: arXiv 2025
+  category: software_debugging
+  summary: KGCompass builds a repository-aware knowledge graph linking issues, PRs, and code entities to narrow fault localization
+    and guide patch generation. It achieves state-of-the-art single-LLM repair performance on SWE-bench Lite at low cost.
+  links:
+    paper: https://arxiv.org/abs/2503.21710
+    github: https://github.com/GLEAM-Lab/KGCompass
+    website: ''
+- id: '2506.16650'
+  title: 'SemAgent: A Semantics Aware Program Repair Agent'
+  authors:
+  - Anvith Pabba
+  - Alex Mathai
+  - Anindya Chakraborty
+  - Baishakhi Ray
+  venue: arXiv 2025
+  category: software_debugging
+  summary: SemAgent is a program repair agent that leverages issue, code, and execution semantics to generate complete, non-overfitting
+    patches via a repair-then-review pipeline. It improves solve rate on SWE-Bench Lite over baselines lacking deep semantic
+    understanding.
+  links:
+    paper: https://arxiv.org/abs/2506.16650
+    github: ''
+    website: ''
+- id: '2510.08996'
+  title: 'Saving SWE-Bench: A Benchmark Mutation Approach for Realistic Agent Evaluation'
+  authors:
+  - Spandan Garg
+  - Ben Steenhoek
+  - Yufan Huang
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: Proposes a benchmark mutation framework transforming formal GitHub-issue benchmarks like SWE-Bench Verified into
+    realistic chat-style user queries reflecting real developer interactions. Finds existing benchmarks substantially overestimate
+    agent bug-fixing capability.
+  links:
+    paper: https://arxiv.org/abs/2510.08996
+    github: ''
+    website: ''
+- id: '2507.11059'
+  title: 'SWE-MERA: A Dynamic Benchmark for Agenticly Evaluating Large Language Models on Software Engineering Tasks'
+  authors:
+  - Pavel Adamenko
+  - Mikhail Ivanov
+  - Aidar Valeev
+  - Rodion Levichev
+  - Pavel Zadorozhny
+  - Ivan Lopatin
+  - Dmitry Babayev
+  - Alena Fenogenova
+  - Valentin Malykh
+  venue: arXiv 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: SWE-MERA is a dynamic, continuously updated benchmark of real-world GitHub issues designed to reduce contamination
+    and inadequate-test problems seen in SWE-bench. It evaluates a dozen recent LLMs via the Aider coding agent.
+  links:
+    paper: https://arxiv.org/abs/2507.11059
+    github: https://github.com/MERA-Evaluation/repotest
+    website: https://mera-evaluation.github.io/demo-swe-mera/
+- id: https://openreview.net/forum?id=Gxw1EDSm9S
+  title: 'Auto-SWE-Bench: A Framework for the Scalable Generation of Software Engineering Benchmark from Open-Source Repositories'
+  authors:
+  - Anonymous Authors
+  venue: '2025'
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: Auto-SWE-Bench is a scalable framework for automatically generating software engineering benchmarks from open-source
+    repositories. It targets issue-resolution style tasks similar to SWE-bench.
+  links:
+    paper: https://openreview.net/forum?id=Gxw1EDSm9S
+    github: ''
+    website: ''
+- id: '2505.20749'
+  title: Can Agents Fix Agent Issues?
+  authors:
+  - Alfin Wijaya Rahardja
+  - Junwei Liu
+  - Weitong Chen
+  - Zhenpeng Chen
+  - Yiling Lou
+  venue: NeurIPS 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: AgentIssue-Bench is a 50-task benchmark for resolving real-world bugs and feature requests in LLM-agent software
+    systems, each with executable environments and failing tests. Evaluation shows state-of-the-art SE agents resolve only
+    0.67%-4.67% of these issues.
+  links:
+    paper: https://arxiv.org/abs/2505.20749
+    github: https://github.com/alfin06/AgentIssue-Bench
+    website: ''
+- id: '2505.18955'
+  title: 'Co-PatcheR: Collaborative Software Patching with Component(s)-specific Small Reasoning Models'
+  authors:
+  - Yuheng Tang
+  - Hongwei Li
+  - Kaijie Zhu
+  - Michael Yang
+  - Yangruibo Ding
+  - Wenbo Guo
+  venue: NeurIPS 2025
+  category: software_debugging
+  summary: Co-PatcheR is a collaborative patching system using small specialized reasoning models for localization, patch
+    generation, and validation. It achieves 46% resolved rate on SWE-bench-Verified with only 14B-scale models.
+  links:
+    paper: https://arxiv.org/abs/2505.18955
+    github: https://github.com/ucsb-mlsec/Co-PatcheR
+    website: ''
+- id: '2508.02085'
+  title: 'SE-Agent: Self-Evolution Trajectory Optimization in Multi-Step Reasoning with LLM-Based Agents'
+  authors:
+  - Jiaye Lin
+  - Yifu Guo
+  - Yuzhen Han
+  - Sen Hu
+  - Ziyi Ni
+  - Licheng Wang
+  - Mingguang Chen
+  - Hongzhang Liu
+  - Ronghao Chen
+  - Yangfan He
+  - Daxin Jiang
+  - Binxing Jiao
+  - Chen Hu
+  - Huacan Wang
+  venue: NeurIPS 2025
+  category: software_debugging
+  summary: SE-Agent is a self-evolution framework that iteratively revises, recombines, and refines agent reasoning trajectories
+    to solve multi-step tasks. Evaluated on SWE-bench Verified, it improves GitHub issue resolution performance by up to 55%.
+  links:
+    paper: https://arxiv.org/abs/2508.02085
+    github: https://github.com/JARVIS-Xs/SE-Agent
+    website: https://quantaalpha.com/
+- id: '2502.18449'
+  title: 'SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution'
+  authors:
+  - Yuxiang Wei
+  - Olivier Duchenne
+  - Jade Copet
+  - Quentin Carbonneaux
+  - Lingming Zhang
+  - Daniel Fried
+  - Gabriel Synnaeve
+  - Rishabh Singh
+  - Sida I. Wang
+  venue: NeurIPS 2025
+  category: software_debugging
+  tags:
+  - training-data
+  summary: SWE-RL scales reinforcement learning on massive open-source software evolution data (code, diffs, issues, PRs)
+    to train LLMs for real-world issue resolution. The resulting Llama3-SWE-RL-70B achieves 41.0% on SWE-bench Verified.
+  links:
+    paper: https://arxiv.org/abs/2502.18449
+    github: https://github.com/facebookresearch/swe-rl
+    website: ''
+- id: '2505.23419'
+  title: SWE-bench Goes Live!
+  authors:
+  - Linghao Zhang
+  - Shilin He
+  - Chaoyun Zhang
+  - Yu Kang
+  - Bowen Li
+  - Chengxing Xie
+  - Junhao Wang
+  - Maoquan Wang
+  - Yufan Huang
+  - Shengyu Fu
+  - Elsie Nallipogu
+  - Qingwei Lin
+  - Yingnong Dang
+  - Saravan Rajmohan
+  - Dongmei Zhang
+  venue: NeurIPS 2025 Datasets & Benchmarks Track
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: SWE-bench-Live is a live-updatable, automatically curated benchmark of 1,319 issue-resolving tasks from recent
+    GitHub repositories with Docker-based reproducible environments. It reveals a substantial performance gap for agents compared
+    to static SWE-bench.
+  links:
+    paper: https://arxiv.org/abs/2505.23419
+    github: https://github.com/microsoft/SWE-bench-Live
+    website: https://swe-bench-live.github.io/
+- id: https://openreview.net/forum?id=k6p8UKRdH7
+  title: 'Nemotron-CORTEXA: Enhancing LLM Agents for Software Engineering Tasks via Improved Localization and Solution Diversity'
+  authors:
+  - Atefeh Sohrabizadeh
+  - Jialin Song
+  - Mingjie Liu
+  - Rajarshi Roy
+  - Chankyu Lee
+  - Jonathan Raiman
+  - Bryan Catanzaro
+  venue: ICML 2025
+  category: software_debugging
+  summary: Nemotron-CORTEXA improves LLM agents for software engineering tasks by enhancing issue localization and increasing
+    solution diversity. It targets patch generation performance on issue-resolution benchmarks.
+  links:
+    paper: https://openreview.net/forum?id=k6p8UKRdH7
+    github: ''
+    website: ''
+- id: '2505.13652'
+  title: Guided Search Strategies in Non-Serializable Environments with Applications to Software Engineering Agents
+  authors:
+  - Karina Zainullina
+  - Alexander Golubev
+  - Maria Trofimova
+  - Sergei Polezhaev
+  - Ibragim Badertdinov
+  - Daria Litvintseva
+  - Simon Karasik
+  - Filipp Fisin
+  - Sergei Skvortsov
+  - Maksim Nekrashevich
+  - Anton Shevtsov
+  - Boris Yangel
+  venue: ICML 2025
+  category: software_debugging
+  summary: This paper proposes guided test-time search strategies (1-step lookahead and trajectory selection) for non-serializable
+    RL environments like Docker containers used by SWE agents. It doubles success rate on SWE-bench Verified, reaching a new
+    state-of-the-art for open-weight models.
+  links:
+    paper: https://arxiv.org/abs/2505.13652
+    github: ''
+    website: ''
+- id: '2503.07701'
+  title: Automated Benchmark Generation for Repository-Level Coding Tasks
+  authors:
+  - Konstantinos Vergopoulos
+  - Mark Niklas Mueller
+  - Martin Vechev
+  venue: ICML 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: SetUpAgent automates historically accurate environment setup and test execution to generate SWEE-Bench and SWA-Bench,
+    extending SWE-Bench to hundreds of repositories for evaluating issue-resolution agents. Comparison shows significant distributional
+    gaps and lower agent success rates versus SWE-Bench.
+  links:
+    paper: https://arxiv.org/pdf/2503.07701
+    github: ''
+    website: ''
+- id: '2502.02747'
+  title: 'PatchPilot: A Cost-Efficient Software Engineering Agent with Early Attempts on Formal Verification'
+  authors:
+  - Hongwei Li
+  - Yuheng Tang
+  - Shiqi Wang
+  - Wenbo Guo
+  venue: ICML 2025
+  category: software_debugging
+  summary: PatchPilot is a cost-efficient rule-based patching agent with reproduction, localization, generation, validation,
+    and refinement stages for SWE-bench issue resolution. It balances efficacy, stability, and low cost compared to agent-based
+    and rule-based baselines.
+  links:
+    paper: https://arxiv.org/abs/2502.02747
+    github: https://github.com/ucsb-mlsec/PatchPilot
+    website: ''
+- id: '2410.14684'
+  title: 'RepoGraph: Enhancing AI Software Engineering with Repository-level Code Graph'
+  authors:
+  - Siru Ouyang
+  - Wenhao Yu
+  - Kaixin Ma
+  - Zilin Xiao
+  - Zhihan Zhang
+  - Mengzhao Jia
+  - Jiawei Han
+  - Hongming Zhang
+  - Dong Yu
+  venue: ICLR 2025
+  category: software_debugging
+  summary: RepoGraph is a plug-in repository-level code graph module providing navigation and context for AI software engineering
+    agents, boosting performance across multiple SWE-bench methods. It also generalizes to repo-level completion benchmarks
+    like CrossCodeEval.
+  links:
+    paper: https://arxiv.org/abs/2410.14684
+    github: https://github.com/ozyyshr/RepoGraph
+    website: ''
+- id: https://openreview.net/forum?id=cKlzKs3Nnb
+  title: 'Diversity Empowers Intelligence: Integrating Expertise of Software Engineering Agents'
+  authors:
+  - Kexun Zhang
+  - Weiran Yao
+  - Zuxin Liu
+  - Yihao Feng
+  - Zhiwei Liu
+  - Rithesh R N
+  - Tian Lan
+  - Lei Li
+  - Renze Lou
+  - Jiacheng Xu
+  - Bo Pang
+  - Yingbo Zhou
+  - Shelby Heinecke
+  - Silvio Savarese
+  - Huan Wang
+  - Caiming Xiong
+  venue: ICLR 2025
+  category: software_debugging
+  summary: This paper integrates diverse expertise from multiple software engineering agents to improve issue-resolution performance,
+    likely via ensemble or multi-agent combination strategies. It targets benchmarks like SWE-bench for automated patching.
+  links:
+    paper: https://openreview.net/forum?id=cKlzKs3Nnb
+    github: https://github.com/SalesforceAIResearch/swecomm
+    website: https://salesforce-research-dei-agents.github.io/
+- id: '2411.00622'
+  title: 'SWE-GPT: A Process-Centric Language Model for Automated Software Improvement'
+  authors:
+  - Yingwei Ma
+  - Rongyu Cao
+  - Yongchang Cao
+  - Yue Zhang
+  - Jue Chen
+  - Yibo Liu
+  - Yuchen Liu
+  - Binhua Li
+  - Fei Huang
+  - Yongbin Li
+  venue: ISSTA 2025
+  category: software_debugging
+  tags:
+  - model
+  summary: Lingma SWE-GPT is a process-centric open-source language model trained on real-world code submission activities
+    including developer thought processes and tool use, targeting automated issue resolution. It achieves 30.20% resolution
+    rate on SWE-bench Verified, approaching closed-source model performance.
+  links:
+    paper: https://arxiv.org/abs/2411.00622
+    github: https://github.com/LingmaTongyi/Lingma-SWE-GPT
+    website: ''
+- id: '2408.02232'
+  title: 'SpecRover: Code Intent Extraction via LLMs'
+  authors:
+  - Haifeng Ruan
+  - Yuntong Zhang
+  - Abhik Roychoudhury
+  venue: ICSE 2025
+  category: software_debugging
+  summary: SpecRover extracts code intent/specifications via iterative code search to guide patch generation for GitHub issues,
+    with a reviewer agent vetting patches and providing confidence. Built on AutoCodeRover, it shows over 50% efficacy improvement
+    on SWE-Bench.
+  links:
+    paper: https://arxiv.org/abs/2408.02232
+    github: ''
+    website: ''
+- id: '2506.18824'
+  title: 'Understanding Software Engineering Agents: A Study of Thought-Action-Result Trajectories'
+  authors:
+  - Islem Bouzenia
+  - Michael Pradel
+  venue: ASE 2025
+  category: software_debugging
+  tags:
+  - empirical
+  summary: This empirical study analyzes thought-action-result trajectories of three SWE agents (RepairAgent, AutoCodeRover,
+    OpenHands) on program repair and issue resolution tasks, identifying behavioral motifs distinguishing success from failure.
+    It releases a dataset and annotation framework.
+  links:
+    paper: https://arxiv.org/abs/2506.18824
+    github: ''
+    website: ''
+- id: https://aclanthology.org/2025.acl-long.973/
+  title: 'DARS: Dynamic Action Re-Sampling to Enhance Coding Agent Performance by Adaptive Tree Traversal'
+  authors:
+  - Vaibhav Aggarwal
+  - Ojasv Kamal
+  - Abhinav Japesh
+  - Zhijing Jin
+  - Bernhard Schölkopf
+  venue: ACL 2025
+  category: software_debugging
+  summary: DARS proposes dynamic action re-sampling with adaptive tree traversal to improve coding agent performance on issue-resolution
+    tasks. It refines the agent's exploration strategy to produce better patches.
+  links:
+    paper: https://aclanthology.org/2025.acl-long.973/
+    github: https://github.com/vaibhavagg303/DARS-Agent
+    website: ''
+- id: https://aclanthology.org/2025.acl-long.559/
+  title: 'SoRFT: Issue Resolving with Subtask-oriented Reinforced Fine-Tuning'
+  authors:
+  - Zexiong Ma
+  - Chao Peng
+  - Pengfei Gao
+  - Xiangxin Meng
+  - Yanzhen Zou
+  - Bing Xie
+  venue: ACL 2025
+  category: software_debugging
+  tags:
+  - training-data
+  summary: SoRFT trains LLMs for GitHub issue resolution using subtask-oriented reinforced fine-tuning, decomposing the repair
+    process into subtasks. It targets improved patch generation performance on SWE-bench style benchmarks.
+  links:
+    paper: https://aclanthology.org/2025.acl-long.559/
+    github: ''
+    website: ''
+- id: '2501.05040'
+  title: 'SWE-Fixer: Training Open-Source LLMs for Effective and Efficient GitHub Issue Resolution'
+  authors:
+  - Chengxing Xie
+  - Bowen Li
+  - Chang Gao
+  - He Du
+  - Wai Lam
+  - Difan Zou
+  - Kai Chen
+  venue: ACL 2025 Findings
+  category: software_debugging
+  tags:
+  - training-data
+  - model
+  summary: SWE-Fixer is an open-source framework with retrieval and editing modules trained on 110K GitHub issues to resolve
+    real-world bugs efficiently. It achieves competitive results on SWE-Bench Lite and Verified with only two model calls
+    per instance.
+  links:
+    paper: https://arxiv.org/abs/2501.05040
+    github: https://github.com/InternLM/SWE-Fixer
+    website: ''
+- id: https://aclanthology.org/2025.findings-acl.252/
+  title: 'SynFix: Dependency-Aware Program Repair via RelationGraph Analysis'
+  authors:
+  - Xunzhu Tang
+  - Jiechao Gao
+  - Jin Xu
+  - Tiezhu Sun
+  - Yewei Song
+  - Saad Ezzini
+  - Wendkûuni C. Ouédraogo
+  - Jacques Klein
+  - Tegawendé F. Bissyandé
+  venue: ACL 2025 Findings
+  category: software_debugging
+  summary: SynFix performs dependency-aware program repair using RelationGraph analysis to capture code relationships for
+    more accurate patch generation. It targets automated repair of real-world software issues.
+  links:
+    paper: https://aclanthology.org/2025.findings-acl.252/
+    github: ''
+    website: ''
+- id: https://aclanthology.org/2025.emnlp-main.921/
+  title: 'UniDebugger: Hierarchical Multi-Agent Framework for Unified Software Debugging'
+  authors:
+  - Cheryl Lee
+  - Chunqiu Steven Xia
+  - Longji Yang
+  - Jen-tse Huang
+  - Zhouruixing Zhu
+  - Lingming Zhang
+  - Michael R. Lyu
+  venue: EMNLP 2025
+  category: software_debugging
+  summary: UniDebugger is a hierarchical multi-agent framework designed to unify software debugging tasks such as fault localization
+    and repair. It coordinates multiple agents to resolve software defects end-to-end.
+  links:
+    paper: https://aclanthology.org/2025.emnlp-main.921/
+    github: ''
+    website: ''
+- id: https://dl.acm.org/doi/10.1145/3715754
+  title: 'Agentless: Demystifying LLM-based Software Engineering Agents'
+  authors:
+  - Chunqiu Steven Xia
+  - Yinlin Deng
+  - Soren Dunn
+  - Lingming Zhang
+  venue: FSE 2025
+  category: software_debugging
+  summary: Agentless demystifies LLM-based software engineering agents by proposing a simpler, non-agentic pipeline for resolving
+    GitHub issues via localization and patch generation. It compares favorably against complex agent-based approaches on SWE-bench.
+  links:
+    paper: https://dl.acm.org/doi/10.1145/3715754
+    github: https://github.com/OpenAutoCoder/Agentless
+    website: ''
+- id: '2505.04606'
+  title: 'OmniGIRL: A Multilingual and Multimodal Benchmark for GitHub Issue Resolution'
+  authors:
+  - Lianghong Guo
+  - Wei Tao
+  - Runhan Jiang
+  - Yanlin Wang
+  - Jiachi Chen
+  - Xilin Liu
+  - Yuchi Ma
+  - Mingzhi Mao
+  - Hongyu Zhang
+  - Zibin Zheng
+  venue: ISSTA 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: OmniGIRL is a multilingual, multimodal, multi-domain benchmark for GitHub issue resolution, covering four programming
+    languages and including image-based issue information. Evaluation shows current LLMs struggle, especially with image-based
+    issues.
+  links:
+    paper: https://arxiv.org/abs/2505.04606
+    github: https://github.com/DeepSoftwareAnalytics/OmniGIRL
+    website: https://deepsoftwareanalytics.github.io/omnigirl_leaderboard.html
+- id: '2506.03921'
+  title: Boosting Open-Source LLMs for Program Repair via Reasoning Transfer and LLM-Guided Reinforcement Learning
+  authors:
+  - Xunzhu Tang
+  - Jacques Klein
+  - Tegawendé F. Bissyandé
+  venue: TOSEM 2025
+  category: software_debugging
+  tags:
+  - training-data
+  summary: Repairity is a three-stage methodology that transfers reasoning from closed-source to open-source LLMs via distillation
+    and reinforcement learning to improve program repair performance. It substantially narrows the gap with state-of-the-art
+    closed models on repair benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2506.03921
+    github: ''
+    website: ''
+- id: https://dl.acm.org/doi/abs/10.1145/3770581
+  title: Integrating Various Software Artifacts for Better LLM-based Bug Localization and Program Repair
+  authors:
+  - Qiong Feng
+  - Xiaotian Ma
+  - Jiayi Sheng
+  - Ziyuan Feng
+  - Wei Song
+  - Peng Liang
+  venue: TOSEM 2025
+  category: software_debugging
+  summary: This paper integrates various software artifacts to improve LLM-based bug localization and program repair, combining
+    multiple information sources for more accurate fixes. It focuses on enhancing repair effectiveness through richer context.
+  links:
+    paper: https://dl.acm.org/doi/abs/10.1145/3770581
+    github: ''
+    website: ''
+- id: '2507.18755'
+  title: 'Agentic Program Repair from Test Failures at Scale: A Neuro-symbolic approach with static analysis and test execution
+    feedback'
+  authors:
+  - Chandra Maddila
+  - Adam Tait
+  - Claire Chang
+  - Daniel Cheng
+  - Nauman Ahmad
+  - Vijayaraghavan Murali
+  - Marshall Roch
+  - Arnaud Avondet
+  - Aaron Meltzer
+  - Victor Montalvao
+  - Michael Hopko
+  - Chris Waterson
+  - Parth Thakkar
+  - Renuka Fernandez
+  - Kristian Kristensen
+  - Sivan Barzily
+  - Sherry Chen
+  - Rui Abreu
+  - Nachiappan Nagappan
+  - Payam Shodjai
+  - Killian Murphy
+  - James Everingham
+  - Aparna Ramani
+  - Peter C. Rigby
+  venue: TSE 2025
+  category: software_debugging
+  tags:
+  - empirical
+  summary: This paper presents an Engineering Agent using ReAct with static analysis and test execution feedback to fix source
+    code from test failures at scale in an industrial setting. It reports offline benchmark solve rates and production deployment
+    results with engineer feedback.
+  links:
+    paper: https://arxiv.org/abs/2507.18755
+    github: ''
+    website: ''
+- id: '2404.05427'
+  title: 'AutoCodeRover: Autonomous Program Improvement'
+  authors:
+  - Yuntong Zhang
+  - Haifeng Ruan
+  - Zhiyu Fan
+  - Abhik Roychoudhury
+  venue: ISSTA 2024
+  category: software_debugging
+  summary: AutoCodeRover autonomously resolves GitHub issues by combining LLMs with AST-based code search and spectrum-based
+    fault localization to generate patches. It achieves strong efficacy and lower cost on SWE-bench-lite compared to prior
+    agents.
+  links:
+    paper: https://arxiv.org/abs/2404.05427
+    github: https://github.com/AutoCodeRoverSG/auto-code-rover
+    website: https://autocoderover.dev/
+- id: '2405.15793'
+  title: 'SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering'
+  authors:
+  - John Yang
+  - Carlos E. Jimenez
+  - Alexander Wettig
+  - Kilian Lieret
+  - Shunyu Yao
+  - Karthik R. Narasimhan
+  - Ofir Press
+  venue: NeurIPS 2024
+  category: software_debugging
+  summary: SWE-agent introduces an agent-computer interface enabling LM agents to autonomously edit code, navigate repositories,
+    and run tests to resolve GitHub issues. It achieves state-of-the-art results on SWE-bench and HumanEvalFix by improving
+    how agents interact with code environments.
+  links:
+    paper: https://arxiv.org/abs/2405.15793
+    github: https://github.com/SWE-agent/SWE-agent
+    website: https://swe-agent.com/
+- id: https://proceedings.neurips.cc/paper_files/paper/2024/hash/5d1f02132ef51602adf07000ca5b6138-Abstract-Conference.html
+  title: 'MAGIS: LLM-Based Multi-Agent Framework for GitHub Issue Resolution'
+  authors:
+  - Wei Tao
+  - Yucheng Zhou
+  - Yanlin Wang
+  - Wenqiang Zhang
+  - Hongyu Zhang
+  - Yu Cheng
+  venue: NeurIPS 2024
+  category: software_debugging
+  summary: MAGIS proposes a multi-agent LLM framework in which specialized agents collaborate to resolve GitHub issues by
+    localizing and patching code. The framework coordinates planning, coding, and review roles to improve issue-resolution
+    performance.
+  links:
+    paper: https://proceedings.neurips.cc/paper_files/paper/2024/hash/5d1f02132ef51602adf07000ca5b6138-Abstract-Conference.html
+    github: https://github.com/co-evolve-lab/magis
+    website: ''
+- id: '2310.06770'
+  title: 'SWE-bench: Can Language Models Resolve Real-World GitHub Issues?'
+  authors:
+  - Carlos E. Jimenez
+  - John Yang
+  - Alexander Wettig
+  - Shunyu Yao
+  - Kexin Pei
+  - Ofir Press
+  - Karthik Narasimhan
+  venue: ICLR 2024
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: SWE-bench is a benchmark of 2,294 real-world GitHub issues and pull requests from Python repositories, tasking
+    language models with editing codebases to resolve issues. It evaluates models' ability to understand and coordinate multi-file
+    code changes.
+  links:
+    paper: https://arxiv.org/abs/2310.06770
+    github: https://github.com/SWE-bench/SWE-bench
+    website: https://www.swebench.com/

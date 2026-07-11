@@ -1,0 +1,16 @@
+- id: '2511.02285'
+  title: 'Focus: Better Verilog Generation from Large Language Model via Focused Reasoning'
+  authors:
+  - Zhuorui Zhao
+  - Bing Li
+  - Grace Li Zhang
+  - Ulf Schlichtmann
+  venue: SOCC 2025
+  category: hardware
+  summary: VFocus is a three-stage framework improving Verilog code generation by focusing LLM reasoning via density-guided
+    filtering, simulation-based clustering, and inconsistency-driven refinement. It improves pass@1 correctness on VerilogEval-Human
+    across reasoning LLMs.
+  links:
+    paper: https://arxiv.org/abs/2511.02285
+    github: ''
+    website: ''

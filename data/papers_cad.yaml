@@ -1,0 +1,410 @@
+- id: '2605.18451'
+  title: 'Code-as-Room: Generating 3D Rooms from Top-Down View Images via Agentic Code Synthesis'
+  authors:
+  - Yixuan Yang
+  - Zhen Luo
+  - Wanshui Gan
+  - Jinkun Hao
+  - Junru Lu
+  - Jinghao Yan
+  - Zhaoyang Lyu
+  - Xudong Xu
+  venue: arXiv 2026
+  category: cad
+  tags:
+  - benchmark
+  summary: Code-as-Room is an MLLM agentic framework that synthesizes executable Blender code for 3D room geometry, materials,
+    and lighting from top-down images, using a structured execution harness and cross-stage memory. It also introduces a benchmark
+    for code-based 3D room synthesis.
+  links:
+    paper: https://arxiv.org/abs/2605.18451
+    github: https://github.com/YxuanAr/Code-as-Room
+    website: https://code-as-room.github.io/
+- id: '2503.04417'
+  title: 'From Idea to CAD: A Language Model-Driven Multi-Agent System for Collaborative Design'
+  authors:
+  - Felix Ocker
+  - Stefan Menzel
+  - Ahmed Sadik
+  - Thiago Rios
+  venue: arXiv 2025
+  category: cad
+  summary: A VLM-based multi-agent system mirrors an engineering team (requirements, CAD engineering, quality assurance) to
+    automatically generate parametric CAD models from sketches or text, refined iteratively with user feedback.
+  links:
+    paper: https://arxiv.org/abs/2503.04417
+    github: ''
+    website: ''
+- id: '2508.01031'
+  title: 'CADDesigner: Conceptual Design of CAD Models Based on General-Purpose Agent'
+  authors:
+  - Jingzhe Ni
+  - Xiaolong Yin
+  - Xingyu Lu
+  - Xintong Li
+  - Ji Wei
+  - Ruofeng Tong
+  - Min Tang
+  - Peng Du
+  venue: arXiv 2025
+  category: cad
+  summary: CADDesigner is an LLM-powered agent for conceptual CAD design that converts textual descriptions and sketches into
+    CAD modeling code through iterative dialogue and visual feedback, storing generated cases in a growing knowledge base.
+  links:
+    paper: https://arxiv.org/abs/2508.01031
+    github: ''
+    website: ''
+- id: '2510.14980'
+  title: Agentic Design of Compositional Machines
+  authors:
+  - Wenqian Zhang
+  - Weiyang Liu
+  - Zhen Liu
+  venue: arXiv 2025
+  category: cad
+  tags:
+  - benchmark
+  summary: This paper studies LLM agents writing XML-like code to assemble machines from standardized parts to meet functional
+    goals like locomotion, introducing the BesiegeField benchmark and exploring RL finetuning for improved compositional machine
+    design.
+  links:
+    paper: https://arxiv.org/abs/2510.14980
+    github: https://github.com/Godheritage/BesiegeField
+    website: https://besiegefield.github.io/
+- id: '2504.05482'
+  title: Imperative vs. Declarative Programming Paradigms for Open-Universe Scene Generation
+  authors:
+  - Maxim Gumin
+  - Do Heon Han
+  - Seung Jean Yoo
+  - Aditya Ganeshan
+  - R. Kenny Jones
+  - Rio Aguina-Kang
+  - Stewart Morris
+  - Daniel Ritchie
+  venue: arXiv 2025
+  category: cad
+  summary: This paper proposes an imperative LLM-driven approach to 3D scene layout generation, having the model write a step-by-step
+    program that places objects iteratively, with an LLM-free error-correction mechanism operating on the generated code.
+  links:
+    paper: https://arxiv.org/abs/2504.05482
+    github: ''
+    website: ''
+- id: '2503.04496'
+  title: Learning Object Placement Programs for Indoor Scene Synthesis with Iterative Self Training
+  authors:
+  - Adrian Chang
+  - Kai Wang
+  - Yuanbo Li
+  - Manolis Savva
+  - Angel X. Chang
+  - Daniel Ritchie
+  venue: arXiv 2025
+  category: cad
+  summary: This work learns to generate programs in a domain-specific language that predict object placements in 3D indoor
+    scenes, using an iterative self-training bootstrapping algorithm to overcome sparse training data.
+  links:
+    paper: https://www.arxiv.org/abs/2503.04496
+    github: ''
+    website: ''
+- id: '2508.14879'
+  title: 'MeshCoder: LLM-Powered Structured Mesh Code Generation from Point Clouds'
+  authors:
+  - Bingquan Dai
+  - Li Ray Luo
+  - Qihong Tang
+  - Jie Wang
+  - Xinyu Lian
+  - Hao Xu
+  - Minghan Qin
+  - Xudong Xu
+  - Bo Dai
+  - Haoqian Wang
+  - Zhaoyang Lyu
+  - Jiangmiao Pang
+  venue: arXiv 2025
+  category: cad
+  tags:
+  - training-data
+  summary: MeshCoder trains a multimodal LLM to reconstruct 3D objects from point clouds into editable Blender Python scripts,
+    using expressive custom APIs and a large paired object-code dataset, enabling geometric editing via code modification.
+  links:
+    paper: https://arxiv.org/abs/2508.14879
+    github: https://github.com/InternRobotics/MeshCoder
+    website: https://daibingquan.github.io/MeshCoder/
+- id: '2508.17568'
+  title: 'MetaGen: A DSL, Database, and Benchmark for VLM-Assisted Metamaterial Generation'
+  authors:
+  - Liane Makatura
+  - Benjamin Jones
+  - Siyuan Bian
+  - Wojciech Matusik
+  venue: arXiv 2025
+  category: cad
+  tags:
+  - benchmark
+  - training-data
+  summary: MetaGen introduces MetaDSL for representing metamaterial geometries, MetaDB with 150,000+ paired programs and simulated
+    properties, and MetaBench for evaluating vision-language assistants on structure reconstruction and inverse design of
+    metamaterials.
+  links:
+    paper: https://arxiv.org/abs/2508.17568
+    github: ''
+    website: ''
+- id: '2502.08884'
+  title: 'ShapeLib: Designing a Library of Programmatic 3D Shape Abstractions with Large Language Models'
+  authors:
+  - R. Kenny Jones
+  - Paul Guerrero
+  - Niloy J. Mitra
+  - Daniel Ritchie
+  venue: arXiv 2025
+  category: cad
+  summary: ShapeLib uses LLMs guided by geometric reasoning to discover libraries of programmatic 3D shape abstraction functions
+    from text descriptions and exemplar shapes, with recognition networks mapping shapes to programs for editing and generation.
+  links:
+    paper: https://arxiv.org/abs/2502.08884
+    github: ''
+    website: ''
+- id: https://openreview.net/forum?id=BLWaTeucYX
+  title: Generating CAD Code with Vision-Language Models for 3D Designs
+  authors:
+  - Kamel Alrashedy
+  - Pradyumna Tambwekar
+  - Zulfiqar Haider Zaidi
+  - Megan Langwasser
+  - Wei Xu
+  - Matthew Gombolay
+  venue: ICLR 2025
+  category: cad
+  summary: This paper uses vision-language models to generate CAD code for 3D designs from visual input. The deliverable is
+    executable CAD program code representing a 3D model.
+  links:
+    paper: https://openreview.net/forum?id=BLWaTeucYX
+    github: https://github.com/Kamel773/CAD_Code_Generation
+    website: ''
+- id: https://openaccess.thecvf.com/content/CVPR2025/html/Li_CAD-Llama_Leveraging_Large_Language_Models_for_Computer-Aided_Design_Parametric_3D_CVPR_2025_paper.html
+  title: 'CAD-Llama: Leveraging Large Language Models for Computer-Aided Design Parametric 3D Model Generation'
+  authors:
+  - Jiahao Li
+  - Weijian Ma
+  - Xueyang Li
+  - Yunzhong Lou
+  - Guichun Zhou
+  - Xiangdong Zhou
+  venue: CVPR 2025
+  category: cad
+  summary: CAD-Llama leverages large language models to generate parametric 3D CAD models, adapting LLMs for CAD program synthesis.
+    The deliverable is parametric CAD code.
+  links:
+    paper: https://openaccess.thecvf.com/content/CVPR2025/html/Li_CAD-Llama_Leveraging_Large_Language_Models_for_Computer-Aided_Design_Parametric_3D_CVPR_2025_paper.html
+    github: ''
+    website: ''
+- id: https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_The_Scene_Language_Representing_Scenes_with_Programs_Words_and_Embeddings_CVPR_2025_paper.html
+  title: 'The Scene Language: Representing Scenes with Programs, Words, and Embeddings'
+  authors:
+  - Yunzhi Zhang
+  - Zizhang Li
+  - Matt Zhou
+  - Shangzhe Wu
+  - Jiajun Wu
+  venue: CVPR 2025
+  category: cad
+  summary: The Scene Language represents 3D scenes using a combination of programs, natural-language words, and embeddings,
+    enabling structured scene construction as code. It targets generating and manipulating 3D scenes via this hybrid representation.
+  links:
+    paper: https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_The_Scene_Language_Representing_Scenes_with_Programs_Words_and_Embeddings_CVPR_2025_paper.html
+    github: https://github.com/zzyunzhi/scene-language
+    website: https://ai.stanford.edu/~yzzhang/projects/scene-language/
+- id: https://openaccess.thecvf.com/content/CVPR2025/html/Gu_BlenderGym_Benchmarking_Foundational_Model_Systems_for_Graphics_Editing_CVPR_2025_paper.html
+  title: 'BlenderGym: Benchmarking Foundational Model Systems for Graphics Editing'
+  authors:
+  - Yunqi Gu
+  - Ian Huang
+  - Jihyeon Je
+  - Guandao Yang
+  - Leonidas Guiba
+  venue: CVPR 2025
+  category: cad
+  tags:
+  - benchmark
+  summary: BlenderGym is a benchmark evaluating foundation model systems on graphics/3D scene editing tasks performed via
+    Blender scripting. It measures agents' ability to generate code that edits 3D scenes, materials, and geometry.
+  links:
+    paper: https://openaccess.thecvf.com/content/CVPR2025/html/Gu_BlenderGym_Benchmarking_Foundational_Model_Systems_for_Graphics_Editing_CVPR_2025_paper.html
+    github: https://github.com/richard-guyunqi/BlenderGym-Open
+    website: https://blendergym.github.io/
+- id: '2502.03997'
+  title: 'CAD-Editor: A Locate-then-Infill Framework with Automated Training Data Synthesis for Text-Based CAD Editing'
+  authors:
+  - Yu Yuan
+  - Shizhao Sun
+  - Qi Liu
+  - Jiang Bian
+  venue: ICML 2025
+  category: cad
+  tags:
+  - training-data
+  summary: CAD-Editor introduces a locate-then-infill framework for text-based CAD editing, with an automated pipeline synthesizing
+    training triplets and using LVLMs/LLMs to locate and infill edited regions. It is the first framework specifically targeting
+    text-driven CAD model editing.
+  links:
+    paper: https://arxiv.org/abs/2502.03997
+    github: https://github.com/microsoft/CAD-Editor
+    website: https://cad-editor.github.io/
+- id: '2506.23329'
+  title: 'IR3D-Bench: Evaluating Vision-Language Model Scene Understanding as Agentic Inverse Rendering'
+  authors:
+  - Parker Liu
+  - Chenxin Li
+  - Zhengxin Li
+  - Yipeng Wu
+  - Wuyang Li
+  - Zhiqin Yang
+  - Zhenyuan Zhang
+  - Yunlong Lin
+  - Sirui Han
+  - Brandon Y. Feng
+  venue: NeurIPS 2025 Datasets and Benchmarks Track
+  category: cad
+  tags:
+  - benchmark
+  summary: IR3D-Bench evaluates vision-language agents' scene understanding by having them use programming and rendering tools
+    to reconstruct the 3D structure of an input image (agentic inverse rendering). It provides metrics for geometric accuracy,
+    spatial relations, and plausibility of the reconstructed 3D scene.
+  links:
+    paper: https://arxiv.org/abs/2506.23329
+    github: https://github.com/LiuHengyu321/IR3D-Bench
+    website: https://ir3d-bench.github.io/
+- id: https://aclanthology.org/2025.acl-long.873/
+  title: 'SceneGenAgent: Precise Industrial Scene Generation with Coding Agent'
+  authors:
+  - Xiao Xia
+  - Dan Zhang
+  - Zibo Liao
+  - Zhenyu Hou
+  - Tianrui Sun
+  - Jing Li
+  - Ling Fu
+  - Yuxiao Dong
+  venue: ACL 2025
+  category: cad
+  summary: SceneGenAgent uses a coding agent to generate precise industrial 3D scenes from specifications. The system produces
+    scene-construction code to meet precise industrial requirements.
+  links:
+    paper: https://aclanthology.org/2025.acl-long.873/
+    github: ''
+    website: ''
+- id: '2408.02211'
+  title: 'SceneMotifCoder: Example-driven Visual Program Learning for Generating 3D Object Arrangements'
+  authors:
+  - Hou In Ivan Tam
+  - Hou In Derek Pun
+  - Austin T. Wang
+  - Angel X. Chang
+  - Manolis Savva
+  venue: 3DV 2025
+  category: cad
+  summary: SceneMotifCoder generates 3D object arrangements through example-driven visual program learning, using LLMs and
+    program synthesis to create generalizable meta-programs for arrangement generation. It combines this with 3D object retrieval
+    and geometry-aware optimization for physically plausible scenes.
+  links:
+    paper: https://arxiv.org/abs/2408.02211
+    github: https://github.com/3dlg-hcvc/smc
+    website: https://3dlg-hcvc.github.io/smc/
+- id: https://ieeexplore.ieee.org/document/11125634
+  title: '3D-GPT: Procedural 3D Modeling with Large Language Models'
+  authors:
+  - Chunyi Sun
+  - Junlin Han
+  - Weijian Deng
+  - Xinlong Wang
+  - Zishan Qin
+  - Stephen Gould
+  venue: 3DV 2025
+  category: cad
+  summary: 3D-GPT uses large language models to perform procedural 3D modeling, generating code that constructs 3D content
+    from natural language descriptions. The approach targets automated procedural generation of 3D models via LLM-driven code.
+  links:
+    paper: https://ieeexplore.ieee.org/document/11125634
+    github: https://github.com/Chuny1/3DGPT
+    website: https://chuny1.github.io/3DGPT/3dgpt.html
+- id: https://aclanthology.org/2025.acl-long.873/
+  title: 'SceneGenAgent: Precise Industrial Scene Generation with Coding Agent'
+  authors:
+  - Xiao Xia
+  - Dan Zhang
+  - Zibo Liao
+  - Zhenyu Hou
+  - Tianrui Sun
+  - Jing Li
+  - Ling Fu
+  - Yuxiao Dong
+  venue: ACL 2025
+  category: cad
+  summary: SceneGenAgent is a coding agent that generates precise industrial 3D scenes by writing and executing code. It targets
+    accurate placement and configuration of industrial scene elements via program synthesis.
+  links:
+    paper: https://aclanthology.org/2025.acl-long.873/
+    github: https://github.com/THUDM/SceneGenAgent
+    website: ''
+- id: https://openaccess.thecvf.com/content/CVPR2024/html/Yuan_CADTalk_An_Algorithm_and_Benchmark_for_Semantic_Commenting_of_CAD_CVPR_2024_paper.html
+  title: 'CADTalk: An Algorithm and Benchmark for Semantic Commenting of CAD Programs'
+  authors:
+  - Haocheng Yuan
+  - Jing Xu
+  - Hao Pan
+  - Adrien Bousseau
+  - Niloy J. Mitra
+  - Changjian Li
+  venue: CVPR 2024
+  category: cad
+  tags:
+  - benchmark
+  summary: CADTalk proposes an algorithm and benchmark for adding semantic comments to CAD programs, aiding understanding
+    of procedurally generated CAD code. It targets comprehension/documentation of CAD-domain code artifacts.
+  links:
+    paper: https://openaccess.thecvf.com/content/CVPR2024/html/Yuan_CADTalk_An_Algorithm_and_Benchmark_for_Semantic_Commenting_of_CAD_CVPR_2024_paper.html
+    github: https://github.com/YYYYYHC/CADTalk
+    website: https://enigma-li.github.io/CADTalk/
+- id: https://dl.acm.org/doi/abs/10.5555/3692070.3692846
+  title: 'SceneCraft: An LLM Agent for Synthesizing 3D Scene as Blender Code'
+  authors:
+  - Ziniu Hu
+  - Ahmet Iscen
+  - Aashi Jain
+  - Thomas Kipf
+  - Yisong Yue
+  - David A. Ross
+  - Cordelia Schmid
+  - Alireza Fathi
+  venue: ICML 2024
+  category: cad
+  summary: SceneCraft is an LLM agent that synthesizes 3D indoor scenes by writing Blender Python code from layout specifications.
+    The deliverable is executable code that constructs a 3D scene.
+  links:
+    paper: https://dl.acm.org/doi/abs/10.5555/3692070.3692846
+    github: ''
+    website: ''
+- id: '2403.09675'
+  title: Open-Universe Indoor Scene Generation using LLM Program Synthesis and Uncurated Object Databases
+  authors:
+  - Rio Aguina-Kang
+  - Maxim Gumin
+  - Do Heon Han
+  - Stewart Morris
+  - Seung Jean Yoo
+  - Aditya Ganeshan
+  - R. Kenny Jones
+  - Qiuhong Anna Wei
+  - Kailiang Fu
+  - Daniel Ritchie
+  venue: arXiv 2024
+  category: cad
+  summary: This system generates open-vocabulary indoor scenes by having an LLM synthesize programs in a domain-specific layout
+    language, solved via constraint optimization and mesh retrieval. The deliverable is a program describing object layouts
+    and relations.
+  links:
+    paper: https://arxiv.org/abs/2403.09675
+    github: ''
+    website: ''
