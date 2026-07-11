@@ -448,12 +448,12 @@ def process_inbox(model: str = classify.MODEL) -> Path:
     return out
 
 
-def process_backlog() -> None:
-    """One-off: absorb the old pipeline's stale pending review issues (the ~271
-    issues left open when automation paused in 2026-06). Harvests their arXiv ids,
-    routes the unhandled papers through the live pipeline into chunked review
-    issues (the pool), then closes the old-format issues. Safe to re-run: handled
-    ids are seen, and closing an already-closed issue is a no-op."""
+def process_backlog(limit: int = 50) -> None:
+    """Absorb the old pipeline's stale pending review issues (the ~271 issues left
+    open when automation paused in 2026-06) in owner-paced slices. Harvests their
+    arXiv ids, routes up to `limit` unhandled papers through the live pipeline into
+    the pool (respecting the pool cap), and closes the old-format issues. Re-run
+    whenever the pool has room until nothing is left."""
     import json as _json
     import subprocess
 
@@ -472,8 +472,11 @@ def process_backlog() -> None:
     logger.info("backlog: %d unique ids in %d stale issues; %d unhandled",
                 len(ids), len(pending), len(new_ids))
 
-    papers = list(fetch_arxiv_papers(new_ids).values())
-    pipeline.classify_and_propose(papers)
+    if new_ids and pipeline.pool_has_room():
+        batch = new_ids[:limit]
+        logger.info("backlog: absorbing %d of %d (re-run for the rest)", len(batch), len(new_ids))
+        papers = list(fetch_arxiv_papers(batch).values())
+        pipeline.classify_and_propose(papers)
 
     # New pool issues exist; now retire the old-format ones.
     cfg = config.load()["repo"]

@@ -133,6 +133,18 @@ def backfill(from_date: str, to_date: str, dry_run: bool = False) -> None:
     classify_and_propose(candidates, dry_run=dry_run)
 
 
+def pool_has_room() -> bool:
+    """Backpressure: historical intakes run only while the review pool is below
+    the cap. The owner's review capacity is the system's real bottleneck; the
+    pool must never grow past what feels comfortable to clear."""
+    cap = int(config.load()["review"].get("pool_cap", 50))
+    pending = len(reviewflow.pending_ids())
+    if pending >= cap:
+        logger.info("review pool at %d papers (cap %d): historical intake paused", pending, cap)
+        return False
+    return True
+
+
 def _weekend_backfill() -> None:
     """arXiv announces nothing on weekends, so weekend crawl runs advance the
     historical sweep by one slice instead. Cursor survives in data/backfill.json;
@@ -145,6 +157,8 @@ def _weekend_backfill() -> None:
     cursor = storage.load_backfill_cursor() or cfg["start"]
     if cursor >= cfg["until"]:
         logger.info("historical backfill complete (cursor %s)", cursor)
+        return
+    if not pool_has_room():
         return
     start = date.fromisoformat(cursor)
     end = min(start + timedelta(days=int(cfg.get("slice_days", 7)) - 1),
