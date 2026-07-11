@@ -3,6 +3,27 @@
 > Durable record of non-trivial design decisions for this repo. Newest first.
 > This repo is English-only — keep every entry in English.
 
+## 2026-07-11: owner rulings become calibration examples, not hard overrides
+
+The string-match override list (RULING_OVERRIDES in migrate.py) pinned specific papers
+by title substring: fragile (a new paper whose title contains "Tree-of-Code" would be
+mis-pinned) and it bypassed the classifier instead of improving it.
+
+Decision: replace it with `calibration.json` (repo root) — the owner's real labeled
+papers as positive and negative few-shot examples, each with a `why`. classify.py
+injects them into the prompt as "OWNER-LABELED EXAMPLES" (authoritative precedent).
+
+Owner's choice (asked explicitly): examples ONLY, no id-pinning. The labeled papers
+GUIDE the classifier by precedent; they do not lock any paper. Even a labeled paper is
+re-classified by the LLM. Tradeoff accepted: purer and it tests the classifier, but a
+ruled paper can regress and need re-catching. The cure for a regression is a better
+example, not a pin. Grow calibration.json whenever a classification is corrected.
+
+Consequence: RULING_OVERRIDES and _override_for deleted; run_full, refetch_reclassify,
+reclassify_leaves, and process_inbox now classify every paper (no ruled branch).
+`category: null` in calibration.json marks a negative (out-of-scope) example. `id` is a
+reference key, not a lock.
+
 ## 2026-07-11: Foundation Models added as a third top-level branch, placed first
 
 Owner: flagship frontier general-purpose models from major labs (Kimi K2,

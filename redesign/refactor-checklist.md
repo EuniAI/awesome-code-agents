@@ -109,6 +109,12 @@ Owner is reviewing the migrated corpus; more error reports incoming. Pending wor
       - Dedup: removed 10 duplicates (7 same-id, 3 same-paper-different-id incl.
         MatchFixAgent); storage.save now dedups as a safety net. DONE.
       - (owner will send more; append here)
+- [x] **Owner rulings formalized into calibration examples (2026-07-11).** Was a
+      fragile title-substring override list; now `calibration.json` (repo root) holds
+      owner-labeled positive/negative examples fed into the classifier prompt. Examples
+      only, no id-pinning (owner's call). Grow it whenever a classification is corrected;
+      it doubles as the future golden-set (P2). Note: the earlier note about needing a
+      more formal id-based override form is resolved by this (examples, not overrides).
 - [ ] **DECIDED 2026-07-11 (execute in re-audit): keep general leaves, purge via
       benchmark-routing rule.** software_general is a misclassification magnet; owner
       asked whether to delete it. Decision (design-decisions.md): KEEP, re-scope.

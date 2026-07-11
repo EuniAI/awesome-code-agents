@@ -33,6 +33,7 @@ logger = logging.getLogger(__name__)
 
 _REPO_ROOT = Path(__file__).resolve().parents[1]
 ENV_PATH = _REPO_ROOT / "automation" / ".env"
+CALIBRATION_PATH = _REPO_ROOT / "calibration.json"
 
 MODEL = "claude-sonnet-5"
 BATCH_SIZE = 10
@@ -69,6 +70,34 @@ def _subprocess_env() -> dict[str, str]:
 
 
 # ── Prompt compilation (everything comes from taxonomy.json) ─────────────────
+
+def _calibration_block() -> str:
+    """Owner-labeled real papers as positive/negative few-shot examples. These guide
+    the classifier by precedent; they do not pin any paper. Absent file = no block."""
+    if not CALIBRATION_PATH.exists():
+        return ""
+    examples = json.loads(CALIBRATION_PATH.read_text(encoding="utf-8")).get("examples", [])
+    if not examples:
+        return ""
+    pos, neg = [], []
+    for e in examples:
+        title = e.get("title", "")
+        why = e.get("why", "")
+        if e.get("category"):
+            tags = f" [{', '.join(e['tags'])}]" if e.get("tags") else ""
+            pos.append(f"- \"{title}\" -> {e['category']}{tags}: {why}")
+        else:
+            neg.append(f"- \"{title}\" -> OUT: {why}")
+    lines = [
+        "OWNER-LABELED EXAMPLES (real papers the maintainer has classified; treat as "
+        "authoritative precedent and apply the same reasoning to similar papers):"
+    ]
+    if pos:
+        lines.append("in-scope, with the correct leaf:\n" + "\n".join(pos))
+    if neg:
+        lines.append("out of scope (relevant=false):\n" + "\n".join(neg))
+    return "\n".join(lines)
+
 
 def _node_block(node: taxonomy.Node, is_leaf: bool) -> str:
     lines = [f"definition: {node.definition}"]
@@ -129,6 +158,10 @@ def build_prompt(items: list[dict[str, str]]) -> str:
         f"- released_artifact, any of: {', '.join(ARTIFACT_TAGS)}. Tag `benchmark`/`model`/"
         "`training-data` only when releasing that artifact is a primary contribution."
     )
+
+    calibration = _calibration_block()
+    if calibration:
+        parts.append(calibration)
 
     papers = ["PAPERS TO CLASSIFY:"]
     for i, it in enumerate(items):

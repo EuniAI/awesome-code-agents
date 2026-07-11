@@ -1,0 +1,89 @@
+{
+  "description": "Owner-labeled real papers, used as positive and negative few-shot examples in the classifier prompt. These GUIDE the classifier; they are not hard overrides and do not pin any paper by id. Grow this set whenever the owner corrects a classification: a good example teaches the classifier to get similar papers right. `category: null` marks a negative example (out of scope). `id` is a reference key (arXiv id or venue URL), not a lock.",
+  "examples": [
+    {
+      "id": "https://aclanthology.org/2025.findings-acl.509/",
+      "title": "Tree-of-Code: A Self-Growing Tree Framework for End-to-End Code Generation and Execution in Complex Tasks",
+      "category": "world_general",
+      "tags": [],
+      "why": "CodeAct-style: the agent generates AND executes code as actions to solve tasks. Code is the language of action, not a deliverable, so despite 'Code Generation' in the title this is agency, not artifact."
+    },
+    {
+      "id": "2504.13351",
+      "title": "Chain-of-Modality: Learning Manipulation Programs from Multimodal Human Videos with Vision-Language-Models",
+      "category": "world_physical",
+      "tags": [],
+      "why": "The generated manipulation programs (code) are executed as robot actions; code is the policy language for physical control. The abstract understates this, but the title's 'Manipulation Programs' is the real contribution."
+    },
+    {
+      "id": "2511.05459",
+      "title": "SWE-Compass: Towards Unified Evaluation of Agentic Coding Abilities for Large Language Models",
+      "category": "software_debugging",
+      "tags": ["benchmark"],
+      "why": "Its tasks are SWE-bench-style issue resolution. 'Unified' branding does not make it a general-purpose agent: benchmark routing dominates, so it belongs to the activity its tasks actually exercise."
+    },
+    {
+      "id": "2605.18747",
+      "title": "Code as Agent Harness",
+      "category": "world_general",
+      "tags": ["survey"],
+      "why": "A survey written to advocate the code-as-action paradigm across many worlds; no single world dominates, so it is general agency, not artifact."
+    },
+    {
+      "id": "2508.18993",
+      "title": "GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leverage",
+      "category": "world_general",
+      "tags": ["benchmark"],
+      "why": "Tasks span many domains and modalities with no single world dominating; the agent leverages code to act, so it is cross-world agency."
+    },
+    {
+      "id": "2605.31463",
+      "title": "PithTrain: A Compact and Agent-Native MoE Training System",
+      "category": "systems",
+      "tags": ["benchmark"],
+      "why": "The deliverable is systems-level software (a training system), not interaction in a world; it serves producing systems code."
+    },
+    {
+      "id": "https://www.scbench.ai/",
+      "title": "SlopCodeBench: Community driven benchmark for measuring feature development",
+      "category": "software_development",
+      "tags": ["benchmark"],
+      "why": "The tasks are implementing described features inside existing codebases, which is feature development, not from-scratch generation or issue repair."
+    },
+    {
+      "id": "2605.08013",
+      "title": "Learning CLI Agents with Structured Action Credit under Sparse Rewards",
+      "category": "world_terminal",
+      "tags": [],
+      "why": "The agent acts in the terminal to get jobs done; the terminal is the world and shell actions are the language of action."
+    },
+    {
+      "id": "2508.09945",
+      "title": "VisCodex: Unified Multimodal Code Generation via Merging Vision and Coding Models",
+      "category": "software_code_generation",
+      "tags": ["model", "training-data", "benchmark"],
+      "why": "A multimodal model, data, and benchmark whose downstream task is generating code; it serves code production, so artifact plus the released-artifact tags."
+    },
+    {
+      "id": "2605.28154",
+      "title": "Robo-Blocks: Generative Scaffolding in End-User Design and Programming of Social Robots",
+      "category": null,
+      "tags": [],
+      "why": "OUT: an HCI research-through-design study of a block-based tool that helps human novices program social robots. No autonomous agent writes or executes code; the paper studies human users."
+    },
+    {
+      "id": "https://ieeexplore.ieee.org/document/11025652",
+      "title": "Can LLMs Replace Manual Annotation of Software Engineering Artifacts?",
+      "category": null,
+      "tags": [],
+      "why": "OUT: studies LLMs as annotators/labelers of SE artifacts. No agent writes or executes code as a product or as action."
+    },
+    {
+      "id": "2505.19591",
+      "title": "Multi-Agent Collaboration via Evolving Orchestration",
+      "category": null,
+      "tags": [],
+      "why": "OUT: a general multi-agent orchestration method not focused on code as an artifact or as the language of action; the code-agent angle is incidental."
+    }
+  ]
+}

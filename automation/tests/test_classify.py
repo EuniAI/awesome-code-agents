@@ -21,6 +21,10 @@ def test_prompt_contains_full_taxonomy_contract():
         assert f"[{key}]" in prompt, key
     assert "MASTER TEST" in prompt
     assert "weight the TITLE higher" in prompt
+    # owner-labeled calibration examples (positive and negative) reach the prompt
+    assert "OWNER-LABELED EXAMPLES" in prompt
+    assert "Tree-of-Code" in prompt and "-> world_general" in prompt
+    assert "-> OUT" in prompt
     assert "PAL/PoT" in prompt                       # scope excludes made it in
     assert "playing the game is agency" in prompt    # boundary lines made it in
     assert "training-data" in prompt

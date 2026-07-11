@@ -253,20 +253,9 @@ def _review_sheet(sample: list[tuple[str, Paper]], verdicts: list[Classification
 
 # Owner rulings from the calibration review (redesign/migration/calibration.md).
 # Matched by title fragment; None = out of scope, else (category, tags).
-RULING_OVERRIDES: list[tuple[str, tuple[str, list[str]] | None]] = [
-    ("Robo-Blocks", None),
-    ("Tree-of-Code", ("world_general", [])),
-    ("Chain-of-Modality", ("world_physical", [])),
-    ("SWE-Compass", ("software_debugging", ["benchmark"])),
-    ("Can LLMs Replace Manual Annotation", None),
-    ("Multi-Agent Collaboration via Evolving Orchestration", None),
-    ("Code as Agent Harness", ("world_general", ["survey"])),
-    ("GitTaskBench", ("world_general", ["benchmark"])),
-    ("PithTrain", ("systems", ["benchmark"])),
-    ("SlopCodeBench", ("software_development", ["benchmark"])),
-    ("Learning CLI Agents with Structured Action Credit", ("world_terminal", [])),
-    ("VisCodex", ("software_code_generation", ["model", "training-data", "benchmark"])),
-]
+# Owner rulings are no longer hard overrides. They now live in calibration.json as
+# positive/negative few-shot examples (see classify._calibration_block): they guide
+# the classifier by precedent instead of pinning specific papers by title.
 
 # Processing order: clean buckets first, then the messy ones.
 BUCKET_ORDER = [
@@ -284,13 +273,6 @@ BUCKET_ORDER = [
 ]
 
 
-def _override_for(title: str) -> tuple[bool, tuple[str, list[str]] | None]:
-    for frag, ruling in RULING_OVERRIDES:
-        if frag.lower() in title.lower():
-            return True, ruling
-    return False, None
-
-
 def run_full(model: str = classify.MODEL) -> Path:
     from automation import badges, render, taxonomy
 
@@ -301,7 +283,7 @@ def run_full(model: str = classify.MODEL) -> Path:
     report: list[str] = ["# Full migration run", ""]
     removed: list[str] = []
     failed: list[str] = []
-    totals = {"placed": 0, "out": 0, "failed": 0, "dup": 0, "overridden": 0}
+    totals = {"placed": 0, "out": 0, "failed": 0, "dup": 0}
 
     for bucket in BUCKET_ORDER:
         papers = [p for p in load_legacy(bucket) if p.id not in seen]
@@ -311,16 +293,7 @@ def run_full(model: str = classify.MODEL) -> Path:
             continue
         logger.info("=== bucket %s: %d papers (%d dups skipped) ===", bucket, len(papers), dup_count)
 
-        # Split off owner-ruled papers; classify the rest.
-        ruled: list[tuple[Paper, tuple[str, list[str]] | None]] = []
-        to_classify: list[Paper] = []
-        for p in papers:
-            hit, ruling = _override_for(p.title)
-            if hit:
-                ruled.append((p, ruling))
-            else:
-                to_classify.append(p)
-
+        to_classify = papers
         abstracts = ensure_abstracts([p.id for p in to_classify])
         items = [_classify_input(p, abstracts) for p in to_classify]
         verdicts = classify.classify(items, model=model) if items else []
@@ -334,20 +307,6 @@ def run_full(model: str = classify.MODEL) -> Path:
                 f"| **{proposed}** | {','.join(tags) or '-'} | "
                 f"{title[:70].replace('|', '/')} | {reason[:100].replace('|', '/')} |"
             )
-
-        for p, ruling in ruled:
-            totals["overridden"] += 1
-            seen.add(p.id)
-            if ruling is None:
-                totals["out"] += 1
-                removed.append(f"- [{bucket}] {p.title} (owner ruling)")
-                _row("OUT", [], p.title, "owner ruling (calibration)")
-            else:
-                cat, tags = ruling
-                p.category, p.tags = cat, tags
-                store[cat].append(p)
-                totals["placed"] += 1
-                _row(cat, tags, p.title, "owner ruling (calibration)")
 
         for p, v in zip(to_classify, verdicts):
             seen.add(p.id)
@@ -377,8 +336,7 @@ def run_full(model: str = classify.MODEL) -> Path:
     report.extend(failed or ["(none)"])
     report.append(
         f"\n## Totals\nplaced {totals['placed']}, out {totals['out']}, "
-        f"failed {totals['failed']}, duplicates skipped {totals['dup']}, "
-        f"owner-ruled {totals['overridden']}"
+        f"failed {totals['failed']}, duplicates skipped {totals['dup']}"
     )
 
     REVIEW_DIR.mkdir(parents=True, exist_ok=True)
@@ -414,14 +372,7 @@ def refetch_reclassify(model: str = classify.MODEL) -> Path:
 
     cache = ensure_primary_abstracts(affected)
 
-    ruled: list[tuple[Paper, tuple[str, list[str]] | None]] = []
-    to_classify: list[Paper] = []
-    for p in affected:
-        hit, ruling = _override_for(p.title)
-        if hit:
-            ruled.append((p, ruling))
-        else:
-            to_classify.append(p)
+    to_classify = affected
     items = [_classify_input(p, cache) for p in to_classify]
     verdicts = classify.classify(items, model=model) if items else []
 
@@ -455,11 +406,6 @@ def refetch_reclassify(model: str = classify.MODEL) -> Path:
         rows.append(f"| {before} | **{after}**{mark} | {evidence} | "
                     f"{p.title[:65].replace('|','/')} | {reason[:90].replace('|','/')} |")
 
-    for p, ruling in ruled:
-        if ruling is None:
-            apply(p, None, [], "", "owner ruling")
-        else:
-            apply(p, ruling[0], ruling[1], "", "owner ruling")
     for p, v in zip(to_classify, verdicts):
         if v.failed:
             rows.append(f"| {placement.get(p.id,'OUT')} | FAILED | - | {p.title[:65]} | retry later |")
@@ -498,9 +444,7 @@ def reclassify_leaves(keys: list[str], model: str = classify.MODEL) -> Path:
     logger.info("reclassifying %d papers from %s", len(subjects), ", ".join(keys))
 
     cache = ensure_primary_abstracts([p for _, p in subjects])
-    # Owner rulings are ground truth and override the classifier.
-    ruled = {p.id: _override_for(p.title)[1] for _, p in subjects if _override_for(p.title)[0]}
-    papers = [p for _, p in subjects if p.id not in ruled]
+    papers = [p for _, p in subjects]
     items = [_classify_input(p, cache) for p in papers]
     verdicts = classify.classify(items, model=model) if items else []
 
@@ -616,8 +560,7 @@ def process_inbox(model: str = classify.MODEL) -> Path:
     papers = [papers_by_id[i] for i in new_ids if i in papers_by_id]
     cache = storage.load_abstracts()
 
-    ruled = {p.id: _override_for(p.title) for p in papers if _override_for(p.title)[0]}
-    to_classify = [p for p in papers if p.id not in ruled]
+    to_classify = papers
     items = [_classify_input(p, cache) for p in to_classify]
     verdicts = classify.classify(items, model=model) if items else []
 
@@ -636,10 +579,6 @@ def process_inbox(model: str = classify.MODEL) -> Path:
         rows.append(f"| **{cat or 'OUT'}** | {p.title[:62].replace('|','/')} | "
                     f"{reason[:95].replace('|','/')} |")
 
-    for p in papers:
-        if p.id in ruled:
-            ruling = ruled[p.id][1]
-            place(p, ruling[0] if ruling else None, ruling[1] if ruling else [], "", "owner ruling")
     for p, v in zip(to_classify, verdicts):
         if v.failed:
             rows.append(f"| FAILED | {p.title[:62].replace('|','/')} | retry |")
