@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f6feb">
+<meta name="robots" content="noindex, nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>ACA Review</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1f2328; --muted: #656d76; --line: #d0d7de;
+    --accent: #1f6feb; --green: #1a7f37; --red: #cf222e; --blue: #0969da;
+    --green-bg: #dafbe1; --red-bg: #ffebe9; --blue-bg: #ddf4ff; --card: #f6f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117; --fg: #e6edf3; --muted: #8b949e; --line: #30363d;
+      --accent: #388bfd; --green: #3fb950; --red: #f85149; --blue: #58a6ff;
+      --green-bg: #12261e; --red-bg: #2d1214; --blue-bg: #0c2d6b33; --card: #161b22;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  header { position: sticky; top: 0; z-index: 10; background: var(--bg);
+           border-bottom: 1px solid var(--line); padding: 10px 14px;
+           display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  header h1 { font-size: 16px; margin: 0; }
+  .stat { color: var(--muted); font-size: 13px; }
+  .spacer { flex: 1; }
+  button { font: inherit; border: 1px solid var(--line); background: var(--card);
+           color: var(--fg); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+  button:hover { border-color: var(--muted); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  button.small { padding: 2px 9px; font-size: 12.5px; }
+  #banner { display: none; padding: 8px 14px; font-size: 14px; }
+  #banner.err { display: block; background: var(--red-bg); color: var(--red); }
+  #banner.ok { display: block; background: var(--green-bg); color: var(--green); }
+  main { max-width: 900px; margin: 0 auto; padding: 8px 10px 90px; }
+  .group-head { position: sticky; top: 49px; background: var(--bg); z-index: 5;
+                display: flex; align-items: center; gap: 8px; padding: 14px 4px 6px;
+                border-bottom: 2px solid var(--line); }
+  .group-head b { font-size: 15px; }
+  .group-head .count { color: var(--muted); font-size: 13px; }
+  .row { border-bottom: 1px solid var(--line); }
+  .row-head { display: flex; align-items: center; gap: 8px; padding: 9px 4px;
+              cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .row-head:hover { background: var(--card); }
+  .row.focused .row-head { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .row-title { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis;
+               white-space: nowrap; }
+  .row.open .row-title { white-space: normal; }
+  .chip { font-size: 11.5px; padding: 1px 7px; border-radius: 10px;
+          background: var(--card); border: 1px solid var(--line);
+          color: var(--muted); white-space: nowrap; }
+  .row.d-approve { background: var(--green-bg); }
+  .row.d-reject  { background: var(--red-bg); }
+  .row.d-edit    { background: var(--blue-bg); }
+  .verdict { font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .d-approve .verdict { color: var(--green); }
+  .d-reject  .verdict { color: var(--red); }
+  .d-edit    .verdict { color: var(--blue); }
+  .detail { display: none; padding: 4px 10px 14px; }
+  .row.open .detail { display: block; }
+  .detail .abs { color: var(--fg); margin: 8px 0; font-size: 14px; }
+  .detail .meta { color: var(--muted); font-size: 13px; margin: 4px 0; }
+  .detail a { color: var(--accent); }
+  .actions { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+  .actions button { min-height: 38px; }
+  .btn-approve.active { background: var(--green); border-color: var(--green); color: #fff; }
+  .btn-reject.active  { background: var(--red); border-color: var(--red); color: #fff; }
+  .btn-edit.active    { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .editbox { display: none; margin-top: 10px; padding: 10px; background: var(--card);
+             border: 1px solid var(--line); border-radius: 8px; }
+  .editbox.show { display: block; }
+  .editbox label { display: block; font-size: 12.5px; color: var(--muted); margin: 8px 0 3px; }
+  .editbox select, .editbox input[type=text], .editbox textarea {
+    width: 100%; font: inherit; padding: 7px 9px; border-radius: 6px;
+    border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
+  .tagrow { display: flex; gap: 10px; flex-wrap: wrap; }
+  .tagrow label { display: flex; align-items: center; gap: 4px; margin: 2px 0;
+                  font-size: 13px; color: var(--fg); }
+  #submitbar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 20;
+               background: var(--bg); border-top: 1px solid var(--line);
+               padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+               display: flex; align-items: center; gap: 12px; }
+  #submitbar .pending { font-size: 14px; }
+  #acks { font-size: 12.5px; color: var(--muted); }
+  dialog { border: 1px solid var(--line); border-radius: 10px; background: var(--bg);
+           color: var(--fg); max-width: 640px; width: 92vw; padding: 0; }
+  dialog::backdrop { background: rgba(0,0,0,.45); }
+  dialog .body { padding: 16px; max-height: 70vh; overflow: auto; }
+  dialog pre { background: var(--card); padding: 10px; border-radius: 8px;
+               white-space: pre-wrap; word-break: break-word; font-size: 13px; }
+  dialog .foot { padding: 12px 16px; border-top: 1px solid var(--line);
+                 display: flex; gap: 10px; justify-content: flex-end; }
+  #login { max-width: 480px; margin: 60px auto; padding: 0 16px; }
+  #login input { width: 100%; font: inherit; padding: 10px; border-radius: 6px;
+                 border: 1px solid var(--line); background: var(--card); color: var(--fg); }
+  #login p { color: var(--muted); font-size: 13.5px; }
+  .cap { font-size: 13px; margin: 4px 0; }
+  kbd { background: var(--card); border: 1px solid var(--line); border-radius: 4px;
+        padding: 0 5px; font-size: 12px; }
+  .hint { color: var(--muted); font-size: 12.5px; padding: 8px 4px; }
+</style>
+</head>
+<body>
+
+<div id="login" style="display:none">
+  <h2>ACA Review</h2>
+  <p>Paste a GitHub token (classic PAT with <code>repo</code> scope, or a
+     fine-grained PAT with Issues read/write on this repo plus the account-level
+     Models permission for translation). Stored only in this browser.</p>
+  <input id="tokenInput" type="password" placeholder="ghp_... / github_pat_...">
+  <div style="margin-top:10px"><button class="primary" id="saveToken">Save token</button></div>
+  <div id="caps" style="margin-top:14px"></div>
+</div>
+
+<div id="app" style="display:none">
+  <header>
+    <h1>📥 Review</h1>
+    <span class="stat" id="statPool"></span>
+    <span class="stat" id="statDone"></span>
+    <span class="spacer"></span>
+    <button class="small" id="refresh">↻ Refresh</button>
+    <button class="small" id="logout" title="Forget token">⎋</button>
+  </header>
+  <div id="banner"></div>
+  <main id="list"></main>
+  <div id="submitbar">
+    <span class="pending" id="pendingCount">0 drafted</span>
+    <span id="acks"></span>
+    <span class="spacer"></span>
+    <button id="clearDraft" class="small">Clear</button>
+    <button class="primary" id="submit">Submit</button>
+  </div>
+</div>
+
+<dialog id="confirmDlg">
+  <div class="body">
+    <h3 style="margin-top:0">Comments to post</h3>
+    <div id="dlgContent"></div>
+  </div>
+  <div class="foot">
+    <button id="dlgCancel">Cancel</button>
+    <button class="primary" id="dlgSend">Post</button>
+  </div>
+</dialog>
+
+<script>
+'use strict';
+/* ============ config ============ */
+const OWNER = 'EuniAI', REPO = 'awesome-code-agents';
+const REVIEWER = 'zhaoyang-chu';           // casefolded login; decide.yml trusts the same
+const API = 'https://api.github.com';
+const RAW = `https://raw.githubusercontent.com/${OWNER}/${REPO}/main`;
+const MODELS_URL = 'https://models.github.ai/inference/chat/completions';
+const MODELS_MODEL = 'openai/gpt-4o-mini';
+const LS = { token: 'aca_token', draft: 'aca_draft', acks: 'aca_acks', done: 'aca_done_today' };
+
+/* ============ tiny state ============ */
+let token = localStorage.getItem(LS.token) || '';
+let draft = JSON.parse(localStorage.getItem(LS.draft) || '{}');   // key issue#idx -> decision
+let entries = [];            // undecided queue items
+let leafMeta = {};           // leaf key -> {emoji,title,path,order}
+let leafKeys = [];
+let focusIdx = -1;
+const $ = s => document.querySelector(s);
+
+function saveDraft() { localStorage.setItem(LS.draft, JSON.stringify(draft)); updateBar(); }
+function banner(msg, cls) { const b = $('#banner'); b.textContent = msg; b.className = cls || ''; }
+function todayKey() { return new Date().toISOString().slice(0, 10); }
+function bumpDone(n) {
+  const d = JSON.parse(localStorage.getItem(LS.done) || '{}');
+  const k = todayKey(); d[k] = (d[k] || 0) + n;
+  localStorage.setItem(LS.done, JSON.stringify(d)); return d[k];
+}
+function doneToday() { return (JSON.parse(localStorage.getItem(LS.done) || '{}'))[todayKey()] || 0; }
+
+/* ============ GitHub API ============ */
+async function gh(path, opts = {}) {
+  const r = await fetch(API + path, { ...opts, headers: {
+    'Authorization': 'Bearer ' + token,
+    'Accept': 'application/vnd.github+json',
+    ...(opts.body ? { 'Content-Type': 'application/json' } : {}),
+    ...opts.headers } });
+  if (!r.ok) throw new Error(`${path} -> ${r.status} ${await r.text().then(t=>t.slice(0,140))}`);
+  return r.status === 204 ? null : r.json();
+}
+async function ghPaged(path) {
+  let out = [], page = 1;
+  for (;;) {
+    const batch = await gh(`${path}${path.includes('?') ? '&' : '?'}per_page=100&page=${page}`);
+    out = out.concat(batch);
+    if (batch.length < 100) return out;
+    page++;
+  }
+}
+
+/* ============ decision parsing (mirrors automation/reviewflow.py) ============ */
+const RE_APPROVE = /\/approve\s+(all|[\d,\s\-]+)/gi;
+const RE_REJECT  = /\/reject\s+(all|[\d,\s\-]+)([^\/\n]*)/gi;
+const RE_EDIT    = /\/edit\s+(\d+)\s+([^\n]+?)(?=\s*\/(?:approve|reject|edit)\b|\s*\n|\s*$)/gi;
+function parseIndices(spec, n) {
+  spec = spec.trim();
+  if (spec.toLowerCase() === 'all') return Array.from({length: n}, (_, i) => i + 1);
+  const out = [];
+  for (const part of spec.split(',')) {
+    const p = part.trim(), m = p.match(/^(\d+)-(\d+)$/);
+    if (m) { for (let i = +m[1]; i <= +m[2]; i++) out.push(i); }
+    else if (/^\d+$/.test(p)) out.push(+p);
+  }
+  return out.filter(i => i >= 1 && i <= n);
+}
+function decidedIndices(comments, n) {
+  const decided = new Set();
+  for (const c of comments) {
+    if (((c.user || {}).login || '').toLowerCase() !== REVIEWER) continue;
+    const body = c.body || '', events = [];
+    for (const m of body.matchAll(RE_APPROVE)) events.push([m.index, m[1]]);
+    for (const m of body.matchAll(RE_REJECT))  events.push([m.index, m[1]]);
+    for (const m of body.matchAll(RE_EDIT))    events.push([m.index, m[1]]);
+    for (const [, spec] of events.sort((a, b) => a[0] - b[0]))
+      for (const i of parseIndices(String(spec), n)) decided.add(i);
+  }
+  return decided;
+}
+
+/* ============ load ============ */
+async function loadTaxonomy() {
+  const tax = await (await fetch(`${RAW}/automation/data/taxonomy.json`)).json();
+  leafMeta = {}; leafKeys = [];
+  const walk = (nodes, path) => nodes.forEach(nd => {
+    const label = `${nd.emoji || ''} ${nd.title}`.trim();
+    if (nd.children && nd.children.length) walk(nd.children, [...path, label]);
+    else { leafMeta[nd.key] = { label, path: path.join(' › '), order: leafKeys.length }; leafKeys.push(nd.key); }
+  });
+  walk(tax.nodes, []);
+}
+async function loadPool() {
+  banner('Loading pool…');
+  const issues = await ghPaged(`/repos/${OWNER}/${REPO}/issues?labels=paper-review&state=open`);
+  entries = [];
+  for (const issue of issues) {
+    const m = (issue.body || '').match(/```json\n([\s\S]*?)\n```/);
+    if (!m) continue;
+    let payload; try { payload = JSON.parse(m[1]); } catch { continue; }
+    const comments = await ghPaged(`/repos/${OWNER}/${REPO}/issues/${issue.number}/comments`);
+    const done = decidedIndices(comments, payload.length);
+    payload.forEach((e, i) => {
+      if (!done.has(i + 1)) entries.push({ issue: issue.number, idx: i + 1, ...e });
+    });
+  }
+  const order = e => (leafMeta[e.category] || { order: 999 }).order;
+  entries.sort((a, b) => order(a) - order(b) || a.issue - b.issue || a.idx - b.idx);
+  // drop drafts whose entries are gone (already applied)
+  const alive = new Set(entries.map(e => `${e.issue}#${e.idx}`));
+  for (const k of Object.keys(draft)) if (!alive.has(k)) delete draft[k];
+  saveDraft();
+  render();
+  banner('');
+}
+
+/* ============ render ============ */
+function esc(s) { return String(s || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+const SRC = { inbox: '📥', backfill: '🕰️', backlog: '🗃️' };
+const TAGS = ['survey', 'empirical', 'position', 'benchmark', 'model', 'training-data'];
+
+function render() {
+  $('#statPool').textContent = `${entries.length} in pool`;
+  $('#statDone').textContent = `· ${doneToday()} cleared today`;
+  const list = $('#list'); list.innerHTML = '';
+  let lastCat = null;
+  entries.forEach((e, qi) => {
+    if (e.category !== lastCat) {
+      lastCat = e.category;
+      const meta = leafMeta[e.category] || { label: e.category, path: '' };
+      const n = entries.filter(x => x.category === e.category).length;
+      const gh = document.createElement('div');
+      gh.className = 'group-head';
+      gh.innerHTML = `<b>${esc(meta.path ? meta.path + ' › ' : '')}${esc(meta.label)}</b>
+        <span class="count">${n}</span><span class="spacer"></span>
+        <button class="small" data-groupapprove="${esc(e.category)}">✓ approve group</button>`;
+      list.appendChild(gh);
+    }
+    list.appendChild(rowEl(e, qi));
+  });
+  if (!entries.length) list.innerHTML = '<p class="hint">Pool is clear. 🎉</p>';
+  else list.insertAdjacentHTML('beforeend',
+    '<p class="hint">Keys: <kbd>j</kbd>/<kbd>k</kbd> move · <kbd>enter</kbd> open · <kbd>a</kbd> approve · <kbd>r</kbd> reject · <kbd>e</kbd> edit</p>');
+  updateBar();
+}
+
+function rowEl(e, qi) {
+  const key = `${e.issue}#${e.idx}`, d = draft[key];
+  const row = document.createElement('div');
+  row.className = 'row' + (d ? ' d-' + d.action : '');
+  row.dataset.key = key; row.dataset.qi = qi;
+  const p = e.paper, authors = (p.authors || []).slice(0, 3).join(', ');
+  const verdict = d ? ({approve: '✓', reject: '✗', edit: '✎ ' + (d.category || '')}[d.action]) : '';
+  row.innerHTML = `
+    <div class="row-head">
+      <span class="chip">${esc(e.category)}</span>
+      <span class="row-title">${esc(p.title)}</span>
+      <span class="verdict">${esc(verdict)}</span>
+      <span>${SRC[e.source] || ''}</span>
+    </div>
+    <div class="detail">
+      <div class="meta">${esc(authors)}${(p.authors||[]).length>3?', et al.':''} · ${esc(p.venue)} ·
+        <a href="${esc((p.links||{}).paper)}" target="_blank" rel="noopener">paper ↗</a> · #${e.issue}/${e.idx}</div>
+      <div class="abs">${esc(e.summary)}</div>
+      <div class="meta">classifier: ${esc(e.reason)}</div>
+      <div class="actions">
+        <button class="btn-approve ${d && d.action==='approve' ? 'active':''}">✓ Approve</button>
+        <button class="btn-reject ${d && d.action==='reject' ? 'active':''}">✗ Reject</button>
+        <button class="btn-edit ${d && d.action==='edit' ? 'active':''}">✎ Edit</button>
+        <button class="btn-clear small">↺</button>
+      </div>
+      <div class="editbox ${d && (d.action==='reject') ? 'show':''}" data-box="reject">
+        <label>Reject reason (中文可,提交时自动翻译)</label>
+        <input type="text" class="in-rejreason" value="${esc(d && d.rejreason || '')}">
+      </div>
+      <div class="editbox ${d && d.action==='edit' ? 'show':''}" data-box="edit">
+        <label>Category</label>
+        <select class="in-cat">${leafKeys.map(k =>
+          `<option value="${k}" ${((d&&d.category)||e.category)===k?'selected':''}>${esc(k)}</option>`).join('')}</select>
+        <label>Tags</label>
+        <div class="tagrow">${TAGS.map(t => `<label><input type="checkbox" class="in-tag" value="${t}"
+          ${((d&&d.tags)||e.tags||[]).includes(t)?'checked':''}>${t}</label>`).join('')}</div>
+        <label>Venue (blank = keep "${esc(p.venue)}")</label>
+        <input type="text" class="in-venue" value="${esc(d && d.venue || '')}">
+        <label>Reason (中文可)</label>
+        <input type="text" class="in-editreason" value="${esc(d && d.editreason || '')}">
+      </div>
+    </div>`;
+  return row;
+}
+
+function setDraft(key, dec) {
+  if (dec) draft[key] = dec; else delete draft[key];
+  saveDraft();
+  const row = document.querySelector(`.row[data-key="${CSS.escape(key)}"]`);
+  if (!row) return;
+  const e = entries.find(x => `${x.issue}#${x.idx}` === key);
+  const open = row.classList.contains('open'), focused = row.classList.contains('focused');
+  const fresh = rowEl(e, +row.dataset.qi);
+  if (open) fresh.classList.add('open');
+  if (focused) fresh.classList.add('focused');
+  row.replaceWith(fresh);
+}
+
+function updateBar() {
+  const n = Object.keys(draft).length;
+  $('#pendingCount').textContent = `${n} drafted`;
+  $('#submit').disabled = !n;
+}
+
+/* ============ interactions ============ */
+document.addEventListener('click', ev => {
+  const gBtn = ev.target.closest('[data-groupapprove]');
+  if (gBtn) {
+    const cat = gBtn.dataset.groupapprove;
+    const targets = entries.filter(e => e.category === cat);
+    if (confirm(`Approve all ${targets.length} papers in ${cat}?`))
+      targets.forEach(e => setDraft(`${e.issue}#${e.idx}`, { action: 'approve' }));
+    return;
+  }
+  const row = ev.target.closest('.row');
+  if (!row) return;
+  const key = row.dataset.key;
+  const grab = () => collectInputs(row, key);
+  if (ev.target.closest('.btn-approve')) return setDraft(key, { action: 'approve' });
+  if (ev.target.closest('.btn-reject'))  return setDraft(key, { action: 'reject', rejreason: grab().rejreason });
+  if (ev.target.closest('.btn-edit'))    return setDraft(key, { action: 'edit', ...grab() });
+  if (ev.target.closest('.btn-clear'))   return setDraft(key, null);
+  if (ev.target.closest('.row-head')) { row.classList.toggle('open'); focusRow(+row.dataset.qi); }
+});
+document.addEventListener('input', ev => {
+  const row = ev.target.closest('.row'); if (!row) return;
+  const key = row.dataset.key, d = draft[key]; if (!d) return;
+  Object.assign(d, collectInputs(row, key)); saveDraft();
+});
+function collectInputs(row, key) {
+  const v = sel => { const el = row.querySelector(sel); return el ? el.value.trim() : ''; };
+  return {
+    rejreason: v('.in-rejreason'),
+    category: v('.in-cat'),
+    tags: [...row.querySelectorAll('.in-tag:checked')].map(x => x.value),
+    venue: v('.in-venue'),
+    editreason: v('.in-editreason'),
+  };
+}
+function focusRow(qi) {
+  focusIdx = qi;
+  document.querySelectorAll('.row.focused').forEach(r => r.classList.remove('focused'));
+  const row = document.querySelector(`.row[data-qi="${qi}"]`);
+  if (row) { row.classList.add('focused'); row.scrollIntoView({ block: 'nearest' }); }
+}
+document.addEventListener('keydown', ev => {
+  if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
+  const row = document.querySelector(`.row[data-qi="${focusIdx}"]`);
+  const key = row && row.dataset.key;
+  if (ev.key === 'j') focusRow(Math.min(focusIdx + 1, entries.length - 1));
+  else if (ev.key === 'k') focusRow(Math.max(focusIdx - 1, 0));
+  else if (ev.key === 'Enter' && row) row.classList.toggle('open');
+  else if (ev.key === 'a' && key) setDraft(key, { action: 'approve' });
+  else if (ev.key === 'r' && key) { row.classList.add('open'); setDraft(key, { action: 'reject', rejreason: '' });
+    setTimeout(() => row.querySelector('.in-rejreason') && document.querySelector(`.row[data-qi="${focusIdx}"] .in-rejreason`).focus(), 0); }
+  else if (ev.key === 'e' && key) { row.classList.add('open'); setDraft(key, { action: 'edit', ...collectInputs(row, key) }); }
+});
+
+/* ============ translation (GitHub Models) ============ */
+const hasCJK = s => /[一-鿿]/.test(s || '');
+function sanitize(s) { return String(s || '').replace(/[\/=\n\r]+/g, ' ').replace(/\s+/g, ' ').trim(); }
+async function translateAll(texts) {
+  if (!texts.length) return [];
+  const r = await fetch(MODELS_URL, {
+    method: 'POST',
+    headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: MODELS_MODEL, temperature: 0.2,
+      messages: [
+        { role: 'system', content:
+          'Translate each Chinese review note to concise English for a paper-curation command. ' +
+          'Keep technical terms. Output ONLY a JSON array of strings, same order and length as the input. ' +
+          'Never use slashes, equals signs, or newlines inside the strings.' },
+        { role: 'user', content: JSON.stringify(texts) }],
+    }),
+  });
+  if (!r.ok) throw new Error(`translation failed: ${r.status} ${await r.text().then(t=>t.slice(0,140))}`);
+  const data = await r.json();
+  let content = (data.choices[0].message.content || '').trim()
+    .replace(/^```json?\s*/i, '').replace(/```$/, '');
+  const arr = JSON.parse(content);
+  if (!Array.isArray(arr) || arr.length !== texts.length) throw new Error('translation shape mismatch');
+  return arr.map(sanitize);
+}
+
+/* ============ submit ============ */
+function compressIndices(nums) {
+  nums = [...nums].sort((a, b) => a - b);
+  const parts = [];
+  for (let i = 0; i < nums.length;) {
+    let j = i; while (j + 1 < nums.length && nums[j + 1] === nums[j] + 1) j++;
+    parts.push(j > i + 0 && nums[j] !== nums[i] ? (nums[j] === nums[i] + 1 ? `${nums[i]},${nums[j]}` : `${nums[i]}-${nums[j]}`) : `${nums[i]}`);
+    i = j + 1;
+  }
+  return parts.join(',');
+}
+async function buildComments() {
+  // gather Chinese strings for one batched translation
+  const pending = Object.entries(draft);
+  const zhTexts = [], zhSlots = [];
+  for (const [key, d] of pending)
+    for (const field of ['rejreason', 'editreason', 'venue'])
+      if (hasCJK(d[field])) { zhSlots.push([d, field]); zhTexts.push(d[field]); }
+  if (zhTexts.length) {
+    banner(`Translating ${zhTexts.length} notes…`);
+    const en = await translateAll(zhTexts);
+    zhSlots.forEach(([d, f], i) => { d[f] = en[i]; });
+    saveDraft();
+  }
+  // group by issue
+  const byIssue = {};
+  for (const [key, d] of pending) {
+    const [issue, idx] = key.split('#').map(Number);
+    (byIssue[issue] = byIssue[issue] || []).push({ idx, d });
+  }
+  const comments = {};
+  for (const [issue, items] of Object.entries(byIssue)) {
+    const lines = [];
+    const approves = items.filter(x => x.d.action === 'approve').map(x => x.idx);
+    if (approves.length) lines.push(`/approve ${compressIndices(approves)}`);
+    const plainRejects = items.filter(x => x.d.action === 'reject' && !sanitize(x.d.rejreason)).map(x => x.idx);
+    if (plainRejects.length) lines.push(`/reject ${compressIndices(plainRejects)}`);
+    for (const { idx, d } of items.filter(x => x.d.action === 'reject' && sanitize(x.d.rejreason)))
+      lines.push(`/reject ${idx} ${sanitize(d.rejreason)}`);
+    for (const { idx, d } of items.filter(x => x.d.action === 'edit')) {
+      const e = entries.find(x => x.issue === +issue && x.idx === idx) || {};
+      const kv = [];
+      if (d.category && d.category !== e.category) kv.push(`category=${d.category}`);
+      if (d.tags && JSON.stringify(d.tags) !== JSON.stringify(e.tags || []))
+        kv.push(`tags=${d.tags.length ? d.tags.join(',') : '-'}`);
+      if (sanitize(d.venue)) kv.push(`venue=${sanitize(d.venue)}`);
+      if (sanitize(d.editreason)) kv.push(`reason=${sanitize(d.editreason)}`);
+      lines.push(kv.length ? `/edit ${idx} ${kv.join(' ')}` : `/approve ${idx}`);
+    }
+    comments[issue] = lines.join('\n');
+  }
+  return comments;
+}
+
+$('#submit').addEventListener('click', async () => {
+  try {
+    const comments = await buildComments();
+    banner('');
+    $('#dlgContent').innerHTML = Object.entries(comments)
+      .map(([n, body]) => `<p class="meta">→ issue #${n}</p><pre>${esc(body)}</pre>`).join('');
+    $('#confirmDlg').showModal();
+    $('#dlgSend').onclick = async () => {
+      $('#confirmDlg').close();
+      banner('Posting…');
+      const watch = [];
+      try {
+        for (const [issue, body] of Object.entries(comments)) {
+          const c = await gh(`/repos/${OWNER}/${REPO}/issues/${issue}/comments`,
+                            { method: 'POST', body: JSON.stringify({ body }) });
+          watch.push({ issue: +issue, id: c.id });
+        }
+      } catch (e) { banner('Post failed: ' + e.message, 'err'); return; }
+      const n = Object.keys(draft).length;
+      const keys = Object.keys(draft);
+      draft = {}; saveDraft();
+      entries = entries.filter(e => !keys.includes(`${e.issue}#${e.idx}`));
+      bumpDone(n); render();
+      banner(`Posted ${watch.length} comment(s), ${n} decisions. Waiting for the Action…`, 'ok');
+      localStorage.setItem(LS.acks, JSON.stringify(watch));
+      pollAcks();
+    };
+  } catch (e) { banner(e.message, 'err'); }
+});
+$('#dlgCancel').addEventListener('click', () => $('#confirmDlg').close());
+$('#clearDraft').addEventListener('click', () => { if (confirm('Discard all drafted decisions?')) { draft = {}; saveDraft(); render(); } });
+
+/* ============ ack polling (decide thumbs-up = processed) ============ */
+let ackTimer = null;
+async function pollAcks() {
+  clearTimeout(ackTimer);
+  const watch = JSON.parse(localStorage.getItem(LS.acks) || '[]');
+  if (!watch.length) { $('#acks').textContent = ''; return; }
+  let done = 0;
+  for (const w of watch) {
+    try {
+      const c = await gh(`/repos/${OWNER}/${REPO}/issues/comments/${w.id}`);
+      if (((c.reactions || {})['+1'] || 0) > 0) done++;
+    } catch { done++; /* comment gone = issue closed = processed */ }
+  }
+  $('#acks').textContent = done === watch.length ? '✅ all processed' : `⏳ ${done}/${watch.length} processed`;
+  if (done === watch.length) { localStorage.setItem(LS.acks, '[]'); banner('Action processed everything. ✅', 'ok'); }
+  else ackTimer = setTimeout(pollAcks, 8000);
+}
+
+/* ============ login flow ============ */
+async function checkCaps() {
+  const caps = $('#caps'); caps.innerHTML = '';
+  const add = (ok, what) => caps.insertAdjacentHTML('beforeend', `<div class="cap">${ok ? '✅' : '❌'} ${what}</div>`);
+  try { const u = await gh('/user'); add(true, `identity: ${u.login}`); }
+  catch { add(false, 'token invalid'); return false; }
+  try { await gh(`/repos/${OWNER}/${REPO}/issues?labels=paper-review&state=open&per_page=1`); add(true, 'issues read'); }
+  catch { add(false, 'issues read (need repo access)'); return false; }
+  try { await translateAll(['测试']); add(true, 'translation (GitHub Models)'); }
+  catch (e) { add(false, 'translation unavailable: write reasons in English (' + e.message.slice(0, 60) + ')'); }
+  return true;
+}
+$('#saveToken').addEventListener('click', async () => {
+  token = $('#tokenInput').value.trim();
+  if (!token) return;
+  if (await checkCaps()) { localStorage.setItem(LS.token, token); start(); }
+});
+$('#logout').addEventListener('click', () => { localStorage.removeItem(LS.token); location.reload(); });
+$('#refresh').addEventListener('click', () => loadPool().catch(e => banner(e.message, 'err')));
+
+async function start() {
+  $('#login').style.display = 'none';
+  $('#app').style.display = 'block';
+  try { await loadTaxonomy(); await loadPool(); pollAcks(); }
+  catch (e) { banner(e.message, 'err'); }
+}
+if (token) start(); else $('#login').style.display = 'block';
+</script>
+</body>
+</html>

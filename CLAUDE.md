@@ -98,8 +98,9 @@ categories + keyword recall net) · tests/ (30 tests, no network).
 
 ## Roadmap (agreed, not yet built)
 
-1. **Review UI** (next, design ratified in design-decisions.md): static SPA in
-   automation/ui/ on the existing Pages slot; fine-grained PAT per device. Reads the pool +
+1. **Review UI** (next, design ratified in design-decisions.md): static SPA at
+   automation/ui/review/ on the existing Pages slot (site root is an
+   indexable landing; the tool itself is noindex); fine-grained PAT per device. Reads the pool +
    assets/collection.json, posts aggregated /commands (draft-then-submit,
    incremental; decided papers drop out statelessly). Chinese reasons are
    translated to English client-side (GitHub Models) before posting. Collection
