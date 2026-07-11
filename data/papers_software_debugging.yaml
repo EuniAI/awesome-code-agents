@@ -113,6 +113,24 @@
     paper: https://arxiv.org/abs/2606.07297
     github: ''
     website: ''
+- id: '2605.25430'
+  title: 'CODESKILL: Learning Self-Evolving Skills for Coding Agents'
+  authors:
+  - Yanzhou Li
+  - Yiran Zhang
+  - Xiaoyu Zhang
+  - Xiaoxia Liu
+  - Yang Liu
+  venue: arXiv 2026/05
+  category: software_debugging
+  published: '2026-05-25'
+  summary: CODESKILL learns reusable procedural skills from coding-agent trajectories via a reinforcement-learned skill-management
+    policy, improving downstream agent performance. Evaluated on EnvBench, SWE-Bench Verified, and Terminal-Bench 2, it raises
+    pass rates over prompt- and memory-based baselines.
+  links:
+    paper: https://arxiv.org/abs/2605.25430
+    github: ''
+    website: ''
 - id: '2605.12925'
   title: 'AgentLens: Revealing The Lucky Pass Problem in SWE-Agent Evaluation'
   authors:
@@ -133,6 +151,28 @@
     an annotated trajectory dataset with quality tiers for issue-resolution agents.
   links:
     paper: https://arxiv.org/abs/2605.12925
+    github: ''
+    website: ''
+- id: '2605.05980'
+  title: 'TACT: Mitigating Overthinking and Overacting in Coding Agents via Activation Steering'
+  authors:
+  - Yuan Sui
+  - Yulin Chen
+  - Yibo Li
+  - Xue Jiang
+  - Yufei He
+  - Yihong Dong
+  - Xiaoxin He
+  - Tianyu Gao
+  - Bryan Hooi
+  venue: arXiv 2026/05
+  category: software_debugging
+  published: '2026-05-07'
+  summary: TACT detects and mitigates 'agent drift' (overthinking and overacting) in coding agents by steering activations
+    along linearly separable drift axes in the residual stream. It improves resolve rates and reduces steps-to-resolve on
+    SWE-bench Verified, Terminal-Bench 2.0, and CLAW-Eval.
+  links:
+    paper: https://arxiv.org/abs/2605.05980
     github: ''
     website: ''
 - id: '2604.24212'
@@ -169,6 +209,35 @@
     questions by grounding rewards in task relevance and user answerability.
   links:
     paper: https://arxiv.org/abs/2604.14624
+    github: ''
+    website: ''
+- id: '2604.16529'
+  title: Scaling Test-Time Compute for Agentic Coding
+  authors:
+  - Joongwon Kim
+  - Wannan Yang
+  - Kelvin Niu
+  - Hongming Zhang
+  - Yun Zhu
+  - Eryk Helenowski
+  - Ruan Silva
+  - Zhengxing Chen
+  - Srinivasan Iyer
+  - Manzil Zaheer
+  - Daniel Fried
+  - Hannaneh Hajishirzi
+  - Sanjeev Arora
+  - Gabriel Synnaeve
+  - Ruslan Salakhutdinov
+  - Anirudh Goyal
+  venue: arXiv 2026/04
+  category: software_debugging
+  published: '2026-04-16'
+  summary: Proposes a test-time scaling framework for long-horizon coding agents that compresses rollout trajectories into
+    structured summaries, enabling tournament-style voting and iterative refinement across attempts. Improves Claude-4.5-Opus
+    performance substantially on SWE-Bench Verified and Terminal-Bench v2.0.
+  links:
+    paper: https://arxiv.org/abs/2604.16529
     github: ''
     website: ''
 - id: '2603.29378'
@@ -262,6 +331,36 @@
     Verified results, demonstrating the value of large-scale open environment synthesis.
   links:
     paper: https://arxiv.org/abs/2603.13023
+    github: ''
+    website: ''
+- id: '2603.03194'
+  title: 'BeyondSWE: Can Current Code Agent Survive Beyond Single-Repo Bug Fixing?'
+  authors:
+  - Guoxin Chen
+  - Fanzhe Meng
+  - Jiale Zhao
+  - Minghao Li
+  - Daixuan Cheng
+  - Huatong Song
+  - Jie Chen
+  - Yuzhi Lin
+  - Hui Chen
+  - Xin Zhao
+  - Ruihua Song
+  - Chang Liu
+  - Cheng Chen
+  - Kai Jia
+  - Ji-Rong Wen
+  venue: arXiv 2026/03
+  category: software_debugging
+  published: '2026-03-03'
+  tags:
+  - benchmark
+  summary: BeyondSWE is a 500-instance benchmark evaluating code agents beyond single-repository issue resolution, covering
+    cross-repo and domain-specific bug fixing, dependency migration, and doc-to-repo generation. Results show search-augmented
+    agents still struggle to convert retrieved evidence into precise fixes.
+  links:
+    paper: https://arxiv.org/abs/2603.03194
     github: ''
     website: ''
 - id: '2603.00520'
@@ -614,6 +713,30 @@
     paper: https://arxiv.org/abs/2511.05459
     github: ''
     website: ''
+- id: '2511.03690'
+  title: 'The OpenHands Software Agent SDK: A Composable and Extensible Foundation for Production Agents'
+  authors:
+  - Xingyao Wang
+  - Simon Rosenberg
+  - Juan Michelini
+  - Calvin Smith
+  - Hoang Tran
+  - Engel Nyst
+  - Rohit Malhotra
+  - Xuhui Zhou
+  - Valerie Chen
+  - Robert Brennan
+  - Graham Neubig
+  venue: arXiv 2025/11
+  category: software_debugging
+  published: '2025-11-05'
+  summary: OpenHands Software Agent SDK is a composable, production-ready toolkit for building software development agents
+    with sandboxed execution, multi-LLM routing, and human-interface integration. It is validated on SWE-bench-style benchmarks
+    and production deployment data.
+  links:
+    paper: https://arxiv.org/abs/2511.03690
+    github: https://github.com/OpenHands/software-agent-sdk
+    website: ''
 - id: '2511.02352'
   title: 'SWE-Sharp-Bench: A Reproducible Benchmark for C# Software Engineering Tasks'
   authors:
@@ -860,6 +983,36 @@
     to improve bug localization. Shown to boost LocAgent on SWE-bench-Verified and SWE-bench-Live.
   links:
     paper: https://arxiv.org/abs/2510.01003
+    github: ''
+    website: ''
+- id: '2509.25140'
+  title: 'ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory'
+  authors:
+  - Siru Ouyang
+  - Jun Yan
+  - I-Hung Hsu
+  - Yanfei Chen
+  - Ke Jiang
+  - Zifeng Wang
+  - Rujun Han
+  - Long T. Le
+  - Samira Daruki
+  - Xiangru Tang
+  - Vishy Tirumalashetty
+  - George Lee
+  - Mahsan Rofouei
+  - Hangfei Lin
+  - Jiawei Han
+  - Chen-Yu Lee
+  - Tomas Pfister
+  venue: arXiv 2025/09
+  category: software_debugging
+  published: '2025-09-29'
+  summary: ReasoningBank is a memory framework that distills generalizable reasoning strategies from agents' past successes
+    and failures, paired with memory-aware test-time scaling to improve future performance. It is evaluated across web browsing
+    and software engineering benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2509.25140
     github: ''
     website: ''
 - id: '2509.23045'
@@ -1496,6 +1649,27 @@
     paper: https://arxiv.org/abs/2506.16650
     github: ''
     website: ''
+- id: '2506.14683'
+  title: Unified Software Engineering Agent as AI Software Engineer
+  authors:
+  - Leonhard Applis
+  - Yuntong Zhang
+  - Shanchao Liang
+  - Nan Jiang
+  - Lin Tan
+  - Abhik Roychoudhury
+  venue: ICSE 2026
+  category: software_debugging
+  published: '2025-06-17'
+  tags:
+  - benchmark
+  summary: USEagent is a unified software engineering agent that orchestrates multiple capabilities (patching, testing, feature
+    addition) and is evaluated on USEbench, a mixture of SWE-bench, SWT-bench, and REPOCOD tasks. It shows improved efficacy
+    over generalist agents like OpenHands CodeActAgent.
+  links:
+    paper: https://arxiv.org/abs/2506.14683
+    github: ''
+    website: ''
 - id: '2506.12728'
   title: 'MCTS-Refined CoT: High-Quality Fine-Tuning Data for LLM-Based Repository Issue Resolution'
   authors:
@@ -1969,6 +2143,22 @@
     paper: https://arxiv.org/abs/2504.21798
     github: https://github.com/SWE-bench/SWE-smith
     website: https://swesmith.com/
+- id: '2504.15228'
+  title: A Self-Improving Coding Agent
+  authors:
+  - Maxime Robeyns
+  - Martin Szummer
+  - Laurence Aitchison
+  venue: arXiv 2025/04
+  category: software_debugging
+  published: '2025-04-21'
+  summary: Demonstrates a self-improving coding agent that autonomously edits its own code to improve performance, achieving
+    gains from 17% to 53% on SWE-bench Verified along with improvements on LiveCodeBench. The work shows a data-efficient,
+    non-gradient-based learning mechanism via LLM reflection.
+  links:
+    paper: https://arxiv.org/abs/2504.15228
+    github: https://github.com/MaximeRobeyns/self_improving_coding_agent
+    website: ''
 - id: '2504.14757'
   title: 'SWE-Synth: Synthesizing Verifiable Bug-Fix Data to Enable Large Language Models in Resolving Real-World Bugs'
   authors:
@@ -2293,6 +2483,23 @@
   links:
     paper: https://arxiv.org/abs/2502.18449
     github: https://github.com/facebookresearch/swe-rl
+    website: ''
+- id: '2502.18525'
+  title: 'Programming with Pixels: Can Computer-Use Agents do Software Engineering?'
+  authors:
+  - Pranjal Aggarwal
+  - Sean Welleck
+  venue: arXiv 2025/02
+  category: software_debugging
+  published: '2025-02-24'
+  tags:
+  - benchmark
+  summary: Programming with Pixels introduces a computer-use environment and PwP-Bench, evaluating whether generalist computer-use
+    agents can visually operate an IDE to perform diverse software engineering tasks. Results show visual-only agents lag
+    specialized coding agents unless given file/bash APIs.
+  links:
+    paper: https://arxiv.org/abs/2502.18525
+    github: ''
     website: ''
 - id: '2502.15292'
   title: 'Bridging Bug Localization and Issue Fixing: A Hierarchical Localization Framework Leveraging Large Language Models'
@@ -2877,6 +3084,23 @@
     paper: https://arxiv.org/abs/2410.14684
     github: https://github.com/ozyyshr/RepoGraph
     website: ''
+- id: '2409.16299'
+  title: 'HyperAgent: Generalist Software Engineering Agents to Solve Coding Tasks at Scale'
+  authors:
+  - Huy Nhat Phan
+  - Tien N. Nguyen
+  - Phong X. Nguyen
+  - Nghi D. Q. Bui
+  venue: arXiv 2024/09
+  category: software_debugging
+  published: '2024-09-09'
+  summary: HyperAgent is a generalist multi-agent system with Planner, Navigator, Code Editor, and Executor roles designed
+    to handle diverse software engineering tasks end-to-end. It sets new benchmarks on SWE-Bench issue resolution as well
+    as repository-level generation and fault localization/repair.
+  links:
+    paper: https://arxiv.org/abs/2409.16299
+    github: https://github.com/FSoft-AI4Code/HyperAgent
+    website: ''
 - id: '2408.02232'
   title: 'SpecRover: Code Intent Extraction via LLMs'
   authors:
@@ -2893,6 +3117,43 @@
     paper: https://arxiv.org/abs/2408.02232
     github: ''
     website: ''
+- id: '2407.16741'
+  title: 'OpenHands: An Open Platform for AI Software Developers as Generalist Agents'
+  authors:
+  - Xingyao Wang
+  - Boxuan Li
+  - Yufan Song
+  - Frank F. Xu
+  - Xiangru Tang
+  - Mingchen Zhuge
+  - Jiayi Pan
+  - Yueqi Song
+  - Bowen Li
+  - Jaskirat Singh
+  - Hoang H. Tran
+  - Fuqiang Li
+  - Ren Ma
+  - Mingzhang Zheng
+  - Bill Qian
+  - Yanjun Shao
+  - Niklas Muennighoff
+  - Yizhe Zhang
+  - Binyuan Hui
+  - Junyang Lin
+  - Robert Brennan
+  - Hao Peng
+  - Heng Ji
+  - Graham Neubig
+  venue: ICLR 2025
+  category: software_debugging
+  published: '2024-07-23'
+  summary: OpenHands is an open platform for building generalist AI software developer agents that write code, use command
+    lines, and browse the web, evaluated on benchmarks including SWE-Bench and WebArena. It supports sandboxed execution,
+    multi-agent coordination, and benchmark integration.
+  links:
+    paper: https://arxiv.org/abs/2407.16741
+    github: https://github.com/All-Hands-AI/OpenHands
+    website: https://www.all-hands.dev/
 - id: '2406.12952'
   title: 'SWT-Bench: Testing and Validating Real-World Bug-Fixes with Code Agents'
   authors:

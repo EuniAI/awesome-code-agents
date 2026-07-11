@@ -1,3 +1,50 @@
+- id: '2605.08366'
+  title: 'SWE Atlas: Benchmarking Coding Agents Beyond Issue Resolution'
+  authors:
+  - Mohit Raghavendra
+  - Soham Dan
+  - Miguel Romero Calvo
+  - Yannis Yiming He
+  - Johannes Baptist Mols
+  - Gautam Anand
+  - Cole McCollum
+  - Edgar Arakelyan
+  - Vijay Bharadwaj
+  - Andrew Park
+  - Jeff Da
+  - MohammadHossein Rezaei
+  - Bing Liu
+  - Brad Kenstler
+  - Yunzhong He
+  venue: arXiv 2026/05
+  category: software_comprehension
+  published: '2026-05-08'
+  tags:
+  - benchmark
+  summary: SWE Atlas is a benchmark suite covering Codebase Q&A, Test Writing, and Refactoring with rubric-based evaluation
+    of engineering quality beyond correctness. Frontier models like GPT-5.4 and Opus 4.7 lead, but even top models struggle
+    with edge cases and best practices.
+  links:
+    paper: https://arxiv.org/abs/2605.08366
+    github: ''
+    website: ''
+- id: '2511.02475'
+  title: 'Lost in Code Generation: Reimagining the Role of Software Models in AI-driven Software Engineering'
+  authors:
+  - Jürgen Cito
+  - Dominik Bork
+  venue: arXiv 2025/11
+  category: software_comprehension
+  published: '2025-11-04'
+  tags:
+  - position
+  summary: This position paper argues for recovering software models post-hoc from AI-generated ('vibe coded') code to restore
+    comprehension, expose risks, and guide refinement. It reimagines software models as mediators between human intent, AI
+    generation, and long-term system evolution.
+  links:
+    paper: https://arxiv.org/abs/2511.02475
+    github: ''
+    website: ''
 - id: '2510.26790'
   title: Gistify! Codebase-Level Understanding via Runtime Execution
   authors:

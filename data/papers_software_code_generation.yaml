@@ -776,6 +776,36 @@
     paper: https://openreview.net/forum?id=2txrMBpw3q#discussion
     github: https://github.com/yiqingxyq/RepoST
     website: ''
+- id: https://aclanthology.org/2025.coling-main.502/
+  title: 'Prompting Large Language Models to Tackle the Full Software Development Lifecycle: A Case Study'
+  authors:
+  - Bowen Li
+  - Wenhan Wu
+  - Ziwei Tang
+  - Lin Shi
+  - John Yang
+  - Jinyang Li
+  - Shunyu Yao
+  - Chen Qian
+  - Binyuan Hui
+  - Qicheng Zhang
+  - Zhiyin Yu
+  - He Du
+  - Ping Yang
+  - Dahua Lin
+  - Chao Peng
+  - Kai Chen
+  venue: COLING 2025
+  category: software_code_generation
+  tags:
+  - benchmark
+  summary: This case study introduces DevEval, a benchmark spanning the full software development lifecycle (design, environment
+    setup, implementation, acceptance testing, unit testing) across four languages. It finds current LLMs including GPT-4
+    fail to handle the full spectrum of real-world programming challenges.
+  links:
+    paper: https://aclanthology.org/2025.coling-main.502/
+    github: ''
+    website: ''
 - id: '2412.00535'
   title: 'FullStack Bench: Evaluating LLMs as Full Stack Coders'
   authors:

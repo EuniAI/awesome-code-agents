@@ -34,6 +34,28 @@
     paper: https://arxiv.org/abs/2511.02399
     github: ''
     website: ''
+- id: '2511.00839'
+  title: 'CodeClash: Benchmarking Goal-Oriented Software Engineering'
+  authors:
+  - John Yang
+  - Kilian Lieret
+  - Joyce Yang
+  - Carlos E. Jimenez
+  - Ofir Press
+  - Ludwig Schmidt
+  - Diyi Yang
+  venue: arXiv 2025/11
+  category: software_development
+  published: '2025-11-02'
+  tags:
+  - benchmark
+  summary: CodeClash is a benchmark where LMs compete in multi-round tournaments to iteratively evolve codebases toward open-ended
+    competitive objectives like score maximization or survival. It reveals models' limitations in strategic reasoning and
+    long-term codebase maintenance.
+  links:
+    paper: https://arxiv.org/abs/2511.00839
+    github: ''
+    website: https://codeclash.ai/
 - id: '2510.24358'
   title: Automatically Benchmarking LLM Code Agents through Agent-Driven Annotation and Evaluation
   authors:
@@ -151,3 +173,22 @@
     paper: https://arxiv.org/abs/2503.06680
     github: https://github.com/microsoft/FEA-Bench
     website: https://gmago-leway.github.io/fea-bench.github.io/
+- id: '2502.12115'
+  title: 'SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?'
+  authors:
+  - Samuel Miserendino
+  - Michele Wang
+  - Tejal Patwardhan
+  - Johannes Heidecke
+  venue: ICML 2025
+  category: software_development
+  published: '2025-02-17'
+  tags:
+  - benchmark
+  summary: SWE-Lancer is a benchmark of over 1,400 real freelance software engineering tasks from Upwork, including bug fixes,
+    feature implementations, and managerial proposal choices, valued at $1M in real payouts. It measures whether frontier
+    LLMs can complete these tasks and maps performance to monetary value.
+  links:
+    paper: https://arxiv.org/abs/2502.12115
+    github: https://github.com/openai/frontier-evals/tree/main/project/swelancer
+    website: https://openai.com/index/swe-lancer/

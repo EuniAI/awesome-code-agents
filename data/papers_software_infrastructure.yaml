@@ -21,6 +21,38 @@
     paper: https://arxiv.org/abs/2605.26186
     github: ''
     website: ''
+- id: '2601.20882'
+  title: 'DevOps-Gym: Benchmarking AI Agents in Software DevOps Cycle'
+  authors:
+  - Yuheng Tang
+  - Kaijie Zhu
+  - Bonan Ruan
+  - Chuqi Zhang
+  - Michael Yang
+  - Hongwei Li
+  - Suyue Guo
+  - Tianneng Shi
+  - Zekun Li
+  - Christopher Kruegel
+  - Giovanni Vigna
+  - Dawn Song
+  - William Yang Wang
+  - Lun Wang
+  - Yangruibo Ding
+  - Zhenkai Liang
+  - Wenbo Guo
+  venue: arXiv 2026/01
+  category: software_infrastructure
+  published: '2026-01-27'
+  tags:
+  - benchmark
+  summary: DevOps-Gym is an end-to-end benchmark with 700+ real-world tasks evaluating AI agents on build/configuration, monitoring,
+    issue resolving, and test generation across the software DevOps cycle. State-of-the-art agents struggle particularly with
+    monitoring and build/configuration tasks.
+  links:
+    paper: https://arxiv.org/abs/2601.20882
+    github: ''
+    website: ''
 - id: '2511.01316'
   title: Exploring and Unleashing the Power of Large Language Models in CI/CD Configuration Translation
   authors:
@@ -132,6 +164,28 @@
     paper: https://arxiv.org/abs/2502.13681
     github: https://github.com/bytedance/Repo2Run
     website: ''
+- id: '2502.06994'
+  title: 'SyncMind: Measuring Agent Out-of-Sync Recovery in Collaborative Software Engineering'
+  authors:
+  - Xuehang Guo
+  - Xingyao Wang
+  - Yangyi Chen
+  - Sha Li
+  - Chi Han
+  - Manling Li
+  - Heng Ji
+  venue: ICML 2025
+  category: software_infrastructure
+  published: '2025-02-10'
+  tags:
+  - benchmark
+  summary: SyncMind formalizes the 'out-of-sync' problem where an LLM agent's understanding of a shared codebase diverges
+    from its evolving true state during collaborative software engineering. SyncBench, built from 21 GitHub repos with 24,332
+    scenarios, reveals large gaps in recovery, collaboration willingness, and resource awareness among LLM agents.
+  links:
+    paper: https://arxiv.org/abs/2502.06994
+    github: https://github.com/xhguo7/SyncMind
+    website: https://xhguo7.github.io/SyncMind/
 - id: '2501.13699'
   title: 'DI-BENCH: Benchmarking Large Language Models on Dependency Inference with Testable Repositories at Scale'
   authors:
