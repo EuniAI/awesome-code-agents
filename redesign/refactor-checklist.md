@@ -159,6 +159,16 @@ Owner is reviewing the migrated corpus; more error reports incoming. Pending wor
         a boundary into taxonomy.json (global assertions overfit to noise).
       - Principle: examples grow automatically (local, reversible); rules change only
         with human ratification (global, high-impact).
+- [ ] **Review UI over GitHub Issues (Phase 4+, owner idea 2026-07-11).** A thin
+      interaction layer on top of the Issue review protocol, NOT a replacement: buttons/
+      dropdowns/keyboard that post `/approve` `/edit` `/reject` to the review issue on the
+      owner's behalf. Must work desktop + mobile, anytime. Likely a responsive client-side
+      web app (GitHub Pages + GitHub OAuth + GitHub API), no server, state stays in Issues.
+      Each correction also appends a calibration example (auto-drafted why) -> feeds the
+      fast learning loop above. Full rationale in design-decisions.md.
+- [ ] **Subscription feature (future idea, owner 2026-07-11).** Let readers subscribe to
+      the list (e.g. notify on new papers in chosen categories). Details TBD; record now,
+      design later. End-user-facing, for the euni.ai site.
 - [ ] **Re-audit pass after rules revision**: re-run classification over
       software_general and world_general members (and spot-check 20 random others);
       the 12 title-only papers (see refetch-reclass.md, evidence=title-only) get a

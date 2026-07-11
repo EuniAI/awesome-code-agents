@@ -52,6 +52,31 @@ reports are in. Encoded as master_test step 1 (off-axis escape checked first) an
 node boundary. Moved in now: Kimi K2, Qwen3-Coder. CWM pending owner ruling
 (code-gen-centric research model, leaning software_code_generation + model).
 
+## 2026-07-11: review UI is a thin layer OVER GitHub Issues (not a replacement)
+
+Owner wants a fast way to (a) approve newly crawled/inboxed papers and (b) correct
+misclassifications on demand, from BOTH desktop and phone, anytime. Writing `/edit`
+comments by hand, or telling Claude to move papers, is too slow for a high-frequency
+action.
+
+Decision (deferred implementation): build a UI that is a presentation/interaction layer
+ON TOP OF GitHub Issues, NOT a separate app that owns state. The actual review still
+happens through the Issue protocol (`/approve`, `/edit category=X`, `/reject`), so
+GitHub stays the single source of truth and the pipeline (GitHub Actions) reads commands
+exactly as designed. The UI just turns typing commands into buttons/dropdowns/keyboard
+actions and posts them to the issue on the owner's behalf.
+
+Requirements captured:
+- Works on desktop AND mobile, anytime (approve + re-file on the go).
+- Likely shape: a responsive client-side web app (could live on GitHub Pages) that uses
+  the GitHub API + owner OAuth to read the review issue(s) and post the review commands.
+  No server needed; state stays in Issues.
+- Each correction should also feed the calibration learning loop (append a
+  positive/negative example to calibration.json with an auto-drafted why) so the
+  classifier improves from every fix. Ties into the Phase-4 fast/slow learning loop.
+- Timing: implement when we rebuild the crawl/approval pipeline (after the core
+  refactor), not now.
+
 ## 2026-07-11 (later): BOTH general leaves abolished; Studies promoted to top-level
 
 Supersedes the "general leaves kept" decision below. The owner decided to abolish both
