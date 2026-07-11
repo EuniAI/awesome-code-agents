@@ -379,12 +379,76 @@ def decide(issue_number: int) -> None:
         reviewflow.close_issue(issue_number)
 
 
+# ── reclass ───────────────────────────────────────────────────────────────────
+
+def reclass(keys: list[str]) -> Path:
+    """Re-classify the current members of the given leaves under the live rules
+    and apply the moves (to any leaf, or OUT -> seen). Use after a taxonomy or
+    calibration change to converge affected categories. Writes a review sheet."""
+    from automation.sources import ensure_primary_abstracts
+
+    leaves = taxonomy.load(force=True).leaf_keys()
+    store = {k: storage.load(k) for k in leaves}
+    subjects = [(k, p) for k in keys for p in store[k]]
+    placement = {p.id: k for k, p in subjects}
+    logger.info("reclassifying %d papers from %s", len(subjects), ", ".join(keys))
+
+    cache = ensure_primary_abstracts([p for _, p in subjects])
+    papers = [p for _, p in subjects]
+    items = [
+        {"id": p.id, "title": p.title,
+         "abstract": cache.get(p.id, "(abstract unavailable; judge from the title alone)")}
+        for p in papers
+    ]
+    verdicts = classify.classify(items)
+
+    rows: list[str] = []
+    seen = storage.load_seen()
+    for p, v in zip(papers, verdicts):
+        before = placement[p.id]
+        after = (v.category if v.relevant else None) or "OUT"
+        if v.failed:
+            rows.append(f"| {before} | FAILED | {p.title[:62].replace('|','/')} | retry |")
+            continue
+        if after != before:
+            store[before] = [x for x in store[before] if x.id != p.id]
+            if after == "OUT":
+                seen.add(p.id)
+            else:
+                p.category, p.tags = v.category, v.tags
+                if v.summary:
+                    p.summary = v.summary
+                store[after].append(p)
+        mark = " <- CHANGED" if after != before else ""
+        rows.append(f"| {before} | **{after}**{mark} | {p.title[:62].replace('|','/')} | "
+                    f"{v.reason[:95].replace('|','/')} |")
+
+    storage.save_seen(seen)
+    for k in leaves:
+        storage.save(k, storage.newest_first(store[k]))
+    render.main()
+    badges.refresh()
+
+    out = _REPO_ROOT / "redesign" / "migration" / "reclass.md"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    changed = sum(1 for r in rows if "CHANGED" in r)
+    out.write_text(
+        f"# Re-classification under live rules: {', '.join(keys)}\n\n"
+        f"{len(subjects)} papers re-classified; {changed} moved.\n\n"
+        "| before | after | title | reason |\n|---|---|---|---|\n"
+        + "\n".join(rows) + "\n",
+        encoding="utf-8",
+    )
+    return out
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(message)s")
     parser = argparse.ArgumentParser(description="Daily paper pipeline")
-    parser.add_argument("command", choices=["crawl", "decide", "backfill"])
+    parser.add_argument("command", choices=["crawl", "decide", "backfill", "reclass"])
+    parser.add_argument("keys", nargs="*", help="leaf keys to re-classify (reclass)")
     parser.add_argument("--issue", type=int, help="review issue number (decide)")
     parser.add_argument("--since", help="crawl: harvest-cursor override (YYYY-MM-DD)")
     parser.add_argument("--from", dest="from_date", help="backfill start date (YYYY-MM-DD)")
@@ -394,6 +458,10 @@ def main() -> None:
     args = parser.parse_args()
     if args.command == "crawl":
         crawl(since=args.since, dry_run=args.dry_run)
+    elif args.command == "reclass":
+        if not args.keys:
+            parser.error("reclass requires leaf keys")
+        print(f"review sheet written: {reclass(args.keys)}")
     elif args.command == "backfill":
         if not (args.from_date and args.to_date):
             parser.error("backfill requires --from and --to")

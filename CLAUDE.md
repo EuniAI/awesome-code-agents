@@ -1,111 +1,120 @@
 # Awesome Code Agents — Project Context
 
-## Working Preferences
+## Working Preferences (owner: Zhaoyang-Chu)
 
-- **Always work directly on `main`**, no worktrees. The owner wants changes visible immediately without manual merging.
-- Commit and push after each logical change so nothing gets lost in a temporary branch.
-- **Do NOT add `Co-Authored-By: Claude` to commit messages.** Commits should only show the owner's account.
-- **This is an English-only repo.** Every file, including internal design docs, commit messages, and comments, must be written in English. No Chinese anywhere in the repo.
-- **No em-dashes (—) in anything we write.** They read as AI-written. Use colons, commas, parentheses, or separate sentences instead. This applies to all repo files and commit messages. (Exception: never alter em-dashes inside a paper's own title or abstract, that is quoted source text.)
+- **Always work directly on `main`**, no worktrees. Commit and push after each
+  logical change so nothing gets lost.
+- **Do NOT add `Co-Authored-By: Claude` to commit messages.** Commits show only
+  the owner's account.
+- **English-only repo.** Every file (data, docs, commit messages, comments) is
+  English. No Chinese anywhere in the repo.
+- **No em-dashes in anything we write** (they read as AI-written). Use colons,
+  commas, parentheses, or separate sentences. Never alter em-dashes inside a
+  paper's own title or abstract (quoted source text).
+- **Capture design decisions as they happen** into design-decisions.md (each
+  with a one-line rationale). Chat is ephemeral; the repo is the memory.
 
-## What This Project Is
+## What This Is
 
-A curated list of research papers on autonomous code agents, maintained at [euni.ai](https://euni.ai).
-Papers are stored as YAML files in `data/`, rendered into `README.md` and a MkDocs site via scripts.
+A curated list of research papers on autonomous code agents, published at
+[euni.ai](https://euni.ai) and github.com/EuniAI/awesome-code-agents. Rebuilt
+from the ground up in 2026-07 (taxonomy, data, and pipeline); the old system
+lives only in git history. Rebuild rationale: design-decisions.md; the legacy
+feature disposition: redesign/legacy-audit.md.
 
-## ⚠️ Ground-Up Rebuild In Progress (2026-07)
+## The Two Sources of Truth
 
-Much of the pipeline description below is the OLD world and is being replaced. Current truth:
-- **taxonomy.json** (repo root) is the single source of truth for categories, tags, scope, and classifier rules. Rationale in design-decisions.md.
-- The old pipeline code and old data files are parked in **`_legacy/`** (read-only reference; delete after the rebuild).
-- New flat modules live in `automation/`: taxonomy.py, models.py, storage.py, config.py, render.py, classify.py (+ tests). README Papers chapter is fully generated between NAV/PAPERS markers; never hand-edit it.
-- **Target deployment is GitHub Actions with GitHub-native state** (decided 2026-07-11; supersedes the old "no Actions, server state" rule below). Workflow lands in Phase 5; until then everything runs on the server.
-- Working plan and progress: redesign/refactor-checklist.md and redesign/architecture.md.
-
-## Owner's Workflow (How Updates Happen)
-
-There are **two input sources**, both processed by the automation pipeline:
-
-### 1. Automatic arXiv Crawl
-- Runs daily (cron) via `python automation/main.py --mode daily`
-- Fetches papers from configured arXiv categories + keyword filters
-- LLM classifies each paper into a category and generates a 2-sentence summary
-- Creates GitHub Issues for human review (one Issue per category batch)
-
-### 2. Manual Inbox (owner-submitted links)
-- A pinned GitHub Issue titled **"📥 Paper Inbox"** acts as a whiteboard
-- Owner pastes arXiv URLs into comments on that Issue whenever they spot an interesting paper
-- The daily pipeline also reads this Issue, processes new links the same way as crawled papers
-- Processed comments get a 👍 reaction as acknowledgement
-- The Issue stays open indefinitely — `processed_ids` in state ensures no double-processing
-
-### Review & Approval
-- After classification, each batch appears as a GitHub Issue with numbered papers
-- Owner reviews and replies with commands: `/approve all`, `/approve 1,3`, `/reject 2`, `/edit 1 venue=ICSE 2026`
-- Only comments from the configured `reviewer` (set in `config.yaml`) are trusted
-- `python automation/main.py --mode finalize` (runs hourly via cron) polls for approvals, writes YAML, and pushes
-
-### Deployment
-- OLD: the pipeline ran on a server with persistent local state (`_legacy/state/processed.json`)
-- NEW (decided 2026-07-11): GitHub Actions with GitHub-native state; see the rebuild banner above
-- After YAML is updated, `render_papers.py` rebuilds README blocks and `update_papers_badge.py` updates the paper count badge, then changes are committed and pushed
-- GitHub Pages picks up the push and redeploys the docs site automatically
-
-## Automation Pipeline Architecture
-
-```
-automation/
-  main.py              # Orchestrator — modes: daily | finalize | setup | backfill
-  config.yaml          # Categories, keywords, arXiv settings, LLM settings
-  config_loader.py     # Cached config loader (lru_cache)
-  state_manager.py     # Reads/writes automation/state/processed.json
-  crawler/
-    arxiv.py           # Fetches papers from arXiv by category + date + keyword filter
-  inbox/
-    reader.py          # Reads user-submitted links from the Inbox GitHub Issue
-  enricher/
-    papers_with_code.py  # Looks up GitHub repo URL via Papers With Code API
-    metadata.py          # Extracts venue from abstract; falls back to "arXiv YYYY/MM"
-  classifier/
-    llm.py             # LiteLLM-based classifier: relevant? category? tags? summary?
-  review/
-    github.py          # Thin GitHub REST API wrapper (Issues, comments, reactions)
-    create_issues.py   # Groups papers by category, creates one GitHub Issue per group
-    poll_approvals.py  # Parses /approve /reject /edit commands from reviewer comments
-  finalizer/
-    yaml_writer.py     # Appends approved papers to data/papers_{category}.yaml
-    git_push.py        # Runs render scripts, commits, and pushes to origin
-
-scripts/
-  render_papers.py         # Rewrites <!-- START PAPERS:X --> blocks in README.md
-  update_papers_badge.py   # Updates the paper count SVG badge
-  generate_ack_badges.py   # Generates acknowledgement badges
-```
+- **taxonomy.json** (repo root): the category system. Four top-level branches:
+  `foundation_models` (flagship general models), `studies` (surveys and
+  empirical research about the agents), `artifact` (code as the deliverable;
+  8 domains, software expands into 10 lifecycle activities), `agency` (code as
+  the language of action; 6 worlds). Machine-facing contract per node:
+  definition / includes / boundary / examples; plus a repo-wide scope with a
+  hardened relevance gate and an ordered master_test. The classifier prompt is
+  COMPILED from this file; never hand-write category text elsewhere.
+- **calibration.json** (repo root): owner-labeled real papers as positive and
+  negative few-shot examples (each with a why). They guide the classifier by
+  precedent; they never pin papers by id. Grows automatically from review
+  feedback (see the learning loop) and by hand when the owner rules on a case.
 
 ## Data Layout
 
-- `data/papers_{category}.yaml` — one file per category (e.g. `papers_code_generation.yaml`)
-- Category keys are defined in `automation/config.yaml` under `categories:`
-- README uses `<!-- START PAPERS:{category} --> ... <!-- END PAPERS:{category} -->` markers
-- `render_papers.py` replaces marker content from the corresponding YAML file
+- `data/papers_{leaf}.yaml`: one file per taxonomy leaf; newest first (arXiv v1
+  date); id is identity; storage.save dedups as a safety net.
+- `data/abstracts.json`: abstract sidecar (fetch once, reuse forever).
+- `data/seen.json`: ids the pipeline has handled (proposed or auto-skipped).
+- `data/retry.json`: classification-failure counts (give up at 3 -> seen).
+- `data/harvest.json`: announcement-day ledger (every swept day + record count;
+  a missing day = a coverage gap) plus the daily cursor.
+- `data/backfill.json`: historical-sweep cursor (weekend/idle slices).
+- `data/feedback.json`: owner review reasons queued for LLM distillation.
+- `data/ack_repos.yaml`: acknowledgement badges config (scripts/generate_ack_badges.py).
+- `README.md`: generated zones between NAV/PAPERS markers show papers from the
+  last 12 months; `ARCHIVE.md` (fully generated) holds everything older. Never
+  hand-edit either; run `python -m automation.render` (or scripts/render_papers.py).
 
-## Key Config
-
-- `automation/config.yaml` — arXiv categories, keywords, LLM settings, reviewer GitHub username
-- `automation/.env` — secrets: `GITHUB_TOKEN`, `LITELLM_BASE_URL`, `LITELLM_MODEL`, `LITELLM_API_KEY`
-- Only the GitHub user set as `repo.reviewer` in config.yaml can approve/reject papers
-
-## Cron Schedule (on server)
+## Pipeline (GitHub Actions, event-driven, GitHub-native state)
 
 ```
-0 9 * * *   python automation/main.py --mode daily     # daily crawl + inbox processing
-0 * * * *   python automation/main.py --mode finalize  # hourly approval polling
+crawl.yml  (cron 06:30 UTC daily + manual)         decide.yml (fires on issue_comment)
+  OAI-PMH announcement harvest since cursor          parse ALL reviewer comments (stateless)
+  + inbox issue links + retry queue                  apply /approve /reject /edit
+  -> classify (Claude subscription token)            -> write data/, render, badges
+  -> chunked review issues (the pool, 25/issue)      -> queue reasons in feedback.json
+  -> venue upgrades from update stream               -> thumbs-up processed comments
+  -> weekends/idle days: backfill slice              -> close issue when all decided
+  -> distill feedback.json -> calibration.json
 ```
 
-## Important Notes for Future Sessions
+- Classifier: `claude -p --json-schema` on the Claude subscription
+  (`CLAUDE_CODE_OAUTH_TOKEN` repo secret, exported as ANTHROPIC_AUTH_TOKEN to a
+  scrubbed subprocess; renew yearly with `claude setup-token`). Only crawl.yml
+  sees the token; decide.yml is token-free.
+- Review commands (reviewer only, case-insensitive login, several per line):
+  `/approve all` · `/approve 1,3-5` · `/reject 2 optional reason` ·
+  `/edit 3 category=web tags=benchmark venue=ICSE 2026 reason=why`.
+  Positional order; later commands override earlier ones. /edit implies approve.
+- **The pool**: open `paper-review` issues ARE the backlog; nothing is dropped,
+  partial review is fine, issues close themselves when fully decided.
+  Backpressure: historical intakes pause while the pool holds >= review.pool_cap
+  (config.yaml) papers; the daily crawl is never gated.
+- **Learning loop**: /edit corrections and /reject reasons are distilled by the
+  next crawl run into calibration examples (quality-rejections are excluded by
+  the LLM's judgment: quality is not a scope rule).
+- Manual tools: `python -m automation.pipeline backfill --from A --to B`,
+  `... reclass <leaf...>` (after rule changes), `... crawl --dry-run`.
 
-- SUPERSEDED 2026-07-11: the "no GitHub Actions" rule is retired; target deployment is GitHub Actions with GitHub-native state
-- `_legacy/state/processed.json` (old ids/rejections) is still needed by the migration; do not delete until the rebuild completes
-- When adding a new paper category: add key to `config.yaml`, create `data/papers_{key}.yaml`, and add `<!-- START PAPERS:{key} -->` block in `README.md`
-- `save_config()` uses `yaml.dump` and will strip comments from `config.yaml` — only called once during `--mode setup`
-- The `decided` dict in state uses int keys at runtime but JSON serialises them as strings — the code normalises on load
+## Module Map (automation/, flat, every convention in exactly one place)
+
+taxonomy.py (sole reader of taxonomy.json) · models.py (Paper, Classification)
+· storage.py (data/ layout owner + state files) · sources.py (ALL arXiv/network:
+OAI harvest, id fetch, inbox, enrichment, venue extraction) · classify.py
+(prompt compiler + claude runner + validation) · reviewflow.py (issue protocol:
+payload-carrying issues, command parsing, acks) · pipeline.py (crawl / decide /
+backfill / reclass entrypoints) · render.py (README + ARCHIVE) · badges.py
+(count badge + summary block) · config.yaml (repo/review/backfill/arxiv:
+categories + keyword recall net) · tests/ (30 tests, no network).
+
+## Roadmap (agreed, not yet built)
+
+1. **Review UI** (next): a thin layer OVER the GitHub issue protocol (GitHub
+   Pages + OAuth + API, no server). One screen per paper, buttons post the
+   /commands; desktop + mobile; source markers shown; the pool renders as one
+   queue. The pool is parked (~470 papers) until this exists.
+2. **Golden-set regression eval**: measure classifier precision on the approved
+   corpus + recorded OUTs after every rule change, instead of discovering
+   regressions through the owner's pain.
+3. **Subscription feature** for readers (per-category updates), for euni.ai.
+
+## Notes for Future Sessions
+
+- The classifier prompt = taxonomy.json + calibration.json. To change behavior,
+  edit those (and run `pipeline reclass` on affected leaves), not the code.
+- Scope gate matters more than routing: most owner-reported errors were
+  papers that should never have entered. See scope.excludes (7 rules).
+- GitHub logins, issue payloads, comment history: decide is stateless and
+  re-runnable; every write is dedup-safe.
+- taxonomy.json survives `json.dumps(indent=2, ensure_ascii=False)` round-trips
+  (verified); edit it programmatically for structural changes.
+- Old pipeline reference: git history and redesign/legacy-audit.md (file-by-file
+  disposition). The 2026-07 migration reports live in redesign/migration/.
