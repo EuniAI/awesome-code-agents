@@ -120,6 +120,22 @@ task the paper serves**:
 - Crisp formulation now in taxonomy.json: **category = the task served; tag = the
   contribution form. The two axes never mix.**
 
+## 2026-07-11: Deployment decided: GitHub Actions with GitHub-native state
+
+- Target deployment for the rebuilt pipeline is **GitHub Actions** (public repo, free
+  minutes, built-in GITHUB_TOKEN). This supersedes the old rule "no GitHub Actions,
+  state lives on the server": its sole rationale (local state persistence) disappears
+  once state is GitHub-native.
+- State design for Phase 4: a slim processed-ids file committed to the repo; pending
+  review is represented by GitHub Issues (labels), not local JSON; failed
+  classifications surface as a triage list. Code stays deployment-agnostic (secrets via
+  environment variables only), so server cron remains a zero-cost fallback.
+- Implementation timing: decision now, deployment last. The workflow YAML and repo
+  secrets are written in Phase 5, after the rebuilt pipeline runs green locally.
+  Migration (Phase 3) runs on the server either way.
+- Classifier auth under Actions: the `claude setup-token` credential becomes an Actions
+  secret, exported to the job as ANTHROPIC_AUTH_TOKEN (see automation/classify.py).
+
 ## 2026-07-10: L2 rulings + the name-vs-definition principle for the taxonomy
 
 ### The core principle (drives everything below)

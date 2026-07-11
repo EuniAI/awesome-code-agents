@@ -13,6 +13,15 @@
 A curated list of research papers on autonomous code agents, maintained at [euni.ai](https://euni.ai).
 Papers are stored as YAML files in `data/`, rendered into `README.md` and a MkDocs site via scripts.
 
+## ⚠️ Ground-Up Rebuild In Progress (2026-07)
+
+Much of the pipeline description below is the OLD world and is being replaced. Current truth:
+- **taxonomy.json** (repo root) is the single source of truth for categories, tags, scope, and classifier rules. Rationale in design-decisions.md.
+- The old pipeline code and old data files are parked in **`_legacy/`** (read-only reference; delete after the rebuild).
+- New flat modules live in `automation/`: taxonomy.py, models.py, storage.py, config.py, render.py, classify.py (+ tests). README Papers chapter is fully generated between NAV/PAPERS markers; never hand-edit it.
+- **Target deployment is GitHub Actions with GitHub-native state** (decided 2026-07-11; supersedes the old "no Actions, server state" rule below). Workflow lands in Phase 5; until then everything runs on the server.
+- Working plan and progress: redesign/refactor-checklist.md and redesign/architecture.md.
+
 ## Owner's Workflow (How Updates Happen)
 
 There are **two input sources**, both processed by the automation pipeline:
@@ -37,8 +46,8 @@ There are **two input sources**, both processed by the automation pipeline:
 - `python automation/main.py --mode finalize` (runs hourly via cron) polls for approvals, writes YAML, and pushes
 
 ### Deployment
-- The pipeline runs **on a server** (not GitHub Actions) with persistent local state
-- `automation/state/processed.json` tracks processed/rejected IDs and pending Issues
+- OLD: the pipeline ran on a server with persistent local state (`_legacy/state/processed.json`)
+- NEW (decided 2026-07-11): GitHub Actions with GitHub-native state; see the rebuild banner above
 - After YAML is updated, `render_papers.py` rebuilds README blocks and `update_papers_badge.py` updates the paper count badge, then changes are committed and pushed
 - GitHub Pages picks up the push and redeploys the docs site automatically
 
@@ -95,8 +104,8 @@ scripts/
 
 ## Important Notes for Future Sessions
 
-- **Do not use GitHub Actions** for the automation — it runs on the server intentionally (state persistence)
-- `automation/state/processed.json` must be preserved across runs — never delete it
+- SUPERSEDED 2026-07-11: the "no GitHub Actions" rule is retired; target deployment is GitHub Actions with GitHub-native state
+- `_legacy/state/processed.json` (old ids/rejections) is still needed by the migration; do not delete until the rebuild completes
 - When adding a new paper category: add key to `config.yaml`, create `data/papers_{key}.yaml`, and add `<!-- START PAPERS:{key} -->` block in `README.md`
 - `save_config()` uses `yaml.dump` and will strip comments from `config.yaml` — only called once during `--mode setup`
 - The `decided` dict in state uses int keys at runtime but JSON serialises them as strings — the code normalises on load
