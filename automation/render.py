@@ -23,7 +23,7 @@ from automation.models import Paper
 
 _REPO_ROOT = Path(__file__).resolve().parents[1]
 README = _REPO_ROOT / "README.md"
-FULL_LIST = _REPO_ROOT / "PAPERS.md"
+FULL_LIST = _REPO_ROOT / "automation" / "PAPERS.md"
 
 NAV_BEGIN, NAV_END = "<!-- NAV:BEGIN -->", "<!-- NAV:END -->"
 PAPERS_BEGIN, PAPERS_END = "<!-- PAPERS:BEGIN -->", "<!-- PAPERS:END -->"
@@ -188,7 +188,7 @@ def render_papers(tax: taxonomy.Taxonomy) -> str:
             if older:
                 anchor = gh_slug(f"{node.emoji} {node.title}".strip())
                 blocks.append(f"<sub>… plus {older} earlier paper(s): see the "
-                              f"[full list](PAPERS.md#{anchor}).</sub>")
+                              f"[full list](automation/PAPERS.md#{anchor}).</sub>")
     return "\n\n".join(blocks)
 
 

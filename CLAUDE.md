@@ -39,18 +39,18 @@ feature disposition: records/legacy-audit.md.
 
 ## Data Layout
 
-- `data/papers_{leaf}.yaml`: one file per taxonomy leaf; newest first (arXiv v1
+- `automation/data/papers_{leaf}.yaml`: one file per taxonomy leaf; newest first (arXiv v1
   date); id is identity; storage.save dedups as a safety net.
-- `data/abstracts.json`: abstract sidecar (fetch once, reuse forever).
-- `data/seen.json`: ids the pipeline has handled (proposed or auto-skipped).
-- `data/retry.json`: classification-failure counts (give up at 3 -> seen).
-- `data/harvest.json`: announcement-day ledger (every swept day + record count;
+- `automation/data/abstracts.json`: abstract sidecar (fetch once, reuse forever).
+- `automation/data/seen.json`: ids the pipeline has handled (proposed or auto-skipped).
+- `automation/data/retry.json`: classification-failure counts (give up at 3 -> seen).
+- `automation/data/harvest.json`: announcement-day ledger (every swept day + record count;
   a missing day = a coverage gap) plus the daily cursor.
-- `data/backfill.json`: historical-sweep cursor (weekend/idle slices).
-- `data/feedback.json`: owner review reasons queued for LLM distillation.
-- `data/ack_repos.yaml`: acknowledgement badges config (scripts/generate_ack_badges.py).
+- `automation/data/backfill.json`: historical-sweep cursor (weekend/idle slices).
+- `automation/data/feedback.json`: owner review reasons queued for LLM distillation.
+- `automation/data/ack_repos.yaml`: acknowledgement badges config (scripts/generate_ack_badges.py).
 - `README.md`: generated zones between NAV/PAPERS markers show papers from the
-  last 12 months; `PAPERS.md` (fully generated) is the complete collection
+  last 12 months; `automation/PAPERS.md` (fully generated) is the complete collection
   including the recent ones. Never
   hand-edit either; run `python -m automation.render`.
 
@@ -60,7 +60,7 @@ feature disposition: records/legacy-audit.md.
 crawl.yml  (cron 06:30 UTC daily + manual)         decide.yml (fires on issue_comment)
   OAI-PMH announcement harvest since cursor          parse ALL reviewer comments (stateless)
   + inbox issue links + retry queue                  apply /approve /reject /edit
-  -> classify (Claude subscription token)            -> write data/, render, badges
+  -> classify (Claude subscription token)            -> write the data files, render, badges
   -> chunked review issues (the pool, 25/issue)      -> queue reasons in feedback.json
   -> venue upgrades from update stream               -> thumbs-up processed comments
   -> weekends/idle days: backfill slice              -> close issue when all decided

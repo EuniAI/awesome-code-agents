@@ -16,8 +16,7 @@ import yaml
 
 from automation.models import Paper
 
-_REPO_ROOT = Path(__file__).resolve().parents[1]
-DATA_DIR = _REPO_ROOT / "data"
+DATA_DIR = Path(__file__).resolve().parent / "data"
 
 
 def path_for(key: str, data_dir: Path = DATA_DIR) -> Path:

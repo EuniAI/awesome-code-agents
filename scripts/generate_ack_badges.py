@@ -3,7 +3,7 @@
 Generate badges for GitHub repositories in the Acknowledgements section of README.md.
 
 Behavior (no CLI parameters needed):
-- Reads fixed YAML at data/ack_repos.yaml (relative to repo root)
+- Reads fixed YAML at automation/data/ack_repos.yaml (relative to repo root)
 - Replaces the Acknowledgements nested repo list in README.md with items
   including Stars and Last Commit badges
 - Writes changes in-place to README.md
@@ -226,7 +226,7 @@ def main() -> None:
     # Operate from repository root inferred by script location
     repo_root = Path(__file__).resolve().parents[1]
     readme = repo_root / "README.md"
-    yaml_path = repo_root / "data" / "ack_repos.yaml"
+    yaml_path = repo_root / "automation" / "data" / "ack_repos.yaml"
 
     if not readme.exists():
         raise SystemExit(f"README not found: {readme}")
