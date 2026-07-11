@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 
 _REPO_ROOT = Path(__file__).resolve().parents[1]
 ENV_PATH = _REPO_ROOT / "automation" / ".env"
-CALIBRATION_PATH = _REPO_ROOT / "automation" / "calibration.json"
+CALIBRATION_PATH = _REPO_ROOT / "automation" / "data" / "calibration.json"
 
 MODEL = "claude-sonnet-5"
 BATCH_SIZE = 10

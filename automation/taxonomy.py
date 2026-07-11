@@ -14,7 +14,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Iterator
 
-TAXONOMY_PATH = Path(__file__).resolve().parent / "taxonomy.json"
+TAXONOMY_PATH = Path(__file__).resolve().parent / "data" / "taxonomy.json"
 
 _KEY_RE = re.compile(r"^[a-z][a-z0-9_]*$")
 

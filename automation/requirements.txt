@@ -1,3 +1,0 @@
-# Pipeline dependencies. A package is listed only when a live module imports it;
-# re-add arxiv/requests/etc. as sources/enrich are rebuilt.
-pyyaml>=6.0

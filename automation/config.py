@@ -13,7 +13,7 @@ from typing import Any
 import yaml
 
 _REPO_ROOT = Path(__file__).resolve().parents[1]
-CONFIG_PATH = _REPO_ROOT / "automation" / "config.yaml"
+CONFIG_PATH = Path(__file__).resolve().parent / "data" / "config.yaml"
 
 
 @lru_cache(maxsize=1)

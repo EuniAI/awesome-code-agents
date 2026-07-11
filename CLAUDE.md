@@ -24,7 +24,7 @@ records (legacy audit, completeness warrant) live at the git tag `rebuild/2026-0
 
 ## The Two Sources of Truth
 
-- **automation/taxonomy.json**: the category system. Four top-level branches:
+- **automation/data/taxonomy.json**: the category system. Four top-level branches:
   `foundation_models` (flagship general models), `studies` (surveys and
   empirical research about the agents), `artifact` (code as the deliverable;
   8 domains, software expands into 10 lifecycle activities), `agency` (code as
@@ -32,7 +32,7 @@ records (legacy audit, completeness warrant) live at the git tag `rebuild/2026-0
   definition / includes / boundary / examples; plus a repo-wide scope with a
   hardened relevance gate and an ordered master_test. The classifier prompt is
   COMPILED from this file; never hand-write category text elsewhere.
-- **automation/calibration.json**: owner-labeled real papers as positive and
+- **automation/data/calibration.json**: owner-labeled real papers as positive and
   negative few-shot examples (each with a why). They guide the classifier by
   precedent; they never pin papers by id. Grows automatically from review
   feedback (see the learning loop) and by hand when the owner rules on a case.
@@ -93,7 +93,7 @@ OAI harvest, id fetch, inbox, enrichment, venue extraction) · classify.py
 (prompt compiler + claude runner + validation) · reviewflow.py (issue protocol:
 payload-carrying issues, command parsing, acks) · pipeline.py (crawl / decide /
 backfill / reclass entrypoints) · render.py (README + PAPERS.md) · badges.py
-(count badge + summary block) · config.yaml (repo/review/backfill/arxiv:
+(count badge + summary block) · data/config.yaml (repo/review/backfill/arxiv:
 categories + keyword recall net) · tests/ (30 tests, no network).
 
 ## Roadmap (agreed, not yet built)

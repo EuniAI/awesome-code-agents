@@ -30,7 +30,7 @@ from automation.models import Paper
 logger = logging.getLogger(__name__)
 
 _REPO_ROOT = Path(__file__).resolve().parents[1]
-CALIBRATION_PATH = _REPO_ROOT / "automation" / "calibration.json"
+CALIBRATION_PATH = _REPO_ROOT / "automation" / "data" / "calibration.json"
 
 
 # ── intake: classify candidates and propose them into the pool ────────────────
