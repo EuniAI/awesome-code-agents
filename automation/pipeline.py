@@ -109,8 +109,9 @@ def crawl(since: str | None = None, dry_run: bool = False) -> None:
 
     cursor = since or storage.load_harvest_cursor() or str(date.today() - timedelta(days=2))
     retry_papers = list(sources.fetch_arxiv_papers(storage.load_retry()).values())
+    fresh, day_counts = sources.harvest_announced(cursor)
     candidates: list[Paper] = []
-    for p in retry_papers + sources.harvest_announced(cursor) + sources.read_inbox():
+    for p in retry_papers + fresh + sources.read_inbox():
         if p.id not in known:
             known.add(p.id)  # also dedups retry vs harvest vs inbox within this run
             candidates.append(p)
@@ -119,8 +120,8 @@ def crawl(since: str | None = None, dry_run: bool = False) -> None:
     else:
         logger.info("nothing new today")
     if not dry_run:
-        # The harvest succeeded end to end; next run picks up from today's mailing.
-        storage.save_harvest_cursor(str(date.today()))
+        # The run succeeded end to end: ledger the swept days, advance the cursor.
+        storage.record_harvest(day_counts, cursor=str(date.today()))
         # Thumbs-up inbox comments whose links are now all handled.
         sources.ack_inbox(storage.all_ids(leaves) | storage.load_seen() | reviewflow.pending_ids())
         # Weekends are arXiv's quiet days: spend them sweeping history.
@@ -132,13 +133,17 @@ def crawl(since: str | None = None, dry_run: bool = False) -> None:
 # ── backfill ──────────────────────────────────────────────────────────────────
 
 def backfill(from_date: str, to_date: str, dry_run: bool = False) -> None:
-    """Historical sweep of a date range into the pool; same intake tail as crawl.
-    Also usable manually to accelerate past the weekend cursor."""
+    """Historical sweep of an ANNOUNCEMENT-date range into the pool; same source
+    and same intake tail as the daily crawl, and the same ledger records the
+    coverage. Also usable manually to accelerate past the weekend cursor."""
     leaves = taxonomy.load().leaf_keys()
     known = storage.all_ids(leaves) | storage.load_seen() | reviewflow.pending_ids()
-    candidates = [p for p in sources.crawl_range(from_date, to_date) if p.id not in known]
+    fresh, day_counts = sources.harvest_announced(from_date, until=to_date)
+    candidates = [p for p in fresh if p.id not in known]
     logger.info("backfill %s..%s: %d new candidates", from_date, to_date, len(candidates))
     classify_and_propose(candidates, dry_run=dry_run)
+    if not dry_run:
+        storage.record_harvest(day_counts)
 
 
 def pool_has_room() -> bool:

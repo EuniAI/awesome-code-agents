@@ -249,11 +249,13 @@ def _oai_page(url: str) -> tuple[list[tuple[Paper, str, set[str]]], str]:
     return _oai_parse(data)
 
 
-def _oai_parse(data: bytes) -> tuple[list[tuple[Paper, str, set[str]]], str]:
-    """Parse an OAI-PMH page into ((paper, abstract, categories) triples, token)."""
+def _oai_parse(data: bytes) -> tuple[list[tuple[Paper, str, set[str], str]], str]:
+    """Parse an OAI-PMH page into ((paper, abstract, categories, announced) quads,
+    resumption token). `announced` is the record's datestamp (announcement day)."""
     root = ET.fromstring(data)
-    out: list[tuple[Paper, str, set[str]]] = []
+    out: list[tuple[Paper, str, set[str], str]] = []
     for rec in root.findall(".//oai:record", _OAI):
+        announced = (rec.findtext("oai:header/oai:datestamp", "", _OAI) or "")[:10]
         meta = rec.find(".//ax:arXiv", _OAI)
         if meta is None:  # deleted records carry no metadata
             continue
@@ -273,25 +275,37 @@ def _oai_parse(data: bytes) -> tuple[list[tuple[Paper, str, set[str]]], str]:
             venue=extract_venue(abstract, default), published=created,
             links={"paper": f"https://arxiv.org/abs/{pid}"},
         )
-        out.append((paper, abstract, cats))
+        out.append((paper, abstract, cats, announced))
     token = (root.findtext(".//oai:resumptionToken", "", _OAI) or "").strip()
     return out, token
 
 
-def harvest_announced(since: str) -> list[Paper]:
-    """Keyword-matching papers ANNOUNCED (or updated) on or after `since`
-    (YYYY-MM-DD). This is the daily source: 'everything in the mailings since my
-    last successful run'. Candidates only; the pipeline dedups against known ids."""
+def harvest_announced(since: str, until: str | None = None) -> tuple[list[Paper], dict[str, int]]:
+    """Keyword-matching papers ANNOUNCED (or updated) in [since, until] (YYYY-MM-DD,
+    inclusive; until defaults to today). The single source for both the daily crawl
+    and historical backfill. Returns (candidates, per-day scanned-record counts);
+    the counts cover every day in the range (0 for quiet days), forming the ledger
+    entry that proves the day was swept."""
+    from datetime import date, timedelta
+
     cfg = config.load()["arxiv"]
     wanted = set(cfg["categories"])
     keywords = cfg["keywords"]
     url = f"{_OAI_BASE}?verb=ListRecords&metadataPrefix=arXiv&set=cs&from={since}"
+    if until:
+        url += f"&until={until}"
     found: dict[str, tuple[Paper, str]] = {}
-    scanned = 0
+    day_counts: dict[str, int] = {}
+    # Pre-mark the whole requested range so quiet days are recorded as swept.
+    d, end = date.fromisoformat(since), date.fromisoformat(until or str(date.today()))
+    while d <= end:
+        day_counts[str(d)] = 0
+        d += timedelta(days=1)
     while url:
         records, token = _oai_page(url)
-        scanned += len(records)
-        for paper, abstract, cats in records:
+        for paper, abstract, cats, announced in records:
+            if announced:
+                day_counts[announced] = day_counts.get(announced, 0) + 1
             if not ARXIV_ID.match(paper.id):
                 continue  # old-style ids predate our scope
             if not (cats & wanted):
@@ -302,10 +316,10 @@ def harvest_announced(since: str) -> list[Paper]:
         url = (f"{_OAI_BASE}?verb=ListRecords&resumptionToken={urllib.parse.quote(token)}"
                if token else "")
         time.sleep(_SLEEP_S)
-    logger.info("harvest since %s: %d announced records scanned, %d keyword hits",
-                since, scanned, len(found))
+    logger.info("harvest %s..%s: %d announced records scanned, %d keyword hits",
+                since, until or "today", sum(day_counts.values()), len(found))
     _cache_abstracts(list(found.values()))
-    return [p for p, _ in found.values()]
+    return [p for p, _ in found.values()], day_counts
 
 
 _INBOX_LINK_RE = re.compile(r"arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})", re.IGNORECASE)
@@ -322,40 +336,6 @@ def _inbox_comments() -> list[dict]:
     if raw.returncode != 0:
         raise RuntimeError(f"gh api failed: {raw.stderr[:300]}")
     return json.loads(raw.stdout)
-
-
-def crawl_range(from_date: str, to_date: str) -> list[Paper]:
-    """True backfill: keyword-matching papers submitted in [from_date, to_date]
-    (YYYY-MM-DD, inclusive), paging past the 200-per-request API limit that the
-    daily crawl never needs to cross. Sweep long ranges month by month."""
-    cfg = config.load()["arxiv"]
-    keywords = cfg["keywords"]
-    lo = from_date.replace("-", "") + "0000"
-    hi = to_date.replace("-", "") + "2359"
-    found: dict[str, tuple[Paper, str]] = {}
-    for cat in cfg["categories"]:
-        scanned = matched = 0
-        while True:
-            try:
-                pairs = _query({
-                    "search_query": f"cat:{cat} AND submittedDate:[{lo} TO {hi}]",
-                    "sortBy": "submittedDate", "sortOrder": "ascending",
-                    "start": str(scanned), "max_results": "200",
-                })
-            except Exception as exc:
-                logger.warning("backfill %s at offset %d failed: %s", cat, scanned, exc)
-                break
-            for paper, abstract in pairs:
-                if keyword_hit(paper.title + " " + abstract, keywords):
-                    matched += 1
-                    found.setdefault(paper.id, (paper, abstract))
-            scanned += len(pairs)
-            time.sleep(_SLEEP_S)
-            if len(pairs) < 200:
-                break
-        logger.info("backfill %s: %d scanned, %d keyword hits", cat, scanned, matched)
-    _cache_abstracts(list(found.values()))
-    return [p for p, _ in found.values()]
 
 
 def read_inbox() -> list[Paper]:

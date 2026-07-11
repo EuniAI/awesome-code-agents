@@ -39,6 +39,7 @@ _OAI_FEED = b"""<?xml version="1.0" encoding="UTF-8"?>
 <OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/">
   <ListRecords>
     <record>
+      <header><datestamp>2026-07-10</datestamp></header>
       <metadata>
         <arXiv xmlns="http://arxiv.org/OAI/arXiv/">
           <id>2607.05432</id>
@@ -58,7 +59,7 @@ _OAI_FEED = b"""<?xml version="1.0" encoding="UTF-8"?>
 
 def test_oai_feed_parsing():
     root_records, token = sources._oai_parse(_OAI_FEED)
-    (paper, abstract, cats), = root_records
+    (paper, abstract, cats, announced), = root_records
     assert paper.id == "2607.05432"
     assert paper.title == "An Agent that Codes"
     assert paper.authors == ["Jane Doe"]
@@ -66,7 +67,19 @@ def test_oai_feed_parsing():
     assert paper.venue == "ICSE 2027"  # extracted from the acceptance phrase
     assert cats == {"cs.SE", "cs.AI"}
     assert abstract.startswith("Abstract body.")
+    assert announced == "2026-07-10"  # datestamp = announcement day
     assert token == "tok123"
+
+
+def test_harvest_ledger_roundtrip():
+    with tempfile.TemporaryDirectory() as td:
+        d = Path(td)
+        assert storage.load_harvest_cursor(d) == ""
+        storage.record_harvest({"2026-07-10": 861, "2026-07-11": 0}, cursor="2026-07-12", data_dir=d)
+        storage.record_harvest({"2026-07-12": 40}, data_dir=d)  # merge, cursor kept
+        ledger = storage.load_harvest(d)
+        assert ledger["cursor"] == "2026-07-12"
+        assert ledger["days"] == {"2026-07-10": 861, "2026-07-11": 0, "2026-07-12": 40}
 
 
 def test_keyword_hit_respects_word_boundaries():

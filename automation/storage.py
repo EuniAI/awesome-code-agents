@@ -126,26 +126,38 @@ def save_seen(seen: set[str], data_dir: Path = DATA_DIR) -> None:
     )
 
 
-# ── Harvest cursor (last successful announcement harvest) ─────────────────────
+# ── Harvest ledger (announcement-day coverage record) ─────────────────────────
 # The daily source is announcement-driven: each run ingests everything announced
-# since this date. A failed run leaves the cursor untouched, so the next run
-# self-heals by re-harvesting the gap.
+# since the cursor. `days` maps every swept announcement day to the number of
+# records scanned that day, so a coverage gap is a missing key: if something ever
+# goes wrong, the ledger shows exactly which days were never harvested. A failed
+# run leaves the ledger untouched, so the next run self-heals the gap.
 
 def _harvest_path(data_dir: Path = DATA_DIR) -> Path:
     return data_dir / "harvest.json"
 
 
-def load_harvest_cursor(data_dir: Path = DATA_DIR) -> str:
+def load_harvest(data_dir: Path = DATA_DIR) -> dict:
     path = _harvest_path(data_dir)
     if not path.exists():
-        return ""
-    return json.loads(path.read_text(encoding="utf-8")).get("since", "")
+        return {"cursor": "", "days": {}}
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
-def save_harvest_cursor(since: str, data_dir: Path = DATA_DIR) -> None:
+def load_harvest_cursor(data_dir: Path = DATA_DIR) -> str:
+    return load_harvest(data_dir).get("cursor", "")
+
+
+def record_harvest(day_counts: dict[str, int], cursor: str | None = None,
+                   data_dir: Path = DATA_DIR) -> None:
+    ledger = load_harvest(data_dir)
+    ledger.setdefault("days", {}).update(day_counts)
+    ledger["days"] = dict(sorted(ledger["days"].items()))
+    if cursor:
+        ledger["cursor"] = cursor
     data_dir.mkdir(parents=True, exist_ok=True)
     _harvest_path(data_dir).write_text(
-        json.dumps({"since": since}, indent=1) + "\n", encoding="utf-8"
+        json.dumps(ledger, indent=1) + "\n", encoding="utf-8"
     )
 
 
