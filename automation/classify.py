@@ -172,7 +172,9 @@ def build_prompt(items: list[dict[str, str]]) -> str:
         "OUTPUT: an object {results: [...]} with exactly one entry per paper, in input "
         "order, each: {index, relevant, category (leaf key, or null if not relevant), "
         "tags (possibly empty), summary (2 sentences, self-contained, max 60 words), "
-        "reason (one short sentence: which rule/boundary decided the category)}."
+        "reason (one short sentence: which rule/boundary decided the category), "
+        "venue_hint (the venue name with year, e.g. 'ICSE 2026', ONLY if the abstract "
+        "explicitly states acceptance or publication there; else an empty string)}."
     )
     return "\n\n".join(parts)
 
@@ -197,8 +199,9 @@ def _output_schema(n: int) -> dict[str, Any]:
                         "tags": {"type": "array", "items": {"type": "string", "enum": list(PAPER_TYPES + ARTIFACT_TAGS)}},
                         "summary": {"type": "string"},
                         "reason": {"type": "string"},
+                        "venue_hint": {"type": "string"},
                     },
-                    "required": ["index", "relevant", "category", "tags", "summary", "reason"],
+                    "required": ["index", "relevant", "category", "tags", "summary", "reason", "venue_hint"],
                     "additionalProperties": False,
                 },
             },
@@ -259,6 +262,7 @@ def _validate(raw: list[dict[str, Any]], n: int) -> list[Classification] | None:
             tags=list(tags),
             summary=(item.get("summary") or "").strip(),
             reason=(item.get("reason") or "").strip(),
+            venue_hint=(item.get("venue_hint") or "").strip(),
         )
     return out  # type: ignore[return-value]
 

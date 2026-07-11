@@ -27,11 +27,16 @@ from automation import config
 logger = logging.getLogger(__name__)
 
 _PAYLOAD_RE = re.compile(r"```json\n(.*?)\n```", re.DOTALL)
-# Index spec captured up front; any trailing free text ("/reject 2 wrong topic")
-# is tolerated and ignored.
-_APPROVE_RE = re.compile(r"^/approve\s+(all|[\d,\s\-]+)", re.IGNORECASE)
-_REJECT_RE = re.compile(r"^/reject\s+(all|[\d,\s\-]+)", re.IGNORECASE)
-_EDIT_RE = re.compile(r"^/edit\s+(\d+)\s+(\S.*)$", re.IGNORECASE)
+# Commands are matched anywhere in a comment (several may share one line, e.g.
+# "/approve 1,3 /reject 2 wrong topic"); the index spec is captured up front and
+# trailing free text (a reject reason) is tolerated and ignored.
+_APPROVE_RE = re.compile(r"/approve\s+(all|[\d,\s\-]+)", re.IGNORECASE)
+_REJECT_RE = re.compile(r"/reject\s+(all|[\d,\s\-]+)", re.IGNORECASE)
+_EDIT_RE = re.compile(
+    r"/edit\s+(\d+)\s+([^\n]+?)(?=\s*/(?:approve|reject|edit)\b|\s*\n|\s*$)",
+    re.IGNORECASE,
+)
+_CMD_ANY_RE = re.compile(r"/(?:approve|reject|edit)\b", re.IGNORECASE)
 # key=value pairs where the value may contain spaces (venue=ICSE 2026): a value
 # runs until the next key= or the end of the line.
 _KV_RE = re.compile(r"(\w+)=(.+?)(?=\s+\w+=|\s*$)")
@@ -167,39 +172,60 @@ def _indices(spec: str, n: int) -> list[int]:
 
 def parse_decisions(comments: list[dict], reviewer: str, n: int) -> dict[int, tuple[str, dict]]:
     """index -> ('approve' | 'reject', overrides). Cumulative across the reviewer's
-    comments in order; later commands override earlier ones."""
+    comments in positional order (several commands may share a line); later
+    commands override earlier ones. GitHub logins are matched case-insensitively."""
     decisions: dict[int, tuple[str, dict]] = {}
+    rev = reviewer.casefold()
     for c in comments:
-        if c.get("user", {}).get("login") != reviewer:
+        if (c.get("user", {}).get("login") or "").casefold() != rev:
             continue
-        for line in (c.get("body") or "").splitlines():
-            line = line.strip()
-            m = _APPROVE_RE.match(line)
-            if m:
-                for i in _indices(m.group(1), n):
-                    decisions[i] = ("approve", {})
+        body = c.get("body") or ""
+        events: list[tuple[int, str, object]] = []
+        for m in _APPROVE_RE.finditer(body):
+            events.append((m.start(), "approve", m.group(1)))
+        for m in _REJECT_RE.finditer(body):
+            events.append((m.start(), "reject", m.group(1)))
+        for m in _EDIT_RE.finditer(body):
+            events.append((m.start(), "edit", m))
+        for _, kind, payload in sorted(events, key=lambda e: e[0]):
+            if kind in ("approve", "reject"):
+                for i in _indices(str(payload), n):
+                    decisions[i] = (kind, {})
                 continue
-            m = _REJECT_RE.match(line)
-            if m:
-                for i in _indices(m.group(1), n):
-                    decisions[i] = ("reject", {})
+            m = payload  # an _EDIT_RE match
+            i = int(m.group(1))
+            if not 1 <= i <= n:
                 continue
-            m = _EDIT_RE.match(line)
-            if m:
-                i = int(m.group(1))
-                if not 1 <= i <= n:
-                    continue
-                overrides: dict = {}
-                for key, value in _KV_RE.findall(m.group(2)):
-                    value = value.strip().strip("`")
-                    if key == "category":
-                        overrides["category"] = value
-                    elif key == "tags":
-                        overrides["tags"] = [] if value == "-" else value.split(",")
-                    elif key == "venue":
-                        overrides["venue"] = value
-                decisions[i] = ("approve", overrides)
+            overrides: dict = {}
+            for key, value in _KV_RE.findall(m.group(2)):
+                value = value.strip().strip("`")
+                if key == "category":
+                    overrides["category"] = value
+                elif key == "tags":
+                    overrides["tags"] = [] if value == "-" else value.split(",")
+                elif key == "venue":
+                    overrides["venue"] = value
+            decisions[i] = ("approve", overrides)
     return decisions
+
+
+def ack_command_comments(comments: list[dict], reviewer: str) -> None:
+    """Thumbs-up every reviewer comment containing commands: the owner-facing
+    signal that decide has processed it. Stateless-safe (skips already-reacted)."""
+    rev = reviewer.casefold()
+    for c in comments:
+        if (c.get("user", {}).get("login") or "").casefold() != rev:
+            continue
+        if not _CMD_ANY_RE.search(c.get("body") or ""):
+            continue
+        if (c.get("reactions") or {}).get("+1", 0) > 0:
+            continue
+        subprocess.run(
+            ["gh", "api", "--method", "POST",
+             f"repos/{_repo()}/issues/comments/{c['id']}/reactions",
+             "-f", "content=+1"],
+            capture_output=True, text=True, timeout=60,
+        )
 
 
 # ── Issue actions ─────────────────────────────────────────────────────────────

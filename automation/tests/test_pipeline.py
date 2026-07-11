@@ -97,12 +97,12 @@ def test_seen_roundtrip():
         assert storage.load_seen(d) == {"2601.00001", "x"}
 
 
-def test_retry_roundtrip():
+def test_retry_counts_roundtrip():
     with tempfile.TemporaryDirectory() as td:
         d = Path(td)
-        assert storage.load_retry(d) == []
-        storage.save_retry(["2601.00002", "2601.00001"], d)
-        assert storage.load_retry(d) == ["2601.00001", "2601.00002"]
+        assert storage.load_retry_counts(d) == {}
+        storage.save_retry_counts({"2601.00002": 2, "2601.00001": 1}, d)
+        assert storage.load_retry_counts(d) == {"2601.00001": 1, "2601.00002": 2}
 
 
 def _entries(n=3):
@@ -159,6 +159,27 @@ def test_parse_decisions_trailing_reason_and_venue():
     d = reviewflow.parse_decisions(
         [_comment("o", "/edit 1 venue=ICSE 2026 tags=benchmark")], "o", 3)
     assert d[1] == ("approve", {"venue": "ICSE 2026", "tags": ["benchmark"]})
+
+
+def test_parse_decisions_mixed_line_and_case_insensitive_login():
+    # Several commands on one line, applied in positional order (legacy protocol).
+    d = reviewflow.parse_decisions(
+        [_comment("Owner", "/approve 1,3 /reject 2 wrong topic /edit 3 venue=FSE 2027")],
+        "owner", 3)
+    assert d[1] == ("approve", {})
+    assert d[2] == ("reject", {})
+    assert d[3] == ("approve", {"venue": "FSE 2027"})
+    # An edit followed by a newline command keeps its value bounded to the line.
+    d = reviewflow.parse_decisions(
+        [_comment("OWNER", "/edit 2 venue=ICSE 2026\n/approve 1")], "owner", 3)
+    assert d[2] == ("approve", {"venue": "ICSE 2026"})
+    assert d[1] == ("approve", {})
+
+
+def test_inbox_id_extraction_handles_bare_ids():
+    text = ("see https://arxiv.org/abs/2601.11111v2 and also 2602.22222 please, "
+            "but not version digits like 1.5 or 2601.11111 again")
+    assert sources._extract_inbox_ids(text) == ["2601.11111", "2602.22222"]
 
 
 def test_extract_venue():

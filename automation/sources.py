@@ -55,8 +55,11 @@ def extract_venue(abstract: str, default: str) -> str:
     for rx in (_VENUE_ACCEPT_RE, _VENUE_NAME_RE):
         m = rx.search(abstract)
         if m:
-            venue = re.sub(r"\s+", " ", m.group(1)).strip(" .,")
+            venue = re.sub(r"\s+", " ", m.group(1)).strip(" .,;:")
             venue = re.sub(r"^the\s+", "", venue, flags=re.IGNORECASE)
+            # Trim trailing filler words ("ICSE 2026 conference" -> "ICSE 2026").
+            venue = re.sub(r"\s+(?:proceedings|workshop|conference|journal)$", "",
+                           venue, flags=re.IGNORECASE)
             if len(venue) <= 40:  # long captures are almost always false positives
                 return venue
     return default
@@ -323,6 +326,17 @@ def harvest_announced(since: str, until: str | None = None) -> tuple[list[Paper]
 
 
 _INBOX_LINK_RE = re.compile(r"arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})", re.IGNORECASE)
+_INBOX_BARE_RE = re.compile(r"\b(\d{4}\.\d{4,5})\b")  # bare ids like "2601.12345"
+
+
+def _extract_inbox_ids(text: str) -> list[str]:
+    """arXiv ids from a comment: URL forms first, then bare ids not already
+    captured via a URL (the bare regex would also match the digits inside one)."""
+    ids = _INBOX_LINK_RE.findall(text)
+    for m in _INBOX_BARE_RE.findall(text):
+        if m not in ids:
+            ids.append(m)
+    return ids
 
 
 def _inbox_comments() -> list[dict]:
@@ -344,7 +358,7 @@ def read_inbox() -> list[Paper]:
     comments = _inbox_comments()
     ids: list[str] = []
     for c in comments:
-        for m in _INBOX_LINK_RE.findall(c.get("body", "")):
+        for m in _extract_inbox_ids(c.get("body", "")):
             if m not in ids:
                 ids.append(m)
     logger.info("inbox: %d unique arXiv ids across %d comments", len(ids), len(comments))
@@ -359,7 +373,7 @@ def ack_inbox(handled: set[str]) -> None:
     owner, repo = cfg["repo"]["owner"], cfg["repo"]["name"]
     acked = 0
     for c in _inbox_comments():
-        ids = _INBOX_LINK_RE.findall(c.get("body", ""))
+        ids = _extract_inbox_ids(c.get("body", ""))
         if not ids or not all(i in handled for i in ids):
             continue
         if (c.get("reactions") or {}).get("+1", 0) > 0:
@@ -378,20 +392,32 @@ def ack_inbox(handled: set[str]) -> None:
 
 # ── Link enrichment (approved papers only; cheap and best-effort) ─────────────
 
+_GITHUB_URL_RE = re.compile(r"https?://github\.com/[A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+",
+                            re.IGNORECASE)
+
+
 def enrich_links(paper: Paper) -> None:
-    """Fill links.github from the Hugging Face papers API when available."""
-    if paper.links.get("github") or not ARXIV_ID.match(paper.id):
+    """Fill links.github: Hugging Face papers API first, then the first GitHub URL
+    mentioned in the abstract ('Code is available at ...') as the fallback."""
+    if paper.links.get("github"):
         return
-    try:
-        req = urllib.request.Request(
-            f"https://huggingface.co/api/papers/{paper.id}",
-            headers={"User-Agent": "Mozilla/5.0 (paper-metadata-fetch)"},
-        )
-        with urllib.request.urlopen(req, timeout=15) as r:
-            text = r.read().decode("utf-8", errors="replace")
-        m = re.search(r"https://github\.com/[\w.\-]+/[\w.\-]+", text)
-        if m:
-            paper.links["github"] = m.group(0).rstrip(".")
-            logger.info("enriched github link for %s", paper.id)
-    except Exception:
-        pass  # 404 is the common case; enrichment is strictly best-effort
+    if ARXIV_ID.match(paper.id):
+        try:
+            req = urllib.request.Request(
+                f"https://huggingface.co/api/papers/{paper.id}",
+                headers={"User-Agent": "Mozilla/5.0 (paper-metadata-fetch)"},
+            )
+            with urllib.request.urlopen(req, timeout=15) as r:
+                text = r.read().decode("utf-8", errors="replace")
+            m = _GITHUB_URL_RE.search(text)
+            if m:
+                paper.links["github"] = m.group(0).rstrip(".")
+                logger.info("enriched github link (HF) for %s", paper.id)
+                return
+        except Exception:
+            pass  # 404 is the common case; enrichment is strictly best-effort
+    abstract = storage.load_abstracts().get(paper.id, "")
+    m = _GITHUB_URL_RE.search(abstract)
+    if m:
+        paper.links["github"] = m.group(0).rstrip(".,;:)>\"'")
+        logger.info("enriched github link (abstract) for %s", paper.id)

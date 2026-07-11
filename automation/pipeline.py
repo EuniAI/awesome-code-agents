@@ -66,6 +66,10 @@ def classify_and_propose(candidates: list[Paper], dry_run: bool = False) -> None
         if not v.relevant:
             skipped += 1
             continue
+        # The classifier reads the full abstract and may spot an acceptance note
+        # the regex extractor missed; fill-only, never overwrite a real venue.
+        if v.venue_hint and len(v.venue_hint) <= 40 and p.venue.startswith("arXiv"):
+            p.venue = v.venue_hint
         entries.append({
             "paper": p.to_dict(),
             "category": v.category, "tags": v.tags,
@@ -77,11 +81,20 @@ def classify_and_propose(candidates: list[Paper], dry_run: bool = False) -> None
         print(json.dumps(entries, indent=2, ensure_ascii=False))
         print(note)
         return
+    # Failures survive the crawl window, but not forever: after three failed
+    # attempts a paper is given up on (marked seen) so it cannot clog the queue.
+    counts = storage.load_retry_counts()
+    for p, v in zip(candidates, verdicts):
+        if not v.failed:
+            counts.pop(p.id, None)
+    for pid in failed_ids:
+        counts[pid] = counts.get(pid, 0) + 1
+        if counts[pid] >= 3:
+            counts.pop(pid)
+            seen.add(pid)
+            logger.warning("giving up on %s after 3 failed classification attempts", pid)
+    storage.save_retry_counts(counts)
     storage.save_seen(seen)
-    # Failures survive the crawl window: successfully classified ids leave the
-    # retry list, fresh failures join it, and crawl() feeds the list back in.
-    classified = {p.id for p, v in zip(candidates, verdicts) if not v.failed}
-    storage.save_retry(sorted((set(storage.load_retry()) - classified) | set(failed_ids)))
     if not entries:
         logger.info("no relevant papers in this intake (%s)", note)
         return
@@ -112,7 +125,7 @@ def crawl(since: str | None = None, dry_run: bool = False) -> None:
     known = set(stored) | storage.load_seen() | reviewflow.pending_ids()
 
     cursor = since or storage.load_harvest_cursor() or str(date.today() - timedelta(days=2))
-    retry_papers = list(sources.fetch_arxiv_papers(storage.load_retry()).values())
+    retry_papers = list(sources.fetch_arxiv_papers(sorted(storage.load_retry_counts())).values())
     fresh, day_counts = sources.harvest_announced(cursor)
     updates = [p for p in fresh if p.id in stored]  # v2+ of papers we already curate
     candidates: list[Paper] = []
@@ -132,9 +145,10 @@ def crawl(since: str | None = None, dry_run: bool = False) -> None:
         storage.record_harvest(day_counts, cursor=str(date.today()))
         # Thumbs-up inbox comments whose links are now all handled.
         sources.ack_inbox(storage.all_ids(leaves) | storage.load_seen() | reviewflow.pending_ids())
-        # Weekends are arXiv's quiet days: spend them sweeping history.
+        # Weekends are arXiv's quiet days, and an idle weekday costs nothing:
+        # both advance the historical sweep by one slice (old pipeline's intent).
         from datetime import datetime, timezone
-        if datetime.now(timezone.utc).weekday() >= 5:
+        if datetime.now(timezone.utc).weekday() >= 5 or not candidates:
             _weekend_backfill()
 
 
@@ -285,6 +299,8 @@ def decide(issue_number: int) -> None:
 
     if errors:
         reviewflow.post_comment(issue_number, "Some commands failed:\n- " + "\n- ".join(errors))
+    # Thumbs-up each processed command comment so the owner sees decide ran.
+    reviewflow.ack_command_comments(comments, reviewer)
     if len(set(approved) | set(rejected)) >= len(entries):
         reviewflow.post_comment(
             issue_number,

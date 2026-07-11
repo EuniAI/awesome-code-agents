@@ -20,6 +20,7 @@ class Classification:
     tags: list[str] = field(default_factory=list)
     summary: str = ""
     reason: str = ""              # one-line why (kept for review issues and debugging)
+    venue_hint: str = ""          # venue if the abstract states acceptance, else ""
     failed: bool = False          # classification could not be obtained/validated
 
 
