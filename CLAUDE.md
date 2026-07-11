@@ -20,7 +20,7 @@ A curated list of research papers on autonomous code agents, published at
 [euni.ai](https://euni.ai) and github.com/EuniAI/awesome-code-agents. Rebuilt
 from the ground up in 2026-07 (taxonomy, data, and pipeline); the old system
 lives only in git history. Rebuild rationale: design-decisions.md; the legacy
-feature disposition: redesign/legacy-audit.md.
+feature disposition: records/legacy-audit.md.
 
 ## The Two Sources of Truth
 
@@ -51,7 +51,7 @@ feature disposition: redesign/legacy-audit.md.
 - `data/ack_repos.yaml`: acknowledgement badges config (scripts/generate_ack_badges.py).
 - `README.md`: generated zones between NAV/PAPERS markers show papers from the
   last 12 months; `ARCHIVE.md` (fully generated) holds everything older. Never
-  hand-edit either; run `python -m automation.render` (or scripts/render_papers.py).
+  hand-edit either; run `python -m automation.render`.
 
 ## Pipeline (GitHub Actions, event-driven, GitHub-native state)
 
@@ -116,5 +116,6 @@ categories + keyword recall net) · tests/ (30 tests, no network).
   re-runnable; every write is dedup-safe.
 - taxonomy.json survives `json.dumps(indent=2, ensure_ascii=False)` round-trips
   (verified); edit it programmatically for structural changes.
-- Old pipeline reference: git history and redesign/legacy-audit.md (file-by-file
-  disposition). The 2026-07 migration reports live in redesign/migration/.
+- Old pipeline reference: git history and records/legacy-audit.md (file-by-file
+  disposition); records/completeness-diff.md is the deletion warrant with every
+  written OUT verdict. The transient migration review sheets live in git history.

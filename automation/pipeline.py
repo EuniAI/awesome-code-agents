@@ -429,7 +429,7 @@ def reclass(keys: list[str]) -> Path:
     render.main()
     badges.refresh()
 
-    out = _REPO_ROOT / "redesign" / "migration" / "reclass.md"
+    out = _REPO_ROOT / "records" / "reclass.md"
     out.parent.mkdir(parents=True, exist_ok=True)
     changed = sum(1 for r in rows if "CHANGED" in r)
     out.write_text(
