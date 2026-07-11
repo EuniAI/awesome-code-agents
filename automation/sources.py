@@ -270,6 +270,40 @@ def _inbox_comments() -> list[dict]:
     return json.loads(raw.stdout)
 
 
+def crawl_range(from_date: str, to_date: str) -> list[Paper]:
+    """True backfill: keyword-matching papers submitted in [from_date, to_date]
+    (YYYY-MM-DD, inclusive), paging past the 200-per-request API limit that the
+    daily crawl never needs to cross. Sweep long ranges month by month."""
+    cfg = config.load()["arxiv"]
+    keywords = cfg["keywords"]
+    lo = from_date.replace("-", "") + "0000"
+    hi = to_date.replace("-", "") + "2359"
+    found: dict[str, tuple[Paper, str]] = {}
+    for cat in cfg["categories"]:
+        scanned = matched = 0
+        while True:
+            try:
+                pairs = _query({
+                    "search_query": f"cat:{cat} AND submittedDate:[{lo} TO {hi}]",
+                    "sortBy": "submittedDate", "sortOrder": "ascending",
+                    "start": str(scanned), "max_results": "200",
+                })
+            except Exception as exc:
+                logger.warning("backfill %s at offset %d failed: %s", cat, scanned, exc)
+                break
+            for paper, abstract in pairs:
+                if keyword_hit(paper.title + " " + abstract, keywords):
+                    matched += 1
+                    found.setdefault(paper.id, (paper, abstract))
+            scanned += len(pairs)
+            time.sleep(_SLEEP_S)
+            if len(pairs) < 200:
+                break
+        logger.info("backfill %s: %d scanned, %d keyword hits", cat, scanned, matched)
+    _cache_abstracts(list(found.values()))
+    return [p for p, _ in found.values()]
+
+
 def read_inbox() -> list[Paper]:
     """All arXiv papers linked in the inbox issue's comments (candidates only;
     the pipeline filters against known ids)."""

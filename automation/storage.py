@@ -126,6 +126,24 @@ def save_seen(seen: set[str], data_dir: Path = DATA_DIR) -> None:
     )
 
 
+# ── Retry ids (classification failures awaiting another attempt) ──────────────
+
+def _retry_path(data_dir: Path = DATA_DIR) -> Path:
+    return data_dir / "retry.json"
+
+
+def load_retry(data_dir: Path = DATA_DIR) -> list[str]:
+    path = _retry_path(data_dir)
+    if not path.exists():
+        return []
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def save_retry(ids: list[str], data_dir: Path = DATA_DIR) -> None:
+    data_dir.mkdir(parents=True, exist_ok=True)
+    _retry_path(data_dir).write_text(json.dumps(sorted(ids), indent=1) + "\n", encoding="utf-8")
+
+
 # ── Abstract sidecar ──────────────────────────────────────────────────────────
 # Raw source material (id -> abstract), kept out of the human-facing curated YAML.
 # Fetched once, reused forever: re-classification, golden-set evals, future search.

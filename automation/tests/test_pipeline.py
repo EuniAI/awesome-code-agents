@@ -50,6 +50,14 @@ def test_seen_roundtrip():
         assert storage.load_seen(d) == {"2601.00001", "x"}
 
 
+def test_retry_roundtrip():
+    with tempfile.TemporaryDirectory() as td:
+        d = Path(td)
+        assert storage.load_retry(d) == []
+        storage.save_retry(["2601.00002", "2601.00001"], d)
+        assert storage.load_retry(d) == ["2601.00001", "2601.00002"]
+
+
 def _entries(n=3):
     return [
         {"paper": {"id": f"260{i}.0000{i}", "title": f"P{i}", "authors": ["A"],

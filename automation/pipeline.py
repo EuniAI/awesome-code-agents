@@ -55,11 +55,12 @@ def classify_and_propose(candidates: list[Paper], dry_run: bool = False) -> None
     verdicts = classify.classify(items)
 
     entries: list[dict] = []
-    skipped = failed = 0
+    skipped = 0
+    failed_ids: list[str] = []
     seen = storage.load_seen()
     for p, v in zip(candidates, verdicts):
         if v.failed:
-            failed += 1  # not marked seen: retried on the next intake
+            failed_ids.append(p.id)  # persisted below; retried on the next intake
             continue
         seen.add(p.id)
         if not v.relevant:
@@ -71,12 +72,16 @@ def classify_and_propose(candidates: list[Paper], dry_run: bool = False) -> None
             "summary": v.summary, "reason": v.reason,
         })
 
-    note = f"Auto-skipped {skipped} out-of-scope; {failed} failed (retried next run)."
+    note = f"Auto-skipped {skipped} out-of-scope; {len(failed_ids)} failed (retried next run)."
     if dry_run:  # a dry run must leave no trace in the pipeline state
         print(json.dumps(entries, indent=2, ensure_ascii=False))
         print(note)
         return
     storage.save_seen(seen)
+    # Failures survive the crawl window: successfully classified ids leave the
+    # retry list, fresh failures join it, and crawl() feeds the list back in.
+    classified = {p.id for p, v in zip(candidates, verdicts) if not v.failed}
+    storage.save_retry(sorted((set(storage.load_retry()) - classified) | set(failed_ids)))
     if not entries:
         logger.info("no relevant papers in this intake (%s)", note)
         return
@@ -97,10 +102,11 @@ def crawl(days_back: int | None = None, dry_run: bool = False) -> None:
     leaves = taxonomy.load().leaf_keys()
     known = storage.all_ids(leaves) | storage.load_seen() | reviewflow.pending_ids()
 
+    retry_papers = list(sources.fetch_arxiv_papers(storage.load_retry()).values())
     candidates: list[Paper] = []
-    for p in sources.crawl(days_back) + sources.read_inbox():
+    for p in retry_papers + sources.crawl(days_back) + sources.read_inbox():
         if p.id not in known:
-            known.add(p.id)  # also dedups crawl vs inbox within this run
+            known.add(p.id)  # also dedups retry vs crawl vs inbox within this run
             candidates.append(p)
     if candidates:
         classify_and_propose(candidates, dry_run=dry_run)
@@ -109,6 +115,19 @@ def crawl(days_back: int | None = None, dry_run: bool = False) -> None:
     if not dry_run:
         # Thumbs-up inbox comments whose links are now all handled.
         sources.ack_inbox(storage.all_ids(leaves) | storage.load_seen() | reviewflow.pending_ids())
+
+
+# ── backfill ──────────────────────────────────────────────────────────────────
+
+def backfill(from_date: str, to_date: str, dry_run: bool = False) -> None:
+    """Historical sweep of a date range into the pool; same intake tail as crawl.
+    Useful for categories added after the fact (cs.RO/AR/OS/DC/DB were never
+    crawled by the old pipeline). Sweep long ranges month by month."""
+    leaves = taxonomy.load().leaf_keys()
+    known = storage.all_ids(leaves) | storage.load_seen() | reviewflow.pending_ids()
+    candidates = [p for p in sources.crawl_range(from_date, to_date) if p.id not in known]
+    logger.info("backfill %s..%s: %d new candidates", from_date, to_date, len(candidates))
+    classify_and_propose(candidates, dry_run=dry_run)
 
 
 # ── decide ────────────────────────────────────────────────────────────────────
@@ -197,13 +216,20 @@ def decide(issue_number: int) -> None:
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(message)s")
     parser = argparse.ArgumentParser(description="Daily paper pipeline")
-    parser.add_argument("command", choices=["crawl", "decide"])
+    parser.add_argument("command", choices=["crawl", "decide", "backfill"])
     parser.add_argument("--issue", type=int, help="review issue number (decide)")
     parser.add_argument("--days-back", type=int, default=None, help="crawl window override")
-    parser.add_argument("--dry-run", action="store_true", help="crawl: print instead of creating an issue")
+    parser.add_argument("--from", dest="from_date", help="backfill start date (YYYY-MM-DD)")
+    parser.add_argument("--to", dest="to_date", help="backfill end date (YYYY-MM-DD)")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="crawl/backfill: print instead of creating issues")
     args = parser.parse_args()
     if args.command == "crawl":
         crawl(days_back=args.days_back, dry_run=args.dry_run)
+    elif args.command == "backfill":
+        if not (args.from_date and args.to_date):
+            parser.error("backfill requires --from and --to")
+        backfill(args.from_date, args.to_date, dry_run=args.dry_run)
     else:
         if not args.issue:
             parser.error("decide requires --issue")
