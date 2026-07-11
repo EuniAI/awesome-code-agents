@@ -17,7 +17,7 @@ from automation.render import (
 def test_real_taxonomy_loads_and_validates():
     tax = taxonomy.load(force=True)
     leaves = tax.leaves()
-    assert len(leaves) == 23
+    assert len(leaves) == 24
     keys = tax.leaf_keys()
     assert len(keys) == len(set(keys))
     assert tax.by_key("agency").axis

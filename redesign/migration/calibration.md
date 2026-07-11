@@ -41,3 +41,22 @@ corrections by row number.
 | 32 | machine_learning_engineering | **software_general** | benchmark | PithTrain: A Compact and Agent-Native MoE Training System | Served task is agent-friendly software framework design and cross-activity agent efficiency on a codebase, mat |
 | 33 | machine_learning_engineering | **world_research** | - | AIDE: AI-Driven Exploration in the Space of Code | The agent's code is the instrument for training/tuning ML models, an MLE-engineering task that belongs to worl |
 | 34 | agentic_visualization | **software_code_generation** | model,training-data | JanusCoder: Towards a Foundational Visual-Programmatic Interface for C | A resource paper whose downstream task is producing code (across visual/code domains) from specifications, fit |
+
+## Rulings (owner + evidence audit, 2026-07-11)
+
+- Structural fix: agency branch gained a general leaf, `world_general` (General-Purpose
+  Action Agents), mirroring software_general's admission rule. Motivated by row 12.
+- Row 12 Code as Agent Harness: world_general + survey (was shoehorned into world_terminal).
+- Rows 4, 7, 9, 15: OUT confirmed (Robo-Blocks HCI tool study; Tree-of-Code PAL-style
+  reasoning; manual-annotation methodology study; generic multi-agent orchestration).
+- Row 31 GitTaskBench: world_general + benchmark (tasks span 7 domains/modalities; no
+  single world dominates; abstract-verified).
+- Row 32 PithTrain: systems + benchmark (builds an MoE training framework, i.e. systems
+  infrastructure code; abstract-verified).
+- Row 13 SlopCodeBench: software_development + benchmark (iterative spec-refinement
+  development; medium confidence, no abstract available; recheck at full migration).
+- Row 24 sigma-Reveal CLI agents: keep world_terminal, drop training-data tag (RL method
+  paper; no released dataset stated).
+- Row 30 VisCodex: add model tag (releases model + dataset + benchmark; all three tags).
+- Row 5 RoboCodeX: keep world_physical + model (no abstract; consistent with known work).
+- All other rows: accepted as classified.

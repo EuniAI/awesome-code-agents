@@ -81,6 +81,7 @@
   * [🕹️ Game Worlds](#-game-worlds)
   * [🤖 The Physical World](#-the-physical-world)
   * [🔬 Research & Discovery](#-research--discovery)
+  * [🦾 General-Purpose Action Agents](#-general-purpose-action-agents)
 <!-- NAV:END -->
 - [🗺️ Research Landscape](#-research-landscape)
 - [🤝 Contributing](#-contributing)
@@ -237,6 +238,12 @@
 ### 🔬 Research & Discovery
 
 > Running experiments and analysis to make discoveries.
+
+*No papers yet.*
+
+### 🦾 General-Purpose Action Agents
+
+> Agents that act across many worlds, and overviews of the field.
 
 *No papers yet.*
 <!-- PAPERS:END -->

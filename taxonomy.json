@@ -37,7 +37,7 @@
   },
   "levels": {
     "L1": "the task the paper serves: is its ultimate purpose producing code, or is code the tool for completing a task in the world",
-    "L2": "artifact branch: the domain of the code being built (8) | agency branch: the world the agent acts in (6)",
+    "L2": "artifact branch: the domain of the code being built (8) | agency branch: the world the agent acts in (7)",
     "L3": "software-lifecycle activity (only general-software under artifact expands; 10 children)"
   },
   "axis": "the ultimate purpose of the task the paper serves",
@@ -754,6 +754,34 @@
               "paper": "A Lean agent proving mathematical theorems",
               "verdict": "world_research",
               "why": "the purpose is mathematical knowledge, not software"
+            }
+          ]
+        },
+        {
+          "key": "world_general",
+          "emoji": "🦾",
+          "title": "General-Purpose Action Agents",
+          "blurb": "Agents that act across many worlds, and overviews of the field.",
+          "definition": "Work whose served task is acting in the world through code as a whole, rather than any single world: field-level surveys and position papers advocating code as action, generalist agents whose tasks span terminals, browsers, applications, and other worlds, and cross-world resources.",
+          "includes": [
+            "Surveys, roadmaps, and position papers on code-as-action agents in general (Code as Agent Harness style).",
+            "Generalist action agents and benchmarks whose tasks span multiple worlds, domains, or modalities (GitTaskBench style).",
+            "Cross-world scaffolds and resources serving action agents broadly."
+          ],
+          "boundary": [
+            "Admission follows the master test: enter only when no single world dominates the served task. A terminal-specific benchmark is `world_terminal`; a browser agent is `world_browser`.",
+            "Work whose served task is producing code belongs to the `artifact` branch (see the L1 master test)."
+          ],
+          "examples": [
+            {
+              "paper": "A survey covering agents across worlds and advocating code-as-action (Code as Agent Harness style)",
+              "verdict": "world_general + survey tag",
+              "why": "the served task is the code-as-action field as a whole"
+            },
+            {
+              "paper": "A benchmark of agents leveraging code repositories to complete real tasks across many domains and modalities",
+              "verdict": "world_general + benchmark tag",
+              "why": "tasks span worlds; no single world dominates"
             }
           ]
         }
