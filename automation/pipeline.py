@@ -80,6 +80,11 @@ def classify_and_propose(candidates: list[Paper], dry_run: bool = False) -> None
     if not entries:
         logger.info("no relevant papers in this intake (%s)", note)
         return
+    # Sort by taxonomy tree order before chunking: same-category papers sit
+    # together (outliers stand out), and large intakes chunk into near-uniform
+    # category runs, without fragmenting issues per category.
+    order = {k: i for i, k in enumerate(taxonomy.load().leaf_keys())}
+    entries.sort(key=lambda e: order.get(e["category"], len(order)))
     for start in range(0, len(entries), MAX_PER_ISSUE):
         chunk = entries[start:start + MAX_PER_ISSUE]
         number = reviewflow.create_issue(chunk, note=note if start == 0 else "")
