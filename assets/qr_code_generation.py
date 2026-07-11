@@ -11,7 +11,7 @@ url = "https://github.com/EuniAI/awesome-code-agents"
 # Path to your icon (make sure the file exists)
 from pathlib import Path
 _HERE = Path(__file__).resolve().parent
-icon_path = str(_HERE / "icon.jpg")
+icon_path = str(_HERE / "icon.png")
 
 # Generate QR Code
 qr = qrcode.QRCode(

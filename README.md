@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://euni.ai/"><img src="./docs/static/images/icon.png" alt="Euni logo" height="135"></a>
+<a href="https://euni.ai/"><img src="./assets/icon.png" alt="Euni logo" height="135"></a>
 
 # Awesome Code Agents
 
@@ -13,7 +13,7 @@
 [![Contributors](https://img.shields.io/github/contributors/EuniAI/awesome-code-agents?style=for-the-badge&color=orange)](https://github.com/EuniAI/awesome-code-agents/graphs/contributors)
 [![License](https://img.shields.io/badge/License-Apache_2.0-green?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
 <br>
-[![Papers](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEuniAI%2Fawesome-code-agents%2Fmain%2Fdocs%2Fstatic%2Fbadges%2Fpapers.json&style=for-the-badge)](#quick-navigation)
+[![Papers](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEuniAI%2Fawesome-code-agents%2Fmain%2Fassets%2Fpapers.json&style=for-the-badge)](#quick-navigation)
 [![Last Commit](https://img.shields.io/github/last-commit/EuniAI/awesome-code-agents?style=for-the-badge&color=blueviolet)](https://github.com/EuniAI/awesome-code-agents/commits)
 [![Commits](https://img.shields.io/github/commit-activity/m/EuniAI/awesome-code-agents?style=for-the-badge&color=blue&label=Commits)](https://github.com/EuniAI/awesome-code-agents/graphs/commit-activity)
 
@@ -28,7 +28,7 @@
 [![Discussions](https://img.shields.io/github/discussions/EuniAI/awesome-code-agents?label=Discussions&style=flat&logo=github&logoColor=white&color=7a5af8&labelColor=7a5af8)](https://github.com/EuniAI/awesome-code-agents/discussions)
 [![PRs Welcome](https://img.shields.io/badge/PRs_Welcome-E24B4A?style=flat&logo=github&logoColor=white)](https://github.com/EuniAI/awesome-code-agents/pulls)
 
-<img src="docs/static/images/main_v1-min.png" alt="Awesome Code Agents" width="100%">
+<img src="assets/main_v1-min.png" alt="Awesome Code Agents" width="100%">
 
 *Photo Credit: [Gemini-Nano-Banana-Pro🍌](https://deepmind.google/models/gemini-image/pro/)*.
 
@@ -50,7 +50,7 @@
 
 <!-- START PAPERS SUMMARY -->
 🔥 **We are actively tracking the frontier research of code agents.**<br>
-🧹 *The main list below shows papers from the last twelve months; everything older lives in the [full archive](ARCHIVE.md), so nothing is ever lost.*<br>
+🧹 *The list below shows the last twelve months; the [full paper list](automation/PAPERS.md) holds the complete collection.*<br>
 📚 *Currently collected:* **`465` papers.** *(Last update: 2026-07-11)*
 <!-- END PAPERS SUMMARY -->
 

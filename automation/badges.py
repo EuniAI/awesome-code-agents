@@ -12,7 +12,7 @@ from pathlib import Path
 from automation import storage, taxonomy
 
 _REPO_ROOT = Path(__file__).resolve().parents[1]
-BADGE_JSON = _REPO_ROOT / "docs" / "static" / "badges" / "papers.json"
+BADGE_JSON = _REPO_ROOT / "assets" / "papers.json"
 README = _REPO_ROOT / "README.md"
 
 _SUMMARY_RE = re.compile(

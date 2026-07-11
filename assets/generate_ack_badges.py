@@ -224,7 +224,7 @@ def process_readme(path: Path, inplace: bool, yaml_path: Optional[Path]) -> str:
 
 def main() -> None:
     # Operate from repository root inferred by script location
-    repo_root = Path(__file__).resolve().parents[3]
+    repo_root = Path(__file__).resolve().parents[1]
     readme = repo_root / "README.md"
     yaml_path = repo_root / "automation" / "data" / "ack_repos.yaml"
 
