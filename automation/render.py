@@ -23,14 +23,14 @@ from automation.models import Paper
 
 _REPO_ROOT = Path(__file__).resolve().parents[1]
 README = _REPO_ROOT / "README.md"
-ARCHIVE = _REPO_ROOT / "ARCHIVE.md"
+FULL_LIST = _REPO_ROOT / "PAPERS.md"
 
 NAV_BEGIN, NAV_END = "<!-- NAV:BEGIN -->", "<!-- NAV:END -->"
 PAPERS_BEGIN, PAPERS_END = "<!-- PAPERS:BEGIN -->", "<!-- PAPERS:END -->"
 
-# The README shows the frontier: papers from the last N days. Everything older
-# moves to ARCHIVE.md (same tree, fully generated) so the main list stays sharp
-# without ever losing a paper.
+# The README is a VIEW: papers from the last N days, keeping the front page
+# focused on the frontier. PAPERS.md is the complete collection (recent papers
+# included), fully generated with the same tree.
 FRESH_DAYS = 365
 
 # Heading level of L1 nodes; L2 = +1, L3 = +2.
@@ -187,29 +187,29 @@ def render_papers(tax: taxonomy.Taxonomy) -> str:
                 blocks.append("*No papers yet.*")
             if older:
                 anchor = gh_slug(f"{node.emoji} {node.title}".strip())
-                blocks.append(f"<sub>… and {older} earlier paper(s) in the "
-                              f"[archive](ARCHIVE.md#{anchor}).</sub>")
+                blocks.append(f"<sub>… plus {older} earlier paper(s): see the "
+                              f"[full list](PAPERS.md#{anchor}).</sub>")
     return "\n\n".join(blocks)
 
 
-def render_archive(tax: taxonomy.Taxonomy) -> str:
-    """ARCHIVE.md: every paper older than the freshness window, same tree."""
-    cutoff = _fresh_cutoff()
+def render_full_list(tax: taxonomy.Taxonomy) -> str:
+    """PAPERS.md: the COMPLETE collection (recent papers included), same tree.
+    The README is just this document's last-twelve-months view."""
     blocks: list[str] = [
-        "# Archive\n\n"
-        "> Papers older than twelve months, moved out of the README to keep the "
-        "main list focused on the frontier. Auto-generated; do not edit by hand.",
+        "# Full Paper List\n\n"
+        "> The complete collection, every paper ever curated, newest first. The "
+        "README shows only the last twelve months of this list. Auto-generated; "
+        "do not edit by hand.",
     ]
     for node, depth in tax.walk():
-        if not node.is_leaf:
-            blocks.append(_heading(node, depth))
-            continue
-        papers = [p for p in storage.load(node.key) if storage.date_key(p) < cutoff]
         blocks.append(_heading(node, depth))
+        if not node.is_leaf:
+            continue
+        papers = storage.load(node.key)
         if papers:
             blocks.append("\n\n".join(render_entry(p) for p in papers))
         else:
-            blocks.append("*Nothing archived yet.*")
+            blocks.append("*No papers yet.*")
     return "\n\n".join(blocks) + "\n"
 
 
@@ -241,10 +241,10 @@ def main() -> None:
         print("[OK] README regenerated from taxonomy.")
     else:
         print("[OK] README unchanged.")
-    archive = render_archive(tax)
-    if not ARCHIVE.exists() or ARCHIVE.read_text(encoding="utf-8") != archive:
-        ARCHIVE.write_text(archive, encoding="utf-8")
-        print("[OK] ARCHIVE.md regenerated.")
+    full = render_full_list(tax)
+    if not FULL_LIST.exists() or FULL_LIST.read_text(encoding="utf-8") != full:
+        FULL_LIST.write_text(full, encoding="utf-8")
+        print("[OK] PAPERS.md regenerated.")
 
 
 if __name__ == "__main__":

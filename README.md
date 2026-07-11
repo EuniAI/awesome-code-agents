@@ -99,7 +99,7 @@
   _Kimi Team: Yifan Bai, Yiping Bao, Guanduo Chen, Jiahao Chen, Ningxin Chen, Ruijue Chen, Yanru Chen, Yuankun Chen, Yutian Chen, Zhuofu Chen, et al._ arXiv 2025/07.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.20534) ![Model](https://img.shields.io/badge/Model-E76F51?style=for-the-badge)
 
-<sub>… and 1 earlier paper(s) in the [archive](ARCHIVE.md#-foundation-models).</sub>
+<sub>… plus 1 earlier paper(s): see the [full list](PAPERS.md#-foundation-models).</sub>
 
 ## 📊 Surveys & Empirical Studies
 
@@ -201,7 +201,7 @@
   _Joel Becker, Nate Rush, Elizabeth Barnes, David Rein._ arXiv 2025/07.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.09089) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge)
 
-<sub>… and 9 earlier paper(s) in the [archive](ARCHIVE.md#-surveys--empirical-studies).</sub>
+<sub>… plus 9 earlier paper(s): see the [full list](PAPERS.md#-surveys--empirical-studies).</sub>
 
 ## 🧱 Code as Artifact: Building the Digital World
 
@@ -479,7 +479,7 @@
   _Gustavo A. Oliva, Gopi Krishnan Rajbahadur, Aaditya Bhatia, Haoxiang Zhang, Yihao Chen, Zhilong Chen, Arthur Leung, Dayi Lin, Boyuan Chen, Ahmed E. Hassan._ ASE 2025.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.09108) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-<sub>… and 86 earlier paper(s) in the [archive](ARCHIVE.md#-debugging--issue-resolution).</sub>
+<sub>… plus 86 earlier paper(s): see the [full list](PAPERS.md#-debugging--issue-resolution).</sub>
 
 #### ✏️ Code Generation & Completion
 
@@ -573,7 +573,7 @@
   _Yibo He, Shuoran Zhao, Jiaming Huang, Yingjie Fu, Hao Yu, Cunjian Huang, Tao Xie._ arXiv 2025/07.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.15224) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-<sub>… and 39 earlier paper(s) in the [archive](ARCHIVE.md#-code-generation--completion).</sub>
+<sub>… plus 39 earlier paper(s): see the [full list](PAPERS.md#-code-generation--completion).</sub>
 
 #### 🛠️ Environment Setup & CI/CD
 
@@ -599,7 +599,7 @@
   _Jiayi Kuang, Yinghui Li, Xin Zhang, Yangning Li, Di Yin, Xing Sun, Ying Shen, Philip S. Yu._ arXiv 2025/10.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.25694) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-<sub>… and 12 earlier paper(s) in the [archive](ARCHIVE.md#-environment-setup--cicd).</sub>
+<sub>… plus 12 earlier paper(s): see the [full list](PAPERS.md#-environment-setup--cicd).</sub>
 
 #### 🔄 Maintenance & Evolution
 
@@ -629,7 +629,7 @@
   _Xinyi He, Qian Liu, Mingzhe Du, Lin Yan, Zhijie Fan, Yiming Huang, Zejian Yuan, Zejun Ma._ arXiv 2025/07.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.12415) [![GitHub Stars](https://img.shields.io/github/stars/SWE-Perf/SWE-Perf?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SWE-Perf/SWE-Perf) [![Website](https://img.shields.io/badge/SWE--PERF-blue?style=for-the-badge)](https://swe-perf.github.io/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-<sub>… and 4 earlier paper(s) in the [archive](ARCHIVE.md#-maintenance--evolution).</sub>
+<sub>… plus 4 earlier paper(s): see the [full list](PAPERS.md#-maintenance--evolution).</sub>
 
 #### 🔍 Code Review
 
@@ -647,7 +647,7 @@
   _Zhengran Zeng, Ruikai Shi, Keke Han, Yixin Li, Kaicheng Sun, Yidong Wang, Zhuohao Yu, Rui Xie, Wei Ye, Shikun Zhang._ arXiv 2025/09.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.01494) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-<sub>… and 4 earlier paper(s) in the [archive](ARCHIVE.md#-code-review).</sub>
+<sub>… plus 4 earlier paper(s): see the [full list](PAPERS.md#-code-review).</sub>
 
 #### 🔒 Security
 
@@ -677,7 +677,7 @@
   _Jie Zhu, Chihao Shen, Ziyang Li, Jiahao Yu, Yizheng Chen, Kexin Pei._ arXiv 2025/08.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.21302)
 
-<sub>… and 4 earlier paper(s) in the [archive](ARCHIVE.md#-security).</sub>
+<sub>… plus 4 earlier paper(s): see the [full list](PAPERS.md#-security).</sub>
 
 #### 📖 Comprehension & Documentation
 
@@ -703,7 +703,7 @@
   _Weihan Peng, Yuling Shi, Yuhang Wang, Xinyun Zhang, Beijun Shen, Xiaodong Gu._ arXiv 2025/09.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.14635) [![GitHub Stars](https://img.shields.io/github/stars/peng-weihan/SWE-QA-Bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/peng-weihan/SWE-QA-Bench) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-<sub>… and 5 earlier paper(s) in the [archive](ARCHIVE.md#-comprehension--documentation).</sub>
+<sub>… plus 5 earlier paper(s): see the [full list](PAPERS.md#-comprehension--documentation).</sub>
 
 #### 🧪 Testing & Verification
 
@@ -733,7 +733,7 @@
   _Binhang Qi, Yun Lin, Xinyi Weng, Yuhuan Huang, Chenyan Liu, Hailong Sun, Zhi Jin, Jin Song Dong._ arXiv 2025/07.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.20619)
 
-<sub>… and 2 earlier paper(s) in the [archive](ARCHIVE.md#-testing--verification).</sub>
+<sub>… plus 2 earlier paper(s): see the [full list](PAPERS.md#-testing--verification).</sub>
 
 #### 🏗️ Feature Development
 
@@ -763,7 +763,7 @@
   _Sai Zhang, Zhenchang Xing, Jieshan Chen, Dehai Zhao, Zizhong Zhu, Xiaowang Zhang, Zhiyong Feng, Xiaohong Li._ arXiv 2025/07.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.14969)
 
-<sub>… and 3 earlier paper(s) in the [archive](ARCHIVE.md#-feature-development).</sub>
+<sub>… plus 3 earlier paper(s): see the [full list](PAPERS.md#-feature-development).</sub>
 
 ### 🧊 3D & CAD
 
@@ -797,7 +797,7 @@
   _Jingzhe Ni, Xiaolong Yin, Xingyu Lu, Xintong Li, Ji Wei, Ruofeng Tong, Min Tang, Peng Du._ arXiv 2025/08.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.01031)
 
-<sub>… and 16 earlier paper(s) in the [archive](ARCHIVE.md#-3d--cad).</sub>
+<sub>… plus 16 earlier paper(s): see the [full list](PAPERS.md#-3d--cad).</sub>
 
 ### 🌐 Web Applications
 
@@ -847,7 +847,7 @@
   _Yilei Jiang, Yaozhi Zheng, Yuxuan Wan, Jiaming Han, Qunzhong Wang, Michael R. Lyu, Xiangyu Yue._ arXiv 2025/07.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.22827) [![GitHub Stars](https://img.shields.io/github/stars/leigest519/ScreenCoder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/leigest519/ScreenCoder)
 
-<sub>… and 12 earlier paper(s) in the [archive](ARCHIVE.md#-web-applications).</sub>
+<sub>… plus 12 earlier paper(s): see the [full list](PAPERS.md#-web-applications).</sub>
 
 ### 🗄️ Databases
 
@@ -877,7 +877,7 @@
   _Yue Li, Ran Tao, Derek Hommel, Yusuf Denizay Dönder, Sungyong Chang, David Mimno, Unso Eun Seo Jo._ arXiv 2025/10.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.07309) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-<sub>… and 1 earlier paper(s) in the [archive](ARCHIVE.md#-databases).</sub>
+<sub>… plus 1 earlier paper(s): see the [full list](PAPERS.md#-databases).</sub>
 
 ### 🎨 Graphics & Animation
 
@@ -895,7 +895,7 @@
   _Bozheng Li, Miao Yang, Zhenhan Chen, Jiawang Cao, Mushui Liu, Yi Lu, Yongliang Wu, Bin Zhang, Yangguang Ji, Licheng Tang, et al._ arXiv 2025/10.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.03341) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge) ![Training Data](https://img.shields.io/badge/Training_Data-8AB17D?style=for-the-badge)
 
-<sub>… and 4 earlier paper(s) in the [archive](ARCHIVE.md#-graphics--animation).</sub>
+<sub>… plus 4 earlier paper(s): see the [full list](PAPERS.md#-graphics--animation).</sub>
 
 ### ⚙️ Systems
 
@@ -921,7 +921,7 @@
   _Rohit Dwivedula, Divyanshu Saxena, Aditya Akella, Swarat Chaudhuri, Daehyeok Kim._ arXiv 2025/10.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.08803)
 
-<sub>… and 2 earlier paper(s) in the [archive](ARCHIVE.md#-systems).</sub>
+<sub>… plus 2 earlier paper(s): see the [full list](PAPERS.md#-systems).</sub>
 
 ### 🎮 Games
 
@@ -935,7 +935,7 @@
   _Runxin Yang, Yuxuan Wan, Shuqing Li, Michael R. Lyu._ arXiv 2025/09.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.26161)
 
-<sub>… and 1 earlier paper(s) in the [archive](ARCHIVE.md#-games).</sub>
+<sub>… plus 1 earlier paper(s): see the [full list](PAPERS.md#-games).</sub>
 
 ### 🔌 Hardware
 
@@ -945,7 +945,7 @@
   _Zhuorui Zhao, Bing Li, Grace Li Zhang, Ulf Schlichtmann._ SOCC 2025.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.02285)
 
-<sub>… and 2 earlier paper(s) in the [archive](ARCHIVE.md#-hardware).</sub>
+<sub>… plus 2 earlier paper(s): see the [full list](PAPERS.md#-hardware).</sub>
 
 ## 🌍 Code as Agency: Acting in the Real World
 
@@ -991,7 +991,7 @@
   _Ethan Hsu, Hong Meng Yam, Ines Bouissou, Aaron Murali John, Raj Thota, Josh Koe, Vivek Sarath Putta, G K Dharesan, Alexander Spangher, Shikhar Murty, et al._ arXiv 2025/08.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.01222) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-<sub>… and 17 earlier paper(s) in the [archive](ARCHIVE.md#-research--discovery).</sub>
+<sub>… plus 17 earlier paper(s): see the [full list](PAPERS.md#-research--discovery).</sub>
 
 ### 🖥️ Terminals & Operating Systems
 
@@ -1089,13 +1089,13 @@
   _Ziyi Ni, Huacan Wang, Shuo Zhang, Shuo Lu, Ziyang He, Wang You, Zhenheng Tang, Yuntao Du, Bill Sun, Hongzhang Liu, et al._ arXiv 2025/08.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.18993) [![GitHub Stars](https://img.shields.io/github/stars/QuantaAlpha/GitTaskBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/QuantaAlpha/GitTaskBench) [![Website](https://img.shields.io/badge/GITTASKBENCH-blue?style=for-the-badge)](https://gittaskbench.github.io/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-<sub>… and 6 earlier paper(s) in the [archive](ARCHIVE.md#-terminals--operating-systems).</sub>
+<sub>… plus 6 earlier paper(s): see the [full list](PAPERS.md#-terminals--operating-systems).</sub>
 
 ### 🤖 The Physical World
 
 > Controlling robots and physical systems with code.
 
-<sub>… and 9 earlier paper(s) in the [archive](ARCHIVE.md#-the-physical-world).</sub>
+<sub>… plus 9 earlier paper(s): see the [full list](PAPERS.md#-the-physical-world).</sub>
 
 ### 🕹️ Game Worlds
 
@@ -1105,13 +1105,13 @@
   _Zaid Khan, Archiki Prasad, Elias Stengel-Eskin, Jaemin Cho, Mohit Bansal._ arXiv 2025/10.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.12088) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-<sub>… and 2 earlier paper(s) in the [archive](ARCHIVE.md#-game-worlds).</sub>
+<sub>… plus 2 earlier paper(s): see the [full list](PAPERS.md#-game-worlds).</sub>
 
 ### 🧭 Browsers & the Web
 
 > Operating web browsers to get things done online.
 
-<sub>… and 3 earlier paper(s) in the [archive](ARCHIVE.md#-browsers--the-web).</sub>
+<sub>… plus 3 earlier paper(s): see the [full list](PAPERS.md#-browsers--the-web).</sub>
 
 ### 🧰 Software Applications
 
@@ -1125,7 +1125,7 @@
   _Hongrui Jia, Jitong Liao, Xi Zhang, Haiyang Xu, Tianbao Xie, Chaoya Jiang, Ming Yan, Si Liu, Wei Ye, Fei Huang._ arXiv 2025/10.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.24563) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-<sub>… and 1 earlier paper(s) in the [archive](ARCHIVE.md#-software-applications).</sub>
+<sub>… plus 1 earlier paper(s): see the [full list](PAPERS.md#-software-applications).</sub>
 <!-- PAPERS:END -->
 
 ## 🗺️ Research Landscape

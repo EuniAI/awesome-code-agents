@@ -50,7 +50,8 @@ feature disposition: records/legacy-audit.md.
 - `data/feedback.json`: owner review reasons queued for LLM distillation.
 - `data/ack_repos.yaml`: acknowledgement badges config (scripts/generate_ack_badges.py).
 - `README.md`: generated zones between NAV/PAPERS markers show papers from the
-  last 12 months; `ARCHIVE.md` (fully generated) holds everything older. Never
+  last 12 months; `PAPERS.md` (fully generated) is the complete collection
+  including the recent ones. Never
   hand-edit either; run `python -m automation.render`.
 
 ## Pipeline (GitHub Actions, event-driven, GitHub-native state)
@@ -91,7 +92,7 @@ taxonomy.py (sole reader of taxonomy.json) · models.py (Paper, Classification)
 OAI harvest, id fetch, inbox, enrichment, venue extraction) · classify.py
 (prompt compiler + claude runner + validation) · reviewflow.py (issue protocol:
 payload-carrying issues, command parsing, acks) · pipeline.py (crawl / decide /
-backfill / reclass entrypoints) · render.py (README + ARCHIVE) · badges.py
+backfill / reclass entrypoints) · render.py (README + PAPERS.md) · badges.py
 (count badge + summary block) · config.yaml (repo/review/backfill/arxiv:
 categories + keyword recall net) · tests/ (30 tests, no network).
 

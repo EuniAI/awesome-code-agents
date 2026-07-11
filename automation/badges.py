@@ -38,8 +38,8 @@ def refresh() -> int:
     summary = (
         "<!-- START PAPERS SUMMARY -->\n"
         "🔥 **We are actively tracking the frontier research of code agents.**<br>\n"
-        "🧹 *The main list below shows papers from the last twelve months; everything "
-        "older lives in the [full archive](ARCHIVE.md), so nothing is ever lost.*<br>\n"
+        "🧹 *The list below shows the last twelve months; the [full paper list](PAPERS.md) "
+        "holds the complete collection.*<br>\n"
         f"📚 *Currently collected:* **`{total}` papers.** *(Last update: {today})*\n"
         "<!-- END PAPERS SUMMARY -->"
     )
