@@ -147,6 +147,18 @@ Owner is reviewing the migrated corpus; more error reports incoming. Pending wor
       - APIGen scope ruling: does function/tool-calling count as code-as-action?
         If yes: world_general; if no: OUT stands, and write the exclusion into
         taxonomy.json scope.
+- [ ] **Phase-4 approval learning loop (owner idea 2026-07-11).** When the owner
+      corrects a classification during approval (`/edit category=X`), close the loop:
+      - FAST loop (auto, low-risk): append the corrected paper to calibration.json as a
+        new example; LLM auto-drafts the `why` from old-cat -> new-cat, owner tweaks.
+        This alone teaches the classifier (examples are the soft rule). Wire into the
+        rebuilt review flow.
+      - SLOW loop (semi-auto, owner ratifies): when several similar corrections
+        accumulate (e.g. 3+ "X-bench -> debugging"), an LLM pass PROPOSES a taxonomy
+        boundary line or a merged example, surfaced for owner approval. Never auto-write
+        a boundary into taxonomy.json (global assertions overfit to noise).
+      - Principle: examples grow automatically (local, reversible); rules change only
+        with human ratification (global, high-impact).
 - [ ] **Re-audit pass after rules revision**: re-run classification over
       software_general and world_general members (and spot-check 20 random others);
       the 12 title-only papers (see refetch-reclass.md, evidence=title-only) get a
