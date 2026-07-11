@@ -498,9 +498,11 @@ def reclassify_leaves(keys: list[str], model: str = classify.MODEL) -> Path:
     logger.info("reclassifying %d papers from %s", len(subjects), ", ".join(keys))
 
     cache = ensure_primary_abstracts([p for _, p in subjects])
-    papers = [p for _, p in subjects]
+    # Owner rulings are ground truth and override the classifier.
+    ruled = {p.id: _override_for(p.title)[1] for _, p in subjects if _override_for(p.title)[0]}
+    papers = [p for _, p in subjects if p.id not in ruled]
     items = [_classify_input(p, cache) for p in papers]
-    verdicts = classify.classify(items, model=model)
+    verdicts = classify.classify(items, model=model) if items else []
 
     rows: list[str] = []
     for p, v in zip(papers, verdicts):

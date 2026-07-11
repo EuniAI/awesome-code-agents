@@ -2530,6 +2530,27 @@
     paper: https://openreview.net/forum?id=NSINt8lLYB
     github: ''
     website: ''
+- id: https://proceedings.mlr.press/v235/jain24c.html
+  title: 'R2E: Turning any Github Repository into a Programming Agent Environment'
+  authors:
+  - Naman Jain
+  - Manish Shetty
+  - Tianjun Zhang
+  - King Han
+  - Koushik Sen
+  - Ion Stoica
+  venue: ICML 2024
+  category: software_debugging
+  tags:
+  - benchmark
+  - training-data
+  summary: R2E converts arbitrary GitHub repositories into scalable programming agent environments and benchmarks for evaluating
+    LLM coding capabilities on real-world setups. It addresses the gap between rapid LLM coding progress and lagging real-world
+    evaluation infrastructure.
+  links:
+    paper: https://proceedings.mlr.press/v235/jain24c.html
+    github: https://github.com/r2e-project/r2e
+    website: ''
 - id: '2310.06770'
   title: 'SWE-bench: Can Language Models Resolve Real-World GitHub Issues?'
   authors:

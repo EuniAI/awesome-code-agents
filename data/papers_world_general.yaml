@@ -55,112 +55,6 @@
     paper: https://arxiv.org/abs/2605.18747
     github: ''
     website: ''
-- id: '2512.24873'
-  title: 'Let It Flow: Agentic Crafting on Rock and Roll, Building the ROME Model within an Open Agentic Learning Ecosystem'
-  authors:
-  - Weixun Wang
-  - XiaoXiao Xu
-  - Wanhe An
-  - Fangwen Dai
-  - Wei Gao
-  - Yancheng He
-  - Ju Huang
-  - Qiang Ji
-  - Hanqi Jin
-  - Xiaoyang Li
-  - Yang Li
-  - Zhongwen Li
-  - Shirong Lin
-  - Jiashun Liu
-  - Zenan Liu
-  - Tao Luo
-  - Dilxat Muhtar
-  - Yuanbin Qu
-  - Jiaqiang Shi
-  - Qinghui Sun
-  - Yingshui Tan
-  - Hao Tang
-  - Runze Wang
-  - Yi Wang
-  - Zhaoguo Wang
-  - Yanan Wu
-  - Shaopan Xiong
-  - Binchen Xu
-  - Xander Xu
-  - Yuchi Xu
-  - Qipeng Zhang
-  - Xixia Zhang
-  - Haizhou Zhao
-  - Jie Zhao
-  - Shuaibing Zhao
-  - Baihui Zheng
-  - Jianhui Zheng
-  - Suhang Zheng
-  - Yanni Zhu
-  - Mengze Cai
-  - Kerui Cao
-  - Xitong Chen
-  - Yue Dai
-  - Lifan Du
-  - Tao Feng
-  - Tao He
-  - Jin Hu
-  - Yijie Hu
-  - Ziyu Jiang
-  - Cheng Li
-  - Xiang Li
-  - Jing Liang
-  - Xin Lin
-  - Chonghuan Liu
-  - ZhenDong Liu
-  - Zhiqiang Lv
-  - Haodong Mi
-  - Yanhu Mo
-  - Junjia Ni
-  - Shixin Pei
-  - Jingyu Shen
-  - XiaoShuai Song
-  - Cecilia Wang
-  - Chaofan Wang
-  - Kangyu Wang
-  - Pei Wang
-  - Tao Wang
-  - Wei Wang
-  - Ke Xiao
-  - Mingyu Xu
-  - Tiange Xu
-  - Nan Ya
-  - Siran Yang
-  - Jianan Ye
-  - Yaxing Zang
-  - Duo Zhang
-  - Junbo Zhang
-  - Boren Zheng
-  - Wanxi Deng
-  - Ling Pan
-  - Lin Qu
-  - Wenbo Su
-  - Jiamang Wang
-  - Wei Wang
-  - Hu Wei
-  - Minggang Wu
-  - Cheng Yu
-  - Bing Zhao
-  - Zhicheng Zheng
-  - Bo Zheng
-  venue: arXiv 2025/12
-  category: world_general
-  published: '2025-12-31'
-  tags:
-  - model
-  - training-data
-  summary: The Agentic Learning Ecosystem provides an end-to-end infrastructure (RL training, sandbox environments, agent
-    CLI) for building agentic models, releasing the ROME agent trained on over a million trajectories. ROME is evaluated across
-    both SWE-bench Verified and Terminal Bench.
-  links:
-    paper: https://arxiv.org/abs/2512.24873
-    github: ''
-    website: ''
 - id: '2510.24702'
   title: 'Agent Data Protocol: Unifying Datasets for Diverse, Effective Fine-tuning of LLM Agents'
   authors:
@@ -323,6 +217,8 @@
   - Daxiang Dong
   venue: ACL 2025 Findings
   category: world_general
+  summary: Tree-of-Code proposes a self-growing tree search framework for end-to-end code generation and execution to solve
+    complex tasks. It structures code generation as tree exploration to improve correctness on complex programming problems.
   links:
     paper: https://aclanthology.org/2025.findings-acl.509/
     github: ''
@@ -377,18 +273,22 @@
     paper: https://arxiv.org/abs/2401.00812
     github: ''
     website: ''
-- id: https://openreview.net/forum?id=QGJSXMhVaL
-  title: 'WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment'
+- id: '2306.14898'
+  title: 'InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback'
   authors:
-  - Hao Tang
-  - Darren Yan Key
-  - Kevin Ellis
-  venue: NeurIPS 2024
+  - John Yang
+  - Akshara Prabhakar
+  - Karthik Narasimhan
+  - Shunyu Yao
+  venue: NeurIPS 2023 Datasets & Benchmarks Track
   category: world_general
-  summary: WorldCoder is a model-based LLM agent that builds Python world models from environment interactions, balancing
-    explanatory accuracy with optimistic reward-seeking for planning. It is more sample- and compute-efficient than deep RL
-    and ReAct-style agents and transfers knowledge across environments via code editing.
+  published: '2023-06-26'
+  tags:
+  - benchmark
+  summary: InterCode standardizes interactive coding with execution feedback as an RL environment, using code as actions across
+    Bash, SQL, and Python action spaces, including CTF tasks. It benchmarks LLMs with prompting strategies like ReAct across
+    multiple execution worlds.
   links:
-    paper: https://openreview.net/forum?id=QGJSXMhVaL
-    github: https://github.com/haotang1995/WorldCoder
-    website: https://haotang1995.github.io/projects/worldcoder
+    paper: https://arxiv.org/abs/2306.14898
+    github: https://github.com/princeton-nlp/intercode
+    website: https://intercode-benchmark.github.io/

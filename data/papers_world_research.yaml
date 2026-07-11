@@ -551,6 +551,21 @@
     paper: https://aclanthology.org/2024.emnlp-main.748/
     github: https://github.com/yiyihum/da-code
     website: https://da-code-bench.github.io/
+- id: https://openreview.net/forum?id=QGJSXMhVaL
+  title: 'WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment'
+  authors:
+  - Hao Tang
+  - Darren Yan Key
+  - Kevin Ellis
+  venue: NeurIPS 2024
+  category: world_research
+  summary: WorldCoder is a model-based LLM agent that builds a Python world model from environment interactions, balancing
+    explanatory accuracy with optimism about achievable reward. It is more sample- and compute-efficient than deep RL and
+    ReAct-style agents on gridworlds and task planning, and transfers knowledge across environments.
+  links:
+    paper: https://openreview.net/forum?id=QGJSXMhVaL
+    github: https://github.com/haotang1995/WorldCoder
+    website: https://haotang1995.github.io/projects/worldcoder
 - id: '2311.09835'
   title: 'ML-Bench: Evaluating Large Language Models and Agents for Machine Learning Tasks on Repository-Level Code'
   authors:

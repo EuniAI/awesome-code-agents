@@ -675,6 +675,31 @@
     paper: https://arxiv.org/abs/2406.11912
     github: https://github.com/FSoft-AI4Code/AgileCoder
     website: https://fsoft-ai4code.github.io/agilecoder/
+- id: '2406.08979'
+  title: Multi-Agent Collaboration via Cross-Team Orchestration
+  authors:
+  - Zhuoyun Du
+  - Chen Qian
+  - Wei Liu
+  - Zihao Xie
+  - YiFei Wang
+  - Rennai Qiu
+  - Yufan Dang
+  - Weize Chen
+  - Cheng Yang
+  - Ye Tian
+  - Xuantang Xiong
+  - Lei Han
+  venue: ACL 2025 Findings
+  category: software_code_generation
+  published: '2024-06-13'
+  summary: Cross-Team Orchestration (Croto) is a multi-team LLM framework where agent teams jointly propose and cross-collaborate
+    on software solutions, improving software quality over ChatDev-style baselines. It also generalizes to story generation
+    tasks.
+  links:
+    paper: https://arxiv.org/abs/2406.08979
+    github: https://github.com/OpenBMB/ChatDev/tree/macnet
+    website: ''
 - id: '2406.07003'
   title: 'GraphCoder: Enhancing Repository-Level Code Completion via Code Context Graph-based Retrieval and Language Model'
   authors:
@@ -695,6 +720,30 @@
   links:
     paper: https://arxiv.org/abs/2406.07003
     github: ''
+    website: ''
+- id: '2406.07155'
+  title: Scaling Large Language Model-based Multi-Agent Collaboration
+  authors:
+  - Chen Qian
+  - Zihao Xie
+  - YiFei Wang
+  - Wei Liu
+  - Kunlun Zhu
+  - Hanchen Xia
+  - Yufan Dang
+  - Zhuoyun Du
+  - Weize Chen
+  - Cheng Yang
+  - Zhiyuan Liu
+  - Maosong Sun
+  venue: ICLR 2025
+  category: software_code_generation
+  published: '2024-06-11'
+  summary: MacNet organizes over a thousand LLM agents into directed-acyclic-graph topologies for scalable multi-agent software
+    development, identifying a collaborative scaling law. Built on the ChatDev codebase for generating software artifacts.
+  links:
+    paper: https://arxiv.org/abs/2406.07155
+    github: https://github.com/OpenBMB/ChatDev/tree/macnet
     website: ''
 - id: '2406.03283'
   title: 'CATCODER: Repository-Level Code Generation with Relevant Code and Type Context'
@@ -787,6 +836,26 @@
     results across multiple completion benchmarks including a new long-form benchmark.
   links:
     paper: https://arxiv.org/abs/2403.10059
+    github: ''
+    website: ''
+- id: '2403.08299'
+  title: 'AutoDev: Automated AI-Driven Development'
+  authors:
+  - Michele Tufano
+  - Anisha Agarwal
+  - Jinu Jang
+  - Roshanak Zilouchian Moghaddam
+  - Neel Sundaresan
+  venue: arXiv 2024/03
+  category: software_code_generation
+  published: '2024-03-13'
+  tags:
+  - benchmark
+  summary: AutoDev is an automated AI-driven development framework whose agents edit files, build, test, and perform git operations
+    within sandboxed Docker environments. It is evaluated on HumanEval for code and test generation, achieving high Pass@1
+    scores.
+  links:
+    paper: https://arxiv.org/abs/2403.08299
     github: ''
     website: ''
 - id: '2401.07339'
@@ -927,6 +996,30 @@
   links:
     paper: https://www.computer.org/csdl/journal/ts/2024/12/10734067/21iLh4j0oG4
     github: ''
+    website: ''
+- id: https://aclanthology.org/2024.acl-long.305/
+  title: Experiential Co-Learning of Software-Developing Agents
+  authors:
+  - Chen Qian
+  - Yufan Dang
+  - Jiahao Li
+  - Wei Liu
+  - Zihao Xie
+  - YiFei Wang
+  - Weize Chen
+  - Cheng Yang
+  - Xin Cong
+  - Xiaoyin Che
+  - Zhiyuan Liu
+  - Maosong Sun
+  venue: ACL 2024
+  category: software_code_generation
+  summary: Experiential Co-Learning introduces a framework where instructor and assistant LLM agents accumulate shortcut-oriented
+    experiences from past trajectories to improve future software-development task execution. Built on the ChatDev framework
+    for collaborative software agents.
+  links:
+    paper: https://aclanthology.org/2024.acl-long.305/
+    github: https://github.com/OpenBMB/ChatDev
     website: ''
 - id: '2312.13010'
   title: 'AgentCoder: Multi-Agent-based Code Generation with Iterative Testing and Optimisation'
