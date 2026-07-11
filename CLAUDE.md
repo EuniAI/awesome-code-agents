@@ -11,7 +11,7 @@
 - **No em-dashes in anything we write** (they read as AI-written). Use colons,
   commas, parentheses, or separate sentences. Never alter em-dashes inside a
   paper's own title or abstract (quoted source text).
-- **Capture design decisions as they happen** into records/design-decisions.md (each
+- **Capture design decisions as they happen** into automation/design-decisions.md (each
   with a one-line rationale). Chat is ephemeral; the repo is the memory.
 
 ## What This Is
@@ -19,7 +19,7 @@
 A curated list of research papers on autonomous code agents, published at
 [euni.ai](https://euni.ai) and github.com/EuniAI/awesome-code-agents. Rebuilt
 from the ground up in 2026-07 (taxonomy, data, and pipeline); the old system
-lives only in git history. Rebuild rationale: records/design-decisions.md; the legacy
+lives only in git history. Rebuild rationale: automation/design-decisions.md; the legacy
 feature disposition: records/legacy-audit.md.
 
 ## The Two Sources of Truth
