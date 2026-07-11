@@ -67,7 +67,7 @@
     + [📖 Comprehension & Documentation](#-comprehension--documentation)
     + [🧪 Testing & Verification](#-testing--verification)
     + [🏗️ Feature Development](#-feature-development)
-    + [🗺️ General-Purpose Software Agents](#-general-purpose-software-agents)
+    + [📊 Surveys & Empirical Studies](#-surveys--empirical-studies)
   * [🧊 3D & CAD](#-3d--cad)
   * [🌐 Web Applications](#-web-applications)
   * [🗄️ Databases](#-databases)
@@ -1208,9 +1208,9 @@
   _Wei Li, Xin Zhang, Zhongxin Guo, Shaoguang Mao, Wen Luo, Guangyue Peng, Yangyu Huang, Houfeng Wang, Scarlett Li._ ACL 2025.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.06680) [![GitHub Stars](https://img.shields.io/github/stars/microsoft/FEA-Bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/microsoft/FEA-Bench) [![Website](https://img.shields.io/badge/FEA--BENCH.GITHUB.IO-blue?style=for-the-badge)](https://gmago-leway.github.io/fea-bench.github.io/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-#### 🗺️ General-Purpose Software Agents
+#### 📊 Surveys & Empirical Studies
 
-> Generalist software agents, and surveys of the field.
+> Research that studies and surveys coding agents themselves.
 
 - **How Coding Agents Fail Their Users: A Large-Scale Analysis of Developer-Agent Misalignment in 20,574 Real-World Sessions.**  
   _Ningzhi Tang, Chaoran Chen, Gelei Xu, Yiyu Shi, Yu Huang, Collin McMillan, Tao Dong, Toby Jia-Jun Li._ arXiv 2026/05.  

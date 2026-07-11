@@ -11,7 +11,7 @@
   - Tao Dong
   - Toby Jia-Jun Li
   venue: arXiv 2026/05
-  category: software_general
+  category: software_studies
   published: '2026-05-28'
   tags:
   - empirical
@@ -29,7 +29,7 @@
   - Xiaofei Xie
   - Yintong Huo
   venue: arXiv 2026/05
-  category: software_general
+  category: software_studies
   published: '2026-05-26'
   tags:
   - benchmark
@@ -49,7 +49,7 @@
   - Xiaoxia Liu
   - Yang Liu
   venue: arXiv 2026/05
-  category: software_general
+  category: software_studies
   published: '2026-05-25'
   summary: CODESKILL trains a learnable policy to extract, evolve, and maintain reusable procedural skills from coding-agent
     trajectories via RL. It improves pass rates across EnvBench, SWE-Bench Verified, and Terminal-Bench 2.
@@ -65,7 +65,7 @@
   - Yuxiang Wu
   - Zhengyao Jiang
   venue: arXiv 2026/05
-  category: software_general
+  category: software_studies
   published: '2026-05-20'
   tags:
   - benchmark
@@ -87,7 +87,7 @@
   - Leo Yu Zhang
   - Yi Liu
   venue: arXiv 2026/05
-  category: software_general
+  category: software_studies
   published: '2026-05-18'
   tags:
   - benchmark
@@ -118,7 +118,7 @@
   - Brad Kenstler
   - Yunzhong He
   venue: arXiv 2026/05
-  category: software_general
+  category: software_studies
   published: '2026-05-08'
   tags:
   - benchmark
@@ -142,7 +142,7 @@
   - Tianyu Gao
   - Bryan Hooi
   venue: arXiv 2026/05
-  category: software_general
+  category: software_studies
   published: '2026-05-07'
   summary: TACT detects and mitigates 'agent drift' (overthinking/overacting) in long-horizon coding agents via activation
     steering along linearly separable drift axes in hidden states. It improves resolve rates and reduces steps-to-resolve
@@ -161,7 +161,7 @@
   - Diyi Yang
   - Sanmi Koyejo
   venue: arXiv 2026/04
-  category: software_general
+  category: software_studies
   published: '2026-04-22'
   tags:
   - empirical
@@ -193,7 +193,7 @@
   - Ruslan Salakhutdinov
   - Anirudh Goyal
   venue: arXiv 2026/04
-  category: software_general
+  category: software_studies
   published: '2026-04-16'
   summary: A test-time scaling framework for long-horizon coding agents that compresses rollout trajectories into structured
     summaries, enabling tournament-style voting and iterative refinement across attempts. Evaluated on both SWE-Bench Verified
@@ -216,7 +216,7 @@
   - Yuwei Guo
   - Tong Zhang
   venue: arXiv 2026/04
-  category: software_general
+  category: software_studies
   published: '2026-04-14'
   summary: AgentSPEX is a specification and execution language for LLM-agent workflows with explicit control flow, modular
     structure, and a customizable harness including sandboxed execution and checkpointing. A user study shows it is more interpretable
@@ -233,7 +233,7 @@
   - Xinyi Shang
   - Zhiqiang Shen
   venue: arXiv 2026/04
-  category: software_general
+  category: software_studies
   published: '2026-04-14'
   tags:
   - empirical
@@ -264,7 +264,7 @@
   - He Ye
   - Jiaheng Liu
   venue: arXiv 2026/04
-  category: software_general
+  category: software_studies
   published: '2026-04-13'
   tags:
   - benchmark
@@ -288,7 +288,7 @@
   - Yu Huang
   - Toby Jia-Jun Li
   venue: arXiv 2026/04
-  category: software_general
+  category: software_studies
   published: '2026-04-01'
   tags:
   - empirical
@@ -307,7 +307,7 @@
   - Kathryn Thomasset Stolee
   - Bowen Xu
   venue: arXiv 2026/03
-  category: software_general
+  category: software_studies
   published: '2026-03-28'
   tags:
   - empirical
@@ -329,7 +329,7 @@
   - Youcheng Sun
   - Lijie Hu
   venue: arXiv 2026/03
-  category: software_general
+  category: software_studies
   published: '2026-03-16'
   tags:
   - benchmark
@@ -360,7 +360,7 @@
   - Kai Jia
   - Ji-Rong Wen
   venue: arXiv 2026/03
-  category: software_general
+  category: software_studies
   published: '2026-03-03'
   tags:
   - benchmark
@@ -392,7 +392,7 @@
   - Zhenkai Liang
   - Wenbo Guo
   venue: arXiv 2026/01
-  category: software_general
+  category: software_studies
   published: '2026-01-27'
   tags:
   - benchmark
@@ -408,7 +408,7 @@
   authors:
   - Taher A. Ghaleb
   venue: arXiv 2026/01
-  category: software_general
+  category: software_studies
   published: '2026-01-24'
   tags:
   - empirical
@@ -434,7 +434,7 @@
   - Ahmed E. Hassan
   - Hajimu Iida
   venue: arXiv 2025/11
-  category: software_general
+  category: software_studies
   published: '2025-11-17'
   tags:
   - empirical
@@ -454,7 +454,7 @@
   - Christian Kästner
   - Bogdan Vasilescu
   venue: arXiv 2025/11
-  category: software_general
+  category: software_studies
   published: '2025-11-06'
   tags:
   - empirical
@@ -480,7 +480,7 @@
   - Robert Brennan
   - Graham Neubig
   venue: arXiv 2025/11
-  category: software_general
+  category: software_studies
   published: '2025-11-05'
   summary: The OpenHands Software Agent SDK is a composable, extensible toolkit for building production software development
     agents, offering flexible agent implementation, secure sandboxed execution, and multiple human-interaction interfaces.
@@ -495,7 +495,7 @@
   - Jürgen Cito
   - Dominik Bork
   venue: arXiv 2025/11
-  category: software_general
+  category: software_studies
   published: '2025-11-04'
   tags:
   - position
@@ -516,7 +516,7 @@
   - Yinxing Xue
   - Lijun Zhang
   venue: arXiv 2025/11
-  category: software_general
+  category: software_studies
   published: '2025-11-02'
   tags:
   - empirical
@@ -538,7 +538,7 @@
   - Ludwig Schmidt
   - Diyi Yang
   venue: arXiv 2025/11
-  category: software_general
+  category: software_studies
   published: '2025-11-02'
   tags:
   - benchmark
@@ -568,7 +568,7 @@
   - Shenghua Liu
   - Xueqi Cheng
   venue: arXiv 2025/10
-  category: software_general
+  category: software_studies
   published: '2025-10-14'
   tags:
   - survey
@@ -593,7 +593,7 @@
   - Ameet Talwalkar
   - Graham Neubig
   venue: arXiv 2025/10
-  category: software_general
+  category: software_studies
   published: '2025-10-10'
   tags:
   - empirical
@@ -620,7 +620,7 @@
   - Pietro Lio
   - Kwok-Yan Lam
   venue: arXiv 2025/10
-  category: software_general
+  category: software_studies
   published: '2025-10-10'
   tags:
   - survey
@@ -652,7 +652,7 @@
   - Chen-Yu Lee
   - Tomas Pfister
   venue: arXiv 2025/09
-  category: software_general
+  category: software_studies
   published: '2025-09-29'
   summary: ReasoningBank is a generalizable memory framework that distills reasoning strategies from an agent's past successes
     and failures, paired with test-time scaling to improve future task performance. It is evaluated across web browsing and
@@ -671,7 +671,7 @@
   - Hajimu Iida
   - Ahmed E. Hassan
   venue: arXiv 2025/09
-  category: software_general
+  category: software_studies
   published: '2025-09-18'
   tags:
   - empirical
@@ -693,7 +693,7 @@
   - Yutaro Kashiwa
   - Dong Qiu
   venue: arXiv 2025/09
-  category: software_general
+  category: software_studies
   published: '2025-09-07'
   tags:
   - position
@@ -714,7 +714,7 @@
   - Yue Liu
   - David Lo
   venue: ASE 2025
-  category: software_general
+  category: software_studies
   published: '2025-08-17'
   tags:
   - empirical
@@ -736,7 +736,7 @@
   - Zhi Jin
   - Ge Li
   venue: arXiv 2025/07
-  category: software_general
+  category: software_studies
   published: '2025-07-31'
   tags:
   - survey
@@ -754,7 +754,7 @@
   - Haoxiang Zhang
   - Ahmed E. Hassan
   venue: arXiv 2025/07
-  category: software_general
+  category: software_studies
   published: '2025-07-20'
   tags:
   - empirical
@@ -774,7 +774,7 @@
   - Elizabeth Barnes
   - David Rein
   venue: arXiv 2025/07
-  category: software_general
+  category: software_studies
   published: '2025-07-12'
   tags:
   - empirical
@@ -792,7 +792,7 @@
   - Robert Brennan
   - Graham Neubig
   venue: arXiv 2025/07
-  category: software_general
+  category: software_studies
   published: '2025-07-10'
   tags:
   - empirical
@@ -813,7 +813,7 @@
   - Lin Tan
   - Abhik Roychoudhury
   venue: ICSE 2026
-  category: software_general
+  category: software_studies
   published: '2025-06-17'
   tags:
   - benchmark
@@ -834,7 +834,7 @@
   - Baishakhi Ray
   - Shyam Ramji
   venue: arXiv 2025/06
-  category: software_general
+  category: software_studies
   published: '2025-06-16'
   tags:
   - survey
@@ -852,7 +852,7 @@
   - Konstantinos I. Roumeliotis
   - Manoj Karkee
   venue: arXiv 2025/05
-  category: software_general
+  category: software_studies
   published: '2025-05-26'
   tags:
   - survey
@@ -875,7 +875,7 @@
   - Xin Xia
   - David Lo
   venue: arXiv 2025/05
-  category: software_general
+  category: software_studies
   published: '2025-05-13'
   tags:
   - survey
@@ -892,7 +892,7 @@
   - Martin Szummer
   - Laurence Aitchison
   venue: arXiv 2025/04
-  category: software_general
+  category: software_studies
   published: '2025-04-21'
   summary: A self-improving agent system that autonomously edits its own code to boost performance, tested on SWE-Bench Verified
     and LiveCodeBench. Demonstrates a non-gradient learning mechanism via LLM reflection and self-modification.
@@ -908,7 +908,7 @@
   - Jiawei Li
   - Iftekhar Ahmed
   venue: arXiv 2025/03
-  category: software_general
+  category: software_studies
   published: '2025-03-15'
   tags:
   - empirical
@@ -924,7 +924,7 @@
   - Pranjal Aggarwal
   - Sean Welleck
   venue: arXiv 2025/02
-  category: software_general
+  category: software_studies
   published: '2025-02-24'
   tags:
   - benchmark
@@ -943,7 +943,7 @@
   - Tejal Patwardhan
   - Johannes Heidecke
   venue: ICML 2025
-  category: software_general
+  category: software_studies
   published: '2025-02-17'
   tags:
   - benchmark
@@ -965,7 +965,7 @@
   - Manling Li
   - Heng Ji
   venue: ICML 2025
-  category: software_general
+  category: software_studies
   published: '2025-02-10'
   tags:
   - benchmark
@@ -996,7 +996,7 @@
   - Chao Peng
   - Kai Chen
   venue: COLING 2025
-  category: software_general
+  category: software_studies
   tags:
   - benchmark
   - empirical
@@ -1018,7 +1018,7 @@
   - Koushik Sen
   - Armando Solar-Lezama
   venue: ICML 2025 Position Paper Track
-  category: software_general
+  category: software_studies
   tags:
   - position
   summary: A position paper arguing that despite progress in AI for software engineering, significant research challenges
@@ -1041,7 +1041,7 @@
   - Qianxiang Wang
   - Zibin Zheng
   venue: Automated Software Engineering, Springer, 2025
-  category: software_general
+  category: software_studies
   tags:
   - survey
   summary: This survey reviews studies combining LLM-based agents with software engineering, proposing a perception-memory-action
@@ -1058,7 +1058,7 @@
   - Phong X. Nguyen
   - Nghi D. Q. Bui
   venue: arXiv 2024/09
-  category: software_general
+  category: software_studies
   published: '2024-09-09'
   summary: HyperAgent is a generalist multi-agent system with Planner, Navigator, Code Editor, and Executor roles that handles
     diverse SE tasks including issue resolution, repository-level code generation, and fault localization/repair. It sets
@@ -1078,7 +1078,7 @@
   - Lingming Zhang
   - Yiling Lou
   venue: arXiv 2024/09
-  category: software_general
+  category: software_studies
   published: '2024-09-04'
   tags:
   - survey
@@ -1116,7 +1116,7 @@
   - Heng Ji
   - Graham Neubig
   venue: ICLR 2025
-  category: software_general
+  category: software_studies
   published: '2024-07-23'
   summary: OpenHands is an open platform/SDK for building AI developer agents that write code, use command lines, and browse
     the web, evaluated across SWE-bench and web-browsing benchmarks. It supports sandboxed execution, multi-agent coordination,

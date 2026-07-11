@@ -618,7 +618,7 @@ def main() -> None:
     elif args.command == "refetch":
         print(f"review sheet written: {refetch_reclassify()}")
     elif args.command == "reclass":
-        keys = args.keys or ["software_general", "world_general"]
+        keys = args.keys or ["software_studies", "world_general"]
         print(f"review sheet written: {reclassify_leaves(keys)}")
     elif args.command == "inbox":
         print(f"review sheet written: {process_inbox()}")

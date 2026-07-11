@@ -181,7 +181,7 @@
                 "Proactive defect search with no specific reported bug is `software_testing`.",
                 "Vulnerability repair is `software_security`.",
                 "Behavior-preserving transformation is `software_maintenance`.",
-                "Surveys and scaffolds serving software engineering as a whole are `software_general`."
+                "Field-wide surveys and empirical studies of coding agents are `software_studies`; a generalist agent or scaffold routes to the activity it is evaluated on."
               ],
               "examples": [
                 {
@@ -397,33 +397,42 @@
               ]
             },
             {
-              "key": "software_general",
-              "emoji": "🗺️",
-              "title": "General-Purpose Software Agents",
-              "blurb": "Generalist software agents, and surveys of the field.",
-              "definition": "Work whose served task is software engineering as a whole rather than any single lifecycle activity: field-level surveys and roadmaps, generalist software agents, agent scaffolds and SDKs, and studies of how agents and humans build software together.",
+              "key": "software_studies",
+              "emoji": "📊",
+              "title": "Surveys & Empirical Studies",
+              "blurb": "Research that studies and surveys coding agents themselves.",
+              "definition": "Research whose OBJECT of study is coding agents themselves, not any software activity: field-wide surveys, position and roadmap papers, and empirical or behavioral studies of how agents (and the people using them) build software. These papers study or survey the agents; they do not propose an agent that performs a lifecycle activity. This leaf is deliberately narrow: it is NOT a home for generalist agents.",
               "includes": [
-                "Surveys, roadmaps, and position papers on software agents in general.",
-                "Generalist agents that span many software tasks (HyperAgent style).",
-                "Agent scaffolds, SDKs, and frameworks for building software agents (OpenHands SDK style).",
-                "Human-agent collaboration studies and cross-activity empirical analyses and benchmarks."
+                "Field-wide surveys and landscapes of coding/software agents (spanning many activities).",
+                "Position, roadmap, and vision papers about agentic software engineering.",
+                "Empirical and behavioral studies: developer productivity, human-agent interaction, real-user usage in the wild, agent failure analyses, adoption studies."
               ],
               "boundary": [
-                "Admission still follows the master test: enter only when no single lifecycle activity dominates the served task. A survey of issue-resolution agents is `software_debugging`; a completion benchmark is `software_code_generation`.",
-                "Benchmark routing dominates generalist framing: a generalist agent evaluated on an activity-specific benchmark goes to that activity, not here. An agent scaffold benchmarked on SWE-bench is `software_debugging` even if it calls itself general-purpose; `unified`/`comprehensive`/`general` in a title is not admission. Only surveys spanning activities, position/roadmap papers, empirical studies of the practice, SDKs/scaffolds tied to no single activity, and genuinely multi-benchmark platforms stay here.",
+                "HARD RULE, this kills the old magnet: if a paper proposes an agent, method, framework, SDK, or benchmark that PERFORMS a software activity, it goes to that activity, no matter how many activities it spans or how 'general/unified/comprehensive' it calls itself. OpenHands and HyperAgent (generalist agents) route to their dominant activity; SWE Atlas and CodeClash (benchmarks of agents doing tasks) route to the activity they benchmark; an agent SDK routes to the activity it is demonstrated on. Only research that studies or surveys agents lives here.",
+                "A survey of ONE activity is that activity plus the survey tag (a survey of issue-resolution agents is `software_debugging`); only genuinely field-wide, multi-activity surveys are here.",
                 "A flagship general-purpose foundation model is `foundation_models`, not here.",
-                "Work advocating code-as-action as a paradigm is `agency` (see the L1 cross-branch rule)."
+                "The agency-side counterpart for cross-world action agents is `world_general`."
               ],
               "examples": [
                 {
                   "paper": "Agents in software engineering: survey, landscape, and vision",
-                  "verdict": "software_general + survey tag",
-                  "why": "the served task is the field as a whole"
+                  "verdict": "software_studies + survey tag",
+                  "why": "a field-wide survey; its object is the agents, not one activity"
                 },
                 {
-                  "paper": "A composable SDK for production software agents",
-                  "verdict": "software_general",
-                  "why": "scaffolding serves every software activity at once"
+                  "paper": "SWE-chat: Coding Agent Interactions From Real Users in the Wild",
+                  "verdict": "software_studies + empirical tag",
+                  "why": "a behavioral study of how people use coding agents; proposes no method"
+                },
+                {
+                  "paper": "OpenHands: a generalist software agent evaluated on SWE-bench",
+                  "verdict": "software_debugging (NOT here)",
+                  "why": "it proposes an agent that performs an activity; benchmark routing sends it to that activity"
+                },
+                {
+                  "paper": "SWE Atlas: a benchmark of coding agents across many tasks",
+                  "verdict": "the activity it benchmarks (NOT here)",
+                  "why": "a benchmark of agents doing tasks is not a study of the agents"
                 }
               ]
             }
