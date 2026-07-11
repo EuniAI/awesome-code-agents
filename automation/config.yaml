@@ -6,6 +6,14 @@ inbox:
   issue_number: 4
 review:
   label: paper-review
+# Weekend historical sweep: arXiv announces no new papers on weekends, so the
+# Saturday/Sunday crawl runs advance a backfill cursor through history instead.
+# Everything is re-swept with the NEW keyword net (the old one missed whole
+# branches). Cursor state lives in data/backfill.json; delete the section to stop.
+backfill:
+  start: "2025-01-11" # 18 months before the pipeline relaunch
+  until: "2026-07-11" # the relaunch date; daily crawling covers everything after
+  slice_days: 7 # history processed per weekend run
 arxiv:
   days_back: 2
   max_results: 200

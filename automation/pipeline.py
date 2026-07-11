@@ -115,19 +115,43 @@ def crawl(days_back: int | None = None, dry_run: bool = False) -> None:
     if not dry_run:
         # Thumbs-up inbox comments whose links are now all handled.
         sources.ack_inbox(storage.all_ids(leaves) | storage.load_seen() | reviewflow.pending_ids())
+        # Weekends are arXiv's quiet days: spend them sweeping history.
+        from datetime import datetime, timezone
+        if datetime.now(timezone.utc).weekday() >= 5:
+            _weekend_backfill()
 
 
 # ── backfill ──────────────────────────────────────────────────────────────────
 
 def backfill(from_date: str, to_date: str, dry_run: bool = False) -> None:
     """Historical sweep of a date range into the pool; same intake tail as crawl.
-    Useful for categories added after the fact (cs.RO/AR/OS/DC/DB were never
-    crawled by the old pipeline). Sweep long ranges month by month."""
+    Also usable manually to accelerate past the weekend cursor."""
     leaves = taxonomy.load().leaf_keys()
     known = storage.all_ids(leaves) | storage.load_seen() | reviewflow.pending_ids()
     candidates = [p for p in sources.crawl_range(from_date, to_date) if p.id not in known]
     logger.info("backfill %s..%s: %d new candidates", from_date, to_date, len(candidates))
     classify_and_propose(candidates, dry_run=dry_run)
+
+
+def _weekend_backfill() -> None:
+    """arXiv announces nothing on weekends, so weekend crawl runs advance the
+    historical sweep by one slice instead. Cursor survives in data/backfill.json;
+    a failed slice is retried next weekend (the cursor only advances on success)."""
+    from datetime import date, timedelta
+
+    cfg = config.load().get("backfill")
+    if not cfg:
+        return
+    cursor = storage.load_backfill_cursor() or cfg["start"]
+    if cursor >= cfg["until"]:
+        logger.info("historical backfill complete (cursor %s)", cursor)
+        return
+    start = date.fromisoformat(cursor)
+    end = min(start + timedelta(days=int(cfg.get("slice_days", 7)) - 1),
+              date.fromisoformat(cfg["until"]))
+    logger.info("weekend backfill slice: %s..%s", start, end)
+    backfill(str(start), str(end))
+    storage.save_backfill_cursor(str(end + timedelta(days=1)))
 
 
 # ── decide ────────────────────────────────────────────────────────────────────

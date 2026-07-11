@@ -126,6 +126,26 @@ def save_seen(seen: set[str], data_dir: Path = DATA_DIR) -> None:
     )
 
 
+# ── Backfill cursor (weekend historical sweep progress) ───────────────────────
+
+def _backfill_path(data_dir: Path = DATA_DIR) -> Path:
+    return data_dir / "backfill.json"
+
+
+def load_backfill_cursor(data_dir: Path = DATA_DIR) -> str:
+    path = _backfill_path(data_dir)
+    if not path.exists():
+        return ""
+    return json.loads(path.read_text(encoding="utf-8")).get("cursor", "")
+
+
+def save_backfill_cursor(cursor: str, data_dir: Path = DATA_DIR) -> None:
+    data_dir.mkdir(parents=True, exist_ok=True)
+    _backfill_path(data_dir).write_text(
+        json.dumps({"cursor": cursor}, indent=1) + "\n", encoding="utf-8"
+    )
+
+
 # ── Retry ids (classification failures awaiting another attempt) ──────────────
 
 def _retry_path(data_dir: Path = DATA_DIR) -> Path:
