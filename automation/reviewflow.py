@@ -27,9 +27,14 @@ from automation import config
 logger = logging.getLogger(__name__)
 
 _PAYLOAD_RE = re.compile(r"```json\n(.*?)\n```", re.DOTALL)
-_APPROVE_RE = re.compile(r"^/approve\s+(\S.*)$", re.IGNORECASE)
-_REJECT_RE = re.compile(r"^/reject\s+(\S.*)$", re.IGNORECASE)
+# Index spec captured up front; any trailing free text ("/reject 2 wrong topic")
+# is tolerated and ignored.
+_APPROVE_RE = re.compile(r"^/approve\s+(all|[\d,\s\-]+)", re.IGNORECASE)
+_REJECT_RE = re.compile(r"^/reject\s+(all|[\d,\s\-]+)", re.IGNORECASE)
 _EDIT_RE = re.compile(r"^/edit\s+(\d+)\s+(\S.*)$", re.IGNORECASE)
+# key=value pairs where the value may contain spaces (venue=ICSE 2026): a value
+# runs until the next key= or the end of the line.
+_KV_RE = re.compile(r"(\w+)=(.+?)(?=\s+\w+=|\s*$)")
 
 
 # ── gh plumbing ───────────────────────────────────────────────────────────────
@@ -185,11 +190,14 @@ def parse_decisions(comments: list[dict], reviewer: str, n: int) -> dict[int, tu
                 if not 1 <= i <= n:
                     continue
                 overrides: dict = {}
-                for key, value in re.findall(r"(\w+)=([^\s]+)", m.group(2)):
+                for key, value in _KV_RE.findall(m.group(2)):
+                    value = value.strip().strip("`")
                     if key == "category":
-                        overrides["category"] = value.strip("`")
+                        overrides["category"] = value
                     elif key == "tags":
-                        overrides["tags"] = [] if value == "-" else value.strip("`").split(",")
+                        overrides["tags"] = [] if value == "-" else value.split(",")
+                    elif key == "venue":
+                        overrides["venue"] = value
                 decisions[i] = ("approve", overrides)
     return decisions
 

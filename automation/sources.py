@@ -32,6 +32,36 @@ _API = "https://export.arxiv.org/api/query"
 _SLEEP_S = 3  # arXiv rate courtesy between requests
 
 
+# ── Venue extraction ──────────────────────────────────────────────────────────
+# Authors often state acceptance in the abstract ("Accepted at ICSE 2026").
+# Ported from the old enricher; the owner can always fix a venue during review
+# with `/edit N venue=...`.
+
+_VENUE_ACCEPT_RE = re.compile(
+    r"(?:accepted (?:at|to|in|by)|to appear (?:at|in)|published (?:at|in)|presented at)\s+"
+    r"((?:the\s+)?[\w\s\-+/&]+?\d{4})",
+    re.IGNORECASE,
+)
+_VENUE_NAME_RE = re.compile(
+    r"\b((?:ICSE|FSE|ASE|ISSTA|PLDI|POPL|OOPSLA|SOSP|OSDI|ASPLOS|MICRO|ISCA"
+    r"|NeurIPS|ICML|ICLR|ACL|EMNLP|NAACL|COLM|CVPR|ICCV|ECCV|AAAI|IJCAI"
+    r"|CCS|USENIX Security|Oakland|NDSS|CHI|CSCW|VLDB|SIGMOD|ICDE|KDD|WWW"
+    r"|MSR|ICST|SANER|ICSME|TOSEM|TSE|EMSE)\s*'?\d{2,4})\b"
+)
+
+
+def extract_venue(abstract: str, default: str) -> str:
+    """Venue from acceptance phrases in the abstract; falls back to the default."""
+    for rx in (_VENUE_ACCEPT_RE, _VENUE_NAME_RE):
+        m = rx.search(abstract)
+        if m:
+            venue = re.sub(r"\s+", " ", m.group(1)).strip(" .,")
+            venue = re.sub(r"^the\s+", "", venue, flags=re.IGNORECASE)
+            if len(venue) <= 40:  # long captures are almost always false positives
+                return venue
+    return default
+
+
 # ── Atom feed parsing ─────────────────────────────────────────────────────────
 
 def _feed_entries(xml_bytes: bytes) -> list[tuple[Paper, str]]:
@@ -48,9 +78,10 @@ def _feed_entries(xml_bytes: bytes) -> list[tuple[Paper, str]]:
         authors = [a.find("a:name", _ATOM).text or "" for a in entry.findall("a:author", _ATOM)]
         pub = entry.find("a:published", _ATOM)
         published = (pub.text or "")[:10] if pub is not None else ""
-        venue = f"arXiv {published[:4]}/{published[5:7]}" if published else "arXiv"
         summary = entry.find("a:summary", _ATOM)
         abstract = re.sub(r"\s+", " ", summary.text or "").strip() if summary is not None else ""
+        default = f"arXiv {published[:4]}/{published[5:7]}" if published else "arXiv"
+        venue = extract_venue(abstract, default)
         paper = Paper(
             id=pid, title=title, authors=authors, venue=venue, published=published,
             links={"paper": f"https://arxiv.org/abs/{pid}"},
@@ -223,9 +254,10 @@ def crawl(days_back: int | None = None) -> list[Paper]:
     return [p for p, _ in found.values()]
 
 
-def read_inbox() -> list[Paper]:
-    """All arXiv papers linked in the inbox issue's comments (candidates only;
-    the pipeline filters against known ids)."""
+_INBOX_LINK_RE = re.compile(r"arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})", re.IGNORECASE)
+
+
+def _inbox_comments() -> list[dict]:
     cfg = config.load()
     owner, repo = cfg["repo"]["owner"], cfg["repo"]["name"]
     issue = cfg["inbox"]["issue_number"]
@@ -235,14 +267,45 @@ def read_inbox() -> list[Paper]:
     )
     if raw.returncode != 0:
         raise RuntimeError(f"gh api failed: {raw.stderr[:300]}")
-    comments = json.loads(raw.stdout)
+    return json.loads(raw.stdout)
+
+
+def read_inbox() -> list[Paper]:
+    """All arXiv papers linked in the inbox issue's comments (candidates only;
+    the pipeline filters against known ids)."""
+    comments = _inbox_comments()
     ids: list[str] = []
     for c in comments:
-        for m in re.findall(r"arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})", c.get("body", ""), re.I):
+        for m in _INBOX_LINK_RE.findall(c.get("body", "")):
             if m not in ids:
                 ids.append(m)
     logger.info("inbox: %d unique arXiv ids across %d comments", len(ids), len(comments))
     return list(fetch_arxiv_papers(ids).values())
+
+
+def ack_inbox(handled: set[str]) -> None:
+    """React with a thumbs-up to inbox comments whose linked papers have all been
+    handled (stored, proposed, or auto-skipped). The reaction is the owner-facing
+    acknowledgement that a pasted link was picked up."""
+    cfg = config.load()
+    owner, repo = cfg["repo"]["owner"], cfg["repo"]["name"]
+    acked = 0
+    for c in _inbox_comments():
+        ids = _INBOX_LINK_RE.findall(c.get("body", ""))
+        if not ids or not all(i in handled for i in ids):
+            continue
+        if (c.get("reactions") or {}).get("+1", 0) > 0:
+            continue  # already acknowledged
+        proc = subprocess.run(
+            ["gh", "api", "--method", "POST",
+             f"repos/{owner}/{repo}/issues/comments/{c['id']}/reactions",
+             "-f", "content=+1"],
+            capture_output=True, text=True, timeout=60,
+        )
+        if proc.returncode == 0:
+            acked += 1
+    if acked:
+        logger.info("inbox: acknowledged %d comments", acked)
 
 
 # ── Link enrichment (approved papers only; cheap and best-effort) ─────────────

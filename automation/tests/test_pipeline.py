@@ -94,3 +94,22 @@ def test_parse_decisions_ranges_and_all():
     assert d[2] == ("approve", {"tags": []})
     d = reviewflow.parse_decisions([_comment("o", "no commands here")], "o", 3)
     assert d == {}
+
+
+def test_parse_decisions_trailing_reason_and_venue():
+    # A free-text reason after the indices must not swallow the command.
+    d = reviewflow.parse_decisions([_comment("o", "/reject 2 wrong topic")], "o", 3)
+    assert d == {2: ("reject", {})}
+    # Venue values may contain spaces; a following key= ends the value.
+    d = reviewflow.parse_decisions(
+        [_comment("o", "/edit 1 venue=ICSE 2026 tags=benchmark")], "o", 3)
+    assert d[1] == ("approve", {"venue": "ICSE 2026", "tags": ["benchmark"]})
+
+
+def test_extract_venue():
+    assert sources.extract_venue(
+        "We do X. Accepted at ICSE 2026.", "arXiv 2026/01") == "ICSE 2026"
+    assert sources.extract_venue(
+        "This paper will appear in NeurIPS 2025 proceedings... wait no.",
+        "arXiv 2026/01").startswith("NeurIPS")
+    assert sources.extract_venue("No acceptance mentioned.", "arXiv 2026/01") == "arXiv 2026/01"

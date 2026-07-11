@@ -102,10 +102,13 @@ def crawl(days_back: int | None = None, dry_run: bool = False) -> None:
         if p.id not in known:
             known.add(p.id)  # also dedups crawl vs inbox within this run
             candidates.append(p)
-    if not candidates:
+    if candidates:
+        classify_and_propose(candidates, dry_run=dry_run)
+    else:
         logger.info("nothing new today")
-        return
-    classify_and_propose(candidates, dry_run=dry_run)
+    if not dry_run:
+        # Thumbs-up inbox comments whose links are now all handled.
+        sources.ack_inbox(storage.all_ids(leaves) | storage.load_seen() | reviewflow.pending_ids())
 
 
 # ── decide ────────────────────────────────────────────────────────────────────
@@ -160,6 +163,8 @@ def decide(issue_number: int) -> None:
             continue
         p = Paper.from_dict(e["paper"])
         p.category, p.tags, p.summary = category, tags, e.get("summary", "")
+        if overrides.get("venue"):
+            p.venue = overrides["venue"]
         sources.enrich_links(p)
         if storage.add(p):  # dedup-safe: False when already stored (e.g. a re-run)
             storage.save(category, storage.newest_first(storage.load(category)))
