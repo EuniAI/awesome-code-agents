@@ -3,6 +3,34 @@
 > Durable record of non-trivial design decisions for this repo. Newest first.
 > This repo is English-only — keep every entry in English.
 
+## 2026-07-11: Foundation Models added as a third top-level branch, placed first
+
+Owner: flagship frontier general-purpose models from major labs (Kimi K2,
+Qwen3-Coder, MiniMax, DeepSeek, Claude, GPT, Gemini) all belong in one place, ahead
+of the two task branches. The old repo had a `foundation_models` category (4 papers).
+
+Decision: add `foundation_models` as a THIRD top-level node in taxonomy.json, placed
+FIRST (order: foundation_models, artifact, agency). It is a top-level leaf (no L2/L3).
+
+Rationale: our L1 axis is "the task the paper serves", but a flagship general model
+serves NO single task; it is the substrate powering both artifact production and
+code-as-action. Forcing it into artifact hides its agentic use and vice-versa. So this
+node sits deliberately OFF the task axis. Justified by axis-necessity, not by mass; it
+is a structurally-guaranteed growing cluster (labs ship these constantly). Framing:
+two task branches (what code is for, what code does) + one substrate branch that powers
+both — reinforces "Code as Everything". Renders as an L1 section, papers directly under
+it (render.py/taxonomy.py already handle a depth-0 leaf).
+
+Strict boundary (prevents every "-Coder" flooding in): a paper enters only if the
+model is a flagship general substrate spanning BOTH code production and code-as-action
+with no single primary task. Task-specialized models route to their activity leaf +
+model tag (SWE-GPT -> software_debugging, JanusCoder -> software_code_generation,
+VulnLLM-R -> software_security, Terminus-4B -> world_terminal). Product/marketing
+announcements without a technical report stay out of scope; flagship model technical
+reports are in. Encoded as master_test step 1 (off-axis escape checked first) and the
+node boundary. Moved in now: Kimi K2, Qwen3-Coder. CWM pending owner ruling
+(code-gen-centric research model, leaning software_code_generation + model).
+
 ## 2026-07-11: general leaves kept, re-scoped by a benchmark-routing rule
 
 The two "general" leaves (software_general "General-Purpose Software Agents",

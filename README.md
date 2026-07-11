@@ -55,6 +55,7 @@
 <!-- END PAPERS SUMMARY -->
 
 <!-- NAV:BEGIN -->
+- [🧠 Foundation Models](#-foundation-models)
 - [🧱 Code as Artifact: Building the Digital World](#-code-as-artifact-building-the-digital-world)
   * [💻 General Software](#-general-software)
     + [🐛 Debugging & Issue Resolution](#-debugging--issue-resolution)
@@ -91,6 +92,18 @@
 ---
 
 <!-- PAPERS:BEGIN -->
+## 🧠 Foundation Models
+
+> Flagship frontier models that both write code and act through it.
+
+- **Kimi K2: Open Agentic Intelligence.**  
+  _Kimi Team: Yifan Bai, Yiping Bao, Guanduo Chen, Jiahao Chen, Ningxin Chen, Ruijue Chen, Yanru Chen, Yuankun Chen, Yutian Chen, Zhuofu Chen, et al._ arXiv 2025/07.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.20534) ![Model](https://img.shields.io/badge/Model-E76F51?style=for-the-badge)
+
+- **Qwen3-Coder: Agentic Coding in the World.**  
+  _QwenTeam._ 2025/07.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://qwen.ai/blog?id=qwen3-coder) [![GitHub Stars](https://img.shields.io/github/stars/QwenLM/Qwen3-Coder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/QwenLM/Qwen3-Coder) ![Model](https://img.shields.io/badge/Model-E76F51?style=for-the-badge)
+
 ## 🧱 Code as Artifact: Building the Digital World
 
 > Agents that build software, from one function to an entire system.
@@ -1143,10 +1156,6 @@
   _Bowen Li, Wenhan Wu, Ziwei Tang, Lin Shi, John Yang, Jinyang Li, Shunyu Yao, Chen Qian, Binyuan Hui, Qicheng Zhang, et al._ COLING 2025.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2025.coling-main.502/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge)
 
-- **Qwen3-Coder: Agentic Coding in the World.**  
-  _QwenTeam._ 2025/07.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://qwen.ai/blog?id=qwen3-coder) [![GitHub Stars](https://img.shields.io/github/stars/QwenLM/Qwen3-Coder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/QwenLM/Qwen3-Coder) ![Model](https://img.shields.io/badge/Model-E76F51?style=for-the-badge)
-
 - **Position: Future Research and Challenges Remain Towards AI for Software Engineering.**  
   _Alex Gu, Naman Jain, Wen-Ding Li, Manish Shetty, Kevin Ellis, Koushik Sen, Armando Solar-Lezama._ ICML 2025 Position Paper Track.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=RuLsq4LSZK) ![Position Paper](https://img.shields.io/badge/Position_Paper-9B59B6?style=for-the-badge)
@@ -1754,10 +1763,6 @@
 - **GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leveraging.**  
   _Ziyi Ni, Huacan Wang, Shuo Zhang, Shuo Lu, Ziyang He, Wang You, Zhenheng Tang, Yuntao Du, Bill Sun, Hongzhang Liu, et al._ arXiv 2025/08.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.18993) [![GitHub Stars](https://img.shields.io/github/stars/QuantaAlpha/GitTaskBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/QuantaAlpha/GitTaskBench) [![Website](https://img.shields.io/badge/GITTASKBENCH-blue?style=for-the-badge)](https://gittaskbench.github.io/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
-
-- **Kimi K2: Open Agentic Intelligence.**  
-  _Kimi Team: Yifan Bai, Yiping Bao, Guanduo Chen, Jiahao Chen, Ningxin Chen, Ruijue Chen, Yanru Chen, Yuankun Chen, Yutian Chen, Zhuofu Chen, et al._ arXiv 2025/07.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.20534) ![Model](https://img.shields.io/badge/Model-E76F51?style=for-the-badge)
 
 - **EvoAgentX: An Automated Framework for Evolving Agentic Workflows.**  
   _Yingxu Wang, Siwei Liu, Jinyuan Fang, Zaiqiao Meng._ arXiv 2025/07.  

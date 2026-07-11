@@ -17,11 +17,14 @@ from automation.render import (
 def test_real_taxonomy_loads_and_validates():
     tax = taxonomy.load(force=True)
     leaves = tax.leaves()
-    assert len(leaves) == 24
+    assert len(leaves) == 25
     keys = tax.leaf_keys()
     assert len(keys) == len(set(keys))
     assert tax.by_key("agency").axis
     assert tax.by_key("software_debugging").is_leaf
+    # foundation_models is a top-level leaf (off the task axis), rendered first
+    assert [n.key for n in tax.nodes] == ["foundation_models", "artifact", "agency"]
+    assert tax.by_key("foundation_models").is_leaf
 
 
 def test_gh_slug_matches_github_behavior():

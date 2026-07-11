@@ -652,20 +652,6 @@
     paper: https://aclanthology.org/2025.coling-main.502/
     github: ''
     website: ''
-- id: https://qwen.ai/blog?id=qwen3-coder
-  title: 'Qwen3-Coder: Agentic Coding in the World'
-  authors:
-  - QwenTeam
-  venue: 2025/07
-  category: software_general
-  tags:
-  - model
-  summary: Qwen3-Coder is a code foundation model positioned for agentic coding tasks across the software lifecycle. Its title
-    signals a generalist agentic coding model rather than a single lifecycle activity.
-  links:
-    paper: https://qwen.ai/blog?id=qwen3-coder
-    github: https://github.com/QwenLM/Qwen3-Coder
-    website: ''
 - id: https://openreview.net/forum?id=RuLsq4LSZK
   title: 'Position: Future Research and Challenges Remain Towards AI for Software Engineering'
   authors:

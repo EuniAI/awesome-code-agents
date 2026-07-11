@@ -1,12 +1,12 @@
 {
   "name": "Awesome Code Agents Taxonomy",
   "description": "Authoritative category system for this repo. Single source of truth: automation/config.yaml is synced from it, and it drives both the README structure and the auto-classifier. Rationale and history: design-decisions.md.",
-  "vision": "Code as Everything. Every strong paper in which an agent writes or runs code, across all domains. Code is either the thing being built or the language of action; that split is Level 1.",
+  "vision": "Code as Everything. Every strong paper in which an agent writes or runs code, across all domains. Code is either the thing being built (artifact) or the language of action (agency), and foundation models are the substrate that powers both. Those three are Level 1.",
   "scope": {
     "collects": "Agent-related papers in which an agent writes or executes code, plus resource papers (datasets, models, benchmarks, surveys) that serve such agents.",
     "excludes": [
       "Pure LLM reasoning that merely emits code as a reasoning aid (PAL/PoT style, code-interpreter math solving) with no agentic task: not agent papers, out of scope.",
-      "Industry products: this list collects frontier research papers and technical reports only.",
+      "Industry product announcements and marketing posts: this list collects frontier research papers and technical reports only. A flagship model's technical report (with architecture, training, and evaluations) is in and belongs to foundation_models; a product-launch or tooling announcement is out.",
       "Agent papers where code is neither the product nor the language of action."
     ]
   },
@@ -36,20 +36,55 @@
     }
   },
   "levels": {
-    "L1": "the task the paper serves: is its ultimate purpose producing code, or is code the tool for completing a task in the world",
-    "L2": "artifact branch: the domain of the code being built (8) | agency branch: the world the agent acts in (7)",
+    "L1": "three top-level branches: `foundation_models` (off the task axis: flagship general models that serve both), then the two task branches, `artifact` (ultimate purpose is producing code) and `agency` (code is the tool for completing a task in the world)",
+    "L2": "artifact branch: the domain of the code being built (8) | agency branch: the world the agent acts in (7) | foundation_models has no L2 (single leaf)",
     "L3": "software-lifecycle activity (only general-software under artifact expands; 10 children)"
   },
-  "axis": "the ultimate purpose of the task the paper serves",
+  "axis": "the ultimate purpose of the task the paper serves (foundation_models is the one node off this axis)",
   "master_test": [
-    "Identify the task the paper ultimately serves. For resource papers (data synthesis, foundation models, benchmarks, surveys, training methods) that is the downstream task they enable, never what the paper itself produces.",
+    "First check the off-axis escape: is the paper a flagship, general-purpose frontier foundation model (Kimi K2 / Qwen3-Coder / DeepSeek / Claude / GPT / Gemini style) that is general enough to both produce code and act through code, with no single primary downstream task? Then `foundation_models` plus the model tag. A model specialized and evaluated on one activity is NOT this: it routes to that activity leaf plus the model tag (SWE-GPT to software_debugging, JanusCoder to software_code_generation, Terminus-4B to world_terminal).",
+    "Otherwise identify the task the paper ultimately serves. For resource papers (data synthesis, task-specialized models, benchmarks, surveys, training methods) that is the downstream task they enable, never what the paper itself produces.",
     "Ask of that task: is its ultimate purpose to produce code? Then `artifact`. Is the produced code merely the tool for completing a task in the world? Then `agency`.",
     "Lifecycle activities that emit no code themselves (testing, fuzzing, bug localization, review, comprehension, environment setup) still belong to `artifact`: improving, understanding, safeguarding, and enabling code all exist in service of producing code.",
-    "For papers whose evaluations span both branches, judge the purpose the paper positions itself to serve. A code foundation model whose agentic evaluations are issue resolution serves `artifact`. A generic agent method evaluated on SWE-bench plus web/game benchmarks that do not use code as action serves `artifact`. A survey covering both branches but written to advocate code-as-action serves `agency`.",
+    "For papers whose evaluations span both branches, judge the purpose the paper positions itself to serve. A code model specialized and evaluated on issue resolution serves `artifact/software_debugging` plus the model tag (a flagship general-purpose model instead goes to `foundation_models`, per step 1). A generic agent method evaluated on SWE-bench plus web/game benchmarks that do not use code as action serves `artifact`. A survey covering both branches but written to advocate code-as-action serves `agency`.",
+    "Benchmark routing dominates generalist framing. A paper evaluated on an activity-specific benchmark belongs to that activity, whatever it calls itself: SWE-bench to software_debugging, KernelBench to systems. Words like `unified`, `comprehensive`, `general`, or `generalist agent` in a title do not send a paper to a general leaf if its tasks belong to one activity or one world.",
     "Do not classify by the paper's own output or headline metric. A dataset paper for issue-resolution agents is artifact plus training-data tag; a dataset paper for code-as-policy embodied agents is agency plus training-data tag.",
     "Nearly every paper here proposes an agent; that fact carries no signal. Classify by the purpose of the task the agent (or resource) serves."
   ],
   "nodes": [
+    {
+      "key": "foundation_models",
+      "emoji": "🧠",
+      "title": "Foundation Models",
+      "blurb": "Flagship frontier models that both write code and act through it.",
+      "definition": "Flagship, general-purpose frontier models released by major labs, general enough to both produce code artifacts and operate code to complete agentic tasks. They serve no single downstream task; they are the substrate that powers both the artifact and agency branches. This is the one node off the task axis, and it comes first.",
+      "includes": [
+        "General-purpose frontier foundation models and their technical reports (Kimi K2, Qwen3-Coder, MiniMax, DeepSeek, Claude, GPT, Gemini, Llama flagships).",
+        "Flagship agentic-coding models positioned as broad substrates rather than single-activity tools."
+      ],
+      "boundary": [
+        "A model built and evaluated for one lifecycle activity or one world belongs to that leaf plus the model tag, not here: SWE-GPT and Kimi-Dev are `software_debugging`, JanusCoder is `software_code_generation`, VulnLLM-R is `software_security`, Terminus-4B is `world_terminal`. The tell is training and evaluation centered on a single activity's benchmarks.",
+        "A model with no meaningful code or agentic capability is out of scope entirely (this repo collects code agents).",
+        "A product-launch or tooling announcement without a research technical report is out of scope (see scope excludes)."
+      ],
+      "examples": [
+        {
+          "paper": "Kimi K2: Open Agentic Intelligence",
+          "verdict": "foundation_models + model tag",
+          "why": "a flagship general agentic model spanning code production and code-as-action"
+        },
+        {
+          "paper": "Qwen3-Coder: Agentic Coding in the World",
+          "verdict": "foundation_models + model tag",
+          "why": "a flagship general coding-and-agent model, not tied to one activity"
+        },
+        {
+          "paper": "A model tuned and evaluated solely for SWE-bench issue resolution (SWE-GPT style)",
+          "verdict": "software_debugging + model tag",
+          "why": "specialized for one activity; routed to that leaf, not here"
+        }
+      ]
+    },
     {
       "key": "artifact",
       "emoji": "🧱",
@@ -82,9 +117,9 @@
           "why": "understanding code serves producing code"
         },
         {
-          "paper": "A code foundation model evaluated on generation plus issue-resolution agentic tasks (Qwen-Coder style)",
-          "verdict": "artifact + model tag",
-          "why": "its agentic evaluations still serve code production"
+          "paper": "A code model specialized and evaluated only on issue resolution (SWE-GPT style)",
+          "verdict": "artifact/software_debugging + model tag",
+          "why": "task-specialized model routes to its activity; a flagship general model would be foundation_models instead"
         },
         {
           "paper": "Synthesizing trajectories and environments to train issue-resolution agents",
@@ -375,6 +410,8 @@
               ],
               "boundary": [
                 "Admission still follows the master test: enter only when no single lifecycle activity dominates the served task. A survey of issue-resolution agents is `software_debugging`; a completion benchmark is `software_code_generation`.",
+                "Benchmark routing dominates generalist framing: a generalist agent evaluated on an activity-specific benchmark goes to that activity, not here. An agent scaffold benchmarked on SWE-bench is `software_debugging` even if it calls itself general-purpose; `unified`/`comprehensive`/`general` in a title is not admission. Only surveys spanning activities, position/roadmap papers, empirical studies of the practice, SDKs/scaffolds tied to no single activity, and genuinely multi-benchmark platforms stay here.",
+                "A flagship general-purpose foundation model is `foundation_models`, not here.",
                 "Work advocating code-as-action as a paradigm is `agency` (see the L1 cross-branch rule)."
               ],
               "examples": [
@@ -770,6 +807,8 @@
           ],
           "boundary": [
             "Admission follows the master test: enter only when no single world dominates the served task. A terminal-specific benchmark is `world_terminal`; a browser agent is `world_browser`.",
+            "Benchmark routing dominates generalist framing: an agent evaluated on a single world's benchmark goes to that world, not here, whatever it calls itself. Only cross-world surveys, position papers, and genuinely multi-world agents and benchmarks stay here.",
+            "A flagship general-purpose foundation model is `foundation_models`, not here.",
             "Work whose served task is producing code belongs to the `artifact` branch (see the L1 master test)."
           ],
           "examples": [

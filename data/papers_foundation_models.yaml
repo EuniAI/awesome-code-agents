@@ -1,0 +1,128 @@
+- id: '2507.20534'
+  title: 'Kimi K2: Open Agentic Intelligence'
+  authors:
+  - 'Kimi Team: Yifan Bai'
+  - Yiping Bao
+  - Guanduo Chen
+  - Jiahao Chen
+  - Ningxin Chen
+  - Ruijue Chen
+  - Yanru Chen
+  - Yuankun Chen
+  - Yutian Chen
+  - Zhuofu Chen
+  - Jialei Cui
+  - Hao Ding
+  - Mengnan Dong
+  - Angang Du
+  - Chenzhuang Du
+  - Dikang Du
+  - Yulun Du
+  - Yu Fan
+  - Yichen Feng
+  - Kelin Fu
+  - Bofei Gao
+  - Hongcheng Gao
+  - Peizhong Gao
+  - Tong Gao
+  - Xinran Gu
+  - Longyu Guan
+  - Haiqing Guo
+  - Jianhang Guo
+  - Hao Hu
+  - Xiaoru Hao
+  - Tianhong He
+  - Weiran He
+  - Wenyang He
+  - Chao Hong
+  - Yangyang Hu
+  - Zhenxing Hu
+  - Weixiao Huang
+  - Zhiqi Huang
+  - Zihao Huang
+  - Tao Jiang
+  - Zhejun Jiang
+  - Xinyi Jin
+  - Yongsheng Kang
+  - Guokun Lai
+  - Cheng Li
+  - Fang Li
+  - Haoyang Li
+  - Ming Li
+  - Wentao Li
+  - Yanhao Li
+  - Yiwei Li
+  - Zhaowei Li
+  - Zheming Li
+  - Hongzhan Lin
+  - Xiaohan Lin
+  - Zongyu Lin
+  - Chengyin Liu
+  - Chenyu Liu
+  - Hongzhang Liu
+  - Jingyuan Liu
+  - Junqi Liu
+  - Liang Liu
+  - Shaowei Liu
+  - T.Y. Liu
+  - Tianwei Liu
+  - Weizhou Liu
+  - Yangyang Liu
+  - Yibo Liu
+  - Yiping Liu
+  - Yue Liu
+  - Zhengying Liu
+  - Enzhe Lu
+  - Lijun Lu
+  - Shengling Ma
+  - Xinyu Ma
+  - Yingwei Ma
+  - Shaoguang Mao
+  - Jie Mei
+  - Xin Men
+  - Yibo Miao
+  - Siyuan Pan
+  - Yebo Peng
+  - Ruoyu Qin
+  - Bowen Qu
+  - Zeyu Shang
+  - Lidong Shi
+  - Shengyuan Shi
+  - Feifan Song
+  - Jianlin Su
+  - Zhengyuan Su
+  - Xinjie Sun
+  - Flood Sung
+  - Heyi Tang
+  - Jiawen Tao
+  - Qifeng Teng
+  - Chensi Wang
+  - Dinglu Wang
+  - Feng Wang
+  - Haiming Wang et al.
+  venue: arXiv 2025/07
+  category: foundation_models
+  published: '2025-07-28'
+  tags:
+  - model
+  summary: Kimi K2 is a 1-trillion-parameter MoE LLM trained with a novel MuonClip optimizer and large-scale agentic data
+    synthesis plus RL, achieving strong results on SWE-bench Verified/Multilingual, Tau2-Bench, and coding/math benchmarks.
+    It is released as an open model to support agentic intelligence research.
+  links:
+    paper: https://arxiv.org/abs/2507.20534
+    github: ''
+    website: ''
+- id: https://qwen.ai/blog?id=qwen3-coder
+  title: 'Qwen3-Coder: Agentic Coding in the World'
+  authors:
+  - QwenTeam
+  venue: 2025/07
+  category: foundation_models
+  tags:
+  - model
+  summary: Qwen3-Coder is a code foundation model positioned for agentic coding tasks across the software lifecycle. Its title
+    signals a generalist agentic coding model rather than a single lifecycle activity.
+  links:
+    paper: https://qwen.ai/blog?id=qwen3-coder
+    github: https://github.com/QwenLM/Qwen3-Coder
+    website: ''
