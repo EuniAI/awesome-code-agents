@@ -472,9 +472,11 @@ def process_backlog(limit: int = 50) -> None:
     logger.info("backlog: %d unique ids in %d stale issues; %d unhandled",
                 len(ids), len(pending), len(new_ids))
 
-    if new_ids and pipeline.pool_has_room():
-        batch = new_ids[:limit]
-        logger.info("backlog: absorbing %d of %d (re-run for the rest)", len(batch), len(new_ids))
+    if new_ids and (limit is None or pipeline.pool_has_room()):
+        # limit=None: absorb everything in one go (owner parks the pool for the
+        # review UI; the pool cap only protects an active review cadence).
+        batch = new_ids if limit is None else new_ids[:limit]
+        logger.info("backlog: absorbing %d of %d", len(batch), len(new_ids))
         papers = list(fetch_arxiv_papers(batch).values())
         pipeline.classify_and_propose(papers, origin={p.id: "backlog" for p in papers})
 
@@ -519,7 +521,7 @@ def main() -> None:
     elif args.command == "inbox":
         print(f"review sheet written: {process_inbox()}")
     elif args.command == "backlog":
-        process_backlog()
+        process_backlog(limit=None if "all" in args.keys else 50)
     else:
         backfill_dates()
 
