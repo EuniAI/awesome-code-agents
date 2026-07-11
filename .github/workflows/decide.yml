@@ -1,0 +1,50 @@
+# Event-driven review: fires on every comment on a paper-review issue by the
+# reviewer, applies /approve /reject /edit commands to data/, re-renders the
+# README, feeds /edit corrections to calibration.json, and closes the issue
+# when every paper is decided. No polling, no cron, no Claude token needed.
+name: Apply review decisions
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
+
+jobs:
+  decide:
+    # Defense in depth: the workflow gate checks the reviewer login, and
+    # pipeline.decide independently trusts only config.yaml's repo.reviewer.
+    if: >
+      !github.event.issue.pull_request &&
+      contains(github.event.issue.labels.*.name, 'paper-review') &&
+      github.event.comment.user.login == 'Zhaoyang-Chu'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Apply decisions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -m automation.pipeline decide --issue "${{ github.event.issue.number }}"
+
+      - name: Commit curated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ README.md docs/static/badges/ calibration.json
+          if ! git diff --cached --quiet; then
+            git pull --rebase origin main
+            git commit -m "feat(data): papers approved in review issue #${{ github.event.issue.number }}"
+            git push
+          fi

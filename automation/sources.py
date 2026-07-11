@@ -1,0 +1,266 @@
+"""
+Paper sources: the daily arXiv crawl and the owner's inbox issue.
+
+All arXiv and network logic lives in this module; the pipeline and the (temporary)
+migration tooling import from here. Functions produce ready `Paper` objects:
+metadata from the arXiv Atom API, venue "arXiv YYYY/MM" derived from the v1 date,
+and abstracts cached into the sidecar (data/abstracts.json) so classification and
+later passes never refetch.
+"""
+
+from __future__ import annotations
+
+import json
+import logging
+import re
+import subprocess
+import time
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta, timezone
+from functools import lru_cache
+
+from automation import config, storage
+from automation.models import Paper
+
+logger = logging.getLogger(__name__)
+
+ARXIV_ID = re.compile(r"^\d{4}\.\d{4,5}$")
+_ATOM = {"a": "http://www.w3.org/2005/Atom"}
+_API = "https://export.arxiv.org/api/query"
+_SLEEP_S = 3  # arXiv rate courtesy between requests
+
+
+# ── Atom feed parsing ─────────────────────────────────────────────────────────
+
+def _feed_entries(xml_bytes: bytes) -> list[tuple[Paper, str]]:
+    """Parse an arXiv Atom feed into (Paper, abstract) pairs."""
+    out: list[tuple[Paper, str]] = []
+    root = ET.fromstring(xml_bytes)
+    for entry in root.findall("a:entry", _ATOM):
+        eid = entry.find("a:id", _ATOM)
+        m = re.search(r"abs/(\d{4}\.\d{4,5})", eid.text or "") if eid is not None else None
+        if not m:
+            continue
+        pid = m.group(1)
+        title = re.sub(r"\s+", " ", entry.find("a:title", _ATOM).text or "").strip()
+        authors = [a.find("a:name", _ATOM).text or "" for a in entry.findall("a:author", _ATOM)]
+        pub = entry.find("a:published", _ATOM)
+        published = (pub.text or "")[:10] if pub is not None else ""
+        venue = f"arXiv {published[:4]}/{published[5:7]}" if published else "arXiv"
+        summary = entry.find("a:summary", _ATOM)
+        abstract = re.sub(r"\s+", " ", summary.text or "").strip() if summary is not None else ""
+        paper = Paper(
+            id=pid, title=title, authors=authors, venue=venue, published=published,
+            links={"paper": f"https://arxiv.org/abs/{pid}"},
+        )
+        out.append((paper, abstract))
+    return out
+
+
+def _query(params: dict[str, str]) -> list[tuple[Paper, str]]:
+    url = _API + "?" + urllib.parse.urlencode(params)
+    with urllib.request.urlopen(url, timeout=60) as r:
+        return _feed_entries(r.read())
+
+
+def _cache_abstracts(pairs: list[tuple[Paper, str]]) -> None:
+    cache = storage.load_abstracts()
+    changed = False
+    for paper, abstract in pairs:
+        if abstract and paper.id not in cache:
+            cache[paper.id] = abstract
+            changed = True
+    if changed:
+        storage.save_abstracts(cache)
+
+
+# ── arXiv metadata by id ──────────────────────────────────────────────────────
+
+def fetch_arxiv_papers(ids: list[str]) -> dict[str, Paper]:
+    """Build Paper objects from the arXiv API; abstracts go into the sidecar."""
+    out: dict[str, Paper] = {}
+    arxiv_ids = [i for i in ids if ARXIV_ID.match(i)]
+    for start in range(0, len(arxiv_ids), 50):
+        chunk = arxiv_ids[start:start + 50]
+        logger.info("fetching metadata for %d papers from arXiv", len(chunk))
+        pairs = _query({"max_results": "100", "id_list": ",".join(chunk)})
+        _cache_abstracts(pairs)
+        for paper, _ in pairs:
+            out[paper.id] = paper
+        time.sleep(_SLEEP_S)
+    return out
+
+
+def ensure_abstracts(ids: list[str]) -> dict[str, str]:
+    """Return the abstract sidecar with the given arXiv ids fetched if missing."""
+    cache = storage.load_abstracts()
+    missing = [i for i in ids if ARXIV_ID.match(i) and i not in cache]
+    if missing:
+        fetch_arxiv_papers(missing)  # caches abstracts as a side effect
+        cache = storage.load_abstracts()
+    return cache
+
+
+def fetch_published(ids: list[str]) -> dict[str, str]:
+    """id -> first-publication date (arXiv v1), YYYY-MM-DD."""
+    return {pid: p.published for pid, p in fetch_arxiv_papers(ids).items() if p.published}
+
+
+# ── Abstract recovery for non-arXiv papers ────────────────────────────────────
+
+def _norm_title(t: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", t.lower())
+
+
+def search_arxiv_by_title(title: str) -> str | None:
+    """Find a paper's arXiv abstract by exact-ish title match; None if absent."""
+    try:
+        pairs = _query({"search_query": f'ti:"{title}"', "max_results": "5"})
+    except Exception as exc:
+        logger.warning("arxiv title search failed for %r: %s", title[:50], exc)
+        return None
+    want = _norm_title(title)
+    for paper, abstract in pairs:
+        got = _norm_title(paper.title)
+        if got == want or got.startswith(want) or want.startswith(got):
+            return abstract or None
+    return None
+
+
+def fetch_landing_abstract(url: str) -> str | None:
+    """Best-effort abstract extraction from a paper's landing page (meta tags, ACL div)."""
+    if not url.startswith("http"):
+        return None
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (paper-metadata-fetch)"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            html = r.read().decode("utf-8", errors="replace")
+    except Exception as exc:
+        logger.warning("landing fetch failed for %s: %s", url[:60], exc)
+        return None
+    for pattern in (
+        r'name="citation_abstract"\s+content="([^"]{100,})"',
+        r'property="og:description"\s+content="([^"]{100,})"',
+        r'class="[^"]*acl-abstract[^"]*"[^>]*>\s*(?:<[^>]+>)*([^<]{100,})',
+    ):
+        m = re.search(pattern, html, re.DOTALL)
+        if m:
+            import html as _html
+            return re.sub(r"\s+", " ", _html.unescape(m.group(1))).strip()
+    return None
+
+
+def ensure_primary_abstracts(papers: list[Paper]) -> dict[str, str]:
+    """Primary-source abstracts for any papers: arXiv id -> arXiv title search ->
+    landing page. Results cached in the sidecar under each paper's id."""
+    cache = ensure_abstracts([p.id for p in papers])
+    changed = False
+    for p in papers:
+        if p.id in cache or ARXIV_ID.match(p.id):
+            continue
+        ab = search_arxiv_by_title(p.title)
+        time.sleep(_SLEEP_S)
+        if not ab:
+            ab = fetch_landing_abstract(p.links.get("paper", ""))
+        if ab:
+            cache[p.id] = ab
+            changed = True
+            logger.info("recovered abstract for: %s", p.title[:60])
+        else:
+            logger.info("no primary abstract found: %s", p.title[:60])
+    if changed:
+        storage.save_abstracts(cache)
+    return cache
+
+
+# ── Keyword pre-filter ────────────────────────────────────────────────────────
+
+@lru_cache(maxsize=4)
+def _keyword_regex(keywords: tuple[str, ...]) -> re.Pattern:
+    alts = "|".join(re.escape(k.lower()) for k in keywords)
+    return re.compile(r"\b(?:" + alts + r")\b")
+
+
+def keyword_hit(text: str, keywords: list[str]) -> bool:
+    """Case-insensitive whole-word/phrase match of any keyword in the text."""
+    return bool(_keyword_regex(tuple(keywords)).search(text.lower()))
+
+
+# ── The two sources ───────────────────────────────────────────────────────────
+
+def crawl(days_back: int | None = None) -> list[Paper]:
+    """Fresh keyword-matching papers from the configured arXiv categories.
+    Returns candidates only; the pipeline filters against known ids."""
+    cfg = config.load()["arxiv"]
+    days = days_back if days_back is not None else cfg.get("days_back", 2)
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
+    keywords = cfg["keywords"]
+    found: dict[str, tuple[Paper, str]] = {}
+    for cat in cfg["categories"]:
+        try:
+            pairs = _query({
+                "search_query": f"cat:{cat}", "sortBy": "submittedDate",
+                "sortOrder": "descending", "max_results": str(cfg.get("max_results", 200)),
+            })
+        except Exception as exc:
+            logger.warning("crawl %s failed: %s", cat, exc)
+            time.sleep(_SLEEP_S)
+            continue
+        fresh = hits = 0
+        for paper, abstract in pairs:
+            if paper.published and paper.published < cutoff:
+                continue  # one page is scanned; older entries just fall through
+            fresh += 1
+            if not keyword_hit(paper.title + " " + abstract, keywords):
+                continue
+            hits += 1
+            found.setdefault(paper.id, (paper, abstract))
+        logger.info("crawl %s: %d fresh, %d keyword hits", cat, fresh, hits)
+        time.sleep(_SLEEP_S)
+    _cache_abstracts(list(found.values()))
+    return [p for p, _ in found.values()]
+
+
+def read_inbox() -> list[Paper]:
+    """All arXiv papers linked in the inbox issue's comments (candidates only;
+    the pipeline filters against known ids)."""
+    cfg = config.load()
+    owner, repo = cfg["repo"]["owner"], cfg["repo"]["name"]
+    issue = cfg["inbox"]["issue_number"]
+    raw = subprocess.run(
+        ["gh", "api", "--paginate", f"repos/{owner}/{repo}/issues/{issue}/comments"],
+        capture_output=True, text=True, timeout=120,
+    )
+    if raw.returncode != 0:
+        raise RuntimeError(f"gh api failed: {raw.stderr[:300]}")
+    comments = json.loads(raw.stdout)
+    ids: list[str] = []
+    for c in comments:
+        for m in re.findall(r"arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})", c.get("body", ""), re.I):
+            if m not in ids:
+                ids.append(m)
+    logger.info("inbox: %d unique arXiv ids across %d comments", len(ids), len(comments))
+    return list(fetch_arxiv_papers(ids).values())
+
+
+# ── Link enrichment (approved papers only; cheap and best-effort) ─────────────
+
+def enrich_links(paper: Paper) -> None:
+    """Fill links.github from the Hugging Face papers API when available."""
+    if paper.links.get("github") or not ARXIV_ID.match(paper.id):
+        return
+    try:
+        req = urllib.request.Request(
+            f"https://huggingface.co/api/papers/{paper.id}",
+            headers={"User-Agent": "Mozilla/5.0 (paper-metadata-fetch)"},
+        )
+        with urllib.request.urlopen(req, timeout=15) as r:
+            text = r.read().decode("utf-8", errors="replace")
+        m = re.search(r"https://github\.com/[\w.\-]+/[\w.\-]+", text)
+        if m:
+            paper.links["github"] = m.group(0).rstrip(".")
+            logger.info("enriched github link for %s", paper.id)
+    except Exception:
+        pass  # 404 is the common case; enrichment is strictly best-effort

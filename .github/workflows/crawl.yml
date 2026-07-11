@@ -1,0 +1,52 @@
+# Daily crawl: arXiv + inbox -> classify (Claude subscription) -> one review issue.
+# Writes only data/seen.json and data/abstracts.json; curated data is written by
+# decide.yml after the owner's review.
+name: Daily paper crawl
+
+on:
+  schedule:
+    - cron: "30 6 * * *" # 06:30 UTC daily
+  workflow_dispatch:
+    inputs:
+      days_back:
+        description: "Crawl window in days"
+        required: false
+        default: "2"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml
+          npm install -g @anthropic-ai/claude-code
+
+      - name: Crawl, classify, open review issue
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -m automation.pipeline crawl --days-back "${{ github.event.inputs.days_back || 2 }}"
+
+      - name: Commit pipeline state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seen.json data/abstracts.json
+          if ! git diff --cached --quiet; then
+            git pull --rebase origin main
+            git commit -m "chore(pipeline): daily crawl state"
+            git push
+          fi

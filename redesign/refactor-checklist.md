@@ -48,15 +48,15 @@
 
 ## P1: data sources (parallel with P0)
 
-- [ ] **arXiv categories miss whole branches of the new taxonomy**: add cs.RO
-      (world_physical), cs.AR (hardware), cs.DC + cs.OS (systems).
-- [ ] **Keyword list is old-worldview and noisy**: regenerate per the 23 leaves
-      (add terminal/CLI/shell, embodied/code-as-policy, computer use, AI scientist,
-      theorem proving, CAD; prune pure-noise generics like `agentic`, `tool use`,
-      `vulnerability`); keywords stay a cheap pre-filter.
-- [ ] **Papers-With-Code enricher is dead** (API 302s to HuggingFace; every GitHub
-      link lookup silently fails). Replace with HF Papers API + GitHub search
-      fallback.
+- [x] **arXiv categories miss whole branches of the new taxonomy**: DONE 2026-07-11.
+      config.yaml now crawls cs.SE/AI/CL/LG/PL/CR/RO/AR/OS/DC/DB.
+- [x] **Keyword list is old-worldview and noisy**: DONE 2026-07-11. ~90 whole-phrase
+      keywords regenerated from the 24 leaves (word-boundary matching, so `CAD
+      program` does not match `decade programs`); recall net only, classifier still
+      judges relevance.
+- [x] **Papers-With-Code enricher is dead**: DONE 2026-07-11. Replaced by a
+      best-effort Hugging Face papers-API lookup (sources.enrich_links), run only for
+      approved papers at decide time.
 
 ## P2: flow and hygiene (before or after migration)
 

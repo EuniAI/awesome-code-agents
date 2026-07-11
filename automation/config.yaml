@@ -4,3 +4,124 @@ repo:
   reviewer: Zhaoyang-Chu
 inbox:
   issue_number: 4
+review:
+  label: paper-review
+arxiv:
+  days_back: 2
+  max_results: 200
+  # Category recall net, mapped to the taxonomy branches:
+  # software (cs.SE, cs.PL, cs.CR), agents/models (cs.AI, cs.CL, cs.LG),
+  # worlds and domains (cs.RO robots, cs.AR hardware, cs.OS+cs.DC systems, cs.DB).
+  categories:
+    - cs.SE
+    - cs.AI
+    - cs.CL
+    - cs.LG
+    - cs.PL
+    - cs.CR
+    - cs.RO
+    - cs.AR
+    - cs.OS
+    - cs.DC
+    - cs.DB
+  # Cheap whole-phrase pre-filter on title+abstract (case-insensitive, word
+  # boundaries). Recall net only: the classifier still judges relevance.
+  keywords:
+    # agents for code
+    - code agent
+    - coding agent
+    - software agent
+    - SWE agent
+    - agentic coding
+    - agentic software
+    - vibe coding
+    - code LLM
+    - coding LLM
+    # generation and completion
+    - code generation
+    - code completion
+    - program synthesis
+    - code synthesis
+    - repository-level
+    - repo-level
+    # debugging and issue resolution
+    - SWE-bench
+    - issue resolution
+    - issue resolving
+    - issue reproduction
+    - program repair
+    - automated repair
+    - bug fix
+    - bug localization
+    - fault localization
+    # testing, review, security
+    - test generation
+    - unit test
+    - fuzzing
+    - code review
+    - pull request
+    - vulnerability detection
+    - vulnerability repair
+    - vulnerability localization
+    - secure code
+    # maintenance and comprehension
+    - code translation
+    - code migration
+    - refactoring
+    - code optimization
+    - code performance
+    - code summarization
+    - code comprehension
+    - code understanding
+    - code search
+    - code documentation
+    - environment setup
+    - build repair
+    - build failure
+    # domains: web, db, systems, hardware, cad, graphics, games
+    - screenshot-to-code
+    - design-to-code
+    - UI code
+    - text-to-SQL
+    - text2sql
+    - NL2SQL
+    - SQL generation
+    - GPU kernel
+    - CUDA kernel
+    - kernel generation
+    - Verilog
+    - VHDL
+    - RTL generation
+    - hardware description
+    - chip design
+    - text-to-CAD
+    - CAD program
+    - parametric CAD
+    - SVG generation
+    - visualization code
+    - chart generation
+    # code as action (agency worlds)
+    - code-as-policy
+    - code as policies
+    - code as action
+    - code-as-action
+    - executable code action
+    - CodeAct
+    - terminal agent
+    - CLI agent
+    - command-line agent
+    - shell agent
+    - computer-use agent
+    - web agent
+    - browser agent
+    - Minecraft
+    # research and discovery
+    - machine learning engineering
+    - MLE-bench
+    - AutoML agent
+    - data science agent
+    - data analysis agent
+    - AI scientist
+    - theorem proving
+    - proof assistant
+    - formal verification

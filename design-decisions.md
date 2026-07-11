@@ -3,6 +3,43 @@
 > Durable record of non-trivial design decisions for this repo. Newest first.
 > This repo is English-only — keep every entry in English.
 
+## 2026-07-11: Phase-4 pipeline is event-driven and GitHub-native (3 modules)
+
+The old pipeline's shape (daily crawl cron + HOURLY finalize cron polling for
+approvals + a stateful processed.json) was a server-era design. Rebuilt around what
+GitHub Actions natively provides:
+
+1. EVENT-DRIVEN APPROVAL. `decide.yml` fires on `issue_comment` the moment the
+   reviewer comments on a review issue. The entire poll_approvals concept and the
+   hourly cron are gone; approval latency drops from up-to-an-hour to seconds.
+2. THE REVIEW ISSUE CARRIES ITS OWN PAYLOAD. The issue body ends with a fenced JSON
+   block holding every proposed paper + its proposal. Decide is stateless: it needs
+   only the issue, recomputes decisions from the full comment history (later commands
+   override earlier ones), and every write is dedup-safe, so re-runs are idempotent.
+3. STATE IS ONE FILE. data/seen.json (ids already proposed or auto-skipped),
+   committed by the workflow. Curated papers live in data/*.yaml; pending proposals
+   live in the open review issue. The old multi-field processed.json state machine is
+   retired. Seeded with the 109 inbox ids + 12 legacy rejected ids; deliberately NOT
+   seeded with the 2076 legacy processed ids, so the owner can always resurrect an old
+   paper through the inbox.
+4. TOKEN ISOLATION. Only crawl.yml sees the Claude subscription token; decide.yml
+   needs no LLM (calibration whys are templated), so the secret's exposure surface is
+   one workflow. decide.yml also gates on the reviewer's login at the workflow level
+   AND pipeline.decide re-validates against config.yaml (defense in depth).
+5. LEARNING LOOP WIRED IN. Every `/edit category=` correction auto-appends an
+   owner-labeled example to calibration.json. Rejects add no example (a reject can
+   mean low quality, not out of scope; automating that would poison the example set).
+6. gh CLI EVERYWHERE. No hand-rolled GitHub REST client; `gh` is preinstalled on
+   runners with GITHUB_TOKEN injected, and it is already authenticated locally.
+7. Modules: sources.py (all arXiv/network logic, single home; migrate.py now imports
+   from it), reviewflow.py (issue protocol), pipeline.py (crawl/decide entrypoints).
+   The dead Papers-With-Code enricher is replaced by a best-effort Hugging Face
+   papers-API lookup, run only for approved papers at decide time.
+
+Validated before building: `claude -p` authenticates in a clean empty-HOME
+environment with only ANTHROPIC_AUTH_TOKEN set (the exact shape of an Actions
+runner), on claude 2.1.165 with a setup-token credential.
+
 ## 2026-07-11: owner rulings become calibration examples, not hard overrides
 
 The string-match override list (RULING_OVERRIDES in migrate.py) pinned specific papers

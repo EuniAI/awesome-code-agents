@@ -103,6 +103,29 @@ def newest_first(papers: list[Paper]) -> list[Paper]:
     return sorted(papers, key=key, reverse=True)
 
 
+# ── Seen ids (pipeline state) ─────────────────────────────────────────────────
+# The whole pipeline state is one committed file: ids the pipeline has already
+# handled (proposed for review or auto-skipped as out of scope). Curated papers
+# live in the data files; pending proposals live in the open review issue.
+
+def _seen_path(data_dir: Path = DATA_DIR) -> Path:
+    return data_dir / "seen.json"
+
+
+def load_seen(data_dir: Path = DATA_DIR) -> set[str]:
+    path = _seen_path(data_dir)
+    if not path.exists():
+        return set()
+    return set(json.loads(path.read_text(encoding="utf-8")))
+
+
+def save_seen(seen: set[str], data_dir: Path = DATA_DIR) -> None:
+    data_dir.mkdir(parents=True, exist_ok=True)
+    _seen_path(data_dir).write_text(
+        json.dumps(sorted(seen), indent=1) + "\n", encoding="utf-8"
+    )
+
+
 # ── Abstract sidecar ──────────────────────────────────────────────────────────
 # Raw source material (id -> abstract), kept out of the human-facing curated YAML.
 # Fetched once, reused forever: re-classification, golden-set evals, future search.

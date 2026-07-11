@@ -17,14 +17,17 @@ from __future__ import annotations
 import argparse
 import logging
 import re
-import time
-import urllib.parse
-import urllib.request
-import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from automation import classify, storage
 from automation.models import Classification, Paper
+from automation.sources import (  # all arXiv/network logic lives in sources
+    ARXIV_ID as _ARXIV_ID,
+    ensure_abstracts,
+    ensure_primary_abstracts,
+    fetch_arxiv_papers,
+    fetch_published,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -32,58 +35,11 @@ _REPO_ROOT = Path(__file__).resolve().parents[1]
 LEGACY_DATA = _REPO_ROOT / "_legacy" / "data"
 REVIEW_DIR = _REPO_ROOT / "redesign" / "migration"
 
-_ARXIV_ID = re.compile(r"^\d{4}\.\d{4,5}$")
-_ATOM = {"a": "http://www.w3.org/2005/Atom"}
-
 
 # ── Legacy corpus access ──────────────────────────────────────────────────────
 
 def load_legacy(old_key: str) -> list[Paper]:
     return storage.load(old_key, data_dir=LEGACY_DATA)
-
-
-# ── Abstracts: fetch once, reuse forever ──────────────────────────────────────
-
-def ensure_abstracts(ids: list[str]) -> dict[str, str]:
-    """Return id->abstract for arXiv ids, fetching missing ones into the sidecar."""
-    cache = storage.load_abstracts()
-    missing = [i for i in ids if _ARXIV_ID.match(i) and i not in cache]
-    for chunk_start in range(0, len(missing), 50):
-        chunk = missing[chunk_start:chunk_start + 50]
-        url = "https://export.arxiv.org/api/query?max_results=100&id_list=" + ",".join(chunk)
-        logger.info("fetching %d abstracts from arXiv", len(chunk))
-        with urllib.request.urlopen(url, timeout=60) as r:
-            root = ET.fromstring(r.read())
-        for entry in root.findall("a:entry", _ATOM):
-            eid = entry.find("a:id", _ATOM).text or ""
-            m = re.search(r"abs/(\d{4}\.\d{4,5})", eid)
-            summary = entry.find("a:summary", _ATOM)
-            if m and summary is not None:
-                cache[m.group(1)] = re.sub(r"\s+", " ", summary.text or "").strip()
-        time.sleep(3)  # arXiv rate courtesy
-    if missing:
-        storage.save_abstracts(cache)
-    return cache
-
-
-def fetch_published(ids: list[str]) -> dict[str, str]:
-    """id -> first-publication date (arXiv v1 <published>), YYYY-MM-DD."""
-    dates: dict[str, str] = {}
-    arxiv_ids = [i for i in ids if _ARXIV_ID.match(i)]
-    for start in range(0, len(arxiv_ids), 50):
-        chunk = arxiv_ids[start:start + 50]
-        url = "https://export.arxiv.org/api/query?max_results=100&id_list=" + ",".join(chunk)
-        logger.info("fetching %d publication dates from arXiv", len(chunk))
-        with urllib.request.urlopen(url, timeout=60) as r:
-            root = ET.fromstring(r.read())
-        for entry in root.findall("a:entry", _ATOM):
-            eid = entry.find("a:id", _ATOM).text or ""
-            m = re.search(r"abs/(\d{4}\.\d{4,5})", eid)
-            pub = entry.find("a:published", _ATOM)
-            if m and pub is not None and pub.text:
-                dates[m.group(1)] = pub.text[:10]
-        time.sleep(3)
-    return dates
 
 
 def backfill_dates() -> None:
@@ -110,79 +66,6 @@ def _classify_input(paper: Paper, abstracts: dict[str, str]) -> dict[str, str]:
     # Primary sources only: never feed the old pipeline's second-hand summaries.
     abstract = abstracts.get(paper.id, "") or "(abstract unavailable; judge from the title alone)"
     return {"id": paper.id, "title": paper.title, "abstract": abstract}
-
-
-def _norm_title(t: str) -> str:
-    return re.sub(r"[^a-z0-9]", "", t.lower())
-
-
-def search_arxiv_by_title(title: str) -> str | None:
-    """Find a paper's arXiv abstract by exact-ish title match; None if absent."""
-    q = urllib.parse.quote(f'ti:"{title}"')
-    url = f"https://export.arxiv.org/api/query?search_query={q}&max_results=5"
-    try:
-        with urllib.request.urlopen(url, timeout=30) as r:
-            root = ET.fromstring(r.read())
-    except Exception as exc:
-        logger.warning("arxiv title search failed for %r: %s", title[:50], exc)
-        return None
-    want = _norm_title(title)
-    for entry in root.findall("a:entry", _ATOM):
-        got = _norm_title(entry.find("a:title", _ATOM).text or "")
-        if got == want or got.startswith(want) or want.startswith(got):
-            summary = entry.find("a:summary", _ATOM)
-            if summary is not None and summary.text:
-                return re.sub(r"\s+", " ", summary.text).strip()
-    return None
-
-
-def fetch_landing_abstract(url: str) -> str | None:
-    """Best-effort abstract extraction from a paper's landing page (meta tags, ACL div)."""
-    if not url.startswith("http"):
-        return None
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (paper-metadata-fetch)"})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            html = r.read().decode("utf-8", errors="replace")
-    except Exception as exc:
-        logger.warning("landing fetch failed for %s: %s", url[:60], exc)
-        return None
-    for pattern in (
-        r'name="citation_abstract"\s+content="([^"]{100,})"',
-        r'property="og:description"\s+content="([^"]{100,})"',
-        r'class="[^"]*acl-abstract[^"]*"[^>]*>\s*(?:<[^>]+>)*([^<]{100,})',
-    ):
-        m = re.search(pattern, html, re.DOTALL)
-        if m:
-            import html as _html
-            return re.sub(r"\s+", " ", _html.unescape(m.group(1))).strip()
-    return None
-
-
-def ensure_primary_abstracts(papers: list[Paper]) -> dict[str, str]:
-    """Primary-source abstracts for any papers: arXiv id -> arXiv title search ->
-    landing page. Results cached in the sidecar under each paper's id."""
-    cache = storage.load_abstracts()
-    arxiv_ids = [p.id for p in papers if _ARXIV_ID.match(p.id)]
-    if any(i not in cache for i in arxiv_ids):
-        cache = ensure_abstracts(arxiv_ids)
-    changed = False
-    for p in papers:
-        if p.id in cache or _ARXIV_ID.match(p.id):
-            continue
-        ab = search_arxiv_by_title(p.title)
-        time.sleep(3)
-        if not ab:
-            ab = fetch_landing_abstract(p.links.get("paper", ""))
-        if ab:
-            cache[p.id] = ab
-            changed = True
-            logger.info("recovered abstract for: %s", p.title[:60])
-        else:
-            logger.info("no primary abstract found: %s", p.title[:60])
-    if changed:
-        storage.save_abstracts(cache)
-    return cache
 
 
 # ── Calibration batch ─────────────────────────────────────────────────────────
@@ -483,44 +366,6 @@ def reclassify_leaves(keys: list[str], model: str = classify.MODEL) -> Path:
         + "\n".join(rows) + "\n",
         encoding="utf-8",
     )
-    return out
-
-
-def fetch_arxiv_papers(ids: list[str]) -> dict[str, Paper]:
-    """Build Paper objects from the arXiv API (title, authors, venue, v1 date), and
-    cache abstracts in the sidecar. venue is 'arXiv YYYY/MM' from first publication."""
-    cache = storage.load_abstracts()
-    out: dict[str, Paper] = {}
-    changed = False
-    arxiv_ids = [i for i in ids if _ARXIV_ID.match(i)]
-    for start in range(0, len(arxiv_ids), 50):
-        chunk = arxiv_ids[start:start + 50]
-        url = "https://export.arxiv.org/api/query?max_results=100&id_list=" + ",".join(chunk)
-        logger.info("fetching metadata for %d papers from arXiv", len(chunk))
-        with urllib.request.urlopen(url, timeout=60) as r:
-            root = ET.fromstring(r.read())
-        for entry in root.findall("a:entry", _ATOM):
-            eid = entry.find("a:id", _ATOM).text or ""
-            m = re.search(r"abs/(\d{4}\.\d{4,5})", eid)
-            if not m:
-                continue
-            pid = m.group(1)
-            title = re.sub(r"\s+", " ", (entry.find("a:title", _ATOM).text or "")).strip()
-            authors = [a.find("a:name", _ATOM).text or "" for a in entry.findall("a:author", _ATOM)]
-            pub = entry.find("a:published", _ATOM)
-            published = (pub.text or "")[:10] if pub is not None else ""
-            venue = f"arXiv {published[:4]}/{published[5:7]}" if published else "arXiv"
-            summary = entry.find("a:summary", _ATOM)
-            if summary is not None and summary.text and pid not in cache:
-                cache[pid] = re.sub(r"\s+", " ", summary.text).strip()
-                changed = True
-            out[pid] = Paper(
-                id=pid, title=title, authors=authors, venue=venue, published=published,
-                links={"paper": f"https://arxiv.org/abs/{pid}"},
-            )
-        time.sleep(3)
-    if changed:
-        storage.save_abstracts(cache)
     return out
 
 
