@@ -137,6 +137,72 @@
     paper: https://arxiv.org/abs/2510.04905
     github: ''
     website: ''
+- id: '2510.02387'
+  title: 'CWM: An Open-Weights LLM for Research on Code Generation with World Models'
+  authors:
+  - FAIR CodeGen team
+  - Jade Copet
+  - Quentin Carbonneaux
+  - Gal Cohen
+  - Jonas Gehring
+  - Jacob Kahn
+  - Jannik Kossen
+  - Felix Kreuk
+  - Emily McMilin
+  - Michel Meyer
+  - Yuxiang Wei
+  - David Zhang
+  - Kunhao Zheng
+  - Jordi Armengol-Estapé
+  - Pedram Bashiri
+  - Maximilian Beck
+  - Pierre Chambon
+  - Abhishek Charnalia
+  - Chris Cummins
+  - Juliette Decugis
+  - Zacharias V. Fisches
+  - François Fleuret
+  - Fabian Gloeckle
+  - Alex Gu
+  - Michael Hassid
+  - Daniel Haziza
+  - Badr Youbi Idrissi
+  - Christian Keller
+  - Rahul Kindi
+  - Hugh Leather
+  - Gallil Maimon
+  - Aram Markosyan
+  - Francisco Massa
+  - Pierre-Emmanuel Mazaré
+  - Vegard Mella
+  - Naila Murray
+  - Keyur Muzumdar
+  - Peter O'Hearn
+  - Matteo Pagliardini
+  - Dmitrii Pedchenko
+  - Tal Remez
+  - Volker Seeker
+  - Marco Selvi
+  - Oren Sultan
+  - Sida Wang
+  - Luca Wehrstedt
+  - Ori Yoran
+  - Lingming Zhang
+  - Taco Cohen
+  - Yossi Adi
+  - Gabriel Synnaeve
+  venue: arXiv 2025/09
+  category: software_code_generation
+  published: '2025-09-30'
+  tags:
+  - model
+  summary: CWM is a 32B open-weights LLM mid-trained on Python interpreter and agentic Docker/SWE trajectories with RL across
+    coding, math, and multi-turn software engineering environments. It serves as a generalist testbed for code-world-model
+    research, evaluated on SWE-bench Verified, LiveCodeBench, and math benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2510.02387
+    github: https://github.com/facebookresearch/cwm
+    website: ''
 - id: '2509.16198'
   title: 'RPG: A Repository Planning Graph for Unified and Scalable Codebase Generation'
   authors:

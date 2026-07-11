@@ -485,12 +485,68 @@ def refetch_reclassify(model: str = classify.MODEL) -> Path:
     return out
 
 
+def reclassify_leaves(keys: list[str], model: str = classify.MODEL) -> Path:
+    """Re-classify the current members of the given leaves under the live rules and
+    apply the resulting moves (to any leaf, or OUT). Uses primary abstracts already in
+    the sidecar; fills any gaps first. Writes a before/after review sheet."""
+    from automation import badges, render, taxonomy
+
+    leaves = taxonomy.load(force=True).leaf_keys()
+    store = {k: storage.load(k) for k in leaves}
+    subjects = [(k, p) for k in keys for p in store[k]]
+    placement = {p.id: k for k, p in subjects}
+    logger.info("reclassifying %d papers from %s", len(subjects), ", ".join(keys))
+
+    cache = ensure_primary_abstracts([p for _, p in subjects])
+    papers = [p for _, p in subjects]
+    items = [_classify_input(p, cache) for p in papers]
+    verdicts = classify.classify(items, model=model)
+
+    rows: list[str] = []
+    for p, v in zip(papers, verdicts):
+        before = placement[p.id]
+        after = (v.category if v.relevant else None) or "OUT"
+        if v.failed:
+            rows.append(f"| {before} | FAILED | {p.title[:62].replace('|','/')} | retry |")
+            continue
+        if after != before:
+            store[before] = [x for x in store[before] if x.id != p.id]
+            if after != "OUT":
+                p.category, p.tags = v.category, v.tags
+                if v.summary:
+                    p.summary = v.summary
+                store[after].append(p)
+        mark = " <- CHANGED" if after != before else ""
+        rows.append(f"| {before} | **{after}**{mark} | {p.title[:62].replace('|','/')} | "
+                    f"{v.reason[:95].replace('|','/')} |")
+
+    for k in leaves:
+        storage.save(k, storage.newest_first(store[k]))
+    render.main()
+    badges.refresh()
+
+    REVIEW_DIR.mkdir(parents=True, exist_ok=True)
+    out = REVIEW_DIR / "reclass-general.md"
+    changed = sum(1 for r in rows if "CHANGED" in r)
+    out.write_text(
+        f"# Re-classification under the benchmark-routing rule: {', '.join(keys)}\n\n"
+        f"{len(subjects)} papers re-classified with the live taxonomy rules "
+        f"(benchmark routing dominates generalist framing; foundation_models split out). "
+        f"{changed} moved.\n\n"
+        "| before | after | title | reason |\n|---|---|---|---|\n"
+        + "\n".join(rows) + "\n",
+        encoding="utf-8",
+    )
+    return out
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(message)s")
     parser = argparse.ArgumentParser(description="Legacy corpus migration tooling")
-    parser.add_argument("command", choices=["calibrate", "run", "dates", "refetch"])
+    parser.add_argument("command", choices=["calibrate", "run", "dates", "refetch", "reclass"])
+    parser.add_argument("keys", nargs="*", help="leaf keys to reclassify (for reclass)")
     args = parser.parse_args()
     if args.command == "calibrate":
         print(f"review sheet written: {run_calibration()}")
@@ -498,6 +554,9 @@ def main() -> None:
         print(f"review sheet written: {run_full()}")
     elif args.command == "refetch":
         print(f"review sheet written: {refetch_reclassify()}")
+    elif args.command == "reclass":
+        keys = args.keys or ["software_general", "world_general"]
+        print(f"review sheet written: {reclassify_leaves(keys)}")
     else:
         backfill_dates()
 
