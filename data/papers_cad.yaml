@@ -230,8 +230,11 @@
   - Matthew Gombolay
   venue: ICLR 2025
   category: cad
-  summary: This paper uses vision-language models to generate CAD code for 3D designs from visual input. The deliverable is
-    executable CAD program code representing a 3D model.
+  tags:
+  - benchmark
+  summary: CADCodeVerify iteratively verifies and improves 3D objects generated from CAD code using VLM-generated validation
+    questions and visual feedback. The paper also introduces CADPrompt, a benchmark of 200 natural language prompts paired
+    with expert CAD scripting code.
   links:
     paper: https://openreview.net/forum?id=BLWaTeucYX
     github: https://github.com/Kamel773/CAD_Code_Generation
@@ -247,8 +250,9 @@
   - Xiangdong Zhou
   venue: CVPR 2025
   category: cad
-  summary: CAD-Llama leverages large language models to generate parametric 3D CAD models, adapting LLMs for CAD program synthesis.
-    The deliverable is parametric CAD code.
+  summary: CAD-Llama enhances pretrained LLMs to generate parametric CAD 3D models by translating CAD command sequences into
+    a structured code-like format (SPCC) and applying adaptive pretraining plus instruction tuning. It outperforms prior autoregressive
+    and LLM baselines on parametric CAD generation.
   links:
     paper: https://openaccess.thecvf.com/content/CVPR2025/html/Li_CAD-Llama_Leveraging_Large_Language_Models_for_Computer-Aided_Design_Parametric_3D_CVPR_2025_paper.html
     github: ''
@@ -263,8 +267,9 @@
   - Jiajun Wu
   venue: CVPR 2025
   category: cad
-  summary: The Scene Language represents 3D scenes using a combination of programs, natural-language words, and embeddings,
-    enabling structured scene construction as code. It targets generating and manipulating 3D scenes via this hybrid representation.
+  summary: The Scene Language represents visual scenes via programs, natural-language words, and embeddings, inferred training-free
+    from pretrained LLMs to enable high-quality 3D/4D scene generation. It supports precise control and editing of scene structure
+    compared to scene graphs.
   links:
     paper: https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_The_Scene_Language_Representing_Scenes_with_Programs_Words_and_Embeddings_CVPR_2025_paper.html
     github: https://github.com/zzyunzhi/scene-language
@@ -281,8 +286,9 @@
   category: cad
   tags:
   - benchmark
-  summary: BlenderGym is a benchmark evaluating foundation model systems on graphics/3D scene editing tasks performed via
-    Blender scripting. It measures agents' ability to generate code that edits 3D scenes, materials, and geometry.
+  summary: BlenderGym is a benchmark for evaluating VLM systems on code-based 3D graphics editing tasks in Blender, testing
+    generation and verification strategies. It reveals current VLM systems struggle with tasks easy for human Blender users
+    and studies inference-scaling tradeoffs.
   links:
     paper: https://openaccess.thecvf.com/content/CVPR2025/html/Gu_BlenderGym_Benchmarking_Foundational_Model_Systems_for_Graphics_Editing_CVPR_2025_paper.html
     github: https://github.com/richard-guyunqi/BlenderGym-Open
@@ -300,8 +306,11 @@
   - Yuxiao Dong
   venue: ACL 2025
   category: cad
-  summary: SceneGenAgent uses a coding agent to generate precise industrial 3D scenes from specifications. The system produces
-    scene-construction code to meet precise industrial requirements.
+  tags:
+  - training-data
+  summary: SceneGenAgent is an LLM-based coding agent generating precise industrial 3D scenes via C# code, using structured
+    layout verification and iterative refinement. The authors also release SceneInstruct, a fine-tuning dataset for open-source
+    LLMs to power the agent.
   links:
     paper: https://aclanthology.org/2025.acl-long.873/
     github: ''
@@ -317,8 +326,9 @@
   - Stephen Gould
   venue: 3DV 2025
   category: cad
-  summary: 3D-GPT uses large language models to perform procedural 3D modeling, generating code that constructs 3D content
-    from natural language descriptions. The approach targets automated procedural generation of 3D models via LLM-driven code.
+  summary: 3D-GPT uses multiple LLM agents (task dispatch, conceptualization, modeling) to drive instruction-based procedural
+    3D modeling, extracting parameters to interface with 3D software like Blender for asset creation. It demonstrates reliable
+    scene generation and animation guidance.
   links:
     paper: https://ieeexplore.ieee.org/document/11125634
     github: https://github.com/Chuny1/3DGPT
@@ -396,8 +406,9 @@
   category: cad
   tags:
   - benchmark
-  summary: CADTalk proposes an algorithm and benchmark for adding semantic comments to CAD programs, aiding understanding
-    of procedurally generated CAD code. It targets comprehension/documentation of CAD-domain code artifacts.
+  summary: CADTalk segments and semantically labels CAD program code blocks by combining program parsing with visual-semantic
+    analysis from vision-language models, improving CAD code comprehension. It introduces a benchmark dataset of annotated
+    CAD programs with ground-truth semantic comments.
   links:
     paper: https://openaccess.thecvf.com/content/CVPR2024/html/Yuan_CADTalk_An_Algorithm_and_Benchmark_for_Semantic_Commenting_of_CAD_CVPR_2024_paper.html
     github: https://github.com/YYYYYHC/CADTalk
@@ -415,8 +426,9 @@
   - Alireza Fathi
   venue: ICML 2024
   category: cad
-  summary: SceneCraft is an LLM agent that synthesizes 3D indoor scenes by writing Blender Python code from layout specifications.
-    The deliverable is executable code that constructs a 3D scene.
+  summary: SceneCraft is an LLM agent that converts text descriptions into Blender-executable Python scripts to synthesize
+    complex 3D scenes, using scene graphs, spatial constraints, and vision-language feedback for iterative refinement. It
+    also builds a reusable library of learned script functions.
   links:
     paper: https://dl.acm.org/doi/abs/10.5555/3692070.3692846
     github: ''

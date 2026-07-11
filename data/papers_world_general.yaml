@@ -377,33 +377,18 @@
     paper: https://arxiv.org/abs/2401.00812
     github: ''
     website: ''
-- id: https://proceedings.neurips.cc/paper_files/paper/2024/hash/61cce86d180b1184949e58939c4f983d-Abstract-Datasets_and_Benchmarks_Track.html
-  title: 'APIGen: Automated PIpeline for Generating Verifiable and Diverse Function-Calling Datasets'
+- id: https://openreview.net/forum?id=QGJSXMhVaL
+  title: 'WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment'
   authors:
-  - Zuxin Liu
-  - Thai Hoang
-  - Jianguo Zhang
-  - Ming Zhu
-  - Tian Lan
-  - Shirley Kokane
-  - Juntao Tan
-  - Weiran Yao
-  - Zhiwei Liu
-  - Yihao Feng
-  - Rithesh Murthy
-  - Liangwei Yang
-  - Silvio Savarese
-  - Juan Carlos Niebles
-  - Huan Wang
-  - Shelby Heinecke
-  - Caiming Xiong
-  venue: NeurIPS 2024 Datasets and Benchmarks Track
+  - Hao Tang
+  - Darren Yan Key
+  - Kevin Ellis
+  venue: NeurIPS 2024
   category: world_general
-  tags:
-  - training-data
-  summary: APIGen is an automated pipeline for generating verifiable and diverse function-calling datasets to train agents
-    in tool invocation. It emphasizes correctness verification of generated function calls across many domains.
+  summary: WorldCoder is a model-based LLM agent that builds Python world models from environment interactions, balancing
+    explanatory accuracy with optimistic reward-seeking for planning. It is more sample- and compute-efficient than deep RL
+    and ReAct-style agents and transfers knowledge across environments via code editing.
   links:
-    paper: https://proceedings.neurips.cc/paper_files/paper/2024/hash/61cce86d180b1184949e58939c4f983d-Abstract-Datasets_and_Benchmarks_Track.html
-    github: ''
-    website: https://apigen-pipeline.github.io/
+    paper: https://openreview.net/forum?id=QGJSXMhVaL
+    github: https://github.com/haotang1995/WorldCoder
+    website: https://haotang1995.github.io/projects/worldcoder

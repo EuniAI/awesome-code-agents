@@ -51,7 +51,7 @@
 <!-- START PAPERS SUMMARY -->
 🔥 **We are actively tracking the frontier research of code agents.**<br>
 🧹 *We periodically curate our collection, retaining only published papers and interesting arXiv preprints from the last six months.*<br>
-📚 *Currently collected:* **`414` papers.** *(Last update: 2026-07-11)*
+📚 *Currently collected:* **`408` papers.** *(Last update: 2026-07-11)*
 <!-- END PAPERS SUMMARY -->
 
 <!-- NAV:BEGIN -->
@@ -481,11 +481,11 @@
 
 - **CodeV: Issue Resolving with Visual Data.**  
   _Linhao Zhang, Daoguang Zan, Quanshun Yang, Zhirong Huang, Dong Chen, Bo Shen, Tianyu Liu, Yongshun Gong, Huang Pengjie, Xudong Lu, et al._ ACL 2025 Findings.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2025.findings-acl.384/) [![GitHub Stars](https://img.shields.io/github/stars/luolin101/CodeV?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/luolin101/CodeV)
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2025.findings-acl.384/) [![GitHub Stars](https://img.shields.io/github/stars/luolin101/CodeV?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/luolin101/CodeV) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
 - **SWE-Bench+: Enhanced Coding Benchmark for LLMs.**  
   _Reem Aleithan, Haoran Xue, Mohammad Mahdi Mohajer, Elijah Nnorom, Gias Uddin, Song Wang._ arXiv 2025.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=R40rS2afQ3) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=R40rS2afQ3) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge)
 
 - **Auto-SWE-Bench: A Framework for the Scalable Generation of Software Engineering Benchmark from Open-Source Repositories.**  
   _Anonymous Authors._ 2025.  
@@ -522,6 +522,10 @@
 - **Integrating Various Software Artifacts for Better LLM-based Bug Localization and Program Repair.**  
   _Qiong Feng, Xiaotian Ma, Jiayi Sheng, Ziyuan Feng, Wei Song, Peng Liang._ TOSEM 2025.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://dl.acm.org/doi/abs/10.1145/3770581)
+
+- **Automated Benchmark Generation for Repository-Level Coding Tasks.**  
+  _Konstantinos Vergopoulos, Mark Niklas Müller, Martin Vechev._ ICML 2025.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=qnE2m3pIAb) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
 - **Training Software Engineering Agents and Verifiers with SWE-Gym.**  
   _Jiayi Pan, Xingyao Wang, Graham Neubig, Navdeep Jaitly, Heng Ji, Alane Suhr, Yizhe Zhang._ ICML 2025.  
@@ -573,15 +577,15 @@
 
 - **Evaluating Diverse Large Language Models for Automatic and General Bug Reproduction.**  
   _Sungmin Kang, Juyeon Yoon, Nargiz Askarbekkyzy, Shin Yoo._ IEEE Transactions on Software Engineering 2024.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://ieeexplore.ieee.org/document/10664637) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge)
-
-- **R2E: Turning any Github Repository into a Programming Agent Environment.**  
-  _Naman Jain, Manish Shetty, Tianjun Zhang, King Han, Koushik Sen, Ion Stoica._ ICML 2024.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://proceedings.mlr.press/v235/jain24c.html) [![GitHub Stars](https://img.shields.io/github/stars/r2e-project/r2e?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/r2e-project/r2e) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge) ![Training Data](https://img.shields.io/badge/Training_Data-8AB17D?style=for-the-badge)
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://ieeexplore.ieee.org/document/10664637) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
 - **MAGIS: LLM-Based Multi-Agent Framework for GitHub Issue Resolution.**  
   _Wei Tao, Yucheng Zhou, Yanlin Wang, Wenqiang Zhang, Hongyu Zhang, Yu Cheng._ NeurIPS 2024.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://proceedings.neurips.cc/paper_files/paper/2024/hash/5d1f02132ef51602adf07000ca5b6138-Abstract-Conference.html) [![GitHub Stars](https://img.shields.io/github/stars/co-evolve-lab/magis?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/co-evolve-lab/magis)
+
+- **MASAI: Modular Architecture for Software-engineering AI Agents.**  
+  _Nalin Wadhwa, Atharv Sonwane, Daman Arora, Abhav Mehrotra, Saiteja Utpala, Ramakrishna B. Bairi, Aditya Kanade, Nagarajan Natarajan._ NeurIPS 2024 Workshop.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=NSINt8lLYB)
 
 - **SWE-bench: Can Language Models Resolve Real-World GitHub Issues?**  
   _Carlos E. Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir Press, Karthik Narasimhan._ ICLR 2024.  
@@ -659,17 +663,13 @@
   _Yaoxiang Wang, Haoling Li, Xin Zhang, Jie Wu, Xiao Liu, Wenxiang Hu, Zhongxin Guo, Yangyu Huang, Ying Xin, Yujiu Yang, et al._ ICML 2025.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.04694) ![Training Data](https://img.shields.io/badge/Training_Data-8AB17D?style=for-the-badge)
 
-- **Automated Benchmark Generation for Repository-Level Coding Tasks.**  
-  _Konstantinos Vergopoulos, Mark Niklas Müller, Martin Vechev._ ICML 2025.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=qnE2m3pIAb) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
-
 - **Improving Cursor Tab with online RL.**  
   _Jacob Jackson, Phillip Kravtsov, Shomil Jain._ 2025.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://cursor.com/blog/tab-rl)
 
 - **On the Impacts of Contexts on Repository-Level Code Generation.**  
   _Nam Le Hai, Dung Manh Nguyen, Nghi D. Q. Bui._ NAACL 2025 Findings.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2025.findings-naacl.82/) [![GitHub Stars](https://img.shields.io/github/stars/FSoft-AI4Code/RepoExec?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/FSoft-AI4Code/RepoExec) [![Website](https://img.shields.io/badge/REPOEXEC-blue?style=for-the-badge)](https://fsoft-ai4code.github.io/repoexec/) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge)
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2025.findings-naacl.82/) [![GitHub Stars](https://img.shields.io/github/stars/FSoft-AI4Code/RepoExec?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/FSoft-AI4Code/RepoExec) [![Website](https://img.shields.io/badge/REPOEXEC-blue?style=for-the-badge)](https://fsoft-ai4code.github.io/repoexec/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
 - **CodeSIM: Multi-Agent Code Generation and Problem Solving through Simulation-Driven Planning and Debugging.**  
   _Md. Ashraful Islam, Mohammed Eunus Ali, Md Rizwan Parvez._ NAACL 2025 Findings.  
@@ -685,7 +685,11 @@
 
 - **Commit0: Library Generation from Scratch.**  
   _Wenting Zhao, Nan Jiang, Celine Lee, Justin T Chiu, Claire Cardie, Matthias Gallé, Alexander M Rush._ ICLR 2025.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=MMwaQEVsAg) [![GitHub Stars](https://img.shields.io/github/stars/commit-0/commit0?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/commit-0/commit0) [![Website](https://img.shields.io/badge/COMMIT--0-blue?style=for-the-badge)](https://commit-0.github.io/)
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=MMwaQEVsAg) [![GitHub Stars](https://img.shields.io/github/stars/commit-0/commit0?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/commit-0/commit0) [![Website](https://img.shields.io/badge/COMMIT--0-blue?style=for-the-badge)](https://commit-0.github.io/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
+
+- **RepoST: Scalable Repository-Level Coding Environment Construction with Sandbox Testing.**  
+  _Yiqing Xie, Alex Xie, Divyanshu Sheth, Pengfei Liu, Daniel Fried, Carolyn Rose._ COLM 2025.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=2txrMBpw3q#discussion) [![GitHub Stars](https://img.shields.io/github/stars/yiqingxyq/RepoST?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/yiqingxyq/RepoST) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge) ![Training Data](https://img.shields.io/badge/Training_Data-8AB17D?style=for-the-badge)
 
 - **FullStack Bench: Evaluating LLMs as Full Stack Coders.**  
   _Bytedance-Seed-Foundation-Code-Team: Yao Cheng, Jianfeng Chen, Jie Chen, Li Chen, Liyu Chen, Wentao Chen, Zhengyu Chen, Shijie Geng, Aoyan Li, Bo Li, et al._ arXiv 2024/11.  
@@ -751,10 +755,6 @@
   _Tianyang Liu, Canwen Xu, Julian McAuley._ ICLR 2024.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=pPjZIOuQuF) [![GitHub Stars](https://img.shields.io/github/stars/Leolty/repobench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Leolty/repobench) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-- **Experiential Co-Learning of Software-Developing Agents.**  
-  _Chen Qian, Yufan Dang, Jiahao Li, Wei Liu, Zihao Xie, YiFei Wang, Weize Chen, Cheng Yang, Xin Cong, Xiaoyin Che, et al._ ACL 2024.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2024.acl-long.305/) [![GitHub Stars](https://img.shields.io/github/stars/OpenBMB/ChatDev?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenBMB/ChatDev)
-
 - **ChatDev: Communicative Agents for Software Development.**  
   _Chen Qian, Wei Liu, Hongzhang Liu, Nuo Chen, Yufan Dang, Jiahao Li, Cheng Yang, Weize Chen, Yusheng Su, Xin Cong, et al._ ACL 2024.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2024.acl-long.810/) [![GitHub Stars](https://img.shields.io/github/stars/OpenBMB/ChatDev?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenBMB/ChatDev) [![Website](https://img.shields.io/badge/CHATDEV.MODELBEST.CN-blue?style=for-the-badge)](https://chatdev.modelbest.cn/)
@@ -819,17 +819,13 @@
   _Beatriz Souza, Michael Pradel._ ICSE 2025.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.12339)
 
-- **RepoST: Scalable Repository-Level Coding Environment Construction with Sandbox Testing.**  
-  _Yiqing Xie, Alex Xie, Divyanshu Sheth, Pengfei Liu, Daniel Fried, Carolyn Rose._ COLM 2025.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=2txrMBpw3q#discussion) [![GitHub Stars](https://img.shields.io/github/stars/yiqingxyq/RepoST?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/yiqingxyq/RepoST) ![Training Data](https://img.shields.io/badge/Training_Data-8AB17D?style=for-the-badge) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
-
 - **CXXCrafter: An LLM-Based Agent for Automated C/C++ Open Source Software Building.**  
   _Zhengmin Yu, Yuan Zhang, Ming Wen, Yinan Nie, Wenhui Zhang, Min Yang._ FSE 2025.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://dl.acm.org/doi/10.1145/3729386)
 
 - **CompileAgent: Automated Real-World Repo-Level Compilation with Tool-Integrated LLM-based Agent System.**  
   _Li Hu, Guoqiang Chen, Xiuwei Shang, Shaoyin Cheng, Benlong Wu, LiGangyang LiGangyang, Xu Zhu, Weiming Zhang, Nenghai Yu._ ACL 2025.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2025.acl-long.103/)
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2025.acl-long.103/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
 - **CSR-Bench: Benchmarking LLM Agents in Deployment of Computer Science Research Repositories.**  
   _Yijia Xiao, Runhui Wang, Luyang Kong, Davor Golac, Wei Wang._ NAACL 2025.  
@@ -837,7 +833,7 @@
 
 - **GitGoodBench: A Novel Benchmark For Evaluating Agentic Performance On Git.**  
   _Tobias Lindenbauer, Egor Bogomolov, Yaroslav Zharov._ REALM 2025.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2025.realm-1.19/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2025.realm-1.19/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge) ![Training Data](https://img.shields.io/badge/Training_Data-8AB17D?style=for-the-badge)
 
 - **You Name It, I Run It: An LLM Agent to Execute Tests of Arbitrary Projects.**  
   _Islem Bouzenia, Michael Pradel._ ISSTA 2025.  
@@ -923,17 +919,9 @@
   _Xinchen Wang, Pengfei Gao, Chao Peng, Ruida Hu, Cuiyun Gao._ ASE 2025.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.13472) [![GitHub Stars](https://img.shields.io/github/stars/Eshe0922/CodeVisionary?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Eshe0922/CodeVisionary) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-- **Armchair.**  
-  _Armchair._ 2025.  
-  [![GitHub Stars](https://img.shields.io/github/stars/armchr/armchr?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/armchr/armchr)
-
 - **PReview: A Benchmark Dataset for Pull Request Outcomes and Quality Analysis.**  
   _Anonymous Authors._ 2025.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=cdwp8BXTVV) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
-
-- **PR-Agent: An AI-Powered Tool for Automated Pull Request Analysis, Feedback, Suggestions and More!**  
-  _Qodo._ 2024.  
-  [![GitHub Stars](https://img.shields.io/github/stars/qodo-ai/pr-agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/qodo-ai/pr-agent) [![Website](https://img.shields.io/badge/QODO.AI-blue?style=for-the-badge)](https://www.qodo.ai/)
 
 - **CodeAgent: Autonomous Communicative Agents for Code Review.**  
   _Xunzhu Tang, Kisub Kim, Yewei Song, Cedric Lothritz, Bei Li, Saad Ezzini, Haoye Tian, Jacques Klein, Tegawendé F. Bissyandé._ EMNLP 2024.  
@@ -942,10 +930,6 @@
 - **Automating Code Review Activities by Large-Scale Pre-training.**  
   _Zhiyu Li, Shuai Lu, Daya Guo, Nan Duan, Shailesh Jannu, Grant Jenks, Deep Majumder, Jared Green, Alexey Svyatkovskiy, Shengyu Fu, et al._ FSE 2022.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2203.09095) ![Model](https://img.shields.io/badge/Model-E76F51?style=for-the-badge) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
-
-- **Can We Benchmark Code Review Studies? A Systematic Mapping Study of Methodology, Dataset, and Metric.**  
-  _Dong Wang, Yuki Ueda, Raula Gaikovina Kula, Takashi Ishio, Kenichi Matsumoto._ Journal of Systems and Software, 2021, Elsevier.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://www.sciencedirect.com/science/article/abs/pii/S0164121221001060) ![Survey](https://img.shields.io/badge/Survey-2A9D8F?style=for-the-badge)
 
 #### 🔒 Security
 
@@ -1201,11 +1185,7 @@
 
 - **Prompting Large Language Models to Tackle the Full Software Development Lifecycle: A Case Study.**  
   _Bowen Li, Wenhan Wu, Ziwei Tang, Lin Shi, John Yang, Jinyang Li, Shunyu Yao, Chen Qian, Binyuan Hui, Qicheng Zhang, et al._ COLING 2025.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2025.coling-main.502/) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge)
-
-- **Introducing: Devstral 2 and Mistral Vibe CLI.**  
-  _Mistral._ 2025/12.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://mistral.ai/news/devstral-2-vibe-cli) ![Model](https://img.shields.io/badge/Model-E76F51?style=for-the-badge)
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2025.coling-main.502/) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge)
 
 - **Qwen3-Coder: Agentic Coding in the World.**  
   _QwenTeam._ 2025/07.  
@@ -1243,13 +1223,13 @@
   _Michele Tufano, Anisha Agarwal, Jinu Jang, Roshanak Zilouchian Moghaddam, Neel Sundaresan._ arXiv 2024/03.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2403.08299)
 
-- **AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors.**  
-  _Weize Chen, Yusheng Su, Jingwei Zuo, Cheng Yang, Chenfei Yuan, Chi-Min Chan, Heyang Yu, Yaxi Lu, Yi-Hsin Hung, Chen Qian, et al._ ICLR 2024.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=EHg5GDnyq1) [![GitHub Stars](https://img.shields.io/github/stars/OpenBMB/AgentVerse?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenBMB/AgentVerse)
+- **R2E: Turning any Github Repository into a Programming Agent Environment.**  
+  _Naman Jain, Manish Shetty, Tianjun Zhang, King Han, Koushik Sen, Ion Stoica._ ICML 2024.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://proceedings.mlr.press/v235/jain24c.html) [![GitHub Stars](https://img.shields.io/github/stars/r2e-project/r2e?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/r2e-project/r2e) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
-- **MASAI: Modular Architecture for Software-engineering AI Agents.**  
-  _Nalin Wadhwa, Atharv Sonwane, Daman Arora, Abhav Mehrotra, Saiteja Utpala, Ramakrishna B. Bairi, Aditya Kanade, Nagarajan Natarajan._ NeurIPS 2024 Workshop.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=NSINt8lLYB)
+- **Experiential Co-Learning of Software-Developing Agents.**  
+  _Chen Qian, Yufan Dang, Jiahao Li, Wei Liu, Zihao Xie, YiFei Wang, Weize Chen, Cheng Yang, Xin Cong, Xiaoyin Che, et al._ ACL 2024.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2024.acl-long.305/) [![GitHub Stars](https://img.shields.io/github/stars/OpenBMB/ChatDev?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenBMB/ChatDev)
 
 - **InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback.**  
   _John Yang, Akshara Prabhakar, Karthik Narasimhan, Shunyu Yao._ NeurIPS 2023 Datasets & Benchmarks Track.  
@@ -1305,7 +1285,7 @@
 
 - **Generating CAD Code with Vision-Language Models for 3D Designs.**  
   _Kamel Alrashedy, Pradyumna Tambwekar, Zulfiqar Haider Zaidi, Megan Langwasser, Wei Xu, Matthew Gombolay._ ICLR 2025.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=BLWaTeucYX) [![GitHub Stars](https://img.shields.io/github/stars/Kamel773/CAD_Code_Generation?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Kamel773/CAD_Code_Generation)
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=BLWaTeucYX) [![GitHub Stars](https://img.shields.io/github/stars/Kamel773/CAD_Code_Generation?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Kamel773/CAD_Code_Generation) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
 - **CAD-Llama: Leveraging Large Language Models for Computer-Aided Design Parametric 3D Model Generation.**  
   _Jiahao Li, Weijian Ma, Xueyang Li, Yunzhong Lou, Guichun Zhou, Xiangdong Zhou._ CVPR 2025.  
@@ -1321,7 +1301,7 @@
 
 - **SceneGenAgent: Precise Industrial Scene Generation with Coding Agent.**  
   _Xiao Xia, Dan Zhang, Zibo Liao, Zhenyu Hou, Tianrui Sun, Jing Li, Ling Fu, Yuxiao Dong._ ACL 2025.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2025.acl-long.873/)
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://aclanthology.org/2025.acl-long.873/) ![Training Data](https://img.shields.io/badge/Training_Data-8AB17D?style=for-the-badge)
 
 - **3D-GPT: Procedural 3D Modeling with Large Language Models.**  
   _Chunyi Sun, Junlin Han, Weijian Deng, Xinlong Wang, Zishan Qin, Stephen Gould._ 3DV 2025.  
@@ -1409,7 +1389,7 @@
 
 - **Figma2Code: Automating Multimodal Design to Code in the Wild.**  
   _Anonymous Authors._ 2025.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=CaXZB6bI31)
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=CaXZB6bI31) ![Benchmark](https://img.shields.io/badge/Benchmark-F4A261?style=for-the-badge)
 
 - **MRWeb: An Exploration of Generating Multi-Page Resource-Aware Web Code from UI Designs.**  
   _Yuxuan Wan, Yi Dong, Jingyu Xiao, Yintong Huo, Wenxuan Wang, Michael R. Lyu._ arXiv 2024/12.  
@@ -1737,7 +1717,7 @@
 
 - **RoboCodeX: Multimodal Code Generation for Robotic Behavior Synthesis.**  
   _Yao Mu, Junting Chen, Qinglong Zhang, Shoufa Chen, Qiaojun Yu, Chongjian Ge, Runjian Chen, Zhixuan Liang, Mengkang Hu, Chaofan Tao, et al._ ICML 2024.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://dl.acm.org/doi/10.5555/3692070.3693552) [![GitHub Stars](https://img.shields.io/github/stars/RoboCodeX-source/RoboCodeX_code?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/RoboCodeX-source/RoboCodeX_code) [![Website](https://img.shields.io/badge/ROBOCODEXPLUS-blue?style=for-the-badge)](https://sites.google.com/view/robocodexplus)
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://dl.acm.org/doi/10.5555/3692070.3693552) [![GitHub Stars](https://img.shields.io/github/stars/RoboCodeX-source/RoboCodeX_code?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/RoboCodeX-source/RoboCodeX_code) [![Website](https://img.shields.io/badge/ROBOCODEXPLUS-blue?style=for-the-badge)](https://sites.google.com/view/robocodexplus) ![Training Data](https://img.shields.io/badge/Training_Data-8AB17D?style=for-the-badge)
 
 - **Instruct2Act: Mapping Multi-modality Instructions to Robotic Actions with Large Language Model.**  
   _Siyuan Huang, Zhengkai Jiang, Hao Dong, Yu Qiao, Peng Gao, Hongsheng Li._ arXiv 2023/05.  
@@ -1770,10 +1750,6 @@
 - **Develop AI Agents for System Engineering in Factorio.**  
   _Neel Kant._ arXiv 2025/02.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.01492) ![Position Paper](https://img.shields.io/badge/Position_Paper-9B59B6?style=for-the-badge)
-
-- **WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment.**  
-  _Hao Tang, Darren Yan Key, Kevin Ellis._ NeurIPS 2024.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=QGJSXMhVaL) [![GitHub Stars](https://img.shields.io/github/stars/haotang1995/WorldCoder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/haotang1995/WorldCoder) [![Website](https://img.shields.io/badge/WORLDCODER-blue?style=for-the-badge)](https://haotang1995.github.io/projects/worldcoder)
 
 ### 🧭 Browsers & the Web
 
@@ -1851,9 +1827,9 @@
   _Ke Yang, Jiateng Liu, John Wu, Chaoqi Yang, Yi R. Fung, Sha Li, Zixuan Huang, Xu Cao, Xingyao Wang, Yiquan Wang, et al._ ICLR 2024 Workshop.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2401.00812) ![Survey](https://img.shields.io/badge/Survey-2A9D8F?style=for-the-badge)
 
-- **APIGen: Automated PIpeline for Generating Verifiable and Diverse Function-Calling Datasets.**  
-  _Zuxin Liu, Thai Hoang, Jianguo Zhang, Ming Zhu, Tian Lan, Shirley Kokane, Juntao Tan, Weiran Yao, Zhiwei Liu, Yihao Feng, et al._ NeurIPS 2024 Datasets and Benchmarks Track.  
-  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://proceedings.neurips.cc/paper_files/paper/2024/hash/61cce86d180b1184949e58939c4f983d-Abstract-Datasets_and_Benchmarks_Track.html) [![Website](https://img.shields.io/badge/APIGEN--PIPELINE-blue?style=for-the-badge)](https://apigen-pipeline.github.io/) ![Training Data](https://img.shields.io/badge/Training_Data-8AB17D?style=for-the-badge)
+- **WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment.**  
+  _Hao Tang, Darren Yan Key, Kevin Ellis._ NeurIPS 2024.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=QGJSXMhVaL) [![GitHub Stars](https://img.shields.io/github/stars/haotang1995/WorldCoder?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/haotang1995/WorldCoder) [![Website](https://img.shields.io/badge/WORLDCODER-blue?style=for-the-badge)](https://haotang1995.github.io/projects/worldcoder)
 <!-- PAPERS:END -->
 
 ## 🗺️ Research Landscape

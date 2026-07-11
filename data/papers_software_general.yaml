@@ -781,25 +781,13 @@
   venue: COLING 2025
   category: software_general
   tags:
+  - benchmark
   - empirical
-  summary: A case study prompting LLMs to handle the entire software development lifecycle end to end. It examines how well
-    LLM agents perform across multiple stages of development rather than a single lifecycle activity.
+  summary: This case study evaluates LLMs across the full software development lifecycle—design, environment setup, implementation,
+    and testing—using the DevEval benchmark. Results show current LLMs like GPT-4 struggle with these end-to-end real-world
+    programming challenges.
   links:
     paper: https://aclanthology.org/2025.coling-main.502/
-    github: ''
-    website: ''
-- id: https://mistral.ai/news/devstral-2-vibe-cli
-  title: 'Introducing: Devstral 2 and Mistral Vibe CLI'
-  authors:
-  - Mistral
-  venue: 2025/12
-  category: software_general
-  tags:
-  - model
-  summary: Devstral 2 and Mistral Vibe CLI are a code-focused LLM and companion agentic CLI tool announced by Mistral for
-    coding assistance. Details are limited but the release targets general agentic software engineering use.
-  links:
-    paper: https://mistral.ai/news/devstral-2-vibe-cli
     github: ''
     website: ''
 - id: https://qwen.ai/blog?id=qwen3-coder
@@ -810,8 +798,8 @@
   category: software_general
   tags:
   - model
-  summary: Qwen3-Coder is an agentic coding-focused LLM release from the Qwen family, targeting agentic software engineering
-    tasks in real-world environments. It is positioned as a generalist agentic coding model.
+  summary: Qwen3-Coder is a code foundation model positioned for agentic coding tasks across the software lifecycle. Its title
+    signals a generalist agentic coding model rather than a single lifecycle activity.
   links:
     paper: https://qwen.ai/blog?id=qwen3-coder
     github: https://github.com/QwenLM/Qwen3-Coder
@@ -830,8 +818,8 @@
   category: software_general
   tags:
   - position
-  summary: A position paper outlining open research challenges and future directions for AI applied to software engineering
-    as a whole. It argues for a broader research agenda beyond current agentic SE capabilities.
+  summary: A position paper arguing that despite progress in AI for software engineering, significant research challenges
+    remain across the field. It surveys open problems rather than a single lifecycle activity.
   links:
     paper: https://openreview.net/forum?id=RuLsq4LSZK
     github: ''
@@ -853,8 +841,8 @@
   category: software_general
   tags:
   - survey
-  summary: A survey providing a landscape overview and vision for agents in software engineering. It synthesizes existing
-    work and charts future directions for the field.
+  summary: This survey reviews studies combining LLM-based agents with software engineering, proposing a perception-memory-action
+    framework and cataloguing challenges and future directions across the field. It maintains a repository of related papers.
   links:
     paper: https://link.springer.com/article/10.1007/s10515-025-00544-2
     github: ''
@@ -1002,53 +990,48 @@
     paper: https://arxiv.org/abs/2403.08299
     github: ''
     website: ''
-- id: https://openreview.net/forum?id=EHg5GDnyq1
-  title: 'AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors'
+- id: https://proceedings.mlr.press/v235/jain24c.html
+  title: 'R2E: Turning any Github Repository into a Programming Agent Environment'
   authors:
-  - Weize Chen
-  - Yusheng Su
-  - Jingwei Zuo
-  - Cheng Yang
-  - Chenfei Yuan
-  - Chi-Min Chan
-  - Heyang Yu
-  - Yaxi Lu
-  - Yi-Hsin Hung
+  - Naman Jain
+  - Manish Shetty
+  - Tianjun Zhang
+  - King Han
+  - Koushik Sen
+  - Ion Stoica
+  venue: ICML 2024
+  category: software_general
+  tags:
+  - benchmark
+  summary: R2E converts arbitrary GitHub repositories into programming agent environments to enable scalable, real-world evaluation
+    of coding agents. It addresses the lack of realistic, comprehensive benchmarks for LLM coding capabilities.
+  links:
+    paper: https://proceedings.mlr.press/v235/jain24c.html
+    github: https://github.com/r2e-project/r2e
+    website: ''
+- id: https://aclanthology.org/2024.acl-long.305/
+  title: Experiential Co-Learning of Software-Developing Agents
+  authors:
   - Chen Qian
-  - Yujia Qin
+  - Yufan Dang
+  - Jiahao Li
+  - Wei Liu
+  - Zihao Xie
+  - YiFei Wang
+  - Weize Chen
+  - Cheng Yang
   - Xin Cong
-  - Ruobing Xie
+  - Xiaoyin Che
   - Zhiyuan Liu
   - Maosong Sun
-  - Jie Zhou
-  venue: ICLR 2024
+  venue: ACL 2024
   category: software_general
-  summary: AgentVerse is a general multi-agent framework facilitating collaboration among LLM agents, studied across tasks
-    including software development, and exploring emergent group behaviors. It provides a flexible scaffold applicable to
-    building software agent teams.
+  summary: Experiential Co-Learning introduces a learning framework where instructor and assistant software-developing agents
+    accumulate and reuse experiences from past trajectories to improve future multi-step task execution. It builds on the
+    ChatDev multi-agent software company setup to reduce repeated mistakes.
   links:
-    paper: https://openreview.net/forum?id=EHg5GDnyq1
-    github: https://github.com/OpenBMB/AgentVerse
-    website: ''
-- id: https://openreview.net/forum?id=NSINt8lLYB
-  title: 'MASAI: Modular Architecture for Software-engineering AI Agents'
-  authors:
-  - Nalin Wadhwa
-  - Atharv Sonwane
-  - Daman Arora
-  - Abhav Mehrotra
-  - Saiteja Utpala
-  - Ramakrishna B. Bairi
-  - Aditya Kanade
-  - Nagarajan Natarajan
-  venue: NeurIPS 2024 Workshop
-  category: software_general
-  summary: MASAI presents a modular architecture for software-engineering AI agents, decomposing agent responsibilities into
-    specialized sub-agents to handle diverse SWE tasks. It aims to provide a flexible, general framework applicable across
-    software engineering activities.
-  links:
-    paper: https://openreview.net/forum?id=NSINt8lLYB
-    github: ''
+    paper: https://aclanthology.org/2024.acl-long.305/
+    github: https://github.com/OpenBMB/ChatDev
     website: ''
 - id: '2306.14898'
   title: 'InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback'

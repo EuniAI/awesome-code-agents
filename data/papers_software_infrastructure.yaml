@@ -155,26 +155,6 @@
     paper: https://arxiv.org/abs/2501.12339
     github: ''
     website: ''
-- id: https://openreview.net/forum?id=2txrMBpw3q#discussion
-  title: 'RepoST: Scalable Repository-Level Coding Environment Construction with Sandbox Testing'
-  authors:
-  - Yiqing Xie
-  - Alex Xie
-  - Divyanshu Sheth
-  - Pengfei Liu
-  - Daniel Fried
-  - Carolyn Rose
-  venue: COLM 2025
-  category: software_infrastructure
-  tags:
-  - training-data
-  - benchmark
-  summary: RepoST scalably constructs repository-level coding environments using sandbox testing, producing runnable execution
-    setups for repo-level coding tasks. This resource supports training and evaluating repository-aware coding agents.
-  links:
-    paper: https://openreview.net/forum?id=2txrMBpw3q#discussion
-    github: https://github.com/yiqingxyq/RepoST
-    website: ''
 - id: https://dl.acm.org/doi/10.1145/3729386
   title: 'CXXCrafter: An LLM-Based Agent for Automated C/C++ Open Source Software Building'
   authors:
@@ -186,8 +166,8 @@
   - Min Yang
   venue: FSE 2025
   category: software_infrastructure
-  summary: CXXCrafter is an LLM-based agent that automates building C/C++ open source software projects. It configures build
-    environments and resolves build issues for repositories.
+  summary: CXXCrafter is an LLM-based agent that automates building C/C++ open-source projects, resolving dependency and toolchain
+    issues dynamically. It achieves a 78% build success rate on a set of open-source projects.
   links:
     paper: https://dl.acm.org/doi/10.1145/3729386
     github: ''
@@ -206,8 +186,11 @@
   - Nenghai Yu
   venue: ACL 2025
   category: software_infrastructure
-  summary: CompileAgent is a tool-integrated LLM agent system for automated repository-level compilation of real-world codebases.
-    It targets compilation as a build-enabling task.
+  tags:
+  - benchmark
+  summary: CompileAgent is a tool-integrated LLM agent framework for automated repository-level compilation, searching compilation
+    instructions and resolving errors. The authors also introduce CompileAgentBench, showing large gains in compilation success
+    rate.
   links:
     paper: https://aclanthology.org/2025.acl-long.103/
     github: ''
@@ -224,8 +207,9 @@
   category: software_infrastructure
   tags:
   - benchmark
-  summary: CSR-Bench benchmarks LLM agents on deploying computer science research repositories, evaluating environment and
-    dependency setup tasks. It's a resource paper for repo deployment automation.
+  summary: CSR-Bench evaluates LLM agents on deploying computer science research repositories by setting up environments and
+    writing deployment scripts. CSR-Agents, a multi-agent framework, automates this process using markdown instructions and
+    repository structure.
   links:
     paper: https://aclanthology.org/2025.naacl-long.633/
     github: https://github.com/amazon-science/CSR-Bench
@@ -240,8 +224,9 @@
   category: software_infrastructure
   tags:
   - benchmark
-  summary: GitGoodBench is a benchmark evaluating agentic performance on Git operations such as committing, branching, merging,
-    and resolving conflicts. It targets version-control tasks that enable software development workflows.
+  - training-data
+  summary: GitGoodBench evaluates AI agents on Version Control System operations, a developer workflow overlooked by benchmarks
+    like SWE-bench. It provides evaluation, prototyping, and training datasets covering Git scenarios across three languages.
   links:
     paper: https://aclanthology.org/2025.realm-1.19/
     github: ''

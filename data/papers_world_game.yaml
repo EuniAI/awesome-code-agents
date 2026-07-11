@@ -53,18 +53,3 @@
     paper: https://arxiv.org/abs/2502.01492
     github: ''
     website: ''
-- id: https://openreview.net/forum?id=QGJSXMhVaL
-  title: 'WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment'
-  authors:
-  - Hao Tang
-  - Darren Yan Key
-  - Kevin Ellis
-  venue: NeurIPS 2024
-  category: world_game
-  summary: WorldCoder is a model-based LLM agent that builds world models by writing code and interacting with its environment,
-    using the resulting program as a model for planning and acting. The approach targets grid/game-like environments where
-    code serves as the world-dynamics representation.
-  links:
-    paper: https://openreview.net/forum?id=QGJSXMhVaL
-    github: https://github.com/haotang1995/WorldCoder
-    website: https://haotang1995.github.io/projects/worldcoder

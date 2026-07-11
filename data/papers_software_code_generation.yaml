@@ -357,22 +357,6 @@
     paper: https://arxiv.org/abs/2501.04694
     github: ''
     website: ''
-- id: https://openreview.net/forum?id=qnE2m3pIAb
-  title: Automated Benchmark Generation for Repository-Level Coding Tasks
-  authors:
-  - Konstantinos Vergopoulos
-  - Mark Niklas Müller
-  - Martin Vechev
-  venue: ICML 2025
-  category: software_code_generation
-  tags:
-  - benchmark
-  summary: This paper proposes an automated pipeline for generating benchmarks targeting repository-level coding tasks, reducing
-    manual benchmark curation effort. No abstract details are available beyond the title.
-  links:
-    paper: https://openreview.net/forum?id=qnE2m3pIAb
-    github: ''
-    website: ''
 - id: https://cursor.com/blog/tab-rl
   title: Improving Cursor Tab with online RL
   authors:
@@ -381,8 +365,8 @@
   - Shomil Jain
   venue: '2025'
   category: software_code_generation
-  summary: A technical report describing improvements to Cursor's Tab code-completion feature using online reinforcement learning.
-    The work targets better repository-aware code completion suggestions for developers.
+  summary: This paper improves Cursor Tab, an inline code-completion feature, using online reinforcement learning. The work
+    targets repository-aware code completion quality.
   links:
     paper: https://cursor.com/blog/tab-rl
     github: ''
@@ -396,9 +380,10 @@
   venue: NAACL 2025 Findings
   category: software_code_generation
   tags:
-  - empirical
-  summary: This paper empirically studies how different types and amounts of repository context affect the quality of repository-level
-    code generation by LLMs. It provides insights into context selection strategies for improving generated code.
+  - benchmark
+  summary: RepoExec is a benchmark evaluating repository-level code generation focused on executability, functional correctness,
+    and cross-file dependency utilization, alongside an instruction-tuned dataset improving dependency use. It introduces
+    the Dependency Invocation Rate metric to quantify context utilization.
   links:
     paper: https://aclanthology.org/2025.findings-naacl.82/
     github: https://github.com/FSoft-AI4Code/RepoExec
@@ -445,8 +430,9 @@
   category: software_code_generation
   tags:
   - benchmark
-  summary: ProjectEval is a benchmark for automated evaluation of programming agents on project-level code generation tasks.
-    It provides standardized tasks and metrics for assessing whole-project code synthesis.
+  summary: ProjectEval is a benchmark automatically evaluating LLM agents' project-level code generation via simulated user
+    interaction and code similarity metrics. It finds systematic engineering understanding is key to generating practical,
+    deployable projects.
   links:
     paper: https://aclanthology.org/2025.findings-acl.1036/
     github: https://github.com/RyanLoil/ProjectEval/
@@ -463,12 +449,36 @@
   - Alexander M Rush
   venue: ICLR 2025
   category: software_code_generation
-  summary: Commit0 studies generating entire software libraries from scratch using LLM agents, evaluating on real-world library
-    specifications. It provides a testbed for whole-repository code synthesis.
+  tags:
+  - benchmark
+  summary: Commit0 challenges AI agents to write entire libraries from scratch given API specifications and interactive unit
+    tests, validated by test execution. It offers an interactive feedback environment and shows current agents cannot yet
+    fully reproduce libraries.
   links:
     paper: https://openreview.net/forum?id=MMwaQEVsAg
     github: https://github.com/commit-0/commit0
     website: https://commit-0.github.io/
+- id: https://openreview.net/forum?id=2txrMBpw3q#discussion
+  title: 'RepoST: Scalable Repository-Level Coding Environment Construction with Sandbox Testing'
+  authors:
+  - Yiqing Xie
+  - Alex Xie
+  - Divyanshu Sheth
+  - Pengfei Liu
+  - Daniel Fried
+  - Carolyn Rose
+  venue: COLM 2025
+  category: software_code_generation
+  tags:
+  - benchmark
+  - training-data
+  summary: RepoST constructs sandboxed testing environments isolating target functions and dependencies to provide scalable
+    execution feedback for repository-level code generation. It releases a large training set and evaluation benchmark, improving
+    Pass@1 on HumanEval and RepoEval.
+  links:
+    paper: https://openreview.net/forum?id=2txrMBpw3q#discussion
+    github: https://github.com/yiqingxyq/RepoST
+    website: ''
 - id: '2412.00535'
   title: 'FullStack Bench: Evaluating LLMs as Full Stack Coders'
   authors:
@@ -774,9 +784,9 @@
   category: software_code_generation
   tags:
   - benchmark
-  summary: MMCode benchmarks multimodal LLMs on code generation for visually rich programming problems that include images
-    such as figures or diagrams in the problem statement. It evaluates models' ability to produce correct code from combined
-    textual and visual specifications.
+  summary: MMCode introduces a multimodal coding benchmark of competitive-programming problems paired with images, testing
+    whether multimodal LLMs can generate code from visually rich specifications. Current models struggle to interpret visual
+    elements for code synthesis.
   links:
     paper: https://aclanthology.org/2024.findings-emnlp.42/
     github: ''
@@ -791,8 +801,9 @@
   category: software_code_generation
   tags:
   - benchmark
-  summary: RepoBench is a benchmark for evaluating repository-level code auto-completion systems, covering retrieval, code
-    completion, and their pipeline integration. It provides a standardized testbed for repo-aware completion research.
+  summary: RepoBench is a benchmark for repository-level code auto-completion, covering retrieval of cross-file context, next-line
+    code completion, and a combined pipeline task in Python and Java. It targets evaluating systems that complete code using
+    multi-file repository context.
   links:
     paper: https://proceedings.iclr.cc/paper_files/paper/2024/file/d191ba4c8923ed8fd8935b7c98658b5f-Paper-Conference.pdf
     github: https://github.com/Leolty/repobench
@@ -807,35 +818,12 @@
   category: software_code_generation
   tags:
   - benchmark
-  summary: RepoBench is a benchmark for evaluating repository-level code auto-completion systems, covering retrieval, code
-    completion, and their pipeline integration. It provides a standardized testbed for repo-aware completion research.
+  summary: RepoBench is a benchmark for repository-level code auto-completion, covering retrieval of cross-file context, next-line
+    code completion, and a combined pipeline task in Python and Java. It targets evaluating systems that complete code using
+    multi-file repository context.
   links:
     paper: https://openreview.net/forum?id=pPjZIOuQuF
     github: https://github.com/Leolty/repobench
-    website: ''
-- id: https://aclanthology.org/2024.acl-long.305/
-  title: Experiential Co-Learning of Software-Developing Agents
-  authors:
-  - Chen Qian
-  - Yufan Dang
-  - Jiahao Li
-  - Wei Liu
-  - Zihao Xie
-  - YiFei Wang
-  - Weize Chen
-  - Cheng Yang
-  - Xin Cong
-  - Xiaoyin Che
-  - Zhiyuan Liu
-  - Maosong Sun
-  venue: ACL 2024
-  category: software_code_generation
-  summary: This paper studies experiential co-learning among multiple software-developing agents that collaborate to build
-    software, accumulating shared experience across tasks. The goal is to improve multi-agent code generation performance
-    via learned experience.
-  links:
-    paper: https://aclanthology.org/2024.acl-long.305/
-    github: https://github.com/OpenBMB/ChatDev
     website: ''
 - id: https://aclanthology.org/2024.acl-long.810/
   title: 'ChatDev: Communicative Agents for Software Development'
@@ -856,8 +844,9 @@
   - Maosong Sun
   venue: ACL 2024
   category: software_code_generation
-  summary: ChatDev is a multi-agent framework where communicative LLM agents role-play as a virtual software company to collaboratively
-    design, code, test, and document a software product from a natural language idea.
+  summary: ChatDev is a chat-powered multi-agent framework where LLM-driven agents communicate through a structured chat chain
+    to collaboratively design, code, and test software from scratch. It demonstrates how natural-language and programming-language
+    communication enable multi-agent software development.
   links:
     paper: https://aclanthology.org/2024.acl-long.810/
     github: https://github.com/OpenBMB/ChatDev
@@ -870,8 +859,9 @@
   - Md Rizwan Parvez
   venue: ACL 2024
   category: software_code_generation
-  summary: MapCoder is a multi-agent framework mimicking a programmer's approach—retrieving similar problems, planning, coding,
-    and debugging—to solve competitive programming problems. It coordinates multiple LLM agents for each phase of code generation.
+  summary: MapCoder is a multi-agent code generation framework that emulates the human program synthesis cycle—recalling examples,
+    planning, coding, and debugging—to solve competitive programming problems. It achieves state-of-the-art pass@1 results
+    across several code generation benchmarks.
   links:
     paper: https://aclanthology.org/2024.acl-long.269/
     github: https://github.com/Md-Ashraful-Pramanik/MapCoder
@@ -891,9 +881,9 @@
   - Xuanhua Shi
   venue: ACL 2024 Findings
   category: software_code_generation
-  summary: This paper proposes an iterative method to refine project-level code context using compiler feedback, improving
-    the precision of LLM-based code generation within large repositories. It leverages compilation errors to guide context
-    selection and regeneration.
+  summary: CoCoGen improves LLM-generated code by using compiler feedback and static analysis to iteratively align generated
+    code with project-level context, fixing API and dependency mismatches. It is evaluated on Python code generation with
+    GPT-3.5-Turbo and Code Llama.
   links:
     paper: https://aclanthology.org/2024.findings-acl.138/
     github: ''
@@ -911,8 +901,8 @@
   - Qinying Li
   venue: TSE 2024
   category: software_code_generation
-  summary: A3-CodGen is a repository-level code generation framework that improves code reuse by being aware of local context,
-    global repository context, and third-party libraries. It aims to produce more contextually appropriate code completions.
+  summary: A3-CodGen is a repository-level code generation framework designed to support code reuse by being aware of local,
+    global, and third-party-library context. It aims to improve the quality of generated code within existing repositories.
   links:
     paper: https://www.computer.org/csdl/journal/ts/2024/12/10734067/21iLh4j0oG4
     github: ''
@@ -997,8 +987,8 @@
   - Sriram K. Rajamani
   venue: NeurIPS 2023
   category: software_code_generation
-  summary: This paper presents monitor-guided decoding for code language models, using static analysis of repository context
-    to constrain and guide the generation process for more accurate, compilable code completions.
+  summary: Monitor-Guided Decoding uses static analysis of repository context to guide code LM decoding, improving generated
+    code's correctness relative to repo APIs and types. It targets repository-aware code completion.
   links:
     paper: https://neurips.cc/virtual/2023/poster/70362
     github: ''

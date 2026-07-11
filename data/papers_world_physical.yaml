@@ -30,8 +30,9 @@
   category: world_physical
   tags:
   - training-data
-  summary: GRS generates robotic simulation tasks directly from real-world images, providing scenario resources for training
-    and evaluating embodied manipulation agents. It serves as a data/environment generation pipeline for robot learning.
+  summary: GRS generates digital-twin robotic simulation environments and solvable tasks from single RGB-D real-world images,
+    using VLMs for scene comprehension, asset matching, and task generation with iterative test-driven refinement. It targets
+    training virtual agents for physical manipulation.
   links:
     paper: https://openaccess.thecvf.com/content/CVPR2025W/CV2/html/Zook_GRS_Generating_Robotic_Simulation_Tasks_from_Real-World_Images_CVPRW_2025_paper.html
     github: ''
@@ -110,8 +111,11 @@
   - Ping Luo
   venue: ICML 2024
   category: world_physical
-  summary: RoboCodeX generates multimodal code to synthesize robotic behaviors, translating perception and task instructions
-    into executable robot action programs. Code serves as the control/action language for robotic behavior synthesis.
+  tags:
+  - training-data
+  summary: RoboCodeX decomposes multimodal instructions into object-centric manipulation units and generates code to synthesize
+    precise robotic control across manipulation and navigation tasks, using a purpose-built multimodal reasoning dataset for
+    training. It generalizes across robot platforms via code generation as the control language.
   links:
     paper: https://dl.acm.org/doi/10.5555/3692070.3693552
     github: https://github.com/RoboCodeX-source/RoboCodeX_code

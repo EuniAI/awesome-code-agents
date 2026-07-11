@@ -39,8 +39,9 @@
   category: world_apps
   tags:
   - benchmark
-  summary: AppWorld is a controllable simulated world of apps and people for benchmarking interactive coding agents that must
-    operate applications via code to accomplish tasks. It provides a rich environment for evaluating agentic app interaction.
+  summary: AppWorld provides a controllable execution environment of 9 everyday apps with 457 APIs and a benchmark of 750
+    tasks requiring agents to generate interactive code to complete digital daily-life tasks. State-of-the-art models solve
+    less than half of normal tasks.
   links:
     paper: https://aclanthology.org/2024.acl-long.850/
     github: https://github.com/stonybrooknlp/appworld

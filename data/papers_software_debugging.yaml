@@ -2038,8 +2038,9 @@
   - Xingyao Wang
   venue: ACL 2025
   category: software_debugging
-  summary: LocAgent is a graph-guided LLM agent that localizes code relevant to reported issues by traversing repository structure
-    graphs, aiding downstream patch generation. It targets improving code localization accuracy for issue resolution.
+  summary: LocAgent is a graph-based LLM agent framework for code localization, parsing codebases into heterogeneous graphs
+    to enable multi-hop reasoning for identifying relevant code sections. It improves fault localization accuracy and downstream
+    GitHub issue resolution success rates.
   links:
     paper: https://aclanthology.org/2025.acl-long.426/
     github: https://github.com/gersteinlab/LocAgent
@@ -2064,9 +2065,8 @@
   category: software_debugging
   tags:
   - benchmark
-  summary: SWE-bench Multimodal extends issue-resolution evaluation to visual software domains, testing whether AI systems
-    can resolve bugs requiring visual/GUI understanding. It reveals generalization gaps of text-only trained systems on visually
-    rich repositories.
+  summary: SWE-bench Multimodal extends issue-resolution evaluation to visual, user-facing JavaScript software with image-containing
+    problem statements across 17 libraries. It shows top systems struggle to generalize beyond Python/text-only issue resolution.
   links:
     paper: https://openreview.net/forum?id=riTiq3i21b
     github: https://github.com/SWE-bench/SWE-bench
@@ -2089,8 +2089,10 @@
   - Qianxiang Wang
   venue: ACL 2025 Findings
   category: software_debugging
-  summary: CodeV addresses issue resolution tasks that involve visual data, extending automated repair to multimodal bug reports.
-    It targets the same class of visual software defects as SWE-bench Multimodal.
+  tags:
+  - benchmark
+  summary: CodeV leverages visual data alongside text to improve LLM issue-resolving performance on GitHub issues, introducing
+    Visual SWE-bench for evaluation. It shows visual context is crucial information that text-only issue resolvers miss.
   links:
     paper: https://aclanthology.org/2025.findings-acl.384/
     github: https://github.com/luolin101/CodeV
@@ -2108,8 +2110,9 @@
   category: software_debugging
   tags:
   - benchmark
-  summary: SWE-Bench+ is an enhanced version of the SWE-bench issue-resolution benchmark, addressing data quality and leakage
-    issues in the original. It serves evaluation of automated bug-fixing agents.
+  - empirical
+  summary: An empirical analysis of SWE-bench reveals data quality issues including solution leakage and weak test cases that
+    inflate reported issue-resolution performance. Filtering these problems drops SWE-Agent+GPT-4's resolve rate sharply.
   links:
     paper: https://openreview.net/forum?id=R40rS2afQ3
     github: ''
@@ -2122,8 +2125,8 @@
   category: software_debugging
   tags:
   - benchmark
-  summary: Auto-SWE-Bench is a scalable framework for automatically generating software engineering benchmarks from open-source
-    repositories. It targets issue-resolution style tasks similar to SWE-bench.
+  summary: Auto-SWE-Bench is a framework for scalably generating SWE-bench-style benchmarks from open-source repositories.
+    It aims to expand the pool of real-world issue-resolution evaluation instances.
   links:
     paper: https://openreview.net/forum?id=Gxw1EDSm9S
     github: ''
@@ -2140,8 +2143,8 @@
   - Bryan Catanzaro
   venue: ICML 2025
   category: software_debugging
-  summary: Nemotron-CORTEXA improves LLM agents for software engineering tasks by enhancing issue localization and increasing
-    solution diversity. It targets patch generation performance on issue-resolution benchmarks.
+  summary: Nemotron-CORTEXA enhances LLM agents for software engineering tasks by improving bug localization and increasing
+    solution diversity. It targets better performance on issue-resolution benchmarks like SWE-bench.
   links:
     paper: https://openreview.net/forum?id=k6p8UKRdH7
     github: ''
@@ -2167,8 +2170,8 @@
   - Caiming Xiong
   venue: ICLR 2025
   category: software_debugging
-  summary: This paper integrates diverse expertise from multiple software engineering agents to improve issue-resolution performance,
-    likely via ensemble or multi-agent combination strategies. It targets benchmarks like SWE-bench for automated patching.
+  summary: DEI is a meta-framework that combines multiple SWE agents' diverse expertise to collectively outperform any single
+    agent on SWE-Bench Lite issue resolution. It achieves top resolve rates by managing agent committees.
   links:
     paper: https://openreview.net/forum?id=cKlzKs3Nnb
     github: https://github.com/SalesforceAIResearch/swecomm
@@ -2183,8 +2186,8 @@
   - Bernhard Schölkopf
   venue: ACL 2025
   category: software_debugging
-  summary: DARS proposes dynamic action re-sampling with adaptive tree traversal to improve coding agent performance on issue-resolution
-    tasks. It refines the agent's exploration strategy to produce better patches.
+  summary: DARS is an inference-time compute scaling method that dynamically re-samples actions at key decision points to
+    improve coding agents' recovery from mistakes. It is evaluated on SWE-Bench Lite issue resolution.
   links:
     paper: https://aclanthology.org/2025.acl-long.973/
     github: https://github.com/vaibhavagg303/DARS-Agent
@@ -2202,8 +2205,8 @@
   category: software_debugging
   tags:
   - training-data
-  summary: SoRFT trains LLMs for GitHub issue resolution using subtask-oriented reinforced fine-tuning, decomposing the repair
-    process into subtasks. It targets improved patch generation performance on SWE-bench style benchmarks.
+  summary: SoRFT trains LLMs for issue resolution via subtask-oriented reinforced fine-tuning, decomposing the task into localization
+    and edit generation stages. It achieves state-of-the-art open-source results on SWE-Bench Verified and Lite.
   links:
     paper: https://aclanthology.org/2025.acl-long.559/
     github: ''
@@ -2222,8 +2225,8 @@
   - Tegawendé F. Bissyandé
   venue: ACL 2025 Findings
   category: software_debugging
-  summary: SynFix performs dependency-aware program repair using RelationGraph analysis to capture code relationships for
-    more accurate patch generation. It targets automated repair of real-world software issues.
+  summary: SynFix performs dependency-aware program repair by analyzing relation graphs among code entities to guide fixes.
+    It targets automated repair of real-world software defects.
   links:
     paper: https://aclanthology.org/2025.findings-acl.252/
     github: ''
@@ -2240,8 +2243,9 @@
   - Michael R. Lyu
   venue: EMNLP 2025
   category: software_debugging
-  summary: UniDebugger is a hierarchical multi-agent framework designed to unify software debugging tasks such as fault localization
-    and repair. It coordinates multiple agents to resolve software defects end-to-end.
+  summary: FixAgent (UniDebugger) is a hierarchical multi-agent framework unifying fault localization and patch generation
+    to mimic developer debugging cognition. It significantly outperforms prior repair methods on Defects4J without requiring
+    ground-truth root-cause statements.
   links:
     paper: https://aclanthology.org/2025.emnlp-main.921/
     github: ''
@@ -2255,8 +2259,9 @@
   - Lingming Zhang
   venue: FSE 2025
   category: software_debugging
-  summary: Agentless demystifies LLM-based software engineering agents by proposing a simpler, non-agentic pipeline for resolving
-    GitHub issues via localization and patch generation. It compares favorably against complex agent-based approaches on SWE-bench.
+  summary: Agentless is a simple three-phase (localization, repair, patch validation) alternative to complex autonomous agents
+    for resolving software issues, achieving top performance on SWE-bench Lite at low cost. The paper questions whether complex
+    agentic scaffolds are necessary for issue resolution.
   links:
     paper: https://dl.acm.org/doi/10.1145/3715754
     github: https://github.com/OpenAutoCoder/Agentless
@@ -2272,10 +2277,28 @@
   - Peng Liang
   venue: TOSEM 2025
   category: software_debugging
-  summary: This paper integrates various software artifacts to improve LLM-based bug localization and program repair, combining
-    multiple information sources for more accurate fixes. It focuses on enhancing repair effectiveness through richer context.
+  summary: DEVLoRe integrates issue content and stack traces to localize buggy methods/lines and generate patches, improving
+    automated program repair on Defects4J and SWE-bench Lite. It studies which software artifacts best assist LLM-based fault
+    localization and repair.
   links:
     paper: https://dl.acm.org/doi/abs/10.1145/3770581
+    github: ''
+    website: ''
+- id: https://openreview.net/forum?id=qnE2m3pIAb
+  title: Automated Benchmark Generation for Repository-Level Coding Tasks
+  authors:
+  - Konstantinos Vergopoulos
+  - Mark Niklas Müller
+  - Martin Vechev
+  venue: ICML 2025
+  category: software_debugging
+  tags:
+  - benchmark
+  summary: SetUpAgent automates historically-accurate environment setup and test execution to build SWEE-Bench and SWA-Bench,
+    large-scale extensions of SWE-Bench across hundreds of repositories. These benchmarks reveal significant performance drops
+    for code agents compared to the original narrow SWE-Bench.
+  links:
+    paper: https://openreview.net/forum?id=qnE2m3pIAb
     github: ''
     website: ''
 - id: '2412.21139'
@@ -2526,33 +2549,12 @@
   venue: IEEE Transactions on Software Engineering 2024
   category: software_debugging
   tags:
-  - empirical
-  summary: An empirical evaluation comparing diverse large language models on their ability to perform automatic and general
-    bug reproduction. The study benchmarks LLM effectiveness at reproducing reported bugs.
+  - benchmark
+  summary: LIBRO uses LLMs to generate bug-reproducing tests from natural language bug reports, evaluated across 15 LLMs on
+    Defects4J. It shows open-source LLMs achieve substantial reproduction performance relative to closed-source models.
   links:
     paper: https://ieeexplore.ieee.org/document/10664637
     github: ''
-    website: ''
-- id: https://proceedings.mlr.press/v235/jain24c.html
-  title: 'R2E: Turning any Github Repository into a Programming Agent Environment'
-  authors:
-  - Naman Jain
-  - Manish Shetty
-  - Tianjun Zhang
-  - King Han
-  - Koushik Sen
-  - Ion Stoica
-  venue: ICML 2024
-  category: software_debugging
-  tags:
-  - benchmark
-  - training-data
-  summary: R2E turns arbitrary GitHub repositories into programming agent environments, generating executable tasks and tests
-    for training/evaluating coding agents, targeting issue-resolution style tasks. It provides scalable environment construction
-    for SWE-bench-like evaluation.
-  links:
-    paper: https://proceedings.mlr.press/v235/jain24c.html
-    github: https://github.com/r2e-project/r2e
     website: ''
 - id: https://proceedings.neurips.cc/paper_files/paper/2024/hash/5d1f02132ef51602adf07000ca5b6138-Abstract-Conference.html
   title: 'MAGIS: LLM-Based Multi-Agent Framework for GitHub Issue Resolution'
@@ -2565,12 +2567,31 @@
   - Yu Cheng
   venue: NeurIPS 2024
   category: software_debugging
-  summary: MAGIS proposes a multi-agent LLM framework in which specialized agents collaborate to resolve GitHub issues by
-    localizing and patching code. The framework coordinates planning, coding, and review roles to improve issue-resolution
-    performance.
+  summary: MAGIS is a multi-agent LLM framework with Manager, Repository Custodian, Developer, and QA agents for resolving
+    GitHub issues at the repository level. It substantially outperforms direct LLM baselines on SWE-bench.
   links:
     paper: https://proceedings.neurips.cc/paper_files/paper/2024/hash/5d1f02132ef51602adf07000ca5b6138-Abstract-Conference.html
     github: https://github.com/co-evolve-lab/magis
+    website: ''
+- id: https://openreview.net/forum?id=NSINt8lLYB
+  title: 'MASAI: Modular Architecture for Software-engineering AI Agents'
+  authors:
+  - Nalin Wadhwa
+  - Atharv Sonwane
+  - Daman Arora
+  - Abhav Mehrotra
+  - Saiteja Utpala
+  - Ramakrishna B. Bairi
+  - Aditya Kanade
+  - Nagarajan Natarajan
+  venue: NeurIPS 2024 Workshop
+  category: software_debugging
+  summary: MASAI proposes a modular multi-agent architecture with sub-agents tuned to specific objectives for software engineering
+    problem-solving, achieving top results on SWE-bench Lite. It analyzes design choices behind decomposing issue resolution
+    into specialized sub-agents.
+  links:
+    paper: https://openreview.net/forum?id=NSINt8lLYB
+    github: ''
     website: ''
 - id: '2310.06770'
   title: 'SWE-bench: Can Language Models Resolve Real-World GitHub Issues?'

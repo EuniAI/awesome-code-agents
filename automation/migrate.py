@@ -18,6 +18,7 @@ import argparse
 import logging
 import re
 import time
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -106,11 +107,82 @@ def backfill_dates() -> None:
 
 
 def _classify_input(paper: Paper, abstracts: dict[str, str]) -> dict[str, str]:
-    abstract = abstracts.get(paper.id, "")
-    if not abstract:
-        # Non-arXiv or fetch miss: fall back to the curator summary from the old data.
-        abstract = f"(no abstract available; curator summary:) {paper.summary}"
+    # Primary sources only: never feed the old pipeline's second-hand summaries.
+    abstract = abstracts.get(paper.id, "") or "(abstract unavailable; judge from the title alone)"
     return {"id": paper.id, "title": paper.title, "abstract": abstract}
+
+
+def _norm_title(t: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", t.lower())
+
+
+def search_arxiv_by_title(title: str) -> str | None:
+    """Find a paper's arXiv abstract by exact-ish title match; None if absent."""
+    q = urllib.parse.quote(f'ti:"{title}"')
+    url = f"https://export.arxiv.org/api/query?search_query={q}&max_results=5"
+    try:
+        with urllib.request.urlopen(url, timeout=30) as r:
+            root = ET.fromstring(r.read())
+    except Exception as exc:
+        logger.warning("arxiv title search failed for %r: %s", title[:50], exc)
+        return None
+    want = _norm_title(title)
+    for entry in root.findall("a:entry", _ATOM):
+        got = _norm_title(entry.find("a:title", _ATOM).text or "")
+        if got == want or got.startswith(want) or want.startswith(got):
+            summary = entry.find("a:summary", _ATOM)
+            if summary is not None and summary.text:
+                return re.sub(r"\s+", " ", summary.text).strip()
+    return None
+
+
+def fetch_landing_abstract(url: str) -> str | None:
+    """Best-effort abstract extraction from a paper's landing page (meta tags, ACL div)."""
+    if not url.startswith("http"):
+        return None
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (paper-metadata-fetch)"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            html = r.read().decode("utf-8", errors="replace")
+    except Exception as exc:
+        logger.warning("landing fetch failed for %s: %s", url[:60], exc)
+        return None
+    for pattern in (
+        r'name="citation_abstract"\s+content="([^"]{100,})"',
+        r'property="og:description"\s+content="([^"]{100,})"',
+        r'class="[^"]*acl-abstract[^"]*"[^>]*>\s*(?:<[^>]+>)*([^<]{100,})',
+    ):
+        m = re.search(pattern, html, re.DOTALL)
+        if m:
+            import html as _html
+            return re.sub(r"\s+", " ", _html.unescape(m.group(1))).strip()
+    return None
+
+
+def ensure_primary_abstracts(papers: list[Paper]) -> dict[str, str]:
+    """Primary-source abstracts for any papers: arXiv id -> arXiv title search ->
+    landing page. Results cached in the sidecar under each paper's id."""
+    cache = storage.load_abstracts()
+    arxiv_ids = [p.id for p in papers if _ARXIV_ID.match(p.id)]
+    if any(i not in cache for i in arxiv_ids):
+        cache = ensure_abstracts(arxiv_ids)
+    changed = False
+    for p in papers:
+        if p.id in cache or _ARXIV_ID.match(p.id):
+            continue
+        ab = search_arxiv_by_title(p.title)
+        time.sleep(3)
+        if not ab:
+            ab = fetch_landing_abstract(p.links.get("paper", ""))
+        if ab:
+            cache[p.id] = ab
+            changed = True
+            logger.info("recovered abstract for: %s", p.title[:60])
+        else:
+            logger.info("no primary abstract found: %s", p.title[:60])
+    if changed:
+        storage.save_abstracts(cache)
+    return cache
 
 
 # ── Calibration batch ─────────────────────────────────────────────────────────
@@ -318,17 +390,114 @@ def run_full(model: str = classify.MODEL) -> Path:
     return out
 
 
+def refetch_reclassify(model: str = classify.MODEL) -> Path:
+    """Re-evidence and re-classify every legacy paper that had no primary abstract
+    at migration time (it was judged from the old pipeline's summary). Applies
+    moves/removals/reinstatements to data/ and writes a delta review sheet."""
+    from automation import badges, render, taxonomy
+
+    leaves = taxonomy.load().leaf_keys()
+    store = {k: storage.load(k) for k in leaves}
+    placement: dict[str, str] = {p.id: k for k in leaves for p in store[k]}
+
+    cache_before = set(storage.load_abstracts())
+    seen: set[str] = set()
+    affected: list[Paper] = []
+    for b in BUCKET_ORDER:
+        for p in load_legacy(b):
+            if p.id in seen:
+                continue
+            seen.add(p.id)
+            if p.id not in cache_before:
+                affected.append(p)
+    logger.info("papers without primary evidence at migration time: %d", len(affected))
+
+    cache = ensure_primary_abstracts(affected)
+
+    ruled: list[tuple[Paper, tuple[str, list[str]] | None]] = []
+    to_classify: list[Paper] = []
+    for p in affected:
+        hit, ruling = _override_for(p.title)
+        if hit:
+            ruled.append((p, ruling))
+        else:
+            to_classify.append(p)
+    items = [_classify_input(p, cache) for p in to_classify]
+    verdicts = classify.classify(items, model=model) if items else []
+
+    rows: list[str] = []
+
+    def apply(p: Paper, new_cat: str | None, tags: list[str], summary: str, reason: str) -> None:
+        before = placement.get(p.id, "OUT")
+        evidence = "primary" if p.id in cache else "title-only"
+        after = new_cat or "OUT"
+        if before != "OUT" and new_cat is None:
+            store[before] = [x for x in store[before] if x.id != p.id]
+        elif new_cat is not None:
+            if before == "OUT":
+                p.category, p.tags = new_cat, tags
+                if summary:
+                    p.summary = summary
+                store[new_cat].append(p)
+            elif before != new_cat:
+                moved = next(x for x in store[before] if x.id == p.id)
+                store[before] = [x for x in store[before] if x.id != p.id]
+                moved.category, moved.tags = new_cat, tags
+                if summary:
+                    moved.summary = summary
+                store[new_cat].append(moved)
+            else:
+                cur = next(x for x in store[before] if x.id == p.id)
+                cur.tags = tags or cur.tags
+                if summary:
+                    cur.summary = summary
+        mark = "" if before == after else " <- CHANGED"
+        rows.append(f"| {before} | **{after}**{mark} | {evidence} | "
+                    f"{p.title[:65].replace('|','/')} | {reason[:90].replace('|','/')} |")
+
+    for p, ruling in ruled:
+        if ruling is None:
+            apply(p, None, [], "", "owner ruling")
+        else:
+            apply(p, ruling[0], ruling[1], "", "owner ruling")
+    for p, v in zip(to_classify, verdicts):
+        if v.failed:
+            rows.append(f"| {placement.get(p.id,'OUT')} | FAILED | - | {p.title[:65]} | retry later |")
+        else:
+            apply(p, v.category if v.relevant else None, v.tags, v.summary, v.reason)
+
+    for k in leaves:
+        storage.save(k, storage.newest_first(store[k]))
+    render.main()
+    badges.refresh()
+
+    REVIEW_DIR.mkdir(parents=True, exist_ok=True)
+    out = REVIEW_DIR / "refetch-reclass.md"
+    out.write_text(
+        "# Re-evidence pass: papers previously judged from second-hand summaries\n\n"
+        f"{len(affected)} papers re-fetched from primary sources (arXiv title search, "
+        "landing pages) and re-classified. Old-pipeline summaries are no longer used "
+        "as classification input.\n\n"
+        "| before | after | evidence | title | reason |\n|---|---|---|---|---|\n"
+        + "\n".join(rows) + "\n",
+        encoding="utf-8",
+    )
+    return out
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(message)s")
     parser = argparse.ArgumentParser(description="Legacy corpus migration tooling")
-    parser.add_argument("command", choices=["calibrate", "run", "dates"])
+    parser.add_argument("command", choices=["calibrate", "run", "dates", "refetch"])
     args = parser.parse_args()
     if args.command == "calibrate":
         print(f"review sheet written: {run_calibration()}")
     elif args.command == "run":
         print(f"review sheet written: {run_full()}")
+    elif args.command == "refetch":
+        print(f"review sheet written: {refetch_reclassify()}")
     else:
         backfill_dates()
 

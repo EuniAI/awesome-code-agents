@@ -114,7 +114,7 @@
   tags:
   - benchmark
   summary: This paper benchmarks long-context language models on their ability to understand long code, evaluating comprehension
-    capabilities over extended codebases.
+    over extended codebases.
   links:
     paper: https://aclanthology.org/2025.acl-long.1324/
     github: ''
@@ -128,8 +128,8 @@
   - Chris Biemann
   venue: ACL 2024 Workshop
   category: software_comprehension
-  summary: This paper investigates methods to improve repository-level code question answering performance for large language
-    models.
+  summary: This work improves repository-level code question answering for large language models, enhancing their ability
+    to understand and answer questions about codebases.
   links:
     paper: https://aclanthology.org/2024.acl-srw.28/
     github: ''
@@ -152,8 +152,8 @@
   - Maosong Sun
   venue: EMNLP 2024 Demo
   category: software_comprehension
-  summary: RepoAgent is an LLM-powered open-source framework that automatically generates repository-level code documentation,
-    understanding codebase structure to produce docs. It aims to reduce manual documentation effort for developers.
+  summary: RepoAgent is an open-source LLM-powered framework that proactively generates, maintains, and updates repository-level
+    code documentation. It focuses on producing high-quality documentation to aid understanding of codebases.
   links:
     paper: https://aclanthology.org/2024.emnlp-demo.46/
     github: https://github.com/OpenBMB/RepoAgent

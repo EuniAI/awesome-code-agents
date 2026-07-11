@@ -101,8 +101,8 @@
   - Jing Liao
   venue: CVPR 2025
   category: graphics
-  summary: Chat2SVG combines LLMs and image diffusion models to generate vector graphics (SVG) from natural language descriptions.
-    The pipeline produces editable SVG code as the final deliverable.
+  summary: Chat2SVG combines LLMs and image diffusion models to generate high-quality SVG vector graphics from text, using
+    an LLM for templates and diffusion-guided optimization for geometric refinement.
   links:
     paper: https://openaccess.thecvf.com/content/CVPR2025/html/Wu_Chat2SVG_Vector_Graphics_Generation_with_Large_Language_Models_and_Image_CVPR_2025_paper.html
     github: https://github.com/kingnobro/chat2svg

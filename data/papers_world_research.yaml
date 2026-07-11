@@ -570,8 +570,9 @@
   category: world_research
   tags:
   - benchmark
-  summary: DA-Code is a benchmark for evaluating LLM agents on agentic data science code generation tasks. It targets the
-    code-driven data science workflow as the served task.
+  summary: DA-Code is a benchmark for evaluating LLM agents on realistic, challenging data science tasks requiring complex
+    data wrangling and analytics code in an executable environment. It also introduces a DA-Agent baseline, showing substantial
+    headroom versus current best LLMs.
   links:
     paper: https://aclanthology.org/2024.emnlp-main.748/
     github: https://github.com/yiyihum/da-code

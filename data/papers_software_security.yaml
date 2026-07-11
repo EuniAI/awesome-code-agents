@@ -200,8 +200,8 @@
   category: software_security
   tags:
   - benchmark
-  summary: This CVE-Bench benchmarks LLM-based software engineering agents on their ability to repair real-world CVE vulnerabilities,
-    assessing patch correctness and effectiveness. It provides a testbed for evaluating automated vulnerability repair capabilities.
+  summary: CVE-Bench evaluates LLM-based software engineering agents on their ability to repair real-world CVE vulnerabilities.
+    It provides a benchmark for automated vulnerability repair tasks.
   links:
     paper: https://aclanthology.org/2025.naacl-long.212/
     github: ''

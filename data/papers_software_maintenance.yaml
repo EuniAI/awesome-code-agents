@@ -238,9 +238,9 @@
   - Shashank Shet
   venue: FSE 2024
   category: software_maintenance
-  summary: CodePlan uses LLMs combined with planning to perform repository-level coding tasks such as package migration and
-    API-version updates, coordinating multi-file edits across a codebase. It formulates these as a planning problem to preserve
-    overall repository consistency.
+  summary: CodePlan frames repository-level coding activities like package migration and temporal code edits as a planning
+    problem, synthesizing a multi-step chain of LLM-driven edits guided by dependency and impact analysis. It is evaluated
+    on C# package migration and Python temporal edits across multi-file repositories.
   links:
     paper: https://dl.acm.org/doi/10.1145/3643757
     github: ''

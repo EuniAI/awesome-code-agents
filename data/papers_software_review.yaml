@@ -107,18 +107,6 @@
     paper: https://arxiv.org/abs/2504.13472
     github: https://github.com/Eshe0922/CodeVisionary
     website: ''
-- id: ''
-  title: Armchair
-  authors:
-  - Armchair
-  venue: '2025'
-  category: software_review
-  summary: Armchair appears to be a tool related to automated code review, though no abstract is available to detail its methodology.
-    Included alongside other code review agent papers in this collection.
-  links:
-    paper: ''
-    github: https://github.com/armchr/armchr
-    website: ''
 - id: https://openreview.net/forum?id=cdwp8BXTVV
   title: 'PReview: A Benchmark Dataset for Pull Request Outcomes and Quality Analysis'
   authors:
@@ -127,24 +115,12 @@
   category: software_review
   tags:
   - benchmark
-  summary: PReview introduces a benchmark dataset for analyzing pull request outcomes and quality, supporting research into
-    automated code review and PR assessment. It provides structured data for studying acceptance and quality signals of PRs.
+  summary: PReview is a benchmark dataset for analyzing pull request outcomes and code quality, supporting research on automated
+    PR assessment.
   links:
     paper: https://openreview.net/forum?id=cdwp8BXTVV
     github: ''
     website: ''
-- id: ''
-  title: 'PR-Agent: An AI-Powered Tool for Automated Pull Request Analysis, Feedback, Suggestions and More!'
-  authors:
-  - Qodo
-  venue: '2024'
-  category: software_review
-  summary: PR-Agent is an AI-powered tool that automates pull request analysis, providing feedback, suggestions, and other
-    review assistance. It targets streamlining the code review workflow for developers.
-  links:
-    paper: ''
-    github: https://github.com/qodo-ai/pr-agent
-    website: https://www.qodo.ai/
 - id: https://aclanthology.org/2024.emnlp-main.632/
   title: 'CodeAgent: Autonomous Communicative Agents for Code Review'
   authors:
@@ -159,8 +135,9 @@
   - Tegawendé F. Bissyandé
   venue: EMNLP 2024
   category: software_review
-  summary: CodeAgent proposes autonomous communicative multi-agent systems designed to perform code review tasks collaboratively.
-    It focuses on agents discussing and evaluating code changes to produce review outcomes.
+  summary: CodeAgent is a multi-agent LLM system for automating code review, including detecting inconsistencies, vulnerability
+    introductions, style violations, and suggesting revisions. A supervisory QA-Checker agent coordinates the collaborative
+    review process.
   links:
     paper: https://aclanthology.org/2024.emnlp-main.632/
     github: ''
@@ -190,23 +167,5 @@
     It outperforms prior pre-training approaches on all three code review tasks.
   links:
     paper: https://arxiv.org/abs/2203.09095
-    github: ''
-    website: ''
-- id: https://www.sciencedirect.com/science/article/abs/pii/S0164121221001060
-  title: Can We Benchmark Code Review Studies? A Systematic Mapping Study of Methodology, Dataset, and Metric
-  authors:
-  - Dong Wang
-  - Yuki Ueda
-  - Raula Gaikovina Kula
-  - Takashi Ishio
-  - Kenichi Matsumoto
-  venue: Journal of Systems and Software, 2021, Elsevier
-  category: software_review
-  tags:
-  - survey
-  summary: A systematic mapping study analyzing methodology, datasets, and metrics used in code review research to assess
-    benchmarking practices. It serves as a resource/survey for building and evaluating code review systems and agents.
-  links:
-    paper: https://www.sciencedirect.com/science/article/abs/pii/S0164121221001060
     github: ''
     website: ''

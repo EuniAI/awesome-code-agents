@@ -283,8 +283,8 @@
   - Michael Lyu
   venue: FSE 2025
   category: web
-  summary: This paper proposes a divide-and-conquer approach for generating UI code directly from screenshots. The method
-    decomposes screenshots to improve accuracy of the generated front-end code.
+  summary: This paper proposes a divide-and-conquer approach to generate UI code directly from screenshots, decomposing the
+    image into components for more accurate code synthesis.
   links:
     paper: https://dl.acm.org/doi/abs/10.1145/3729364
     github: ''
@@ -295,8 +295,10 @@
   - Anonymous Authors
   venue: '2025'
   category: web
-  summary: Figma2Code automates converting multimodal design inputs (e.g., Figma designs) into working front-end code in real-world
-    settings.
+  tags:
+  - benchmark
+  summary: Figma2Code introduces a multimodal design-to-code task using Figma files with rich metadata, releasing a curated
+    213-sample benchmark to evaluate MLLMs on generating production-ready UI code.
   links:
     paper: https://openreview.net/forum?id=CaXZB6bI31
     github: ''
