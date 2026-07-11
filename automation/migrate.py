@@ -542,12 +542,134 @@ def reclassify_leaves(keys: list[str], model: str = classify.MODEL) -> Path:
     return out
 
 
+def fetch_arxiv_papers(ids: list[str]) -> dict[str, Paper]:
+    """Build Paper objects from the arXiv API (title, authors, venue, v1 date), and
+    cache abstracts in the sidecar. venue is 'arXiv YYYY/MM' from first publication."""
+    cache = storage.load_abstracts()
+    out: dict[str, Paper] = {}
+    changed = False
+    arxiv_ids = [i for i in ids if _ARXIV_ID.match(i)]
+    for start in range(0, len(arxiv_ids), 50):
+        chunk = arxiv_ids[start:start + 50]
+        url = "https://export.arxiv.org/api/query?max_results=100&id_list=" + ",".join(chunk)
+        logger.info("fetching metadata for %d papers from arXiv", len(chunk))
+        with urllib.request.urlopen(url, timeout=60) as r:
+            root = ET.fromstring(r.read())
+        for entry in root.findall("a:entry", _ATOM):
+            eid = entry.find("a:id", _ATOM).text or ""
+            m = re.search(r"abs/(\d{4}\.\d{4,5})", eid)
+            if not m:
+                continue
+            pid = m.group(1)
+            title = re.sub(r"\s+", " ", (entry.find("a:title", _ATOM).text or "")).strip()
+            authors = [a.find("a:name", _ATOM).text or "" for a in entry.findall("a:author", _ATOM)]
+            pub = entry.find("a:published", _ATOM)
+            published = (pub.text or "")[:10] if pub is not None else ""
+            venue = f"arXiv {published[:4]}/{published[5:7]}" if published else "arXiv"
+            summary = entry.find("a:summary", _ATOM)
+            if summary is not None and summary.text and pid not in cache:
+                cache[pid] = re.sub(r"\s+", " ", summary.text).strip()
+                changed = True
+            out[pid] = Paper(
+                id=pid, title=title, authors=authors, venue=venue, published=published,
+                links={"paper": f"https://arxiv.org/abs/{pid}"},
+            )
+        time.sleep(3)
+    if changed:
+        storage.save_abstracts(cache)
+    return out
+
+
+def process_inbox(model: str = classify.MODEL) -> Path:
+    """Read arXiv links from the inbox issue, classify those not already in the corpus
+    under the live rules, and add the relevant ones. Writes a review sheet."""
+    import json
+    import subprocess
+
+    from automation import badges, config, render, taxonomy
+
+    cfg = config.load()
+    owner, repo = cfg["repo"]["owner"], cfg["repo"]["name"]
+    issue = cfg["inbox"]["issue_number"]
+
+    raw = subprocess.run(
+        ["gh", "api", "--paginate", f"repos/{owner}/{repo}/issues/{issue}/comments"],
+        capture_output=True, text=True, timeout=120,
+    )
+    if raw.returncode != 0:
+        raise RuntimeError(f"gh api failed: {raw.stderr[:300]}")
+    # gh --paginate merges array-endpoint pages into a single JSON array.
+    comments = json.loads(raw.stdout)
+    inbox_ids: list[str] = []
+    for c in comments:
+        for mm in re.findall(r"arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})", c.get("body", ""), re.I):
+            if mm not in inbox_ids:
+                inbox_ids.append(mm)
+    logger.info("inbox: %d unique arXiv ids across %d comments", len(inbox_ids), len(comments))
+
+    leaves = taxonomy.load(force=True).leaf_keys()
+    have = storage.all_ids(leaves)
+    new_ids = [i for i in inbox_ids if i not in have]
+    logger.info("inbox: %d already in corpus, %d new to classify", len(inbox_ids) - len(new_ids), len(new_ids))
+
+    papers_by_id = fetch_arxiv_papers(new_ids)
+    papers = [papers_by_id[i] for i in new_ids if i in papers_by_id]
+    cache = storage.load_abstracts()
+
+    ruled = {p.id: _override_for(p.title) for p in papers if _override_for(p.title)[0]}
+    to_classify = [p for p in papers if p.id not in ruled]
+    items = [_classify_input(p, cache) for p in to_classify]
+    verdicts = classify.classify(items, model=model) if items else []
+
+    store = {k: storage.load(k) for k in leaves}
+    rows: list[str] = []
+    added = 0
+
+    def place(p: Paper, cat: str | None, tags: list[str], summary: str, reason: str) -> None:
+        nonlocal added
+        if cat:
+            p.category, p.tags = cat, tags
+            if summary:
+                p.summary = summary
+            store[cat].append(p)
+            added += 1
+        rows.append(f"| **{cat or 'OUT'}** | {p.title[:62].replace('|','/')} | "
+                    f"{reason[:95].replace('|','/')} |")
+
+    for p in papers:
+        if p.id in ruled:
+            ruling = ruled[p.id][1]
+            place(p, ruling[0] if ruling else None, ruling[1] if ruling else [], "", "owner ruling")
+    for p, v in zip(to_classify, verdicts):
+        if v.failed:
+            rows.append(f"| FAILED | {p.title[:62].replace('|','/')} | retry |")
+        else:
+            place(p, v.category if v.relevant else None, v.tags, v.summary, v.reason)
+
+    for k in leaves:
+        storage.save(k, storage.newest_first(store[k]))
+    render.main()
+    badges.refresh()
+
+    REVIEW_DIR.mkdir(parents=True, exist_ok=True)
+    out = REVIEW_DIR / "inbox-run.md"
+    out.write_text(
+        f"# Inbox classification run\n\n"
+        f"{len(inbox_ids)} arXiv ids in inbox issue #{issue}; "
+        f"{len(inbox_ids) - len(new_ids)} already in corpus; {len(new_ids)} classified; "
+        f"{added} added, {len(new_ids) - added} out of scope.\n\n"
+        "| category | title | reason |\n|---|---|---|\n" + "\n".join(rows) + "\n",
+        encoding="utf-8",
+    )
+    return out
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(message)s")
     parser = argparse.ArgumentParser(description="Legacy corpus migration tooling")
-    parser.add_argument("command", choices=["calibrate", "run", "dates", "refetch", "reclass"])
+    parser.add_argument("command", choices=["calibrate", "run", "dates", "refetch", "reclass", "inbox"])
     parser.add_argument("keys", nargs="*", help="leaf keys to reclassify (for reclass)")
     args = parser.parse_args()
     if args.command == "calibrate":
@@ -559,6 +681,8 @@ def main() -> None:
     elif args.command == "reclass":
         keys = args.keys or ["software_general", "world_general"]
         print(f"review sheet written: {reclassify_leaves(keys)}")
+    elif args.command == "inbox":
+        print(f"review sheet written: {process_inbox()}")
     else:
         backfill_dates()
 
