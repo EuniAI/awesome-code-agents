@@ -19,8 +19,8 @@
 A curated list of research papers on autonomous code agents, published at
 [euni.ai](https://euni.ai) and github.com/EuniAI/awesome-code-agents. Rebuilt
 from the ground up in 2026-07 (taxonomy, data, and pipeline); the old system
-lives only in git history. Rebuild rationale: automation/design-decisions.md; the legacy
-feature disposition: records/legacy-audit.md.
+lives only in git history. Rebuild rationale: automation/design-decisions.md; the rebuild-era
+records (legacy audit, completeness warrant) live at the git tag `rebuild/2026-07`.
 
 ## The Two Sources of Truth
 
@@ -117,6 +117,6 @@ categories + keyword recall net) · tests/ (30 tests, no network).
   re-runnable; every write is dedup-safe.
 - taxonomy.json survives `json.dumps(indent=2, ensure_ascii=False)` round-trips
   (verified); edit it programmatically for structural changes.
-- Old pipeline reference: git history and records/legacy-audit.md (file-by-file
-  disposition); records/completeness-diff.md is the deletion warrant with every
-  written OUT verdict. The transient migration review sheets live in git history.
+- Old pipeline reference: everything is in git history. The audit and deletion
+  warrants (every legacy feature's disposition, every paper's whereabouts, every
+  written OUT verdict) are one command away: `git show rebuild/2026-07:records/`.
