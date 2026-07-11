@@ -1,0 +1,33 @@
+# Deploys the owner's private review UI (ui/) to GitHub Pages.
+# The page is an empty shell without a token; all writes go through issue
+# comments, which decide.yml trusts only from the configured reviewer.
+name: Deploy review UI
+
+on:
+  push:
+    branches: [main]
+    paths: ["ui/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ui
+      - id: deployment
+        uses: actions/deploy-pages@v4
