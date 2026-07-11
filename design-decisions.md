@@ -52,6 +52,33 @@ reports are in. Encoded as master_test step 1 (off-axis escape checked first) an
 node boundary. Moved in now: Kimi K2, Qwen3-Coder. CWM pending owner ruling
 (code-gen-centric research model, leaning software_code_generation + model).
 
+## 2026-07-11 (later): BOTH general leaves abolished; Studies promoted to top-level
+
+Supersedes the "general leaves kept" decision below. The owner decided to abolish both
+general catch-alls entirely, because even with a benchmark-routing rule they stayed
+magnets: any paper with slight cross-activity/cross-world flavor fell in.
+
+Two moves:
+1. `software_general` -> abolished. Its surveys/positions/empirical became a new leaf
+   `software_studies`; its generalist agents/benchmarks were routed to activities by a
+   reclass pass (50 -> 31 studies; 19 evicted).
+2. `world_general` -> abolished. The owner rejected the "agency is asymmetric, keep it"
+   argument: every code-as-action agent has a most-representative world it can be
+   assigned to (CodeAct/Tree-of-Code -> a world, not a general bin). Its 12 members were
+   re-routed to specific worlds/activities/studies.
+
+Structural consequence: `software_studies` was promoted OUT of artifact/software to a
+repo-wide top-level leaf `studies` ("Surveys & Empirical Studies"), so agency-side
+surveys (Code as Agent Harness) have a correct home too. L1 is now FOUR branches:
+two off the task axis (`foundation_models` = the models, `studies` = research about the
+agents) and two task branches (`artifact`, `agency`). Clean symmetry: two meta branches
++ two task branches. Ordering: foundation_models, studies, artifact, agency.
+
+The `studies` hard rule (kills the magnet on both branches): a paper that PROPOSES an
+agent, method, or benchmark to do a task routes to that task's leaf, however general it
+looks; only research whose OBJECT is the agents/field lives in `studies`. A survey of
+ONE activity/world is that leaf + survey tag; only field-wide surveys are in `studies`.
+
 ## 2026-07-11: general leaves kept, re-scoped by a benchmark-routing rule
 
 The two "general" leaves (software_general "General-Purpose Software Agents",

@@ -11,7 +11,7 @@
   - Tao Dong
   - Toby Jia-Jun Li
   venue: arXiv 2026/05
-  category: software_studies
+  category: studies
   published: '2026-05-28'
   tags:
   - empirical
@@ -29,7 +29,7 @@
   - Xiaofei Xie
   - Yintong Huo
   venue: arXiv 2026/05
-  category: software_studies
+  category: studies
   published: '2026-05-26'
   tags:
   - benchmark
@@ -48,7 +48,7 @@
   - Yuxiang Wu
   - Zhengyao Jiang
   venue: arXiv 2026/05
-  category: software_studies
+  category: studies
   published: '2026-05-20'
   tags:
   - benchmark
@@ -70,7 +70,7 @@
   - Leo Yu Zhang
   - Yi Liu
   venue: arXiv 2026/05
-  category: software_studies
+  category: studies
   published: '2026-05-18'
   tags:
   - benchmark
@@ -80,6 +80,63 @@
     dominates model-layer alignment in causing unintended actions.
   links:
     paper: https://arxiv.org/abs/2605.18583
+    github: ''
+    website: ''
+- id: '2605.18747'
+  title: Code as Agent Harness
+  authors:
+  - Xuying Ning
+  - Katherine Tieu
+  - Dongqi Fu
+  - Tianxin Wei
+  - Zihao Li
+  - Yuanchen Bei
+  - Jiaru Zou
+  - Mengting Ai
+  - Zhining Liu
+  - Ting-Wei Li
+  - Lingjie Chen
+  - Yanjun Zhao
+  - Ke Yang
+  - Bingxuan Li
+  - Cheng Qian
+  - Gaotang Li
+  - Xiao Lin
+  - Zhichen Zeng
+  - Ruizhong Qiu
+  - Sirui Chen
+  - Yifan Sun
+  - Xiyuan Yang
+  - Ruida Wang
+  - Rui Pan
+  - Chenyuan Yang
+  - Dylan Zhang
+  - Liri Fang
+  - Zikun Cui
+  - Yang Cao
+  - Pan Chen
+  - Dorothy Sun
+  - Ren Chen
+  - Mahesh Srinivasan
+  - Nipun Mathur
+  - Yinglong Xia
+  - Hong Li
+  - Hong Yan
+  - Pan Lu
+  - Lingming Zhang
+  - Tong Zhang
+  - Hanghang Tong
+  - Jingrui He
+  venue: arXiv 2026/05
+  category: studies
+  published: '2026-05-18'
+  tags:
+  - survey
+  summary: A survey framing code as the operational substrate for agent harnesses, covering interface, mechanisms, and multi-agent
+    scaling across coding, GUI/OS, embodied, and enterprise applications. It organizes and reviews existing methods rather
+    than proposing a new agent or task.
+  links:
+    paper: https://arxiv.org/abs/2605.18747
     github: ''
     website: ''
 - id: '2604.20779'
@@ -92,7 +149,7 @@
   - Diyi Yang
   - Sanmi Koyejo
   venue: arXiv 2026/04
-  category: software_studies
+  category: studies
   published: '2026-04-22'
   tags:
   - empirical
@@ -112,7 +169,7 @@
   - Xinyi Shang
   - Zhiqiang Shen
   venue: arXiv 2026/04
-  category: software_studies
+  category: studies
   published: '2026-04-14'
   tags:
   - empirical
@@ -143,7 +200,7 @@
   - He Ye
   - Jiaheng Liu
   venue: arXiv 2026/04
-  category: software_studies
+  category: studies
   published: '2026-04-13'
   tags:
   - benchmark
@@ -167,7 +224,7 @@
   - Yu Huang
   - Toby Jia-Jun Li
   venue: arXiv 2026/04
-  category: software_studies
+  category: studies
   published: '2026-04-01'
   tags:
   - empirical
@@ -186,7 +243,7 @@
   - Kathryn Thomasset Stolee
   - Bowen Xu
   venue: arXiv 2026/03
-  category: software_studies
+  category: studies
   published: '2026-03-28'
   tags:
   - empirical
@@ -208,7 +265,7 @@
   - Youcheng Sun
   - Lijie Hu
   venue: arXiv 2026/03
-  category: software_studies
+  category: studies
   published: '2026-03-16'
   tags:
   - benchmark
@@ -225,7 +282,7 @@
   authors:
   - Taher A. Ghaleb
   venue: arXiv 2026/01
-  category: software_studies
+  category: studies
   published: '2026-01-24'
   tags:
   - empirical
@@ -251,7 +308,7 @@
   - Ahmed E. Hassan
   - Hajimu Iida
   venue: arXiv 2025/11
-  category: software_studies
+  category: studies
   published: '2025-11-17'
   tags:
   - empirical
@@ -271,7 +328,7 @@
   - Christian Kästner
   - Bogdan Vasilescu
   venue: arXiv 2025/11
-  category: software_studies
+  category: studies
   published: '2025-11-06'
   tags:
   - empirical
@@ -292,7 +349,7 @@
   - Yinxing Xue
   - Lijun Zhang
   venue: arXiv 2025/11
-  category: software_studies
+  category: studies
   published: '2025-11-02'
   tags:
   - empirical
@@ -322,7 +379,7 @@
   - Shenghua Liu
   - Xueqi Cheng
   venue: arXiv 2025/10
-  category: software_studies
+  category: studies
   published: '2025-10-14'
   tags:
   - survey
@@ -347,7 +404,7 @@
   - Ameet Talwalkar
   - Graham Neubig
   venue: arXiv 2025/10
-  category: software_studies
+  category: studies
   published: '2025-10-10'
   tags:
   - empirical
@@ -374,7 +431,7 @@
   - Pietro Lio
   - Kwok-Yan Lam
   venue: arXiv 2025/10
-  category: software_studies
+  category: studies
   published: '2025-10-10'
   tags:
   - survey
@@ -395,7 +452,7 @@
   - Hajimu Iida
   - Ahmed E. Hassan
   venue: arXiv 2025/09
-  category: software_studies
+  category: studies
   published: '2025-09-18'
   tags:
   - empirical
@@ -417,7 +474,7 @@
   - Yutaro Kashiwa
   - Dong Qiu
   venue: arXiv 2025/09
-  category: software_studies
+  category: studies
   published: '2025-09-07'
   tags:
   - position
@@ -438,7 +495,7 @@
   - Yue Liu
   - David Lo
   venue: ASE 2025
-  category: software_studies
+  category: studies
   published: '2025-08-17'
   tags:
   - empirical
@@ -460,7 +517,7 @@
   - Zhi Jin
   - Ge Li
   venue: arXiv 2025/07
-  category: software_studies
+  category: studies
   published: '2025-07-31'
   tags:
   - survey
@@ -478,7 +535,7 @@
   - Haoxiang Zhang
   - Ahmed E. Hassan
   venue: arXiv 2025/07
-  category: software_studies
+  category: studies
   published: '2025-07-20'
   tags:
   - empirical
@@ -498,7 +555,7 @@
   - Elizabeth Barnes
   - David Rein
   venue: arXiv 2025/07
-  category: software_studies
+  category: studies
   published: '2025-07-12'
   tags:
   - empirical
@@ -516,7 +573,7 @@
   - Robert Brennan
   - Graham Neubig
   venue: arXiv 2025/07
-  category: software_studies
+  category: studies
   published: '2025-07-10'
   tags:
   - empirical
@@ -537,7 +594,7 @@
   - Baishakhi Ray
   - Shyam Ramji
   venue: arXiv 2025/06
-  category: software_studies
+  category: studies
   published: '2025-06-16'
   tags:
   - survey
@@ -555,7 +612,7 @@
   - Konstantinos I. Roumeliotis
   - Manoj Karkee
   venue: arXiv 2025/05
-  category: software_studies
+  category: studies
   published: '2025-05-26'
   tags:
   - survey
@@ -578,7 +635,7 @@
   - Xin Xia
   - David Lo
   venue: arXiv 2025/05
-  category: software_studies
+  category: studies
   published: '2025-05-13'
   tags:
   - survey
@@ -596,7 +653,7 @@
   - Jiawei Li
   - Iftekhar Ahmed
   venue: arXiv 2025/03
-  category: software_studies
+  category: studies
   published: '2025-03-15'
   tags:
   - empirical
@@ -617,7 +674,7 @@
   - Koushik Sen
   - Armando Solar-Lezama
   venue: ICML 2025 Position Paper Track
-  category: software_studies
+  category: studies
   tags:
   - position
   summary: A position paper arguing that despite progress in AI for software engineering, significant research challenges
@@ -640,7 +697,7 @@
   - Qianxiang Wang
   - Zibin Zheng
   venue: Automated Software Engineering, Springer, 2025
-  category: software_studies
+  category: studies
   tags:
   - survey
   summary: This survey reviews studies combining LLM-based agents with software engineering, proposing a perception-memory-action
@@ -660,7 +717,7 @@
   - Lingming Zhang
   - Yiling Lou
   venue: arXiv 2024/09
-  category: software_studies
+  category: studies
   published: '2024-09-04'
   tags:
   - survey
@@ -668,5 +725,33 @@
     and agent-design perspectives. It discusses open challenges and future directions for the field.
   links:
     paper: https://arxiv.org/abs/2409.02977
+    github: ''
+    website: ''
+- id: '2401.00812'
+  title: 'If LLM Is the Wizard, Then Code Is the Wand: A Survey on How Code Empowers Large Language Models to Serve as Intelligent
+    Agents'
+  authors:
+  - Ke Yang
+  - Jiateng Liu
+  - John Wu
+  - Chaoqi Yang
+  - Yi R. Fung
+  - Sha Li
+  - Zixuan Huang
+  - Xu Cao
+  - Xingyao Wang
+  - Yiquan Wang
+  - Heng Ji
+  - Chengxiang Zhai
+  venue: ICLR 2024 Workshop
+  category: studies
+  published: '2024-01-01'
+  tags:
+  - survey
+  summary: A survey examining how code in training data empowers LLMs' reasoning, structured intermediate steps, and execution
+    feedback, tracing the emergence of code-augmented LLMs as intelligent agents. It covers the field broadly rather than
+    proposing a specific agent or task.
+  links:
+    paper: https://arxiv.org/abs/2401.00812
     github: ''
     website: ''

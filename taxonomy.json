@@ -1,7 +1,7 @@
 {
   "name": "Awesome Code Agents Taxonomy",
   "description": "Authoritative category system for this repo. Single source of truth: automation/config.yaml is synced from it, and it drives both the README structure and the auto-classifier. Rationale and history: design-decisions.md.",
-  "vision": "Code as Everything. Every strong paper in which an agent writes or runs code, across all domains. Code is either the thing being built (artifact) or the language of action (agency), and foundation models are the substrate that powers both. Those three are Level 1.",
+  "vision": "Code as Everything. Every strong paper in which an agent writes or runs code, across all domains. Code is either the thing being built (artifact) or the language of action (agency). Two off-axis branches bracket them: foundation models power both, and surveys & empirical studies reflect on the agents. Those four are Level 1.",
   "scope": {
     "collects": "Agent-related papers in which an agent writes or executes code, plus resource papers (datasets, models, benchmarks, surveys) that serve such agents.",
     "excludes": [
@@ -36,13 +36,13 @@
     }
   },
   "levels": {
-    "L1": "three top-level branches: `foundation_models` (off the task axis: flagship general models that serve both), then the two task branches, `artifact` (ultimate purpose is producing code) and `agency` (code is the tool for completing a task in the world)",
+    "L1": "four top-level branches: two off the task axis (`foundation_models`, flagship general models that serve both; and `studies`, surveys & empirical research about the agents), and two task branches (`artifact`, ultimate purpose is producing code; and `agency`, code is the tool for completing a task in the world)",
     "L2": "artifact branch: the domain of the code being built (8) | agency branch: the world the agent acts in (7) | foundation_models has no L2 (single leaf)",
     "L3": "software-lifecycle activity (only general-software under artifact expands; 10 children)"
   },
   "axis": "the ultimate purpose of the task the paper serves (foundation_models is the one node off this axis)",
   "master_test": [
-    "First check the off-axis escape: is the paper a flagship, general-purpose frontier foundation model (Kimi K2 / Qwen3-Coder / DeepSeek / Claude / GPT / Gemini style) that is general enough to both produce code and act through code, with no single primary downstream task? Then `foundation_models` plus the model tag. A model specialized and evaluated on one activity is NOT this: it routes to that activity leaf plus the model tag (SWE-GPT to software_debugging, JanusCoder to software_code_generation, Terminus-4B to world_terminal).",
+    "First check the off-axis escapes (two branches sit off the task axis). (a) Is the paper a flagship, general-purpose frontier foundation model (Kimi K2 / Qwen3-Coder / DeepSeek / Claude / GPT / Gemini style) general enough to both produce code and act through code, with no single primary downstream task? Then `foundation_models` plus the model tag; a model specialized and evaluated on one activity is NOT this and routes to that activity leaf plus the model tag (SWE-GPT to software_debugging, Terminus-4B to world_terminal). (b) Is the paper's OBJECT of study the agents or the field rather than a task, i.e. a field-wide survey, a position/roadmap paper, or an empirical/behavioral study of the practice? Then `studies`. A paper that PROPOSES an agent, method, or benchmark to do a task is never `studies`: it routes to that task's leaf, however general it looks.",
     "Otherwise identify the task the paper ultimately serves. For resource papers (data synthesis, task-specialized models, benchmarks, surveys, training methods) that is the downstream task they enable, never what the paper itself produces.",
     "Ask of that task: is its ultimate purpose to produce code? Then `artifact`. Is the produced code merely the tool for completing a task in the world? Then `agency`.",
     "Lifecycle activities that emit no code themselves (testing, fuzzing, bug localization, review, comprehension, environment setup) still belong to `artifact`: improving, understanding, safeguarding, and enabling code all exist in service of producing code.",
@@ -82,6 +82,45 @@
           "paper": "A model tuned and evaluated solely for SWE-bench issue resolution (SWE-GPT style)",
           "verdict": "software_debugging + model tag",
           "why": "specialized for one activity; routed to that leaf, not here"
+        }
+      ]
+    },
+    {
+      "key": "studies",
+      "emoji": "📊",
+      "title": "Surveys & Empirical Studies",
+      "blurb": "Research that studies and surveys code agents themselves.",
+      "definition": "Research whose OBJECT of study is code agents themselves, across both the artifact and agency branches: field-wide surveys, position and roadmap papers, and empirical or behavioral studies of how agents (and the people using them) build code and act through it. These papers study or survey the agents; they do not propose an agent that performs a task. This is an off-axis branch, like foundation_models, and it is NOT a home for generalist agents.",
+      "includes": [
+        "Field-wide surveys and landscapes of code/software agents and of code-as-action agents (spanning many activities or worlds).",
+        "Position, roadmap, and vision papers about agentic software engineering or code-as-action.",
+        "Empirical and behavioral studies: developer productivity, human-agent interaction, real-user usage in the wild, agent failure analyses, adoption studies."
+      ],
+      "boundary": [
+        "HARD RULE (this replaces the old general magnets on both branches): if a paper proposes an agent, method, framework, SDK, or benchmark that PERFORMS a task, it goes to the leaf for that task, no matter how many activities or worlds it spans or how 'general/unified/comprehensive' it calls itself. Generalist agents route to their dominant activity or world; benchmarks route to what they benchmark. Only research whose object is the agents lives here.",
+        "A survey of ONE activity or world is that leaf plus the survey tag; only genuinely field-wide, cross-cutting surveys and studies are here.",
+        "This is an off-axis branch spanning both artifact and agency. A flagship general-purpose foundation model is `foundation_models`, not here."
+      ],
+      "examples": [
+        {
+          "paper": "Agents in software engineering: survey, landscape, and vision",
+          "verdict": "studies + survey tag",
+          "why": "a field-wide survey; its object is the agents, not one task"
+        },
+        {
+          "paper": "SWE-chat: Coding Agent Interactions From Real Users in the Wild",
+          "verdict": "studies + empirical tag",
+          "why": "a behavioral study of how people use agents; proposes no method"
+        },
+        {
+          "paper": "Code as Agent Harness: a survey advocating code-as-action across worlds",
+          "verdict": "studies + survey tag",
+          "why": "an agency-side field survey; its object is the paradigm, not one world"
+        },
+        {
+          "paper": "OpenHands / CodeAct: a generalist agent",
+          "verdict": "its dominant activity or world (NOT here)",
+          "why": "it proposes an agent that performs tasks; route to that leaf"
         }
       ]
     },
@@ -181,7 +220,7 @@
                 "Proactive defect search with no specific reported bug is `software_testing`.",
                 "Vulnerability repair is `software_security`.",
                 "Behavior-preserving transformation is `software_maintenance`.",
-                "Field-wide surveys and empirical studies of coding agents are `software_studies`; a generalist agent or scaffold routes to the activity it is evaluated on."
+                "Field-wide surveys and empirical studies of coding agents are `studies`; a generalist agent or scaffold routes to the activity it is evaluated on."
               ],
               "examples": [
                 {
@@ -393,46 +432,6 @@
                   "paper": "NoCode-bench natural-language feature addition",
                   "verdict": "software_development + benchmark tag",
                   "why": "the task is extending an existing codebase with a described feature"
-                }
-              ]
-            },
-            {
-              "key": "software_studies",
-              "emoji": "📊",
-              "title": "Surveys & Empirical Studies",
-              "blurb": "Research that studies and surveys coding agents themselves.",
-              "definition": "Research whose OBJECT of study is coding agents themselves, not any software activity: field-wide surveys, position and roadmap papers, and empirical or behavioral studies of how agents (and the people using them) build software. These papers study or survey the agents; they do not propose an agent that performs a lifecycle activity. This leaf is deliberately narrow: it is NOT a home for generalist agents.",
-              "includes": [
-                "Field-wide surveys and landscapes of coding/software agents (spanning many activities).",
-                "Position, roadmap, and vision papers about agentic software engineering.",
-                "Empirical and behavioral studies: developer productivity, human-agent interaction, real-user usage in the wild, agent failure analyses, adoption studies."
-              ],
-              "boundary": [
-                "HARD RULE, this kills the old magnet: if a paper proposes an agent, method, framework, SDK, or benchmark that PERFORMS a software activity, it goes to that activity, no matter how many activities it spans or how 'general/unified/comprehensive' it calls itself. OpenHands and HyperAgent (generalist agents) route to their dominant activity; SWE Atlas and CodeClash (benchmarks of agents doing tasks) route to the activity they benchmark; an agent SDK routes to the activity it is demonstrated on. Only research that studies or surveys agents lives here.",
-                "A survey of ONE activity is that activity plus the survey tag (a survey of issue-resolution agents is `software_debugging`); only genuinely field-wide, multi-activity surveys are here.",
-                "A flagship general-purpose foundation model is `foundation_models`, not here.",
-                "The agency-side counterpart for cross-world action agents is `world_general`."
-              ],
-              "examples": [
-                {
-                  "paper": "Agents in software engineering: survey, landscape, and vision",
-                  "verdict": "software_studies + survey tag",
-                  "why": "a field-wide survey; its object is the agents, not one activity"
-                },
-                {
-                  "paper": "SWE-chat: Coding Agent Interactions From Real Users in the Wild",
-                  "verdict": "software_studies + empirical tag",
-                  "why": "a behavioral study of how people use coding agents; proposes no method"
-                },
-                {
-                  "paper": "OpenHands: a generalist software agent evaluated on SWE-bench",
-                  "verdict": "software_debugging (NOT here)",
-                  "why": "it proposes an agent that performs an activity; benchmark routing sends it to that activity"
-                },
-                {
-                  "paper": "SWE Atlas: a benchmark of coding agents across many tasks",
-                  "verdict": "the activity it benchmarks (NOT here)",
-                  "why": "a benchmark of agents doing tasks is not a study of the agents"
                 }
               ]
             }
@@ -800,36 +799,6 @@
               "paper": "Multi-agent computer use acting across desktop applications",
               "verdict": "world_apps",
               "why": "the apps are the world being acted in"
-            }
-          ]
-        },
-        {
-          "key": "world_general",
-          "emoji": "🦾",
-          "title": "General-Purpose Action Agents",
-          "blurb": "Agents that act across many worlds, and overviews of the field.",
-          "definition": "Work whose served task is acting in the world through code as a whole, rather than any single world: field-level surveys and position papers advocating code as action, generalist agents whose tasks span terminals, browsers, applications, and other worlds, and cross-world resources.",
-          "includes": [
-            "Surveys, roadmaps, and position papers on code-as-action agents in general (Code as Agent Harness style).",
-            "Generalist action agents and benchmarks whose tasks span multiple worlds, domains, or modalities (GitTaskBench style).",
-            "Cross-world scaffolds and resources serving action agents broadly."
-          ],
-          "boundary": [
-            "Admission follows the master test: enter only when no single world dominates the served task. A terminal-specific benchmark is `world_terminal`; a browser agent is `world_browser`.",
-            "Benchmark routing dominates generalist framing: an agent evaluated on a single world's benchmark goes to that world, not here, whatever it calls itself. Only cross-world surveys, position papers, and genuinely multi-world agents and benchmarks stay here.",
-            "A flagship general-purpose foundation model is `foundation_models`, not here.",
-            "Work whose served task is producing code belongs to the `artifact` branch (see the L1 master test)."
-          ],
-          "examples": [
-            {
-              "paper": "A survey covering agents across worlds and advocating code-as-action (Code as Agent Harness style)",
-              "verdict": "world_general + survey tag",
-              "why": "the served task is the code-as-action field as a whole"
-            },
-            {
-              "paper": "A benchmark of agents leveraging code repositories to complete real tasks across many domains and modalities",
-              "verdict": "world_general + benchmark tag",
-              "why": "tasks span worlds; no single world dominates"
             }
           ]
         }

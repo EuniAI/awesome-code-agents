@@ -353,6 +353,32 @@
     paper: https://arxiv.org/abs/2506.15692
     github: https://github.com/jaehyun513/MLE-STAR
     website: ''
+- id: '2505.21577'
+  title: 'RepoMaster: Autonomous Exploration and Understanding of GitHub Repositories for Complex Task Solving'
+  authors:
+  - Huacan Wang
+  - Ziyi Ni
+  - Shuo Zhang
+  - Shuo Lu
+  - Sen Hu
+  - Ziyang He
+  - Chen Hu
+  - Jiaye Lin
+  - Yifu Guo
+  - Ronghao Chen
+  - Xin Li
+  - Daxin Jiang
+  - Yuntao Du
+  - Pin Lyu
+  venue: NeurIPS 2025
+  category: world_research
+  published: '2025-05-27'
+  summary: RepoMaster autonomously explores and reuses GitHub repositories via dependency/call graphs to solve complex tasks,
+    achieving large gains on the adjusted MLE-bench and on GitTaskBench while cutting token usage.
+  links:
+    paper: https://arxiv.org/abs/2505.21577
+    github: https://github.com/QuantaAlpha/RepoMaster
+    website: https://quantaalpha.com/
 - id: '2505.19955'
   title: 'MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research'
   authors:
@@ -551,6 +577,21 @@
     paper: https://aclanthology.org/2024.emnlp-main.748/
     github: https://github.com/yiyihum/da-code
     website: https://da-code-bench.github.io/
+- id: https://openreview.net/forum?id=QGJSXMhVaL
+  title: 'WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment'
+  authors:
+  - Hao Tang
+  - Darren Yan Key
+  - Kevin Ellis
+  venue: NeurIPS 2024
+  category: world_research
+  summary: WorldCoder is a model-based LLM agent that writes Python programs as world models to explain environment interactions
+    and plan optimistically for reward, tested on gridworlds and task planning. Code is used as the instrument for building
+    knowledge and planning, not as a deliverable artifact.
+  links:
+    paper: https://openreview.net/forum?id=QGJSXMhVaL
+    github: https://github.com/haotang1995/WorldCoder
+    website: https://haotang1995.github.io/projects/worldcoder
 - id: '2311.09835'
   title: 'ML-Bench: Evaluating Large Language Models and Agents for Machine Learning Tasks on Repository-Level Code'
   authors:

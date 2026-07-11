@@ -1853,6 +1853,23 @@
     paper: https://arxiv.org/abs/2506.03921
     github: ''
     website: ''
+- id: '2506.03011'
+  title: Coding Agents with Multimodal Browsing are Generalist Problem Solvers
+  authors:
+  - Aditya Bharat Soni
+  - Boxuan Li
+  - Xingyao Wang
+  - Valerie Chen
+  - Graham Neubig
+  venue: arXiv 2025/06
+  category: software_debugging
+  published: '2025-06-03'
+  summary: OpenHands-Versa is a generalist coding agent built from a minimal general toolset (code editing/execution, web
+    search, multimodal browsing) that outperforms specialized agents on SWE-Bench Multimodal, GAIA, and TheAgentCompany.
+  links:
+    paper: https://arxiv.org/abs/2506.03011
+    github: https://github.com/adityasoni9998/OpenHands-Versa
+    website: ''
 - id: '2505.23604'
   title: 'Satori-SWE: Evolutionary Test-Time Scaling for Sample-Efficient Software Engineering'
   authors:

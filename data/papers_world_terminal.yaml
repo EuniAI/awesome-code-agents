@@ -402,6 +402,28 @@
     paper: https://arxiv.org/abs/2601.16443
     github: ''
     website: ''
+- id: '2601.16206'
+  title: Computer Environments Elicit General Agentic Intelligence in LLMs
+  authors:
+  - Daixuan Cheng
+  - Shaohan Huang
+  - Yuxian Gu
+  - Huatong Song
+  - Guoxin Chen
+  - Li Dong
+  - Wayne Xin Zhao
+  - Ji-Rong Wen
+  - Furu Wei
+  venue: arXiv 2026/01
+  category: world_terminal
+  published: '2026-01-22'
+  summary: Introduces LLM-in-Sandbox, a minimal code sandbox environment that elicits general task-solving via file management,
+    resource access, and code execution, boosting performance across math, science, and instruction-following without training,
+    plus an RL variant to internalize this.
+  links:
+    paper: https://arxiv.org/abs/2601.16206
+    github: ''
+    website: ''
 - id: '2601.11868'
   title: 'Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces'
   authors:
@@ -604,6 +626,73 @@
     paper: https://arxiv.org/abs/2512.24873
     github: ''
     website: ''
+- id: '2510.24702'
+  title: 'Agent Data Protocol: Unifying Datasets for Diverse, Effective Fine-tuning of LLM Agents'
+  authors:
+  - Yueqi Song
+  - Ketan Ramaneti
+  - Zaid Sheikh
+  - Ziru Chen
+  - Boyu Gou
+  - Tianbao Xie
+  - Yiheng Xu
+  - Danyang Zhang
+  - Apurva Gandhi
+  - Fan Yang
+  - Joseph Liu
+  - Tianyue Ou
+  - Zhihao Yuan
+  - Frank Xu
+  - Shuyan Zhou
+  - Xingyao Wang
+  - Xiang Yue
+  - Tao Yu
+  - Huan Sun
+  - Yu Su
+  - Graham Neubig
+  venue: arXiv 2025/10
+  category: world_terminal
+  published: '2025-10-28'
+  tags:
+  - training-data
+  summary: Agent Data Protocol unifies 13 heterogeneous agent datasets (tool use, browsing, coding, software engineering)
+    into one format for standardized fine-tuning, yielding ~20% average gains across coding, browsing, and research benchmarks.
+  links:
+    paper: https://arxiv.org/abs/2510.24702
+    github: https://github.com/neulab/agent-data-protocol
+    website: https://www.agentdataprotocol.com/
+- id: '2508.18993'
+  title: 'GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leveraging'
+  authors:
+  - Ziyi Ni
+  - Huacan Wang
+  - Shuo Zhang
+  - Shuo Lu
+  - Ziyang He
+  - Wang You
+  - Zhenheng Tang
+  - Yuntao Du
+  - Bill Sun
+  - Hongzhang Liu
+  - Sen Hu
+  - Ronghao Chen
+  - Bo Li
+  - Xin Li
+  - Chen Hu
+  - Binxing Jiao
+  - Daxin Jiang
+  - Pin Lyu
+  venue: arXiv 2025/08
+  category: world_terminal
+  published: '2025-08-26'
+  tags:
+  - benchmark
+  summary: GitTaskBench benchmarks code agents on 54 realistic tasks across 7 domains that require leveraging existing GitHub
+    repositories to accomplish real-world jobs, finding environment setup and dependency issues are the dominant failure mode.
+  links:
+    paper: https://arxiv.org/abs/2508.18993
+    github: https://github.com/QuantaAlpha/GitTaskBench
+    website: https://gittaskbench.github.io/
 - id: '2505.20505'
   title: 'Large Language Models for IT Automation Tasks: Are We There Yet?'
   authors:
@@ -653,6 +742,65 @@
   links:
     paper: https://arxiv.org/abs/2503.17332
     github: https://github.com/uiuc-kang-lab/cve-bench
+    website: ''
+- id: '2501.10893'
+  title: 'Learn-by-interact: A Data-Centric Framework for Self-Adaptive Agents in Realistic Environments'
+  authors:
+  - Hongjin Su
+  - Ruoxi Sun
+  - Jinsung Yoon
+  - Pengcheng Yin
+  - Tao Yu
+  - Sercan Ö. Arık
+  venue: arXiv 2025/01
+  category: world_terminal
+  published: '2025-01-18'
+  tags:
+  - training-data
+  summary: Learn-by-interact synthesizes agent-environment interaction trajectories from documentation via backward construction,
+    improving agents on SWE-bench, WebArena, OSWorld, and Spider2-V without human annotation.
+  links:
+    paper: https://arxiv.org/abs/2501.10893
+    github: ''
+    website: ''
+- id: https://aclanthology.org/2025.findings-acl.509/
+  title: 'Tree-of-Code: A Self-Growing Tree Framework for End-to-End Code Generation and Execution in Complex Tasks'
+  authors:
+  - Ziyi Ni
+  - Yifan Li
+  - Ning Yang
+  - Dou Shen
+  - Pin Lyu
+  - Daxiang Dong
+  venue: ACL 2025 Findings
+  category: world_terminal
+  summary: Tree-of-Code is a self-growing tree framework that interleaves code generation and execution end-to-end to solve
+    complex tasks, using execution feedback to guide search.
+  links:
+    paper: https://aclanthology.org/2025.findings-acl.509/
+    github: ''
+    website: ''
+- id: '2402.01030'
+  title: Executable Code Actions Elicit Better LLM Agents
+  authors:
+  - Xingyao Wang
+  - Yangyi Chen
+  - Lifan Yuan
+  - Yizhe Zhang
+  - Yunzhu Li
+  - Hao Peng
+  - Heng Ji
+  venue: ICML 2024
+  category: world_terminal
+  published: '2024-02-01'
+  tags:
+  - model
+  - training-data
+  summary: CodeAct proposes consolidating LLM agent actions into executable Python code instead of JSON/text, outperforming
+    alternatives on API-Bank, and releases CodeActInstruct data and the CodeActAgent model.
+  links:
+    paper: https://arxiv.org/abs/2402.01030
+    github: https://github.com/xingyaoww/code-act
     website: ''
 - id: '2306.14898'
   title: 'InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback'

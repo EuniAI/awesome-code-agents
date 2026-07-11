@@ -115,14 +115,14 @@ Owner is reviewing the migrated corpus; more error reports incoming. Pending wor
       only, no id-pinning (owner's call). Grow it whenever a classification is corrected;
       it doubles as the future golden-set (P2). Note: the earlier note about needing a
       more formal id-based override form is resolved by this (examples, not overrides).
-- [ ] **DECIDED 2026-07-11 (execute in re-audit): keep general leaves, purge via
-      benchmark-routing rule.** software_general is a misclassification magnet; owner
-      asked whether to delete it. Decision (design-decisions.md): KEEP, re-scope.
-      Rule: a paper on an activity-specific benchmark (SWE-bench->debugging,
-      KernelBench->systems) goes to that activity, not general; only surveys/positions/
-      productivity-empirical/multi-benchmark-platforms stay. Shrinks ~42 -> ~15.
-      TODO: encode this in software_general/world_general boundary in taxonomy.json,
-      then re-run classification over both general leaves and apply the purge.
+- [x] **DONE 2026-07-11: BOTH general leaves abolished, Studies promoted to top-level.**
+      Superseded the "keep + re-scope" plan: owner abolished both catch-alls (still
+      magnets even with benchmark-routing). software_general -> studies (surveys/empirical
+      kept, 19 agents/benchmarks evicted); world_general abolished, 12 members re-routed
+      to worlds/activities/studies. Studies is now a repo-wide top-level off-axis leaf.
+      L1 = foundation_models, studies, artifact, agency. See design-decisions.md.
+      Owner still reviewing individual routings (reclass-studies.md,
+      world_general-abolished.md).
 - [ ] **Rules-revision round** (do once owner's error list is in):
       - Encode owner's general-leaf semantics into taxonomy.json definitions of
         software_general/world_general: general = research on the GENERAL FORM of the
