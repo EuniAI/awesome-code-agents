@@ -72,13 +72,13 @@ def crawl(days_back: int | None = None, dry_run: bool = False) -> None:
             "category": v.category, "tags": v.tags,
             "summary": v.summary, "reason": v.reason,
         })
-    storage.save_seen(seen)
 
     note = f"Auto-skipped {skipped} out-of-scope; {failed} failed (retried next run)."
-    if dry_run:
+    if dry_run:  # a dry run must leave no trace in the pipeline state
         print(json.dumps(entries, indent=2, ensure_ascii=False))
         print(note)
         return
+    storage.save_seen(seen)
     if entries:
         number = reviewflow.create_issue(entries, note=note)
         logger.info("review issue #%d: %d papers proposed", number, len(entries))
