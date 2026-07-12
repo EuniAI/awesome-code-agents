@@ -126,6 +126,17 @@
       "category": null,
       "tags": [],
       "why": "OUT: an uncertainty-quantification method for LLM outputs with no agent, applied to a clinical Text-to-SQL case study; a general technique with a code-shaped case study is not a code-agent paper."
+    },
+    {
+      "id": "2607.06624",
+      "title": "AgentLens: Production-Assessed Trajectory Reviews for Coding Agent Evaluation",
+      "category": "software_debugging",
+      "tags": [
+        "trajectory-analysis",
+        "agent-evaluation",
+        "failure-review"
+      ],
+      "why": "Work centered on reviewing agent execution trajectories to surface and diagnose failure modes is a debugging tool, not an empirical/observational study; 'studies' should be reserved for papers whose primary contribution is measurement/analysis of phenomena, not tooling that helps engineers find and fix agent errors."
     }
   ]
 }
