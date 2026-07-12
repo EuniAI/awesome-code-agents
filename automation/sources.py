@@ -221,19 +221,10 @@ def _keyword_regex(keywords: tuple[str, ...]) -> re.Pattern:
 
 
 def keyword_hit(text: str, keywords: list[str]) -> bool:
-    """Case-insensitive, whole-word, plural-tolerant match of ANY keyword."""
+    """Case-insensitive, whole-word, plural-tolerant match of ANY keyword.
+    The recall net: leans broad on purpose, since the classifier is the precision
+    stage and a missed paper is invisible (see config.yaml arxiv.keywords)."""
     return bool(_keyword_regex(tuple(keywords)).search(text.lower()))
-
-
-def recall_hit(text: str, recall: dict) -> bool:
-    """Recall net: any `strong` phrase, OR (any `signal` term AND any `domain`
-    term). The signal x domain gate recalls broad domain words only in an
-    agent/model context, so their non-code senses never pass. Recall only: the
-    classifier still judges true relevance."""
-    t = text.lower()
-    if keyword_hit(t, recall["strong"]):
-        return True
-    return keyword_hit(t, recall["signal"]) and keyword_hit(t, recall["domain"])
 
 
 # ── The two sources ───────────────────────────────────────────────────────────
@@ -307,7 +298,7 @@ def harvest_announced(since: str, until: str | None = None) -> tuple[list[Paper]
 
     cfg = config.load()["arxiv"]
     wanted = set(cfg["categories"])
-    recall = cfg["recall"]
+    keywords = cfg["keywords"]
     url = f"{_OAI_BASE}?verb=ListRecords&metadataPrefix=arXiv&set=cs&from={since}"
     if until:
         url += f"&until={until}"
@@ -327,7 +318,7 @@ def harvest_announced(since: str, until: str | None = None) -> tuple[list[Paper]
                 continue  # old-style ids predate our scope
             if not (cats & wanted):
                 continue
-            if not recall_hit(paper.title + " " + abstract, recall):
+            if not keyword_hit(paper.title + " " + abstract, keywords):
                 continue
             found.setdefault(paper.id, (paper, abstract))
         url = (f"{_OAI_BASE}?verb=ListRecords&resumptionToken={urllib.parse.quote(token)}"

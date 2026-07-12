@@ -38,229 +38,225 @@ arxiv:
     - cs.OS
     - cs.DC
     - cs.DB
-  # Recall net (cheap title+abstract pre-filter, case-insensitive, whole-word,
-  # plural-tolerant). A paper passes if it contains any `strong` phrase, OR a
-  # `signal` term AND a `domain` term. The signal x domain gate lets broad domain
-  # words (terminal, browser, operating system) recall their variants ("terminal
-  # environment", "browser automation") ONLY in an agent/model context, so their
-  # non-code senses ("terminal illness", "shell model" in physics) never pass.
-  # Recall only: the classifier still judges true relevance, so lean toward recall.
-  # Every leaf is covered; grow the lists rather than reverting to bare tokens.
-  recall:
-    # ── strong: self-sufficient, precise phrases that pass on their own ────────
-    strong:
-      # generation and completion
-      - code generation
-      - code completion
-      - program synthesis
-      - code synthesis
-      - repository-level
-      - repo-level
-      # debugging and issue resolution
-      - SWE-bench
-      - issue resolution
-      - issue resolving
-      - issue reproduction
-      - program repair
-      - automated program repair
-      - bug fixing
-      - bug localization
-      - fault localization
-      # testing, review, security
-      - test generation
-      - test-case generation
-      - unit test generation
-      - fuzzing
-      - code review
-      - pull request
-      - vulnerability detection
-      - vulnerability repair
-      - vulnerability localization
-      - secure code generation
-      - penetration testing
-      # maintenance and comprehension
-      - code translation
-      - code migration
-      - refactoring
-      - code optimization
-      - code summarization
-      - code comprehension
-      - code understanding
-      - code search
-      - code documentation
-      # infrastructure
-      - environment setup
-      - build repair
-      - build failure
-      # domains: web, db, systems, hardware, cad, graphics
-      - screenshot-to-code
-      - design-to-code
-      - text-to-SQL
-      - text2sql
-      - NL2SQL
-      - SQL generation
-      - GPU kernel
-      - CUDA kernel
-      - Triton kernel
-      - kernel generation
-      - Verilog
-      - VHDL
-      - RTL generation
-      - hardware description
-      - chip design
-      - text-to-CAD
-      - CAD generation
-      - parametric CAD
-      - SVG generation
-      - visualization code
-      - chart generation
-      # code as action (agency worlds)
-      - code-as-policy
-      - code as policies
-      - code as action
-      - code-as-action
-      - executable code action
-      - CodeAct
-      - Terminal-Bench
-      - reward function generation
-      - embodied agent
-      # research and discovery
-      - machine learning engineering
-      - MLE-bench
-      - AutoML
-      - AI scientist
-      - theorem proving
-      - proof assistant
-      - formal verification
-      # framing phrases that already imply both scope and agency
-      - vibe coding
-      - agentic coding
-      - agentic software engineering
-    # ── signal: "this is an agent/model paper" (gates the domain list) ─────────
-    signal:
-      - agent
-      - agentic
-      - LLM
-      - language model
-      - large language model
-      - foundation model
-      - frontier model
-      - copilot
-      - code model
-      - coding model
-      - code LLM
-      - coding LLM
-      - LLM-based
-      - AI agent
-      - generative AI
-      - AI-assisted
-      - coding assistant
-      - code assistant
-      - programming assistant
-      - ChatGPT
-    # ── domain: world/activity/domain nouns, counted only with a signal ───────
-    domain:
-      # world_terminal (disambiguated; never bare "terminal"/"shell"/"OS")
-      - command line
-      - command-line
-      - terminal environment
-      - terminal emulator
-      - shell command
-      - shell script
-      - bash script
-      - system administration
-      - sysadmin
-      - devops
-      - operating system
-      # world_browser + web
-      - web browser
-      - web navigation
-      - web browsing
-      - browser automation
-      - website
-      - web application
-      - web page
-      - frontend
-      - web development
-      - web agent
-      # world_apps
-      - graphical user interface
-      - GUI agent
-      - GUI grounding
-      - desktop application
-      - mobile application
-      - mobile app
-      - spreadsheet
-      - office software
-      - computer use
-      - computer-use
-      # database
-      - database
-      - SQL query
-      - query optimization
-      - database schema
-      # systems
-      - compiler
-      - systems programming
-      - high-performance computing
-      - parallel programming
-      - memory management
-      # hardware
-      - hardware design
-      - circuit design
-      - FPGA
-      - processor design
-      - RTL
-      # cad
-      - computer-aided design
-      - CAD model
-      - 3D modeling
-      - mesh generation
-      # graphics
-      - computer graphics
-      - data visualization
-      - scientific visualization
-      - animation
-      - rendering
-      - shader
-      - chart
-      - diagram
-      # game (artifact + world_game)
-      - game development
-      - game design
-      - game engine
-      - procedural content
-      - level generation
-      - playable game
-      - video game
-      - Minecraft
-      # world_research
-      - data science
-      - data analysis
-      - automated machine learning
-      - scientific discovery
-      - research automation
-      - hypothesis generation
-      - jupyter notebook
-      - kaggle
-      # studies (about the agents/field)
-      - empirical study
-      - user study
-      - case study
-      - controlled experiment
-      - systematic literature review
-      - literature review
-      - survey
-      - developer productivity
-      - software developers
-      - practitioners
-      - developer experience
-      - human-AI collaboration
-      - adoption
-      # foundation_models + software engineering at large
-      - software engineering
-      - software development
-      - coding benchmark
-      - code intelligence
-      - static analysis
-      - continuous integration
+  # Recall net: a cheap title+abstract pre-filter (case-insensitive, whole-word,
+  # plural-tolerant). A paper passes if it contains ANY keyword below.
+  #
+  # DESIGN STANCE: recall over precision. A false positive costs one classifier
+  # call and is then auto-skipped (pipeline.classify_and_propose drops out-of-scope
+  # before the review pool), so noise never reaches the owner. A false negative is
+  # INVISIBLE and permanent: a paper the net misses never enters the pipeline, and
+  # no later stage can recover it. So the net leans broad and delegates precision
+  # to the classifier. When unsure whether a term is too noisy, keep it.
+  #
+  # Broad, polysemous tokens (terminal, shell, game, database) are intentional:
+  # they over-recall (e.g. an RL "terminal state") and the classifier filters them.
+  # The one deliberate line: bare agent/model words (agent, LLM, language model)
+  # are NOT keywords, because alone they match most of cs.AI/CL/LG and would turn
+  # the filter off rather than widen it. Code-specific agent/model phrases ARE in.
+  # Grouped by leaf so coverage is auditable; grow it freely.
+  keywords:
+    # scope indicators: agents & models for code
+    - code agent
+    - coding agent
+    - software agent
+    - software engineering agent
+    - SWE agent
+    - SWE-agent
+    - code model
+    - coding model
+    - code LLM
+    - coding LLM
+    - code language model
+    - copilot
+    - coding assistant
+    - code assistant
+    - programming assistant
+    - foundation model
+    - frontier model
+    - agentic coding
+    - agentic software engineering
+    - vibe coding
+    # generation & completion
+    - code generation
+    - code completion
+    - program synthesis
+    - code synthesis
+    - repository-level
+    - repo-level
+    # debugging & issue resolution
+    - SWE-bench
+    - issue resolution
+    - issue resolving
+    - issue reproduction
+    - program repair
+    - automated program repair
+    - bug fixing
+    - bug localization
+    - fault localization
+    # testing, review, security
+    - test generation
+    - test-case generation
+    - unit test
+    - fuzzing
+    - code review
+    - pull request
+    - vulnerability detection
+    - vulnerability repair
+    - vulnerability localization
+    - secure code
+    - penetration testing
+    # maintenance & comprehension
+    - code translation
+    - code migration
+    - refactoring
+    - code optimization
+    - code performance
+    - code summarization
+    - code comprehension
+    - code understanding
+    - code search
+    - code documentation
+    # infrastructure
+    - environment setup
+    - build repair
+    - build failure
+    - continuous integration
+    - CI/CD
+    - devops
+    # web
+    - screenshot-to-code
+    - design-to-code
+    - UI code
+    - web development
+    - frontend
+    - web application
+    - web page
+    # database
+    - text-to-SQL
+    - text2sql
+    - NL2SQL
+    - SQL generation
+    - SQL query
+    - database
+    - query optimization
+    # systems
+    - GPU kernel
+    - CUDA kernel
+    - Triton kernel
+    - kernel generation
+    - compiler
+    - systems programming
+    - high-performance computing
+    - parallel programming
+    # hardware
+    - Verilog
+    - VHDL
+    - RTL
+    - hardware description
+    - hardware design
+    - chip design
+    - circuit design
+    - FPGA
+    # cad
+    - text-to-CAD
+    - CAD
+    - parametric CAD
+    - computer-aided design
+    - 3D modeling
+    - mesh generation
+    # graphics
+    - SVG generation
+    - visualization code
+    - chart generation
+    - data visualization
+    - computer graphics
+    - animation
+    - rendering
+    - shader
+    # game (artifact + world)
+    - game development
+    - game design
+    - game engine
+    - level generation
+    - procedural content
+    - playable game
+    - video game
+    - game playing
+    - Minecraft
+    # code as action (agency worlds)
+    - code-as-policy
+    - code as policies
+    - code as action
+    - code-as-action
+    - executable code action
+    - CodeAct
+    - reward function generation
+    - embodied agent
+    # terminal / OS world (broad on purpose)
+    - terminal
+    - terminal environment
+    - terminal emulator
+    - shell
+    - shell command
+    - shell script
+    - bash
+    - command line
+    - command-line
+    - CLI
+    - operating system
+    - sysadmin
+    - system administration
+    # browser & apps worlds
+    - web browser
+    - web navigation
+    - web browsing
+    - browser
+    - browser automation
+    - website
+    - GUI
+    - graphical user interface
+    - desktop application
+    - mobile application
+    - mobile app
+    - computer use
+    - computer-use
+    - spreadsheet
+    - office software
+    # research & discovery world
+    - machine learning engineering
+    - MLE-bench
+    - AutoML
+    - automated machine learning
+    - data science
+    - data analysis
+    - scientific discovery
+    - research automation
+    - hypothesis generation
+    - AI scientist
+    - jupyter notebook
+    - kaggle
+    - theorem proving
+    - proof assistant
+    - formal verification
+    # studies (about the agents/field)
+    - empirical study
+    - user study
+    - case study
+    - controlled experiment
+    - literature review
+    - systematic literature review
+    - survey
+    - developer productivity
+    - software developers
+    - practitioners
+    - developer experience
+    - human-AI collaboration
+    - generative AI
+    - AI-assisted
+    - ChatGPT
+    # foundation models / software engineering at large
+    - software engineering
+    - software development
+    - coding benchmark
+    - code intelligence
+    - static analysis

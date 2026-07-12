@@ -211,15 +211,17 @@ follows from what Actions natively provides, not from a server-era design.
   datestamp. One run equals one announcement batch. The cursor is self-healing: a
   failed run leaves it untouched and the next run harvests the gap. There is no
   lookback window to tune.
-- **Gated recall net**: the cheap title+abstract pre-filter that feeds the
-  classifier is not a flat keyword list. A paper passes if it contains a `strong`
-  phrase (self-sufficient, e.g. SWE-bench), or a `signal` term (agent/model
-  marker) AND a `domain` term (a world/activity noun). The gate lets broad domain
-  words recall their variants ("terminal environment", "browser automation") only
-  in an agent/model context, so their non-code senses ("terminal illness", the
-  physics "shell model", an RL "terminal state") never enter. This is recall, not
-  precision: the classifier still judges true relevance, so the net leans generous
-  and every leaf is covered. Matching is whole-word and plural-tolerant.
+- **Recall-first keyword net**: the cheap title+abstract pre-filter that feeds the
+  classifier leans deliberately broad, because the two failure modes are not
+  symmetric. A false positive costs one classifier call and is then auto-skipped
+  before the review pool (the classifier is the precision stage), so noise never
+  reaches the owner. A false negative is invisible and permanent: a paper the net
+  misses never enters the pipeline and no later stage can recover it. So the net is
+  a flat OR over a broad, per-leaf keyword list (whole-word, plural-tolerant), and
+  when a term's noisiness is in doubt we keep it. The one deliberate exclusion is
+  bare agent/model words (agent, LLM, language model): alone they match most of
+  cs.AI/CL/LG and would disable the filter rather than widen it, so only
+  code-specific agent/model phrases are keywords.
 - **The pool**: open paper-review issues are the backlog; nothing is dropped,
   partial review is fine, and issues close themselves when fully decided. Issues
   are chunked and taxonomy-ordered so a batch is coherent to review.

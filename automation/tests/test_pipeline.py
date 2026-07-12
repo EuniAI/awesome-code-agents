@@ -90,37 +90,21 @@ def test_keyword_hit_respects_word_boundaries():
 
 
 def test_keyword_hit_is_plural_tolerant():
-    kws = ["code agent", "language model"]
+    kws = ["code agent", "terminal environment"]
     assert sources.keyword_hit("a study of code agents", kws)
-    assert sources.keyword_hit("large language models are used", kws)
+    # the owner's motivating case: the variant that a rigid compound used to miss
+    assert sources.keyword_hit("agents operating across terminal environments", kws)
 
 
-def test_recall_gate_signal_times_domain():
-    recall = {
-        "strong": ["SWE-bench", "program synthesis"],
-        "signal": ["agent", "LLM", "language model"],
-        "domain": ["terminal environment", "operating system", "web browser"],
-    }
-    # strong phrase alone passes
-    assert sources.recall_hit("Evaluated on SWE-bench Verified", recall)
-    # signal x domain passes, including the exact variant that used to be missed
-    assert sources.recall_hit("An LLM agent acting in a terminal environment", recall)
-    assert sources.recall_hit("Agents operating across terminal environments", recall)
-    # domain without a signal does NOT pass (no agent/model context)
-    assert not sources.recall_hit("A survey of terminal environments for HPC", recall)
-    # signal without a domain does NOT pass
-    assert not sources.recall_hit("An autonomous LLM agent for planning", recall)
-    # a non-code sense of a domain word never passes (no signal, wrong phrase)
-    assert not sources.recall_hit("Prognosis of terminal illness in patients", recall)
-
-
-def test_repo_recall_config_covers_the_gate():
-    recall = config.load()["arxiv"]["recall"]
-    assert recall["strong"] and recall["signal"] and recall["domain"]
-    # the owner's motivating case now recalls end to end through the real config
-    assert sources.recall_hit(
-        "A coding agent that navigates terminal environments", recall)
-    assert not sources.recall_hit("Managing a patient's terminal illness", recall)
+def test_repo_keywords_recall_broadly():
+    kws = config.load()["arxiv"]["keywords"]
+    # the motivating case, and one paper per previously-uncovered leaf, all recall
+    assert sources.keyword_hit("A coding agent for terminal environments", kws)
+    assert sources.keyword_hit("An empirical study of developer productivity", kws)
+    assert sources.keyword_hit("A language model that plays Minecraft", kws)
+    assert sources.keyword_hit("GUI agents for desktop applications", kws)
+    # broad, polysemous tokens over-recall on purpose (classifier is the filter)
+    assert sources.keyword_hit("An RL agent reaching a terminal state", kws)
 
 
 def test_seen_roundtrip():
