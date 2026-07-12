@@ -35,13 +35,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           REPO: euniai/awesome-code-agents
         run: |
-          set -e
+          set -euxo pipefail
           npm install -g pnpm@11
           cp assets/star-history/render.mts sh/backend/render.mts
-          (cd sh && pnpm install --silent)
-          (cd sh/backend && pnpm install --silent)
-          OUT="$GITHUB_WORKSPACE/assets/star-history.svg" \
-            pnpm --dir sh/backend exec tsx render.mts
+          ( cd sh && pnpm install --no-frozen-lockfile )
+          ( cd sh/backend && pnpm install --no-frozen-lockfile )
+          ( cd sh/backend && OUT="$GITHUB_WORKSPACE/assets/star-history.svg" npx tsx render.mts )
           rm -rf sh
 
       - name: Commit if changed
