@@ -497,6 +497,10 @@
 
 > Generating and completing code, from a function to a whole repository.
 
+- **Grinta — Provider-agnostic autonomous coding agent with durable execution, recovery, LSP/DAP, and validation-gated completion.**  
+  _Youssef Mejdi._ 2026.  
+  [![GitHub Stars](https://img.shields.io/github/stars/josephsenior/Grinta-Coding-Agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/josephsenior/Grinta-Coding-Agent)
+
 - **ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis.**  
   _Eagl Huang._ arXiv 2026/06.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.00041)
