@@ -21,6 +21,11 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - name: Check out star-history (its renderer is MIT)
+        uses: actions/checkout@v4
+        with:
+          repository: star-history/star-history
+          path: sh
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -32,7 +37,6 @@ jobs:
         run: |
           set -e
           npm install -g pnpm@11
-          git clone --depth 1 https://github.com/star-history/star-history.git sh
           cp assets/star-history/render.mts sh/backend/render.mts
           (cd sh && pnpm install --silent)
           (cd sh/backend && pnpm install --silent)
