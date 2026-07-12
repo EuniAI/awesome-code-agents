@@ -3,6 +3,32 @@
 > Durable record of non-trivial design decisions for this repo. Newest first.
 > This repo is English-only — keep every entry in English.
 
+## 2026-07-11: search-discoverability diagnosis and remedy plan
+
+Symptom: the owner (in the UK) cannot find the repo on Google even with exact
+terms; `site:github.com/EuniAI` returns nothing in the UK, incognito or not.
+Diagnosis (evidenced, not a hunch): US Google ranks the repo #1 for the exact
+query and #4-5 for the generic term; the repo/org pages carry NO noindex (checked
+the response headers and HTML of the repo, the org, and a control repo); Bing and
+ecosyste.ms both index it. So it is NOT a GitHub penalty or a shadow-ban: it is a
+Google SECONDARY-INDEX regional-coverage gap. Weak backlink signal keeps the pages
+in Google's secondary index, which is not mirrored to every regional serving node;
+the US node has a copy, the UK node does not.
+
+Remedy (raise the pages into the always-mirrored primary index, all backlink-driven):
+1. DONE: repo `homepage` field set to the Pages landing (was empty); an indexable
+   landing page now lives at the Pages root with canonical/OG/description, and the
+   private review tool moved to /review/ with noindex.
+2. TODO (owner, highest leverage): add a body link from euni.ai (an already
+   globally-indexed independent domain) to this repo, and cross-link from sibling
+   repos' READMEs (Prometheus, ContextBench).
+3. TODO: Google Search Console URL-prefix property for the Pages root, verified by
+   HTML-tag meta on the landing page, then "Request indexing" on the landing URL.
+4. TODO (when the list is in good shape): one real distribution post (HN/X/Reddit)
+   for genuine crawled backlinks.
+Recheck signal: `site:github.com/EuniAI` starting to return results in the UK means
+the pages have entered the primary index.
+
 ## 2026-07-11: review UI design ratified (a thin client over the issue protocol)
 
 Owner-ratified after a full design discussion (D1-D4). The UI is a private,
