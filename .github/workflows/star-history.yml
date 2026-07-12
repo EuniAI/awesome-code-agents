@@ -35,7 +35,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           REPO: euniai/awesome-code-agents
         run: |
-          set -euxo pipefail
+          set -euo pipefail
           cp assets/star-history/render.mts sh/backend/render.mts
           # npm (not pnpm): pnpm 10+ blocks dependency build scripts, which tsx's
           # esbuild needs; npm runs them normally.
