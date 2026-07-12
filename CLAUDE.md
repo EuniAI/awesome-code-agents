@@ -11,15 +11,18 @@
 - **No em-dashes in anything we write** (they read as AI-written). Use colons,
   commas, parentheses, or separate sentences. Never alter em-dashes inside a
   paper's own title or abstract (quoted source text).
-- **Capture design decisions as they happen** into automation/design-decisions.md (each
-  with a one-line rationale). Chat is ephemeral; the repo is the memory.
+- **Keep the design philosophy current** in automation/DESIGN.md: it states the
+  repo's final design and the reasoning behind it, organized by theme (no dated
+  log, no superseded alternatives). When a turn settles a non-trivial design
+  point, fold it into the right section that same turn. Chat is ephemeral; the
+  repo is the memory.
 
 ## What This Is
 
 A curated list of research papers on autonomous code agents, published at
 [euni.ai](https://euni.ai) and github.com/EuniAI/awesome-code-agents. Rebuilt
 from the ground up in 2026-07 (taxonomy, data, and pipeline); the old system
-lives only in git history. Rebuild rationale: automation/design-decisions.md; the rebuild-era
+lives only in git history. Design rationale: automation/DESIGN.md; the rebuild-era
 records (legacy audit, completeness warrant) live at the git tag `rebuild/2026-07`.
 
 ## The Two Sources of Truth
@@ -98,7 +101,7 @@ categories + keyword recall net) · tests/ (30 tests, no network).
 
 ## Roadmap (agreed, not yet built)
 
-1. **Review UI** (next, design ratified in design-decisions.md): static SPA at
+1. **Review UI** (v0 built, design in DESIGN.md): static SPA at
    automation/ui/review/ on the existing Pages slot (site root is an
    indexable landing; the tool itself is noindex); fine-grained PAT per device. Reads the pool +
    assets/collection.json, posts aggregated /commands (draft-then-submit,
