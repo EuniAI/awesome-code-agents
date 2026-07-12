@@ -10,7 +10,6 @@
 
 [![Stars](https://img.shields.io/github/stars/EuniAI/awesome-code-agents?style=for-the-badge&color=yellow)](https://github.com/EuniAI/awesome-code-agents/stargazers)
 [![Forks](https://img.shields.io/github/forks/EuniAI/awesome-code-agents?style=for-the-badge&color=blue)](https://github.com/EuniAI/awesome-code-agents/forks)
-[![Contributors](https://img.shields.io/github/contributors/EuniAI/awesome-code-agents?style=for-the-badge&color=orange)](https://github.com/EuniAI/awesome-code-agents/graphs/contributors)
 [![License](https://img.shields.io/badge/License-Apache_2.0-green?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
 <br>
 [![Papers](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEuniAI%2Fawesome-code-agents%2Fmain%2Fassets%2Fpapers.json&style=for-the-badge)](#quick-navigation)
@@ -1201,11 +1200,7 @@ That is all. A pipeline takes it from there: it fetches the metadata, classifies
 
 You can drop several links in one comment, and anything on topic is welcome: a new paper, a technical report, or one we have missed. Suggestions for leading labs and venues are welcome too.
 
-We're grateful to all our amazing contributors who have made this project what it is today!
-
-<a href="https://github.com/EuniAI/awesome-code-agents/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=EuniAI/awesome-code-agents&r="  width="80px"/>
-</a>
+We're grateful to everyone who suggests papers and helps shape this collection.
 
 Questions or problems? Open an [issue](https://github.com/EuniAI/awesome-code-agents/issues) and we will help.
 

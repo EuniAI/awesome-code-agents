@@ -296,3 +296,9 @@ shipped: the standing to-do list, each with the reason it is worth doing.
   from sibling repos' READMEs, and one genuine distribution post. Reason: real
   inbound links are what pull the pages from the regional secondary index into the
   always-mirrored primary index.
+- [ ] **Credit inbox contributors**: record the GitHub handle of whoever suggested a
+  paper (the inbox reader already sees the commenter's login) and acknowledge
+  suggesters in the README. Reason: contributions arrive as inbox links, not git
+  commits, so git-based contributor displays (badge, avatar wall) never reflect the
+  real community and were removed; this credits the actual contribution model, and
+  is worth building once suggestions come from many people.
