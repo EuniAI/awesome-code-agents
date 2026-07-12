@@ -61,13 +61,14 @@ records (legacy audit, completeness warrant) live at the git tag `rebuild/2026-0
 
 ```
 crawl.yml  (cron 06:30 UTC daily + manual)         decide.yml (fires on issue_comment)
-  OAI-PMH announcement harvest since cursor          parse ALL reviewer comments (stateless)
-  + inbox issue links + retry queue                  apply /approve /reject /edit
-  -> classify (Claude subscription token)            -> write the data files, render, badges
-  -> chunked review issues (the pool, 25/issue)      -> queue reasons in feedback.json
-  -> venue upgrades from update stream               -> thumbs-up processed comments
-  -> weekends/idle days: backfill slice              -> close issue when all decided
-  -> distill feedback.json -> calibration.json
+  reconcile: re-apply decisions lost to a race       parse ALL reviewer comments (stateless)
+  OAI-PMH announcement harvest since cursor          apply /approve /reject /edit
+  + inbox issue links + retry queue                  -> write the data files, render, badges
+  -> classify (Claude subscription token)            -> queue reasons in feedback.json
+  -> chunked review issues (the pool, 25/issue)      -> thumbs-up processed comments
+  -> venue upgrades from update stream               -> close issue when all decided
+  -> weekends/idle days: backfill slice              (self-heals on a lost push race:
+  -> distill feedback.json -> calibration.json        reset to fresh main and re-run)
 ```
 
 - Classifier: `claude -p --json-schema` on the Claude subscription
@@ -85,8 +86,15 @@ crawl.yml  (cron 06:30 UTC daily + manual)         decide.yml (fires on issue_co
 - **Learning loop**: /edit corrections and /reject reasons are distilled by the
   next crawl run into calibration examples (quality-rejections are excluded by
   the LLM's judgment: quality is not a scope rule).
+- **Concurrency safety**: decide has no concurrency group (a shared group would
+  let GitHub silently cancel a queued run and drop approvals); each run applies
+  against fresh main and, on a lost push race, resets and re-runs the idempotent
+  decide. crawl regenerates the views on a rebase conflict instead of failing. The
+  reconcile pass in every daily crawl re-applies any decision that still slipped
+  through (an approval not in the data, or a fully decided issue left open).
 - Manual tools: `python -m automation.pipeline backfill --from A --to B`,
-  `... reclass <leaf...>` (after rule changes), `... crawl --dry-run`.
+  `... reclass <leaf...>` (after rule changes), `... crawl --dry-run`,
+  `... reconcile` (re-apply any decision missing from the data).
 
 ## Module Map (automation/, flat, every convention in exactly one place)
 

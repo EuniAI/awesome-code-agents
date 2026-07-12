@@ -198,6 +198,14 @@ follows from what Actions natively provides, not from a server-era design.
   never by merging their text. Crawl, which is too expensive to re-run, keeps its
   group (no overlapping crawls) and resolves the same view conflicts by
   regenerating after a rebase.
+- **The issue is the source of truth, and a reconciler enforces it**: an open
+  review issue with an un-acked reviewer comment means "not yet processed", so no
+  decision is ever truly lost while its issue exists. The daily crawl opens with a
+  reconcile pass that scans every open issue and re-applies any decision missing
+  from the data (an approval whose paper is not stored, or a fully decided issue
+  still open). It is idempotent and repairs only the issues with a gap, so a
+  healthy pool costs a few reads and no writes. This turns "an operator might
+  notice the failed run" into "the system checks itself every day."
 - **Announcement-driven crawl**: the daily source is "every arXiv announcement
   mailing since my last successful run", via OAI-PMH indexed by announcement
   datestamp. One run equals one announcement batch. The cursor is self-healing: a

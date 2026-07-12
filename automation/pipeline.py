@@ -122,6 +122,8 @@ def crawl(since: str | None = None, dry_run: bool = False) -> None:
     from datetime import date, timedelta
 
     leaves = taxonomy.load().leaf_keys()
+    if not dry_run:
+        reconcile()  # heal any decision lost to a push race before today's intake
     stored: dict[str, str] = {}  # id -> leaf, for the update stream below
     for k in leaves:
         for p in storage.load(k):
@@ -309,6 +311,45 @@ def _distill_feedback() -> None:
     logger.info("feedback distilled: %d items -> %d calibration examples", len(items), added)
 
 
+def reconcile() -> None:
+    """Safety net for the review pool: re-apply any reviewer decision that never
+    reached the data (e.g. a decide run that lost a push race and was discarded
+    with its runner). Idempotent. Scans every open review issue but repairs only
+    those with a gap, so a healthy pool costs a handful of API reads and no writes.
+    Runs as a step of the daily crawl, and can be invoked manually."""
+    reviewer = config.load()["repo"]["reviewer"]
+    numbers = reviewflow.open_review_issue_numbers()
+    if not numbers:
+        logger.info("reconcile: no open review issues")
+        return
+    stored_ids = storage.all_ids(taxonomy.load().leaf_keys())
+    repaired: list[int] = []
+    for num in numbers:
+        try:
+            entries, comments, _ = reviewflow.fetch_issue(num)
+        except ValueError:
+            continue  # not a payload-carrying review issue
+        decisions = reviewflow.parse_decisions(comments, reviewer, len(entries))
+        if not decisions:
+            continue
+        # A gap is either an approved/edited paper whose id is not yet stored (its
+        # decide write was lost), or a fully decided issue still sitting open (its
+        # close was lost). Both are exactly what decide re-applies, idempotently.
+        missing = any(
+            action != "reject" and entries[idx - 1]["paper"]["id"] not in stored_ids
+            for idx, (action, _ov) in decisions.items()
+        )
+        fully_decided = len(decisions) >= len(entries)
+        if missing or fully_decided:
+            logger.info("reconcile: repairing issue #%d (missing=%s, fully_decided=%s)",
+                        num, missing, fully_decided)
+            decide(num)
+            repaired.append(num)
+            stored_ids = storage.all_ids(taxonomy.load().leaf_keys())
+    logger.info("reconcile: scanned %d open issue(s), repaired %d%s",
+                len(numbers), len(repaired), f" {repaired}" if repaired else "")
+
+
 def decide(issue_number: int) -> None:
     entries, comments, _ = reviewflow.fetch_issue(issue_number)
     reviewer = config.load()["repo"]["reviewer"]
@@ -448,7 +489,7 @@ def reclass(keys: list[str]) -> Path:
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(message)s")
     parser = argparse.ArgumentParser(description="Daily paper pipeline")
-    parser.add_argument("command", choices=["crawl", "decide", "backfill", "reclass"])
+    parser.add_argument("command", choices=["crawl", "decide", "backfill", "reclass", "reconcile"])
     parser.add_argument("keys", nargs="*", help="leaf keys to re-classify (reclass)")
     parser.add_argument("--issue", type=int, help="review issue number (decide)")
     parser.add_argument("--since", help="crawl: harvest-cursor override (YYYY-MM-DD)")
@@ -459,6 +500,8 @@ def main() -> None:
     args = parser.parse_args()
     if args.command == "crawl":
         crawl(since=args.since, dry_run=args.dry_run)
+    elif args.command == "reconcile":
+        reconcile()
     elif args.command == "reclass":
         if not args.keys:
             parser.error("reclass requires leaf keys")

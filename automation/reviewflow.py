@@ -156,6 +156,20 @@ def pending_ids() -> set[str]:
     return ids
 
 
+def open_review_issue_numbers() -> list[int]:
+    """Numbers of currently open review issues (the live pool), newest first."""
+    cfg = config.load()
+    label = cfg["review"]["label"]
+    proc = subprocess.run(
+        ["gh", "api", "--paginate", f"repos/{_repo()}/issues?labels={label}&state=open"],
+        capture_output=True, text=True, timeout=120,
+    )
+    if proc.returncode != 0:
+        logger.warning("could not list open review issues: %s", proc.stderr[:200])
+        return []
+    return [i["number"] for i in json.loads(proc.stdout) if "pull_request" not in i]
+
+
 # ── Decision parsing ──────────────────────────────────────────────────────────
 
 def _indices(spec: str, n: int) -> list[int]:
