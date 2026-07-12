@@ -243,6 +243,11 @@ follows from what Actions natively provides, not from a server-era design.
   anchors. Nothing is ever deleted; the main list stays frontier-focused and free
   of bloat. Both zones are generated, never hand-edited.
 - Summary sentences stay unrendered on the README (kept in data, not shown).
+- **Self-hosted star history**: the star-history chart is rendered from the repo's
+  own stargazer timestamps into a committed SVG (assets/star-history.svg, refreshed
+  weekly), not embedded from star-history.com. GitHub restricted stargazer data so
+  the third-party embed now needs a per-viewer token and is permanently broken in a
+  README; a self-owned static SVG depends on nothing external and cannot break.
 
 ## Review UI
 

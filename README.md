@@ -1207,7 +1207,7 @@ Questions or problems? Open an [issue](https://github.com/EuniAI/awesome-code-ag
 ---
 
 ## 🌟 Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=euniai/awesome-code-agents&type=Date)](https://www.star-history.com/#EuniAI/awesome-code-agents&Date)
+[![Star History Chart](assets/star-history.svg)](https://www.star-history.com/#EuniAI/awesome-code-agents&Date)
 
 ---
 
