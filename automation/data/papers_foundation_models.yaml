@@ -1,3 +1,92 @@
+- id: '2606.18023'
+  title: 'LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling'
+  authors:
+  - Jian Yang
+  - Shawn Guo
+  - Wei Zhang
+  - Tianyu Zheng
+  - Yaxin Du
+  - Haau-Sing Li
+  - Jiajun Wu
+  - Yue Song
+  - Yan Xing
+  - Qingsong Cai
+  - Zelong Huang
+  - Chuan Hao
+  - Ran Tao
+  - Xianglong Liu
+  - Wayne Xin Zhao
+  - Mingjie Tang
+  - Weifeng Lv
+  - Ming Zhou
+  - Bryan Dai
+  venue: arXiv 2026/06
+  category: foundation_models
+  published: '2026-06-16'
+  tags:
+  - model
+  summary: LoopCoder-v2 studies loop-count selection in parallel loop Transformers, training a family of 7B code models from
+    scratch and evaluating them broadly across code generation, code reasoning, agentic software engineering, and tool-use
+    benchmarks. It finds a two-loop configuration yields the best gain-cost tradeoff.
+  links:
+    paper: https://arxiv.org/abs/2606.18023
+    github: ''
+    website: ''
+- id: '2510.18779'
+  title: KAT-Coder Technical Report
+  authors:
+  - Zizheng Zhan
+  - Ken Deng
+  - Jinghui Wang
+  - Xiaojiang Zhang
+  - Huaixi Tang
+  - Minglei Zhang
+  - Zhiyi Lai
+  - Haoyang Huang
+  - Wen Xiang
+  - Kun Wu
+  - Wenhao Zhuang
+  - Shaojie Wang
+  - Shangpeng Yan
+  - Kepeng Lei
+  - Zongxian Feng
+  - Huiming Wang
+  - Zheng Lin
+  - Mengtong Li
+  - Mengfei Xie
+  - Yinghan Cui
+  - Xuxing Chen
+  - Chao Wang
+  - Weihao Li
+  - Wenqiang Zhu
+  - Jiarong Zhang
+  - Jingxuan Xu
+  - Songwei Yu
+  - Yifan Yao
+  - Xinping Lei
+  - C. Zhang
+  - Han Li
+  - Junqi Xiong
+  - Zuchen Gao
+  - Dailin Li
+  - Haimo Li
+  - Jiaheng Liu
+  - Yuqun Zhang
+  - Junyi Peng
+  - Haotian Zhang
+  - Bin Chen
+  venue: arXiv 2025/10
+  category: foundation_models
+  published: '2025-10-21'
+  tags:
+  - model
+  summary: KAT-Coder is a large-scale agentic code model trained through a multi-stage curriculum (mid-training, SFT, RFT,
+    deployment adaptation) spanning twenty languages and ten task types, aiming for robust tool use and long-context reasoning
+    in real-world coding agents. The 32B KAT-Dev variant is open-sourced.
+  links:
+    paper: https://arxiv.org/abs/2510.18779
+    github: ''
+    website: ''
 - id: '2507.20534'
   title: 'Kimi K2: Open Agentic Intelligence'
   authors:

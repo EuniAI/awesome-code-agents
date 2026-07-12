@@ -4,6 +4,14 @@
 
 ## 🧠 Foundation Models
 
+- **LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling.**  
+  _Jian Yang, Shawn Guo, Wei Zhang, Tianyu Zheng, Yaxin Du, Haau-Sing Li, Jiajun Wu, Yue Song, Yan Xing, Qingsong Cai, et al._ arXiv 2026/06.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.18023) ![Model](https://img.shields.io/badge/Model-E76F51?style=for-the-badge)
+
+- **KAT-Coder Technical Report.**  
+  _Zizheng Zhan, Ken Deng, Jinghui Wang, Xiaojiang Zhang, Huaixi Tang, Minglei Zhang, Zhiyi Lai, Haoyang Huang, Wen Xiang, Kun Wu, et al._ arXiv 2025/10.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.18779) ![Model](https://img.shields.io/badge/Model-E76F51?style=for-the-badge)
+
 - **Kimi K2: Open Agentic Intelligence.**  
   _Kimi Team: Yifan Bai, Yiping Bao, Guanduo Chen, Jiahao Chen, Ningxin Chen, Ruijue Chen, Yanru Chen, Yuankun Chen, Yutian Chen, Zhuofu Chen, et al._ arXiv 2025/07.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.20534) ![Model](https://img.shields.io/badge/Model-E76F51?style=for-the-badge)
