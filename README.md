@@ -1194,10 +1194,12 @@ Advancing toward general-purpose agents capable of understanding, modifying, and
 
 
 ## 🤝 Contributing
-We welcome contributions! Please:
-1. Use the [entry template](#entry-template).
-2. Place items in the right category & order by **reverse-chronology**.
-3. Include badges for GitHub stars, arXiv, website if available.
+
+Contributing a paper takes one step: **drop its arXiv abstract link in the [paper inbox (issue #4)](https://github.com/EuniAI/awesome-code-agents/issues/4).**
+
+That is all. A pipeline takes it from there: it fetches the metadata, classifies the paper into the right category, and queues it for a quick maintainer review before it appears in the list. No pull request, no template, no manual formatting. The list (categories, ordering, badges) is fully generated, so please do not edit the tables by hand: hand edits are overwritten on the next render.
+
+You can drop several links in one comment, and anything on topic is welcome: a new paper, a technical report, or one we have missed. Suggestions for leading labs and venues are welcome too.
 
 We're grateful to all our amazing contributors who have made this project what it is today!
 
@@ -1205,7 +1207,7 @@ We're grateful to all our amazing contributors who have made this project what i
   <img src="https://contrib.rocks/image?repo=EuniAI/awesome-code-agents&r="  width="80px"/>
 </a>
 
-If you have any questions or encounter issues, please feel free to reach out. For quick queries, you can also check our `Issues` page for common questions and solutions.
+Questions or problems? Open an [issue](https://github.com/EuniAI/awesome-code-agents/issues) and we will help.
 
 ---
 
