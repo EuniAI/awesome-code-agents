@@ -123,12 +123,18 @@ arxiv:
     - CodeAct
     - terminal agent
     - CLI agent
+    - terminal
+    - CLI
+    - command-line
+    - shell
     - command-line agent
     - shell agent
     - computer-use agent
     - web agent
     - browser agent
     - Minecraft
+    - OS
+    - Operating Systems
     # research and discovery
     - machine learning engineering
     - MLE-bench
