@@ -36,10 +36,11 @@ jobs:
           REPO: euniai/awesome-code-agents
         run: |
           set -euxo pipefail
-          npm install -g pnpm@11
           cp assets/star-history/render.mts sh/backend/render.mts
-          ( cd sh && pnpm install --no-frozen-lockfile )
-          ( cd sh/backend && pnpm install --no-frozen-lockfile )
+          # npm (not pnpm): pnpm 10+ blocks dependency build scripts, which tsx's
+          # esbuild needs; npm runs them normally.
+          ( cd sh && npm install --no-audit --no-fund )
+          ( cd sh/backend && npm install --no-audit --no-fund )
           ( cd sh/backend && OUT="$GITHUB_WORKSPACE/assets/star-history.svg" npx tsx render.mts )
           rm -rf sh
 
