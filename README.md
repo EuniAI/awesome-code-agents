@@ -1150,7 +1150,7 @@ We are a young team passionate about the future of code agents, and we look forw
 This field sits at the intersection of software engineering, artificial intelligence (especially LLMs and agentic reasoning), and automated code development, experiencing extremely rapid evolution since 2023.
 
 ### 🌟 Vision
-Advancing toward general-purpose agents capable of understanding, modifying, and creating complex codebases, collaborating with humans, and autonomously driving end-to-end software engineering processes—from requirements, to implementation, to testing, deployment, and maintenance.
+Advancing toward general-purpose agents capable of understanding, modifying, and creating complex codebases, collaborating with humans, and autonomously driving end-to-end software engineering, from requirements to implementation, testing, deployment, and maintenance.
 
 ### 🧩 Open Problems
 - **Long-horizon planning:** Enabling agents to reason and act coherently over many steps in large, realistic codebases.
@@ -1160,33 +1160,44 @@ Advancing toward general-purpose agents capable of understanding, modifying, and
 - **Repository-level grounding:** Equipping agents with persistent context over evolving, multi-file software.
 - **Resource efficiency:** Addressing compute/memory requirements for large-scale agentic work.
 
-### Conferences and Workshops
+### Conferences
 
-- ICSE — International Conference on Software Engineering [SE]
-- FSE (ESEC/FSE) — Foundations of Software Engineering [SE]
-- ASE — Automated Software Engineering [SE]
-- ISSTA — International Symposium on Software Testing and Analysis [SE/Testing]
-- ICLR — International Conference on Learning Representations [ML]
-- ICML — International Conference on Machine Learning [ML]
-- NeurIPS — Conference on Neural Information Processing Systems [ML]
-- ACL — Annual Meeting of the Association for Computational Linguistics [NLP]
-- EMNLP — Empirical Methods in Natural Language Processing [NLP]
-- NAACL — North American Chapter of the ACL [NLP]
-- TheWebConf (WWW) — The Web Conference (formerly WWW) [Web]
+Major venues where code-agent research appears, by area.
 
-### 🧪 Frontier Labs and Teams
-
-- **OpenAI:** Work on MLE-bench, large-scale evaluations, and agent architecture.
-- **Google DeepMind:** Pioneering code-centric models and embodied agent applications.
-- **Microsoft Research:** Advances in multi-agent collaboration, feature-benchmarks, and tool-assisted agents.
-- **THUDM (Tsinghua):** SWE-Dev, general SE agent architecture research.
-- **Scale AI:** SWE-Bench, SWE-Bench Pro, real-world repo agent benchmarking.
-- **Amazon AWS AI Lab:** SWE-PolyBench and multilingual repo agent research.
-- **Meta AI Research:** Studies on agent robustness and failure analysis.
-- **QuantaAlpha:** GitTaskBench and RepoMaster for sophisticated repo understanding.
-- **Stanford Human-Centered AI:** Software agents for ML engineering, pipeline automation.
-
-(See main list for additional innovative contributors. Please suggest more leading labs!)
+- International Conference on Software Engineering (ICSE) [SE]
+- Foundations of Software Engineering (FSE) [SE]
+- International Conference on Automated Software Engineering (ASE) [SE]
+- International Symposium on Software Testing and Analysis (ISSTA) [SE]
+- Programming Language Design and Implementation (PLDI) [PL]
+- Principles of Programming Languages (POPL) [PL]
+- Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA) [PL]
+- Neural Information Processing Systems (NeurIPS) [ML]
+- International Conference on Machine Learning (ICML) [ML]
+- International Conference on Learning Representations (ICLR) [ML]
+- Conference on Language Modeling (COLM) [ML]
+- Annual Meeting of the Association for Computational Linguistics (ACL) [NLP]
+- Empirical Methods in Natural Language Processing (EMNLP) [NLP]
+- North American Chapter of the ACL (NAACL) [NLP]
+- AAAI Conference on Artificial Intelligence (AAAI) [AI]
+- International Joint Conference on Artificial Intelligence (IJCAI) [AI]
+- Operating Systems Design and Implementation (OSDI) [Systems]
+- Symposium on Operating Systems Principles (SOSP) [Systems]
+- Architectural Support for Programming Languages and Operating Systems (ASPLOS) [Systems]
+- IEEE Symposium on Security and Privacy (S&P) [Security]
+- USENIX Security Symposium (USENIX Security) [Security]
+- Computer and Communications Security (CCS) [Security]
+- Network and Distributed System Security Symposium (NDSS) [Security]
+- Knowledge Discovery and Data Mining (KDD) [Data Mining]
+- Very Large Data Bases (VLDB) [Databases]
+- International Conference on Management of Data (SIGMOD) [Databases]
+- The Web Conference (WWW) [Web]
+- International Conference on Robotics and Automation (ICRA) [Robotics]
+- Conference on Robot Learning (CoRL) [Robotics]
+- Robotics: Science and Systems (RSS) [Robotics]
+- International Symposium on Computer Architecture (ISCA) [Hardware]
+- International Symposium on Microarchitecture (MICRO) [Hardware]
+- Design Automation Conference (DAC) [Hardware]
+- Conference on Human Factors in Computing Systems (CHI) [HCI]
 
 
 ## 🤝 Contributing
@@ -1195,7 +1206,7 @@ Contributing a paper takes one step: **drop its arXiv abstract link in the [pape
 
 That is all. A pipeline takes it from there: it fetches the metadata, classifies the paper into the right category, and queues it for a quick maintainer review before it appears in the list. No pull request, no template, no manual formatting. The list (categories, ordering, badges) is fully generated, so please do not edit the tables by hand: hand edits are overwritten on the next render.
 
-You can drop several links in one comment, and anything on topic is welcome: a new paper, a technical report, or one we have missed. Suggestions for leading labs and venues are welcome too.
+You can drop several links in one comment, and anything on topic is welcome: a new paper, a technical report, or one we have missed. Suggestions for venues we should track are welcome too.
 
 We're grateful to everyone who suggests papers and helps shape this collection.
 
