@@ -24,9 +24,9 @@
 [![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/jDG4wqkKZj)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/EuniAI/awesome-code-agents)
 
-<img src="assets/main_v1-min.png" alt="Awesome Code Agents" width="100%">
+<img src="assets/main_v2-min.png" alt="Awesome Code Agents: the digital world we build, the real world we act in" width="100%">
 
-*Photo Credit: [Gemini-Nano-Banana-Pro🍌](https://deepmind.google/models/gemini-image/pro/)*.
+*Image Credit: [ChatGPT](https://chatgpt.com/)*.
 
 </div>
 
