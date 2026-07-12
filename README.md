@@ -6,7 +6,7 @@
 
 ### The Digital World We Are Building. The Real World We Are Acting In.
 
-*A curated, ever-growing collection of frontier research papers and technical reports on autonomous code agents.*
+*A living collection of frontier research on autonomous code agents, from the code we build to the worlds we act in.*
 
 [![Stars](https://img.shields.io/github/stars/EuniAI/awesome-code-agents?style=for-the-badge&color=yellow)](https://github.com/EuniAI/awesome-code-agents/stargazers)
 [![Forks](https://img.shields.io/github/forks/EuniAI/awesome-code-agents?style=for-the-badge&color=blue)](https://github.com/EuniAI/awesome-code-agents/forks)
