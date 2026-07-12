@@ -35,16 +35,43 @@ jobs:
         run: |
           python -m automation.pipeline crawl
 
-      - name: Commit pipeline state
+      - name: Commit pipeline state (concurrency-safe)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # State (seen/abstracts/retry/backfill/harvest/feedback), venue upgrades,
-          # distilled calibration examples, and the regenerated README + archive.
+          # distilled calibration examples, and the regenerated README + PAPERS.md.
           git add README.md assets/ automation/
-          if ! git diff --cached --quiet; then
-            # Commit BEFORE rebasing: rebase refuses staged-but-uncommitted changes.
-            git commit -m "chore(pipeline): daily crawl state"
-            git pull --rebase origin main
-            git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
           fi
+          git commit --quiet -m "chore(pipeline): daily crawl state"
+          # Crawl is expensive (harvest + LLM classify + issue create), so we never
+          # re-run it on contention. A concurrent decide run can only ever conflict
+          # in the generated views (README, PAPERS.md, papers.json), which are
+          # derived from the data: resolve by regenerating from the merged data
+          # rather than merging text. A conflict anywhere else is a real problem
+          # and we retry, then fail loudly.
+          for attempt in 1 2 3 4 5; do
+            git fetch --quiet origin main
+            if git rebase --quiet origin/main; then
+              if git push --quiet; then echo "Pushed on attempt $attempt."; exit 0; fi
+            else
+              git checkout --theirs -- README.md automation/PAPERS.md assets/papers.json 2>/dev/null || true
+              git add -- README.md automation/PAPERS.md assets/papers.json 2>/dev/null || true
+              if ! GIT_EDITOR=true git rebase --continue; then
+                git rebase --abort 2>/dev/null || true
+                echo "Conflict outside the generated views; retrying (attempt $attempt)."
+                sleep $((RANDOM % 5 + 2)); continue
+              fi
+              python -c "from automation import render, badges; render.main(); badges.refresh()"
+              git add README.md assets/papers.json automation/PAPERS.md
+              git commit --quiet --amend --no-edit
+              if git push --quiet; then echo "Pushed on attempt $attempt."; exit 0; fi
+            fi
+            echo "Push contended; retrying (attempt $attempt)."
+            sleep $((RANDOM % 5 + 2))
+          done
+          echo "::error::Could not push crawl state after 5 attempts."
+          exit 1

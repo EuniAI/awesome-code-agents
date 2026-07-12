@@ -12,9 +12,11 @@ permissions:
   contents: write
   issues: write
 
-concurrency:
-  group: pipeline
-  cancel-in-progress: false
+# No concurrency group on purpose. decide is idempotent and the push step below
+# self-heals against concurrent writers by re-running on fresh main. A shared
+# group would instead let GitHub silently CANCEL a queued run (it keeps only one
+# pending run per group), which would drop that issue's approvals with no error.
+# Tolerate concurrency with idempotent retry; never prevent it by dropping events.
 
 jobs:
   decide:
@@ -32,20 +34,33 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml
 
-      - name: Apply decisions
+      - name: Apply decisions and push (idempotent, concurrency-safe)
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          python -m automation.pipeline decide --issue "${{ github.event.issue.number }}"
-
-      - name: Commit curated data
-        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md assets/ automation/
-          if ! git diff --cached --quiet; then
-            # Commit BEFORE rebasing: rebase refuses staged-but-uncommitted changes.
-            git commit -m "feat(data): papers approved in review issue #${{ github.event.issue.number }}"
-            git pull --rebase origin main
-            git push
-          fi
+          issue="${{ github.event.issue.number }}"
+          # decide is stateless and dedup-safe, so each attempt re-derives the
+          # decision from the issue's full comment history against the LATEST
+          # main. A lost push race just means we reset to the new main and re-run;
+          # the generated views never conflict because we regenerate, not merge.
+          for attempt in 1 2 3 4 5; do
+            git fetch --quiet origin main
+            git reset --quiet --hard origin/main
+            python -m automation.pipeline decide --issue "$issue"
+            git add README.md assets/ automation/
+            if git diff --cached --quiet; then
+              echo "Nothing to commit (already applied on main)."
+              exit 0
+            fi
+            git commit --quiet -m "feat(data): papers approved in review issue #$issue"
+            if git push --quiet; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push lost a race with a concurrent write; retrying on fresh main (attempt $attempt)."
+            sleep $((RANDOM % 5 + 2))
+          done
+          echo "::error::Could not push decision for issue #$issue after 5 attempts."
+          exit 1

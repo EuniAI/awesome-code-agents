@@ -187,6 +187,17 @@ follows from what Actions natively provides, not from a server-era design.
   the full comment history (later commands override earlier), and every write is
   dedup-safe, so re-runs are idempotent. Approval latency is seconds, not an hour
   of cron polling.
+- **Concurrency is tolerated, not prevented**: the review UI submits several issues
+  in quick succession, so decide runs race. We do not serialize them with a
+  concurrency group, because GitHub keeps only one pending run per group and
+  silently cancels the rest, which would drop approvals with no error. Instead each
+  decide run is self-healing: it applies against the latest main, commits, and
+  pushes, and on a lost push race it resets to the new main and re-runs the
+  idempotent decide. The generated views (README, PAPERS.md, papers.json) are
+  derived from the data, so a concurrent write is resolved by regenerating them,
+  never by merging their text. Crawl, which is too expensive to re-run, keeps its
+  group (no overlapping crawls) and resolves the same view conflicts by
+  regenerating after a rebase.
 - **Announcement-driven crawl**: the daily source is "every arXiv announcement
   mailing since my last successful run", via OAI-PMH indexed by announcement
   datestamp. One run equals one announcement batch. The cursor is self-healing: a
