@@ -298,9 +298,26 @@ shipped: the standing to-do list, each with the reason it is worth doing.
   corpus plus the recorded out-of-scope verdicts after every taxonomy or calibration
   change. Reason: regressions should surface in a report, not in the owner's review
   pain one paper at a time.
-- [ ] **Reader subscription**: per-category update feeds for readers, surfaced on
-  euni.ai. Reason: the taxonomy already yields clean per-leaf slices, so readers can
-  follow one world or activity instead of the whole firehose.
+- [ ] **Reader subscription (email digest)**: design settled, implementation
+  deferred (it is a small product, not a small feature). Architecture: a subscribe
+  form on the Pages landing posts to a small Cloudflare Worker, because a static
+  page cannot hold secrets; the Worker runs double opt-in (signed confirmation
+  link) and writes confirmed addresses into a PRIVATE repo. That private repo holds
+  both the subscriber list and the weekly sending workflow, so the PII and every
+  access to it never leave one repo; the public repo needs no cross-repo token
+  since its data is already public. Sending goes through an email API
+  (Resend-class) with SPF/DKIM on a euni.ai subdomain, and every mail carries a
+  signed unsubscribe link; double opt-in and unsubscribe are hard requirements
+  (UK GDPR/PECR), not niceties. Content: the week's APPROVED papers grouped by
+  taxonomy branch (curation is the differentiator against raw-feed digests like
+  HF Daily Papers), one weekly issue, skipped when empty; v2 adds per-branch
+  subscriptions, which the taxonomy yields for free. An RSS/Atom feed on Pages is
+  a free byproduct worth shipping alongside. Interim zero-infrastructure option:
+  publish the same digest as a weekly GitHub Release, so watchers who opt into
+  releases get GitHub's own email notification, releases.atom is the feed, no PII
+  is ever handled, and the digest generator carries over unchanged to the full
+  email version. Reason: readers should be able to follow the frontier without
+  polling the README.
 - [ ] **Backlink signal for discoverability**: a body link from euni.ai, cross-links
   from sibling repos' READMEs, and one genuine distribution post. Reason: real
   inbound links are what pull the pages from the regional secondary index into the

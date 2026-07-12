@@ -1146,7 +1146,7 @@
 
 ## 🗺️ Research Landscape
 
-We are a young team fascinated by where code agents are headed, and we love trading ideas with the community. The field moves fast: since 2023 it has grown from autocompletion and single-function synthesis into agents that plan, build, and act across whole systems, sitting at the crossroads of software engineering, machine learning (LLMs and agentic reasoning), and the many domains where code now does the work.
+We are a young team fascinated by where code agents are headed, and we love trading ideas with the community. The field moves fast: since 2023 it has grown from autocompletion and single-function synthesis into agents that use code both to build the digital world and to act in the real one, drawing software engineering, machine learning, and every domain code touches into a single fast-moving frontier.
 
 ### 🌟 Vision
 Code is becoming the universal medium of intelligent action. Our north star is general-purpose agents for which writing code is how they both **build the digital world** (software, and beyond it: web, databases, systems, hardware, games, graphics, and 3D/CAD) and **act in the real world** (terminals, browsers, applications, game worlds, the physical world, and scientific discovery). Not agents that merely finish a coding task, but agents that wield code as the language of creation and of agency, to understand, construct, and reshape the worlds we live and work in.
