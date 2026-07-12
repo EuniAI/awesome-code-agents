@@ -1,6 +1,10 @@
-# Self-hosted star history chart. star-history.com now needs a per-viewer token
-# (GitHub restricted stargazer data), so its embedded SVG is permanently broken.
-# We render our own SVG from the repo's stargazers and commit it weekly.
+# Self-hosted star history chart, rendered with star-history's OWN renderer.
+# star-history.com's public /svg API now fails (GitHub restricted stargazer data
+# and their server token pool is rate-limited), but their chart code is MIT and
+# accepts a caller token. So we clone it, run their renderer (shared/packages/
+# xy-chart) with our repo token via a small driver (assets/star-history/render.mts),
+# and commit the resulting self-contained SVG. Refreshed weekly, committed only
+# when it changes. No third-party request at read time; the README never breaks.
 name: Star history chart
 
 on:
@@ -14,14 +18,27 @@ permissions:
 jobs:
   chart:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
 
-      - name: Render chart
+      - name: Render chart with star-history's renderer (our token)
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python assets/generate_star_history.py
+          REPO: euniai/awesome-code-agents
+        run: |
+          set -e
+          npm install -g pnpm@11
+          git clone --depth 1 https://github.com/star-history/star-history.git sh
+          cp assets/star-history/render.mts sh/backend/render.mts
+          (cd sh && pnpm install --silent)
+          (cd sh/backend && pnpm install --silent)
+          OUT="$GITHUB_WORKSPACE/assets/star-history.svg" \
+            pnpm --dir sh/backend exec tsx render.mts
+          rm -rf sh
 
       - name: Commit if changed
         run: |
@@ -33,8 +50,6 @@ jobs:
             exit 0
           fi
           git commit -m "chore(assets): refresh star history chart"
-          # Only this job writes this file, so a rebase never conflicts on it;
-          # the retry just absorbs a lost push race with another workflow.
           for attempt in 1 2 3; do
             git fetch --quiet origin main
             if git rebase --quiet origin/main && git push --quiet; then
