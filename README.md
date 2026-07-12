@@ -1146,19 +1146,19 @@
 
 ## 🗺️ Research Landscape
 
-We are a young team passionate about the future of code agents, and we look forward to discussing exciting ideas with the community.
-This field sits at the intersection of software engineering, artificial intelligence (especially LLMs and agentic reasoning), and automated code development, experiencing extremely rapid evolution since 2023.
+We are a young team fascinated by where code agents are headed, and we love trading ideas with the community. The field moves fast: since 2023 it has grown from autocompletion and single-function synthesis into agents that plan, build, and act across whole systems, sitting at the crossroads of software engineering, machine learning (LLMs and agentic reasoning), and the many domains where code now does the work.
 
 ### 🌟 Vision
-Advancing toward general-purpose agents capable of understanding, modifying, and creating complex codebases, collaborating with humans, and autonomously driving end-to-end software engineering, from requirements to implementation, testing, deployment, and maintenance.
+Code is becoming the universal medium of intelligent action. Our north star is general-purpose agents for which writing code is how they both **build the digital world** (software, and beyond it: web, databases, systems, hardware, games, graphics, and 3D/CAD) and **act in the real world** (terminals, browsers, applications, game worlds, the physical world, and scientific discovery). Not agents that merely finish a coding task, but agents that wield code as the language of creation and of agency, to understand, construct, and reshape the worlds we live and work in.
 
 ### 🧩 Open Problems
-- **Long-horizon planning:** Enabling agents to reason and act coherently over many steps in large, realistic codebases.
-- **Robust evaluation:** Designing benchmarks and metrics that reflect real-world complexity, generalizability, and value beyond short snippets.
-- **Interpretability & safety:** Ensuring agent actions are understandable, controllable, and safe for deployment on critical systems.
-- **Collaboration:** Seamlessly integrating multiple agents and human-in-the-loop workflows.
-- **Repository-level grounding:** Equipping agents with persistent context over evolving, multi-file software.
-- **Resource efficiency:** Addressing compute/memory requirements for large-scale agentic work.
+- **Long-horizon planning:** Reasoning and acting coherently over many steps, whether inside a large codebase or an open-ended environment.
+- **Grounding and environment interaction:** Holding persistent, faithful context over evolving multi-file repositories and over live worlds (a terminal, a browser, a robot) where every action changes state.
+- **Robust evaluation:** Benchmarks and metrics that reflect real-world complexity and generalization across domains and worlds, not brittle snippet-level scores.
+- **Generalization across domains and worlds:** Agents whose skills transfer from one artifact domain, or one world of action, to the next instead of being retrained for each.
+- **Reliability and safety:** Understandable, controllable, and safe behavior, which matters most exactly when the code an agent writes goes on to act on real systems.
+- **Human-agent collaboration:** Fluid teamwork between people and multiple agents, with humans in the loop where it counts.
+- **Resource efficiency:** Meeting the compute and memory demands of long, large-scale agentic work.
 
 ### Conferences
 
