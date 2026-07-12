@@ -99,20 +99,11 @@ backfill / reclass entrypoints) · render.py (README + PAPERS.md) · badges.py
 (count badge + summary block) · data/config.yaml (repo/review/backfill/arxiv:
 categories + keyword recall net) · tests/ (30 tests, no network).
 
-## Roadmap (agreed, not yet built)
+## Roadmap
 
-1. **Review UI** (v0 built, design in DESIGN.md): static SPA at
-   automation/ui/review/ on the existing Pages slot (site root is an
-   indexable landing; the tool itself is noindex); fine-grained PAT per device. Reads the pool +
-   assets/collection.json, posts aggregated /commands (draft-then-submit,
-   incremental; decided papers drop out statelessly). Chinese reasons are
-   translated to English client-side (GitHub Models) before posting. Collection
-   management via a pinned Curation issue with id-addressed /remove /move /set.
-   The pool is parked (~470 papers) until this exists.
-2. **Golden-set regression eval**: measure classifier precision on the approved
-   corpus + recorded OUTs after every rule change, instead of discovering
-   regressions through the owner's pain.
-3. **Subscription feature** for readers (per-category updates), for euni.ai.
+The roadmap of designed-but-unbuilt work lives in automation/DESIGN.md (single
+source, kept current). Operational note: the review pool is parked (~470 papers)
+until the review UI's collection-management step (DESIGN roadmap item 1) lands.
 
 ## Notes for Future Sessions
 

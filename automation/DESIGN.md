@@ -1,8 +1,9 @@
 # Design
 
-The design philosophy behind this repo, organized by theme. This is the final
-state and the reasoning that holds it up, not a log of how we got here. English
-only.
+The design philosophy behind this repo, organized by theme. Everything from here
+to the roadmap is built and running; the reasoning that holds it up is stated
+alongside it, not as a log of how we got here. The final section is the roadmap:
+good designs we have reasoned through but not yet shipped. English only.
 
 ## Thesis: Code as Everything
 
@@ -230,9 +231,9 @@ client over the issue protocol, not a replacement for it.
   UI translates them to English via the GitHub Models API and posts pure English.
   On translation failure the draft stays local and submission is blocked, so no
   Chinese ever reaches comments, feedback, or calibration.
-- **Collection management**: id-addressed curation commands (remove / move / set)
-  through a pinned issue, so corrections to already-collected papers feed the same
-  learning loop.
+
+v0 covers the intake queue (approve, reject, edit newly crawled papers). Editing
+already-collected papers is the planned next step (see the roadmap).
 
 ## Discoverability
 
@@ -242,3 +243,26 @@ path. The goal is to raise the repo's pages into the always-mirrored primary
 search index through genuine backlink signal (an indexable landing, a link from the
 product site, cross-links from sibling repos, and real distribution), rather than
 relying on a secondary index that regional serving nodes may not mirror.
+
+## Roadmap
+
+Everything above is built. These are designs we have reasoned through but not yet
+shipped: the standing to-do list, each with the reason it is worth doing.
+
+- [ ] **Collection management in the review UI (v2)**: a pinned Curation issue plus
+  id-addressed commands (`/remove`, `/move`, `/set`) parsed by the decide workflow,
+  a `curation` label, and a machine-readable `assets/collection.json` export. This
+  extends the same thin-client, single-writer design from the intake queue to
+  editing already-collected papers, with reasoned removals feeding the same learning
+  loop. Reason: correcting a filed paper today still means hand-writing a command.
+- [ ] **Golden-set regression eval**: measure classifier precision on the approved
+  corpus plus the recorded out-of-scope verdicts after every taxonomy or calibration
+  change. Reason: regressions should surface in a report, not in the owner's review
+  pain one paper at a time.
+- [ ] **Reader subscription**: per-category update feeds for readers, surfaced on
+  euni.ai. Reason: the taxonomy already yields clean per-leaf slices, so readers can
+  follow one world or activity instead of the whole firehose.
+- [ ] **Backlink signal for discoverability**: a body link from euni.ai, cross-links
+  from sibling repos' READMEs, and one genuine distribution post. Reason: real
+  inbound links are what pull the pages from the regional secondary index into the
+  always-mirrored primary index.
