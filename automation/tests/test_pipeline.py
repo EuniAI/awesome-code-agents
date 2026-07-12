@@ -8,7 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from automation import reviewflow, sources, storage
+from automation import config, reviewflow, sources, storage
 
 _FEED = b"""<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -87,6 +87,40 @@ def test_keyword_hit_respects_word_boundaries():
     assert sources.keyword_hit("A Code Agent for X", kws)
     assert sources.keyword_hit("evaluated on swe-bench verified", kws)
     assert not sources.keyword_hit("decade programs are cascaded", kws)
+
+
+def test_keyword_hit_is_plural_tolerant():
+    kws = ["code agent", "language model"]
+    assert sources.keyword_hit("a study of code agents", kws)
+    assert sources.keyword_hit("large language models are used", kws)
+
+
+def test_recall_gate_signal_times_domain():
+    recall = {
+        "strong": ["SWE-bench", "program synthesis"],
+        "signal": ["agent", "LLM", "language model"],
+        "domain": ["terminal environment", "operating system", "web browser"],
+    }
+    # strong phrase alone passes
+    assert sources.recall_hit("Evaluated on SWE-bench Verified", recall)
+    # signal x domain passes, including the exact variant that used to be missed
+    assert sources.recall_hit("An LLM agent acting in a terminal environment", recall)
+    assert sources.recall_hit("Agents operating across terminal environments", recall)
+    # domain without a signal does NOT pass (no agent/model context)
+    assert not sources.recall_hit("A survey of terminal environments for HPC", recall)
+    # signal without a domain does NOT pass
+    assert not sources.recall_hit("An autonomous LLM agent for planning", recall)
+    # a non-code sense of a domain word never passes (no signal, wrong phrase)
+    assert not sources.recall_hit("Prognosis of terminal illness in patients", recall)
+
+
+def test_repo_recall_config_covers_the_gate():
+    recall = config.load()["arxiv"]["recall"]
+    assert recall["strong"] and recall["signal"] and recall["domain"]
+    # the owner's motivating case now recalls end to end through the real config
+    assert sources.recall_hit(
+        "A coding agent that navigates terminal environments", recall)
+    assert not sources.recall_hit("Managing a patient's terminal illness", recall)
 
 
 def test_seen_roundtrip():

@@ -212,15 +212,28 @@ def ensure_primary_abstracts(papers: list[Paper]) -> dict[str, str]:
 
 # ── Keyword pre-filter ────────────────────────────────────────────────────────
 
-@lru_cache(maxsize=4)
+@lru_cache(maxsize=8)
 def _keyword_regex(keywords: tuple[str, ...]) -> re.Pattern:
+    # Trailing `s?` tolerates the common plural ("code agent" also hits "code
+    # agents"), which a bare word boundary would otherwise miss.
     alts = "|".join(re.escape(k.lower()) for k in keywords)
-    return re.compile(r"\b(?:" + alts + r")\b")
+    return re.compile(r"\b(?:" + alts + r")s?\b")
 
 
 def keyword_hit(text: str, keywords: list[str]) -> bool:
-    """Case-insensitive whole-word/phrase match of any keyword in the text."""
+    """Case-insensitive, whole-word, plural-tolerant match of ANY keyword."""
     return bool(_keyword_regex(tuple(keywords)).search(text.lower()))
+
+
+def recall_hit(text: str, recall: dict) -> bool:
+    """Recall net: any `strong` phrase, OR (any `signal` term AND any `domain`
+    term). The signal x domain gate recalls broad domain words only in an
+    agent/model context, so their non-code senses never pass. Recall only: the
+    classifier still judges true relevance."""
+    t = text.lower()
+    if keyword_hit(t, recall["strong"]):
+        return True
+    return keyword_hit(t, recall["signal"]) and keyword_hit(t, recall["domain"])
 
 
 # ── The two sources ───────────────────────────────────────────────────────────
@@ -294,7 +307,7 @@ def harvest_announced(since: str, until: str | None = None) -> tuple[list[Paper]
 
     cfg = config.load()["arxiv"]
     wanted = set(cfg["categories"])
-    keywords = cfg["keywords"]
+    recall = cfg["recall"]
     url = f"{_OAI_BASE}?verb=ListRecords&metadataPrefix=arXiv&set=cs&from={since}"
     if until:
         url += f"&until={until}"
@@ -314,7 +327,7 @@ def harvest_announced(since: str, until: str | None = None) -> tuple[list[Paper]
                 continue  # old-style ids predate our scope
             if not (cats & wanted):
                 continue
-            if not keyword_hit(paper.title + " " + abstract, keywords):
+            if not recall_hit(paper.title + " " + abstract, recall):
                 continue
             found.setdefault(paper.id, (paper, abstract))
         url = (f"{_OAI_BASE}?verb=ListRecords&resumptionToken={urllib.parse.quote(token)}"

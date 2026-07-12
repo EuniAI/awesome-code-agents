@@ -211,6 +211,15 @@ follows from what Actions natively provides, not from a server-era design.
   datestamp. One run equals one announcement batch. The cursor is self-healing: a
   failed run leaves it untouched and the next run harvests the gap. There is no
   lookback window to tune.
+- **Gated recall net**: the cheap title+abstract pre-filter that feeds the
+  classifier is not a flat keyword list. A paper passes if it contains a `strong`
+  phrase (self-sufficient, e.g. SWE-bench), or a `signal` term (agent/model
+  marker) AND a `domain` term (a world/activity noun). The gate lets broad domain
+  words recall their variants ("terminal environment", "browser automation") only
+  in an agent/model context, so their non-code senses ("terminal illness", the
+  physics "shell model", an RL "terminal state") never enter. This is recall, not
+  precision: the classifier still judges true relevance, so the net leans generous
+  and every leaf is covered. Matching is whole-word and plural-tolerant.
 - **The pool**: open paper-review issues are the backlog; nothing is dropped,
   partial review is fine, and issues close themselves when fully decided. Issues
   are chunked and taxonomy-ordered so a batch is coherent to review.

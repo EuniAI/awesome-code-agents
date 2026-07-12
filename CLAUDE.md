@@ -105,7 +105,8 @@ OAI harvest, id fetch, inbox, enrichment, venue extraction) · classify.py
 payload-carrying issues, command parsing, acks) · pipeline.py (crawl / decide /
 backfill / reclass entrypoints) · render.py (README + PAPERS.md) · badges.py
 (count badge + summary block) · data/config.yaml (repo/review/backfill/arxiv:
-categories + keyword recall net) · tests/ (30 tests, no network).
+categories + gated recall net: strong OR signal x domain, per-leaf coverage) ·
+tests/ (33 tests, no network).
 
 ## Roadmap
 
