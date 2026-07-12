@@ -198,7 +198,7 @@ def render_full_list(tax: taxonomy.Taxonomy) -> str:
     blocks: list[str] = [
         "# Full Paper List\n\n"
         "> The complete collection, every paper ever curated, newest first. The "
-        "README shows only the last twelve months of this list. Auto-generated; "
+        "README shows only the past year of this list. Auto-generated; "
         "do not edit by hand.",
     ]
     for node, depth in tax.walk():

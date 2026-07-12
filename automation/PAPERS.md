@@ -1,6 +1,6 @@
 # Full Paper List
 
-> The complete collection, every paper ever curated, newest first. The README shows only the last twelve months of this list. Auto-generated; do not edit by hand.
+> The complete collection, every paper ever curated, newest first. The README shows only the past year of this list. Auto-generated; do not edit by hand.
 
 ## 🧠 Foundation Models
 
