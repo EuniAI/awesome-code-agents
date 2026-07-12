@@ -21,11 +21,11 @@ from pathlib import Path
 REPO = "EuniAI/awesome-code-agents"
 OUT = Path(__file__).resolve().parent / "star-history.svg"
 
-# Canvas + margins.
-W, H = 820, 400
-PAD_L, PAD_R, PAD_T, PAD_B = 62, 28, 26, 46
-# Mid gray reads on both light and dark GitHub themes; gold nods to the star.
-AXIS, TEXT, LINE, FILL = "#8b949e", "#8b949e", "#e3b341", "rgba(227,179,65,0.16)"
+# Canvas + margins (room for a title, axis labels, and a legend).
+W, H = 900, 470
+PAD_L, PAD_R, PAD_T, PAD_B = 78, 34, 58, 66
+# Mid gray reads on both light and dark GitHub themes; coral echoes star-history.
+AXIS, TEXT, LINE, FILL = "#8b949e", "#8b949e", "#e05d44", "rgba(224,93,68,0.08)"
 
 
 def _stargazer_times() -> list[datetime]:
@@ -74,25 +74,32 @@ def _svg(times: list[datetime]) -> str:
     line = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts)
     area = f"{PAD_L:.1f},{base:.1f} " + line + f" {X(now):.1f},{base:.1f}"
 
+    cx = W / 2
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
-        f'viewBox="0 0 {W} {H}" font-family="-apple-system,Segoe UI,sans-serif">',
-        f'<text x="{PAD_L}" y="18" fill="{TEXT}" font-size="13" font-weight="600">'
-        f'{REPO} &#8226; {n} stars</text>',
+        f'viewBox="0 0 {W} {H}" font-family="-apple-system,Segoe UI,Helvetica,sans-serif">',
+        # Title, and axis labels ("GitHub Stars" rotated on the left, "Date" below).
+        f'<text x="{cx:.0f}" y="34" fill="{TEXT}" font-size="18" font-weight="700" '
+        f'text-anchor="middle">Star History</text>',
+        f'<text x="20" y="{(PAD_T+base)/2:.0f}" fill="{TEXT}" font-size="12" '
+        f'text-anchor="middle" transform="rotate(-90 20 {(PAD_T+base)/2:.0f})">'
+        f'GitHub Stars</text>',
+        f'<text x="{cx:.0f}" y="{H-14}" fill="{TEXT}" font-size="12" '
+        f'text-anchor="middle">Date</text>',
     ]
     # Horizontal gridlines + y labels.
     for c in range(0, top + 1, step):
         y = Y(c)
         parts.append(f'<line x1="{PAD_L}" y1="{y:.1f}" x2="{W-PAD_R}" y2="{y:.1f}" '
                      f'stroke="{AXIS}" stroke-opacity="0.18" stroke-width="1"/>')
-        parts.append(f'<text x="{PAD_L-8}" y="{y+4:.1f}" fill="{TEXT}" font-size="11" '
+        parts.append(f'<text x="{PAD_L-9}" y="{y+4:.1f}" fill="{TEXT}" font-size="11" '
                      f'text-anchor="end">{c}</text>')
     # X date ticks (~5 across the range).
     for k in range(5):
         frac = k / 4
         t = datetime.fromtimestamp(t0.timestamp() + frac * span, tz=timezone.utc)
         x = PAD_L + frac * plot_w
-        parts.append(f'<text x="{x:.1f}" y="{base+20:.1f}" fill="{TEXT}" font-size="11" '
+        parts.append(f'<text x="{x:.1f}" y="{base+22:.1f}" fill="{TEXT}" font-size="11" '
                      f'text-anchor="middle">{t.strftime("%b %Y")}</text>')
     # Axes, area, curve.
     parts.append(f'<polygon points="{area}" fill="{FILL}" stroke="none"/>')
@@ -103,6 +110,14 @@ def _svg(times: list[datetime]) -> str:
     parts.append(f'<line x1="{PAD_L}" y1="{base}" x2="{W-PAD_R}" y2="{base}" '
                  f'stroke="{AXIS}" stroke-width="1"/>')
     parts.append(f'<circle cx="{X(now):.1f}" cy="{Y(n):.1f}" r="3.5" fill="{LINE}"/>')
+    # Legend box (top-left inside the plot): a coral swatch + the repo name.
+    lx, ly, lw = PAD_L + 16, PAD_T + 14, 26 + len(REPO) * 7.3
+    parts.append(f'<rect x="{lx:.0f}" y="{ly:.0f}" width="{lw:.0f}" height="26" rx="5" '
+                 f'fill="#ffffff" fill-opacity="0.65" stroke="{AXIS}" stroke-opacity="0.35"/>')
+    parts.append(f'<line x1="{lx+10:.0f}" y1="{ly+13:.0f}" x2="{lx+28:.0f}" y2="{ly+13:.0f}" '
+                 f'stroke="{LINE}" stroke-width="3" stroke-linecap="round"/>')
+    parts.append(f'<text x="{lx+34:.0f}" y="{ly+17:.0f}" fill="#57606a" font-size="12" '
+                 f'font-weight="600">{REPO}</text>')
     parts.append("</svg>")
     return "\n".join(parts) + "\n"
 
