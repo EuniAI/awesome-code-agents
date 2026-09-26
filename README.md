@@ -109,6 +109,10 @@
 
 > Research that studies and surveys code agents themselves.
 
+- **Evaluating Code Slop in Long-Horizon Coding Agents.**  
+  _Shubham Gandhi, Shyam Agarwal, Nachiket Kotalwar, Atharva Naik._ COLM 2026 Workshop on Agent Behavior, 2026/09.  
+  [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge)](https://openreview.net/forum?id=VLgFkLRUfV) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge)
+
 - **3100 Opinions on Code Review in an AI World: Building Causal Theory from Practitioner Discourse.**  
   _Shyam Agarwal, Courtney Miller, Christian Kästner, Bogdan Vasilescu._ arXiv 2026/07.  
   [![Paper](https://img.shields.io/badge/Paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.07980) ![Empirical Study](https://img.shields.io/badge/Empirical_Study-4A90D9?style=for-the-badge)
